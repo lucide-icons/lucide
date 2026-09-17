@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "sleep",
+    "hostel",
+    "accommodation",
+    "sheets"
+  ],
+  "categories": [
+    "furniture",
+    "home",
+    "travel"
+  ]
+}

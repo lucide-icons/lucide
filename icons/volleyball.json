@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "beach",
     "sand",

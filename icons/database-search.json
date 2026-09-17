@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Spleefies"
+  ],
+  "use-cases": [],
+  "tags": [
+    "storage",
+    "memory",
+    "container",
+    "tin",
+    "pot",
+    "bytes",
+    "servers"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

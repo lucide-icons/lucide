@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/Yash-Singh1/vscode-snippets-json-schema/main/schema.json",
   "Lucide SVG": {
     "scope": "xml",
     "description": "Base SVG with Lucide attributes.",
@@ -50,6 +51,16 @@
       "<circle"
     ],
     "body": "<circle cx=\"${2:12}\" cy=\"${3:$2}\" r=\"${1|10,2,.5\" fill=\"currentColor|}\" />"
+  },
+  "Squircle": {
+    "scope": "xml",
+    "description": "SVG `path` with Lucide defaults.",
+    "prefix": [
+      "squircle",
+      "path",
+      "<path"
+    ],
+    "body": "<path d=\"M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9\" />"
   },
   "Ellipse": {
     "scope": "xml",

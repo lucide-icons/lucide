@@ -1,9 +1,10 @@
 import path from 'path';
 import { resetFile, appendFile } from '@lucide/helpers';
-import type { IconMetadata, IconNode } from '../types.ts';
+import type { IconMetadata } from '../types.ts';
+import type { INode } from 'svgson';
 
 interface GenerateDynamicImports {
-  iconNodes: Record<string, IconNode>;
+  iconNodes: Record<string, INode>;
   outputDirectory: string;
   fileExtension: string;
   iconMetaData: Record<string, IconMetadata>;

@@ -4,7 +4,7 @@
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
@@ -12,6 +12,6 @@
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "./dist",
-  },
+    "outDir": "./dist"
+  }
 }

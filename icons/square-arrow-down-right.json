@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "south-east",
@@ -14,15 +16,13 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ],
   "aliases": [
     {
       "name": "arrow-down-right-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

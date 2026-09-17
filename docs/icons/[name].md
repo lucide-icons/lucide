@@ -105,15 +105,17 @@ function releaseTagLink(version) {
   </div>
 </div>
 
-<IconShowcase
+<div class="icon-page-sections">
+  <IconShowcase
   :name="params.name"
   :iconNode="params.iconNode"
-/>
+  />
 
-<RelatedIcons
+  <RelatedIcons
   v-if="params.relatedIcons"
   :icons="params.relatedIcons"
-/>
+  />
+</div>
 
 <style module>
   .preview {
@@ -241,10 +243,10 @@ function releaseTagLink(version) {
 </style>
 
 <style>
-section h2.title {
-  text-align: center;
-  font-weight: 500;
-  margin-block-end: 64px;
-  padding-top: 32px;
-}
+  .icon-page-sections h2.title {
+    text-align: center;
+    font-weight: 500;
+    margin-block-end: 64px;
+    padding-top: 32px;
+  }
 </style>

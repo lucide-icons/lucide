@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing automated floor cleaning on a smart home app control panel",
+    "Displaying as a device icon on a local network clients list",
+    "Controlling robotic cleaning devices from connected home dashboards",
+    "Scheduling recurring vacuum runs in housekeeping apps",
+    "Monitoring cleaning progress on mapped floor plans"
+  ],
+  "tags": [
+    "appliance",
+    "cleaning",
+    "household",
+    "housekeeping",
+    "tool",
+    "maintenance",
+    "smarthome",
+    "sweeping",
+    "hygiene",
+    "chores",
+    "automation",
+    "smart home",
+    "device",
+    "floor",
+    "dust",
+    "debris",
+    "navigation",
+    "sensor"
+  ],
+  "categories": [
+    "devices",
+    "home",
+    "tools"
+  ]
+}

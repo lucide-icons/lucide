@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing improved oral hygiene or dental care",
+    "Indicating freshly cleaned teeth in health apps",
+    "Showing premium personal care amenities in travel apps"
+  ],
+  "tags": [
+    "dental care",
+    "oral hygiene",
+    "brushing",
+    "teeth",
+    "dentist",
+    "bathroom",
+    "toiletries",
+    "personal care",
+    "cleaning",
+    "bristles",
+    "handle",
+    "plaque",
+    "toothpaste",
+    "selfcare",
+    "grooming",
+    "fresh",
+    "clean"
+  ],
+  "categories": [
+    "home",
+    "tools",
+    "medical",
+    "travel"
+  ]
+}

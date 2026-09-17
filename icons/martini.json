@@ -3,15 +3,21 @@
   "contributors": [
     "karsa-mistmere",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "cocktail",
     "alcohol",
     "beverage",
     "bar",
     "drink",
-    "glass"
+    "glass",
+    "spirit",
+    "party",
+    "celebration",
+    "mixer"
   ],
   "categories": [
     "food-beverage"

@@ -3,6 +3,7 @@
   "contributors": [
     "lscheibel"
   ],
+  "use-cases": [],
   "tags": [
     "gizmo",
     "transform",
@@ -17,8 +18,7 @@
     {
       "name": "rotate-3-d",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }
