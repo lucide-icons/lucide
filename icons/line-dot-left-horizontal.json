@@ -3,6 +3,10 @@
   "contributors": [
     "nathan-de-pachtere"
   ],
+  "use-cases": [
+    "Marking a branch's first commit in version-control interfaces",
+    "Indicating measurements at a metal bar's starting point"
+  ],
   "tags": [
     "line",
     "dot",
