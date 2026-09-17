@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { rotateCw } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
-import IconButton from './IconButton.vue';
+import Button from './Button.vue';
 </script>
 
 <template>
-  <IconButton class="reset-button">
+  <Button class="reset-button">
     <Icon
       :size="20"
       :iconNode="rotateCw"
     />
-  </IconButton>
+  </Button>
 </template>
 
 <style scoped>

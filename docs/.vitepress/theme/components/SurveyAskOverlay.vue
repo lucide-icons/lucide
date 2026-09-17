@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core';
-import IconButton from './base/IconButton.vue';
+import Button from './base/Button.vue';
 import { x } from '../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
 import { computed, onMounted, ref } from 'vue';
@@ -65,7 +65,7 @@ function hidePopup() {
       }"
       class="ask-overlay"
     >
-      <IconButton
+      <Button
         @click="hidePopup"
         class="hide-button"
       >
@@ -74,7 +74,7 @@ function hidePopup() {
           :size="20"
           absoluteStrokeWidth
         />
-      </IconButton>
+      </Button>
 
       <h2 class="title">
         We value your feedback!

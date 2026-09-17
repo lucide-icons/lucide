@@ -14,7 +14,7 @@ export interface InputProps {
 import { ref, onMounted, nextTick, watch } from 'vue';
 import Icon from '@lucide/vue/src/Icon';
 import { x } from '../../../data/iconNodes';
-import IconButton from './IconButton.vue';
+import Button from './Button.vue';
 
 const props = withDefaults(defineProps<InputProps>(), {
   type: 'text',
@@ -70,7 +70,7 @@ defineExpose({
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     />
-    <IconButton
+    <Button
       @click="onClear"
       v-if="type === 'search' && modelValue"
       class="clear-button"
@@ -81,7 +81,7 @@ defineExpose({
         :iconNode="x"
         :size="20"
       />
-    </IconButton>
+    </Button>
     <kbd
       v-if="shortcut"
       class="shortcut"

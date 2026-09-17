@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import { useSessionStorage } from '@vueuse/core';
-import IconButton from '../base/IconButton.vue';
+import Button from '../base/Button.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
@@ -40,7 +40,7 @@ onMounted(() => {
     class="floating-ad"
     v-if="theme.carbonAds"
   >
-    <IconButton
+    <Button
       @click="hideAd"
       class="hide-button"
     >
@@ -49,7 +49,7 @@ onMounted(() => {
         :size="20"
         absoluteStrokeWidth
       />
-    </IconButton>
+    </Button>
     <VPDocAsideCarbonAds :carbon-ads="theme.carbonAds" overlay />
   </div>
 </template>

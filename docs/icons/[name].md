@@ -12,6 +12,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import IconPreview from '~/.vitepress/theme/components/icons/IconPreview.vue'
 import IconPreviewSmall from '~/.vitepress/theme/components/icons/IconPreviewSmall.vue'
+import EditInStudioButton from '~/.vitepress/theme/components/icons/EditInStudioButton.vue'
 import IconInfo from '~/.vitepress/theme/components/icons/IconInfo.vue'
 import IconContributors from '~/.vitepress/theme/components/icons/IconContributors.vue'
 import IconShowcase from '~/.vitepress/theme/components/icons/IconShowcase.vue'
@@ -51,6 +52,9 @@ function releaseTagLink(version) {
 </script>
 
 <div class="layout">
+  <div class="actions">
+    <EditInStudioButton :icon="params" />
+  </div>
   <div class="iconPreviews">
     <IconPreview
       id="previewer"
@@ -143,6 +147,13 @@ function releaseTagLink(version) {
     align-items: flex-start;
   }
 
+  .actions {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -12px -12px 24px 0;
+  }
+
   .meta {
     display: flex;
     gap: 24px;
@@ -151,6 +162,11 @@ function releaseTagLink(version) {
 
   .info {
     --tags-gradient-background: var(--vp-c-bg);
+
+  }
+
+  .icon-info {
+    text-align: center;
   }
 
   .version .label {
@@ -176,7 +192,7 @@ function releaseTagLink(version) {
 
   .iconPreviews {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 24px;
   }
 
@@ -200,6 +216,13 @@ function releaseTagLink(version) {
 
     .iconPreviews {
       flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .actions {
+      position: absolute;
+      right: 0;
+      margin: 0;
     }
 
     .smallPreview {
@@ -225,5 +248,10 @@ function releaseTagLink(version) {
     .tab-list {
       margin: 24px 0 24px;
     }
+
+    .iconPreviews {
+      justify-content: flex-start;
+    }
+
   }
 </style>

@@ -92,16 +92,6 @@ const iconPath = computed(() => {
         :name="icon.name"
         :popoverPosition="popoverPosition"
       />
-      <a
-        v-if="showEditButton"
-        class="studio-edit-button"
-        :href="getStudioLink(icon.name, icon.iconNode, 'icon-info')"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SquarePenIcon :size="14" />
-        <span>Edit in studio</span>
-      </a>
     </div>
     <slot name="footer" />
   </div>
