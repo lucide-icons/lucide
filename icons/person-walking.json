@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mihirJWA"
+  ],
+  "tags": [
+    "walking",
+    "person",
+    "motion",
+    "steps",
+    "movement",
+    "exercise",
+    "outdoor",
+    "route",
+    "journey",
+    "people",
+    "human",
+    "accessibility",
+    "stick figure",
+    "navigation"
+  ],
+  "categories": [
+    "accessibility",
+    "people",
+    "navigation",
+    "travel"
+  ]
+}
