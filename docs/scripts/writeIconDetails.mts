@@ -27,8 +27,9 @@ import iconNode from '../iconNodes/${iconName}.node.json' with { type: 'json' };
 import metaData from '../../../../icons/${iconName}.json' with { type: 'json' };
 import releaseData from '../releaseMetadata/${iconName}.json' with { type: 'json' };
 import popularity from '../iconPopularity/${iconName}.json' with { type: 'json' };
+import { IconMetaData } from '~/.vitepress/theme/types';
 
-const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData;
+const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion }: IconMetaData = metaData;
 
 const iconDetails = {
   name: '${iconName}',
