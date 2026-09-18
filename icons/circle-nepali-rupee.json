@@ -4,11 +4,11 @@
     "sarajdhakal"
   ],
   "use-cases": [
-    "Displaying prices in Nepalese rupees (NPR)",
-    "Selecting Nepalese rupee in multi-currency selectors",
-    "Showing exchange rates for Nepalese rupee conversions",
+    "Displaying Nepalese rupee in circular currency badges",
+    "Selecting Nepalese rupee in compact currency selectors",
+    "Showing NPR in circular payment and transaction indicators",
     "Indicating remittance transfers paid out in NPR"
-  ],
+  ]
   "tags": [
     "currency",
     "money",
