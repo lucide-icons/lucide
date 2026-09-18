@@ -10,6 +10,7 @@ import { computed } from 'vue';
 import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
+import type { IconDeprecationReason } from '../../../../../tools/build-icons/types.ts';
 import IconTags from "./IconTags.vue"
 import getStudioLink from '../../utils/getStudioLink';
 
@@ -26,10 +27,9 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
 
 const deprecatedTitle = computed(() => {
   if (!props.icon.deprecationReason) return '';
-  return deprecationReasonTemplate(props.icon.deprecationReason, {
+  return deprecationReasonTemplate(props.icon.deprecationReason as IconDeprecationReason, {
     componentName: props.icon.name,
     iconName: props.icon.name,
-    toBeRemovedInVersion: props.icon.toBeRemovedInVersion,
   });
 });
 

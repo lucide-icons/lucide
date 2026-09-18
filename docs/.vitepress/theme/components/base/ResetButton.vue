@@ -9,6 +9,7 @@ import Button from './Button.vue';
     <Icon
       :size="20"
       :iconNode="rotateCw"
+      name="rotate-cw"
     />
   </Button>
 </template>

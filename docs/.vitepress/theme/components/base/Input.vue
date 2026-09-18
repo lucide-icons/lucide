@@ -68,7 +68,7 @@ defineExpose({
       ref="input"
       :value="modelValue"
       v-bind="$attrs"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
     <Button
       @click="onClear"
@@ -79,6 +79,7 @@ defineExpose({
     >
       <Icon
         :iconNode="x"
+        name="x"
         :size="20"
       />
     </Button>

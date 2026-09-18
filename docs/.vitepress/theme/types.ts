@@ -52,7 +52,8 @@ export interface PackageItem {
   packageDirname?: string;
   description: string;
   icon: string;
-  iconDark: string;
+  iconDark?: string;
+  iconClass?: string;
   shields: Shield[];
   source: string;
   documentation: string;

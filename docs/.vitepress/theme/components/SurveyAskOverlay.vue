@@ -71,6 +71,7 @@ function hidePopup() {
       >
         <Icon
           :iconNode="x"
+          name="x"
           :size="20"
           absoluteStrokeWidth
         />

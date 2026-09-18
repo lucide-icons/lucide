@@ -17,7 +17,7 @@ defineProps<{
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Icon :iconNode="pencilSparkles" :size="24" />
+    <Icon :iconNode="pencilSparkles" name="pencil-sparkles" :size="24" />
     <span class="text">Edit in studio</span>
   </Button>
 </template>

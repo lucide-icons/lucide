@@ -1,3 +1,4 @@
+import React from 'react';
 import { createLucideIcon } from 'lucide-react/src/lucide-react';
 import { type LucideProps, type IconNode } from 'lucide-react/src/types';
 import { IconEntity } from '../theme/types';

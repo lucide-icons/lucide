@@ -173,7 +173,7 @@ watch(searchQueryDebounced, () => {
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/';
 
   if (searchQueryDebounced.value) {
@@ -208,6 +208,7 @@ function handleCloseDrawer() {
         <template #start-icon>
           <Icon
             :iconNode="listSortDescending"
+            name="list-sort-descending"
             class="chevron-icon"
             aria-hidden="true"
           />
