@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * Converts string to CamelCase
  *

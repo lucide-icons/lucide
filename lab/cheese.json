@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "swiss",
+    "holes",
+    "fondue",
+    "emmental",
+    "gouda",
+    "edam",
+    "cheddar",
+    "brie",
+    "mozzarella",
+    "feta",
+    "halloumi",
+    "gorgonzola",
+    "roquefort",
+    "camembert",
+    "dairy",
+    "snack",
+    "dish",
+    "restaurant",
+    "lunch",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
