@@ -1,11 +1,10 @@
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
 
-
 export interface Alias {
-  name: string
-  deprecationReason: string
-  deprecated: boolean
+  name: string;
+  deprecationReason: string;
+  deprecated: boolean;
 }
 
 export interface IconMetaData {

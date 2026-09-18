@@ -24,6 +24,7 @@ import PageTabs from '~/.vitepress/theme/components/base/PageTabs.vue'
 import { data } from './codeExamples.data'
 import { toCamelCase, toPascalCase } from '@lucide/shared'
 import { satisfies } from 'semver'
+import CarbonAdOverlay from '~/.vitepress/theme/components/icons/CarbonAdOverlay.vue';
 
 const { params } = useData()
 
@@ -133,6 +134,8 @@ function releaseTagLink(version) {
     />
   </template>
 </PageTabs>
+
+<CarbonAdOverlay :drawerOpen="!!activeIconName" />
 
 <style scoped>
   .preview {
