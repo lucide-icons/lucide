@@ -9,10 +9,6 @@
     "showing the activity history of a user account",
     "indicating recently active or recently seen members",
     "displaying a login or session history for a profile",
-  "use-cases": [
-    "showing the activity history of a user account",
-    "indicating recently active or recently seen members",
-    "displaying a login or session history for a profile",
     "representing time tracking attached to a person",
     "marking a pending or scheduled account action",
     "showing a user's scheduled appointments",
