@@ -46,10 +46,20 @@ const initialGridItems = computed(() => {
 
 const props = defineProps<{
   icons: IconEntity[];
+  activeIcon?: string | null;
 }>();
 
-const activeIconName = ref(null);
+const activeIconName = ref<string | null>(props.activeIcon ?? null);
 const selectedSort = ref(SORTING[0])
+
+watch(
+  () => props.activeIcon,
+  (newVal) => {
+    if (newVal !== undefined) {
+      activeIconName.value = newVal;
+    }
+  },
+);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -132,9 +142,28 @@ const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedI
   overscan: 10,
 });
 
+function onPopState() {
+  if (typeof window === 'undefined') return;
+  const pathname = window.location.pathname;
+  const match = pathname.match(/^\/icons\/(?:(lab)\/)?([^/]+)\/?$/);
+  if (match) {
+    const [, lib, name] = match;
+    if (name && name !== 'categories' && name !== 'lab') {
+      activeIconName.value = lib ? `${lib}:${name}` : name;
+      return;
+    }
+  }
+  activeIconName.value = null;
+}
+
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
   useEventListener(window, 'scroll', containerProps.onScroll);
+  useEventListener(window, 'popstate', onPopState);
+
+  if (!activeIconName.value && typeof window !== 'undefined') {
+    onPopState();
+  }
 
   // Check if we should focus the search input from URL parameter
   const route = useRoute();

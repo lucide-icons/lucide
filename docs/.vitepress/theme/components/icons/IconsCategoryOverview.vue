@@ -137,9 +137,28 @@ useScrollToCategory({
   searchQueryDebounced,
 });
 
+function onPopState() {
+  if (typeof window === 'undefined') return;
+  const pathname = window.location.pathname;
+  const match = pathname.match(/^\/icons\/(?:(lab)\/)?([^/]+)\/?$/);
+  if (match) {
+    const [, lib, name] = match;
+    if (name && name !== 'categories' && name !== 'lab') {
+      activeIconName.value = lib ? `${lib}:${name}` : name;
+      return;
+    }
+  }
+  activeIconName.value = null;
+}
+
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
   useEventListener(window, 'scroll', containerProps.onScroll);
+  useEventListener(window, 'popstate', onPopState);
+
+  if (!activeIconName.value && typeof window !== 'undefined') {
+    onPopState();
+  }
 });
 
 function loadSearchMetadata() {
