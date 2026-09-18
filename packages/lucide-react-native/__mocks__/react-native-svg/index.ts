@@ -4,8 +4,9 @@ import type { LucideProps } from '../../src/createReactComponent';
 export type { SvgProps } from 'react-native-svg';
 
 const createComponent = function (name: string) {
-  const component = (props: LucideProps) => {
-    return React.createElement(name, props, props.children);
+  // React Native identifies elements by `testID`, the DOM equivalent is `data-testid`
+  const component = ({ testID, ...props }: LucideProps) => {
+    return React.createElement(name, { ...props, 'data-testid': testID }, props.children);
   };
 
   component.displayName = name;
