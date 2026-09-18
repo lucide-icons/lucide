@@ -135,7 +135,7 @@ function releaseTagLink(version) {
   </template>
 </PageTabs>
 
-<CarbonAdOverlay :drawerOpen="!!activeIconName" />
+<CarbonAdOverlay :drawerOpen="false" />
 
 <style scoped>
   .preview {
