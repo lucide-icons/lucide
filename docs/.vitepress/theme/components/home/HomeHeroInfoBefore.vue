@@ -15,10 +15,11 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
       class="badge-special confetti-button animate"
       href="/guide/version-1"
     >
-      <Icon :iconNode="RocketDuotoneIcon" />
+      <Icon :iconNode="RocketDuotoneIcon" name="rocket-duotone" />
       Version 1
       <Icon
         :iconNode="moveRight"
+        name="move-right"
         class=""
       />
     </Badge>
