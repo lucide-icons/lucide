@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "representing recorded speech with visible audio activity",
+    "indicating podcast, voice note, or narration recording tools",
+    "showing voice input for transcription, dictation, or AI assistants",
+    "marking features that analyze, clean up, or enhance microphone audio",
+    "identifying controls for speech capture and sound processing workflows"
+  ],
+  "tags": [
+    "podcast",
+    "audio",
+    "waveform",
+    "sound waves",
+    "microphone",
+    "talk",
+    "voice",
+    "speech",
+    "stream",
+    "recording",
+    "transcription",
+    "dictation",
+    "voice assistant",
+    "noise cancellation",
+    "sound processing"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "multimedia"
+  ]
+}

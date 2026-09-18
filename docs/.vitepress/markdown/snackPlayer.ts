@@ -73,7 +73,6 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
       'react-native-safe-area-context' + (params.dependencies ? `,${params.dependencies}` : '');
     const platform = params.platform ?? 'web';
     const supportedPlatforms = params.supportedPlatforms ?? 'ios,android,web';
-    const theme = params.theme ?? 'light';
     const preview = params.preview ?? 'true';
     const loading = params.loading ?? 'lazy';
     const deviceAppearance = params.deviceAppearance ?? 'dark';
@@ -88,7 +87,7 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
       ` data-snack-dependencies="${escapeHtml(dependencies)}"` +
       ` data-snack-platform="${escapeHtml(platform)}"` +
       ` data-snack-supported-platforms="${escapeHtml(supportedPlatforms)}"` +
-      // ` data-snack-theme="${escapeHtml(theme)}"` +
+      // ` data-snack-theme="${escapeHtml(params.theme ?? 'light')}"` +
       ` data-snack-preview="${escapeHtml(preview)}"` +
       ` data-snack-loading="${escapeHtml(loading)}"` +
       ` data-snack-device-appearance="${escapeHtml(deviceAppearance)}"` +
