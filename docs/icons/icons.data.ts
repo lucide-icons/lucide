@@ -1,4 +1,3 @@
-import { type IconMetaData } from '~/.vitepress/theme/types';
 import * as iconDetails from '../.vitepress/data/iconDetails';
 
 export default {
@@ -16,7 +15,8 @@ export default {
           awaitingRelease,
           fromFork,
         }),
-      ),
+      // We hide icons that are not released yet, we make exceptions for preview environments
+      ).filter(({ awaitingRelease }) => !awaitingRelease || process.env.VITE_SHOW_AWAITING_RELEASE),
     };
   },
 };

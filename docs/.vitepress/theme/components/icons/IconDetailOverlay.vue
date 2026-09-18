@@ -72,7 +72,7 @@ const Expand = createLucideIcon('Expand', expand);
         <nav class="overlay-menu">
           <Badge
             v-if="icon.awaitingRelease"
-            class="version"
+            class="version awaiting-release"
             >Unreleased</Badge
           >
           <Badge
@@ -206,6 +206,10 @@ const Expand = createLucideIcon('Expand', expand);
 
 .version {
   margin-right: 24px;
+}
+
+.version.awaiting-release {
+  color: var(--vp-c-danger-3);
 }
 
 .contributors {
