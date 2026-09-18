@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing oral hygiene and dental care",
+    "Reminding users to brush their teeth in routine apps",
+    "Indicating dental health services in healthcare apps",
+    "Listing personal care amenities in travel apps"
+  ],
+  "tags": [
+    "dental care",
+    "oral hygiene",
+    "brushing",
+    "teeth",
+    "dentist",
+    "bathroom",
+    "toiletries",
+    "personal care",
+    "cleaning",
+    "bristles",
+    "handle",
+    "plaque",
+    "toothpaste",
+    "selfcare",
+    "grooming"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "tools",
+    "medical"
+  ]
+}

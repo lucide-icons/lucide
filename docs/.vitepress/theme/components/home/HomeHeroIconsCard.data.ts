@@ -18,7 +18,7 @@ const pickIcons = [
   'clapperboard',
   'tool-case',
   'printer',
-  'album',
+  'square-bookmark',
   'pencil-ruler',
   'calendar',
   'brain',

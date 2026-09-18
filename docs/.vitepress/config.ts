@@ -98,6 +98,7 @@ export default defineConfig({
         text: 'Resources',
         items: [
           ...resourcesSidebar[0].items,
+          { text: 'How to use icons', link: '/how-to/' },
           { text: 'Contributing icons', link: '/contribute/icons/' },
         ],
       },

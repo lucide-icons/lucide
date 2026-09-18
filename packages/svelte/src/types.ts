@@ -3,18 +3,11 @@ import type { Snippet, Component } from 'svelte';
 import type {
   LucideIconData as SharedLucideIconData,
   LucideIconNode as SharedLucideIconNode,
-} from '@lucide/shared/types';
+} from './utils/types.js';
 
 export type Attrs = Record<string, unknown> & SVGAttributes<SVGSVGElement>;
 type IconNodeElements =
-  | 'circle'
-  | 'ellipse'
-  | 'g'
-  | 'line'
-  | 'path'
-  | 'polygon'
-  | 'polyline'
-  | 'rect';
+  'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect';
 
 export type LucideIconNode = SharedLucideIconNode<IconNodeElements, Attrs>;
 

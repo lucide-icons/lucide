@@ -18,10 +18,10 @@ Tags help people find icons by concept, synonym, context, or common wording.
 Tags should always be lowercase.
 
 :::: example
-::: do <LucideIcon :iconNode="mail" /> email
+::: do <LucideIcon name="mail" :iconNode="mail" /> email
 Lowercase tags **match the style** used across the icon library.
 :::
-::: dont <LucideIcon :iconNode="mail" /> Email
+::: dont <LucideIcon name="mail" :iconNode="mail" /> Email
 Capitalized tags create **inconsistent metadata** without improving search.
 :::
 ::::
@@ -31,10 +31,10 @@ Capitalized tags create **inconsistent metadata** without improving search.
 Use one clear word when it is enough. Use multi-word tags when the phrase is clearer.
 
 :::: example
-::: do <LucideIcon :iconNode="search" /> search
+::: do <LucideIcon name="search" :iconNode="search" /> search
 This is **short, common, and easy to find**.
 :::
-::: dont <LucideIcon :iconNode="search" /> searching through files & folders
+::: dont <LucideIcon name="search" :iconNode="search" /> searching through files & folders
 This reads like a **use case**, not a tag.
 :::
 ::::
@@ -44,10 +44,10 @@ This reads like a **use case**, not a tag.
 Some ideas are only clear as a phrase. But keep those phrases short.
 
 :::: example
-::: do <LucideIcon :iconNode="droplet" /> blood type
+::: do <LucideIcon name="droplet" :iconNode="droplet" /> blood type
 The phrase is **clearer** than either word on its own.
 :::
-::: dont <LucideIcon :iconNode="droplet" /> blood type medical label
+::: dont <LucideIcon name="droplet" :iconNode="droplet" /> blood type medical label
 This combines **several search concepts** into one long tag.
 :::
 ::::
@@ -57,10 +57,10 @@ This combines **several search concepts** into one long tag.
 Tags can include words people are likely to search for, even if they are not in the icon name.
 
 :::: example
-::: do <LucideIcon :iconNode="mail" /> email
+::: do <LucideIcon name="mail" :iconNode="mail" /> email
 This helps users find `mail` icons using a **common synonym**.
 :::
-::: dont <LucideIcon :iconNode="mail" /> electronic postal message delivery
+::: dont <LucideIcon name="mail" :iconNode="mail" /> electronic postal message delivery
 This is unlikely search wording and **adds noise**.
 :::
 ::::
@@ -70,10 +70,10 @@ This is unlikely search wording and **adds noise**.
 The icon name is already searchable. Tags should add other ways to find it.
 
 :::: example
-::: do <LucideIcon :iconNode="mailSearch" /> message filter
+::: do <LucideIcon name="mail-search" :iconNode="mailSearch" /> message filter
 This adds a **related concept** for `mail-search` without duplicating the name.
 :::
-::: dont <LucideIcon :iconNode="mailSearch" /> mail search
+::: dont <LucideIcon name="mail-search" :iconNode="mailSearch" /> mail search
 This **repeats the icon name** and does not improve discovery.
 :::
 ::::
@@ -83,10 +83,10 @@ This **repeats the icon name** and does not improve discovery.
 Tags should describe the icon, not say that it is an icon.
 
 :::: example
-::: do <LucideIcon :iconNode="calendar" /> event
+::: do <LucideIcon name="calendar" :iconNode="calendar" /> event
 This points to a **specific idea** users might search for.
 :::
-::: dont <LucideIcon :iconNode="calendar" /> icon
+::: dont <LucideIcon name="calendar" :iconNode="calendar" /> icon
 **Every entry is an icon**, so this tag does not help anyone find the right one.
 :::
 ::::
@@ -96,10 +96,10 @@ This points to a **specific idea** users might search for.
 Do not add loose terms just to make an icon appear in more searches.
 
 :::: example
-::: do <LucideIcon :iconNode="hospital" /> emergency room
+::: do <LucideIcon name="hospital" :iconNode="hospital" /> emergency room
 This is **relevant** for an icon that marks emergency room locations.
 :::
-::: dont <LucideIcon :iconNode="hospital" /> doctor nurse pharmacy
+::: dont <LucideIcon name="hospital" :iconNode="hospital" /> doctor nurse pharmacy
 These terms may be **nearby concepts**, but they do not all describe the same icon.
 :::
 ::::
@@ -109,10 +109,10 @@ These terms may be **nearby concepts**, but they do not all describe the same ic
 Related icons can share family terms, but variant tags should describe what is different.
 
 :::: example
-::: do <LucideIcon :iconNode="batteryLow" /> depleted
+::: do <LucideIcon name="battery-low" :iconNode="batteryLow" /> depleted
 This distinguishes `battery-low` from **other battery icons**.
 :::
-::: dont <LucideIcon :iconNode="batteryLow" /> charged
+::: dont <LucideIcon name="battery-low" :iconNode="batteryLow" /> charged
 This describes `battery-full` better than `battery-low`.
 :::
 ::::
@@ -122,10 +122,10 @@ This describes `battery-full` better than `battery-low`.
 Check similar icons before adding new tags. Reusing existing terms keeps search predictable.
 
 :::: example
-::: do <LucideIcon :iconNode="type" /> typography
+::: do <LucideIcon name="type" :iconNode="type" /> typography
 This matches existing text-formatting icons and keeps **related icons** together in search.
 :::
-::: dont <LucideIcon :iconNode="type" /> fontography
+::: dont <LucideIcon name="type" :iconNode="type" /> fontography
 Inventing a new term makes the icon harder to find and less consistent with related metadata.
 :::
 ::::
