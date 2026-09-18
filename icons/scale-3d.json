@@ -20,7 +20,6 @@
       "name": "scale-3-d",
       "deprecationReason": "alias.name",
       "deprecated": true
-    },
-    "scale-3-d"
+    }
   ]
 }
