@@ -107,7 +107,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       {
         ref,
         ...toNativeSvgAttributes(svgAttributes),
-        'data-testid': testID,
+        testID,
         ...rest,
       },
       [
