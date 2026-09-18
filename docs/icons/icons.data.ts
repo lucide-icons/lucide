@@ -22,7 +22,8 @@ export default {
           // We hide icons that are not released yet, we make exceptions for preview environments
         )
         .filter(
-          ({ awaitingRelease }) => !awaitingRelease || process.env.VITE_SHOW_AWAITING_RELEASE === 'true',
+          ({ awaitingRelease }) =>
+            !awaitingRelease || process.env.VITE_SHOW_AWAITING_RELEASE === 'true',
         ),
     };
   },
