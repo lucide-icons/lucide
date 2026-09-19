@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing numbers, digits, or numeric values",
+    "Indicating numerical sorting or organization",
+    "Representing counting, quantities, or sequences",
+    "Representing numeric input fields or numerical data"
+  ],
+  "tags": [
+    "123",
+    "digits",
+    "numeric",
+    "numerical",
+    "counting",
+    "quantity",
+    "math",
+    "sequence",
+    "integer"
+  ],
+  "categories": [
+    "text",
+    "math"
+  ]
+}
