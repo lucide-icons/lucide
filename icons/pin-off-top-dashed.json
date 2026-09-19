@@ -23,7 +23,13 @@
     "save",
     "unsave",
     "add",
-    "remove"
+    "remove",
+    "dashed",
+    "thumbtack",
+    "unpinned",
+    "disabled",
+    "marker",
+    "top"
   ],
   "categories": [
     "navigation"
