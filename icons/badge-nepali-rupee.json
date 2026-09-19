@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "sarajdhakal"
+    "sarajdhakal",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "use-cases": [
     "Displaying prices in Nepalese rupees (NPR)",
