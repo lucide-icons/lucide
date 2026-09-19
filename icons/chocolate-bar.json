@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing candy, sweets, or confectionery",
+    "Marking dessert options in food apps",
+    "Categorizing snacks in shopping lists",
+    "Showing chocolate products in store catalogs"
+  ],
+  "tags": [
+    "candy",
+    "dessert",
+    "snack",
+    "sweet",
+    "confectionery",
+    "cocoa",
+    "treat",
+    "sugar",
+    "nibble",
+    "munch"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
