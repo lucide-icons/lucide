@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
+  ],
+  "use-cases": [
+    "showing the activity history of a user account",
+    "indicating recently active or recently seen members",
+    "displaying a login or session history for a profile",
+    "representing time tracking attached to a person",
+    "marking a pending or scheduled account action",
+    "showing a user's scheduled appointments",
+    "indicating a reminder tied to a user account",
+    "representing user availability or office hours",
+    "displaying an audit or compliance timestamp for a user"
+  ],
+  "tags": [
+    "person",
+    "account",
+    "contact",
+    "history",
+    "log",
+    "clock",
+    "time",
+    "recent",
+    "activity",
+    "session",
+    "timestamp",
+    "avatar",
+    "profile",
+    "badge",
+    "reminder",
+    "schedule",
+    "audit"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "time",
+    "people",
+    "notifications"
+  ]
+}
