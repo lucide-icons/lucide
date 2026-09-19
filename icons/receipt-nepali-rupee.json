@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sarajdhakal"
+  ],
+  "use-cases": [
+    "Displaying transaction history in local mobile wallets",
+    "Generating digital utility bill receipts for NPR payments",
+    "Showing checkout and order confirmation screens on Nepalese e-commerce sites",
+    "Indicating printable invoices in retail point of sale POS systems",
+    "Logging expenses and scanning tax invoices for local VAT compliance",
+    "Presenting ride-hailing and logistics delivery fare summaries"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "nepal",
+    "rupee",
+    "npr"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel"
+  ]
+}
