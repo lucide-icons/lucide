@@ -1,4 +1,4 @@
-import plugins from '@lucide/rollup-plugins';
+import plugins, { getLicenseBanner } from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
 import getIconEntryNamesAndAliases from './scripts/getIconEntryNamesAndAliases.mts';
@@ -31,12 +31,21 @@ const bundles = [
 const iconAndAliasEntries = await getIconEntryNamesAndAliases();
 const typesModuleMatcher = /[/\\]src[/\\]types\.(d\.)?ts$/;
 
+// `preserveModules: true` below turns every icon module into its own output chunk (~1,800
+// per format). rollup-plugin-license has no option to limit its banner to entry chunks, so
+// it would otherwise duplicate the license comment into every single one of them (see
+// https://github.com/lucide-icons/lucide/issues/3744). Instead we disable the plugin's own
+// banner injection and apply it via Rollup's native `output.banner`, which is called once
+// per chunk and lets us check `chunk.isEntry` to add it only to the two entry points.
+const licenseBanner = getLicenseBanner(pkg);
+
 const configs = bundles.map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) => ({
   input: inputs,
-  plugins: plugins({ pkg }),
+  plugins: plugins({ pkg, withLicenseBanner: false }),
   external: ['react', 'react-native-svg'],
   output: {
     name: packageName,
+    banner: (chunk) => (chunk.isEntry ? licenseBanner : ''),
     ...(preserveModules
       ? {
           dir: `${outputDir}/${format}`,
