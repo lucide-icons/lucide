@@ -18,6 +18,8 @@ stats
 integrations/**/.react-router
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__
+integrations/**/.output
+integrations/**/.nitro
 outlined
 lucide-font
 packages/**/src/icons/*.js
