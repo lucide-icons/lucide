@@ -34,9 +34,17 @@ const icon = computed(() => {
   return createLucideIcon(props.name, props.iconNode);
 });
 
-const href = computed(() =>
-  props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
-);
+const href = computed(() => {
+  if (props.overlayMode) {
+    return props.externalLibrary
+      ? `/icons/${props.externalLibrary}/${props.name}`
+      : `/icons/${props.name}`;
+  }
+
+  return props.externalLibrary
+    ? `/icons/${props.externalLibrary}/${props.name}/details`
+    : `/icons/${props.name}/details`;
+});
 
 async function navigateToIcon(event) {
   if (event.shiftKey) {
@@ -55,24 +63,14 @@ async function navigateToIcon(event) {
   if (props.overlayMode && showOverlay.value) {
     event.preventDefault();
 
-    window.history.pushState(
-      {},
-      '',
-      props.externalLibrary
-        ? `/icons/${props.externalLibrary}/${props.name}`
-        : `/icons/${props.name}`,
-    );
+    window.history.pushState({}, '', href.value);
     emit(
       'setActiveIcon',
       props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,
     );
   } else {
     event.preventDefault();
-    go(
-      props.externalLibrary
-        ? `/icons/${props.externalLibrary}/${props.name}`
-        : `/icons/${props.name}`,
-    );
+    go(href.value);
   }
 }
 
