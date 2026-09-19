@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "karsa-mistmere",
+    "ericfennis",
+    "nito"
+  ],
+  "use-cases": [
+    "Toggling the pinned state of an element",
+    "Representing a partially pinned state based on scope/context"
+  ],
+  "tags": [
+    "toggle",
+    "switch",
+    "pin",
+    "unpin",
+    "map",
+    "lock",
+    "unlock",
+    "fix",
+    "unfix",
+    "save",
+    "unsave",
+    "add",
+    "remove"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}
