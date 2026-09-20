@@ -7,7 +7,11 @@
     "Displaying prices in Bangladeshi taka (BDT)",
     "Selecting Bangladeshi taka in multi-currency selectors",
     "Showing exchange rates for Bangladeshi taka conversions",
-    "Indicating remittance transfers paid out in BDT"
+    "Indicating remittance transfers paid out in BDT",
+    "labeling bdt balances on banking and wallet dashboards",
+    "marking currency fields in invoices and receipts",
+    "indicating payout currency in payroll and remittance flows",
+    "setting the default account or settlement currency for bangladeshi users"
   ],
   "tags": [
     "currency",
