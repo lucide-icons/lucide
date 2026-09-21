@@ -163,7 +163,7 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/categories';
 
   if (searchQueryDebounced.value) {

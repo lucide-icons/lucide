@@ -34,7 +34,7 @@ const percentage = computed<string>(() => `${((Number(props.modelValue) - props.
       type="range"
       v-bind="$attrs"
       v-bind:value="modelValue"
-      v-on:input="$emit('update:modelValue', Number($event.target.value))"
+      v-on:input="$emit('update:modelValue', Number(($event.target as HTMLInputElement).value))"
       :min="min"
       :max="max"
       :step="step"

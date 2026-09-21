@@ -2,8 +2,11 @@
 import { ref, shallowRef } from 'vue';
 import { data } from './HomeHeroIconsCard.data';
 import { useRouter } from 'vitepress';
-import { motion, Variants, useScroll, useTransform } from 'motion-v';
+import { motion, useScroll, useTransform, type Options as MotionOptions } from 'motion-v';
 import LucideIcon from '../base/LucideIcon.vue';
+
+// motion-v re-exports framer-motion's `Variants`, which doesn't match the `variants` prop of its components
+type Variants = MotionOptions['variants'];
 
 const emit = defineEmits(['animation-complete']);
 
@@ -129,7 +132,7 @@ const onAnimationComplete = (item) => {
 
 const randomIndex = ref(Math.floor(Math.random() * 64));
 
-const iconAnimationVariants = {
+const iconAnimationVariants: Variants = {
   initial: {
     animationName: 'end',
     opacity: 0,
@@ -149,7 +152,7 @@ const iconAnimationVariants = {
 
 const shrinkIconAnimation = ref('initial');
 
-const shrinkIconVariants = {
+const shrinkIconVariants: Variants = {
   initial: { strokeWidth: 2 },
   shrinkIcons: (index) => ({
     animationName: 'shrinkIcons',
