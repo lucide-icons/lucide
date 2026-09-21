@@ -7,7 +7,16 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a text message or comment",
+    "Opening a chat or messaging inbox",
+    "Marking a comment thread or discussion on a post",
+    "Indicating a live chat or customer support conversation",
+    "Representing a chatbot or AI assistant conversation",
+    "Showing a message transcript or chat history",
+    "Representing SMS or instant messaging in a contact list",
+    "Indicating written feedback, reviews, or remarks"
+  ],
   "tags": [
     "comment",
     "chat",
