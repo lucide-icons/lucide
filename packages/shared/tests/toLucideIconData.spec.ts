@@ -1,9 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { toLucideIconData } from '../src/utils/toLucideIconData';
+import type { LucideIconNode } from '../src/build/types';
 
 describe('toLucideIconData', () => {
   it('converts legacy name and node to icon data object', () => {
-    const iconNode = [['path', { d: 'M0 0h1' }]];
+    const iconNode: LucideIconNode[] = [['path', { d: 'M0 0h1' }]];
 
     expect(toLucideIconData('AirVent', iconNode)).toEqual({
       name: 'air-vent',
@@ -13,7 +14,7 @@ describe('toLucideIconData', () => {
   });
 
   it('adds aliases when provided for legacy input', () => {
-    const iconNode = [['path', { d: 'M0 0h1' }]];
+    const iconNode: LucideIconNode[] = [['path', { d: 'M0 0h1' }]];
 
     expect(toLucideIconData('AirVent', iconNode, ['vent'])).toEqual({
       name: 'air-vent',

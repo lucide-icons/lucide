@@ -20,6 +20,7 @@ if (!fs.existsSync(iconNodesDirectory)) {
 
 const iconIndexFile = path.resolve(iconNodesDirectory, `index.ts`);
 const iconIndexFileImports: string[] = [];
+const iconIndexFileNodes: string[] = [];
 const iconIndexFileExports: string[] = [];
 const iconIndexFileDefaultExports: string[] = [];
 
@@ -32,7 +33,10 @@ const writeIconFiles = Object.entries(icons).map(async ([iconName, { children }]
   await fs.promises.writeFile(location, output, 'utf-8');
 
   iconIndexFileImports.push(
-    `import ${toCamelCase(iconName)}Node from './${iconName}.node.json' with { type: "json" };`,
+    `import ${toCamelCase(iconName)}Json from './${iconName}.node.json' with { type: "json" };`,
+  );
+  iconIndexFileNodes.push(
+    `const ${toCamelCase(iconName)}Node = ${toCamelCase(iconName)}Json as IconNode;`,
   );
   iconIndexFileExports.push(`  ${toCamelCase(iconName)}Node as ${toCamelCase(iconName)},`);
   iconIndexFileDefaultExports.push(`  '${iconName}': ${toCamelCase(iconName)}Node,`);
@@ -43,7 +47,10 @@ try {
   await fs.promises.writeFile(
     iconIndexFile,
     `\
+import type { IconNode } from '../../../theme/types';
 ${iconIndexFileImports.join('\n')}
+
+${iconIndexFileNodes.join('\n')}
 
 export {
 ${iconIndexFileExports.join('\n')}
@@ -51,8 +58,8 @@ ${iconIndexFileExports.join('\n')}
 
 export default {
 ${iconIndexFileDefaultExports.join('\n')}
-}
-  `,
+} satisfies Record<string, IconNode>;
+`,
     'utf-8',
   );
 
