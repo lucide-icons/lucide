@@ -33,7 +33,7 @@ export type LucideBuildParams<TProps extends Record<string, unknown> = SVGProps>
   /**
    * The color of the icon.
    */
-  color?: TProps extends { color?: infer TColor } ? TColor : string;
+  color?: string;
   /**
    * The stroke width.
    */

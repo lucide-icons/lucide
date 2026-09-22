@@ -12,10 +12,7 @@ function isDefined<T>(value: T | null | undefined): value is T {
  * @param icon The icon to build.
  * @param params Additional build parameters.
  */
-function buildLucideIconNode<TProps extends Record<string, unknown> = SVGProps>(
-  icon: LucideIconData<string, TProps>,
-  params: LucideBuildParams<TProps> = {} as LucideBuildParams<TProps>,
-): LucideIconNode {
+function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {}): LucideIconNode {
   const attributeNames = params.attributeNames ?? {};
   const getAttributeName = (attributeName: string) =>
     attributeNames[attributeName] ?? attributeName;
