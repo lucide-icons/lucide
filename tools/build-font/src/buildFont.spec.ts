@@ -49,10 +49,7 @@ describe('buildFont', () => {
       throw new Error('getIconUnicode is undefined');
     }
 
-    expect(getIconUnicode('camera', '57400', 0)).toEqual([
-      String.fromCharCode(57400),
-      57400,
-    ]);
+    expect(getIconUnicode('camera', '57400', 0)).toEqual([String.fromCharCode(57400), 57400]);
     expect(() => getIconUnicode('missing', '57400', 0)).toThrow(
       'No codepoint found for icon: missing',
     );
