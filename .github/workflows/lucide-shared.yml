@@ -27,7 +27,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Test
-        run: pnpm --filter lucide-react test
+        run: pnpm --filter @lucide/shared test
 
   typecheck:
     runs-on: ubuntu-latest

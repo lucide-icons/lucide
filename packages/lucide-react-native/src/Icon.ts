@@ -1,6 +1,6 @@
 import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
-import { buildLucideIconForReact, hasA11yProp } from '@lucide/shared';
+import { buildLucideIconForReact, hasA11yProp, mergeClasses } from '@lucide/shared';
 import { childDefaultAttributes } from './defaultAttributes';
 import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
@@ -79,6 +79,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
       nonScalingStroke: contextNonScalingStroke = false,
       color: contextColor = 'currentColor',
+      className: contextClass = '',
     } = useLucideContext() ?? {};
 
     const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
@@ -90,7 +91,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       strokeWidth: strokeWidth ?? contextStrokeWidth,
       absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
       nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
-      className,
+      className: mergeClasses(contextClass, className),
       hasA11yProp: hasAccessibleProp,
       attributes: rest,
     });
