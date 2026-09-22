@@ -1,10 +1,10 @@
-import Fuse from 'fuse.js';
+import Fuse, { type FuseOptionKeyObject } from 'fuse.js';
 import { shallowRef, computed, Ref } from 'vue';
 
 const useSearch = <T>(
   query: Ref<string>,
   collection: Ref<T[]>,
-  keys: Fuse.FuseOptionKeyObject<T>[] = [],
+  keys: FuseOptionKeyObject<T>[] = [],
 ) => {
   const index = shallowRef(
     new Fuse(collection.value, {

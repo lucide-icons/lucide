@@ -41,7 +41,7 @@ import {
   sparkles,
 } from '../../../data/iconNodes';
 import createElement from 'lucide/src/createElement';
-import { IconNode } from 'lucide';
+import { IconNode } from 'lucide/src/types';
 
 const icons: Component[] = [
   heart, star, zap, code, feather, cloud, sun, moon, camera, music,
