@@ -48,11 +48,11 @@
     "test:watch": "pnpm build:icons && vitest run --watch"
   },
   "devDependencies": {
-    "@astrojs/ts-plugin": "^1.10.11",
+    "@astrojs/ts-plugin": "^1.10.12",
     "@lucide/build-icons": "workspace:*",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.1",
-    "astro": "^7.3.2",
+    "astro": "^7.3.3",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.13",
     "prettier": "3.9.6",
