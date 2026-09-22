@@ -1,5 +1,5 @@
 import buildLucideIconNode from './buildLucideIconNode';
-import type { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
+import type { LucideBuildParams, LucideIconData, LucideIconNode, SVGProps } from './types';
 
 /**
  * Creates a React-compatible Lucide icon node (an svgson-like format) from a Lucide icon object.
@@ -7,9 +7,9 @@ import type { LucideBuildParams, LucideIconData, LucideIconNode } from './types'
  * @param icon The icon to build.
  * @param params Additional build parameters.
  */
-function buildLucideIconForReact(
-  icon: LucideIconData,
-  params: LucideBuildParams = {},
+function buildLucideIconForReact<TProps extends Record<string, unknown> = SVGProps>(
+  icon: LucideIconData<string, TProps>,
+  params: LucideBuildParams<TProps> = {} as LucideBuildParams<TProps>,
 ): LucideIconNode {
   return buildLucideIconNode(icon, {
     ...params,
