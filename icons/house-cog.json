@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere",
+    "danielbayley",
+    "UsamaKhan",
+    "ajaxjiang96"
+  ],
+  "use-cases": [
+    "Opening household settings in smart home applications",
+    "Managing property configuration in real estate dashboards"
+  ],
+  "tags": [
+    "home",
+    "building",
+    "residence",
+    "settings",
+    "gear",
+    "configuration",
+    "property"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}
