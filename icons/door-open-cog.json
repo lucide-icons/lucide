@@ -9,7 +9,9 @@
   ],
   "use-cases": [
     "Opening access control settings for an entrance",
-    "Configuring door automation in smart home applications"
+    "Configuring door automation in smart home applications",
+    "Managing entrance permissions in a building",
+    "Accessing door controls in a device dashboard"
   ],
   "tags": [
     "entrance",
