@@ -9,7 +9,11 @@
   ],
   "use-cases": [
     "Opening household settings in smart home applications",
-    "Managing property configuration in real estate dashboards"
+    "Managing property configuration in real estate dashboards",
+    "configuring smart home devices and automation rules",
+    "accessing home security and alarm settings",
+    "managing maintenance schedules for a property",
+    "opening system administration panels for property management"
   ],
   "tags": [
     "home",
