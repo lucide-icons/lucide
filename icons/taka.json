@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "robiuzzaman4"
+  ],
+  "use-cases": [
+    "currency",
+    "money",
+    "payment",
+    "price"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "taka",
+    "bdt",
+    "bangladeshi taka",
+    "finance",
+    "price"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
