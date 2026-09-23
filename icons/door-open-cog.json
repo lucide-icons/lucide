@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas",
+    "UsamaKhan",
+    "ajaxjiang96"
+  ],
+  "use-cases": [
+    "Opening access control settings for an entrance",
+    "Configuring door automation in smart home applications"
+  ],
+  "tags": [
+    "entrance",
+    "entry",
+    "settings",
+    "gear",
+    "access",
+    "automation"
+  ],
+  "categories": [
+    "home",
+    "security"
+  ]
+}
