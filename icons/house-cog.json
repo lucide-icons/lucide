@@ -22,7 +22,12 @@
     "settings",
     "gear",
     "configuration",
-    "property"
+    "property",
+    "automation",
+    "control",
+    "maintenance",
+    "admin",
+    "smarthome"
   ],
   "categories": [
     "buildings",
