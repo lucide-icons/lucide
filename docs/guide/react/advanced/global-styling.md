@@ -99,9 +99,9 @@ export default App;
 
 :::
 
-### Absolute stroke width
+### Non-scaling strokes
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+For global non-scaling stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [non-scaling strokes](../basics/stroke-width.md#non-scaling-strokes) for more info.
 
 ::: sandpack {template=react editorHeight=300 dependencies="lucide-react"}
 
