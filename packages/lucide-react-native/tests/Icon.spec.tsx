@@ -71,4 +71,25 @@ describe('Using Icon Component', () => {
 
     expect(container.firstChild?.firstChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
   });
+
+  it('should not forward arbitrary rest props (e.g. onPress) to child shape elements, only to the parent Svg', async () => {
+    const RNSvg = await import('react-native-svg');
+    const pathSpy = vi.spyOn(RNSvg, 'Path');
+    const onPress = vi.fn();
+
+    render(
+      <Icon
+        iconNode={airVent}
+        size={48}
+        stroke="red"
+        onPress={onPress}
+      />,
+    );
+
+    expect(pathSpy).toHaveBeenCalled();
+    for (const call of pathSpy.mock.calls) {
+      const childProps = call[0] as Record<string, unknown>;
+      expect(childProps.onPress).toBeUndefined();
+    }
+  });
 });
