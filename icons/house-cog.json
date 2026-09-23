@@ -10,8 +10,8 @@
   "use-cases": [
     "Opening household settings in smart home applications",
     "Managing property configuration in real estate dashboards",
-    "Configuring home automation rules",
-    "Accessing home security settings"
+    "Configuring home automation rules in IoT device management interfaces",
+    "Accessing home security settings in residential alarm systems"
   ],
   "tags": [
     "home",
