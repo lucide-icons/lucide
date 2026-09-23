@@ -9,12 +9,12 @@
     "ajaxjiang96"
   ],
   "use-cases": [
-    "Opening access control settings for an entrance",
-    "Configuring door automation in smart home applications",
-    "Managing entrance permissions in a building",
-    "Accessing door controls in a device dashboard"
+    "Opening room configuration in a smart home app",
+    "Setting automatic opening schedules for a building entrance",
+    "Managing visitor access to a shared entrance"
   ],
   "tags": [
+    "room",
     "entrance",
     "entry",
     "settings",
