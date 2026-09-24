@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "prolost"
+  ],
+  "tags": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "drink",
+    "glass"
+  ],
+  "categories": [
+    "food & beverage"
+  ]
+}
