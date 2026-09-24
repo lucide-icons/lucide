@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "akinshaywai"
+  ],
+  "tags": [
+    "home",
+    "house",
+    "medical",
+    "health",
+    "clinic",
+    "healthcare",
+    "cross",
+    "plus",
+    "first aid"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "medical"
+  ]
+}
