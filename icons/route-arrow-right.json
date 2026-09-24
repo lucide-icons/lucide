@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "route",
+    "path",
+    "arrow",
+    "direction",
+    "right",
+    "flow",
+    "journey",
+    "reroute",
+    "detour",
+    "navigate",
+    "forward",
+    "auto"
+  ],
+  "categories": [
+    "navigation",
+    "arrows"
+  ]
+}
