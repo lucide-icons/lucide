@@ -68,6 +68,12 @@
     "vite": "^7.3.6"
   },
   "peerDependencies": {
+    "@types/react": "*",
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
   }
 }
