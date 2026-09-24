@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating information or help",
+    "representing input fields or input controls",
+    "representing electric current in scientific contexts"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "information",
+    "help",
+    "input",
+    "current",
+    "electricity",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}
