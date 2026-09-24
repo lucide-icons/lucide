@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Gaming",
+  "description": "Icons for games, fantasy items, strategy pieces, achievements, and play-related objects.",
   "icon": "gamepad-2"
 }

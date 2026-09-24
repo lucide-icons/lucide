@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Cursors",
+  "description": "Icons for cursors, pointers, selection tools, loading states, and direct manipulation.",
   "icon": "mouse-pointer-2"
 }

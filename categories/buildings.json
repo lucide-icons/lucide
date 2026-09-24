@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Buildings",
+  "description": "Icons for buildings, landmarks, houses, infrastructure, and built environments.",
   "icon": "building"
 }

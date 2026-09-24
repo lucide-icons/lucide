@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Food & beverage",
+  "description": "Icons for food, drinks, cooking, ingredients, dining, and kitchen items.",
   "icon": "coffee"
 }

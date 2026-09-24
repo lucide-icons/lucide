@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Navigation & Places",
+  "description": "Icons for maps, locations, landmarks, routes, travel directions, and wayfinding.",
   "icon": "compass"
 }

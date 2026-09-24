@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Sports",
-  "icon": "type"
+  "description": "Icons for sports, fitness, competition, equipment, and athletic achievement.",
+  "icon": "trophy"
 }
