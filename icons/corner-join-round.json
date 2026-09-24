@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "stroke",
+    "line",
+    "vector",
+    "graphics",
+    "design",
+    "shape",
+    "path",
+    "segment",
+    "edge",
+    "intersection",
+    "angle",
+    "arc",
+    "circular",
+    "smooth"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}
