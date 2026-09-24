@@ -12,13 +12,13 @@
   "dependencies": {
     "lucide-react": "workspace:*",
     "next": "16.3.4",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
     "@vitest/browser-playwright": "4.1.10",
     "typescript": "^6.0.3",
     "vite": "^7.3.6",
