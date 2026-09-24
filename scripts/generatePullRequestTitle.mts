@@ -47,7 +47,9 @@ type Rule = {
  *
  * `icons/` and `lab/` come first because their added filename *is* the subject,
  * so the whole title is generated. Every other rule only corrects the scope.
- * Scope names mirror `.github/labeler.yml`.
+ * The `icons/`, `lab/`, `categories/` and `docs/` scopes mirror
+ * `.github/labeler.yml`; `packages/*` scopes mirror each package's
+ * `package.json` name.
  */
 const RULES: Rule[] = [
   { pattern: /^icons\/[^/]+\.svg$/, scope: 'icons', mode: 'generate' },
@@ -56,16 +58,18 @@ const RULES: Rule[] = [
   { pattern: /^categories\/[^/]+\.json$/, scope: 'categories', mode: 'prefix' },
   { pattern: /^docs\/.*\.md$/, scope: 'docs', mode: 'prefix' },
   { pattern: /^docs\//, scope: 'site', mode: 'prefix' },
-  { pattern: /^packages\/lucide-react-native\//, scope: 'react-native', mode: 'prefix' },
-  { pattern: /^packages\/lucide-react\//, scope: 'react', mode: 'prefix' },
-  { pattern: /^packages\/lucide-preact\//, scope: 'preact', mode: 'prefix' },
-  { pattern: /^packages\/lucide-solid\//, scope: 'solid', mode: 'prefix' },
-  { pattern: /^packages\/lucide-static\//, scope: 'static', mode: 'prefix' },
-  { pattern: /^packages\/lucide-icons\//, scope: 'lucide-icons', mode: 'prefix' },
-  { pattern: /^packages\/vue\//, scope: 'vue', mode: 'prefix' },
-  { pattern: /^packages\/angular\//, scope: 'angular', mode: 'prefix' },
-  { pattern: /^packages\/svelte\//, scope: 'svelte', mode: 'prefix' },
-  { pattern: /^packages\/astro\//, scope: 'astro', mode: 'prefix' },
+  { pattern: /^packages\/lucide-react-native\//, scope: 'lucide-react-native', mode: 'prefix' },
+  { pattern: /^packages\/lucide-react\//, scope: 'lucide-react', mode: 'prefix' },
+  { pattern: /^packages\/lucide-preact\//, scope: 'lucide-preact', mode: 'prefix' },
+  { pattern: /^packages\/lucide-solid\//, scope: 'lucide-solid', mode: 'prefix' },
+  { pattern: /^packages\/lucide-static\//, scope: 'lucide-static', mode: 'prefix' },
+  { pattern: /^packages\/icons\//, scope: '@lucide/icons', mode: 'prefix' },
+  { pattern: /^packages\/vue\//, scope: '@lucide/vue', mode: 'prefix' },
+  { pattern: /^packages\/angular\//, scope: '@lucide/angular', mode: 'prefix' },
+  { pattern: /^packages\/svelte\//, scope: '@lucide/svelte', mode: 'prefix' },
+  { pattern: /^packages\/astro\//, scope: '@lucide/astro', mode: 'prefix' },
+  { pattern: /^packages\/lab\//, scope: '@lucide/lab', mode: 'prefix' },
+  { pattern: /^packages\/shared\//, scope: '@lucide/shared', mode: 'prefix' },
   { pattern: /^packages\/lucide\//, scope: 'lucide', mode: 'prefix' },
 ];
 
