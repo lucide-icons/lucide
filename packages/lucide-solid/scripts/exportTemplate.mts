@@ -1,22 +1,21 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG';
 import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default defineExportTemplate(async ({
-  componentName,
-  iconName,
-  children,
-  getSvg,
-  deprecated,
-  deprecationReason,
-}) => {
-  const svgContents = await getSvg();
-  const svgBase64 = base64SVG(svgContents);
+export default defineExportTemplate(
+  async ({ componentName, iconName, iconData, getSvg, deprecated, deprecationReason }) => {
+    const svgContents = await getSvg();
+    const svgBase64 = base64SVG(svgContents);
 
-  return `
+    return `
 import Icon from '../Icon';
-import type { IconNode, LucideProps } from '../types';
+import type { LucideIconData, LucideIconNode, LucideProps } from '../types';
 
-const iconNode: IconNode = ${JSON.stringify(children)};
+export const __iconData: LucideIconData = ${JSON.stringify(iconData)};
+
+/**
+ * @deprecated Access \`__iconData\` instead.
+ */
+export const __iconNode: LucideIconNode[] = __iconData.node;
 
 /**
  * @component @name ${componentName}
@@ -30,9 +29,10 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} iconNode={iconNode} name="${iconName}" />
+  <Icon {...props} icon={__iconData} />
 )
 
 export default ${componentName};
 `;
-});
+  },
+);

@@ -1,6 +1,5 @@
 import path from 'path';
 import fs from 'fs';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
 import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.ts';
 import getExportString from './getExportString.ts';

@@ -9,7 +9,7 @@ export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
 
 export declare const createLucideIcon: (
   iconName: string,
-  iconNode: any[],
+  iconNode: [elementName: string, attrs: Record<string, string>][],
 ) => (props: LucideProps) => JSX.Element;
 
 export type Icon = React.FC<LucideProps>;
