@@ -1,0 +1,31 @@
+{
+  "name": "@lucide/integration-solid-solid-start",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc --noEmit && tsc --noEmit --project tsconfig.declarations.json",
+    "test:browser": "vitest run",
+    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+  },
+  "dependencies": {
+    "@solidjs/meta": "0.29.4",
+    "@solidjs/router": "1.0.0",
+    "@solidjs/start": "2.0.5",
+    "lucide-solid": "workspace:*",
+    "nitro": "3.0.260903-beta",
+    "solid-js": "1.9.15"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "4.1.10",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vite-plugin-solid": "^2.11.14",
+    "vitest": "4.1.11",
+    "vitest-browser-solid": "1.0.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
