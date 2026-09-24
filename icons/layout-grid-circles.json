@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Opening an app launcher or application grid",
+    "Switching to a tiled or grid-based layout",
+    "Displaying a dashboard of widgets or shortcuts",
+    "Representing a dot matrix or dot-matrix display"
+  ],
+  "tags": [
+    "app",
+    "home",
+    "start",
+    "dot matrix",
+    "dots",
+    "menu",
+    "dashboard",
+    "collection",
+    "overview",
+    "tiles"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
