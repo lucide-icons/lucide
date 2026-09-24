@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "Levi-Bensley"
+  ],
+  "tags": [
+    "call"
+  ],
+  "categories": [
+    "text",
+    "connectivity",
+    "devices",
+    "communication"
+  ]
+}
