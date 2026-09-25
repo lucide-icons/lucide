@@ -18,7 +18,7 @@ export interface LucideConfig {
    * Stroke width
    * @default 2
    */
-  strokeWidth: number;
+  strokeWidth: string | number;
   /**
    * Whether to use absolute stroke width.
    * @deprecated Use `nonScalingStroke` instead.
