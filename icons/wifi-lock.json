@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["benhaube", "colebemis", "csandman", "ericfennis", "jguddas"],
+  "use-cases": [
+    "Representing a secured Wi-Fi network",
+    "Indicating an SSID requires a password to authenticate",
+    "showing a locked wifi network in a list of available networks",
+    "indicating a password-protected guest network",
+    "denoting an encrypted hotspot or mobile tethering connection",
+    "labelling wireless security settings in router or network apps"
+  ],
+  "tags": ["admin", "connection", "secure", "security", "signal", "network", "password", "wireless"],
+  "categories": ["connectivity", "devices", "security"]
+}
