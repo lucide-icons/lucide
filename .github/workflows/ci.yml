@@ -5,7 +5,10 @@ on:
     branches:
       - main
     paths:
-      - icons/**/*.svg
+      - icons/*.svg
+
+  schedule:
+    - cron: '0 6 * * *'
 
   workflow_dispatch:
     inputs:
@@ -26,39 +29,60 @@ on:
 permissions: {}
 
 jobs:
-  check-dispatch-gate:
-    if: github.repository == 'lucide-icons/lucide' &&
-      startsWith(github.event.head_commit.message, 'feat(icons)') &&
-      github.event_name != 'workflow_dispatch'
+  release-gate:
+    if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_dispatch'
+    environment: ${{ github.event_name == 'schedule' && 'Icon Release' || 'Icon Release Gated' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve release
+        run: echo 'Release approved'
+
+  prepare-release:
+    needs: release-gate
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read # Required to check if a new release is needed
     outputs:
-      RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
+      SHOULD_RELEASE: ${{ steps.changes.outputs.SHOULD_RELEASE }}
+      LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
 
-      - name: Fetch tags
-        run: git fetch --all --tags
+      - name: Get latest tag
+        id: latest-tag
+        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> "$GITHUB_OUTPUT"
 
-      - name: Check if latest tag was created today
-        id: environment
+      - name: Log latest tag
+        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
+
+      - name: Check for releasable changes
+        id: changes
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
         run: |
-          LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
-          TAG_DATE=$(git log -1 --format=%cs "$LATEST_TAG")
-          TODAY=$(date +%Y-%m-%d)
-
-          if [ "$TAG_DATE" == "$TODAY" ]; then
-            echo "::warning::A release tag already exists for today ($TODAY): $LATEST_TAG. Manual approval will be required to proceed."
-            echo "RELEASE_ENVIRONMENT=Icon Release Gated" >> $GITHUB_OUTPUT
-          else
-            echo "RELEASE_ENVIRONMENT=Icon Release" >> $GITHUB_OUTPUT
+          if [ -z "$LATEST_TAG" ]; then
+            echo "::error::No version tag found to release from."
+            exit 1
           fi
 
+          echo "Latest version tag: $LATEST_TAG"
+
+          CHANGES=$(git diff --name-only "$LATEST_TAG" HEAD -- ':(glob)icons/*.svg')
+
+          if [ -z "$CHANGES" ]; then
+            echo "::notice::No icon SVGs changed since $LATEST_TAG. Skipping release."
+            echo "SHOULD_RELEASE=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "$CHANGES"
+          echo "SHOULD_RELEASE=true" >> "$GITHUB_OUTPUT"
+
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
-    needs: check-dispatch-gate
-    environment: ${{ needs.check-dispatch-gate.outputs.RELEASE_ENVIRONMENT }}
+    if: github.repository == 'lucide-icons/lucide' && needs.prepare-release.outputs.SHOULD_RELEASE == 'true'
+    needs: prepare-release
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required to create the release and tag
@@ -67,6 +91,7 @@ jobs:
       RELEASE_URL: ${{ steps.create-release.outputs.url }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
       - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -76,37 +101,26 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Fetch tags
-        run: git fetch --all --tags
-
-      - name: Get latest tag
-        id: latest-tag
-        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_OUTPUT
-
-      - name: Log latest tag
-        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
-
       - name: Check if we can patch
-        run: pnpm semver $LATEST_TAG -i minor
+        run: pnpm semver "$LATEST_TAG" -i minor
         env:
-          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
+          LATEST_TAG: ${{ needs.prepare-release.outputs.LATEST_TAG }}
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
+        run: echo "NEW_VERSION=$(pnpm semver "$LATEST_TAG" -i minor)" >> "$GITHUB_OUTPUT"
         env:
-          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
+          LATEST_TAG: ${{ needs.prepare-release.outputs.LATEST_TAG }}
 
       - name: Check output
-        run: |
-          echo '${{ steps.new-version.outputs.NEW_VERSION }}'
-          echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
+        run: echo '${{ steps.new-version.outputs.NEW_VERSION }}'
 
       - name: Create Release
         id: create-release
         uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
+          target_commitish: ${{ github.sha }}
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
           generate_release_notes: true
 
@@ -135,7 +149,7 @@ jobs:
   post-release:
     name: Trigger post-release automation
     if: >-
-      always() &&
+      !cancelled() &&
       github.repository == 'lucide-icons/lucide' &&
       (needs.start-release.result == 'success' || needs.dispatch-release.result == 'success')
     needs: [create-release, start-release, dispatch-release]
