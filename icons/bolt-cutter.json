@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Gameheld"
+  ],
+  "use-cases": [
+    "Representing construction-related processes",
+    "Representing crime dashboards",
+    "Managing tool overviews",
+    "Representing workshops"
+  ],
+  "tags": [
+    "diy",
+    "toolbox",
+    "build",
+    "construction",
+    "crime",
+    "robbery",
+    "theft",
+    "crafts",
+    "industrial",
+    "heavy-duty",
+    "craftsmanship",
+    "mechanic",
+    "maintenance",
+    "workshop"
+  ],
+  "categories": [
+    "tools",
+    "security"
+  ]
+}
