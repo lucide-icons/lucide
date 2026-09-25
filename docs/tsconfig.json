@@ -7,8 +7,9 @@
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "skipLibCheck": true,
     "paths": {
-      "~/.vitepress/*": ["./.vitepress/*"],
-    },
-  },
+      "~/.vitepress/*": ["./.vitepress/*"]
+    }
+  }
 }

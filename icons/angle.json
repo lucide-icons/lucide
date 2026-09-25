@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "rotation input in a design inspector",
+    "measurement tool in cad software",
+    "dimensioning in technical drawings",
+    "labeling angles in geometry exercises",
+    "displaying degrees for rotation controls"
+  ],
+  "tags": [
+    "angle",
+    "degree",
+    "corner",
+    "geometry",
+    "measure",
+    "math",
+    "rotate",
+    "vertex",
+    "slope",
+    "protractor",
+    "measurement",
+    "dimension",
+    "arc",
+    "drafting",
+    "cad"
+  ],
+  "categories": [
+    "math",
+    "design"
+  ]
+}

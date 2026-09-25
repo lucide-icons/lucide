@@ -2,6 +2,7 @@
 title: Typescript - Solid
 description: Learn about the different types exported by the `lucide-solid` package and how to use them in your Solid application.
 ---
+
 # TypeScript Support
 
 List of exported types from the `lucide-solid` package.
@@ -16,12 +17,17 @@ interface LucideProps extends SVGAttributes {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // Any other SVG attributes
 }
 ```
 
 ### Using `LucideProps`
+
 You can use the `LucideProps` interface to type your custom icon components or when you need to work with icon props.
 
 ```tsx
@@ -76,6 +82,7 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
 ### Using `IconNode`
+
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
 ```tsx
@@ -89,7 +96,11 @@ const customIcon: IconNode = [
 
 const MyCustomIcon = () => {
   return (
-    <Icon iconNode={customIcon} size={24} color="blue" />
+    <Icon
+      iconNode={customIcon}
+      size={24}
+      color="blue"
+    />
   );
 };
 

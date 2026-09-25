@@ -2,6 +2,7 @@
 title: Getting started - Angular
 description: This guide will help you get started with Lucide in your Angular project.
 ---
+
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -56,7 +57,7 @@ import { LucideFileText } from '@lucide/angular';
   template: '<svg lucideFileText></svg>',
   imports: [LucideFileText],
 })
-export class App { }
+export class App {}
 ```
 
 ### Dynamic icon component
@@ -74,7 +75,7 @@ import { LucideDynamicIcon, LucideCircleCheck, LucideCircleX } from '@lucide/ang
 })
 export class App {
   protected readonly model = signal<boolean>(true);
-  protected readonly icon = computed(() => this.model() ? LucideCircleCheck : LucideCircleX);
+  protected readonly icon = computed(() => (this.model() ? LucideCircleCheck : LucideCircleX));
 }
 ```
 
@@ -82,18 +83,24 @@ export class App {
 
 To customize the appearance of an icon, you can use the following inputs:
 
-|  name                   |   type    |  default     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `strokeWidth`           | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `title`                 | *string*  | null         |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `strokeWidth`      | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
+| `title`            | _string_  | null         |
 
 Because icons render as SVG elements, all standard SVG attributes can also be applied. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```html
-<svg lucideHouse [size]="48" color="red" [strokeWidth]="1" title="Home"></svg>
+<svg
+  lucideHouse
+  [size]="48"
+  color="red"
+  [strokeWidth]="1"
+  title="Home"
+></svg>
 ```
 
 For more examples and details on how to use these inputs, continue the guide:

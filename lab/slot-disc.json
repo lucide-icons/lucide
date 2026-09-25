@@ -1,0 +1,44 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "data",
+    "backup",
+    "save",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "gigabytes",
+    "gb",
+    "format",
+    "digital",
+    "read",
+    "write",
+    "rw",
+    "cd",
+    "dvd",
+    "minidisc",
+    "drive",
+    "tray",
+    "walkman",
+    "player",
+    "playback",
+    "listen",
+    "audio",
+    "music",
+    "instructions",
+    "port",
+    "input",
+    "insert",
+    "slide",
+    "push"
+  ],
+  "categories": [
+    "multimedia",
+    "devices",
+    "files"
+  ]
+}
