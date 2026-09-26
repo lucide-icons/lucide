@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "Synchronizing databases",
+    "replicating database data",
+    "syncing local and remote storage",
+    "database backup synchronization",
+    "keeping database records in sync"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "container",
+    "tin",
+    "pot",
+    "bytes",
+    "servers",
+    "sync",
+    "db"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
