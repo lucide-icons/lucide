@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "TanvirMahin24",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "xspoilt-dev",
+    "robiuzzaman4"
   ],
   "use-cases": [
     "Showing product prices in BDT",
@@ -15,6 +17,8 @@
     "money",
     "payment",
     "bdt",
+    "taka",
+    "bangladesh",
     "৳",
     "currencysymbol",
     "cash",
