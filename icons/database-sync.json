@@ -21,7 +21,12 @@
     "bytes",
     "servers",
     "sync",
-    "db"
+    "db",
+    "database",
+    "replication",
+    "backup",
+    "replica",
+    "mirroring"
   ],
   "categories": [
     "devices",
