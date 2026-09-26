@@ -41,8 +41,8 @@ const sizeCssVar = useCssVar(
 )
 
 syncRef(color, colorCssVar)
-syncRef(strokeWidth, strokeWidthCssVar)
-syncRef(size, sizeCssVar)
+syncRef(strokeWidth, strokeWidthCssVar, { transform: { ltr: String, rtl: Number } })
+syncRef(size, sizeCssVar, { transform: { ltr: String, rtl: Number } })
 
 function resetStyle () {
   color.value = 'currentColor'
