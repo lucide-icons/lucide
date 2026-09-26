@@ -10,7 +10,11 @@
     "replicating database data",
     "syncing local and remote storage",
     "database backup synchronization",
-    "keeping database records in sync"
+    "keeping database records in sync",
+    "showing sync status between primary and replica databases",
+    "starting manual replication from a database admin panel",
+    "scheduling automated backups and replication jobs",
+    "indicating cloud and local database synchronization"
   ],
   "tags": [
     "storage",
