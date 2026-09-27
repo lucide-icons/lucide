@@ -1,28 +1,27 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG';
 import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default defineExportTemplate(async ({
-  componentName,
-  iconName,
-  children,
-  getSvg,
-  deprecated,
-  deprecationReason,
-}) => {
-  const svgContents = await getSvg();
-  const svgBase64 = base64SVG(svgContents);
+export default defineExportTemplate(
+  async ({ componentName, iconName, iconData, getSvg, deprecated, deprecationReason }) => {
+    const svgContents = await getSvg();
+    const svgBase64 = base64SVG(svgContents);
 
-  // Astro doesn't need keyed children in loops
-  const keylessChildren = children.map((c) => {
-    const [element, { key, ...otherAttrs }] = c;
-    return [element, otherAttrs];
-  });
+    // Astro doesn't need keyed children in loops
+    const keylessIconData = {
+      ...iconData,
+      node: iconData.node.map((child) => {
+        const [element, { key, ...otherAttrs }] = child;
+        return [element, otherAttrs];
+      }),
+    };
 
-  // TODO: build-icons' `pretty` is set to false as the prettier
-  // formatter uses babel which I'm not sure it supports typescript
-  return `
+    // TODO: build-icons' `pretty` is set to false as the prettier
+    // formatter uses babel which I'm not sure it supports typescript
+    return `
 import createLucideIcon from '../createLucideIcon';
-import type { AstroComponent } from '../types'
+import type { AstroComponent, LucideIconData } from '../types'
+
+const iconData: LucideIconData = ${JSON.stringify(keylessIconData)};
 
 /**
  * @component @name ${componentName}
@@ -35,8 +34,9 @@ import type { AstroComponent } from '../types'
  * @returns {any} Astro Component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(keylessChildren)}) as AstroComponent;
+const ${componentName} = createLucideIcon(iconData) as AstroComponent;
 
 export default ${componentName};
 `;
-});
+  },
+);

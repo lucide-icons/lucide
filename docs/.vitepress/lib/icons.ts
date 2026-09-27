@@ -20,6 +20,8 @@ export async function getData(name: string) {
   const iconNode = iconNodes[name];
 
   const releaseData = releaseMeta?.[name] ?? {
+    fromFork: false,
+    awaitingRelease: false,
     createdRelease: {
       version: '0.0.0',
       date: DATE_OF_FORK,

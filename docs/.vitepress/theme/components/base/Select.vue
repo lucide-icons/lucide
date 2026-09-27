@@ -27,6 +27,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
           <slot name="end-icon">
             <Icon
               :iconNode="chevronsUpDown"
+              name="chevrons-up-down"
               class="chevron-icon"
               aria-hidden="true"
             />
@@ -57,6 +58,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
               >
                 <Icon
                   :iconNode="check"
+                  name="check"
                   class="check"
                   aria-hidden="true"
                 />
