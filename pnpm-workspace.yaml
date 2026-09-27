@@ -28,3 +28,8 @@ allowBuilds:
   ttf2woff2: false
   unrs-resolver: false
   vue-demi: false
+
+minimumReleaseAgeExclude:
+  - '@solidjs/signals@2.0.0-rc.9'
+  - solid-js@2.0.0-rc.9
+  - '@solidjs/web@2.0.0-rc.9'

@@ -1,5 +1,5 @@
-import { createMemo, For, splitProps, useContext } from 'solid-js';
-import { Dynamic } from 'solid-js/web';
+import { createMemo, For, omit, useContext } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
 import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
 import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { LucideContext } from './context';
@@ -15,7 +15,8 @@ type IconProps =
     };
 
 const Icon = (props: LucideProps & IconProps) => {
-  const [localProps, rest] = splitProps(props, [
+  const rest = omit(
+    props,
     'color',
     'size',
     'width',
@@ -27,14 +28,14 @@ const Icon = (props: LucideProps & IconProps) => {
     'iconNode',
     'absoluteStrokeWidth',
     'nonScalingStroke',
-  ]);
+  );
 
   const globalProps = useContext(LucideContext);
 
   const icon = createMemo<LucideIconData>(
     () =>
-      localProps.icon ?? {
-        node: localProps.iconNode ?? ([] as LucideIconNode[]),
+      props.icon ?? {
+        node: props.iconNode ?? ([] as LucideIconNode[]),
         size: 24,
         aliases: [],
       },
@@ -42,14 +43,14 @@ const Icon = (props: LucideProps & IconProps) => {
 
   const builtIcon = createMemo(() =>
     buildLucideIconNode(icon(), {
-      color: localProps.color ?? globalProps.color,
-      width: localProps.width ?? localProps.size ?? globalProps.size,
-      height: localProps.height ?? localProps.size ?? globalProps.size,
-      strokeWidth: localProps.strokeWidth ?? globalProps.strokeWidth,
-      absoluteStrokeWidth: localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
-      nonScalingStroke: localProps.nonScalingStroke ?? globalProps.nonScalingStroke,
-      className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
-      hasA11yProp: Boolean(localProps.children) || hasA11yProp(rest),
+      color: props.color ?? globalProps.color,
+      width: props.width ?? props.size ?? globalProps.size,
+      height: props.height ?? props.size ?? globalProps.size,
+      strokeWidth: props.strokeWidth ?? globalProps.strokeWidth,
+      absoluteStrokeWidth: props.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
+      nonScalingStroke: props.nonScalingStroke ?? globalProps.nonScalingStroke,
+      className: mergeClasses('lucide-icon', globalProps.class, props.class),
+      hasA11yProp: Boolean(props.children) || hasA11yProp(rest),
       attributes: rest,
     }),
   );

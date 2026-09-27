@@ -1,4 +1,4 @@
-import { createContext, splitProps, type JSXElement } from 'solid-js';
+import { createContext, type Element } from 'solid-js';
 
 export const LucideContext = createContext<{
   size?: number;
@@ -20,7 +20,7 @@ export const LucideContext = createContext<{
 });
 
 interface LucideProviderProps {
-  children: JSXElement;
+  children: Element;
   size?: number;
   color?: string;
   strokeWidth?: number;
@@ -33,14 +33,26 @@ interface LucideProviderProps {
 }
 
 export function LucideProvider(props: LucideProviderProps) {
-  const [value, rest] = splitProps(props, [
-    'size',
-    'color',
-    'strokeWidth',
-    'absoluteStrokeWidth',
-    'nonScalingStroke',
-    'class',
-  ]);
+  const value = {
+    get size() {
+      return props.size;
+    },
+    get color() {
+      return props.color;
+    },
+    get strokeWidth() {
+      return props.strokeWidth;
+    },
+    get absoluteStrokeWidth() {
+      return props.absoluteStrokeWidth;
+    },
+    get nonScalingStroke() {
+      return props.nonScalingStroke;
+    },
+    get class() {
+      return props.class;
+    },
+  };
 
-  return <LucideContext.Provider value={value}>{rest.children}</LucideContext.Provider>;
+  return <LucideContext value={value}>{props.children}</LucideContext>;
 }
