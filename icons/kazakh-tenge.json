@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hkayrad"
+  ],
+  "use-cases": [
+    "Showing the Kazakh Tenge currency symbol in financial applications or websites."
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
