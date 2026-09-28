@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "representing camera settings or photography mode",
+    "indicating a specialized zoom / magnification tool for photography or camera apps",
+    "optical shops, eyeglasses or contact lens product categories",
+    "indicating visual effects like glassmorphism or lens reflections",
+    "generically representing shaders and visual effects, or scenic post-processing effects"
+  ],
+  "tags": [
+    "optics",
+    "reflection",
+    "camera",
+    "photography",
+    "focus",
+    "effect",
+    "shader",
+    "post-process",
+    "visual",
+    "contact lens",
+    "glass",
+    "magnification"
+  ],
+  "categories": [
+    "photography",
+    "science",
+    "tools"
+  ]
+}
