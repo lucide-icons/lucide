@@ -22,7 +22,15 @@
     "halloween",
     "rip",
     "obituary",
-    "deceased"
+    "deceased",
+    "epitaph",
+    "mourning",
+    "bereavement",
+    "condolence",
+    "deprecated",
+    "retired",
+    "archived",
+    "decommissioned"
   ],
   "categories": [
     "gaming",
