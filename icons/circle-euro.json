@@ -3,6 +3,8 @@
   "contributors": [
     "Guido3000"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
   "use-cases": [
     "currency selector buttons",
     "pricing badges"
