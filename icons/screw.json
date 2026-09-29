@@ -13,5 +13,9 @@
     "phillips",
     "flathead"
   ],
-  "categories": ["tools"]
+  "categories": [
+    "tools",
+    "home",
+    "design"
+  ]
 }
