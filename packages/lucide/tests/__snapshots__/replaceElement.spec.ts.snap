@@ -1,3 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`combineClassNames > should returns a string of classNames 1`] = `"item item1 item2 item3 item4 item5 item6 item7 item8 item9"`;

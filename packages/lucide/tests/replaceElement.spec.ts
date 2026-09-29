@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getAttrs, getClassNames, combineClassNames } from '../src/replaceElement';
+import { getAttrs, getClassNames } from '../src/replaceElement';
 
 describe('getAtts', () => {
   it('should returns attrbrutes of an element', () => {
@@ -39,26 +39,5 @@ describe('getClassNames', () => {
 
     const attrs = getClassNames(elementAttrs);
     expect(JSON.stringify(attrs)).toBe(JSON.stringify(['item1', 'item2', 'item3']));
-  });
-});
-
-describe('combineClassNames', () => {
-  it('should returns a string of classNames', () => {
-    const arrayOfClassnames: (string | Record<string, string[]>)[] = [
-      'item',
-      {
-        class: ['item1', 'item2', 'item3'],
-      },
-      {
-        class: ['item4', 'item5', 'item6'],
-      },
-      {
-        class: ['item7', 'item8', 'item9'],
-      },
-    ];
-
-    const combinedClassNames = combineClassNames(arrayOfClassnames);
-
-    expect(combinedClassNames).toMatchSnapshot();
   });
 });

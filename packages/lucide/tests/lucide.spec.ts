@@ -54,20 +54,12 @@ describe('createIcons', () => {
     createIcons({ icons, attrs });
 
     const element = document.querySelector('svg') as SVGSVGElement;
-    const attributes = element.getAttributeNames();
-
-    const attributesAndValues = attributes.reduce(
-      (acc, item) => {
-        acc[item] = element.getAttribute(item);
-
-        return acc;
-      },
-      {} as Record<string, string | null>,
-    );
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
-    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+    for (const [name, value] of Object.entries(attrs)) {
+      expect(element).toHaveAttribute(name, value);
+    }
   });
 
   it('should inherit elements attributes', () => {
@@ -75,23 +67,16 @@ describe('createIcons', () => {
 
     const attrs = {
       'data-theme-switcher': 'light',
+      'aria-hidden': 'true',
     };
 
     createIcons({ icons });
 
     const element = document.querySelector('svg') as SVGSVGElement;
-    const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce(
-      (acc, item) => {
-        acc[item] = element.getAttribute(item);
-
-        return acc;
-      },
-      {} as Record<string, string | null>,
-    );
-
-    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+    for (const [name, value] of Object.entries(attrs)) {
+      expect(element).toHaveAttribute(name, value);
+    }
   });
 
   it('should read elements from DOM and replace icon with alias name', () => {
@@ -103,6 +88,27 @@ describe('createIcons', () => {
 
     expect(document.body.innerHTML).toBe(svg);
     expect(document.body.innerHTML).toMatchSnapshot();
+  });
+
+  it('should add aria-hidden attribute when no a11y props are present', () => {
+    document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
+
+    createIcons({ icons });
+
+    const element = document.querySelector('svg') as SVGSVGElement;
+
+    expect(element).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should not add aria-hidden attribute when a11y props are present', () => {
+    document.body.innerHTML = `<i data-lucide="volume-2" class="lucide" aria-label="Volume"></i>`;
+
+    createIcons({ icons });
+
+    const element = document.querySelector('svg') as SVGSVGElement;
+
+    expect(element).not.toHaveAttribute('aria-hidden');
+    expect(element).toHaveAttribute('aria-label', 'Volume');
   });
 
   it('should not replace icons inside template elements by default', () => {

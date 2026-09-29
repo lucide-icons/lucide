@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "delete",
+    "clear",
+    "cancel",
+    "normalise",
+    "normalize",
+    "styling",
+    "plain text",
+    "font",
+    "typography",
+    "slab serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "markdown",
+    "markup",
+    "x",
+    "times"
+  ],
+  "categories": [
+    "text",
+    "tools",
+    "design",
+    "development"
+  ]
+}

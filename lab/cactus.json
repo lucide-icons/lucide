@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "spikes",
+    "spines",
+    "needles",
+    "glochid",
+    "plant",
+    "desert",
+    "botanical",
+    "flora"
+  ],
+  "categories": [
+    "nature",
+    "maps"
+  ]
+}

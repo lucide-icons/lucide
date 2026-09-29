@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "representing sweeping and floor cleaning tasks",
+    "indicating housekeeping or janitorial services",
+    "showing cleaning supplies in home maintenance apps",
+    "representing witchcraft or Halloween themes"
+  ],
+  "tags": [
+    "broomstick",
+    "brush",
+    "sweep",
+    "sweeping",
+    "floor",
+    "cleaning",
+    "housekeeping",
+    "chores",
+    "tidy",
+    "spotless",
+    "dust",
+    "debris",
+    "bristles",
+    "handle",
+    "janitor",
+    "maintenance",
+    "witch",
+    "halloween"
+  ],
+  "categories": [
+    "tools",
+    "home",
+    "gaming"
+  ]
+}

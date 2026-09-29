@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "goal",
+    "score",
+    "posts",
+    "kicker",
+    "pitch",
+    "team",
+    "scrum",
+    "ruck",
+    "ball"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

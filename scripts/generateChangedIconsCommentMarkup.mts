@@ -46,13 +46,14 @@ const getImageTagsByFiles = (
     const url = getBaseUrl(file);
     const widthAttr = width ? `width="${width}"` : '';
 
-    return `${linkToLucideStudio ? `<a title="Open ${name} in lucide studio" target="_blank" href="https://studio.lucide.dev/edit?value=${encodeURI(minifiedSvg)}&name=${name}">` : ''}<img title="${name}" alt="${name}" ${widthAttr} src="${url}/${base64}.svg"/>${linkToLucideStudio ? '</a>' : ''}`;
+    return `${linkToLucideStudio ? `<a title="Open ${name} in lucide studio" target="_blank" href="https://studio.lucide.dev/edit?value=${encodeURI(minifiedSvg)}&name=${name}&utm_source=github.com&utm_medium=pr-comment">` : ''}<img title="${name}" alt="${name}" ${widthAttr} src="${url}/${base64}.svg"/>${linkToLucideStudio ? '</a>' : ''}`;
   });
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);
 const svgFilePaths = svgFiles.map((file) => `icons/${file}`);
 
-const iconsFilteredByName = (search: string) => svgFilePaths.filter((file) => file.includes(search));
+const iconsFilteredByName = (search: string) =>
+  svgFilePaths.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
   shuffleArray(svgFilePaths).slice(0, changedFiles.length),
@@ -120,6 +121,30 @@ const changeFilesDiffImageTags = getImageTagsByFiles(
   400,
 ).join(' ');
 
+const changeFilesSymmetryImageTagsRotate180 = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/symmetry/rotate-180`,
+  400,
+).join(' ');
+
+const changeFilesSymmetryImageTagsFlipHorizontal = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/symmetry/flip-horizontal`,
+  400,
+).join(' ');
+
+const changeFilesSymmetryImageTagsFlipVertical = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/symmetry/flip-vertical`,
+  400,
+).join(' ');
+
+const changeFilesSymmetryImageTagsFlipSlash = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/symmetry/flip-slash`,
+  400,
+).join(' ');
+
 const readyToUseCode = changedFiles
   .map((changedFile) => {
     const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
@@ -177,6 +202,17 @@ ${changeFilesXRayImageTags}
 <details>
 <summary>Icon Diffs</summary>
 ${changeFilesDiffImageTags}
+</details>
+<details>
+<summary>Icon Symmetry</summary>
+<h4>Flip Horizontal</h4>
+${changeFilesSymmetryImageTagsFlipHorizontal}
+<h4>Flip Vertical</h4>
+${changeFilesSymmetryImageTagsFlipVertical}
+<h4>Flip Diagonal</h4>
+${changeFilesSymmetryImageTagsFlipSlash}
+<h4>Rotate 180°</h4>
+${changeFilesSymmetryImageTagsRotate180}
 </details>
 <details>
 <summary>Icons as code</summary>

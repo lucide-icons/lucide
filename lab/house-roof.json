@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "property",
+    "real estate",
+    "dwellings",
+    "living",
+    "rooms",
+    "door",
+    "thatch",
+    "snow"
+  ],
+  "categories": [
+    "account",
+    "home",
+    "buildings"
+  ]
+}
