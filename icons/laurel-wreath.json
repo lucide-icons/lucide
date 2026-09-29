@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Youya-ui"
+  ],
+  "use-cases": [
+    "Product guarantee",
+    "Awards and achievements",
+    "Winner or champion",
+    "Rankings and leaderboards",
+    "Certifications and accreditations",
+    "Quality seals, Premium",
+    "Competitions and tournaments"
+  ],
+  "tags": [
+    "award",
+    "achievement",
+    "winner",
+    "victory",
+    "champion",
+    "prize",
+    "honor",
+    "warranty",
+    "guarantee",
+    "certified",
+    "quality",
+    "seal",
+    "authentic",
+    "official",
+    "laurel",
+    "wreath"
+  ],
+  "categories": [
+    "gaming",
+    "sports",
+    "social",
+    "shopping"
+  ]
+}
