@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "yasar-ibrahim"
+  ],
+  "use-cases": [
+    "Opening a 3D printing control panel",
+    "Showing 3D printer status and print progress",
+    "Starting or monitoring an additive manufacturing job"
+  ],
+  "tags": [
+    "3d",
+    "printer",
+    "print",
+    "printing",
+    "additive manufacturing",
+    "cnc",
+    "fabrication",
+    "device"
+  ],
+  "categories": [
+    "devices",
+    "tools"
+  ]
+}
