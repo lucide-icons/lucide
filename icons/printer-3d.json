@@ -16,10 +16,15 @@
     "additive manufacturing",
     "cnc",
     "fabrication",
-    "device"
+    "device",
+    "filament",
+    "nozzle",
+    "prototype",
+    "stl"
   ],
   "categories": [
     "devices",
-    "tools"
+    "tools",
+    "development"
   ]
 }
