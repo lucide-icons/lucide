@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "VitroidFPV"
+  ],
+  "tags": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit",
+    "axis"
+  ],
+  "categories": [
+    "design"
+  ]
+}
