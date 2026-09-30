@@ -18,12 +18,13 @@ export const STYLE_DEFAULTS = {
 };
 
 const persistedIconStyle = {
-  size: useLocalStorage('lucide-icon-size', STYLE_DEFAULTS.size),
-  strokeWidth: useLocalStorage('lucide-icon-stroke-width', STYLE_DEFAULTS.strokeWidth),
-  color: useLocalStorage('lucide-icon-color', STYLE_DEFAULTS.color),
+  size: useLocalStorage('lucide-icon-size', STYLE_DEFAULTS.size, { initOnMounted: false }),
+  strokeWidth: useLocalStorage('lucide-icon-stroke-width', STYLE_DEFAULTS.strokeWidth, { initOnMounted: false }),
+  color: useLocalStorage('lucide-icon-color', STYLE_DEFAULTS.color, { initOnMounted: false }),
   absoluteStrokeWidth: useLocalStorage(
     'lucide-icon-absolute-stroke-width',
     STYLE_DEFAULTS.absoluteStrokeWidth,
+    { initOnMounted: false },
   ),
 };
 

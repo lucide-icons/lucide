@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, shallowRef, type Ref, watch } from 'vue';
+import { computed, shallowRef, type Ref, watch } from 'vue';
 import { useCssVar, syncRef } from '@vueuse/core';
 import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
@@ -45,11 +45,13 @@ function resetStyle() {
 }
 
 function syncAbsoluteStrokeWidth(enabled: boolean) {
-  document.documentElement.classList.toggle('absolute-stroke-width', enabled);
+  if (typeof document !== 'undefined') {
+    document.documentElement.classList.toggle('absolute-stroke-width', enabled);
+  }
 }
 
 watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth);
-onMounted(() => syncAbsoluteStrokeWidth(absoluteStrokeWidth.value));
+syncAbsoluteStrokeWidth(absoluteStrokeWidth.value);
 
 const customizingActive = computed(() => {
   return (
