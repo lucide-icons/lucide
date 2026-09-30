@@ -1,4 +1,5 @@
-import { ref, inject, Ref } from 'vue';
+import { inject, Ref } from 'vue';
+import { useLocalStorage } from '@vueuse/core';
 
 export const ICON_STYLE_CONTEXT = Symbol('style');
 
@@ -16,12 +17,21 @@ export const STYLE_DEFAULTS = {
   absoluteStrokeWidth: false,
 };
 
-export const iconStyleContext = {
-  size: ref(24),
-  strokeWidth: ref(2),
-  color: ref('currentColor'),
-  absoluteStrokeWidth: ref(false),
+const persistedIconStyle = {
+  size: useLocalStorage('lucide-icon-size', STYLE_DEFAULTS.size),
+  strokeWidth: useLocalStorage('lucide-icon-stroke-width', STYLE_DEFAULTS.strokeWidth),
+  color: useLocalStorage('lucide-icon-color', STYLE_DEFAULTS.color),
+  absoluteStrokeWidth: useLocalStorage(
+    'lucide-icon-absolute-stroke-width',
+    STYLE_DEFAULTS.absoluteStrokeWidth,
+  ),
 };
+
+export function usePersistedIconStyle() {
+  return persistedIconStyle;
+}
+
+export const iconStyleContext = persistedIconStyle;
 
 export function useIconStyleContext(): IconSizeContext {
   const context = inject<IconSizeContext>(ICON_STYLE_CONTEXT);
