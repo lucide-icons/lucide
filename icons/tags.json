@@ -3,18 +3,27 @@
   "contributors": [
     "karsa-mistmere",
     "ericfennis",
-    "jguddas"
+    "jguddas",
+    "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "representing multiple labels or categories",
+    "indicating multiple metadata items"
+  ],
   "tags": [
     "labels",
     "badges",
     "tickets",
     "marks",
     "copy",
-    "multiple"
+    "multiple",
+    "categories",
+    "classification",
+    "metadata"
   ],
   "categories": [
-    "account"
+    "account",
+    "development",
+    "files"
   ]
 }
