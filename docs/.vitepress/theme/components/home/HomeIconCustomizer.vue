@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { syncRef, useCssVar } from '@vueuse/core'
 import { usePersistedIconStyle, STYLE_DEFAULTS } from '../../composables/useIconStyle'
 import HomeContainer from './HomeContainer.vue'
@@ -12,6 +12,7 @@ import Switch from '../base/Switch.vue'
 
 
 const iconContainer = ref<HTMLElement | null>()
+const absoluteStrokeClass = 'absolute-stroke-width'
 const { color, strokeWidth, size, absoluteStrokeWidth } = usePersistedIconStyle()
 const homeSize = computed({
   get: () => Math.min(Math.max(size.value, 16), 48),
@@ -66,7 +67,6 @@ function syncAbsoluteStrokeWidth(enabled: boolean) {
 }
 
 watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth)
-onMounted(() => syncAbsoluteStrokeWidth(absoluteStrokeWidth.value))
 </script>
 
 <template>
@@ -144,7 +144,11 @@ onMounted(() => syncAbsoluteStrokeWidth(absoluteStrokeWidth.value))
         </div>
       </div>
 
-      <div class="icons-container card-column" ref="iconContainer">
+      <div
+        class="icons-container card-column"
+        :class="{ [absoluteStrokeClass]: absoluteStrokeWidth }"
+        ref="iconContainer"
+      >
         <HomeIconCustomizerIcons />
       </div>
     </div>
