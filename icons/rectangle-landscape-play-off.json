@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "scottgriffinm"
+  ],
+  "use-cases": [
+    "Indicates that landscape video playback is disabled or blocked.",
+    "Indicates that autoplay or embedded video previews are turned off."
+  ],
+  "tags": [
+    "audio",
+    "video",
+    "music",
+    "start",
+    "run",
+    "off",
+    "disabled",
+    "blocked",
+    "forbidden"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
