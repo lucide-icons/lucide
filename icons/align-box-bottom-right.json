@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Christian Göran"
+  ],
+  "tags": [
+    "text",
+    "formatting",
+    "align",
+    "bottom",
+    "lower",
+    "right"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "layout"
+  ]
+}
