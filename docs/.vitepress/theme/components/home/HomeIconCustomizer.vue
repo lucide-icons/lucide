@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { syncRef, useCssVar } from '@vueuse/core'
+import { usePersistedIconStyle, STYLE_DEFAULTS } from '../../composables/useIconStyle'
 import HomeContainer from './HomeContainer.vue'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
@@ -11,10 +12,13 @@ import Switch from '../base/Switch.vue'
 
 
 const iconContainer = ref<HTMLElement | null>()
-const color = ref('currentColor')
-const strokeWidth = ref(2)
-const size = ref(24)
-const absoluteStrokeWidth = ref(false)
+const { color, strokeWidth, size, absoluteStrokeWidth } = usePersistedIconStyle()
+const homeSize = computed({
+  get: () => Math.min(Math.max(size.value, 16), 48),
+  set: (value: number) => {
+    size.value = value
+  },
+})
 
 const colorCssVar = useCssVar(
   '--customize-color',
@@ -40,20 +44,29 @@ const sizeCssVar = useCssVar(
   }
 )
 
-syncRef(color, colorCssVar)
-syncRef(strokeWidth, strokeWidthCssVar, { transform: { ltr: String, rtl: Number } })
-syncRef(size, sizeCssVar, { transform: { ltr: String, rtl: Number } })
+syncRef(color, colorCssVar, { direction: 'ltr' })
+syncRef(strokeWidth, strokeWidthCssVar, {
+  direction: 'ltr',
+  transform: { ltr: String },
+})
+syncRef(homeSize, sizeCssVar, {
+  direction: 'ltr',
+  transform: { ltr: String },
+})
 
 function resetStyle () {
-  color.value = 'currentColor'
-  strokeWidth.value = 2
-  size.value = 24
-  absoluteStrokeWidth.value = false
+  color.value = STYLE_DEFAULTS.color
+  strokeWidth.value = STYLE_DEFAULTS.strokeWidth
+  size.value = STYLE_DEFAULTS.size
+  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
 }
 
-watch(absoluteStrokeWidth, (enabled) => {
+function syncAbsoluteStrokeWidth(enabled: boolean) {
   iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
-})
+}
+
+watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth)
+onMounted(() => syncAbsoluteStrokeWidth(absoluteStrokeWidth.value))
 </script>
 
 <template>
@@ -104,12 +117,12 @@ watch(absoluteStrokeWidth, (enabled) => {
             label="Size"
           >
             <template #display>
-              <span class="customize-label">{{ size }}px</span>
+              <span class="customize-label">{{ homeSize }}px</span>
             </template>
             <RangeSlider
               id="size"
               name="size"
-              v-model="size"
+              v-model="homeSize"
               :min="16"
               :max="48"
               :step="4"
