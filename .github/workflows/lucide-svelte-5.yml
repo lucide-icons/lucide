@@ -61,5 +61,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Test
+      - name: Typecheck
         run: pnpm --filter @lucide/svelte typecheck
