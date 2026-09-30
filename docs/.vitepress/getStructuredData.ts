@@ -1,7 +1,7 @@
 import { PageData } from 'vitepress';
 
 export default async function getStructuredData(iconName: string, pageData: PageData) {
-  const url = `https://lucide.dev/icons/${iconName}`;
+  const url = `https://lucide.dev/icons/${iconName}/details`;
 
   return {
     '@context': 'https://schema.org',

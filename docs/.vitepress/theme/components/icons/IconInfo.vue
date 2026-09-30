@@ -33,12 +33,21 @@ const deprecatedTitle = computed(() => {
   });
 });
 
+const isDetailsPage = computed(() => {
+  const relativePath = page.value?.relativePath ?? '';
+  const name = props.icon.name;
+  if (props.icon.externalLibrary) {
+    return relativePath === `icons/${props.icon.externalLibrary}/${name}/details.md`;
+  }
+  return relativePath === `icons/${name}/details.md`;
+});
+
 const iconPath = computed(() => {
   if (props.icon.externalLibrary) {
-    return `icons/${props.icon.externalLibrary}/${props.icon.name}`;
+    return `/icons/${props.icon.externalLibrary}/${props.icon.name}/details`;
   }
 
-  return `icons/${props.icon.name}`;
+  return `/icons/${props.icon.name}/details`;
 });
 </script>
 
@@ -79,7 +88,7 @@ const iconPath = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="!page?.relativePath?.startsWith?.(iconPath)"
+        v-if="!isDetailsPage"
         :href="iconPath"
         text="See in action"
         @click="go(iconPath)"
