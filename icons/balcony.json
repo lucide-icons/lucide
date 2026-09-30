@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AJAyanbisi"
+  ],
+  "use-cases": [],
+  "tags": [
+    "architecture",
+    "balustrade",
+    "building",
+    "home",
+    "outdoor",
+    "patio",
+    "railing",
+    "terrace",
+    "veranda"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}
