@@ -1,10 +1,13 @@
 import buildLucideIconNode from './buildLucideIconNode';
 import type { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
 
+const escapeAttribute = (value: string) =>
+  value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+
 const buildDomNode = ([tagName, attributes, children = []]: LucideIconNode): string =>
   `<${tagName} ${Object.entries(attributes)
     .filter(([, value]) => value !== undefined && value !== null)
-    .map(([attrName, value]) => `${attrName}="${String(value)}"`)
+    .map(([attrName, value]) => `${attrName}="${escapeAttribute(String(value))}"`)
     .join(' ')}>${children?.map((child) => buildDomNode(child)).join('')}</${tagName}>`;
 
 /**
