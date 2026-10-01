@@ -10,6 +10,7 @@ import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
 import { transformPageData } from './transformPageData';
 import getHeadConfig from './getHeadConfig';
+import { iconStyleHeadCSS, iconStyleHeadScript } from './iconStyleHead';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -84,7 +85,11 @@ export default defineConfig({
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['style', {}, iconStyleHeadCSS],
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
