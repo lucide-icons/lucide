@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { syncRef, useCssVar } from '@vueuse/core'
 import { usePersistedIconStyle, STYLE_DEFAULTS } from '../../composables/useIconStyle'
 import HomeContainer from './HomeContainer.vue'
@@ -12,7 +12,7 @@ import Switch from '../base/Switch.vue'
 
 
 const iconContainer = ref<HTMLElement | null>()
-const absoluteStrokeClass = 'absolute-stroke-width'
+const mounted = ref(false)
 const { color, strokeWidth, size, absoluteStrokeWidth } = usePersistedIconStyle()
 const homeSize = computed({
   get: () => Math.min(Math.max(size.value, 16), 48),
@@ -62,11 +62,11 @@ function resetStyle () {
   absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
 }
 
-function syncAbsoluteStrokeWidth(enabled: boolean) {
-  iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
-}
-
-watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth)
+onMounted(async () => {
+  mounted.value = true
+  await nextTick()
+  document.documentElement.classList.remove('icon-style-pending')
+})
 </script>
 
 <template>
@@ -134,11 +134,14 @@ watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth)
             label="Absolute Stroke width"
           >
             <template #display>
-              <Switch
-                id="absolute-stroke-width"
-                name="absolute-stroke-width"
-                v-model="absoluteStrokeWidth"
-              />
+              <ClientOnly>
+                <Switch
+                  id="absolute-stroke-width"
+                  name="absolute-stroke-width"
+                  v-model="absoluteStrokeWidth"
+                />
+                <template #fallback><span style="display: inline-block; width: 40px; height: 22px" /></template>
+              </ClientOnly>
             </template>
           </InputField>
         </div>
@@ -146,7 +149,7 @@ watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth)
 
       <div
         class="icons-container card-column"
-        :class="{ [absoluteStrokeClass]: absoluteStrokeWidth }"
+        :class="{ 'absolute-stroke-width': mounted && absoluteStrokeWidth }"
         ref="iconContainer"
       >
         <HomeIconCustomizerIcons />

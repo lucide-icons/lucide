@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, shallowRef, type Ref, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, shallowRef, type Ref } from 'vue';
 import { useCssVar, syncRef } from '@vueuse/core';
 import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
@@ -13,6 +13,7 @@ const props = defineProps<{
 }>();
 
 const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
+const mounted = ref(false);
 const documentRef = shallowRef<HTMLElement | undefined>(
   typeof document !== 'undefined' ? document?.documentElement : undefined,
 );
@@ -44,14 +45,11 @@ function resetStyle() {
   absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
 }
 
-function syncAbsoluteStrokeWidth(enabled: boolean) {
-  if (typeof document !== 'undefined') {
-    document.documentElement.classList.toggle('absolute-stroke-width', enabled);
-  }
-}
-
-watch(absoluteStrokeWidth, syncAbsoluteStrokeWidth);
-syncAbsoluteStrokeWidth(absoluteStrokeWidth.value);
+onMounted(async () => {
+  mounted.value = true;
+  await nextTick();
+  document.documentElement.classList.remove('icon-style-pending');
+});
 
 const customizingActive = computed(() => {
   return (
@@ -66,7 +64,7 @@ const customizingActive = computed(() => {
 <template>
   <div
     class="customizer-card"
-    :class="{ customized: customizingActive }"
+    :class="{ customized: mounted && customizingActive }"
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
@@ -121,11 +119,14 @@ const customizingActive = computed(() => {
       id="absolute-stroke-width"
       label="Absolute stroke width"
     >
-      <Switch
-        id="absolute-stroke-width"
-        name="absolute-stroke-width"
-        v-model="absoluteStrokeWidth"
-      />
+      <ClientOnly>
+        <Switch
+          id="absolute-stroke-width"
+          name="absolute-stroke-width"
+          v-model="absoluteStrokeWidth"
+        />
+        <template #fallback><span style="display: inline-block; width: 40px; height: 22px" /></template>
+      </ClientOnly>
     </InputField>
   </div>
 </template>
