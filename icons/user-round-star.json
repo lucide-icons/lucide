@@ -14,7 +14,16 @@
     "like",
     "review",
     "rating",
-    "admin"
+    "admin",
+    "avatar",
+    "profile",
+    "featured",
+    "moderator",
+    "verified",
+    "badge",
+    "award",
+    "champion",
+    "starred"
   ],
   "categories": [
     "account"
