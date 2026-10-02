@@ -23,8 +23,12 @@ packages/svelte/.svelte-kit
 integrations/**/.react-router
 integrations/**/next-env.d.ts
 integrations/**/routeTree.gen.ts
+integrations/**/file-routes.d.ts
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__
+integrations/**/.output
+integrations/**/.nitro
+integrations/**/.nuxt
 
 # lucide-svelte
 packages/svelte/src/icons/*.svelte
