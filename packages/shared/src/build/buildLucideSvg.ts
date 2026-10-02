@@ -1,8 +1,16 @@
 import buildLucideIconNode from './buildLucideIconNode';
 import type { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
 
+const entities = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+} as const;
+
 const escapeAttribute = (value: string) =>
-  value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  value.replace(/[&<>"']/g, (char) => entities[char as keyof typeof entities]);
 
 const buildDomNode = ([tagName, attributes, children = []]: LucideIconNode): string =>
   `<${tagName} ${Object.entries(attributes)
