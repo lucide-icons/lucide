@@ -46,7 +46,7 @@ const getImageTagsByFiles = (
     const url = getBaseUrl(file);
     const widthAttr = width ? `width="${width}"` : '';
 
-    return `${linkToLucideStudio ? `<a title="Open ${name} in lucide studio" target="_blank" href="https://studio.lucide.dev/edit?value=${encodeURI(minifiedSvg)}&name=${name}">` : ''}<img title="${name}" alt="${name}" ${widthAttr} src="${url}/${base64}.svg"/>${linkToLucideStudio ? '</a>' : ''}`;
+    return `${linkToLucideStudio ? `<a title="Open ${name} in lucide studio" target="_blank" href="https://studio.lucide.dev/edit?value=${encodeURI(minifiedSvg)}&name=${name}&utm_source=github.com&utm_medium=pr-comment">` : ''}<img title="${name}" alt="${name}" ${widthAttr} src="${url}/${base64}.svg"/>${linkToLucideStudio ? '</a>' : ''}`;
   });
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);

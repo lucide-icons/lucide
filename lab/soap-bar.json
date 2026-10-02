@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "toiletries",
+    "amenities",
+    "bathroom",
+    "shower",
+    "clean",
+    "wash",
+    "lather",
+    "bubbles"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "lowering a selected layer by one step",
+    "moving an item backward in layer order"
+  ],
+  "tags": [
+    "move back",
+    "backward",
+    "lower",
+    "demote",
+    "step back",
+    "behind",
+    "reorder",
+    "arrange",
+    "layer",
+    "layers",
+    "stack",
+    "stacking",
+    "z-index",
+    "depth",
+    "graphics",
+    "design"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
