@@ -4,14 +4,15 @@
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
     "allowJs": true,
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "sourceMap": true,
-    "outDir": "./dist",
-  },
+    "outDir": "./dist"
+  }
 }

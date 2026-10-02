@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "add",
     "new",
@@ -32,6 +33,10 @@
     "text"
   ],
   "aliases": [
-    "plus-square"
+    {
+      "name": "plus-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

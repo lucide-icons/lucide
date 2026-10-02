@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating a declined card payment during checkout",
+    "Marking an invalid payment card in billing settings",
+    "Showing failed card authorization in banking apps",
+    "Canceling a card payment before submission"
+  ],
+  "tags": [
+    "debit",
+    "payment",
+    "banking",
+    "finance",
+    "transaction",
+    "wallet",
+    "purchase",
+    "checkout",
+    "billing",
+    "account",
+    "cardholder",
+    "declined",
+    "rejected",
+    "failed",
+    "invalid",
+    "canceled",
+    "error",
+    "cancel",
+    "bank",
+    "cc"
+  ],
+  "categories": [
+    "account",
+    "finance",
+    "shopping"
+  ]
+}

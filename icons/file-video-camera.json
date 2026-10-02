@@ -5,6 +5,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "movie",
     "video",
@@ -14,6 +15,10 @@
     "files"
   ],
   "aliases": [
-    "file-video-2"
+    {
+      "name": "file-video-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

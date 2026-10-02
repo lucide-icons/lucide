@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "unshielded",
     "cybersecurity",
@@ -44,7 +45,7 @@
     "weakness",
     "infection",
     "infected",
-    "comprimised",
+    "compromised",
     "data leak",
     "audited",
     "admin",
@@ -74,6 +75,10 @@
     "gaming"
   ],
   "aliases": [
-    "shield-close"
+    {
+      "name": "shield-close",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

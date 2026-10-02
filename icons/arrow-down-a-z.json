@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "filter",
     "sort",
@@ -21,6 +22,10 @@
     "arrows"
   ],
   "aliases": [
-    "arrow-down-az"
+    {
+      "name": "arrow-down-az",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

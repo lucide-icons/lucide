@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "media",
     "music"
@@ -12,6 +13,10 @@
     "multimedia"
   ],
   "aliases": [
-    "stop-circle"
+    {
+      "name": "stop-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

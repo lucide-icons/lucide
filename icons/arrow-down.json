@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "backwards",
     "reverse",
@@ -11,7 +12,6 @@
     "south"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }
