@@ -6,7 +6,7 @@
     "ericfennis",
     "jamiemlaw",
     "jamesgpearce"
-  ]
+  ],
   "use-cases": [
     "Indicating maximum wind speeds or gusts",
     "Sorting wind strengths in weather tables"
