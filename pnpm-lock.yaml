@@ -195,6 +195,12 @@ importers:
       '@rollup/plugin-replace':
         specifier: ^6.0.3
         version: 6.0.3(rollup@4.63.1)
+      '@types/react':
+        specifier: ^19.3.0
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       '@types/semver':
         specifier: ^7.8.0
         version: 7.8.0
@@ -242,7 +248,7 @@ importers:
         version: 6.0.3
       vitepress:
         specifier: ^1.6.4
-        version: 1.6.4(@algolia/client-search@5.57.0)(@types/node@26.4.1)(@types/react@18.3.31)(esbuild@0.28.2)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(postcss@8.5.28)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.103.1)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(typescript@6.0.3)(yaml@2.9.0)
+        version: 1.6.4(@algolia/client-search@5.57.0)(@types/node@26.4.1)(@types/react@19.3.0)(esbuild@0.28.2)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(postcss@8.5.28)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.103.1)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(typescript@6.0.3)(yaml@2.9.0)
       vitepress-plugin-group-icons:
         specifier: ^1.7.6
         version: 1.7.6(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
@@ -6640,9 +6646,6 @@ packages:
     resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
     peerDependencies:
       '@types/react': ^19.3.0
-
-  '@types/react@18.3.31':
-    resolution: {integrity: sha512-vfEqpXTvwT91yhmwdfouStN2hSKwTvyRs8qpLfADyrq/kxDw0hZM7Wk9Ug1FELj8hIby+S/+kQCSRFF32nv2Qw==}
 
   '@types/react@19.3.0':
     resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
@@ -15679,9 +15682,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.57.0)(@types/react@18.3.31)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.57.0)(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.57.0)(@types/react@18.3.31)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.57.0)(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)
       preact: 10.29.8
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -15691,14 +15694,14 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.57.0)(@types/react@18.3.31)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.57.0)(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.57.0)(algoliasearch@5.57.0)(search-insights@2.8.2)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.57.0)(algoliasearch@5.57.0)
       '@docsearch/css': 3.8.2
       algoliasearch: 5.57.0
     optionalDependencies:
-      '@types/react': 18.3.31
+      '@types/react': 19.3.0
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
       search-insights: 2.8.2
@@ -19198,12 +19201,6 @@ snapshots:
   '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
       '@types/react': 19.3.0
-
-  '@types/react@18.3.31':
-    dependencies:
-      '@types/prop-types': 15.7.15
-      csstype: 3.2.3
-    optional: true
 
   '@types/react@19.3.0':
     dependencies:
@@ -27508,10 +27505,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vitepress@1.6.4(@algolia/client-search@5.57.0)(@types/node@26.4.1)(@types/react@18.3.31)(esbuild@0.28.2)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(postcss@8.5.28)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.103.1)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(typescript@6.0.3)(yaml@2.9.0):
+  vitepress@1.6.4(@algolia/client-search@5.57.0)(@types/node@26.4.1)(@types/react@19.3.0)(esbuild@0.28.2)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(postcss@8.5.28)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.103.1)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(typescript@6.0.3)(yaml@2.9.0):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.57.0)(@types/react@18.3.31)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.57.0)(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(search-insights@2.8.2)
       '@iconify-json/simple-icons': 1.2.94
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0

@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import { type FunctionalComponent } from 'vue';
-import { type LucideProps } from '@lucide/vue/src/types';
-import { Sandpack } from 'sandpack-vue3';
+import { Sandpack, type SandpackProps } from 'sandpack-vue3';
 
 const props = defineProps<SandpackProps>();
 </script>
