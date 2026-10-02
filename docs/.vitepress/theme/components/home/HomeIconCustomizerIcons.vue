@@ -67,11 +67,13 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   will-change: width, height, stroke-width, stroke;
   color: var(--customize-color, currentColor);
   stroke-width: var(--customize-strokeWidth, 2);
-  width: calc(var(--customize-size, 24) * 1px);
-  height: calc(var(--customize-size, 24) * 1px);
+  width: clamp(16px, calc(var(--customize-size, 24) * 1px), 48px);
+  height: clamp(16px, calc(var(--customize-size, 24) * 1px), 48px);
 }
 
-.icons-container.absolute-stroke-width .lucide-icon {
-  stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
+html.absolute-stroke-width .icons-container .lucide-icon {
+  stroke-width: calc(
+    var(--customize-strokeWidth, 2) * 24 / clamp(16, var(--customize-size, 24), 48)
+  );
 }
 </style>

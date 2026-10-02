@@ -1,12 +1,15 @@
-import { inject, ref, watch, type Ref } from 'vue';
+import { computed, inject, watch, type ComputedRef, type Ref } from 'vue';
+import { useLocalStorage } from '@vueuse/core';
 
 export const ICON_STYLE_CONTEXT = Symbol('style');
 
-interface IconSizeContext {
+interface IconStyleContext {
   size: Ref<number>;
   strokeWidth: Ref<number>;
   color: Ref<string>;
   absoluteStrokeWidth: Ref<boolean>;
+  isCustomized: ComputedRef<boolean>;
+  resetStyle: () => void;
 }
 
 export const STYLE_DEFAULTS = {
@@ -16,98 +19,69 @@ export const STYLE_DEFAULTS = {
   absoluteStrokeWidth: false,
 };
 
-const STORAGE_KEYS = {
-  size: 'lucide-icon-size',
-  strokeWidth: 'lucide-icon-stroke-width',
-  color: 'lucide-icon-color',
-  absoluteStrokeWidth: 'lucide-icon-absolute-stroke-width',
-} as const;
-
-const persistedIconStyle: IconSizeContext = {
-  size: ref(STYLE_DEFAULTS.size),
-  strokeWidth: ref(STYLE_DEFAULTS.strokeWidth),
-  color: ref(STYLE_DEFAULTS.color),
-  absoluteStrokeWidth: ref(STYLE_DEFAULTS.absoluteStrokeWidth),
+const persistedIconStyle = {
+  size: useLocalStorage('lucide-icon-size', STYLE_DEFAULTS.size, { initOnMounted: false }),
+  strokeWidth: useLocalStorage('lucide-icon-stroke-width', STYLE_DEFAULTS.strokeWidth, {
+    initOnMounted: false,
+  }),
+  color: useLocalStorage('lucide-icon-color', STYLE_DEFAULTS.color, { initOnMounted: false }),
+  absoluteStrokeWidth: useLocalStorage(
+    'lucide-icon-absolute-stroke-width',
+    STYLE_DEFAULTS.absoluteStrokeWidth,
+    { initOnMounted: false },
+  ),
 };
 
-let initialized = false;
+const isCustomized = computed(() => {
+  return (
+    persistedIconStyle.color.value !== STYLE_DEFAULTS.color ||
+    persistedIconStyle.strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
+    persistedIconStyle.size.value !== STYLE_DEFAULTS.size ||
+    persistedIconStyle.absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
+  );
+});
 
-function readNumber(key: string, fallback: number, min: number, max: number) {
-  const storedValue = localStorage.getItem(key);
-  const value = Number(storedValue);
-
-  return storedValue !== null && Number.isFinite(value)
-    ? Math.min(max, Math.max(min, value))
-    : fallback;
+function resetStyle() {
+  persistedIconStyle.color.value = STYLE_DEFAULTS.color;
+  persistedIconStyle.strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
+  persistedIconStyle.size.value = STYLE_DEFAULTS.size;
+  persistedIconStyle.absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
 }
 
-function readColor() {
-  const value = localStorage.getItem(STORAGE_KEYS.color);
-
-  return value && CSS.supports('color', value) ? value : STYLE_DEFAULTS.color;
-}
-
-function persistIconStyle() {
-  try {
-    localStorage.setItem(STORAGE_KEYS.size, String(persistedIconStyle.size.value));
-    localStorage.setItem(STORAGE_KEYS.strokeWidth, String(persistedIconStyle.strokeWidth.value));
-    localStorage.setItem(STORAGE_KEYS.color, persistedIconStyle.color.value);
-    localStorage.setItem(
-      STORAGE_KEYS.absoluteStrokeWidth,
-      String(persistedIconStyle.absoluteStrokeWidth.value),
-    );
-  } catch {
-    // Storage may be unavailable, for example in private browsing mode.
-  }
-}
-
-export function initializePersistedIconStyle() {
-  if (initialized || typeof window === 'undefined') return;
-
-  initialized = true;
-
-  try {
-    persistedIconStyle.size.value = readNumber(STORAGE_KEYS.size, STYLE_DEFAULTS.size, 16, 256);
-    persistedIconStyle.strokeWidth.value = readNumber(
-      STORAGE_KEYS.strokeWidth,
-      STYLE_DEFAULTS.strokeWidth,
-      0.5,
-      3,
-    );
-    persistedIconStyle.color.value = readColor();
-    persistedIconStyle.absoluteStrokeWidth.value =
-      localStorage.getItem(STORAGE_KEYS.absoluteStrokeWidth) === 'true';
-
-    watch(
-      [
-        persistedIconStyle.size,
-        persistedIconStyle.strokeWidth,
-        persistedIconStyle.color,
-        persistedIconStyle.absoluteStrokeWidth,
-      ],
-      persistIconStyle,
-    );
-  } catch {
-    // Keep the defaults when storage cannot be read.
-  }
-}
+export const iconStyleContext: IconStyleContext = {
+  ...persistedIconStyle,
+  isCustomized,
+  resetStyle,
+};
 
 export function usePersistedIconStyle() {
-  return persistedIconStyle;
+  return iconStyleContext;
 }
-
-export const iconStyleContext = persistedIconStyle;
 
 if (typeof document !== 'undefined') {
   watch(
-    persistedIconStyle.absoluteStrokeWidth,
-    (enabled) => document.documentElement.classList.toggle('absolute-stroke-width', enabled),
-    { immediate: true },
+    [
+      persistedIconStyle.size,
+      persistedIconStyle.strokeWidth,
+      persistedIconStyle.color,
+      persistedIconStyle.absoluteStrokeWidth,
+    ],
+    ([size, strokeWidth, color, absoluteStrokeWidth]) => {
+      const root = document.documentElement;
+      root.style.setProperty('--customize-size', String(Math.min(256, Math.max(16, size))));
+      root.style.setProperty(
+        '--customize-strokeWidth',
+        String(Math.min(3, Math.max(0.5, strokeWidth))),
+      );
+      if (CSS.supports('color', color)) root.style.setProperty('--customize-color', color);
+      root.classList.toggle('absolute-stroke-width', absoluteStrokeWidth);
+    },
+    { immediate: true, flush: 'sync' },
   );
 }
 
-export function useIconStyleContext(): IconSizeContext {
-  const context = inject<IconSizeContext>(ICON_STYLE_CONTEXT);
+export function useIconStyleContext(): IconStyleContext {
+  const context = inject<IconStyleContext>(ICON_STYLE_CONTEXT);
 
   if (!context) {
     throw new Error('useIconStyleContext must be used with useIconStyleProvider');

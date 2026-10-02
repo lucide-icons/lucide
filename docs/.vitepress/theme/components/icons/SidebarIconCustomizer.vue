@@ -1,69 +1,19 @@
 <script setup lang="ts">
-import { computed, onMounted, shallowRef, type Ref } from 'vue';
-import { useCssVar, syncRef } from '@vueuse/core';
-import {
-  initializePersistedIconStyle,
-  STYLE_DEFAULTS,
-  useIconStyleContext,
-} from '../../composables/useIconStyle';
+import { useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
 import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
 
-const props = defineProps<{
-  rootEl?: Ref<HTMLElement>;
-}>();
-
-const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
-const documentRef = shallowRef<HTMLElement | undefined>(
-  typeof document !== 'undefined' ? document?.documentElement : undefined,
-);
-
-const colorCssVar = useCssVar('--customize-color', props.rootEl?.value ?? documentRef.value, {
-  initialValue: `${STYLE_DEFAULTS.color}`,
-});
-
-const strokeWidthCssVar = useCssVar(
-  '--customize-strokeWidth',
-  props.rootEl?.value ?? documentRef.value,
-  {
-    initialValue: `${STYLE_DEFAULTS.strokeWidth}`,
-  },
-);
-
-const sizeCssVar = useCssVar('--customize-size', props.rootEl?.value ?? documentRef.value, {
-  initialValue: `${STYLE_DEFAULTS.size}`,
-});
-
-syncRef(color, colorCssVar, { direction: 'ltr' });
-syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr', transform: { ltr: String } });
-syncRef(size, sizeCssVar, { direction: 'ltr', transform: { ltr: String } });
-
-function resetStyle() {
-  color.value = STYLE_DEFAULTS.color;
-  strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
-  size.value = STYLE_DEFAULTS.size;
-  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
-}
-
-onMounted(initializePersistedIconStyle);
-
-const customizingActive = computed(() => {
-  return (
-    color.value !== STYLE_DEFAULTS.color ||
-    strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
-    size.value !== STYLE_DEFAULTS.size ||
-    absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
-  );
-});
+const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle } =
+  useIconStyleContext();
 </script>
 
 <template>
   <div
     class="customizer-card"
-    :class="{ customized: customizingActive }"
+    :class="{ customized: isCustomized }"
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
@@ -118,11 +68,16 @@ const customizingActive = computed(() => {
       id="absolute-stroke-width"
       label="Absolute stroke width"
     >
-      <Switch
-        id="absolute-stroke-width"
-        name="absolute-stroke-width"
-        v-model="absoluteStrokeWidth"
-      />
+      <ClientOnly>
+        <Switch
+          id="absolute-stroke-width"
+          name="absolute-stroke-width"
+          v-model="absoluteStrokeWidth"
+        />
+        <template #fallback
+          ><span style="display: inline-block; width: 40px; height: 22px"
+        /></template>
+      </ClientOnly>
     </InputField>
   </div>
 </template>
