@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { usePersistedIconStyle } from '../../composables/useIconStyle';
+import { computed } from 'vue';
+import { useIconStyle } from '../../composables/useIconStyle';
 import HomeContainer from './HomeContainer.vue';
 import RangeSlider from '../base/RangeSlider.vue';
 import InputField from '../base/InputField.vue';
@@ -8,7 +9,13 @@ import ResetButton from '../base/ResetButton.vue';
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
 import Switch from '../base/Switch.vue';
 
-const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersistedIconStyle();
+const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = useIconStyle();
+
+const iconStyle = computed(() => ({
+  '--home-icon-color': color.value,
+  '--home-icon-stroke-width': String(strokeWidth.value),
+  '--home-icon-size': String(size.value),
+}));
 </script>
 
 <template>
@@ -69,7 +76,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersist
               name="size"
               v-model="size"
               :min="16"
-              :max="256"
+              :max="48"
               :step="4"
             />
           </InputField>
@@ -90,7 +97,10 @@ const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersist
       </div>
 
       <div class="icons-container card-column">
-        <HomeIconCustomizerIcons />
+        <HomeIconCustomizerIcons
+          :class="{ 'absolute-stroke-width': absoluteStrokeWidth }"
+          :style="iconStyle"
+        />
       </div>
     </div>
   </HomeContainer>

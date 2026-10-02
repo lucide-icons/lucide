@@ -62,7 +62,21 @@ Object.assign(globalThis, {
   CSS: { supports: () => true },
 });
 
-const { usePersistedIconStyle } = await import('./useIconStyle.ts');
+const { useIconStyle, usePersistedIconStyle } = await import('./useIconStyle.ts');
+
+test('creates a non-persisted icon style from the defaults', () => {
+  const style = useIconStyle();
+
+  assert.equal(style.size.value, 24);
+  assert.equal(style.strokeWidth.value, 2);
+  assert.equal(style.color.value, 'currentColor');
+  assert.equal(style.absoluteStrokeWidth.value, false);
+
+  style.size.value = 48;
+
+  assert.equal(storedValues.get('lucide-icon-size'), '240');
+  assert.equal(styleProperties.get('--customize-size'), '240');
+});
 
 test('restores persisted settings and applies the shared CSS variables', () => {
   const style = usePersistedIconStyle();

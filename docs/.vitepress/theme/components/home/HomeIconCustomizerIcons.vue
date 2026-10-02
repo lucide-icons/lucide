@@ -1,29 +1,35 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { data } from './HomeHeroIconsCard.data'
-import LucideIcon from '../base/LucideIcon.vue'
-import { vIntersectionObserver } from '@vueuse/components'
+import { data } from './HomeHeroIconsCard.data';
+import LucideIcon from '../base/LucideIcon.vue';
+import { vIntersectionObserver } from '@vueuse/components';
 
-const getInitialItems = () => data.icons.slice(0, 64)
-const items = ref(getInitialItems())
-const showIcons = ref(false)
+const getInitialItems = () => data.icons.slice(0, 64);
+const items = ref(getInitialItems());
+const showIcons = ref(false);
 
 // Added intersection observer to improve performance
 const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting }]) => {
   if (isIntersecting) {
-    showIcons.value = true
+    showIcons.value = true;
   }
-}
+};
 </script>
 
 <template>
-  <div class="icon-grid" v-intersection-observer="onIntersectionObserver">
+  <div
+    class="icon-grid"
+    v-intersection-observer="onIntersectionObserver"
+  >
     <template v-if="showIcons">
       <div
         v-for="icon in items"
         class="icon-grid-item"
-        >
-        <LucideIcon v-bind="icon" class="lucide-icon"/>
+      >
+        <LucideIcon
+          v-bind="icon"
+          class="lucide-icon"
+        />
       </div>
     </template>
   </div>
@@ -36,7 +42,7 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(68px, 1fr));
   width: 100%;
-  height:100%;
+  height: 100%;
   max-height: 360px;
   gap: 1px;
   overflow: hidden;
@@ -65,15 +71,15 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
 
 .lucide-icon {
   will-change: width, height, stroke-width, stroke;
-  color: var(--customize-color, currentColor);
-  stroke-width: var(--customize-strokeWidth, 2);
-  width: calc(var(--customize-size, 24) * 1px);
-  height: calc(var(--customize-size, 24) * 1px);
+  color: var(--home-icon-color, currentColor);
+  stroke-width: var(--home-icon-stroke-width, 2);
+  width: calc(var(--home-icon-size, 24) * 1px);
+  height: calc(var(--home-icon-size, 24) * 1px);
   max-width: 3rem;
   max-height: 3rem;
 }
 
-html.absolute-stroke-width .icons-container .lucide-icon {
-  stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
+.icon-grid.absolute-stroke-width .lucide-icon {
+  stroke-width: calc(var(--home-icon-stroke-width, 2) * 24 / var(--home-icon-size, 24));
 }
 </style>

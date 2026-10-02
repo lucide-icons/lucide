@@ -1,4 +1,4 @@
-import { computed, inject, watch, type ComputedRef, type Ref } from 'vue';
+import { computed, inject, ref, watch, type ComputedRef, type Ref } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
 
 export const ICON_STYLE_CONTEXT = Symbol('style');
@@ -11,6 +11,8 @@ interface IconStyleContext {
   isCustomized: ComputedRef<boolean>;
   resetStyle: () => void;
 }
+
+type IconStyle = Pick<IconStyleContext, 'size' | 'strokeWidth' | 'color' | 'absoluteStrokeWidth'>;
 
 export const STYLE_DEFAULTS = {
   size: 24,
@@ -32,27 +34,40 @@ const persistedIconStyle = {
   ),
 };
 
-const isCustomized = computed(() => {
-  return (
-    persistedIconStyle.color.value !== STYLE_DEFAULTS.color ||
-    persistedIconStyle.strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
-    persistedIconStyle.size.value !== STYLE_DEFAULTS.size ||
-    persistedIconStyle.absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
-  );
-});
+function createIconStyleContext(style: IconStyle): IconStyleContext {
+  const isCustomized = computed(() => {
+    return (
+      style.color.value !== STYLE_DEFAULTS.color ||
+      style.strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
+      style.size.value !== STYLE_DEFAULTS.size ||
+      style.absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
+    );
+  });
 
-function resetStyle() {
-  persistedIconStyle.color.value = STYLE_DEFAULTS.color;
-  persistedIconStyle.strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
-  persistedIconStyle.size.value = STYLE_DEFAULTS.size;
-  persistedIconStyle.absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
+  function resetStyle() {
+    style.color.value = STYLE_DEFAULTS.color;
+    style.strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
+    style.size.value = STYLE_DEFAULTS.size;
+    style.absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
+  }
+
+  return {
+    ...style,
+    isCustomized,
+    resetStyle,
+  };
 }
 
-export const iconStyleContext: IconStyleContext = {
-  ...persistedIconStyle,
-  isCustomized,
-  resetStyle,
-};
+export const iconStyleContext = createIconStyleContext(persistedIconStyle);
+
+export function useIconStyle() {
+  return createIconStyleContext({
+    size: ref(STYLE_DEFAULTS.size),
+    strokeWidth: ref(STYLE_DEFAULTS.strokeWidth),
+    color: ref(STYLE_DEFAULTS.color),
+    absoluteStrokeWidth: ref(STYLE_DEFAULTS.absoluteStrokeWidth),
+  });
+}
 
 export function usePersistedIconStyle() {
   return iconStyleContext;
