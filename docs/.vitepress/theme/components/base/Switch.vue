@@ -1,5 +1,6 @@
 <script setup>
   import { Switch } from '@headlessui/vue'
+  import { onMounted, ref } from 'vue'
 
   defineProps({
     modelValue: {
@@ -9,14 +10,19 @@
   })
 
   const emit = defineEmits(['update:modelValue'])
+  const isHydrated = ref(false)
+
+  onMounted(() => {
+    isHydrated.value = true
+  })
 </script>
 
 <template>
   <Switch
-    :model-value="modelValue"
+    :model-value="isHydrated ? modelValue : false"
     @update:model-value="emit('update:modelValue', $event)"
     class="switch"
-    :class="{ enabled: modelValue }"
+    :class="{ enabled: isHydrated && modelValue }"
   >
     <span class="thumb" />
   </Switch>

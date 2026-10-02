@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .next
+.astro
 .obsidian
 .now
 .cache
@@ -18,6 +19,8 @@ stats
 integrations/**/.react-router
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__
+integrations/**/.nuxt
+integrations/**/.output
 outlined
 lucide-font
 packages/**/src/icons/*.js

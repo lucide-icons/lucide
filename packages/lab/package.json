@@ -36,7 +36,8 @@
     "build:icons": "build-icons --input=../../lab --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --exportModuleNameCasing=camel --renderUniqueKey --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mts",
     "build:bundle": "rollup -c rollup.config.mjs",
-    "clean": "rm -f src/icons/*.ts && rm -rf dist && rm -rf icons && rm -f icon-nodes.json"
+    "clean": "rm -f src/icons/*.ts && rm -rf dist && rm -rf icons && rm -f icon-nodes.json",
+    "typecheck": "pnpm build:icons && tsc --noEmit"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",

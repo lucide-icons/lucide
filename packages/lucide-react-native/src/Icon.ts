@@ -85,7 +85,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
 
     const [, svgAttributes, builtIconNode = []] = buildLucideIconForReact(icon, {
-      color: color ?? contextColor,
+      color: (color ?? contextColor) as string,
       width: width ?? size ?? contextSize,
       height: height ?? size ?? contextSize,
       strokeWidth: strokeWidth ?? contextStrokeWidth,
@@ -107,7 +107,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       {
         ref,
         ...toNativeSvgAttributes(svgAttributes),
-        'data-testid': testID,
+        testID,
         ...rest,
       },
       [

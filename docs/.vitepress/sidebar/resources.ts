@@ -30,6 +30,25 @@ export const resourcesSidebar = [
     ],
   },
   {
+    text: 'How to use Lucide icons',
+    items: [
+      {
+        text: 'Getting started',
+        link: '/how-to/',
+      },
+      {
+        text: 'Accessibility guide',
+        link: '/how-to/accessibility',
+        desc: 'Learn how to make icons readable, understandable, and usable with assistive technology.',
+      },
+      {
+        text: 'How to pick the right icon',
+        link: '/how-to/icon-guide',
+        desc: 'Learn how to decide when icons belong in an interface and how to pick symbols people are likely to recognize.',
+      },
+    ],
+  },
+  {
     text: 'Contributing icons',
     items: [
       {
