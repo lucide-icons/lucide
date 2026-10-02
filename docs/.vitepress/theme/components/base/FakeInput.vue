@@ -1,5 +1,5 @@
 <script setup>
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { search } from '../../../data/iconNodes';
 
 defineProps({
@@ -48,7 +48,6 @@ defineProps({
 .fake-input:hover,
 .fake-input:focus {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
 }
 
 .shortcut {

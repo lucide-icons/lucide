@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "BorisDelchambre",
+    "ThibautMarechal",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "eject removable media",
+    "unmount external storage",
+    "optical disc drive",
+    "media player controls",
+    "hardware controls"
+  ],
+  "tags": [
+    "disc",
+    "drive",
+    "dvd",
+    "blu-ray",
+    "cd",
+    "media",
+    "optical",
+    "optical drive",
+    "removable media",
+    "storage",
+    "tray",
+    "unmount",
+    "usb"
+  ],
+  "categories": [
+    "devices",
+    "files",
+    "multimedia"
+  ]
+}

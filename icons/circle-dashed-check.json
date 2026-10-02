@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating approved items with pending changes",
+    "Showing published schedules with unpublished updates",
+    "Marking requests that require re-approval",
+    "Confirming completion with revisions still pending"
+  ],
+  "tags": [
+    "approved",
+    "pending",
+    "changes",
+    "revision",
+    "reapproval",
+    "published",
+    "schedule",
+    "assignment",
+    "request",
+    "review",
+    "progress",
+    "issue",
+    "draft",
+    "code",
+    "coding",
+    "version control"
+  ],
+  "categories": [
+    "shapes",
+    "development",
+    "notifications"
+  ]
+}

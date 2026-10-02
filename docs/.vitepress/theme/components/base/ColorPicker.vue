@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -7,19 +6,25 @@ const props = defineProps<{
   id: string;
 }>();
 
-const { isDark } = useData();
-
 const emit = defineEmits(['update:modelValue']);
+
+function limitHexInput(val: string) {
+  if (val.startsWith('#')) {
+    return val.slice(0, 9);
+  }
+
+  return val.slice(0, 8);
+}
 
 const value = computed({
   get: () => {
     if (props.modelValue == null || props.modelValue === 'currentColor') {
-      return isDark.value ? '#ffffff' : '#000000';
+      return null;
     }
 
     return props.modelValue;
   },
-  set: (val) => emit('update:modelValue', val),
+  set: (val) => emit('update:modelValue', limitHexInput(val)),
 });
 </script>
 
@@ -41,6 +46,7 @@ const value = computed({
       class="color-input-text"
       aria-label="Color picker input"
       v-model="value"
+      maxlength="9"
       placeholder="[default]"
     />
   </div>
@@ -91,6 +97,7 @@ const value = computed({
   background: transparent;
   color: var(--vp-c-text-1);
   font-size: 13px;
+  font-family: var(--vp-font-family-mono);
   text-align: left;
   border-radius: 8px;
   cursor: text;
@@ -101,9 +108,11 @@ const value = computed({
 }
 
 .color-picker:hover,
-.color-picker:focus {
+.color-picker:focus-within {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
+}
+.color-picker:focus-within {
+  background-color: var(--vp-c-bg);
 }
 
 .color-input[value='currentColor'] {

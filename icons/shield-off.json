@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "unshielded",
     "cybersecurity",
@@ -36,7 +37,7 @@
     "weakness",
     "infected",
     "infection",
-    "comprimised",
+    "compromised",
     "data leak",
     "unaudited",
     "admin",

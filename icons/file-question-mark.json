@@ -5,6 +5,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "readme",
     "help",
@@ -17,8 +18,7 @@
     {
       "name": "file-question",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

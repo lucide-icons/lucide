@@ -4,6 +4,7 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "start",
@@ -16,8 +17,7 @@
     {
       "name": "play-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }
