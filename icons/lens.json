@@ -9,7 +9,11 @@
     "indicating visual effects like glassmorphism or lens reflections",
     "generically representing shaders and visual effects, or scenic post-processing effects",
     "educational apps (physics, optics, biology), scientific illustrations and documentation",
-    "indicating a specialized zoom / magnification tool for photography or camera apps"
+    "indicating a specialized zoom / magnification tool for photography or camera apps",
+    "indicating aperture or depth-of-field controls in camera settings",
+    "toggling bokeh or portrait mode effects in photo editors",
+    "representing macro or close-up shooting modes",
+    "representing ar filters, virtual try-on or camera-lens selection features"
   ],
   "tags": [
     "optics",
