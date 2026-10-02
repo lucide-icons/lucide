@@ -2,11 +2,16 @@ import path from 'path';
 import { babel } from '@rollup/plugin-babel';
 import esbuild from 'esbuild';
 import plugins from '@lucide/rollup-plugins';
-import ts from 'typescript';
+import dts from 'rollup-plugin-dts';
 
 import pkg from './package.json' with { type: 'json' };
 
-const packageName = 'LucideSolid';
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
+const packageName = '@lucide/solid';
 const outputFileName = 'lucide-solid';
 const outputDir = 'dist';
 const inputs = ['src/lucide-solid.ts'];
@@ -92,21 +97,6 @@ const configs = bundles
                   ],
                   external: ['solid-js', '@solidjs/web'],
                 });
-
-                // Generate types
-                const program = ts.createProgram([pkg.source], {
-                  target: ts.ScriptTarget.ESNext,
-                  module: ts.ModuleKind.ESNext,
-                  moduleResolution: ts.ModuleResolutionKind.NodeJs,
-                  jsx: ts.JsxEmit.Preserve,
-                  jsxImportSource: '@solidjs/web',
-                  allowSyntheticDefaultImports: true,
-                  esModuleInterop: true,
-                  declarationDir: `dist/types`,
-                  declaration: true,
-                  emitDeclarationOnly: true,
-                });
-                program.emit();
               },
             }
           : null,
@@ -132,4 +122,16 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+const typesConfig = {
+  input: inputs[0],
+  output: {
+    dir: `${outputDir}/types`,
+    format: 'es',
+    preserveModules: true,
+    preserveModulesRoot: 'src',
+    entryFileNames: '[name].d.ts',
+  },
+  plugins: [dts(dtsOptions)],
+};
+
+export default [...configs, typesConfig];
