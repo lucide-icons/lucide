@@ -1,4 +1,4 @@
-import type { JSX } from '@solidjs/web';
+import { JSX } from 'solid-js/jsx-runtime';
 import type {
   LucideIconData as SharedLucideIconData,
   LucideIconNode as SharedLucideIconNode,
@@ -6,14 +6,9 @@ import type {
 
 export type SVGAttributes = Partial<JSX.SvgSVGAttributes<SVGSVGElement>>;
 
-type IntrinsicElementName = Extract<keyof JSX.IntrinsicElements, string>;
+export type LucideIconNode = SharedLucideIconNode<keyof JSX.IntrinsicElements>;
 
-// Icon nodes mix element types (path, circle, line, ...), each with its own
-// attribute set, so this intentionally falls back to @lucide/shared's permissive
-// default `SVGProps` rather than the root-<svg>-only `SVGAttributes` above.
-export type LucideIconNode = SharedLucideIconNode<IntrinsicElementName>;
-
-export type LucideIconData = SharedLucideIconData<IntrinsicElementName>;
+export type LucideIconData = SharedLucideIconData<keyof JSX.IntrinsicElements>;
 
 /**
  * @deprecated Use LucideIconNode instead.
@@ -33,7 +28,6 @@ export interface LucideProps extends SVGAttributes {
    */
   absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
-  children?: JSX.Element;
 }
 
 export type LucideIcon = (props: LucideProps) => JSX.Element;

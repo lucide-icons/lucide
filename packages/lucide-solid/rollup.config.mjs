@@ -65,7 +65,7 @@ const configs = bundles
                     '.js': 'jsx',
                   },
                   jsx: 'preserve',
-                  jsxImportSource: '@solidjs/web',
+                  jsxImportSource: 'solid-js',
                   bundle: true,
                   format: 'esm',
                   sourcemap: true,
@@ -95,13 +95,13 @@ const configs = bundles
                       },
                     },
                   ],
-                  external: ['solid-js', '@solidjs/web'],
+                  external: ['solid-js'],
                 });
               },
             }
           : null,
       ],
-      external: ['solid-js', '@solidjs/web'],
+      external: ['solid-js', 'solid-js/web', 'solid-js/store'],
       output: {
         name: packageName,
         ...(preserveModules

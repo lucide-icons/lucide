@@ -11,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "jsxImportSource": "@solidjs/web",
+    "jsxImportSource": "solid-js",
     "types": ["vite/client", "@testing-library/jest-dom/vitest"],
     "noEmit": true,
     "isolatedModules": true,
