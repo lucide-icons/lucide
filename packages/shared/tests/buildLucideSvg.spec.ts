@@ -6,9 +6,9 @@ const icon = { name: 'dot', size: 24, node: [['circle', { cx: 12, cy: 12, r: 1 }
 describe('buildLucideSvg', () => {
   it('should escape special characters in attribute values', () => {
     const svg = buildLucideSvg(icon as any, {
-      attributes: { 'data-label': 'a "quoted" <b> & c' },
+      attributes: { 'data-label': 'a\'s "quoted" <b> & c' },
     });
 
-    expect(svg).toContain('data-label="a &quot;quoted&quot; &lt;b> &amp; c"');
+    expect(svg).toContain('data-label="a&#39;s &quot;quoted&quot; &lt;b&gt; &amp; c"');
   });
 });
