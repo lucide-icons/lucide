@@ -24,7 +24,15 @@
     "dashboard",
     "collection",
     "overview",
-    "tiles"
+    "tiles",
+    "grid",
+    "matrix",
+    "launcher",
+    "apps",
+    "widgets",
+    "ui",
+    "circles",
+    "shortcuts"
   ],
   "categories": [
     "design",
