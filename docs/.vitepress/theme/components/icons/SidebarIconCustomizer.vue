@@ -25,7 +25,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
     >
       <ColorPicker
         v-model="color"
-        id="icon-color"
+        id="icon-color-picker"
         class="color-picker"
       />
     </InputField>
@@ -38,7 +38,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
         <span class="customize-label">{{ strokeWidth }}px</span>
       </template>
       <RangeSlider
-        id="stroke-width"
+        id="stroke-width-slider"
         name="stroke-width"
         v-model="strokeWidth"
         :min="0.5"
@@ -55,7 +55,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
         <span class="customize-label">{{ size }}px</span>
       </template>
       <RangeSlider
-        id="size"
+        id="size-slider"
         name="size"
         v-model="size"
         :min="16"
@@ -69,7 +69,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
       label="Absolute stroke width"
     >
       <Switch
-        id="absolute-stroke-width"
+        id="absolute-stroke-width-switch"
         name="absolute-stroke-width"
         v-model="absoluteStrokeWidth"
       />
@@ -90,7 +90,6 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
   color: var(--vp-c-text-1);
   line-height: 32px;
   font-size: 16px;
-  /* margin-bottom: 12px; */
 }
 
 .customizer-card {
