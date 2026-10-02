@@ -69,7 +69,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersist
               name="size"
               v-model="size"
               :min="16"
-              :max="Math.max(size, 48)"
+              :max="256"
               :step="4"
             />
           </InputField>
@@ -79,16 +79,11 @@ const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersist
             label="Absolute Stroke width"
           >
             <template #display>
-              <ClientOnly>
-                <Switch
-                  id="absolute-stroke-width-switch"
-                  name="absolute-stroke-width"
-                  v-model="absoluteStrokeWidth"
-                />
-                <template #fallback
-                  ><span style="display: inline-block; width: 40px; height: 22px"
-                /></template>
-              </ClientOnly>
+              <Switch
+                id="absolute-stroke-width-switch"
+                name="absolute-stroke-width"
+                v-model="absoluteStrokeWidth"
+              />
             </template>
           </InputField>
         </div>

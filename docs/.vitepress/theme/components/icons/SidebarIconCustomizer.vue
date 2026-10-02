@@ -68,16 +68,11 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
       id="absolute-stroke-width"
       label="Absolute stroke width"
     >
-      <ClientOnly>
-        <Switch
-          id="absolute-stroke-width"
-          name="absolute-stroke-width"
-          v-model="absoluteStrokeWidth"
-        />
-        <template #fallback
-          ><span style="display: inline-block; width: 40px; height: 22px"
-        /></template>
-      </ClientOnly>
+      <Switch
+        id="absolute-stroke-width"
+        name="absolute-stroke-width"
+        v-model="absoluteStrokeWidth"
+      />
     </InputField>
   </div>
 </template>
