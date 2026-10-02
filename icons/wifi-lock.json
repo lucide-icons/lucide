@@ -9,6 +9,25 @@
     "denoting an encrypted hotspot or mobile tethering connection",
     "labelling wireless security settings in router or network apps"
   ],
-  "tags": ["admin", "connection", "secure", "security", "signal", "network", "password", "wireless"],
+  "tags": [
+    "admin",
+    "connection",
+    "secure",
+    "security",
+    "signal",
+    "network",
+    "password",
+    "wireless",
+    "hotspot",
+    "encrypted",
+    "locked",
+    "private",
+    "ssid",
+    "guest",
+    "router",
+    "access",
+    "authentication",
+    "protected"
+  ],
   "categories": ["connectivity", "devices", "security"]
 }
