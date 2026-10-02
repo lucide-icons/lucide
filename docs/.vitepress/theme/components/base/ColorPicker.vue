@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
 import { computed } from 'vue';
 
 const props = defineProps<{
   modelValue: string;
   id: string;
 }>();
-
-const { isDark } = useData();
 
 const emit = defineEmits(['update:modelValue']);
 
@@ -22,7 +19,7 @@ function limitHexInput(val: string) {
 const value = computed({
   get: () => {
     if (props.modelValue == null || props.modelValue === 'currentColor') {
-      return isDark.value ? '#ffffff' : '#000000';
+      return null;
     }
 
     return props.modelValue;
@@ -50,7 +47,7 @@ const value = computed({
       aria-label="Color picker input"
       v-model="value"
       maxlength="9"
-      placeholder="[default]"
+      placeholder="currentColor"
     />
   </div>
 </template>
