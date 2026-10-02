@@ -3,6 +3,9 @@
   "contributors": [
     "Elawphant"
   ],
+  "use-cases": [
+    "Representing money or prices in Armenian dram"
+  ],
   "tags": [
     "finance",
     "symbol",
@@ -14,8 +17,5 @@
   ],
   "categories": [
     "finance"
-  ],
-  "use-cases": [
-    "Representing money or prices in Armenian dram"
   ]
 }
