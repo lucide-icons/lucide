@@ -1,0 +1,8 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: stopping something that is running",
+  "tags": [
+    "halt",
+    "end"
+  ]
+}

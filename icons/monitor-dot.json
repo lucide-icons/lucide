@@ -7,6 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dot",
     "tv",
     "computer",
     "screen",
@@ -15,8 +16,6 @@
     "external display",
     "screen sharing",
     "status",
-    "notification",
-    "indicator",
     "running",
     "active",
     "virtual machine",

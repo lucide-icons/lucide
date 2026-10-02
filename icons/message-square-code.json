@@ -6,14 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:code",
     "comment",
     "chat",
     "conversation",
     "dialog",
     "feedback",
     "speech bubble",
-    "code review",
-    "coding"
+    "code review"
   ],
   "categories": [
     "development",

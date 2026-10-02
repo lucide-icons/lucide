@@ -126,6 +126,22 @@ Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   });
 });
 
+// An icon that lists every tag of a group as literals describes that group's
+// meaning by hand, so it should reference the group instead.
+Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
+  const tags = rawMetadata.tags ?? [];
+  const literals = new Set(tags.filter((entry) => !isMarker(entry)));
+
+  Object.entries(groups)
+    .filter(([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`))
+    .filter(([, groupTags]) => groupTags.every((tag) => literals.has(tag)))
+    .forEach(([groupName, groupTags]) => {
+      console.warn(
+        `Icon '${iconName}': tags ${groupTags.map((tag) => `'${tag}'`).join(', ')} are all in group '${groupName}' — use "${GROUP_PREFIX}${groupName}" instead.`,
+      );
+    });
+});
+
 Object.keys(categories).forEach((categoryName) => {
   const category = categories[categoryName];
   if (!category?.icon) {

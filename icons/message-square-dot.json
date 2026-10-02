@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dot",
     "unread",
     "unresolved",
     "comment",

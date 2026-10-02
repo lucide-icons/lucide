@@ -9,8 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:code",
     "directory",
-    "coding",
     "develop",
     "software"
   ],

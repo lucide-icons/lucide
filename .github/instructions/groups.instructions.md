@@ -18,6 +18,7 @@ The file name without `.json` is the group name: the variant suffix it belongs t
 ## Rules
 
 - **One group per variant.** Name the group after the variant suffix (`plus`, `minus`, `check`, `cog`), so `file-plus` uses `$group:plus` and `alarm-clock-minus` uses `$group:minus`.
+- **Different suffixes with the same meaning share one group.** Do not create a second group for a synonym: `-warning` and `-exclamation-point` use `$group:alert`. When a meaning is spread over many suffixes, name the group after the meaning instead: every currency suffix (`-euro`, `-dollar-sign`, `-japanese-yen`…) uses `$group:currency`.
 - **Tags describe what the variant means, not its glyph.** `plus` holds `add`, `new`, `create`; `cog` holds `settings`, `gear`. Do not put the suffix itself (`plus`, `cog`, `lock`) in a group: tags must not repeat the icon name.
 - **Keep groups small and generic.** Only tags that hold for *every* icon that uses the group. If a tag is true for just some of them, it belongs on those icons as a literal.
 - **Not every icon with the suffix uses the group.** `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off`, and `-x` means "delete" on `file-x` but "mute" on `volume-x`. Only icons where the variant carries the group's meaning use the marker; the others keep literal tags.

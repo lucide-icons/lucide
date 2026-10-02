@@ -120,7 +120,7 @@ When checking or adding a `$group:` marker:
 
 - A marker must be exactly `"$group:"` followed by the name of an existing file in `groups/`, without the `.json` extension, in lowercase kebab-case.
 - `$group:` is allowed **only** inside `tags`. It is not valid in `categories` or `contributors`.
-- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`.
+- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`. Suffixes with the same meaning share a group: `mail-warning` uses `$group:alert`, and every currency suffix uses `$group:currency`.
 - The same suffix can mean different things in different contexts — `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off` — so only use the group when the icon carries the group's meaning, and keep context-specific tags as literals.
 - Do not repeat a tag a group already provides, and do not use the same group twice in one array.
 - Conventional order: the `$extends:` base icon first, then `$group:` markers, then the icon's own literal tags.

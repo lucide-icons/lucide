@@ -7,12 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:alert",
     "power",
     "electricity",
     "energy",
     "accumulator",
-    "charge",
-    "exclamation mark"
+    "charge"
   ],
   "categories": [
     "connectivity",
