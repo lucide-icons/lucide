@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dev-mralph",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing rugby matches and tournaments",
+    "Categorizing rugby-related content in sports apps"
+  ],
+  "tags": [
+    "rugby",
+    "football",
+    "ball",
+    "goal",
+    "sport"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
