@@ -1,72 +1,58 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref } from 'vue'
-import { syncRef, useCssVar } from '@vueuse/core'
-import { usePersistedIconStyle, STYLE_DEFAULTS } from '../../composables/useIconStyle'
-import HomeContainer from './HomeContainer.vue'
-import RangeSlider from '../base/RangeSlider.vue'
-import InputField from '../base/InputField.vue'
-import ColorPicker from '../base/ColorPicker.vue'
-import ResetButton from '../base/ResetButton.vue'
-import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
-import Switch from '../base/Switch.vue'
+import { computed, onMounted, ref } from 'vue';
+import { syncRef, useCssVar } from '@vueuse/core';
+import {
+  initializePersistedIconStyle,
+  usePersistedIconStyle,
+  STYLE_DEFAULTS,
+} from '../../composables/useIconStyle';
+import HomeContainer from './HomeContainer.vue';
+import RangeSlider from '../base/RangeSlider.vue';
+import InputField from '../base/InputField.vue';
+import ColorPicker from '../base/ColorPicker.vue';
+import ResetButton from '../base/ResetButton.vue';
+import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
+import Switch from '../base/Switch.vue';
 
-
-const iconContainer = ref<HTMLElement | null>()
-const mounted = ref(false)
-const { color, strokeWidth, size, absoluteStrokeWidth } = usePersistedIconStyle()
+const iconContainer = ref<HTMLElement | null>();
+const { color, strokeWidth, size, absoluteStrokeWidth } = usePersistedIconStyle();
 const homeSize = computed({
   get: () => Math.min(Math.max(size.value, 16), 48),
   set: (value: number) => {
-    size.value = value
+    size.value = value;
   },
-})
+});
 
-const colorCssVar = useCssVar(
-  '--customize-color',
-  iconContainer,
-  {
-    initialValue: 'default'
-  }
-)
+const colorCssVar = useCssVar('--customize-color', iconContainer, {
+  initialValue: 'default',
+});
 
-const strokeWidthCssVar = useCssVar(
-  '--customize-strokeWidth',
-  iconContainer,
-  {
-    initialValue: '2'
-  }
-)
+const strokeWidthCssVar = useCssVar('--customize-strokeWidth', iconContainer, {
+  initialValue: '2',
+});
 
-const sizeCssVar = useCssVar(
-  '--customize-size',
-  iconContainer,
-  {
-    initialValue: '24'
-  }
-)
+const sizeCssVar = useCssVar('--customize-size', iconContainer, {
+  initialValue: '24',
+});
 
-syncRef(color, colorCssVar, { direction: 'ltr' })
+syncRef(color, colorCssVar, { direction: 'ltr' });
 syncRef(strokeWidth, strokeWidthCssVar, {
   direction: 'ltr',
   transform: { ltr: String },
-})
+});
 syncRef(homeSize, sizeCssVar, {
   direction: 'ltr',
   transform: { ltr: String },
-})
+});
 
-function resetStyle () {
-  color.value = STYLE_DEFAULTS.color
-  strokeWidth.value = STYLE_DEFAULTS.strokeWidth
-  size.value = STYLE_DEFAULTS.size
-  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
+function resetStyle() {
+  color.value = STYLE_DEFAULTS.color;
+  strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
+  size.value = STYLE_DEFAULTS.size;
+  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
 }
 
-onMounted(async () => {
-  mounted.value = true
-  await nextTick()
-  document.documentElement.classList.remove('icon-style-pending')
-})
+onMounted(initializePersistedIconStyle);
 </script>
 
 <template>
@@ -91,7 +77,10 @@ onMounted(async () => {
             class="color-picker-field"
           >
             <template #display>
-              <ColorPicker v-model="color" id="icon-color"  />
+              <ColorPicker
+                v-model="color"
+                id="icon-color-picker"
+              />
             </template>
           </InputField>
 
@@ -103,7 +92,7 @@ onMounted(async () => {
               <span class="customize-label">{{ strokeWidth }}px</span>
             </template>
             <RangeSlider
-              id="stroke-width"
+              id="stroke-width-slider"
               name="stroke-width"
               v-model="strokeWidth"
               :min="1"
@@ -120,7 +109,7 @@ onMounted(async () => {
               <span class="customize-label">{{ homeSize }}px</span>
             </template>
             <RangeSlider
-              id="size"
+              id="size-slider"
               name="size"
               v-model="homeSize"
               :min="16"
@@ -134,14 +123,11 @@ onMounted(async () => {
             label="Absolute Stroke width"
           >
             <template #display>
-              <ClientOnly>
-                <Switch
-                  id="absolute-stroke-width"
-                  name="absolute-stroke-width"
-                  v-model="absoluteStrokeWidth"
-                />
-                <template #fallback><span style="display: inline-block; width: 40px; height: 22px" /></template>
-              </ClientOnly>
+              <Switch
+                id="absolute-stroke-width-switch"
+                name="absolute-stroke-width"
+                v-model="absoluteStrokeWidth"
+              />
             </template>
           </InputField>
         </div>
@@ -149,7 +135,7 @@ onMounted(async () => {
 
       <div
         class="icons-container card-column"
-        :class="{ 'absolute-stroke-width': mounted && absoluteStrokeWidth }"
+        :class="{ 'absolute-stroke-width': absoluteStrokeWidth }"
         ref="iconContainer"
       >
         <HomeIconCustomizerIcons />
@@ -199,10 +185,6 @@ onMounted(async () => {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
-  /*
-  .card-column {
-    flex: 1;
-  } */
 }
 
 @media (min-width: 960px) {

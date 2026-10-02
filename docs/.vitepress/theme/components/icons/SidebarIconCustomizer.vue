@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref, shallowRef, type Ref } from 'vue';
+import { computed, onMounted, shallowRef, type Ref } from 'vue';
 import { useCssVar, syncRef } from '@vueuse/core';
-import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle';
+import {
+  initializePersistedIconStyle,
+  STYLE_DEFAULTS,
+  useIconStyleContext,
+} from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
 import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
@@ -13,7 +17,6 @@ const props = defineProps<{
 }>();
 
 const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
-const mounted = ref(false);
 const documentRef = shallowRef<HTMLElement | undefined>(
   typeof document !== 'undefined' ? document?.documentElement : undefined,
 );
@@ -45,11 +48,7 @@ function resetStyle() {
   absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
 }
 
-onMounted(async () => {
-  mounted.value = true;
-  await nextTick();
-  document.documentElement.classList.remove('icon-style-pending');
-});
+onMounted(initializePersistedIconStyle);
 
 const customizingActive = computed(() => {
   return (
@@ -64,7 +63,7 @@ const customizingActive = computed(() => {
 <template>
   <div
     class="customizer-card"
-    :class="{ customized: mounted && customizingActive }"
+    :class="{ customized: customizingActive }"
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
@@ -119,14 +118,11 @@ const customizingActive = computed(() => {
       id="absolute-stroke-width"
       label="Absolute stroke width"
     >
-      <ClientOnly>
-        <Switch
-          id="absolute-stroke-width"
-          name="absolute-stroke-width"
-          v-model="absoluteStrokeWidth"
-        />
-        <template #fallback><span style="display: inline-block; width: 40px; height: 22px" /></template>
-      </ClientOnly>
+      <Switch
+        id="absolute-stroke-width"
+        name="absolute-stroke-width"
+        v-model="absoluteStrokeWidth"
+      />
     </InputField>
   </div>
 </template>
