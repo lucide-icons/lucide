@@ -10,7 +10,8 @@
   "license": "ISC",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "typecheck": "tsc"
   },
   "exports": {
     ".": "./src/index.ts",
@@ -20,6 +21,7 @@
     }
   },
   "devDependencies": {
+    "@types/node": "^26.4.1",
     "vite": "^7.3.6"
   }
 }

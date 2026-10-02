@@ -97,7 +97,7 @@ export default defineConfig({
       {
         text: 'Resources',
         items: [
-          ...resourcesSidebar[0].items,
+          ...resourcesSidebar[0].items.map(({ text, link }) => ({ text, link })),
           { text: 'How to use icons', link: '/how-to/' },
           { text: 'Contributing icons', link: '/contribute/icons/' },
         ],
