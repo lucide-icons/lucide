@@ -1,7 +1,38 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const props = defineProps<{
+  href?: string;
+}>()
+
+const isExternal = computed(() => {
+  return props.href?.startsWith('http') ?? false
+})
+
+const component = computed(() => {
+  return props.href ? 'a' : 'button'
+})
+
+const target = computed(() => {
+  return isExternal.value ? '_blank' : undefined
+})
+
+const rel = computed(() => {
+  return isExternal.value ? 'noreferrer noopener' : undefined
+})
+</script>
+
 <template>
-  <button v-bind="$attrs" class="icon-button">
+  <component
+    :is="component"
+    v-bind="$attrs"
+    :href="href"
+    :target="target"
+    :rel="rel"
+    class="icon-button"
+  >
     <slot />
-  </button>
+  </component>
 </template>
 
 <style scoped>
@@ -16,10 +47,19 @@
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
+  color: inherit;
+  text-decoration: none;
   /* width: 56px;
   height: 56px; */
-  font-size: 24px;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
   transition: color 0.1s, border-color 0.1s, background-color 0.1s;
+}
+
+.icon-button span {
+  padding: 0 4px;
+  display: block;
 }
 
 .icon-button:hover {
