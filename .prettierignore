@@ -25,8 +25,9 @@ integrations/**/next-env.d.ts
 integrations/**/routeTree.gen.ts
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__
-integrations/**/.nuxt
 integrations/**/.output
+integrations/**/.nitro
+integrations/**/.nuxt
 
 # lucide-svelte
 packages/svelte/src/icons/*.svelte
