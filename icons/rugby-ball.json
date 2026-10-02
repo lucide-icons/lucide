@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "dev-mralph"
+    "dev-mralph",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Representing rugby matches and tournaments",
