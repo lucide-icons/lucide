@@ -6,12 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "lost",
-    "delete",
-    "remove",
-    "document"
+    "$extends:file",
+    "$group:remove",
+    "lost"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

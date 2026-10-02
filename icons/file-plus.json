@@ -7,12 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "add",
-    "create",
-    "new",
-    "document"
+    "$extends:file",
+    "$group:add"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

@@ -19,6 +19,10 @@ const config = {
     `ajv --spec=draft2020 -s category.schema.json ${filenamesToAjvOption(filenames)}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
+  'groups/*.json': (filenames) => [
+    `ajv --spec=draft2020 -s group.schema.json ${filenamesToAjvOption(filenames)}`,
+    `prettier --write ${filenames.join(' ')}`,
+  ],
 };
 
 export default config;
