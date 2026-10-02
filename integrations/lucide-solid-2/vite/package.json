@@ -1,0 +1,29 @@
+{
+  "name": "@lucide/integration-solid-2-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc --noEmit && tsc --noEmit --project tsconfig.declarations.json",
+    "test:browser": "vitest run",
+    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+  },
+  "dependencies": {
+    "@lucide/solid": "workspace:*",
+    "@solidjs/meta": "1.0.0-next.2",
+    "@solidjs/router": "2.0.0-next.34",
+    "@solidjs/web": "2.0.0-rc.13",
+    "solid-js": "2.0.0-rc.13"
+  },
+  "devDependencies": {
+    "@solidjs/testing-library": "1.0.0-beta.3",
+    "@solidjs/vite-plugin": "3.0.0-next.47",
+    "@vitest/browser-playwright": "4.1.10",
+    "filesystem-routing": "0.4.0",
+    "playwright": "1.58.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.2",
+    "vitest": "4.1.11"
+  }
+}
