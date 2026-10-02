@@ -82,6 +82,7 @@
     "babel-preset-solid": "next",
     "esbuild": "^0.28.2",
     "jest-serializer-html": "^7.1.0",
+    "rollup-plugin-dts": "^6.5.1",
     "rollup": "^4.63.1",
     "solid-js": "next",
     "typescript": "^6.0.3",
