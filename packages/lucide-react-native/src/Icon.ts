@@ -97,9 +97,11 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     });
 
     const customAttrs = {
+      fill: svgAttributes['fill'],
       stroke: svgAttributes['stroke'],
       strokeWidth: svgAttributes['strokeWidth'],
-      ...rest,
+      strokeLinecap: svgAttributes['strokeLinecap'],
+      strokeLinejoin: svgAttributes['strokeLinejoin'],
     };
 
     return createElement(
