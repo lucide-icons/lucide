@@ -30,6 +30,9 @@ permissions: {}
 
 jobs:
   release-gate:
+    concurrency:
+      group: ci-${{ github.event_name == 'schedule' ? github.ref : 'release-gated' }}
+      cancel-in-progress: true
     if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_dispatch'
     environment: ${{ github.event_name == 'schedule' && 'Icon Release' || 'Icon Release Gated' }}
     runs-on: ubuntu-latest
