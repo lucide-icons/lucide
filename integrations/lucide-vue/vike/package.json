@@ -19,7 +19,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/browser-playwright": "4.1.10",
     "typescript": "^6.0.3",
-    "vite": "^7.3.6",
+    "vite": "^8.3.2",
     "vitest": "4.1.11",
     "vitest-browser-vue": "3.1.0",
     "vue-tsc": "^3.3.11"
