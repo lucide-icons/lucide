@@ -1,6 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Connectivity",
-  "description": "Icons for network connections, wireless signals, power states, ports, and device links.",
+  "description": "Icons for wireless signals, wired connections, networks, device pairing, and data transfer.",
   "icon": "wifi"
 }
