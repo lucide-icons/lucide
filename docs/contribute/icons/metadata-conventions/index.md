@@ -141,13 +141,13 @@ Variant icons do not have to repeat the metadata they share with other icons. Tw
 
 `$extends:<icon-name>` means **is a**. It pulls in the resolved `tags`, `categories` or `contributors` of the icon the variant is built on.
 
-`$group:<group-name>` means **does this**. It pulls in the tags of `groups/<group-name>.json`, a small reusable set of tags for one meaning. It is only allowed in `tags`.
+`$group:<group-name>` means **does this**. It pulls in the tags of `groups/<group-name>.json`, a small reusable set of tags for one icon variant, named after its suffix (`plus`, `minus`, `check`, `off`…). It is only allowed in `tags`.
 
-`file-minus` is a file, and its `-minus` modifier means "remove":
+`file-minus` is a file, and its `-minus` variant means "remove":
 
 ```json
 {
-  "tags": ["$extends:file", "$group:remove", "erase"],
+  "tags": ["$extends:file", "$group:minus", "erase"],
   "categories": ["$extends:file"]
 }
 ```
@@ -161,7 +161,7 @@ which resolves to:
 }
 ```
 
-Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Reach for a group instead, named after the meaning (`remove`) rather than the glyph (`minus`).
+Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Reach for the variant's group instead (`$group:minus`), whose tags describe what the variant means rather than the glyph.
 
 Order the entries base icon first, then groups, then the icon's own tags, and never repeat a value a marker already provides — `pnpm checkIcons` fails on that.
 

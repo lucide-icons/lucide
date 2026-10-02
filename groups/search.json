@@ -1,0 +1,10 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: searching or finding something",
+  "tags": [
+    "find",
+    "lookup",
+    "magnifying glass",
+    "lens"
+  ]
+}

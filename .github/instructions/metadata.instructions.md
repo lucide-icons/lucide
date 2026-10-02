@@ -89,7 +89,7 @@ Some icons are variants of another icon (for example `alarm-clock-minus` is an `
 
 ```jsonc
 {
-  "tags": ["$extends:alarm-clock", "$group:remove"],
+  "tags": ["$extends:alarm-clock", "$group:minus"],
   "categories": ["$extends:alarm-clock"],
   "contributors": ["$extends:alarm-clock", "some-user"]
 }
@@ -106,12 +106,12 @@ When checking or adding a `$extends:` marker:
 
 ## Groups
 
-`$extends:` says what an icon **is**; `$group:` says what a modifier **means**. A `"$group:<group-name>"` marker inside `tags` is replaced, in place, with the tags of `groups/<group-name>.json`.
+`$extends:` says what an icon **is**; `$group:` says what its variant suffix (`-plus`, `-check`, `-off`…) **means**. A `"$group:<group-name>"` marker inside `tags` is replaced, in place, with the tags of `groups/<group-name>.json`.
 
 ```jsonc
 {
-  // `file-minus` is a file, and the `-minus` modifier means "remove"
-  "tags": ["$extends:file", "$group:remove", "erase"],
+  // `file-minus` is a file, and its `-minus` variant means "remove"
+  "tags": ["$extends:file", "$group:minus", "erase"],
   "categories": ["$extends:file"]
 }
 ```
@@ -120,8 +120,8 @@ When checking or adding a `$group:` marker:
 
 - A marker must be exactly `"$group:"` followed by the name of an existing file in `groups/`, without the `.json` extension, in lowercase kebab-case.
 - `$group:` is allowed **only** inside `tags`. It is not valid in `categories` or `contributors`.
-- Groups are named after the meaning, not the glyph: `add`, not `plus`; `remove`, not `minus`.
-- The same modifier can mean different things in different contexts — `-off` means "allergy" on food icons but "mute" on audio icons — so pick the group that matches the icon, and keep context-specific tags as literals.
+- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`.
+- The same suffix can mean different things in different contexts — `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off` — so only use the group when the icon carries the group's meaning, and keep context-specific tags as literals.
 - Do not repeat a tag a group already provides, and do not use the same group twice in one array.
 - Conventional order: the `$extends:` base icon first, then `$group:` markers, then the icon's own literal tags.
 - Run `pnpm checkIcons` to validate the markers. It fails on unknown groups, on `$group:` outside `tags`, and on literals that a marker already provides.
