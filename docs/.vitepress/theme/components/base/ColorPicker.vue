@@ -47,7 +47,7 @@ const value = computed({
       aria-label="Color picker input"
       v-model="value"
       maxlength="9"
-      placeholder="currentColor"
+      placeholder="[default]"
     />
   </div>
 </template>
