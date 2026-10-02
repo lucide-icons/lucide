@@ -47,6 +47,17 @@ describe('Using Icon Component', () => {
     expect(container.firstChild).toBeDefined();
   });
 
+  it('should pass the testID to the rendered element', async () => {
+    const { container, getByTestId } = render(
+      <Icon
+        iconNode={airVent}
+        testID="air-vent-icon"
+      />,
+    );
+
+    expect(getByTestId('air-vent-icon')).toBe(container.firstChild);
+  });
+
   it('should support nonScalingStroke', async () => {
     const { container } = render(
       <Icon

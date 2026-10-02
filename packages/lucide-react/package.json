@@ -97,7 +97,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts && rm -f dynamic.{d.ts,d.mts,mts,mjs,mjs.map} && rm -f dynamicIconImports.d.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --withDynamicImports --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
-    "typecheck": "tsc",
+    "typecheck": "pnpm build:icons && tsc --noEmit",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"
@@ -121,6 +121,12 @@
     "vite": "^7.3.6"
   },
   "peerDependencies": {
+    "@types/react": "*",
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
   }
 }

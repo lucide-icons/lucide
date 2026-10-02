@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "lib": ["esnext"],
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "sourceMap": true,

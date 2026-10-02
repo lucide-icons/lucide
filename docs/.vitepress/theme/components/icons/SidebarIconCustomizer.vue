@@ -34,8 +34,8 @@ const sizeCssVar = useCssVar('--customize-size', props.rootEl?.value ?? document
 });
 
 syncRef(color, colorCssVar, { direction: 'ltr' });
-syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr' });
-syncRef(size, sizeCssVar, { direction: 'ltr' });
+syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr', transform: { ltr: String } });
+syncRef(size, sizeCssVar, { direction: 'ltr', transform: { ltr: String } });
 
 function resetStyle() {
   color.value = STYLE_DEFAULTS.color;
