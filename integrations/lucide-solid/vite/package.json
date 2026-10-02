@@ -1,28 +1,25 @@
 {
-  "name": "@lucide/integration-react-vite",
+  "name": "@lucide/integration-solid-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit --project tsconfig.declarations.json",
     "test:browser": "vitest run",
     "check": "pnpm build && pnpm typecheck && pnpm test:browser"
   },
   "dependencies": {
-    "lucide-react": "workspace:*",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "lucide-solid": "workspace:*",
+    "solid-js": "1.9.15"
   },
   "devDependencies": {
-    "@types/react": "19.3.0",
-    "@types/react-dom": "19.3.0",
-    "@vitejs/plugin-react": "^6.1.1",
     "@vitest/browser-playwright": "4.1.10",
     "playwright": "1.58.2",
     "typescript": "^6.0.3",
-    "vite": "^8.3.2",
+    "vite": "^7.3.6",
+    "vite-plugin-solid": "^2.11.14",
     "vitest": "4.1.11",
-    "vitest-browser-react": "2.2.0"
+    "vitest-browser-solid": "1.0.1"
   }
 }
