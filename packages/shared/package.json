@@ -10,9 +10,18 @@
   "license": "ISC",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "typecheck": "tsc"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": {
+      "types": "./src/build/types.ts",
+      "default": "./src/build/types.ts"
+    }
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "@types/node": "^26.4.1",
+    "vite": "^7.3.6"
   }
 }

@@ -6,6 +6,7 @@
     "jguddas",
     "Veatec22"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
@@ -16,7 +17,12 @@
     "alert",
     "error",
     "anomaly",
-    "lens"
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
   ],
   "categories": [
     "text",

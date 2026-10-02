@@ -4,6 +4,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lost",
     "delete",
@@ -17,8 +18,7 @@
     {
       "name": "file-x-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

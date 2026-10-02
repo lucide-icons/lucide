@@ -13,21 +13,19 @@ body:
       description: Which Lucide project do you wish this feature were added to? You may select more than one.
       options:
         - label: lucide
-        - label: lucide-angular (old version)
-        - label: '@lucide/angular (new version)'
-        - label: '@lucide/astro'
-        - label: lucide-flutter
-        - label: lucide-preact
         - label: lucide-react
+        - label: '@lucide/vue'
+        - label: '@lucide/svelte'
+        - label: '@lucide/angular'
+        - label: '@lucide/astro'
         - label: lucide-react-native
+        - label: lucide-preact
         - label: lucide-solid
         - label: lucide-static
-        - label: lucide-svelte (old version)
-        - label: '@lucide/svelte (new version)'
-        - label: lucide-vue
-        - label: lucide-vue-next
-        - label: lucide-astro
         - label: '@lucide/icons'
+        - label: lucide-vue-next (deprecated)
+        - label: lucide-svelte (deprecated)
+        - label: lucide-angular (deprecated)
         - label: Figma plugin
         - label: all JS packages
         - label: site

@@ -35,7 +35,7 @@ Lucide is an open-source icon library that provides 1600+ vector (svg) files for
 | <img src="https://lucide.dev/framework-logos/js.svg" alt="JS logo" width="48"> | **`lucide`** | [![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide) | [Docs](https://lucide.dev/guide/lucide) · [Source](./packages/lucide) |
 | <img src="https://lucide.dev/framework-logos/react.svg" alt="React logo" width="48"> | **`lucide-react`** | [![npm](https://img.shields.io/npm/v/lucide-react)](https://www.npmjs.com/package/lucide-react) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react) | [Docs](https://lucide.dev/guide/react) · [Source](./packages/lucide-react) |
 | <img src="https://lucide.dev/framework-logos/vue.svg" alt="Vue logo" width="48"> | **`@lucide/vue`** | [![npm](https://img.shields.io/npm/v/@lucide/vue)](https://www.npmjs.com/package/@lucide/vue) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/vue) | [Docs](https://lucide.dev/guide/vue) · [Source](./packages/vue) |
-| <img src="https://lucide.dev/framework-logos/svelte.svg" alt="Svelte logo" width="48"> | **`@lucide/svelte`** | [![npm](https://img.shields.io/npm/v/@lucide/svelte)](https://www.npmjs.com/package/@lucide/svelte) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/svelte) | [Docs](https://lucide.dev/guide/svelte) · [Source](./packages/@lucide/svelte) |
+| <img src="https://lucide.dev/framework-logos/svelte.svg" alt="Svelte logo" width="48"> | **`@lucide/svelte`** | [![npm](https://img.shields.io/npm/v/@lucide/svelte)](https://www.npmjs.com/package/@lucide/svelte) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/svelte) | [Docs](https://lucide.dev/guide/svelte) · [Source](./packages/svelte) |
 | <img src="https://lucide.dev/framework-logos/solid.svg" alt="Solid logo" width="48"> | **`lucide-solid`** | [![npm](https://img.shields.io/npm/v/lucide-solid)](https://www.npmjs.com/package/lucide-solid) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-solid) | [Docs](https://lucide.dev/guide/solid) · [Source](./packages/lucide-solid) |
 | <img src="https://lucide.dev/framework-logos/preact.svg" alt="Preact logo" width="48"> | **`lucide-preact`** | [![npm](https://img.shields.io/npm/v/lucide-preact)](https://www.npmjs.com/package/lucide-preact) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact) | [Docs](https://lucide.dev/guide/preact) · [Source](./packages/lucide-preact) |
 | <img src="https://lucide.dev/framework-logos/react-native.svg" alt="React Native logo" width="48"> | **`lucide-react-native`** | [![npm](https://img.shields.io/npm/v/lucide-react-native)](https://www.npmjs.com/package/lucide-react-native) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native) | [Docs](https://lucide.dev/guide/react-native) · [Source](./packages/lucide-react-native) |
@@ -92,7 +92,7 @@ Thank you to all the people who contributed to Lucide!
 
 ### Hero backers 🦸
 
-<a href="https://https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
 
 ### Awesome backers 🍺
 

@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "honeycomb",
+    "beeswax",
+    "cells",
+    "cluster",
+    "tessellation",
+    "pollen",
+    "pollinate"
+  ],
+  "categories": [
+    "shapes",
+    "food-beverage"
+  ]
+}

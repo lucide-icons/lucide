@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "add to favorites",
+    "star item",
+    "add bookmark",
+    "save item",
+    "mark as favorite",
+    "add featured item",
+    "add recommendation",
+    "follow preferred content",
+    "add to saved items",
+    "prioritize item"
+  ],
+  "tags": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating",
+    "plus",
+    "add",
+    "join",
+    "star"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes",
+    "multimedia",
+    "weather",
+    "emoji",
+    "gaming"
+  ]
+}

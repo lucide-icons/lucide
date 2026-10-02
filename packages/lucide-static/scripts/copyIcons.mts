@@ -16,7 +16,7 @@ export default async function copyIcons(
   if (!existsSync(iconsDirectory)) {
     mkdirSync(iconsDirectory);
   }
-  // eslint-disable-next-line arrow-body-style
+   
   const writeIconPromises = parsedSvgs.map(({ name, contents }) => {
     let content = `<!-- ${license} -->\n${contents}`;
     content = content.replace('<svg', `<svg\n  class="lucide lucide-${name}"`);

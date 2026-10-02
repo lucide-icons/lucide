@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "next",
     "forward",
@@ -22,8 +23,7 @@
     {
       "name": "arrow-right-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

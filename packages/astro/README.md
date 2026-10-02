@@ -72,7 +72,7 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 ### Hero backers 🦸
 
-<a href="https://https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
 
 ### Awesome backers 🍺
 
