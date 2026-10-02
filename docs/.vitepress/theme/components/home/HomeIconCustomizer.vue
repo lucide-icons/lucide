@@ -9,7 +9,7 @@ import ResetButton from '../base/ResetButton.vue';
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
 import Switch from '../base/Switch.vue';
 
-const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = useIconStyle();
+const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle } = useIconStyle();
 
 const iconStyle = computed(() => ({
   '--home-icon-color': color.value,
@@ -24,7 +24,10 @@ const iconStyle = computed(() => ({
       <div class="card-column">
         <h2 class="title">
           Style as you please
-          <ResetButton @click="resetStyle"></ResetButton>
+          <ResetButton
+            :disabled="!isCustomized"
+            @click="resetStyle"
+          />
         </h2>
         <p class="copy">
           Lucide has a lot of customization options to match the icons with your UI.

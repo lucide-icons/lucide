@@ -17,7 +17,10 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
-      <ResetButton @click="resetStyle"></ResetButton>
+      <ResetButton
+        :disabled="!isCustomized"
+        @click="resetStyle"
+      />
     </div>
     <InputField
       id="icon-color"

@@ -22,13 +22,13 @@ export const STYLE_DEFAULTS = {
 };
 
 const persistedIconStyle = {
-  size: useLocalStorage('lucide-icon-size', STYLE_DEFAULTS.size, { initOnMounted: false }),
-  strokeWidth: useLocalStorage('lucide-icon-stroke-width', STYLE_DEFAULTS.strokeWidth, {
+  size: useLocalStorage('icon-size', STYLE_DEFAULTS.size, { initOnMounted: false }),
+  strokeWidth: useLocalStorage('icon-stroke-width', STYLE_DEFAULTS.strokeWidth, {
     initOnMounted: false,
   }),
-  color: useLocalStorage('lucide-icon-color', STYLE_DEFAULTS.color, { initOnMounted: false }),
+  color: useLocalStorage('icon-color', STYLE_DEFAULTS.color, { initOnMounted: false }),
   absoluteStrokeWidth: useLocalStorage(
-    'lucide-icon-absolute-stroke-width',
+    'icon-absolute-stroke-width',
     STYLE_DEFAULTS.absoluteStrokeWidth,
     { initOnMounted: false },
   ),

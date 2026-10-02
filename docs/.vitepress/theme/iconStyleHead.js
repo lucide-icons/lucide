@@ -2,10 +2,10 @@
 (() => {
   try {
     const root = globalThis.document.documentElement;
-    const size = globalThis.localStorage.getItem('lucide-icon-size');
-    const stroke = globalThis.localStorage.getItem('lucide-icon-stroke-width');
-    const color = globalThis.localStorage.getItem('lucide-icon-color');
-    const absolute = globalThis.localStorage.getItem('lucide-icon-absolute-stroke-width');
+    const size = globalThis.localStorage.getItem('icon-size');
+    const stroke = globalThis.localStorage.getItem('icon-stroke-width');
+    const color = globalThis.localStorage.getItem('icon-color');
+    const absolute = globalThis.localStorage.getItem('icon-absolute-stroke-width');
     if ([size, stroke, color, absolute].every((value) => value === null)) return;
     if (size !== null && Number.isFinite(Number(size))) {
       root.style.setProperty('--customize-size', String(Math.min(256, Math.max(16, Number(size)))));

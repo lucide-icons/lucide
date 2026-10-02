@@ -3,10 +3,10 @@ import { test } from 'node:test';
 import { nextTick } from 'vue';
 
 const storedValues = new Map<string, string>([
-  ['lucide-icon-size', '240'],
-  ['lucide-icon-stroke-width', '1.5'],
-  ['lucide-icon-color', '#ff0000'],
-  ['lucide-icon-absolute-stroke-width', 'true'],
+  ['icon-size', '240'],
+  ['icon-stroke-width', '1.5'],
+  ['icon-color', '#ff0000'],
+  ['icon-absolute-stroke-width', 'true'],
 ]);
 const styleProperties = new Map<string, string>();
 const classes = new Set<string>();
@@ -74,7 +74,7 @@ test('creates a non-persisted icon style from the defaults', () => {
 
   style.size.value = 48;
 
-  assert.equal(storedValues.get('lucide-icon-size'), '240');
+  assert.equal(storedValues.get('icon-size'), '240');
   assert.equal(styleProperties.get('--customize-size'), '240');
 });
 
@@ -106,8 +106,8 @@ test('resetting updates refs, CSS variables, and persisted values', async () => 
   assert.equal(styleProperties.get('--customize-strokeWidth'), '2');
   assert.equal(styleProperties.get('--customize-color'), 'currentColor');
   assert.equal(classes.has('absolute-stroke-width'), false);
-  assert.equal(storedValues.get('lucide-icon-size'), '24');
-  assert.equal(storedValues.get('lucide-icon-stroke-width'), '2');
-  assert.equal(storedValues.get('lucide-icon-color'), 'currentColor');
-  assert.equal(storedValues.get('lucide-icon-absolute-stroke-width'), 'false');
+  assert.equal(storedValues.get('icon-size'), '24');
+  assert.equal(storedValues.get('icon-stroke-width'), '2');
+  assert.equal(storedValues.get('icon-color'), 'currentColor');
+  assert.equal(storedValues.get('icon-absolute-stroke-width'), 'false');
 });
