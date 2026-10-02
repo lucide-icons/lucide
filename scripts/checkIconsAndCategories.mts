@@ -8,7 +8,16 @@ import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
+let icons: Record<string, IconMetadata>;
+
+try {
+  icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
+} catch (error) {
+  console.error(`Failed to read icon metadata: ${error instanceof Error ? error.message : String(error)}`);
+  console.error('This may be due to invalid extends references or circular dependencies.');
+  process.exit(1);
+}
+
 const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
 const categories = await readAllMetadata(CATEGORIES_DIR) as Record<string, {
   icon: string;
