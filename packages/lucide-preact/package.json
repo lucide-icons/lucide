@@ -62,6 +62,6 @@
     "vite": "^7.3.6"
   },
   "peerDependencies": {
-    "preact": "^10.27.2"
+    "preact": "^10.27.2 || ^11.0.0-0"
   }
 }
