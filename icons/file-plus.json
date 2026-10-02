@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$group:add"
+    "$group:plus"
   ],
   "categories": [
     "$extends:file"

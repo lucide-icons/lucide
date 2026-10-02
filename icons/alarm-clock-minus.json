@@ -9,7 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:alarm-clock",
-    "$group:remove"
+    "$group:minus"
   ],
   "categories": [
     "$extends:alarm-clock"
