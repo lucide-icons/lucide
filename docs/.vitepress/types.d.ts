@@ -1,3 +1,4 @@
+/// <reference types="vitepress/client" />
 import { type IconNode } from '@lucide/vue/src/types';
 import Vue from 'vue';
 
@@ -31,7 +32,11 @@ declare module '*.node.json' {
 }
 
 declare global {
+  // Defined by VitePress at build time, used by its VPDocAsideCarbonAds component
+  const __CARBON__: boolean;
+
   interface Window {
+    _carbonads?: unknown;
     ExpoSnack?: {
       /**
        * Initialize all snack players on the page

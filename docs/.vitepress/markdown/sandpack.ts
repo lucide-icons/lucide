@@ -1,6 +1,4 @@
-import type MarkdownIt from 'markdown-it';
-import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
-import type Token from 'markdown-it/lib/token.mjs';
+import type { MarkdownIt, RenderRule, Token } from './types';
 import container from 'markdown-it-container';
 import sandpackTheme from '../theme/sandpackTheme.json';
 

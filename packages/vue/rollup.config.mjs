@@ -2,6 +2,11 @@ import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const packageName = '@lucide/vue';
 const outputFileName = 'lucide-vue';
 const outputDir = 'dist';
@@ -58,13 +63,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [
-      dts({
-        compilerOptions: {
-          preserveSymlinks: false,
-        },
-      }),
-    ],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.suffixed.ts`,
@@ -74,13 +73,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [
-      dts({
-        compilerOptions: {
-          preserveSymlinks: false,
-        },
-      }),
-    ],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -90,13 +83,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [
-      dts({
-        compilerOptions: {
-          preserveSymlinks: false,
-        },
-      }),
-    ],
+    plugins: [dts(dtsOptions)],
   },
   ...configs,
 ];
