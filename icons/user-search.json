@@ -10,14 +10,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:search",
     "person",
     "account",
     "contact",
-    "find",
     "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "magnifier"
   ],
   "categories": [
     "account",

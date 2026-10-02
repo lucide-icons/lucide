@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:user",
     "shield",
     "user",
     "admin",

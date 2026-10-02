@@ -10,12 +10,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:clock",
     "copy",
     "paste",
-    "history",
     "log",
     "clock",
-    "time",
     "watch",
     "alarm",
     "hour",

@@ -5,9 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:heart",
     "directory",
     "heart",
-    "favourite",
     "bookmark",
     "quick link"
   ],

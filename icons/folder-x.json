@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "remove",
-    "delete"
+    "$group:x",
+    "directory"
   ],
   "categories": [
     "files"

@@ -8,11 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:cog",
     "executable",
-    "settings",
     "cog",
-    "edit",
-    "gear"
+    "edit"
   ],
   "categories": [
     "files"

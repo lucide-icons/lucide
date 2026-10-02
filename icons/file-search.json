@@ -8,11 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:search",
     "lost",
     "document",
-    "find",
-    "browser",
-    "lens"
+    "browser"
   ],
   "categories": [
     "files"

@@ -9,8 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:key",
     "passkey",
-    "password",
     "login",
     "authentication",
     "authorization",
@@ -18,7 +18,6 @@
     "permissions",
     "private",
     "public",
-    "security",
     "person",
     "account",
     "contact"

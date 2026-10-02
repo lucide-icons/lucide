@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
+    "$group:check",
     "directory",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

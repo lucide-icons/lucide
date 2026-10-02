@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:off",
     "device",
     "scroll",
-    "click",
-    "disabled"
+    "click"
   ],
   "categories": [
     "devices"

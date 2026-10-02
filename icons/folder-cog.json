@@ -6,13 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:cog",
     "directory",
-    "settings",
     "control",
-    "preferences",
     "cog",
-    "edit",
-    "gear"
+    "edit"
   ],
   "categories": [
     "files"

@@ -7,6 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:play",
     "tv",
     "computer",
     "screen",
@@ -19,7 +20,6 @@
     "film",
     "play",
     "running",
-    "start",
     "boot",
     "virtual machine",
     "vm"
