@@ -34,6 +34,7 @@ export default defineConfig([
       'docs/**/examples/',
       'docs/.vitepress/theme/components/editors/preact/index.js',
       'packages/svelte/.svelte-kit',
+      'integrations/**/file-routes.d.ts',
       // Tracked in git despite matching a .gitignore pattern, so lint it.
       '!packages/lucide-react/dynamicIconImports.mjs',
     ],
