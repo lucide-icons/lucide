@@ -76,5 +76,23 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('height', '32');
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
     expect(IconComponent).toHaveAttribute('stroke-width', '3');
+    expect(IconComponent).toHaveAttribute('stroke-width', '3');
+  });
+  it('should merge provider and icon className values', () => {
+    cleanup();
+    const testId = 'house-icon';
+    const { getByTestId } = render(
+      <LucideProvider className="provider-class">
+        <House
+          testID={testId}
+          className="icon-class"
+        />
+      </LucideProvider>,
+    );
+
+    expect(getByTestId(testId)).toHaveAttribute(
+      'class',
+      'lucide lucide-house lucide-home provider-class icon-class',
+    );
   });
 });

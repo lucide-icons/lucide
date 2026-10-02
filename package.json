@@ -28,6 +28,7 @@
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
     "suggest:metadata": "node ./scripts/suggestMetaData.mts",
+    "suggest:metadata:debug": "node --env-file .env ./scripts/suggestMetaData.mts --debug",
     "suggest:metadata:watch": "node --env-file .env --watch ./scripts/suggestMetaData.mts",
     "postinstall": "husky",
     "lint:es": "eslint .",
@@ -80,7 +81,7 @@
     "svgson": "^5.3.1",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.69.0",
-    "vitest": "4.1.10",
+    "vitest": "4.1.11",
     "yargs": "^18.1.0",
     "zod": "^4.5.4"
   },

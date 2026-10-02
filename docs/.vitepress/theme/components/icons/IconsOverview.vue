@@ -35,7 +35,6 @@ const SORTING = [
   },
 ]
 
-
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
 
@@ -72,6 +71,8 @@ const sortedIcons = computed(() => {
       return [...props.icons].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
     case 'release-date':
       return [...props.icons].sort((a, b) => {
+        if (a.awaitingRelease !== b.awaitingRelease) return a.awaitingRelease ? -1 : 1;
+
         const aDate = a.createdRelease?.date ? new Date(a.createdRelease.date).getTime() : 0;
         const bDate = b.createdRelease?.date ? new Date(b.createdRelease.date).getTime() : 0;
         return bDate - aDate;
@@ -172,7 +173,7 @@ watch(searchQueryDebounced, () => {
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/';
 
   if (searchQueryDebounced.value) {
@@ -207,6 +208,7 @@ function handleCloseDrawer() {
         <template #start-icon>
           <Icon
             :iconNode="listSortDescending"
+            name="list-sort-descending"
             class="chevron-icon"
             aria-hidden="true"
           />
