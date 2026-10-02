@@ -21,6 +21,7 @@ integrations/**/.vitest-attachments
 integrations/**/__screenshots__
 integrations/**/.output
 integrations/**/.nitro
+integrations/**/.nuxt
 outlined
 lucide-font
 packages/**/src/icons/*.js

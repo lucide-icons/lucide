@@ -1,0 +1,27 @@
+{
+  "name": "@lucide/integration-vue-vike",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vike build",
+    "typecheck": "vue-tsc --noEmit",
+    "test:browser": "vitest run",
+    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+  },
+  "dependencies": {
+    "@lucide/vue": "workspace:*",
+    "vike": "0.4.266",
+    "vike-vue": "0.9.13",
+    "vue": "3.5.42"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/browser-playwright": "4.1.10",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vitest": "4.1.11",
+    "vitest-browser-vue": "3.1.0",
+    "vue-tsc": "^3.3.11"
+  }
+}

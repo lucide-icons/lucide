@@ -53,7 +53,7 @@
     "@angular/forms": "^22.1.7",
     "@angular/platform-browser": "^22.1.7",
     "@angular/platform-server": "^22.1.7",
-    "@angular/router": "^22.1.7",
+    "@angular/router": "^22.2.0",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@vitest/browser-playwright": "^4.1.10",
