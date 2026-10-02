@@ -145,7 +145,7 @@ const { color, strokeWidth, size, absoluteStrokeWidth, resetStyle } = usePersist
   }
 }
 
-.color-picker-field:deep(.display-value) {
-  width: 138px;
+.color-picker-field:deep(.icon-color-picker-input) {
+  width: 116px;
 }
 </style>
