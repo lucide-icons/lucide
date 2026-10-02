@@ -70,7 +70,7 @@
     "rollup-plugin-dts": "^6.5.1",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "typescript": "^6.0.3",
-    "vite": "^7.3.6",
+    "vite": "^8.3.2",
     "vitest": "4.1.11"
   }
 }

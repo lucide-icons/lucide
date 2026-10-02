@@ -30,6 +30,11 @@
       "svelte": "./dist/lucide-svelte.js",
       "default": "./dist/lucide-svelte.js"
     },
+    "./context": {
+      "types": "./dist/context.d.ts",
+      "svelte": "./dist/context.js",
+      "default": "./dist/context.js"
+    },
     "./icons": {
       "types": "./dist/lucide-svelte.d.ts",
       "svelte": "./dist/lucide-svelte.js"
@@ -71,7 +76,7 @@
     "svelte-check": "^4.7.6",
     "svelte-preprocess": "^6.0.5",
     "typescript": "^6.0.3",
-    "vite": "^7.3.6"
+    "vite": "^8.3.2"
   },
   "peerDependencies": {
     "svelte": "^5"
