@@ -786,6 +786,9 @@ importers:
       '@testing-library/jest-dom':
         specifier: ^7.0.1
         version: 7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.10)
+      '@types/node':
+        specifier: ^25.9.1
+        version: 25.9.5
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
