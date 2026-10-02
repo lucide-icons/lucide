@@ -1,11 +1,11 @@
 // Run before the body is painted: the generated HTML cannot know local preferences.
 (() => {
   try {
-    const root = document.documentElement;
-    const size = localStorage.getItem('lucide-icon-size');
-    const stroke = localStorage.getItem('lucide-icon-stroke-width');
-    const color = localStorage.getItem('lucide-icon-color');
-    const absolute = localStorage.getItem('lucide-icon-absolute-stroke-width');
+    const root = globalThis.document.documentElement;
+    const size = globalThis.localStorage.getItem('lucide-icon-size');
+    const stroke = globalThis.localStorage.getItem('lucide-icon-stroke-width');
+    const color = globalThis.localStorage.getItem('lucide-icon-color');
+    const absolute = globalThis.localStorage.getItem('lucide-icon-absolute-stroke-width');
     if ([size, stroke, color, absolute].every((value) => value === null)) return;
     if (size !== null && Number.isFinite(Number(size))) {
       root.style.setProperty('--customize-size', String(Math.min(256, Math.max(16, Number(size)))));
@@ -15,8 +15,10 @@
         '--customize-strokeWidth',
         String(Math.min(3, Math.max(0.5, Number(stroke)))),
       );
-    if (color !== null && CSS.supports('color', color))
+    if (color !== null && globalThis.CSS.supports('color', color))
       root.style.setProperty('--customize-color', color);
     root.classList.toggle('absolute-stroke-width', absolute === 'true');
-  } catch {}
+  } catch {
+    // Storage can be unavailable, for example in private browsing mode.
+  }
 })();
