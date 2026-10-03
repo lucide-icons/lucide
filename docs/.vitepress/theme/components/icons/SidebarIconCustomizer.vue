@@ -79,7 +79,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
       label="Non-scaling stroke"
     >
       <Switch
-        id="non-scaling-stroke"
+        id="non-scaling-stroke-switch"
         name="non-scaling-stroke"
         v-model="nonScalingStroke"
       />
