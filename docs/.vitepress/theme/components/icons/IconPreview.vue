@@ -12,7 +12,7 @@ const props = defineProps<{
 
 const activeSize = ref('1000%');
 
-const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext();
+const { size, color, strokeWidth, nonScalingStroke } = useIconStyleContext();
 const previewIcon = ref();
 
 const gridLines = computed(() => Array.from({ length: size.value - 1 }));
@@ -30,7 +30,7 @@ const iconComponent = computed(() => {
       :is="iconComponent"
       :size="size"
       :color="color"
-      :strokeWidth="absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth"
+      :strokeWidth="nonScalingStroke ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth"
       class="preview-icon"
       :data-size="activeSize"
     />
