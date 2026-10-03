@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "indicate a directed route on a map",
+    "show a recommended right turn in navigation instructions",
+    "mark progress toward the next waypoint",
+    "represent rerouting or an alternate path to the right",
+    "signal forward movement in travel or transit apps"
+  ],
+  "tags": [
+    "route",
+    "path",
+    "arrow",
+    "direction",
+    "right",
+    "flow",
+    "journey",
+    "reroute",
+    "detour",
+    "navigate",
+    "forward",
+    "auto",
+    "map",
+    "waypoint",
+    "gps",
+    "turn",
+    "location",
+    "directional"
+  ],
+  "categories": [
+    "navigation",
+    "arrows"
+  ]
+}
