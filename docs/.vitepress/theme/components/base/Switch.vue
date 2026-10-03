@@ -6,6 +6,10 @@
     modelValue: {
       type: Boolean,
       default: false
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 
@@ -23,6 +27,7 @@
     @update:model-value="emit('update:modelValue', $event)"
     class="switch"
     :class="{ enabled: isHydrated && modelValue }"
+    :id="id"
   >
     <span class="thumb" />
   </Switch>
