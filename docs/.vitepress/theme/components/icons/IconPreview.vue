@@ -30,7 +30,8 @@ const iconComponent = computed(() => {
       :is="iconComponent"
       :size="size"
       :color="color"
-      :strokeWidth="nonScalingStroke ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth"
+      :stroke-width="strokeWidth"
+      :nonScalingStroke="nonScalingStroke"
       class="preview-icon"
       :data-size="activeSize"
     />
