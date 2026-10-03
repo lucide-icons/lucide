@@ -86,7 +86,7 @@ function generateIconFiles({
     await fs.promises.writeFile(location, output, 'utf-8');
 
     if (separateIconFileExport) {
-      const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
+      const output = `export { default, __iconData, __iconNode } from "./${iconName}${iconFileExtension}";\n`;
       const location = path.join(
         iconsDistDirectory,
         `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,

@@ -120,7 +120,7 @@ export default async function generateAliasesFiles({
               separateAliasesFile && !separateAliasesFileIgnore?.includes(alias.name);
 
             if (createSeparateAliasesFile) {
-              const output = `export { default } from "./${iconName}${
+              const output = `export { default, __iconData, __iconNode } from "./${iconName}${
                 separateAliasesFileExtension ? iconFileExtension : ''
               }";\n`;
               const location = path.join(
