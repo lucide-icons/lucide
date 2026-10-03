@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["edik17"],
+  "tags": [
+    "screw",
+    "fastener",
+    "hardware",
+    "bolt",
+    "screwdriver",
+    "repair",
+    "assembly",
+    "diy",
+    "phillips",
+    "flathead"
+  ],
+  "categories": [
+    "tools",
+    "home",
+    "design"
+  ]
+}
