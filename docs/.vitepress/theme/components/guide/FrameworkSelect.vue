@@ -10,7 +10,14 @@ import { useLocalStorage } from '@vueuse/core';
 const { page } = useData();
 const router = useRouter();
 
-const frameworks = [
+interface Framework {
+  name: string;
+  icon: string;
+  iconDark?: string;
+  value: string;
+}
+
+const frameworks: Framework[] = [
   { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/lucide/' },
   { name: 'React', icon: '/framework-logos/react.svg', value: '/guide/react/' },
   { name: 'Vue', icon: '/framework-logos/vue.svg', value: '/guide/vue/' },
@@ -48,7 +55,7 @@ const selected = computed(() => {
   return current || (fallbackFramework.value?.value ? fallbackFramework.value : frameworks[0]);
 });
 
-function onSelectFramework(item: { name: string; icon: string; iconDark?: string; value: string }) {
+function onSelectFramework(item: Framework) {
   fallbackFramework.value = item;
   if (item.value !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.value, item.value);
