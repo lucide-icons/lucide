@@ -16,21 +16,22 @@ jobs:
     name: PR Title Lint
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Read conventional commit types
+        id: commit-types
+        run: |
+          {
+            echo "types<<TYPES_EOF"
+            jq -r '.[]' .github/conventional-commit-types.json
+            echo "TYPES_EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          types: |
-            fix
-            feat
-            perf
-            refactor
-            test
-            style
-            docs
-            ci
-            build
-            chore
+          types: ${{ steps.commit-types.outputs.types }}
           requireScope: true
           ignoreLabels: |
             bot
