@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jamiemlaw",
+    "rrod497"
+  ],
+  "use-cases": [
+    "stopping or clearing a paused debugging session",
+    "indicating when a bug or issue has been marked as invalid or no longer relevant",
+    "toggling off or disabling automated bug scanning tools",
+    "indicating a failed test case or an unresolved error"
+  ],
+  "tags": [
+    "issue",
+    "testing",
+    "debug",
+    "reproduce",
+    "code",
+    "insect",
+    "remove",
+    "clear",
+    "cancel",
+    "defect",
+    "error"
+  ],
+  "categories": [
+    "development",
+    "animals"
+  ]
+}
