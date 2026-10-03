@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "collaborative workspace in multi-user apps",
+    "assigning or sharing ownership of documents or content from one user to another",
+    "indicating peer-to-peer system architecture",
+    "meeting/gathering scheduling apps or team-based work management tools"
+  ],
+  "tags": [
+    "group",
+    "people",
+    "collaboration",
+    "users",
+    "team",
+    "communication",
+    "cooperative",
+    "workspace",
+    "peer-to-peer",
+    "p2p"
+  ],
+  "categories": [
+    "account",
+    "people",
+    "communication"
+  ]
+}
