@@ -1,0 +1,54 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "devkamani9313"
+  ],
+  "use-cases": [
+    "representing breakfast items, bacon rashers, or pork products",
+    "indicating diner, brunch, or fast food menu items",
+    "showing savory cooked meats or barbecue items",
+    "labeling grocery or deli items in food apps",
+    "marking breakfast sandwich or brunch special add-ons",
+    "tagging cured or smoked meat ingredients in recipes",
+    "denoting pork-containing menu items"
+  ],
+  "tags": [
+    "rashers",
+    "smoked",
+    "streaky",
+    "crispy",
+    "meat",
+    "fast food",
+    "junk food",
+    "snack",
+    "dish",
+    "restaurant",
+    "brunch",
+    "lunch",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled",
+    "barbecue",
+    "barbeque",
+    "bbq",
+    "pig",
+    "bacon",
+    "pork",
+    "breakfast",
+    "cured",
+    "butcher",
+    "sandwich",
+    "protein",
+    "grocery",
+    "kitchen"
+  ],
+  "categories": [
+    "food-beverage",
+    "shopping",
+    "home"
+  ]
+}
