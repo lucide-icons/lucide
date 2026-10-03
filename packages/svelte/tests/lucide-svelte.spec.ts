@@ -1,6 +1,8 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
 import { Smile, Pen, Edit2 } from '../src/lucide-svelte.js';
+import SmileIcon, { __iconData as SmileData, __iconNode as SmileNode } from '../src/icons/smile.js';
+import FaceSlightlySmilingIcon, { __iconData, __iconNode } from '../src/icons/face-slightly-smiling.svelte';
 import TestSlots from './TestSlots.svelte';
 import ContextWrapper from './ContextWrapper.svelte';
 
@@ -130,5 +132,22 @@ describe('Icon Component Accessibility', () => {
     const { container } = render(TestSlots);
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+});
+
+describe('Per-icon data export', () => {
+  it('should export __iconData and __iconNode from the svelte component module', () => {
+    expect(__iconData).toBeDefined();
+    expect(__iconData.name).toBe('face-slightly-smiling');
+    expect(__iconData.size).toBe(24);
+    expect(Array.isArray(__iconData.node)).toBe(true);
+    expect(__iconData.node.length).toBeGreaterThan(0);
+    expect(__iconNode).toEqual(__iconData.node);
+  });
+
+  it('should re-export __iconData and __iconNode from separate icon shim files', () => {
+    expect(SmileData).toBeDefined();
+    expect(SmileData.name).toBe('face-slightly-smiling');
+    expect(SmileNode).toEqual(SmileData.node);
   });
 });
