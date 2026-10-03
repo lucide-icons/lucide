@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "person",
+    "account",
+    "favorite",
+    "contact",
+    "like",
+    "review",
+    "rating",
+    "admin",
+    "avatar",
+    "profile",
+    "featured",
+    "moderator",
+    "verified",
+    "badge",
+    "award",
+    "champion",
+    "starred"
+  ],
+  "categories": [
+    "account"
+  ]
+}
