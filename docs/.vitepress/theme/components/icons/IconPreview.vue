@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types';
 import { computed, ref } from 'vue';
-import createLucideIcon from '@lucide/vue/src/createLucideIcon';
+import Icon from '@lucide/vue/src/Icon';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 
 const props = defineProps<{
@@ -16,21 +16,18 @@ const { size, color, strokeWidth, nonScalingStroke } = useIconStyleContext();
 const previewIcon = ref();
 
 const gridLines = computed(() => Array.from({ length: size.value - 1 }));
-
-const iconComponent = computed(() => {
-  if (!props.name || !props.iconNode) return null;
-  return createLucideIcon(props.name, props.iconNode);
-});
 </script>
 
 <template>
   <div class="icon-container">
-    <component
+    <Icon
+      v-if="name && iconNode"
+      :name="name"
+      :iconNode="iconNode"
       ref="previewIcon"
-      :is="iconComponent"
       :size="size"
       :color="color"
-      :stroke-width="strokeWidth"
+      :strokeWidth="strokeWidth"
       :nonScalingStroke="nonScalingStroke"
       class="preview-icon"
       :data-size="activeSize"
