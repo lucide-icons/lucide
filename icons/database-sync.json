@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "Synchronizing databases",
+    "replicating database data",
+    "syncing local and remote storage",
+    "database backup synchronization",
+    "keeping database records in sync",
+    "showing sync status between primary and replica databases",
+    "starting manual replication from a database admin panel",
+    "scheduling automated backups and replication jobs",
+    "indicating cloud and local database synchronization"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "container",
+    "tin",
+    "pot",
+    "bytes",
+    "servers",
+    "sync",
+    "db",
+    "database",
+    "replication",
+    "backup",
+    "replica",
+    "mirroring"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
