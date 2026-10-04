@@ -66,7 +66,7 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const { container } = render(Smile, {
       color: 'red',
       size: 48,
@@ -79,6 +79,24 @@ describe('Using lucide icon components', () => {
     expect(IconComponent).toHaveAttribute('height', '48');
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should apply vector-effect when nonScalingStroke is set', () => {
+    const { container } = render(Smile, {
+      color: 'red',
+      size: 48,
+      nonScalingStroke: true,
+    });
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '48');
+    expect(IconComponent).toHaveAttribute('height', '48');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+    expect(IconComponent).toHaveAttribute('stroke-width', '2');
+    expect(IconComponent?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
 
     expect(container.innerHTML).toMatchSnapshot();
   });

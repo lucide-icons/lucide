@@ -6,9 +6,18 @@
   ],
   "use-cases": [],
   "tags": [
-    "devices",
+    "tv",
+    "computer",
+    "screen",
+    "display",
+    "desktop",
+    "external display",
     "connect",
-    "cast"
+    "cast",
+    "audio",
+    "sound",
+    "volume",
+    "presentation"
   ],
   "categories": [
     "connectivity",

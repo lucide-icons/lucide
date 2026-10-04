@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "jennieboops"
+  ],
+  "use-cases": [
+    "Composing or editing email messages",
+    "Drafting letters in mail interfaces",
+    "Editing email addresses on settings pages"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "pen",
+    "edit",
+    "compose",
+    "draft",
+    "write",
+    "writing",
+    "create",
+    "reply"
+  ],
+  "categories": [
+    "mail"
+  ]
+}
