@@ -39,6 +39,8 @@ bun add lucide
 
 ### CDN
 
+#### Script tag (UMD)
+
 ```html
 <!-- Development version -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -47,7 +49,40 @@ bun add lucide
 <script src="https://unpkg.com/lucide@latest"></script>
 ```
 
-We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. This is because the latest version may introduce breaking changes that could potentially break your application. By anchoring to a specific version, you can ensure that your application remains stable and functional, even if there are updates to the library in the future.
+When using the UMD script tag, the library is exposed on the global `lucide` object (for example, `lucide.createIcons()`).
+
+#### ES Modules via CDN
+
+If using native browser ES modules (`<script type="module">`), import the ESM build directly from the CDN:
+
+```html
+<i data-lucide="menu"></i>
+
+<script type="module">
+  import { createIcons, icons } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
+
+  createIcons({ icons });
+</script>
+```
+
+Or import only the specific icons needed for tree-shaking:
+
+```html
+<i data-lucide="menu"></i>
+
+<script type="module">
+  import { createIcons, Menu, ArrowRight } from 'https://unpkg.com/lucide@latest/dist/esm/lucide.js';
+
+  createIcons({
+    icons: {
+      Menu,
+      ArrowRight,
+    },
+  });
+</script>
+```
+
+We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js` or `https://unpkg.com/lucide@x.xxx.x/dist/esm/lucide.js`, rather than using `@latest`. This ensures reproducible behavior and prevents unexpected breaking changes.
 
 ## Importing your first icon
 
