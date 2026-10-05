@@ -4,6 +4,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
 import sandpackPlugin from './markdown/sandpack';
+import examplePlugin from './markdown/example';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
@@ -12,6 +13,10 @@ import getHeadConfig from './getHeadConfig';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
+  'utf-8',
+);
+const iconStyleHeadScript = await readFile(
+  fileURLToPath(new URL('./theme/iconStyleHead.js', import.meta.url)),
   'utf-8',
 );
 
@@ -31,6 +36,7 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
+      md.use(examplePlugin);
       md.use(sandpackPlugin, {
         defaultFiles: {
           '/styles.css': {
@@ -82,7 +88,10 @@ export default defineConfig({
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
@@ -95,12 +104,14 @@ export default defineConfig({
       {
         text: 'Resources',
         items: [
-          ...resourcesSidebar[0].items,
-          { text: 'Design icons', link: '/contribute/icon-design-guide' },
+          ...resourcesSidebar[0].items.map(({ text, link }) => ({ text, link })),
+          { text: 'How to use icons', link: '/how-to/' },
+          { text: 'Contributing icons', link: '/contribute/icons/' },
         ],
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
     socialLinks: [
@@ -109,7 +120,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Icons`,
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',

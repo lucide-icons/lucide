@@ -3,7 +3,8 @@
   "contributors": [
     "irvineacosta",
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "kamilasw"
   ],
   "use-cases": [],
   "tags": [
@@ -25,14 +26,12 @@
     {
       "name": "columns-settings",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     },
     {
       "name": "table-config",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -9,7 +9,6 @@ defineProps<{
 
 <template>
   <section class="related-icons">
-    <h2 class="title">More icons like this</h2>
     <IconGrid :icons="icons" />
   </section>
 </template>

@@ -2,6 +2,7 @@
 title: Getting started - Svelte
 description: This guide will help you get started with Lucide in your Svelte project.
 ---
+
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -15,24 +16,22 @@ Make sure you have a Svelte environment set up. If you don't have one yet, you c
 
 ## Installation
 
-<!-- TODO: v1 Remove After full release -->
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/svelte@next
+pnpm install @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add @lucide/svelte@next
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install @lucide/svelte@next
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add @lucide/svelte@next
+bun add @lucide/svelte
 ```
 
 :::
@@ -55,13 +54,13 @@ Each icon can be imported as a Svelte component, which renders an inline SVG ele
 
 To customize the appearance of an icon, you can use the following props:
 
-|  name                   |   type    |  default     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `stroke-width`     | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
+| `default-class`    | _string_  | lucide-icon  |
 
 Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 

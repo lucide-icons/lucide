@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "american",
+    "gridiron",
+    "posts",
+    "field",
+    "score",
+    "touchdown",
+    "pitch",
+    "team"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
