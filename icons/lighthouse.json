@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "xougui",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
   "use-cases": [
     "Marking coastal landmarks or harbor entrances on maps",
