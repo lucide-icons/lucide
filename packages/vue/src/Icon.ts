@@ -20,7 +20,8 @@ type IconProps =
       iconNode?: never;
       'icon-node': LucideIconNode[];
       name: string;
-    };
+    }
+  | {};
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
   {
