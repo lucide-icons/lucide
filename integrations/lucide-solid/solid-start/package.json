@@ -15,7 +15,7 @@
     "@solidjs/start": "2.0.5",
     "lucide-solid": "workspace:*",
     "nitro": "3.0.260903-beta",
-    "solid-js": "1.9.15"
+    "solid-js": "2.0.0-rc.13"
   },
   "devDependencies": {
     "@vitest/browser-playwright": "5.0.3",
