@@ -112,15 +112,11 @@ createIcons({
 
 ```html
 <!DOCTYPE html>
+<script defer onload="lucide.createIcons()" src="https://unpkg.com/lucide@latest"></script>
 <body>
   <i data-lucide="volume-2" class="my-class"></i>
   <i data-lucide="x"></i>
   <i data-lucide="menu"></i>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 ```
 
