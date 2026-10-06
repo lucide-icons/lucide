@@ -5,10 +5,10 @@
     "rrod497"
   ],
   "use-cases": [
-    "Fulfillment choice for retail and delivery platforms, like curbside pickup, or store-to-door delivery.",
-    "Menu icon or category filter for Pantry, Groceries, or Supermarket.",
-    "Grouper for \"Groceries & Food\" spending category in personal finance management tools and expense-tracking dashboards.",
-    "Community aid & food bank donations."
+    "Indicating pickup or delivery options in grocery shopping apps",
+    "Marking grocery categories in menus and filters",
+    "Categorizing grocery spending in personal finance apps",
+    "Representing food donations on community aid platforms"
   ],
   "tags": [
     "food",
