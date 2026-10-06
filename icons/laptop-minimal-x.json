@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "AntoninKadrmas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "computer",
+    "screen",
+    "remote",
+    "close",
+    "cancel",
+    "stop",
+    "delete",
+    "remove"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
