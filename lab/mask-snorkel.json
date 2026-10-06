@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "scuba",
+    "submerge",
+    "freediving",
+    "diver",
+    "location",
+    "spot",
+    "gear",
+    "equipment",
+    "vacation",
+    "summer holiday",
+    "seaside",
+    "beach",
+    "ocean",
+    "depth",
+    "deep",
+    "underwater",
+    "oxygen",
+    "o2",
+    "breathe",
+    "air",
+    "aquatic",
+    "encounter",
+    "exploration",
+    "observe",
+    "view",
+    "fish",
+    "marine life",
+    "tourism"
+  ],
+  "categories": [
+    "travel",
+    "maps"
+  ]
+}

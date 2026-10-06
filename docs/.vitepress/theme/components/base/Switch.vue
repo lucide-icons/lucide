@@ -1,22 +1,33 @@
 <script setup>
   import { Switch } from '@headlessui/vue'
+  import { onMounted, ref } from 'vue'
 
   defineProps({
     modelValue: {
       type: Boolean,
       default: false
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 
   const emit = defineEmits(['update:modelValue'])
+  const isHydrated = ref(false)
+
+  onMounted(() => {
+    isHydrated.value = true
+  })
 </script>
 
 <template>
   <Switch
-    :model-value="modelValue"
+    :model-value="isHydrated ? modelValue : false"
     @update:model-value="emit('update:modelValue', $event)"
     class="switch"
-    :class="{ enabled: modelValue }"
+    :class="{ enabled: isHydrated && modelValue }"
+    :id="id"
   >
     <span class="thumb" />
   </Switch>
