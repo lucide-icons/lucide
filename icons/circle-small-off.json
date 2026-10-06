@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "rrod497"
+  ],
+  "use-cases": [
+    "indicating a disabled or inactive state for any element represented by a small circle",
+    "turn off notifications or their pip indicators",
+    "muting or deactivating breakpoints in debugging interfaces",
+    "diameter symbol in mathematical, scientific or engineering notation"
+  ],
+  "tags": [
+    "shape",
+    "bullet",
+    "dot",
+    "point",
+    "node",
+    "breakpoint",
+    "disable",
+    "toggle",
+    "mute",
+    "diameter"
+  ],
+  "categories": [
+    "shapes",
+    "development"
+  ]
+}
