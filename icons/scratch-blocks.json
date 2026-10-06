@@ -3,7 +3,12 @@
   "contributors": [
     "mc20000-01"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a block-based code editor in educational apps",
+    "Indicating a project created with Scratch or similar block editors",
+    "Toggling a visual programming editor view in development tools",
+    "Showing integrations with block-based programming platforms"
+  ],
   "tags": [
     "code",
     "blocks",
