@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mc20000-01"
+    "mc20000-01",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Representing a block-based code editor in educational apps",
