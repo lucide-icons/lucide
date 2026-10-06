@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Displaying combat sports on sports, betting, or gym platforms.",
+    "Representing categories such as boxing, MMA, UFC, or martial arts.",
+    "Training, health, or fitness app interfaces.",
+    "Themed icon for achievements, trophies, or combat tournaments."
+  ],
+  "tags": [
+    "sports",
+    "boxing",
+    "mma",
+    "fight",
+    "combat",
+    "glove",
+    "martial arts",
+    "training",
+    "equipment",
+    "athlete",
+    "competition",
+    "ultimate",
+    "fighting",
+    "championship",
+    "punch",
+    "hand",
+    "fist",
+    "jab",
+    "protection",
+    "padding"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
