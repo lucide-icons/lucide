@@ -16,19 +16,17 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <!-- <PageContainer class="overview"> -->
-    <IconPreview
-      :name="$params.name"
-      :iconNode="$params.iconNode"
-      class="preview"
-      customizable
-    />
-    <div class="details">
-      <h1 class="title">
-        {{ $params.name }}
-      </h1>
-    </div>
-  <!-- </PageContainer> -->
+  <IconPreview
+    :name="$params.name"
+    :iconNode="$params.iconNode"
+    class="preview"
+    customizable
+  />
+  <div class="details">
+    <h1 class="title">
+      {{ $params.name }}
+    </h1>
+  </div>
 </template>
 
 <style scoped>

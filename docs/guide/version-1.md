@@ -63,7 +63,7 @@ Also, a `llms.txt` is now available for LLMs to use.
 
 We have improved the accessibility of our icons by setting `aria-hidden` to `true` by default. This change ensures that screen readers will ignore icons that are purely decorative, improving the overall accessibility of your applications. If you need to make an icon accessible, you can provide an appropriate `aria-label` or add a `title` attribute to the icon element.
 
-See our [accessibility in-depth guide](/guide/accessibility) for more details and best practices on making your icons accessible.
+See our [accessibility in-depth guide](/how-to/accessibility) for more details and best practices on making your icons accessible.
 
 ## Removed UMD build, only ESM and CJS now
 
