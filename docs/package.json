@@ -45,7 +45,7 @@
     "semver": "^7.8.5",
     "sharp": "^0.35.4",
     "shiki": "^4.4.3",
-    "simple-git": "^3.36.0",
+    "simple-git": "^4.0.1",
     "sitemap": "^9.0.1",
     "svg-path-commander": "^2.3.3",
     "svg-pathdata": "^9.0.0",
