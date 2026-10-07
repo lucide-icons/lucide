@@ -10,47 +10,54 @@ export async function transformPageData(pageData: PageData) {
     pageData.params?.name
   ) {
     const iconName = pageData.params.name;
-    pageData.title = `${iconName} icon details`;
+    const isDetailsPage = pageData.relativePath.includes('details');
 
-    const taggedAs = pageData.params?.tags?.length
-      ? `Tagged as: ${pageData.params.tags.join(', ')}.`
-      : '';
-    const categorizedIn = pageData.params?.category?.length
-      ? `Categorized in: ${pageData.params.category.join(', ')}.`
-      : '';
+    if (isDetailsPage) {
+      pageData.title = `${iconName} icon details`;
 
-    pageData.description =
-      `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+      const taggedAs = pageData.params?.tags?.length
+        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        : '';
+      const categorizedIn = pageData.params?.category?.length
+        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        : '';
 
-    const structuredData = await getStructuredData(iconName, pageData);
+      pageData.description =
+        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
 
-    const ogPath = await createIconOGImage(iconName, pageData.params?.tags || []);
+      const structuredData = await getStructuredData(iconName, pageData);
 
-    if (ogPath) {
-      const content = `https://lucide.dev${ogPath}`;
-      pageData.frontmatter.head.push(
-        [
-          'meta',
-          {
-            property: 'og:image',
-            content,
-          },
-        ],
-        [
-          'meta',
-          {
-            property: 'twitter:image',
-            content,
-          },
-        ],
-      );
+      const ogPath = await createIconOGImage(iconName, pageData.params?.tags || []);
+
+      if (ogPath) {
+        const content = `https://lucide.dev${ogPath}`;
+        pageData.frontmatter.head.push(
+          [
+            'meta',
+            {
+              property: 'og:image',
+              content,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'twitter:image',
+              content,
+            },
+          ],
+        );
+      }
+
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ]);
+    } else {
+      pageData.title = `${iconName} icon`;
+      pageData.description = `Browse and customize the ${iconName} icon.`;
     }
-
-    pageData.frontmatter.head.push([
-      'script',
-      { type: 'application/ld+json' },
-      JSON.stringify(structuredData),
-    ]);
   }
 
   if (pageData.relativePath.startsWith('guide/')) {

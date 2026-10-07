@@ -87,8 +87,8 @@ const Expand = createLucideIcon('Expand', expand);
             @click="
               go(
                 icon.externalLibrary
-                  ? `/icons/${icon.externalLibrary}/${icon.name}`
-                  : `/icons/${icon.name}`,
+                  ? `/icons/${icon.externalLibrary}/${icon.name}/details`
+                  : `/icons/${icon.name}/details`,
               )
             "
           >

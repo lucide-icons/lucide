@@ -10,16 +10,27 @@ const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../../icons'
 
 const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
   .filter(([, { aliases }]) => aliases?.length)
-  .map(([iconName, { aliases }]) => {
-    const aliasRouteMatches = aliases.map((alias) => typeof alias === 'string' ? alias : alias?.name).join('|');
+  .flatMap(([iconName, { aliases }]) => {
+    const aliasRouteMatches = aliases
+      .map((alias) => (typeof alias === 'string' ? alias : alias?.name))
+      .join('|');
 
-    return {
-      src: `^/icons/(${aliasRouteMatches})$`,
-      status: 308,
-      headers: {
-        Location: `/icons/${iconName}`,
+    return [
+      {
+        src: `^/icons/(${aliasRouteMatches})$`,
+        status: 308,
+        headers: {
+          Location: `/icons/${iconName}`,
+        },
       },
-    };
+      {
+        src: `^/icons/(${aliasRouteMatches})/details$`,
+        status: 308,
+        headers: {
+          Location: `/icons/${iconName}/details`,
+        },
+      },
+    ];
   });
 
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
