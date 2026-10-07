@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "Carlito-la-banane"
+  ],
+  "use-cases": [
+    "Representing a network router in infrastructure diagrams",
+    "Showing incoming traffic redirected to other destinations",
+    "Indicating a routing or switching component in a cloud console"
+  ],
+  "tags": [
+    "router",
+    "routing",
+    "network",
+    "traffic",
+    "gateway",
+    "inbound",
+    "outbound",
+    "arrows"
+  ],
+  "categories": [
+    "arrows",
+    "connectivity"
+  ]
+}
