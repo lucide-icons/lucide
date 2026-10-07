@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "js-best"
+  ],
+  "use-cases": [
+    "Showing product prices in NIS",
+    "Selecting NIS in multi-currency interfaces",
+    "Showing NIS exchange rates in currency converters",
+    "Indicating NIS amounts in invoices and payments"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "ILS",
+    "NIS",
+    "₪",
+    "currencysymbol",
+    "cash",
+    "banknote",
+    "price",
+    "remittance",
+    "ecommerce"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel"
+  ]
+}
