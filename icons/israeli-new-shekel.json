@@ -21,7 +21,20 @@
     "banknote",
     "price",
     "remittance",
-    "ecommerce"
+    "ecommerce",
+    "currency symbol",
+    "pricing",
+    "billing",
+    "invoice",
+    "banking",
+    "wallet",
+    "exchange rate",
+    "currency converter",
+    "local currency",
+    "financial",
+    "account balance",
+    "checkout",
+    "localization"
   ],
   "categories": [
     "finance",
