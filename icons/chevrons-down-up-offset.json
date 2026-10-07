@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "PeterlitsZo",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "stream",
+    "remote",
+    "io",
+    "transfer",
+    "vertical"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}
