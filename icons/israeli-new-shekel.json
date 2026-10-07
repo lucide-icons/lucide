@@ -7,7 +7,11 @@
     "Showing product prices in NIS",
     "Selecting NIS in multi-currency interfaces",
     "Showing NIS exchange rates in currency converters",
-    "Indicating NIS amounts in invoices and payments"
+    "Indicating NIS amounts in invoices and payments",
+    "Representing prices in New Israeli Shekels (NIS) on product listings and checkout",
+    "Indicating account balances and transaction amounts in banking and fintech apps",
+    "Labeling currency selection options and exchange-rate converters",
+    "Marking invoice totals, billing statements, and financial reports for Israel-market customers"
   ],
   "tags": [
     "currency",
