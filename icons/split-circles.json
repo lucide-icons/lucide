@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Carlito-la-banane"
+  ],
+  "use-cases": [
+    "Representing a load balancer in cloud infrastructure",
+    "Showing traffic distributed across multiple servers",
+    "Indicating a task split into parallel processes"
+  ],
+  "tags": [
+    "load balancer",
+    "distribute",
+    "traffic",
+    "network",
+    "nodes",
+    "parallel",
+    "branch",
+    "hierarchy"
+  ],
+  "categories": [
+    "connectivity",
+    "development"
+  ]
+}
