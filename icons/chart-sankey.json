@@ -14,7 +14,18 @@
     "change",
     "movement",
     "intersection",
-    "road"
+    "road",
+    "dataflow",
+    "streams",
+    "links",
+    "transfer",
+    "allocation",
+    "distribution",
+    "energy",
+    "resources",
+    "budget",
+    "conversion",
+    "throughput"
   ],
   "categories": [
     "charts"
