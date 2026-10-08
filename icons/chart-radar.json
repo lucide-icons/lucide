@@ -15,7 +15,15 @@
     "shape",
     "gem",
     "mineral",
-    "pentagon"
+    "pentagon",
+    "multidimensional",
+    "metrics",
+    "performance",
+    "comparison",
+    "profile",
+    "analytics",
+    "visualization",
+    "attributes"
   ],
   "categories": [
     "charts",
