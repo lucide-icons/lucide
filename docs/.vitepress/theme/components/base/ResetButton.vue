@@ -5,7 +5,7 @@ import Button from './Button.vue';
 </script>
 
 <template>
-  <Button class="reset-button">
+  <Button class="reset-button" aria-label="Reset style">
     <Icon
       :size="20"
       :iconNode="rotateCw"
@@ -16,6 +16,7 @@ import Button from './Button.vue';
 
 <style scoped>
 .reset-button {
+  transition: ease-in-out 0.1s opacity;
   background: none;
   padding: 0;
 }
@@ -27,6 +28,12 @@ import Button from './Button.vue';
 .reset-button:hover {
   background: none;
   border-color: transparent;
+}
+
+.reset-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* a rotate css animation keyframes */
