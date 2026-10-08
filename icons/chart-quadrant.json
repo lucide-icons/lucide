@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis",
+    "nito"
+  ],
+  "use-cases": [
+    "Showing 2D data points on 4 areas"
+  ],
+  "tags": [
+    "quadrant",
+    "chart",
+    "diagram",
+    "statistics",
+    "analytics",
+    "graph",
+    "chart-scatter"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
