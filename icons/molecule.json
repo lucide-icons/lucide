@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing molecules and chemical structures in scientific applications",
+    "Representing interconnected systems and networks",
+    "Showing devices connected to a central server or hub",
+    "Visualizing relationships between nodes in a graph",
+    "Representing mind maps, ideas, and concept associations",
+    "Showing dependencies and relationships between components"
+  ],
+  "tags": [
+    "atom",
+    "chemistry",
+    "bonds",
+    "structure",
+    "topology",
+    "cluster",
+    "network",
+    "hub",
+    "nodes",
+    "graph",
+    "star-graph",
+    "mindmap",
+    "thoughts",
+    "ideas",
+    "relationships",
+    "links",
+    "dependencies",
+    "connections",
+    "concepts"
+  ],
+  "categories": [
+    "science",
+    "charts"
+  ]
+}
