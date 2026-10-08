@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Indicating a mid-way expiration stage for temporary content"
+  ],
+  "tags": [
+    "time",
+    "watch",
+    "alarm",
+    "expire",
+    "timeout",
+    "fading"
+  ],
+  "categories": [
+    "time"
+  ]
+}
