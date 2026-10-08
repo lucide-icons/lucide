@@ -10,7 +10,15 @@
     "timeline",
     "chart",
     "diagram",
-    "history"
+    "history",
+    "gantt",
+    "schedule",
+    "milestone",
+    "events",
+    "roadmap",
+    "sequence",
+    "chronology",
+    "planning"
   ],
   "categories": [
     "charts",
