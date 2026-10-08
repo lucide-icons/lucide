@@ -15,7 +15,16 @@
     "statistics",
     "analytics",
     "graph",
-    "chart-scatter"
+    "chart-scatter",
+    "scatterplot",
+    "2x2",
+    "matrix",
+    "segmentation",
+    "correlation",
+    "comparison",
+    "risk",
+    "swot",
+    "clustering"
   ],
   "categories": [
     "charts"
