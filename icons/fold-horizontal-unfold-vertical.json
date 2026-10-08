@@ -17,7 +17,9 @@
     "gateway",
     "inbound",
     "outbound",
-    "arrows"
+    "arrows",
+    "redirect",
+    "forwarding"
   ],
   "categories": [
     "arrows",
