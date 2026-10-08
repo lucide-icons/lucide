@@ -7,7 +7,16 @@
   "tags": [
     "currency",
     "money",
-    "payment"
+    "payment",
+    "byn",
+    "iso4217",
+    "fiat",
+    "prices",
+    "localization",
+    "banking",
+    "checkout",
+    "wallet",
+    "exchange-rate"
   ],
   "categories": [
     "finance"
