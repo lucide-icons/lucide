@@ -16,7 +16,8 @@
     "nodes",
     "parallel",
     "branch",
-    "hierarchy"
+    "hierarchy",
+    "cluster"
   ],
   "categories": [
     "connectivity",
