@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nito"
+  ],
+  "use-cases": [
+    "Showing a list of events in chronological order"
+  ],
+  "tags": [
+    "timeline",
+    "chart",
+    "diagram",
+    "history"
+  ],
+  "categories": [
+    "charts",
+    "time"
+  ]
+}
