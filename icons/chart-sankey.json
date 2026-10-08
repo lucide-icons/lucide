@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nito"
+  ],
+  "use-cases": [
+    "Showing the flow of data"
+  ],
+  "tags": [
+    "sankey",
+    "chart",
+    "diagram",
+    "flow",
+    "change",
+    "movement",
+    "intersection",
+    "road"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
