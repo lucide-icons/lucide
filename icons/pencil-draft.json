@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "wojtekmaj",
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere",
+    "rrod497"
+  ],
+  "use-cases": [
+    "indicating user's saved drafts or draft-mode toggle in apps like mail, notes, messaging and AI chats",
+    "representing live collaborative editing, in which rapid auto-saving is implied",
+    "symbolizing instant sketch-to-wireframe generation, fast feedback canvases",
+    "representing auto-complete, snippet expansion or other forms of quick automated text insertion / substitution"
+  ],
+  "tags": [
+    "rubber",
+    "edit",
+    "create",
+    "draw",
+    "sketch",
+    "writer",
+    "writing",
+    "stationery",
+    "artist",
+    "fast",
+    "quick",
+    "doodle",
+    "speed",
+    "swift",
+    "rapid",
+    "velocity",
+    "dynamic"
+  ],
+  "categories": [
+    "design",
+    "tools",
+    "text",
+    "development"
+  ]
+}
