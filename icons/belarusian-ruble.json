@@ -3,7 +3,12 @@
   "contributors": [
     "js-best"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices and amounts in BYN in e-commerce apps",
+    "Selecting BYN in multi-currency pickers",
+    "Labeling account balances and transactions in BYN",
+    "Showing BYN exchange rates in currency converters"
+  ],
   "tags": [
     "currency",
     "money",
