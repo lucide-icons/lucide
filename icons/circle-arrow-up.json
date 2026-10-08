@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "forward",
     "direction",
@@ -13,15 +14,13 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ],
   "aliases": [
     {
       "name": "arrow-up-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

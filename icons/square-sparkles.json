@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "nananecy"
+  ],
+  "use-cases": [
+    "Indicating AI-assisted image generation features",
+    "Representing generative AI image creation tools"
+  ],
+  "tags": [
+    "picture",
+    "photo",
+    "sparkles"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}

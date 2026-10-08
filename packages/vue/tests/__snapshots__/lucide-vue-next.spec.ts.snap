@@ -1,0 +1,167 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using lucide icon components > should add a class to the element 1`] = `
+<div>
+  <svg
+    class="lucide lucide-face-slightly-smiling-icon lucide-face-slightly-smiling my-icon"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 10V9"
+    />
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    />
+    <path
+      d="M9 10V9"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should add a style attribute to the element 1`] = `
+<div>
+  <svg
+    class="lucide lucide-face-slightly-smiling-icon lucide-face-slightly-smiling"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    style="position: absolute;"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 10V9"
+    />
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    />
+    <path
+      d="M9 10V9"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
+<div>
+  <svg
+    class="lucide lucide-face-slightly-smiling-icon lucide-face-slightly-smiling"
+    fill="none"
+    height="48"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+    viewBox="0 0 24 24"
+    width="48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 10V9"
+    />
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    />
+    <path
+      d="M9 10V9"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should pass children to the icon slot 1`] = `
+<div>
+  <svg
+    class="lucide lucide-face-slightly-smiling-icon lucide-face-slightly-smiling"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 10V9"
+    />
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    />
+    <path
+      d="M9 10V9"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    
+    <text>
+      Hello World
+    </text>
+    
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should render an component 1`] = `
+<div>
+  <svg
+    class="lucide lucide-face-slightly-smiling-icon lucide-face-slightly-smiling"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 10V9"
+    />
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    />
+    <path
+      d="M9 10V9"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+  </svg>
+</div>
+`;

@@ -9,7 +9,6 @@ import generateIconFiles from './building/generateIconFiles.ts';
 import generateExportsFile from './building/generateExportsFile.ts';
 
 import generateAliasesFiles from './building/aliases/generateAliasesFiles.ts';
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.ts';
 import generateDynamicImports from './building/generateDynamicImports.ts';
 
@@ -26,17 +25,20 @@ interface CliArguments {
   withDynamicImports?: boolean;
   separateAliasesFile?: boolean;
   separateAliasesFileExtension?: string;
+  separateAliasesFileIgnore?: string;
   separateIconFileExport?: boolean;
   separateIconFileExportExtension?: string;
   aliasesFileExtension?: string;
   aliasImportFileExtension?: string;
+  useDefaultExports?: boolean;
   pretty?: boolean;
   output: string | undefined;
+  input: string | undefined;
 }
 
 const cliArguments = getArgumentOptions(process.argv.slice(2)) as unknown as CliArguments;
 
-const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
+const ICONS_DIR = path.resolve(process.cwd(), cliArguments.input || '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -56,10 +58,12 @@ const {
   withDynamicImports = false,
   separateAliasesFile = false,
   separateAliasesFileExtension = undefined,
+  separateAliasesFileIgnore = undefined,
   separateIconFileExport = false,
   separateIconFileExportExtension = undefined,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
+  useDefaultExports = true,
   pretty = true,
 } = cliArguments;
 
@@ -98,10 +102,10 @@ async function buildIcons() {
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
-      exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
       separateAliasesFileExtension,
+      separateAliasesFileIgnore,
       showLog: !silent,
     });
   }
@@ -123,6 +127,7 @@ async function buildIcons() {
     icons,
     exportModuleNameCasing,
     importImportFileExtension,
+    useDefaultExports,
   );
 }
 

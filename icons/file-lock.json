@@ -5,6 +5,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lock",
     "password",
@@ -13,5 +14,12 @@
   "categories": [
     "files",
     "security"
+  ],
+  "aliases": [
+    {
+      "name": "file-lock-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }

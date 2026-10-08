@@ -3,12 +3,24 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [
+    "Previewing layouts across mobile device sizes",
+    "Testing responsive behavior on handheld screens",
+    "Representing mobile-first design workflows"
+  ],
   "tags": [
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "screen",
+    "display",
+    "touchscreen",
+    "portable",
     "responsive",
     "screens",
     "browser",
-    "testing",
-    "mobile"
+    "testing"
   ],
   "categories": [
     "devices",

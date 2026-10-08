@@ -6,6 +6,7 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "filter",
     "sort",
@@ -25,8 +26,7 @@
     {
       "name": "sort-asc",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

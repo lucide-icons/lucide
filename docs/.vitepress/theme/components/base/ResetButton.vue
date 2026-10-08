@@ -1,19 +1,22 @@
 <script setup lang="ts">
-import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import IconButton from "./IconButton.vue";
-
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
+import { rotateCw } from '../../../data/iconNodes';
+import Icon from '@lucide/vue/src/Icon';
+import Button from './Button.vue';
 </script>
 
 <template>
-  <IconButton class="reset-button">
-    <RotateIcon :size="20"/>
-  </IconButton>
+  <Button class="reset-button" aria-label="Reset style">
+    <Icon
+      :size="20"
+      :iconNode="rotateCw"
+      name="rotate-cw"
+    />
+  </Button>
 </template>
 
 <style scoped>
 .reset-button {
+  transition: ease-in-out 0.1s opacity;
   background: none;
   padding: 0;
 }
@@ -27,11 +30,18 @@ const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
   border-color: transparent;
 }
 
+.reset-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 /* a rotate css animation keyframes */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(359deg);
   }

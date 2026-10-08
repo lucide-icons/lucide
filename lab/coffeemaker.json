@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "machine",
+    "amenities",
+    "electronics",
+    "appliances",
+    "roast",
+    "ground",
+    "blend",
+    "arabica",
+    "filter",
+    "instant",
+    "cafetiere",
+    "hot",
+    "drink",
+    "barista",
+    "fair trade"
+  ],
+  "categories": [
+    "food-beverage",
+    "devices"
+  ]
+}
