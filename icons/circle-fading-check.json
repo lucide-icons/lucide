@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "n2duc"
+  ],
+  "tags": [
+    "check",
+    "circle",
+    "pending",
+    "progress"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
