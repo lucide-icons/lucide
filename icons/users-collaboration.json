@@ -7,7 +7,10 @@
     "collaborative workspace in multi-user apps",
     "assigning or sharing ownership of documents or content from one user to another",
     "indicating peer-to-peer system architecture",
-    "meeting/gathering scheduling apps or team-based work management tools"
+    "meeting/gathering scheduling apps or team-based work management tools",
+    "indicating delegated access or permission sharing between accounts",
+    "representing co-authoring or real-time collaborative editing",
+    "showing linked or connected user profiles across systems"
   ],
   "tags": [
     "group",
@@ -19,7 +22,12 @@
     "cooperative",
     "workspace",
     "peer-to-peer",
-    "p2p"
+    "p2p",
+    "shared",
+    "delegation",
+    "handoff",
+    "coauthor",
+    "profiles"
   ],
   "categories": [
     "account",
