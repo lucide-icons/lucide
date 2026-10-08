@@ -6,7 +6,10 @@
     "nito"
   ],
   "use-cases": [
-    "Showing 2D data points on 4 areas"
+    "Showing 2D data points on 4 areas",
+    "Visualizing 2D point distributions split into four sectors in analytics dashboards",
+    "Comparing two-variable trade-offs in decision-making and product strategy interfaces",
+    "Representing SWOT or other 2x2 strategic matrices in business tools"
   ],
   "tags": [
     "quadrant",
