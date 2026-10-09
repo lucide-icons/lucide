@@ -6,7 +6,7 @@ const storedValues = new Map<string, string>([
   ['icon-size', '240'],
   ['icon-stroke-width', '1.5'],
   ['icon-color', '#ff0000'],
-  ['icon-absolute-stroke-width', 'true'],
+  ['icon-non-scaling-stroke', 'true'],
 ]);
 const styleProperties = new Map<string, string>();
 const classes = new Set<string>();
@@ -70,7 +70,7 @@ test('creates a non-persisted icon style from the defaults', () => {
   assert.equal(style.size.value, 24);
   assert.equal(style.strokeWidth.value, 2);
   assert.equal(style.color.value, 'currentColor');
-  assert.equal(style.absoluteStrokeWidth.value, false);
+  assert.equal(style.nonScalingStroke.value, false);
 
   style.size.value = 48;
 
@@ -84,12 +84,12 @@ test('restores persisted settings and applies the shared CSS variables', () => {
   assert.equal(style.size.value, 240);
   assert.equal(style.strokeWidth.value, 1.5);
   assert.equal(style.color.value, '#ff0000');
-  assert.equal(style.absoluteStrokeWidth.value, true);
+  assert.equal(style.nonScalingStroke.value, true);
   assert.equal(style.isCustomized.value, true);
   assert.equal(styleProperties.get('--customize-size'), '240');
   assert.equal(styleProperties.get('--customize-strokeWidth'), '1.5');
   assert.equal(styleProperties.get('--customize-color'), '#ff0000');
-  assert.ok(classes.has('absolute-stroke-width'));
+  assert.ok(classes.has('non-scaling-stroke'));
 });
 
 test('resetting updates refs, CSS variables, and persisted values', async () => {
@@ -100,14 +100,14 @@ test('resetting updates refs, CSS variables, and persisted values', async () => 
   assert.equal(style.size.value, 24);
   assert.equal(style.strokeWidth.value, 2);
   assert.equal(style.color.value, 'currentColor');
-  assert.equal(style.absoluteStrokeWidth.value, false);
+  assert.equal(style.nonScalingStroke.value, false);
   assert.equal(style.isCustomized.value, false);
   assert.equal(styleProperties.get('--customize-size'), '24');
   assert.equal(styleProperties.get('--customize-strokeWidth'), '2');
   assert.equal(styleProperties.get('--customize-color'), 'currentColor');
-  assert.equal(classes.has('absolute-stroke-width'), false);
+  assert.equal(classes.has('non-scaling-stroke'), false);
   assert.equal(storedValues.get('icon-size'), '24');
   assert.equal(storedValues.get('icon-stroke-width'), '2');
   assert.equal(storedValues.get('icon-color'), 'currentColor');
-  assert.equal(storedValues.get('icon-absolute-stroke-width'), 'false');
+  assert.equal(storedValues.get('icon-non-scaling-stroke'), 'false');
 });
