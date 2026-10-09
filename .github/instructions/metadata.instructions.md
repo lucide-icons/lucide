@@ -32,7 +32,7 @@ A use-case tells a reader **where and why an icon would be used in a real interf
 - Write each use-case as a short phrase, not a sentence. Start with a present participle verb: *Representing…*, *Indicating…*, *Marking…*, *Showing…*, *Confirming…*, *Toggling…*, *Categorizing…*, *Searching…*.
 - Keep it to roughly 4–12 words. One clear idea per entry.
 - No trailing period. No leading bullet, number, or dash (the surrounding format supplies that).
-- Give each icon 1–4 use-cases, ordered most-common first. Prefer fewer strong entries over many weak or repetitive ones.
+- Give each icon 1 or more use-cases, ordered most-common first. More than 4 use-cases are allowed when they are distinct and useful. Prefer fewer strong entries over many weak or repetitive ones.
 
 ### Voice
 
