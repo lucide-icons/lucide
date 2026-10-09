@@ -3,7 +3,12 @@
   "contributors": [
     "tatianatsiguleva"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating short-form video clips in media browsing interfaces",
+    "Representing preview or teaser playback for video thumbnails",
+    "Providing an entry point for stories, reels, or shorts in social apps",
+    "Marking auto-generated clips from live streams or long recordings"
+  ],
   "tags": [
     "short clips",
     "shorts",
@@ -13,7 +18,12 @@
     "play",
     "highlights",
     "social media",
-    "content"
+    "content",
+    "preview",
+    "teaser",
+    "clip",
+    "short-form",
+    "vertical video"
   ],
   "categories": [
     "multimedia",
