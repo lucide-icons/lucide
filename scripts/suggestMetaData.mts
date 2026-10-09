@@ -225,6 +225,8 @@ function getNewMetadataValues(
 // Locate the line range of an array property in the raw file so we can anchor a
 // GitHub suggestion to it. Handles both inline (`"use-cases": []`) and
 // multi-line arrays, and reports whether the closing line has a trailing comma.
+// `lastItemLine` is the line of the last value in a multi-line array, or null
+// when the array is inline or empty.
 function findFieldBlock(lines: string[], field: MetadataField) {
   const startIdx = lines.findIndex((line) => line.trimStart().startsWith(`"${field}":`));
   if (startIdx === -1) return null;
@@ -238,7 +240,17 @@ function findFieldBlock(lines: string[], field: MetadataField) {
   }
 
   const trailingComma = lines[endIdx].trim().endsWith(',') ? ',' : '';
-  return { startLine: startIdx + 1, endLine: endIdx + 1, trailingComma };
+  const lastItemLine = endIdx - 1 > startIdx ? endIdx : null;
+  return { startLine: startIdx + 1, endLine: endIdx + 1, lastItemLine, trailingComma };
+}
+
+// Render the last existing item followed by the new values, so the suggestion
+// only appends to the list instead of replacing it.
+function buildAppendSuggestion(lastItem: string, newValues: string[]) {
+  const itemIndent = '    ';
+  const lastItemWithComma = lastItem.trimEnd().endsWith(',') ? lastItem.trimEnd() : `${lastItem.trimEnd()},`;
+  const items = newValues.map((value) => `${itemIndent}${JSON.stringify(value)}`).join(',\n');
+  return `${lastItemWithComma}\n${items}`;
 }
 
 const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
@@ -311,8 +323,9 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
   const lines = fileContent.split('\n');
   const chatGptQuery = `Suggest tags, categories and use-cases for a "${iconName}" icon in the Lucide icon library.`;
 
-  // Build one inline GitHub suggestion per field. Values are deduped
-  // case-insensitively, and tags already searchable through the icon name are omitted.
+  // Build one inline GitHub suggestion per field that appends the new values
+  // after the last existing item. Values are deduped case-insensitively, and
+  // tags already searchable through the icon name are omitted.
   const comments = METADATA_FIELDS.flatMap((field) => {
     const current: string[] = currentMetadata[field];
     const newValues = getNewMetadataValues(field, current, suggested[field], iconName);
@@ -328,7 +341,10 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
       return [];
     }
 
-    const suggestion = buildArrayBlock(field, [...current, ...newValues], block.trailingComma);
+    // Inline or empty arrays have no item to append after, so replace the array instead.
+    const suggestion = block.lastItemLine
+      ? buildAppendSuggestion(lines[block.lastItemLine - 1], newValues)
+      : buildArrayBlock(field, [...current, ...newValues], block.trailingComma);
 
     const body = `Suggested \`${field}\` for the \`${iconName}\` icon.
 \`\`\`suggestion
@@ -338,13 +354,13 @@ Want more ideas? [Ask ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(chatG
 
     const comment: ReviewComment = {
       path: filename,
-      line: block.endLine,
+      line: block.lastItemLine ?? block.endLine,
       side: "RIGHT",
       body,
     };
 
-    // Multi-line arrays need a start anchor; inline arrays are single-line.
-    if (block.endLine !== block.startLine) {
+    // Replacing a multi-line array needs a start anchor; appending and inline arrays are single-line.
+    if (!block.lastItemLine && block.endLine !== block.startLine) {
       comment.start_line = block.startLine;
       comment.start_side = "RIGHT";
     }
