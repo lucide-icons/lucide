@@ -10,6 +10,6 @@
   ],
   "ignoreRegExpList": [
     "/\"contributors\"\\s*:\\s*\\[[^\\]]*\\]/g",
-    "/\"name\"\\s*:\\s*\"[^\"]*\",\\s*\"deprecated\"\\s*:\\s*true,\\s*\"deprecationReason\"\\s*:\\s*\"alias\\.typo\"/g"
+    "/\"name\"\\s*:\\s*\"[^\"]*\"/g"
   ]
 }
