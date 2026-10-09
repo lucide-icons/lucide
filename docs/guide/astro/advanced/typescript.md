@@ -18,13 +18,19 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   color?: string;
   size?: number | string;
   'stroke-width'?: number | string;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // Any other SVG attributes
 }
 ```
 
 ### Using `IconProps`
+
 <!-- Rename this to LucideProps -->
+
 You can use the `IconProps` interface to type props for your custom icon components.
 
 ```astro
@@ -50,7 +56,7 @@ Type for individual icon components, this is use full when you want to type a va
 import type { Component } from 'astro/types';
 import type { IconProps } from '@lucide/astro';
 
-type LucideIcon = Component<IconProps>
+type LucideIcon = Component<IconProps>;
 ```
 
 ### Using `LucideIcon`
@@ -103,12 +109,13 @@ Not commonly used directly in application code. But can be useful for advanced u
 
 ```ts
 type IconNode = [
-  elementName: 'circle' | 'ellipse'| 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
-  attrs: HTMLAttributes<'svg'>
+  elementName: 'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
+  attrs: HTMLAttributes<'svg'>,
 ][];
 ```
 
 ### Using `IconNode`
+
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
 ```astro [CustomIcon.astro]

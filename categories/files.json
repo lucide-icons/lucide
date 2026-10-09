@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "File icons",
+  "description": "Icons for files, folders, storage, import and export, and document-related actions.",
   "icon": "panels-top-left"
 }

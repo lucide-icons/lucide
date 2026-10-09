@@ -2,6 +2,7 @@
 title: Global Styling - Angular
 description: Learn how to style all icons globally in your Angular application using CSS or the provideLucideConfig provider.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
@@ -29,9 +30,9 @@ import { provideLucideConfig } from '@lucide/angular';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideLucideConfig({
-      strokeWidth: 1.5
+      strokeWidth: 1.5,
     }),
-  ]
+  ],
 };
 ```
 
@@ -65,7 +66,7 @@ All Lucide icons include the `lucide` class. You can use this class in your styl
 ```
 
 ```ts /src/app/app.component.ts
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   LucideCakeSlice,
   LucideCandy,
@@ -76,7 +77,7 @@ import {
   LucideSandwich,
   LucideWine,
   LucideDessert,
-} from "@lucide/angular";
+} from '@lucide/angular';
 
 @Component({
   selector: 'app',
@@ -92,28 +93,27 @@ import {
     LucideDessert,
   ],
   template: `<div class="grid">
-      <svg lucideCakeSlice />
-      <svg lucideCandy />
-      <svg lucideApple />
-      <svg lucideCookie />
-      <svg lucideMartini />
-      <svg lucideIceCream2 />
-      <svg lucideSandwich />
-      <svg lucideWine />
-      <svg lucideDessert />
-    </div>`,
+    <svg lucideCakeSlice />
+    <svg lucideCandy />
+    <svg lucideApple />
+    <svg lucideCookie />
+    <svg lucideMartini />
+    <svg lucideIceCream2 />
+    <svg lucideSandwich />
+    <svg lucideWine />
+    <svg lucideDessert />
+  </div>`,
   styleUrls: ['./app.component.css', './icon.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class App {
-}
+export class App {}
 ```
 
 :::
 
-### Absolute stroke width
+### Non-scaling strokes
 
-To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
+To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [non-scaling strokes](../basics/stroke-width.md#non-scaling-strokes) for more details.
 
 ::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
@@ -137,7 +137,7 @@ To keep the stroke width constant regardless of icon size, apply `vector-effect:
 ```
 
 ```ts /src/app/app.component.ts
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
   LucideTentTree,
   LucideCaravan,
@@ -148,7 +148,7 @@ import {
   LucideMap,
   LucideCloudMoon,
   LucideSparkles,
-} from "@lucide/angular";
+} from '@lucide/angular';
 
 @Component({
   selector: 'app',
@@ -164,21 +164,20 @@ import {
     LucideSparkles,
   ],
   template: `<div class="grid">
-      <svg lucideTentTree />
-      <svg lucideCaravan />
-      <svg lucideFlameKindling />
-      <svg lucideMountainSnow />
-      <svg lucideTrees />
-      <svg lucideAxe />
-      <svg lucideMap />
-      <svg lucideCloudMoon />
-      <svg lucideSparkles />
-    </div>`,
+    <svg lucideTentTree />
+    <svg lucideCaravan />
+    <svg lucideFlameKindling />
+    <svg lucideMountainSnow />
+    <svg lucideTrees />
+    <svg lucideAxe />
+    <svg lucideMap />
+    <svg lucideCloudMoon />
+    <svg lucideSparkles />
+  </div>`,
   styleUrls: ['./app.component.css', './icon.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class App {
-}
+export class App {}
 ```
 
 :::

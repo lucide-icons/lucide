@@ -2,6 +2,7 @@
 title: Global Styling - Svelte
 description: Learn how to style all Lucide icons globally in your Svelte application using CSS or the Lucide context provider.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
@@ -24,7 +25,7 @@ This is useful if you want all icons to share the same size, color, or stroke wi
 You can call `setLucideProps` in your main entry file or in a top-level component to set the default properties for all icons.
 
 ```js
-import { setLucideProps } from '@lucide/svelte';
+import { setLucideProps } from '@lucide/svelte/context';
 
 setLucideProps({
   size: 32,
@@ -89,11 +90,12 @@ import "./icon.css";
   <Dessert />
 </div>
 ```
+
 :::
 
-### Absolute stroke width
+### Non-scaling strokes
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+For global non-scaling stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [non-scaling strokes](../basics/stroke-width.md#non-scaling-strokes) for more info.
 
 ::: sandpack {template=vite-svelte editorHeight=420 editorWidthPercentage=55}
 
@@ -143,4 +145,5 @@ import "./icon.css";
   <Sparkles />
 </div>
 ```
+
 :::
