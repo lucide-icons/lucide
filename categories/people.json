@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "People",
+  "description": "Icons for people, groups, identities, roles, and person-centered actions.",
   "icon": "person-standing"
 }
