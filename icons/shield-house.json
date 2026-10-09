@@ -4,12 +4,12 @@
     "benhaube"
   ],
   "use-cases": [
-    "Use in router firmware to indicate a segregated IoT network",
-    "Use in a home security application to indicate the alarm is armed in home mode",
-    "indicate firewall protection enabled for a home network in router ui",
-    "show home insurance coverage or policy for a property in an insurance app",
-    "represent a secure smart device group in a smart home hub",
-    "display that the property is enrolled in monitored alarm services on a dashboard"
+    "Indicating a segregated IoT network in router firmware",
+    "Indicating an alarm armed in home mode",
+    "Indicating firewall protection for a home network",
+    "Showing home insurance coverage for a property",
+    "Representing secure smart-device groups in smart-home hubs",
+    "Showing monitored alarm enrollment on a dashboard"
   ],
   "tags": [
     "cybersecurity",
@@ -39,7 +39,7 @@
     "undamaged",
     "audit",
     "admin",
-    "house",
+    "property",
     "household",
     "connectivity",
     "building",
