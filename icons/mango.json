@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Prsenapati09",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing mango or tropical fruit",
+    "Indicating a food or grocery category",
+    "labeling tropical-flavored drinks or smoothies",
+    "marking mango as an ingredient in recipe apps",
+    "highlighting seasonal summer produce in marketplaces",
+    "tagging fresh fruit in grocery shopping lists",
+    "indicating tropical dishes or flavors on menus",
+    "representing healthy vitamin-rich snacks"
+  ],
+  "tags": [
+    "fruit",
+    "food",
+    "tropical",
+    "summer",
+    "exotic",
+    "healthy",
+    "ripe",
+    "yellow",
+    "juice",
+    "smoothie",
+    "snack",
+    "produce",
+    "leaf"
+  ],
+  "categories": [
+    "food-beverage",
+    "nature",
+    "shopping",
+    "seasons"
+  ]
+}
