@@ -1,4 +1,4 @@
-name: Generate PR title
+name: PR title
 
 on:
   pull_request_target:
@@ -6,14 +6,21 @@ on:
       - opened
       - reopened
       - synchronize
+      - edited
 
 permissions: {}
+
+concurrency:
+  group: pr-title-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
   generate-pr-title:
     name: Generate PR Title
-    # Skip when a maintainer has opted out by adding the "Keep PR title" label.
+    # Skip when a maintainer has opted out by adding the "Keep PR title" label,
+    # and on manual edits so they are not reverted straight away.
     if: github.repository == 'lucide-icons/lucide' &&
+      github.event.action != 'edited' &&
       !contains(github.event.pull_request.labels.*.name, 'Keep PR title')
     runs-on: ubuntu-latest
     permissions:
@@ -32,8 +39,8 @@ jobs:
         with:
           node-version-file: 'package.json'
 
-      - name: Get added files
-        id: added-files
+      - name: Get changed files
+        id: changed-files
         uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
 
       - name: Generate PR title
@@ -46,7 +53,8 @@ jobs:
             echo "PR_TITLE_EOF"
           } >> "$GITHUB_OUTPUT"
         env:
-          ADDED_FILES: ${{ steps.added-files.outputs.added_files }}
+          ADDED_FILES: ${{ steps.changed-files.outputs.added_files }}
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
           CURRENT_TITLE: ${{ github.event.pull_request.title }}
 
       - name: Update PR title
@@ -56,3 +64,37 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           NEW_TITLE: ${{ steps.generate.outputs.new_title }}
+
+  # Runs after the title is generated: an edit made with `GITHUB_TOKEN` does not
+  # trigger new workflow runs, so a separate workflow would lint the old title.
+  # The lint action fetches the current title through the API.
+  lint-pr-title:
+    name: PR Title Lint
+    needs: generate-pr-title
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read # Required to read the PR title
+
+    steps:
+      # Checks out the base branch, so the allowed types can't be changed by the PR.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Read conventional commit types
+        id: commit-types
+        run: |
+          {
+            echo "types<<TYPES_EOF"
+            jq -r '.[]' .github/conventional-commit-types.json
+            echo "TYPES_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: ${{ steps.commit-types.outputs.types }}
+          requireScope: true
+          ignoreLabels: |
+            bot
