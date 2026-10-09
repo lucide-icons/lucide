@@ -71,7 +71,7 @@ const Icon = createLucideIcon(props.name, props.iconNode);
   height: calc(var(--customize-size, 24) * 1px); */
 }
 
-html.absolute-stroke-width .lucide-icon {
+html.non-scaling-stroke .lucide-icon {
   stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
 }
 </style>

@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Photography",
+  "description": "Icons for cameras, images, framing, viewing, editing, and photo workflows.",
   "icon": "camera"
 }
