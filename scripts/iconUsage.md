@@ -26,6 +26,12 @@ pnpm icon-usage --icons-file exports.txt --describe --max-contexts 30
 
 `--describe` does the same, then sends the collected contexts to an OpenAI model (`OPENAI_API_KEY` required; `--model` or `OPENAI_MODEL` selects the model, `gpt-5-mini` by default). The model groups them into several use cases per icon, each with a short lowercase `useCase` phrase in the style of the `use-cases` field in `icons/*.json`, a description of where the icon appears in the UI, its approximate share of the sample, and example links. The icon's existing `use-cases` are included in the prompt. Responses are cached in the cache directory.
 
+Use `--output <file>` (or `-o`) to write the results per icon to a JSON file shaped as `{ [icon]: [...usage] }`. With `--describe`, each entry is a use case (`useCase`, `description`, `sampleShare`, `examples`). Without it, each entry is an individual usage (`description`, `repository`, `url`, `kind`, `parents`, `component`, `labels`, `handlers`, `links`). `--output` implies `--context`, and the normal terminal, `--json` or `--csv` output is still printed.
+
+```sh
+pnpm icon-usage --icons-file exports.txt --describe --output usage.json
+```
+
 To keep runs bounded, searching for an icon stops once `--max-contexts` contexts (default 40) are collected, and at most two contexts are taken from each repository. When the limit is hit, the repository counts for that icon are a lower bound, and a warning says so. JSON output includes every context per match under `repositories.*.matches[].contexts`, and per-icon summaries and descriptions under `usage`.
 
 Context extraction uses heuristics, not a full parser. It works best for JSX (React, Preact, Solid), Vue, Svelte and Astro templates in the same file as the import. Angular templates in separate `.html` files are not fetched.

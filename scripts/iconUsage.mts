@@ -156,6 +156,7 @@ type CliOptions = {
   maxContexts: number;
   model: string;
   iconsFiles: string[];
+  output: string | null;
 };
 
 type SearchItem = {
@@ -293,6 +294,7 @@ const parseArgs = (argv: string[]): CliOptions => {
     maxContexts: DEFAULT_MAX_CONTEXTS,
     model: process.env.OPENAI_MODEL ?? DEFAULT_DESCRIBE_MODEL,
     iconsFiles: [],
+    output: null,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -404,6 +406,18 @@ const parseArgs = (argv: string[]): CliOptions => {
     }
     if (arg.startsWith('--model=')) {
       options.model = arg.slice('--model='.length);
+      continue;
+    }
+    if (arg === '--output' || arg === '-o') {
+      const file = argv[++index];
+      if (!file) throw new Error('--output requires a path.');
+      options.output = path.resolve(file);
+      options.context = true;
+      continue;
+    }
+    if (arg.startsWith('--output=')) {
+      options.output = path.resolve(arg.slice('--output='.length));
+      options.context = true;
       continue;
     }
     if (arg === '--icons-file') {
@@ -529,6 +543,9 @@ Options:
   --max-files-per-query <n>
                           Max candidate files to validate per query slice (default: ${DEFAULT_MAX_FILES_PER_QUERY})
   --thorough              Shortcut for --max-pages ${THOROUGH_MAX_PAGES} --max-files-per-query ${THOROUGH_MAX_FILES_PER_QUERY}
+  --output, -o <path>     Write usage per icon to a JSON file as { [icon]: [...usage] }:
+                          use cases with --describe, otherwise individual usages
+                          (implies --context)
   --icons-file <path>     Read icon names (one per line, kebab-case or export names
                           like Trash2) from a file; repeatable
   --context               Extract how each icon is used in context (parent element,
@@ -1411,6 +1428,39 @@ const printUsage = (usage: Record<string, IconUsage>) => {
   }
 };
 
+/**
+ * Writes `{ [icon]: [...usage] }`: the grouped use cases when `--describe` ran,
+ * otherwise every individual usage context found for the icon.
+ */
+const writeOutput = async (file: string, result: AnalysisResult, options: CliOptions) => {
+  const output = Object.fromEntries(
+    options.icons.map((icon) => {
+      if (options.describe) return [icon, result.usage?.[icon]?.descriptions ?? []];
+      const usages = Object.entries(result.repositories).flatMap(([repository, record]) =>
+        record.matches
+          .filter((match) => match.icon === icon)
+          .flatMap((match) =>
+            (match.contexts ?? []).map((context) => ({
+              description: context.description,
+              repository,
+              url: `${match.htmlUrl}#L${context.line}`,
+              kind: context.kind,
+              parents: context.ancestors,
+              component: context.component,
+              labels: [...context.labels, ...context.i18nKeys],
+              handlers: context.handlers,
+              links: context.links,
+            })),
+          ),
+      );
+      return [icon, usages];
+    }),
+  );
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(file, `${JSON.stringify(output, null, 2)}\n`);
+  status(`wrote usage for ${options.icons.length} icon(s) to ${file}`);
+};
+
 const printCsv = (result: AnalysisResult) => {
   const rows = [['repository', 'icons', 'packages', 'matches', 'contexts']];
   for (const [repo, record] of Object.entries(result.repositories)) {
@@ -1438,6 +1488,7 @@ try {
     ...(await readIconsFiles(options.iconsFiles)),
   ]);
   const result = await analyze(options);
+  if (options.output) await writeOutput(options.output, result, options);
   if (options.json) {
     console.log(JSON.stringify(result, null, 2));
   } else if (options.csv) {
