@@ -13,7 +13,7 @@
   "title": "Lucide Icons category schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "icon", "title"],
+  "required": ["$schema", "description", "icon", "title"],
   "properties": {
     "$schema": {
       "type": "string"

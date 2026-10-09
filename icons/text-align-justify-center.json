@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HectorZaGa",
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Aligning justified text with the final line centered",
+    "Formatting paragraphs with center-justified layout in document editors"
+  ],
+  "tags": [
+    "paragraph",
+    "alignment",
+    "justified",
+    "center",
+    "middle",
+    "typography",
+    "editor",
+    "document"
+  ],
+  "categories": [
+    "text"
+  ]
+}
