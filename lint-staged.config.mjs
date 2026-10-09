@@ -7,10 +7,12 @@ const config = {
   ],
   'icons/*.json': (filenames) => [
     `eslint ${filenames.join(' ')}`,
+    `cspell --no-progress ${filenames.join(' ')}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
   'categories/*.json': (filenames) => [
     `eslint ${filenames.join(' ')}`,
+    `cspell --no-progress ${filenames.join(' ')}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
 };

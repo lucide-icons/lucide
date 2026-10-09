@@ -1,4 +1,5 @@
 {
+  "language": "en,en-GB",
   "dictionaries": ["en-us", "custom-words"],
   "dictionaryDefinitions": [
     {
@@ -6,5 +7,9 @@
       "path": "./.cspell/custom-words.txt",
       "addWords": true
     }
+  ],
+  "ignoreRegExpList": [
+    "/\"contributors\"\\s*:\\s*\\[[^\\]]*\\]/g",
+    "/\"name\"\\s*:\\s*\"[^\"]*\",\\s*\"deprecated\"\\s*:\\s*true,\\s*\"deprecationReason\"\\s*:\\s*\"alias\\.typo\"/g"
   ]
 }
