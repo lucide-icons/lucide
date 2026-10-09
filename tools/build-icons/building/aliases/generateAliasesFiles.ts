@@ -17,6 +17,7 @@ interface GenerateAliasesFilesOptions {
   separateAliasesFile?: boolean;
   separateAliasesFileExtension?: string;
   separateAliasesFileIgnore?: string;
+  exportIconData?: boolean;
   showLog?: boolean;
 }
 
@@ -31,6 +32,7 @@ export default async function generateAliasesFiles({
   separateAliasesFile = false,
   separateAliasesFileExtension,
   separateAliasesFileIgnore,
+  exportIconData = false,
   showLog = true,
 }: GenerateAliasesFilesOptions) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -120,7 +122,8 @@ export default async function generateAliasesFiles({
               separateAliasesFile && !separateAliasesFileIgnore?.includes(alias.name);
 
             if (createSeparateAliasesFile) {
-              const output = `export { default } from "./${iconName}${
+              const exportList = exportIconData ? 'default, __iconData, __iconNode' : 'default';
+              const output = `export { ${exportList} } from "./${iconName}${
                 separateAliasesFileExtension ? iconFileExtension : ''
               }";\n`;
               const location = path.join(
