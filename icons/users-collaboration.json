@@ -1,16 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "rrod497"
+    "rrod497",
+    "karsa-mistmere"
   ],
   "use-cases": [
-    "collaborative workspace in multi-user apps",
-    "assigning or sharing ownership of documents or content from one user to another",
-    "indicating peer-to-peer system architecture",
-    "meeting/gathering scheduling apps or team-based work management tools",
-    "indicating delegated access or permission sharing between accounts",
-    "representing co-authoring or real-time collaborative editing",
-    "showing linked or connected user profiles across systems"
+    "Representing collaborative workspaces in multi-user apps",
+    "Sharing ownership of documents or content",
+    "Indicating peer-to-peer system architecture",
+    "Scheduling team meetings and gatherings"
   ],
   "tags": [
     "group",
