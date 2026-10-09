@@ -514,7 +514,7 @@ export const summarizeContexts = (matches: ContextMatch[]): IconContextSummary =
 };
 
 export type UsageDescription = {
-  useCase: string;
+  useCase: string[];
   description: string;
   sampleShare: number;
   examples: string[];
@@ -529,6 +529,33 @@ type DescribeOptions = {
   maxPromptContexts: number;
   readCache: (key: string) => Promise<UsageDescription[] | null>;
   writeCache: (key: string, value: UsageDescription[]) => Promise<void>;
+};
+
+const METADATA_INSTRUCTIONS = new URL(
+  '../.github/instructions/metadata.instructions.md',
+  import.meta.url,
+);
+
+const FALLBACK_USE_CASE_GUIDELINES = `Write each use-case as a short phrase of roughly 4-12 words starting with a present participle verb (e.g. "Indicating a low battery charge level"), from the interface's perspective, naming the concrete context where useful. No trailing period, no first person, no marketing language, and never just the icon's name.`;
+
+/**
+ * Returns the "Use Cases" section of the repository's metadata instructions
+ * (including its examples), so generated use-cases follow the same style.
+ */
+const loadUseCaseGuidelines = async () => {
+  try {
+    const fs = await import('node:fs/promises');
+    const instructions = await fs.readFile(METADATA_INSTRUCTIONS, 'utf8');
+    const start = instructions.indexOf('## Use Cases');
+    if (start === -1) return FALLBACK_USE_CASE_GUIDELINES;
+    const sections = instructions.slice(start).split(/\n(?=## )/);
+    return sections
+      .filter((section, index) => index === 0 || section.startsWith('## Examples'))
+      .join('\n')
+      .trim();
+  } catch {
+    return FALLBACK_USE_CASE_GUIDELINES;
+  }
 };
 
 /**
@@ -560,15 +587,24 @@ export const describeIconUsage = async ({
 
   const input = `You are maintaining the metadata for the Lucide icon library. Below are real usages of the \`${icon}\` icon found in public GitHub repositories, extracted from source code.
 
-Group these usages into distinct use cases and describe each one.
+Group these usages by what the icon means in them, and describe each group.
 
-Guidelines:
-- useCase: short lowercase phrase describing the concrete situation the icon represents (e.g. "deleting an item from a list"). No trailing punctuation. Match the style of the existing use-cases if any.
+Fields for each group:
+- useCase: an array of 1-3 use-case phrases for this group, written exactly as the use-case guidelines below describe. Add more than one phrase only when the group covers genuinely distinct uses; never rephrase the same idea. Don't repeat a phrase across groups.
 - description: one or two sentences describing how and where the icon appears in the UI (e.g. inside a ghost button in a table row, next to a "Delete" label).
-- sampleShare: the approximate fraction (0-1) of the samples that belong to this use case.
-- examples: ids of up to 3 samples that best illustrate the use case.
-- Return between 1 and 8 use cases, most common first. Ignore samples without enough context to judge.
-- Base everything on the samples; do not invent use cases that are not supported by them.
+- sampleShare: the approximate fraction (0-1) of the samples that belong to this group.
+- examples: ids of up to 3 samples that best illustrate the group.
+
+Rules:
+- Return between 1 and 4 groups, most common first. Ignore samples without enough context to judge.
+- The samples are your source material: extract the function the icon serves in the interface and discard implementation details such as component names, class names or file paths.
+- Base everything on the samples; never invent use cases that are not supported by them.
+- Match the style of the existing use-cases, and avoid duplicating them.
+
+Use-case guidelines (from .github/instructions/metadata.instructions.md):
+<guidelines>
+${await loadUseCaseGuidelines()}
+</guidelines>
 
 Existing use-cases for "${icon}": ${JSON.stringify(existingUseCases)}
 
@@ -591,7 +627,7 @@ ${JSON.stringify(samples, null, 1)}`;
   const schema = z.object({
     useCases: z.array(
       z.object({
-        useCase: z.string(),
+        useCase: z.array(z.string()),
         description: z.string(),
         sampleShare: z.number(),
         examples: z.array(z.number()),

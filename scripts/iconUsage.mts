@@ -1445,7 +1445,7 @@ const printUsage = (usage: Record<string, IconUsage>) => {
       console.log('  use cases:');
       for (const description of descriptions) {
         console.log(
-          `  - ${description.useCase} (~${formatPercent(description.sampleShare * 100)})`,
+          `  - ${description.useCase.join(' / ')} (~${formatPercent(description.sampleShare * 100)})`,
         );
         console.log(`    ${description.description}`);
         for (const example of description.examples) console.log(`    ${example}`);
