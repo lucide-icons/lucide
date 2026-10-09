@@ -19,6 +19,8 @@ const SEARCH_RESULT_CAP = 1000;
 const PER_PAGE = 100;
 const MIN_SEARCH_DELAY_MS = 6500;
 const REQUEST_TIMEOUT_MS = 30000;
+const MAX_REQUEST_ATTEMPTS = 6;
+const RETRYABLE_STATUSES = [403, 408, 429, 500, 502, 503, 504];
 const DEFAULT_MAX_PAGES = 2;
 const DEFAULT_MAX_FILES_PER_QUERY = 200;
 const THOROUGH_MAX_PAGES = 10;
@@ -641,7 +643,8 @@ class GitHubClient {
   }
 
   async #fetchJson<T>(url: string, searchEndpoint: boolean): Promise<T> {
-    for (let attempt = 0; attempt < 5; attempt += 1) {
+    for (let attempt = 0; attempt < MAX_REQUEST_ATTEMPTS; attempt += 1) {
+      const canRetry = attempt < MAX_REQUEST_ATTEMPTS - 1;
       if (searchEndpoint) {
         const elapsed = Date.now() - this.#lastSearchAt;
         if (elapsed < MIN_SEARCH_DELAY_MS) await sleep(MIN_SEARCH_DELAY_MS - elapsed);
@@ -662,11 +665,10 @@ class GitHubClient {
           },
         });
       } catch (error) {
-        if (attempt < 4) {
+        if (canRetry) {
           const waitMs = 2 ** attempt * 3000;
-          progress(
-            { verbose: this.#verbose },
-            `network error on attempt ${attempt + 1}/5; retrying in ${Math.round(waitMs / 1000)}s: ${
+          status(
+            `network error on attempt ${attempt + 1}/${MAX_REQUEST_ATTEMPTS}; retrying in ${Math.round(waitMs / 1000)}s: ${
               (error as Error).message
             }`,
           );
@@ -685,17 +687,18 @@ class GitHubClient {
       const retryAfter = Number(response.headers.get('retry-after'));
       const reset = Number(response.headers.get('x-ratelimit-reset'));
       const body = await response.text();
-      if ([403, 429, 500, 502, 503, 504].includes(response.status) && attempt < 4) {
+      if (RETRYABLE_STATUSES.includes(response.status) && canRetry) {
         const waitMs =
           Number.isFinite(retryAfter) && retryAfter > 0
             ? retryAfter * 1000
-            : Number.isFinite(reset) && reset > Date.now() / 1000
+            : [403, 429].includes(response.status) &&
+                Number.isFinite(reset) &&
+                reset > Date.now() / 1000
               ? reset * 1000 - Date.now() + 1000
               : 2 ** attempt * 3000;
         const boundedWaitMs = Math.min(Math.max(waitMs, 1000), 120000);
-        progress(
-          { verbose: this.#verbose },
-          `GitHub returned ${response.status} on attempt ${attempt + 1}/5; retrying in ${Math.round(
+        status(
+          `GitHub returned ${response.status} on attempt ${attempt + 1}/${MAX_REQUEST_ATTEMPTS}; retrying in ${Math.round(
             boundedWaitMs / 1000,
           )}s`,
         );
@@ -908,6 +911,9 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
   const contextLimitReached = (icon: string) =>
     options.context && (contextMatches.get(icon)?.length ?? 0) >= options.maxContexts;
   const sampledIcons = new Set<string>();
+  const failedRequests: string[] = [];
+  const usage: Record<string, IconUsage> = {};
+  const completedIcons: string[] = [];
 
   status(
     `starting: icons=${options.icons.join(', ')} packages=${options.packages.join(', ')} query-slices=${querySlices} max-pages=${options.maxPages} max-files-per-query=${options.maxFilesPerQuery}`,
@@ -932,15 +938,26 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
           );
           continue;
         }
-        const { items, record } = await fetchAllSearchResults(
-          client,
-          icon,
-          packageName,
-          queryKind,
-          fileScope,
-          query,
-          options,
-        );
+        let searchResult: Awaited<ReturnType<typeof fetchAllSearchResults>>;
+        try {
+          searchResult = await fetchAllSearchResults(
+            client,
+            icon,
+            packageName,
+            queryKind,
+            fileScope,
+            query,
+            options,
+          );
+        } catch (error) {
+          completedQuerySlices += 1;
+          failedRequests.push(`search ${icon} ${packageName} ${fileScope.label} ${queryKind}`);
+          status(
+            `search ${completedQuerySlices}/${querySlices} failed, skipping: ${icon} ${packageName} ${fileScope.label} ${queryKind}: ${(error as Error).message}`,
+          );
+          continue;
+        }
+        const { items, record } = searchResult;
         queries.push(record);
         completedQuerySlices += 1;
         status(
@@ -972,10 +989,17 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
             );
           }
 
-          const { response: contentPayload } = await client.getJson<{
-            content?: string;
-            encoding?: string;
-          }>(item.url);
+          let contentPayload: { content?: string; encoding?: string };
+          try {
+            ({ response: contentPayload } = await client.getJson<{
+              content?: string;
+              encoding?: string;
+            }>(item.url));
+          } catch (error) {
+            failedRequests.push(`contents ${repo}/${item.path}`);
+            status(`fetching ${repo}/${item.path} failed, skipping: ${(error as Error).message}`);
+            continue;
+          }
           const source = decodeContent(contentPayload);
           const evidence = hasCommonUsage(source, packageName, icon);
           if (!evidence) continue;
@@ -1028,6 +1052,21 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
         }
       }
     }
+
+    // Finish each icon before starting the next so a crash or interruption
+    // keeps the results gathered so far in --output.
+    if (options.context) {
+      usage[icon] = await buildIconUsage(
+        options,
+        icon,
+        contextMatches.get(icon) ?? [],
+        sampledIcons.has(icon),
+      );
+    }
+    completedIcons.push(icon);
+    if (options.output) {
+      await writeOutput(options.output, completedIcons, usage, repositories, options);
+    }
   }
 
   progress(
@@ -1057,9 +1096,11 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
       `--max-contexts (${options.maxContexts}) was reached for ${[...sampledIcons].join(', ')}; searching stopped early, so repository counts for those icons are a lower bound.`,
     );
   }
-  const usage = options.context
-    ? await buildUsage(options, contextMatches, sampledIcons)
-    : undefined;
+  if (failedRequests.length > 0) {
+    warnings.push(
+      `${failedRequests.length} request(s) failed after ${MAX_REQUEST_ATTEMPTS} attempts and were skipped, so results are incomplete: ${failedRequests.slice(0, 10).join('; ')}${failedRequests.length > 10 ? '; …' : ''}. Successful responses are cached, so re-running retries only the failed requests.`,
+    );
+  }
   return {
     metadata: {
       version: VERSION,
@@ -1109,7 +1150,7 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
       candidateRepositories.size,
       candidatePackageRepositories,
     ),
-    ...(usage ? { usage } : {}),
+    ...(options.context ? { usage } : {}),
   };
 };
 
@@ -1122,42 +1163,39 @@ const readExistingUseCases = async (icon: string) => {
   }
 };
 
-const buildUsage = async (
+const buildIconUsage = async (
   options: CliOptions,
-  contextMatches: Map<string, ContextMatch[]>,
-  sampledIcons: Set<string>,
-) => {
-  const usage: Record<string, IconUsage> = {};
-  for (const icon of options.icons) {
-    const matches = contextMatches.get(icon) ?? [];
-    const summary = summarizeContexts(matches);
-    usage[icon] = { sampled: sampledIcons.has(icon), summary };
-    if (!options.describe || matches.length === 0) continue;
+  icon: string,
+  matches: ContextMatch[],
+  sampled: boolean,
+): Promise<IconUsage> => {
+  const summary = summarizeContexts(matches);
+  const iconUsage: IconUsage = { sampled, summary };
+  if (!options.describe || matches.length === 0) return iconUsage;
 
-    status(`describing ${icon} from ${matches.length} contexts with ${options.model}`);
-    try {
-      usage[icon].descriptions = await describeIconUsage({
-        icon,
-        matches,
-        summary,
-        existingUseCases: await readExistingUseCases(icon),
-        model: options.model,
-        maxPromptContexts: options.maxContexts,
-        readCache: (key) =>
-          options.refresh
-            ? Promise.resolve(null)
-            : readCachedJson<UsageDescription[]>(
-                path.join(options.cacheDir, 'describe', `${key}.json`),
-              ),
-        writeCache: (key, value) =>
-          writeCachedJson(path.join(options.cacheDir, 'describe', `${key}.json`), value),
-      });
-    } catch (error) {
-      usage[icon].descriptionError = (error as Error).message;
-      status(`describing ${icon} failed: ${(error as Error).message}`);
-    }
+  status(`describing ${icon} from ${matches.length} contexts with ${options.model}`);
+  try {
+    iconUsage.descriptions = await describeIconUsage({
+      icon,
+      matches,
+      summary,
+      existingUseCases: await readExistingUseCases(icon),
+      model: options.model,
+      maxPromptContexts: options.maxContexts,
+      readCache: (key) =>
+        options.refresh
+          ? Promise.resolve(null)
+          : readCachedJson<UsageDescription[]>(
+              path.join(options.cacheDir, 'describe', `${key}.json`),
+            ),
+      writeCache: (key, value) =>
+        writeCachedJson(path.join(options.cacheDir, 'describe', `${key}.json`), value),
+    });
+  } catch (error) {
+    iconUsage.descriptionError = (error as Error).message;
+    status(`describing ${icon} failed: ${(error as Error).message}`);
   }
-  return usage;
+  return iconUsage;
 };
 
 const gitCommit = async () => {
@@ -1429,14 +1467,21 @@ const printUsage = (usage: Record<string, IconUsage>) => {
 };
 
 /**
- * Writes `{ [icon]: [...usage] }`: the grouped use cases when `--describe` ran,
- * otherwise every individual usage context found for the icon.
+ * Writes `{ [icon]: [...usage] }` for the icons finished so far: the grouped
+ * use cases when `--describe` ran, otherwise every individual usage context.
+ * Written to a temporary file first so an interruption never leaves it half-written.
  */
-const writeOutput = async (file: string, result: AnalysisResult, options: CliOptions) => {
+const writeOutput = async (
+  file: string,
+  icons: string[],
+  usage: Record<string, IconUsage>,
+  repositories: Map<string, RepositoryRecord>,
+  options: CliOptions,
+) => {
   const output = Object.fromEntries(
-    options.icons.map((icon) => {
-      if (options.describe) return [icon, result.usage?.[icon]?.descriptions ?? []];
-      const usages = Object.entries(result.repositories).flatMap(([repository, record]) =>
+    icons.map((icon) => {
+      if (options.describe) return [icon, usage[icon]?.descriptions ?? []];
+      const usages = [...repositories.entries()].flatMap(([repository, record]) =>
         record.matches
           .filter((match) => match.icon === icon)
           .flatMap((match) =>
@@ -1457,8 +1502,10 @@ const writeOutput = async (file: string, result: AnalysisResult, options: CliOpt
     }),
   );
   await fs.mkdir(path.dirname(file), { recursive: true });
-  await fs.writeFile(file, `${JSON.stringify(output, null, 2)}\n`);
-  status(`wrote usage for ${options.icons.length} icon(s) to ${file}`);
+  const temporaryFile = `${file}.tmp`;
+  await fs.writeFile(temporaryFile, `${JSON.stringify(output, null, 2)}\n`);
+  await fs.rename(temporaryFile, file);
+  status(`wrote usage for ${icons.length}/${options.icons.length} icon(s) to ${file}`);
 };
 
 const printCsv = (result: AnalysisResult) => {
@@ -1488,7 +1535,6 @@ try {
     ...(await readIconsFiles(options.iconsFiles)),
   ]);
   const result = await analyze(options);
-  if (options.output) await writeOutput(options.output, result, options);
   if (options.json) {
     console.log(JSON.stringify(result, null, 2));
   } else if (options.csv) {

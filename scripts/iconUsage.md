@@ -60,6 +60,14 @@ GitHub's newer code search syntax is usable for public code search queries and s
 
 For common icons that hit search caps, use the script output as lower-bound or sampled evidence. The most defensible follow-up is to narrow query slices and cite them separately, for example by package, language/path, or repository cohorts, while preserving the JSON metadata for every query performed.
 
+## Retries And Partial Results
+
+GitHub requests that time out or fail temporarily (`408`, `429`, `5xx`, rate-limit `403`, network errors) are retried up to 6 times with backoff, honouring `Retry-After` and rate-limit reset headers. If a request still fails, that search slice or file is skipped with a warning instead of stopping the run. The OpenAI client used by `--describe` retries up to 5 times.
+
+Every successful GitHub and OpenAI response is cached in the cache directory as soon as it arrives. If a run fails or is interrupted, running the same command again replays the cached responses without waiting, and only fetches what is missing.
+
+With `--output`, each icon is finished (including `--describe`) before the next one starts, and the file is rewritten after every icon. An interrupted run therefore leaves a valid JSON file with every completed icon.
+
 ## Known Biases
 
 Only public GitHub repositories visible to the token are observable. Private repositories and consumers outside GitHub are absent. GitHub is not representative of every Lucide consumer. Framework/package usage can differ materially. GitHub indexing may be incomplete or delayed. Generated or vendored code can still create false positives when GitHub does not identify it. Very common icons may exceed GitHub search-result caps.

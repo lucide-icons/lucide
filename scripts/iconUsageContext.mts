@@ -599,7 +599,8 @@ ${JSON.stringify(samples, null, 1)}`;
     ),
   });
 
-  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  // The SDK retries timeouts (408), rate limits and server errors with backoff.
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 5 });
   const response = await client.responses.create({
     model,
     input,
