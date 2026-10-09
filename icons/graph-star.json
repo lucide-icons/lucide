@@ -4,38 +4,35 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Representing molecules and chemical structures in scientific applications",
-    "Representing interconnected systems and networks",
-    "Showing devices connected to a central server or hub",
     "Visualizing relationships between nodes in a graph",
     "Representing mind maps, ideas, and concept associations",
-    "Showing dependencies and relationships between components"
+    "Showing devices connected to a central server or hub",
+    "Representing interconnected systems and networks",
+    "Showing dependencies and relationships between components",
+    "Representing molecules and chemical structures in scientific applications"
   ],
   "tags": [
-    "atom",
-    "chemistry",
+    "mindmap",
+    "network",
+    "hub",
+    "nodes",
+    "links",
+    "connections",
+    "relationships",
+    "dependencies",
     "bonds",
     "structure",
     "topology",
     "cluster",
-    "network",
-    "hub",
-    "nodes",
-    "graph",
-    "star-graph",
-    "mindmap",
     "thoughts",
     "ideas",
-    "relationships",
-    "links",
-    "dependencies",
-    "connections",
-    "concepts"
+    "concepts",
+    "molecule"
   ],
   "categories": [
-    "science",
-    "charts",
+    "development",
     "connectivity",
-    "development"
+    "charts",
+    "science"
   ]
 }
