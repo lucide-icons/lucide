@@ -9,24 +9,22 @@
     "jguddas"
   ],
   "use-cases": [
-    "representing a user profile in a mobile application",
-    "indicating a mobile account or device owner",
-    "showing mobile contact or identity settings",
-    "displaying a user avatar in a mobile dashboard",
-    "linking to a contact's profile from a mobile list",
-    "indicating mobile sign-in or authentication screens",
-    "marking a device as assigned to a user in device management apps"
+    "Representing a user profile in a mobile application",
+    "Indicating a mobile account or device owner",
+    "Showing mobile contact or identity settings",
+    "Displaying a user avatar in a mobile dashboard",
+    "Linking to a contact's profile from a mobile list",
+    "Indicating mobile sign-in or authentication screens",
+    "Marking a device as assigned to a user in device management apps"
   ],
   "tags": [
     "phone",
     "cellphone",
     "device",
     "mobile",
-    "user",
     "person",
     "profile",
-    "account",
-    "smartphone",
+    "account"
     "avatar",
     "contact",
     "identity",
