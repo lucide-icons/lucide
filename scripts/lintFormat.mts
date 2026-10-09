@@ -17,29 +17,51 @@ const PATTERNS = ['**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}', 'icons
 
 const prettierBin = createRequire(import.meta.url).resolve('prettier/bin/prettier.cjs');
 
-const listDifferent = spawnSync(process.execPath, [prettierBin, '--list-different', ...PATTERNS], {
-  encoding: 'utf-8',
-  maxBuffer: 64 * 1024 * 1024,
-});
-
-// Exit code 2 means Prettier itself failed, e.g. on a syntax error.
-if (listDifferent.status !== 0 && listDifferent.status !== 1) {
-  process.stderr.write(listDifferent.stderr);
-  process.exit(listDifferent.status ?? 2);
-}
-
-const files = listDifferent.stdout.split('\n').filter(Boolean);
-
-if (files.length === 0) {
-  console.log('All matched files use Prettier code style!');
-  process.exit(0);
-}
+const listDifferent = spawnSync(
+  process.execPath,
+  [prettierBin, '--list-different', '--no-color', ...PATTERNS],
+  { encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024 },
+);
 
 /** Escape data for a workflow command, see https://github.com/actions/toolkit/blob/main/packages/core/src/command.ts */
 const escapeData = (value: string) =>
   value.replaceAll('%', '%25').replaceAll('\r', '%0D').replaceAll('\n', '%0A');
 const escapeProperty = (value: string) =>
   escapeData(value).replaceAll(':', '%3A').replaceAll(',', '%2C');
+
+let problems = 0;
+
+// Exit code 2 means Prettier could not process a file, e.g. because of a syntax error.
+if (listDifferent.status !== 0 && listDifferent.status !== 1) {
+  console.log('::group::Prettier errors');
+  console.log(listDifferent.stderr);
+  console.log('::endgroup::');
+
+  const syntaxError = /^\[error\] (.+?): (\w*Error: .+) \((\d+):(\d+)\)$/;
+  for (const line of listDifferent.stderr.split('\n')) {
+    const match = line.match(syntaxError);
+    if (!match) continue;
+    const [, file, message, errorLine, column] = match;
+    console.log(
+      `::error file=${escapeProperty(file)},line=${errorLine},col=${column},title=Prettier::${escapeData(message)}`,
+    );
+    problems++;
+  }
+
+  if (problems === 0) {
+    console.log(
+      `::error title=Prettier::${escapeData(listDifferent.stderr.trim() || 'Prettier failed.')}`,
+    );
+    problems++;
+  }
+}
+
+const files = listDifferent.stdout.split('\n').filter(Boolean);
+
+if (files.length === 0 && problems === 0) {
+  console.log('All matched files use Prettier code style!');
+  process.exit(0);
+}
 
 const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'lint-format-'));
 const hunkHeader = /^@@ -(\d+)(?:,(\d+))? \+\d+(?:,\d+)? @@/;
@@ -93,7 +115,9 @@ for (const file of files) {
 
 fs.rmSync(tmpDir, { recursive: true, force: true });
 
-console.log(
-  `\n${files.length} file(s) not formatted with Prettier. Run \`pnpm lint:format-fix\` and \`pnpm lint:icons-fix\` to fix.`,
-);
+if (files.length > 0) {
+  console.log(
+    `\n${files.length} file(s) not formatted with Prettier. Run \`pnpm lint:format-fix\` and \`pnpm lint:icons-fix\` to fix.`,
+  );
+}
 process.exit(1);

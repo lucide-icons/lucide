@@ -21,9 +21,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      # setup-node registers the eslint-stylish problem matcher, which turns the output into annotations.
+      # The formatter prints workflow commands, which GitHub shows as inline annotations.
       - name: Run ESLint
-        run: pnpm lint:es
+        run: pnpm lint:es --format ./scripts/eslint/githubFormatter.mjs
 
   prettier:
     name: Prettier
@@ -57,4 +57,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate icon and category JSON
-        run: pnpm lint:json
+        run: pnpm lint:json --format ./scripts/eslint/githubFormatter.mjs
