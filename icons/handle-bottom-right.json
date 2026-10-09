@@ -12,6 +12,9 @@
     "resize",
     "corner"
   ],
+  "use-cases": [
+    "Indicating the bottom-right resize handle of a resizable object"
+  ],
   "categories": [
     "design"
   ]
