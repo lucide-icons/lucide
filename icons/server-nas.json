@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube"
+  ],
+  "use-cases": [
+    "To indicate a Network Attached Storage server in a network",
+    "To indicate the status of a Network Attached Storage server",
+    "Representing a NAS in network diagrams",
+    "Selecting a backup destination",
+    "Link to nas administration dashboard",
+    "Indicating on-premises file storage"
+  ],
+  "tags": [
+    "cloud",
+    "storage",
+    "nas",
+    "network",
+    "server",
+    "backup",
+    "raid"
+  ],
+  "categories": [
+    "devices",
+    "development",
+    "connectivity",
+    "files"
+  ]
+}
