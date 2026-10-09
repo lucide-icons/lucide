@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nito"
+  ],
+  "use-cases": [
+    "Showing the flow of data"
+  ],
+  "tags": [
+    "sankey",
+    "chart",
+    "diagram",
+    "flow",
+    "change",
+    "movement",
+    "intersection",
+    "road",
+    "dataflow",
+    "streams",
+    "links",
+    "transfer",
+    "allocation",
+    "distribution",
+    "energy",
+    "resources",
+    "budget",
+    "conversion",
+    "throughput"
+  ],
+  "categories": [
+    "charts",
+    "science",
+    "finance"
+  ]
+}
