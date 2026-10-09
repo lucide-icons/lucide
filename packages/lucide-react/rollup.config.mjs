@@ -110,6 +110,16 @@ const configs = bundles
 
 export default [
   {
+    input: 'src/types.ts',
+    output: { file: 'dist/lucide-types.d.ts', format: 'es' },
+    plugins: [dts(dtsOptions)],
+  },
+  {
+    input: 'src/lucide-icon.d.ts',
+    output: { file: 'dist/lucide-icon.d.mts', format: 'es' },
+    plugins: [dts(dtsOptions)],
+  },
+  {
     input: 'src/dynamicIconImports.ts',
     output: [
       {
