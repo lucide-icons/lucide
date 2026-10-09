@@ -7,6 +7,10 @@
     "jguddas",
     "elenakovelskikh"
   ],
+  "use-cases": [
+    "Indicating new or unread messages in messaging systems",
+    "Drawing attention to recent activity in inboxes and notification areas"
+  ],
   "tags": [
     "mail",
     "envelope",
