@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hitanshu-machhi",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing a user profile in a mobile application",
+    "Indicating a mobile account or device owner",
+    "Showing mobile contact or identity settings",
+    "Displaying a user avatar in a mobile dashboard",
+    "Linking to a contact's profile from a mobile list",
+    "Indicating mobile sign-in or authentication screens",
+    "Marking a device as assigned to a user in device management apps"
+  ],
+  "tags": [
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "person",
+    "profile",
+    "account",
+    "avatar",
+    "contact",
+    "identity",
+    "owner",
+    "authentication"
+  ],
+  "categories": [
+    "account",
+    "devices",
+    "people"
+  ]
+}
