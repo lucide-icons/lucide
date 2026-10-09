@@ -14,7 +14,6 @@
     "mobile",
     "device",
     "contact",
-    "log",
     "history",
     "data",
     "information",
@@ -22,5 +21,9 @@
   ],
   "categories": [
     "communication"
+  ],
+  "use-cases": [
+    "Reviewing recent incoming and outgoing calls",
+    "Displaying call history in communication apps"
   ]
 }
