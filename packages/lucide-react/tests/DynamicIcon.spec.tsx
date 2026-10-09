@@ -55,7 +55,12 @@ describe('Using DynamicIcon Component', () => {
 
   it('should render fallback component while icon is loading', () => {
     const FallbackComponent = () => <span data-testid="fallback">Loading...</span>;
-    const { getByTestId } = render(<DynamicIcon name="smile" fallback={FallbackComponent} />);
+    const { getByTestId } = render(
+      <DynamicIcon
+        name="smile"
+        fallback={FallbackComponent}
+      />,
+    );
 
     expect(getByTestId('fallback')).not.toBeNull();
   });
@@ -64,7 +69,12 @@ describe('Using DynamicIcon Component', () => {
     const ref = { current: null as SVGSVGElement | null };
 
     await act(async () => {
-      render(<DynamicIcon ref={ref} name="smile" />);
+      render(
+        <DynamicIcon
+          ref={ref}
+          name="smile"
+        />,
+      );
     });
 
     await waitFor(() => {
