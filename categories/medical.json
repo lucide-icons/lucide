@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Medical",
+  "description": "Icons for healthcare, anatomy, treatment, diagnostics, wellness, and medical facilities.",
   "icon": "heart"
 }

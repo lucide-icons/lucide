@@ -55,7 +55,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/preact": "^3.2.4",
     "jest-serializer-html": "^7.1.0",
-    "preact": "^10.29.8",
+    "preact": "^11.0.0",
     "rollup": "^4.63.1",
     "rollup-plugin-dts": "^6.5.1",
     "typescript": "^6.0.3",
