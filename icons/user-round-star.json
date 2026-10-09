@@ -8,9 +8,9 @@
   ],
   "use-cases": [
     "Indicating an admin or super user",
-    "Favoriting a person",
+    "Favouriting a person",
     "Highlighting the best user in a category"
-  ]
+  ],
   "tags": [
     "person",
     "account",
