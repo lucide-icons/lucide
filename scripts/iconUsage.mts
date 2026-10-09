@@ -27,7 +27,7 @@ const THOROUGH_MAX_PAGES = 10;
 const THOROUGH_MAX_FILES_PER_QUERY = 1000;
 const DEFAULT_MAX_CONTEXTS = 40;
 const MAX_CONTEXTS_PER_REPOSITORY = 2;
-const DEFAULT_DESCRIBE_MODEL = 'gpt-5-mini';
+const DEFAULT_DESCRIBE_MODEL = 'gpt-6-luna';
 const ICONS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../icons');
 
 const SUPPORTED_PACKAGES = [
