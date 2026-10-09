@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir",
+    "Turboman3000"
+  ],
+  "use-cases": [
+    "Adding new ISP",
+    "Adding new Translation"
+  ],
+  "tags": [
+    "globe",
+    "internet",
+    "network",
+    "connection",
+    "world",
+    "plus"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "navigation"
+  ]
+}
