@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "emoji",
+    "bad",
+    "sadness",
+    "emotion",
+    "concern",
+    "disappointment"
+  ],
+  "categories": [
+    "emoji",
+    "account"
+  ],
+  "aliases": [
+    {
+      "name": "frown",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

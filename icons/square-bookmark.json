@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "mittalyashu",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "photo",
+    "book"
+  ],
+  "categories": [
+    "photography",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "album",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

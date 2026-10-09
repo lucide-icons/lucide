@@ -2,15 +2,19 @@
 import { ref, computed, watch } from 'vue'
 import { useData } from 'vitepress'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
-import { isActive } from 'vitepress/dist/client/shared'
+import { isActive } from 'vitepress/dist/client/shared.js'
 import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'
 import SidebarTitle from './SidebarTitle.vue'
-import { useCategoryView } from '../../composables/useCategoryView'
+import { useCategoryViewSync } from '../../composables/useCategoryView'
 
 const { page } = useData()
-const { categoryCounts } = useCategoryView();
+const { categoryCounts, selectedCategory } = useCategoryViewSync();
+
+function onCategoriesClick() {
+  selectedCategory.value = '';
+}
 
 const categoriesIsActive = computed(() => {
   return isActive(page.value.relativePath, '/icons/categories');
@@ -53,7 +57,7 @@ watch(headers, () => {
     <VPLink class="sidebar-link sidebar-text" href="/icons/" :class="{ 'active': overviewIsActive } ">
       All
     </VPLink>
-    <VPLink class="sidebar-link sidebar-text" href="/icons/categories" :class="{ 'active': categoriesIsActive } ">
+    <VPLink class="sidebar-link sidebar-text" href="/icons/categories" :class="{ 'active': categoriesIsActive }" @click="onCategoriesClick">
       Categories
     </VPLink>
     <div class="content">

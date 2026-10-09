@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "bringing a selected object to the front of a stack",
+    "moving an item in front of all others in layer order"
+  ],
+  "tags": [
+    "bring to front",
+    "bring forward",
+    "front",
+    "foreground",
+    "top",
+    "topmost",
+    "raise",
+    "lift",
+    "promote",
+    "reorder",
+    "arrange",
+    "stack",
+    "stacking",
+    "z-index",
+    "depth",
+    "graphics",
+    "design"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "arrows"
+  ]
+}

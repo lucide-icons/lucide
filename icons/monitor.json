@@ -7,10 +7,19 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Representing desktop displays and computer monitors",
+    "Showing screen-sharing or external display settings",
+    "Indicating virtual machines in infrastructure dashboards"
+  ],
   "tags": [
     "tv",
+    "computer",
+    "desktop",
     "screen",
     "display",
+    "external display",
+    "screen sharing",
     "virtual machine",
     "vm"
   ],

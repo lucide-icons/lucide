@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "anger",
+    "rage",
+    "fury",
+    "resentment",
+    "irritation",
+    "disgust",
+    "emoji",
+    "emotion"
+  ],
+  "categories": [
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "angry",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

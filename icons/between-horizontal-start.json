@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "insert",
     "add",
@@ -35,8 +36,7 @@
     {
       "name": "between-horizonal-start",
       "deprecated": true,
-      "deprecationReason": "alias.typo",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.typo"
     }
   ]
 }

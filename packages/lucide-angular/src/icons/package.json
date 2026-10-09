@@ -1,8 +1,0 @@
-{
-  "ngPackage": {
-    "dest": "dist",
-    "lib": {
-      "entryFile": "../public-api.ts"
-    }
-  }
-}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "stick",
+    "puck",
+    "ice rink",
+    "skates",
+    "team",
+    "winter sports"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

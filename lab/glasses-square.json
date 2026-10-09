@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "spectacles",
+    "eyesight",
+    "vision",
+    "reading",
+    "learning",
+    "education",
+    "academic",
+    "books",
+    "nerd",
+    "geek"
+  ],
+  "categories": [
+    "accessibility",
+    "medical",
+    "shopping"
+  ]
+}

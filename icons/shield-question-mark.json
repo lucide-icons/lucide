@@ -5,6 +5,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "unshielded",
     "cybersecurity",
@@ -37,7 +38,7 @@
     "vulnerable",
     "weakness",
     "infection",
-    "comprimised",
+    "compromised",
     "data leak",
     "audit",
     "admin",
@@ -61,8 +62,7 @@
     {
       "name": "shield-question",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "empty",
     "deletion",
@@ -25,5 +26,12 @@
   "categories": [
     "files",
     "mail"
+  ],
+  "aliases": [
+    {
+      "name": "trash-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }
