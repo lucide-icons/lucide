@@ -12,6 +12,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import IconPreview from '~/.vitepress/theme/components/icons/IconPreview.vue'
 import IconPreviewSmall from '~/.vitepress/theme/components/icons/IconPreviewSmall.vue'
+import EditInStudioButton from '~/.vitepress/theme/components/icons/EditInStudioButton.vue'
 import IconInfo from '~/.vitepress/theme/components/icons/IconInfo.vue'
 import IconContributors from '~/.vitepress/theme/components/icons/IconContributors.vue'
 import IconShowcase from '~/.vitepress/theme/components/icons/IconShowcase.vue'
@@ -19,9 +20,11 @@ import RelatedIcons from '~/.vitepress/theme/components/icons/RelatedIcons.vue'
 import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
 import Badge from '~/.vitepress/theme/components/base/Badge.vue'
 import Label from '~/.vitepress/theme/components/base/Label.vue'
+import PageTabs from '~/.vitepress/theme/components/base/PageTabs.vue'
 import { data } from './codeExamples.data'
 import { toCamelCase, toPascalCase } from '@lucide/shared'
 import { satisfies } from 'semver'
+import CarbonAdOverlay from '~/.vitepress/theme/components/icons/CarbonAdOverlay.vue';
 
 const { params } = useData()
 
@@ -49,75 +52,92 @@ function releaseTagLink(version) {
 }
 </script>
 
-<div :class="$style.layout">
-  <div :class="$style.iconPreviews">
+<div class="layout">
+  <div class="actions">
+    <EditInStudioButton :icon="params" />
+  </div>
+  <div class="iconPreviews">
     <IconPreview
       id="previewer"
       :name="params.name"
       :iconNode="params.iconNode"
-      :class="$style.preview"
-    />
-    <IconPreviewSmall
-      :name="params.name"
-      :iconNode="params.iconNode"
-       :class="$style.smallPreview"
+      class="preview"
     />
   </div>
-  <div >
-    <div :class="$style.info">
+
+  <div>
+    <div class="info">
       <IconInfo :icon="params" />
-      <div :class="$style.meta">
+      <div class="meta">
         <div
-          v-if="params.createdRelease?.version"
-          :class="$style.version"
+          v-if="params.awaitingRelease"
+          class="version"
+        >
+          <Label>Created:</Label>
+          <Badge class="awaiting-release">Unreleased</Badge>
+        </div>
+        <div
+          v-else-if="params.createdRelease?.version"
+          class="version"
         >
           <Label>Created:</Label>
           <Badge
             :href="releaseTagLink(params.createdRelease.version)"
           >
-            v{{params.createdRelease.version}}
+            {{params.createdRelease.version}}
           </Badge>
         </div>
         <div
-          v-if="params.changedRelease?.version"
-          :class="$style.version"
+          v-if="!params.awaitingRelease && params.changedRelease?.version"
+           class="version"
         >
           <Label>Last changed:</Label>
           <Badge
             :href="releaseTagLink(params.changedRelease.version)"
           >
-            v{{params.changedRelease.version}}
+            {{params.changedRelease.version}}
           </Badge>
         </div>
-        <IconContributors :icon="params" :class="$style.contributors"/>
+        <IconContributors :icon="params" class="contributors"/>
       </div>
     </div>
+  </div>
+</div>
+
+<PageTabs
+  :tabs="['More like this', 'Code examples', 'See in action']"
+>
+  <template #tab-0>
+    <RelatedIcons
+      v-if="params.relatedIcons"
+      :icons="params.relatedIcons"
+    />
+  </template>
+
+  <template #tab-1>
     <CodeGroup
       :groups="tabs"
       groupName="icon-code-example"
-      :class="$style.code"
+      class="code"
     >
       <div
         class="blocks"
         v-html="codeExample"
       />
     </CodeGroup>
-  </div>
-</div>
+  </template>
 
-<div class="icon-page-sections">
-  <IconShowcase
-  :name="params.name"
-  :iconNode="params.iconNode"
-  />
+  <template #tab-2>
+    <IconShowcase
+      :name="params.name"
+      :iconNode="params.iconNode"
+    />
+  </template>
+</PageTabs>
 
-  <RelatedIcons
-  v-if="params.relatedIcons"
-  :icons="params.relatedIcons"
-  />
-</div>
+<CarbonAdOverlay :drawerOpen="false" />
 
-<style module>
+<style scoped>
   .preview {
     grid-area: preview;
     margin-bottom: 24px;
@@ -130,31 +150,52 @@ function releaseTagLink(version) {
     align-items: flex-start;
   }
 
+  .actions {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: -12px -12px 24px 0;
+  }
+
   .meta {
-    margin-left: auto;
-    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
   }
 
   .info {
     --tags-gradient-background: var(--vp-c-bg);
+
+  }
+
+  .icon-info {
+    text-align: center;
+  }
+
+  .version .label {
+    margin-top: 12px;
+  }
+
+  .badge {
+    margin: 12px 0;
   }
 
   .version, .contributors {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
     align-items: flex-start;
     margin-bottom: 0px;
     justify-content: flex-start;
+    gap: 4px;
   }
 
-  .version:first-child {
-    margin-bottom: 8px;
+  .version .awaiting-release {
+    color: var(--vp-c-danger-3);
   }
 
   .iconPreviews {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 24px;
   }
 
@@ -178,66 +219,18 @@ function releaseTagLink(version) {
 
     .iconPreviews {
       flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .actions {
+      position: absolute;
+      right: 0;
+      margin: 0;
     }
 
     .smallPreview {
       flex-direction: row;
       align-items: center;
-    }
-  }
-
-  @media (min-width: 860px) {
-    .info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .meta {
-      border-left: 1px solid var(--vp-c-divider);
-      padding-left: 16px;
-      margin-top: 0;
-    }
-
-    .version, .contributors {
-      flex-direction: column;
-    }
-  }
-
-  @media (min-width: 960px) {
-    .info {
-      display: block;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .meta {
-      border-left: none;
-      padding-left: 0;
-      margin-top: 24px;
-    }
-
-    .version, .contributors {
-      flex-direction: row;
-    }
-  }
-
-  @media (min-width: 1152px) {
-    .info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .meta {
-      border-left: 1px solid var(--vp-c-divider);
-      padding-left: 16px;
-      margin-top: 0;
-    }
-
-    .version, .contributors {
-      flex-direction: row;
-      margin-bottom: 8px;
     }
   }
 </style>
@@ -248,5 +241,20 @@ function releaseTagLink(version) {
     font-weight: 500;
     margin-block-end: 64px;
     padding-top: 32px;
+  }
+
+  .tab-list {
+    margin: 24px -24px 24px;
+  }
+
+  @media (min-width: 640px) {
+    .tab-list {
+      margin: 24px 0 24px;
+    }
+
+    .iconPreviews {
+      justify-content: flex-start;
+    }
+
   }
 </style>

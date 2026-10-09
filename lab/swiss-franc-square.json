@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "tags": [
+    "monetization",
+    "marketing",
+    "finance",
+    "financial",
+    "markets",
+    "exchange",
+    "trader",
+    "trading",
+    "transaction",
+    "payment",
+    "chf",
+    "₣",
+    "toolbar",
+    "button"
+  ],
+  "categories": [
+    "currency",
+    "money",
+    "shapes"
+  ]
+}

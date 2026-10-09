@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nathan-de-pachtere"
+  ],
+  "use-cases": [
+    "Marking a branch's first commit in version-control interfaces",
+    "Indicating measurements at a metal bar's starting point"
+  ],
+  "tags": [
+    "line",
+    "dot",
+    "left",
+    "horizontal",
+    "shape",
+    "symbol",
+    "navigation",
+    "arrow",
+    "pointer",
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "start",
+    "first",
+    "station"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}

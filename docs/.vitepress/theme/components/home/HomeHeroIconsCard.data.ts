@@ -18,7 +18,7 @@ const pickIcons = [
   'clapperboard',
   'tool-case',
   'printer',
-  'album',
+  'square-bookmark',
   'pencil-ruler',
   'calendar',
   'brain',
@@ -53,7 +53,7 @@ const pickIcons = [
   'terminal',
   'thermometer',
   'thumbs-up',
-  'trash-2',
+  'trash',
   'umbrella',
   'watch',
   'sparkles',
@@ -69,7 +69,7 @@ const pickIcons = [
   'stethoscope',
 ];
 
-export default {
+const loader = {
   async load() {
     const icons = Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }));
 
@@ -96,3 +96,8 @@ export default {
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

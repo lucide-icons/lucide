@@ -1,5 +1,7 @@
 import { render } from '@testing-library/vue';
 import { describe, expect, it } from 'vitest';
+import { defineComponent } from 'vue';
+import { House, setLucideProps } from '../src/lucide-vue';
 // @ts-ignore
 import ContextWrapper from './ContextWrapper.vue';
 
@@ -31,6 +33,29 @@ describe('Using lucide icon context', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
+  it('should update when reactive lucide context props change', async () => {
+    const wrapper = defineComponent({
+      components: { House },
+      props: {
+        size: Number,
+      },
+      setup(props) {
+        setLucideProps(props);
+      },
+      template: '<House />',
+    });
+
+    const { container, rerender } = render(wrapper, { props: { size: 24 } });
+
+    expect(container.firstElementChild).toHaveAttribute('width', '24');
+    expect(container.firstElementChild).toHaveAttribute('height', '24');
+
+    await rerender({ size: 48 });
+
+    expect(container.firstElementChild).toHaveAttribute('width', '48');
+    expect(container.firstElementChild).toHaveAttribute('height', '48');
+  });
+
   it("should override the provider's global props when passing props to the icon", () => {
     const { container } = render(ContextWrapper, {
       props: {
@@ -59,7 +84,7 @@ describe('Using lucide icon context', () => {
 
     expect(IconComponent).toHaveAttribute(
       'class',
-      'lucide provider-class lucide-house-icon lucide-house icon-class',
+      'lucide lucide-house lucide-home provider-class icon-class',
     );
   });
 });

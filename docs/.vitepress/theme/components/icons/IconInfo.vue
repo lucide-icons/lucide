@@ -10,29 +10,35 @@ import { computed } from 'vue';
 import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
+import type { IconDeprecationReason } from '../../../../../tools/build-icons/types.ts';
+import IconTags from "./IconTags.vue"
+import getStudioLink from '../../utils/getStudioLink';
 
 const props = defineProps<{
   icon: IconEntity;
   popoverPosition?: 'top' | 'bottom';
+  showEditButton?: boolean;
 }>();
 
 const { go } = useRouter();
 const { page } = useData();
 
-const tags = computed(() => {
-  if (!props.icon || !props?.icon?.tags) return [];
-  return props.icon.tags.join(' • ');
-});
-
 const DiamondIcon = createLucideIcon('Diamond', diamond);
 
 const deprecatedTitle = computed(() => {
   if (!props.icon.deprecationReason) return '';
-  return deprecationReasonTemplate(props.icon.deprecationReason, {
+  return deprecationReasonTemplate(props.icon.deprecationReason as IconDeprecationReason, {
     componentName: props.icon.name,
     iconName: props.icon.name,
-    toBeRemovedInVersion: props.icon.toBeRemovedInVersion,
   });
+});
+
+const iconPath = computed(() => {
+  if (props.icon.externalLibrary) {
+    return `icons/${props.icon.externalLibrary}/${props.icon.name}`;
+  }
+
+  return `icons/${props.icon.name}`;
 });
 </script>
 
@@ -60,14 +66,7 @@ const deprecatedTitle = computed(() => {
         Deprecated
       </Badge>
     </div>
-    <div
-      class="tags-scroller"
-      v-if="tags.length"
-    >
-      <p class="icon-tags horizontal-scroller">
-        {{ tags }}
-      </p>
-    </div>
+    <IconTags :tags="props.icon.tags" />
     <div class="group">
       <Badge
         v-for="category in icon.categories"
@@ -80,26 +79,10 @@ const deprecatedTitle = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="
-          !page?.relativePath?.startsWith?.(
-            icon.externalLibrary
-              ? `icons/${icon.externalLibrary}/${icon.name}`
-              : `icons/${icon.name}`,
-          )
-        "
-        :href="
-          icon.externalLibrary
-            ? `/icons/${icon.externalLibrary}/${icon.name}`
-            : `/icons/${icon.name}`
-        "
+        v-if="!page?.relativePath?.startsWith?.(iconPath)"
+        :href="iconPath"
         text="See in action"
-        @click="
-          go(
-            icon.externalLibrary
-              ? `/icons/${icon.externalLibrary}/${icon.name}`
-              : `/icons/${icon.name}`,
-          )
-        "
+        @click="go(iconPath)"
       />
       <CopySVGButton
         :name="icon.name"
@@ -115,6 +98,38 @@ const deprecatedTitle = computed(() => {
 </template>
 
 <style scoped>
+.studio-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  min-height: 40px;
+  border: 1px solid var(--vp-button-alt-border);
+  border-radius: 999px;
+  background-color: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
+  margin-left: 0;
+  margin-inline-start: 0;
+}
+
+.studio-edit-button:hover,
+.studio-edit-button:focus-visible {
+  border-color: var(--vp-button-alt-hover-border);
+  color: var(--vp-button-alt-hover-text);
+  background-color: var(--vp-button-alt-hover-bg);
+  transform: translateY(-1px);
+}
+
 .group {
   display: flex;
   flex-wrap: wrap;
@@ -154,66 +169,6 @@ const deprecatedTitle = computed(() => {
 
 .deprecated-badge:hover {
   background-color: var(--vp-c-brand-2);
-}
-
-.icon-tags {
-  font-size: 16px;
-  color: var(--vp-c-text-2);
-  font-weight: 500;
-  line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.tags-scroller {
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-  height: 28px;
-  padding: 8px 0 16px;
-  margin-bottom: 16px;
-  margin-top: 8px;
-  align-items: center;
-
-  --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv));
-}
-.horizontal-scroller {
-  overflow-x: scroll;
-  /* Hide Scrollbar */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
-  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
-}
-.horizontal-scroller::-webkit-scrollbar {
-  width: 0;
-  display: none;
-}
-
-.horizontal-scroller::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.horizontal-scroller::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-.tags-scroller::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 32px;
-  height: 100%;
-  /* Background Gradient left to right */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--gradient-background) 100%);
-  right: 0;
-  pointer-events: none;
 }
 
 .buttons {

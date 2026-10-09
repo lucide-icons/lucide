@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "samuelalake"
+  ],
+  "use-cases": [
+    "representing a text block or content card",
+    "indicating a document, article, or post",
+    "using as a placeholder for text content in a layout",
+    "labeling a notes or memo feature",
+    "denoting a text-only module or widget in a dashboard"
+  ],
+  "tags": [
+    "text",
+    "paragraph",
+    "content",
+    "note",
+    "document",
+    "body",
+    "copy",
+    "article",
+    "square",
+    "container",
+    "block",
+    "card",
+    "placeholder",
+    "log",
+    "page",
+    "paper",
+    "sheet",
+    "list",
+    "script",
+    "code",
+    "editor"
+  ],
+  "categories": [
+    "text",
+    "shapes",
+    "development"
+  ]
+}

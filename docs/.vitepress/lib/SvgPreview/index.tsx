@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { PathProps, Path } from './types';
 import getPaths, { assert } from './utils';
 import { GapViolationHighlight } from './GapViolationHighlight.tsx';
@@ -293,7 +293,7 @@ const Radii = ({
   ...props
 }: { paths: Path[] } & PathProps<
   'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
-  any
+  never
 >) => {
   return (
     <g
@@ -361,12 +361,12 @@ const Radii = ({
 const Handles = ({
   paths,
   ...props
-}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', any>) => (
+}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', never>) => (
   <g
     className="svg-preview-handles-group"
     {...props}
   >
-    {paths.map(({ c, prev, next, cp1, cp2 }, i) => (
+    {paths.map(({ prev, next, cp1, cp2 }, i) => (
       <React.Fragment key={i}>
         {cp1 && <path d={`M${prev.x} ${prev.y} ${cp1.x} ${cp1.y}`} />}
         {cp1 && (
@@ -397,10 +397,14 @@ interface SvgPreviewProps extends React.SVGProps<SVGSVGElement> {
   children?: React.ReactNode;
 }
 
-const SvgPreview = (
-  { src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps,
-  ref,
-) => {
+const SvgPreview = ({
+  src,
+  children,
+  height = 24,
+  width = 24,
+  showGrid = false,
+  ...props
+}: SvgPreviewProps) => {
   const subGridSize =
     Math.max(height, width) % 3 === 0
       ? Math.max(height, width) > 24
@@ -413,7 +417,6 @@ const SvgPreview = (
 
   return (
     <svg
-      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}

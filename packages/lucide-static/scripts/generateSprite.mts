@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { type INode, stringify } from 'svgson';
 import { format } from 'prettier';
 import { appendFile } from '@lucide/helpers';
