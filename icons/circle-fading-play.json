@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tatianatsiguleva"
+  ],
+  "use-cases": [],
+  "tags": [
+    "short clips",
+    "shorts",
+    "reels",
+    "stories",
+    "video",
+    "play",
+    "highlights",
+    "social media",
+    "content"
+  ],
+  "categories": [
+    "multimedia",
+    "social"
+  ]
+}
