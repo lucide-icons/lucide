@@ -43,7 +43,7 @@
     "nitropack": "^2.13.4",
     "rollup-plugin-copy": "^3.5.0",
     "semver": "^7.8.5",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "shiki": "^4.4.3",
     "simple-git": "^4.0.1",
     "sitemap": "^9.0.1",
