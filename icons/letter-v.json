@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating voltage or volt units",
+    "representing volume controls or levels",
+    "indicating victory or success",
+    "marking vegan or vegetarian options",
+    "representing video content"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "voltage",
+    "volt",
+    "electricity",
+    "volume",
+    "victory",
+    "success",
+    "vegan",
+    "vegetarian",
+    "video",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}
