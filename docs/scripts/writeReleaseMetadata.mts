@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax,  no-await-in-loop */
 import fs from 'fs';
 import path from 'path';
 import { simpleGit } from 'simple-git';
@@ -41,7 +40,21 @@ const fetchAllReleases = async () => {
   );
 };
 
+const getIconNamesAtTag = async (tag: string) => {
+  // --full-tree resolves `icons/` from the repo root instead of the cwd (docs/)
+  const files = await git.raw(['ls-tree', '--full-tree', '--name-only', tag, 'icons/']);
+
+  return new Set(
+    files
+      .split('\n')
+      .filter((file) => file.endsWith('.svg'))
+      .map((file) => path.basename(file, '.svg')),
+  );
+};
+
 const tags = await fetchAllReleases();
+const forkIconNames = await getIconNamesAtTag(tags[0]);
+const releasedIconNames = await getIconNamesAtTag(tags[tags.length - 1]);
 
 const comparisonsPromises = tags.map(async (tag, index) => {
   const previousTag = tags[index - 1];
@@ -151,18 +164,25 @@ try {
       const iconName = path.basename(iconJsonFile, '.json');
       const metaDir = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
 
-      if (!(iconName in newReleaseMetaData)) {
+      const metaData = await fs.promises.readFile(path.join(ICONS_DIR, iconJsonFile), 'utf-8');
+      const iconMetaData = JSON.parse(metaData);
+      const aliases = iconMetaData.aliases ?? [];
+
+      const fromFork = [iconName, ...aliases.map((alias) => alias.name)].some((name) =>
+        forkIconNames.has(name),
+      );
+      const awaitingRelease = !releasedIconNames.has(iconName);
+
+      if (!(iconName in newReleaseMetaData) && !fromFork && !awaitingRelease) {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
       }
 
       const contents = {
+        fromFork,
+        awaitingRelease,
         ...defaultReleaseMetaData,
         ...(newReleaseMetaData[iconName] ?? {}),
       };
-
-      const metaData = await fs.promises.readFile(path.join(ICONS_DIR, iconJsonFile), 'utf-8');
-      const iconMetaData = JSON.parse(metaData);
-      const aliases = iconMetaData.aliases ?? [];
 
       if (aliases.length) {
         aliases.forEach((alias) => {

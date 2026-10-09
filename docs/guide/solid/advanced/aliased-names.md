@@ -18,7 +18,7 @@ import {
 } from "lucide-solid";
 ```
 
-### Turn off autocomplete in your IDE
+## Turn off autocomplete in your IDE
 
 ```json [.vscode/settings.json]
 {

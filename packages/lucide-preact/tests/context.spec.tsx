@@ -51,6 +51,22 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
   });
 
+  it('should render the icon with LucideProvider and custom nonScalingStroke', () => {
+    const { container } = render(
+      <LucideProvider
+        size={48}
+        color="red"
+        nonScalingStroke
+      >
+        <House />
+      </LucideProvider>,
+    );
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+  });
+
   it("should override the provider's global props when passing props to the icon", () => {
     const { container } = render(
       <LucideProvider
@@ -83,6 +99,9 @@ describe('Using LucideProvider', () => {
 
     const IconComponent = container.firstElementChild;
 
-    expect(IconComponent).toHaveAttribute('class', 'lucide provider-class lucide-house icon-class');
+    expect(IconComponent).toHaveAttribute(
+      'class',
+      'lucide lucide-house lucide-home provider-class icon-class',
+    );
   });
 });

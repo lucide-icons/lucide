@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing residential neighborhoods on maps",
+    "Indicating multiple homes or properties in real estate apps",
+    "Marking housing developments in planning tools"
+  ],
+  "tags": [
+    "homes",
+    "housing",
+    "estate",
+    "living",
+    "buildings",
+    "development",
+    "residences",
+    "residential",
+    "village",
+    "neighbourhood",
+    "accommodation",
+    "community",
+    "dwellings",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}

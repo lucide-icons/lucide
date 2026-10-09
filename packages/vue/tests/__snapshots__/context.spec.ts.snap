@@ -2,7 +2,8 @@
 
 exports[`Using lucide icon context > should render the icon with LucideProvider 1`] = `
 <svg
-  class="lucide provider-class lucide-house-icon lucide-house"
+  aria-hidden="true"
+  class="lucide lucide-house lucide-home provider-class"
   fill="none"
   height="48"
   stroke="red"

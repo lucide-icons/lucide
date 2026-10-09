@@ -4,14 +4,17 @@ on:
   # Run this workflow every Monday at 07:00 UTC
   schedule:
     - cron: '0 7 * * 1'
+
 permissions:
   contents: read
+
 jobs:
   weekly-summary:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24
 

@@ -1,5 +1,5 @@
 import { onMounted, onUpdated, onUnmounted } from 'vue';
-import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support/utils';
+import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support/utils.js';
 
 /*
  * This file is compied and adjusted from vitepress/dist/client/theme-default/composables/useActiveAnchor.ts

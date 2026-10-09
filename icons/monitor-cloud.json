@@ -9,6 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "tv",
+    "computer",
+    "screen",
+    "display",
+    "desktop",
+    "external display",
     "virtual machine",
     "virtual desktop",
     "vm",
@@ -20,10 +26,7 @@
     "software as a service",
     "saas",
     "workstation",
-    "environment",
-    "tv",
-    "screen",
-    "display"
+    "environment"
   ],
   "categories": [
     "connectivity",

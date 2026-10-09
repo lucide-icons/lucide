@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ajay199210",
+    "jguddas",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Adding products to a shopping cart",
+    "Saving products for purchase in ecommerce apps",
+    "Confirming items were added to an order"
+  ],
+  "tags": [
+    "trolley",
+    "cart",
+    "basket",
+    "e-commerce",
+    "ecommerce",
+    "store",
+    "purchase",
+    "products",
+    "items",
+    "checkout",
+    "order",
+    "retail",
+    "add",
+    "increase",
+    "quantity",
+    "buy"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}

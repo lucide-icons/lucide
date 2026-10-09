@@ -69,7 +69,7 @@ export const astroSidebar = [
     items: [
       {
         text: 'Accessibility in depth',
-        link: '/guide/accessibility',
+        link: '/how-to/accessibility',
         desc: 'Accessibility best practices',
       },
       {

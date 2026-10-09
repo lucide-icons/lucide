@@ -30,10 +30,15 @@ const props = defineProps<{
 .contributors {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   /* justify-content: flex-end; */
-  gap: 16px;
+  gap: 2px;
 }
+
+.contributors .label {
+  margin-top: 12px;
+}
+
 .avatar-group {
   display: flex;
 }
