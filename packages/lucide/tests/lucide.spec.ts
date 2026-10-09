@@ -126,4 +126,20 @@ describe('createIcons', () => {
     const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
     expect(hasIcon).toBeTruthy();
   });
+
+  it('should throw an error when icons object is empty', () => {
+    expect(() => createIcons({ icons: {} })).toThrowError(/Please provide an icons object/);
+  });
+
+  it('should replace icons within a DocumentFragment root', () => {
+    const fragment = document.createDocumentFragment();
+    const iconEl = document.createElement('i');
+    iconEl.setAttribute('data-lucide', 'volume-2');
+    fragment.appendChild(iconEl);
+
+    createIcons({ icons, root: fragment });
+
+    const hasSvg = !!fragment.querySelector('svg.lucide-volume-2');
+    expect(hasSvg).toBeTruthy();
+  });
 });
