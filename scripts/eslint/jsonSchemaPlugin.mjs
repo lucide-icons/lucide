@@ -72,8 +72,11 @@ const noInvalid = {
     return {
       /** @param {any} program */
       Program(program) {
-        const root = program.body[0]?.expression;
-        if (root?.type !== 'JSONObjectExpression') return;
+const root = program.body[0]?.expression;
+        if (root?.type !== 'JSONObjectExpression') {
+          context.report({ node: root ?? program, message: 'Root value must be an object.' });
+          return;
+        }
 
         const data = getStaticJSONValue(root);
         if (typeof data?.$schema !== 'string') {
@@ -95,7 +98,7 @@ const noInvalid = {
           const location = error.instancePath || '(root)';
 
           if (error.keyword === 'additionalProperties' && node?.type === 'JSONObjectExpression') {
-            const property = findNode(node, `/${error.params.additionalProperty}`).reportNode;
+            const property = findNode(node, `/${error.params.additionalProperty.replaceAll('~', '~0').replaceAll('/', '~1')}`).reportNode;
             context.report({
               node: property,
               message: `${location} has unexpected property "${error.params.additionalProperty}".`,
