@@ -1,8 +1,8 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
 import { Smile, Pen, Edit2 } from '../src/lucide-svelte.js';
-import SmileIcon, { __iconData as SmileData, __iconNode as SmileNode } from '../src/icons/smile.js';
-import FaceSlightlySmilingIcon, { __iconData, __iconNode } from '../src/icons/face-slightly-smiling.svelte';
+import { __iconData as SmileData, __iconNode as SmileNode } from '../src/icons/smile.js';
+import { __iconData, __iconNode } from '../src/icons/face-slightly-smiling.svelte';
 import TestSlots from './TestSlots.svelte';
 import ContextWrapper from './ContextWrapper.svelte';
 
