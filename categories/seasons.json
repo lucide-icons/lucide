@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Seasons",
+  "description": "Icons for seasonal weather, blooming plants, sunlight, and changing times of year.",
   "icon": "leaf"
 }

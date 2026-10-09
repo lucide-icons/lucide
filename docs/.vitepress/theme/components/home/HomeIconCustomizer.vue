@@ -9,7 +9,7 @@ import ResetButton from '../base/ResetButton.vue';
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
 import Switch from '../base/Switch.vue';
 
-const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle } = useIconStyle();
+const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } = useIconStyle();
 
 const iconStyle = computed(() => ({
   '--home-icon-color': color.value,
@@ -85,14 +85,14 @@ const iconStyle = computed(() => ({
           </InputField>
 
           <InputField
-            id="absolute-stroke-width"
-            label="Absolute Stroke width"
+            id="non-scaling-stroke"
+            label="Non-scaling stroke"
           >
             <template #display>
               <Switch
-                id="absolute-stroke-width-switch"
-                name="absolute-stroke-width"
-                v-model="absoluteStrokeWidth"
+                id="non-scaling-stroke-switch"
+                name="non-scaling-stroke"
+                v-model="nonScalingStroke"
               />
             </template>
           </InputField>
@@ -101,7 +101,7 @@ const iconStyle = computed(() => ({
 
       <div class="icons-container card-column">
         <HomeIconCustomizerIcons
-          :class="{ 'absolute-stroke-width': absoluteStrokeWidth }"
+          :class="{ 'non-scaling-stroke': nonScalingStroke }"
           :style="iconStyle"
         />
       </div>
