@@ -12,6 +12,24 @@ GitHub code search requires authentication, so set `GITHUB_TOKEN` or pass `--tok
 
 Use `--verbose` or `-v` to print detailed progress logs to stderr, including queries, pages, cache hits, retries, content validation, and matches.
 
+You can pass a single icon, and icon names may be kebab-case (`trash-2`) or export names (`Trash2`, `Trash2Icon`, `LucideTrash2`). Use `--icons-file <path>` to read names from a file with one name per line, such as a list of `lucide-react` exports.
+
+## Usage In Context
+
+```sh
+pnpm icon-usage trash-2 --context
+pnpm icon-usage trash-2 --describe
+pnpm icon-usage --icons-file exports.txt --describe --max-contexts 30
+```
+
+`--context` extracts how each icon is used in every validated file: what kind of usage it is (a JSX/template element, a prop such as `icon={Trash2}`, a config object such as `{ title: 'Settings', icon: Settings }`, or a `data-lucide` attribute), the parent elements (for example `DropdownMenuItem` or `Button`), the enclosing component, label text (`aria-label`, `title`, visible text, i18n keys like `t('actions.delete')`), event handlers, links, and a short code snippet. Each usage gets a heuristic description such as `Trash2 in <DropdownMenuItem> labelled "Delete Project" within NavProjects`. Each icon gets a summary of the most common labels, parents and handlers, plus example links to the exact lines on GitHub.
+
+`--describe` does the same, then sends the collected contexts to an OpenAI model (`OPENAI_API_KEY` required; `--model` or `OPENAI_MODEL` selects the model, `gpt-5-mini` by default). The model groups them into several use cases per icon, each with a short lowercase `useCase` phrase in the style of the `use-cases` field in `icons/*.json`, a description of where the icon appears in the UI, its approximate share of the sample, and example links. The icon's existing `use-cases` are included in the prompt. Responses are cached in the cache directory.
+
+To keep runs bounded, searching for an icon stops once `--max-contexts` contexts (default 40) are collected, and at most two contexts are taken from each repository. When the limit is hit, the repository counts for that icon are a lower bound, and a warning says so. JSON output includes every context per match under `repositories.*.matches[].contexts`, and per-icon summaries and descriptions under `usage`.
+
+Context extraction uses heuristics, not a full parser. It works best for JSX (React, Preact, Solid), Vue, Svelte and Astro templates in the same file as the import. Angular templates in separate `.html` files are not fetched.
+
 ## Method
 
 The script uses GitHub REST `GET /search/code` with package-scoped, code-extension-scoped queries, then fetches each returned file and validates common Lucide import styles before counting a repository. Counts are deduplicated by `owner/repository`.

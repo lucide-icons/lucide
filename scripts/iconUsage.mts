@@ -2,6 +2,16 @@ import 'dotenv/config';
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import {
+  describeIconUsage,
+  extractContexts,
+  summarizeContexts,
+  type ContextMatch,
+  type IconContextSummary,
+  type UsageContext,
+  type UsageDescription,
+} from './iconUsageContext.mts';
 
 const VERSION = '0.1.0';
 const CACHE_DIR = path.resolve(process.cwd(), '.cache/lucide-icon-usage');
@@ -13,6 +23,10 @@ const DEFAULT_MAX_PAGES = 2;
 const DEFAULT_MAX_FILES_PER_QUERY = 200;
 const THOROUGH_MAX_PAGES = 10;
 const THOROUGH_MAX_FILES_PER_QUERY = 1000;
+const DEFAULT_MAX_CONTEXTS = 40;
+const MAX_CONTEXTS_PER_REPOSITORY = 2;
+const DEFAULT_DESCRIBE_MODEL = 'gpt-5-mini';
+const ICONS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../icons');
 
 const SUPPORTED_PACKAGES = [
   'lucide-react',
@@ -137,6 +151,11 @@ type CliOptions = {
   maxFilesPerQuery: number;
   tokenEnv: string;
   cacheDir: string;
+  context: boolean;
+  describe: boolean;
+  maxContexts: number;
+  model: string;
+  iconsFiles: string[];
 };
 
 type SearchItem = {
@@ -183,7 +202,15 @@ type RepositoryRecord = {
     path: string;
     htmlUrl: string;
     evidence: string;
+    contexts?: UsageContext[];
   }>;
+};
+
+type IconUsage = {
+  sampled: boolean;
+  summary: IconContextSummary;
+  descriptions?: UsageDescription[];
+  descriptionError?: string;
 };
 
 type AnalysisResult = {
@@ -203,12 +230,16 @@ type AnalysisResult = {
     maxPages: number;
     maxFilesPerQuery: number;
     cacheDir: string;
+    context: boolean;
+    maxContexts: number | null;
+    describeModel: string | null;
     queries: QueryRecord[];
     warnings: string[];
     biases: string[];
   };
   repositories: Record<string, RepositoryRecord>;
   summary: ReturnType<typeof summarize>;
+  usage?: Record<string, IconUsage>;
 };
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -257,6 +288,11 @@ const parseArgs = (argv: string[]): CliOptions => {
     maxFilesPerQuery: DEFAULT_MAX_FILES_PER_QUERY,
     tokenEnv: 'GITHUB_TOKEN',
     cacheDir: CACHE_DIR,
+    context: false,
+    describe: false,
+    maxContexts: DEFAULT_MAX_CONTEXTS,
+    model: process.env.OPENAI_MODEL ?? DEFAULT_DESCRIBE_MODEL,
+    iconsFiles: [],
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -342,6 +378,44 @@ const parseArgs = (argv: string[]): CliOptions => {
       );
       continue;
     }
+    if (arg === '--context') {
+      options.context = true;
+      continue;
+    }
+    if (arg === '--describe') {
+      options.context = true;
+      options.describe = true;
+      continue;
+    }
+    if (arg === '--max-contexts') {
+      options.maxContexts = parsePositiveInteger(argv[++index], '--max-contexts');
+      continue;
+    }
+    if (arg.startsWith('--max-contexts=')) {
+      options.maxContexts = parsePositiveInteger(
+        arg.slice('--max-contexts='.length),
+        '--max-contexts',
+      );
+      continue;
+    }
+    if (arg === '--model') {
+      options.model = argv[++index] ?? options.model;
+      continue;
+    }
+    if (arg.startsWith('--model=')) {
+      options.model = arg.slice('--model='.length);
+      continue;
+    }
+    if (arg === '--icons-file') {
+      const file = argv[++index];
+      if (!file) throw new Error('--icons-file requires a path.');
+      options.iconsFiles.push(path.resolve(file));
+      continue;
+    }
+    if (arg.startsWith('--icons-file=')) {
+      options.iconsFiles.push(path.resolve(arg.slice('--icons-file='.length)));
+      continue;
+    }
     if (arg === '--verbose' || arg === '-v') {
       options.verbose = true;
       continue;
@@ -370,13 +444,62 @@ const parseArgs = (argv: string[]): CliOptions => {
 
   options.icons = [...new Set(options.icons.map((icon) => icon.trim()).filter(Boolean))];
   options.packages = [...new Set(options.packages)];
-  if (options.icons.length < 2) {
+  if (options.icons.length === 0 && options.iconsFiles.length === 0) {
     throw new Error(
-      'Pass at least two Lucide icon names, for example: pnpm icon-usage trash trash-2',
+      'Pass at least one Lucide icon name, for example: pnpm icon-usage trash trash-2',
     );
+  }
+  if (options.describe && !process.env.OPENAI_API_KEY) {
+    throw new Error('--describe requires OPENAI_API_KEY to be set.');
   }
   return options;
 };
+
+const knownIconNames = async () => {
+  try {
+    return (await fs.readdir(ICONS_DIR))
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => path.basename(file, '.json'));
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * Accepts kebab-case icon names (`trash-2`) as well as export names such as
+ * `Trash2`, `Trash2Icon` or `LucideTrash2`, as found in package export lists.
+ */
+const resolveIconNames = async (inputs: string[]) => {
+  const known = await knownIconNames();
+  const knownSet = new Set(known);
+  const byExportName = new Map(known.map((icon) => [toPascalCase(icon), icon]));
+  const unresolved: string[] = [];
+  const icons = inputs.map((input) => {
+    if (knownSet.has(input) || /^[a-z0-9-]+$/.test(input)) return input;
+    const exportName = input.replace(/^Lucide(?=[A-Z])/, '').replace(/Icon$/, '');
+    const icon = byExportName.get(exportName) ?? byExportName.get(input);
+    if (icon) return icon;
+    unresolved.push(input);
+    return input
+      .replace(/([a-z])([A-Z0-9])/g, '$1-$2')
+      .replace(/([0-9])([A-Z])/g, '$1-$2')
+      .toLowerCase();
+  });
+  if (unresolved.length > 0) {
+    status(
+      `${unresolved.length} export name(s) not found in icons/, converted to kebab-case: ${unresolved.slice(0, 10).join(', ')}${unresolved.length > 10 ? ', …' : ''}`,
+    );
+  }
+  return [...new Set(icons)];
+};
+
+const readIconsFiles = async (files: string[]) =>
+  (await Promise.all(files.map((file) => fs.readFile(file, 'utf8')))).flatMap((content) =>
+    content
+      .split(/\r?\n/)
+      .map((line) => line.replace(/#.*$/, '').trim())
+      .filter(Boolean),
+  );
 
 const parsePositiveInteger = (value: string | undefined, option: string) => {
   const parsed = Number(value);
@@ -406,6 +529,15 @@ Options:
   --max-files-per-query <n>
                           Max candidate files to validate per query slice (default: ${DEFAULT_MAX_FILES_PER_QUERY})
   --thorough              Shortcut for --max-pages ${THOROUGH_MAX_PAGES} --max-files-per-query ${THOROUGH_MAX_FILES_PER_QUERY}
+  --icons-file <path>     Read icon names (one per line, kebab-case or export names
+                          like Trash2) from a file; repeatable
+  --context               Extract how each icon is used in context (parent element,
+                          labels, handlers, snippet) from the validated files
+  --describe              Like --context, then ask an OpenAI model to group the
+                          contexts into use-case descriptions (needs OPENAI_API_KEY)
+  --max-contexts <n>      Stop searching an icon once n contexts are collected when
+                          --context/--describe is set (default: ${DEFAULT_MAX_CONTEXTS})
+  --model <name>          Model for --describe (default: $OPENAI_MODEL or ${DEFAULT_DESCRIBE_MODEL})
   --verbose, -v           Print detailed progress logs on stderr
   --token-env <name>      Token environment variable (default: GITHUB_TOKEN)
   --cache-dir <path>      Cache directory (default: .cache/lucide-icon-usage)
@@ -753,6 +885,12 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
   );
   let completedQuerySlices = 0;
   let contentFilesChecked = 0;
+  const contextMatches = new Map<string, ContextMatch[]>(
+    options.icons.map((icon) => [icon, [] as ContextMatch[]]),
+  );
+  const contextLimitReached = (icon: string) =>
+    options.context && (contextMatches.get(icon)?.length ?? 0) >= options.maxContexts;
+  const sampledIcons = new Set<string>();
 
   status(
     `starting: icons=${options.icons.join(', ')} packages=${options.packages.join(', ')} query-slices=${querySlices} max-pages=${options.maxPages} max-files-per-query=${options.maxFilesPerQuery}`,
@@ -768,6 +906,15 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
   for (const icon of options.icons) {
     for (const packageName of options.packages) {
       for (const { queryKind, fileScope, query } of queriesFor(icon, packageName, options)) {
+        if (contextLimitReached(icon)) {
+          sampledIcons.add(icon);
+          completedQuerySlices += 1;
+          progress(
+            options,
+            `skipping ${icon} ${packageName} ${fileScope.label} ${queryKind}: --max-contexts reached`,
+          );
+          continue;
+        }
         const { items, record } = await fetchAllSearchResults(
           client,
           icon,
@@ -785,6 +932,10 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
         progress(options, `query slice progress: ${completedQuerySlices}/${querySlices}`);
 
         for (const [itemIndex, item] of items.entries()) {
+          if (contextLimitReached(icon)) {
+            sampledIcons.add(icon);
+            break;
+          }
           const repo = item.repository.full_name;
           candidateRepositories.add(repo);
           candidatePackageRepositories.get(packageName)?.add(repo);
@@ -816,13 +967,39 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
           if (!recordForRepo.icons.includes(icon)) recordForRepo.icons.push(icon);
           if (!recordForRepo.packages.includes(packageName))
             recordForRepo.packages.push(packageName);
+          const contexts = options.context
+            ? extractContexts(source, packageName, icon, usageNamesForPackage(icon, packageName))
+            : undefined;
           recordForRepo.matches.push({
             icon,
             packageName,
             path: item.path,
             htmlUrl: item.html_url,
             evidence,
+            ...(contexts ? { contexts } : {}),
           });
+          if (contexts) {
+            // Cap contexts per repository so one large project cannot dominate the sample.
+            const iconContexts = contextMatches.get(icon) ?? [];
+            const fromRepo = iconContexts.filter((match) => match.repository === repo).length;
+            for (const context of contexts.slice(
+              0,
+              Math.max(0, MAX_CONTEXTS_PER_REPOSITORY - fromRepo),
+            )) {
+              if (iconContexts.length >= options.maxContexts) break;
+              iconContexts.push({
+                repository: repo,
+                path: item.path,
+                htmlUrl: item.html_url,
+                context,
+              });
+            }
+            contextMatches.set(icon, iconContexts);
+            progress(
+              options,
+              `contexts: ${icon} ${iconContexts.length}/${options.maxContexts} (${contexts.length} in ${repo}/${item.path})`,
+            );
+          }
           repositories.set(repo, recordForRepo);
           if (!options.verbose) {
             status(`match: ${repo} uses ${icon} via ${packageName} in ${item.path}`);
@@ -858,6 +1035,14 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
   );
 
   const warnings = buildWarnings(queries);
+  if (sampledIcons.size > 0) {
+    warnings.push(
+      `--max-contexts (${options.maxContexts}) was reached for ${[...sampledIcons].join(', ')}; searching stopped early, so repository counts for those icons are a lower bound.`,
+    );
+  }
+  const usage = options.context
+    ? await buildUsage(options, contextMatches, sampledIcons)
+    : undefined;
   return {
     metadata: {
       version: VERSION,
@@ -884,6 +1069,9 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
       maxPages: options.maxPages,
       maxFilesPerQuery: options.maxFilesPerQuery,
       cacheDir: options.cacheDir,
+      context: options.context,
+      maxContexts: options.context ? options.maxContexts : null,
+      describeModel: options.describe ? options.model : null,
       queries,
       warnings,
       biases: [
@@ -904,7 +1092,55 @@ const analyze = async (options: CliOptions): Promise<AnalysisResult> => {
       candidateRepositories.size,
       candidatePackageRepositories,
     ),
+    ...(usage ? { usage } : {}),
   };
+};
+
+const readExistingUseCases = async (icon: string) => {
+  try {
+    const metadata = JSON.parse(await fs.readFile(path.join(ICONS_DIR, `${icon}.json`), 'utf8'));
+    return Array.isArray(metadata['use-cases']) ? (metadata['use-cases'] as string[]) : [];
+  } catch {
+    return [];
+  }
+};
+
+const buildUsage = async (
+  options: CliOptions,
+  contextMatches: Map<string, ContextMatch[]>,
+  sampledIcons: Set<string>,
+) => {
+  const usage: Record<string, IconUsage> = {};
+  for (const icon of options.icons) {
+    const matches = contextMatches.get(icon) ?? [];
+    const summary = summarizeContexts(matches);
+    usage[icon] = { sampled: sampledIcons.has(icon), summary };
+    if (!options.describe || matches.length === 0) continue;
+
+    status(`describing ${icon} from ${matches.length} contexts with ${options.model}`);
+    try {
+      usage[icon].descriptions = await describeIconUsage({
+        icon,
+        matches,
+        summary,
+        existingUseCases: await readExistingUseCases(icon),
+        model: options.model,
+        maxPromptContexts: options.maxContexts,
+        readCache: (key) =>
+          options.refresh
+            ? Promise.resolve(null)
+            : readCachedJson<UsageDescription[]>(
+                path.join(options.cacheDir, 'describe', `${key}.json`),
+              ),
+        writeCache: (key, value) =>
+          writeCachedJson(path.join(options.cacheDir, 'describe', `${key}.json`), value),
+      });
+    } catch (error) {
+      usage[icon].descriptionError = (error as Error).message;
+      status(`describing ${icon} failed: ${(error as Error).message}`);
+    }
+  }
+  return usage;
 };
 
 const gitCommit = async () => {
@@ -1122,6 +1358,8 @@ const printHuman = (result: AnalysisResult) => {
   console.log(`repositories sampled/searched: ${formatNumber(summary.repositoriesSearched)}`);
   console.log(`queries performed: ${formatNumber(metadata.queries.length)}`);
 
+  if (result.usage) printUsage(result.usage);
+
   const cappedQueries = metadata.queries.filter((query) => query.capped).length;
   const incompleteQueries = metadata.queries.filter((query) => query.incompleteResults).length;
   if (cappedQueries > 0 || incompleteQueries > 0 || metadata.warnings.length > 0) {
@@ -1130,14 +1368,62 @@ const printHuman = (result: AnalysisResult) => {
   }
 };
 
+const printUsage = (usage: Record<string, IconUsage>) => {
+  const formatTop = (values: Array<{ value: string; count: number }>, limit = 6) =>
+    values
+      .slice(0, limit)
+      .map(({ value, count }) => `${value} (${count})`)
+      .join(', ');
+
+  console.log('Usage in context:');
+  for (const [icon, { summary, descriptions, descriptionError, sampled }] of Object.entries(
+    usage,
+  )) {
+    console.log(
+      `${icon} (${formatNumber(summary.contexts)} contexts from ${formatNumber(summary.repositories)} repositories${sampled ? ', sampled' : ''})`,
+    );
+    if (summary.contexts === 0) {
+      console.log('  no usage contexts found');
+      continue;
+    }
+    if (descriptions && descriptions.length > 0) {
+      console.log('  use cases:');
+      for (const description of descriptions) {
+        console.log(
+          `  - ${description.useCase} (~${formatPercent(description.sampleShare * 100)})`,
+        );
+        console.log(`    ${description.description}`);
+        for (const example of description.examples) console.log(`    ${example}`);
+      }
+    }
+    if (descriptionError) console.log(`  description failed: ${descriptionError}`);
+    if (summary.topLabels.length > 0) console.log(`  labels:   ${formatTop(summary.topLabels)}`);
+    if (summary.topAncestors.length > 0)
+      console.log(`  parents:  ${formatTop(summary.topAncestors)}`);
+    if (summary.topHosts.length > 0) console.log(`  passed to: ${formatTop(summary.topHosts)}`);
+    if (summary.topHandlers.length > 0)
+      console.log(`  handlers: ${formatTop(summary.topHandlers)}`);
+    console.log('  examples:');
+    for (const example of summary.examples.slice(0, 5)) {
+      console.log(`  - ${example.description}`);
+      console.log(`    ${example.htmlUrl}`);
+    }
+  }
+};
+
 const printCsv = (result: AnalysisResult) => {
-  const rows = [['repository', 'icons', 'packages', 'matches']];
+  const rows = [['repository', 'icons', 'packages', 'matches', 'contexts']];
   for (const [repo, record] of Object.entries(result.repositories)) {
     rows.push([
       repo,
       record.icons.join('|'),
       record.packages.join('|'),
       record.matches.map((match) => `${match.icon}:${match.packageName}:${match.path}`).join('|'),
+      record.matches
+        .flatMap((match) =>
+          (match.contexts ?? []).map((context) => `${match.icon}: ${context.description}`),
+        )
+        .join('|'),
     ]);
   }
   console.log(
@@ -1147,6 +1433,10 @@ const printCsv = (result: AnalysisResult) => {
 
 try {
   const options = parseArgs(process.argv.slice(2));
+  options.icons = await resolveIconNames([
+    ...options.icons,
+    ...(await readIconsFiles(options.iconsFiles)),
+  ]);
   const result = await analyze(options);
   if (options.json) {
     console.log(JSON.stringify(result, null, 2));
