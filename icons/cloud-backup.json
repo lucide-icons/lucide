@@ -6,13 +6,14 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "storage",
     "memory",
     "bytes",
     "servers",
     "backup",
-    "timemachine",
+    "time machine",
     "rotate",
     "synchronize",
     "synchronise",

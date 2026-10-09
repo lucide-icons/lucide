@@ -2,6 +2,7 @@
 title: Typescript - Svelte
 description: Learn about the different types exported by the `@lucide/svelte` package and how to use them in your Svelte application.
 ---
+
 # TypeScript Support
 
 List of exported types from the `@lucide/svelte` package.
@@ -17,6 +18,10 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   children?: Snippet;
   [key: string]: any; // Any other SVG attributes
@@ -24,9 +29,11 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
 ```
 
 ### Using `LucideProps`
+
 You can use the `LucideProps` interface to type props for your custom icon components.
 
 ::: code-group
+
 ```svelte [IconWrapper.svelte]
 <script lang="ts">
 import { Camera, type LucideProps } from '@lucide/svelte';
@@ -40,6 +47,7 @@ let props: LucideProps = $props();
   </div>
 </template>
 ```
+
 :::
 
 ## `LucideIcon`
@@ -49,7 +57,7 @@ Type for individual icon components, this is use full when you want to type a va
 ```ts
 import type { Component } from 'svelte';
 
-type LucideIcon = Component<LucideProps>
+type LucideIcon = Component<LucideProps>;
 ```
 
 ### Using `LucideIcon`
@@ -135,6 +143,7 @@ You can use the `LucideIcon` type when you need to work with icon components dir
 {/each}
 
 ```
+
 :::
 
 ## `IconNode`
@@ -144,15 +153,17 @@ Not commonly used directly in application code. But can be useful for advanced u
 
 ```ts
 type IconNode = [
-  elementName: 'circle' | 'ellipse'| 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
-  attrs: SVGAttributes<SVGSVGElement>
+  elementName: 'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect',
+  attrs: SVGAttributes<SVGSVGElement>,
 ][];
 ```
 
 ### Using `IconNode`
+
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
 ::: code-group
+
 ```svelte [CustomIcon.svelte]
 <script lang="ts">
 import { type IconNode, Icon } from '@lucide/svelte';
@@ -166,4 +177,5 @@ const customIcon: IconNode = [
 
 <Icon iconNode={customIcon} size="24" color="blue" />
 ```
+
 :::

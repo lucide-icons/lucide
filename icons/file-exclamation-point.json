@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "hidden",
     "warning",
@@ -20,8 +21,7 @@
     {
       "name": "file-warning",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

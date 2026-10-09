@@ -50,20 +50,21 @@
       }
     ]
   },
-  "lucide-svelte": {
+  "@lucide/svelte": {
     "order": 3,
     "icon": "svelte",
     "docsAlias": "svelte",
+    "packageDirname": "svelte",
     "shields": [
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/v/lucide-svelte",
-        "href": "https://www.npmjs.com/package/lucide-svelte"
+        "src": "https://img.shields.io/npm/v/@lucide/svelte",
+        "href": "https://www.npmjs.com/package/@lucide/svelte"
       },
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/lucide-svelte",
-        "href": "https://www.npmjs.com/package/lucide-svelte"
+        "src": "https://img.shields.io/npm/dw/@lucide/svelte",
+        "href": "https://www.npmjs.com/package/@lucide/svelte"
       }
     ]
   },
@@ -84,8 +85,26 @@
       }
     ]
   },
-  "lucide-react-native": {
+  "@lucide/solid": {
     "order": 5,
+    "icon": "solid",
+    "docsAlias": "solid",
+    "packageDirname": "solid",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/solid",
+        "href": "https://www.npmjs.com/package/@lucide/solid"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/solid",
+        "href": "https://www.npmjs.com/package/@lucide/solid"
+      }
+    ]
+  },
+  "lucide-react-native": {
+    "order": 6,
     "icon": "react-native",
     "docsAlias": "react-native",
     "shields": [
@@ -102,7 +121,7 @@
     ]
   },
   "@lucide/angular": {
-    "order": 6,
+    "order": 7,
     "icon": "angular",
     "docsAlias": "angular",
     "packageDirname": "angular",
@@ -116,24 +135,6 @@
         "alt": "npm",
         "src": "https://img.shields.io/npm/dw/@lucide/angular",
         "href": "https://www.npmjs.com/package/@lucide/angular"
-      }
-    ]
-  },
-  "lucide-angular": {
-    "order": 7,
-    "icon": "angular-old",
-    "description": "Our legacy Angular package with a module based API.",
-    "documentation": "https://v0.lucide.dev/guide/packages/lucide-angular",
-    "shields": [
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/v/lucide-angular",
-        "href": "https://www.npmjs.com/package/lucide-angular"
-      },
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/lucide-angular",
-        "href": "https://www.npmjs.com/package/lucide-angular"
       }
     ]
   },

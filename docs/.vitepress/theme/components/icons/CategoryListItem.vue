@@ -28,7 +28,10 @@ function onClick(categoryName: string) {
   const heading = document.querySelector<HTMLAnchorElement>(categoryName);
   heading?.focus();
 
-  window.history.pushState({}, '', `/icons/categories#${categoryName}`)
+  const url = new URL(window.location.href);
+  url.pathname = '/icons/categories';
+  url.hash = categoryName;
+  window.history.pushState({}, '', url);
 }
 </script>
 
@@ -85,6 +88,7 @@ function onClick(categoryName: string) {
 
 .outline-link.inactive {
   color: var(--vp-c-text-4);
+  pointer-events: none;
 }
 
 .outline-link.nested {

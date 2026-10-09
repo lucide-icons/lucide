@@ -1,4 +1,4 @@
-export default {
+const loader = {
   async load() {
     const version = await fetch('https://api.github.com/repos/lucide-icons/lucide/releases/latest')
       .then((res) => {
@@ -16,3 +16,8 @@ export default {
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

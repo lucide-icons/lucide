@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Layout",
+  "description": "Icons for alignment, spacing, resizing, grouping, and interface layout structure.",
   "icon": "panels-top-left"
 }

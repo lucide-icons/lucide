@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing turn-based board games",
+    "Showing game boards in gaming interfaces",
+    "Indicating a casual multiplayer match",
+    "Representing pencil-and-paper games in kids apps",
+    "Showing a simple puzzle or challenge in onboarding flows",
+    "Denoting a tie or draw outcome in game results"
+  ],
+  "tags": [
+    "game",
+    "board",
+    "grid",
+    "strategy",
+    "noughts and crosses"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

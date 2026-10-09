@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating that privacy mode is activated",
+    "Showing that notifications are muted or do-not-disturb is on",
+    "Marking hidden content that can be revealed on interaction",
+    "Denoting an inactive or away user status",
+    "Representing a stealth mode running discreetly in the background",
+    "Offering an accessibility option for visual impairments"
+  ],
+  "tags": [
+    "view",
+    "watch",
+    "see",
+    "hide",
+    "conceal",
+    "mask",
+    "hidden",
+    "invisible",
+    "visibility",
+    "vision"
+  ],
+  "categories": [
+    "accessibility",
+    "photography",
+    "design",
+    "security"
+  ]
+}

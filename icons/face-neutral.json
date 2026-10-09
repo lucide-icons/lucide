@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "emoji",
+    "neutral",
+    "emotion",
+    "meh",
+    "blank stare",
+    "social masking",
+    "irritation",
+    "concern",
+    "deadpan"
+  ],
+  "categories": [
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "meh",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

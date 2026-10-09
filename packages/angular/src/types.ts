@@ -1,18 +1,16 @@
 import { Signal, Type } from '@angular/core';
+import {
+  LucideIconNode as SharedLucideIconNode,
+  LucideIconData as SharedLucideIconData,
+} from './utils/types';
 
-type HtmlAttributes = { [key: string]: string | number };
-export type LucideIconNode = readonly [string, HtmlAttributes];
+export type LucideIconNode = SharedLucideIconNode;
 export type LucideIcons = { [key: string]: LucideIconData };
 
 /**
  * A Lucide icon object that fully describes an icon to be displayed.
  */
-export type LucideIconData = {
-  name: string;
-  size?: number;
-  node: LucideIconNode[];
-  aliases?: string[];
-};
+export type LucideIconData = SharedLucideIconData & { name: string };
 
 /**
  * Input signal map of Lucide icon components.
@@ -22,7 +20,11 @@ interface LucideIconProps {
   size: Signal<Nullable<number | string>>;
   color: Signal<Nullable<string>>;
   strokeWidth: Signal<Nullable<number | string>>;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth: Signal<Nullable<boolean>>;
+  nonScalingStroke: Signal<Nullable<boolean>>;
 }
 
 /**
