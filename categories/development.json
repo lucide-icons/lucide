@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Coding & development",
+  "description": "Icons for code, logic, data structures, automation, and software development workflows.",
   "icon": "code-xml"
 }
