@@ -24,7 +24,7 @@
     "mobile",
     "person",
     "profile",
-    "account"
+    "account",
     "avatar",
     "contact",
     "identity",
@@ -33,9 +33,7 @@
   ],
   "categories": [
     "account",
-    "communication",
     "devices",
-    "people",
-    "social"
+    "people"
   ]
 }
