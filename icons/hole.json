@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating a hole tool in 3D CAD or modeling software",
+    "warning about a hole or hazard on a path or street map",
+    "creating a hole in 3D terrain or landscape editing software",
+    "representing an opening or cavity in construction diagrams",
+    "representing a bore or drill operation in machining software",
+    "denoting a cutout or aperture in product design specifications"
+  ],
+  "tags": [
+    "ellipse",
+    "opening",
+    "cavity",
+    "pit",
+    "void",
+    "tunnel",
+    "portal",
+    "3d",
+    "cad",
+    "terrain",
+    "hazard",
+    "aperture",
+    "cutout",
+    "bore",
+    "well"
+  ],
+  "categories": [
+    "shapes",
+    "tools"
+  ]
+}
