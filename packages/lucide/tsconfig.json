@@ -11,7 +11,11 @@
     "allowJs": true,
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "sourceMap": true,
-    "outDir": "./dist"
-  }
+    "outDir": "./dist",
+    "types": ["@testing-library/jest-dom/vitest", "node"]
+  },
+  "exclude": ["**/node_modules"],
+  "include": ["src", "tests"]
 }

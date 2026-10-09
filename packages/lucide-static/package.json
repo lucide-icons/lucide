@@ -34,7 +34,8 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mts",
     "build:bundles": "rollup -c rollup.config.mjs",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg",
+    "typecheck": "pnpm build:icons && tsc --noEmit"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",

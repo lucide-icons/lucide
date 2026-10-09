@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Design",
+  "description": "Icons for design tools, layout controls, creative editing, and visual composition.",
   "icon": "palette"
 }
