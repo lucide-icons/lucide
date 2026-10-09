@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Charts",
+  "description": "Icons for charts, graphs, trends, analytics, and data visualization.",
   "icon": "chart-pie"
 }
