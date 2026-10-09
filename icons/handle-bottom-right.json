@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ocavue"
+  ],
+  "tags": [
+    "mouse",
+    "grab",
+    "handle",
+    "move",
+    "drag",
+    "resize",
+    "corner"
+  ],
+  "use-cases": [
+    "Indicating the bottom-right resize handle of a resizable object"
+  ],
+  "categories": [
+    "design"
+  ]
+}
