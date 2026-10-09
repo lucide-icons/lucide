@@ -24,7 +24,6 @@ enby
 flatscreen
 flexbox
 followspot
-frigerator
 futbol
 gddr
 glassmorphism
@@ -53,7 +52,6 @@ shieldcog
 showreel
 smarthome
 solera
-sterisk
 timemachine
 timesheets
 turbowarp

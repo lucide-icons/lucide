@@ -155,7 +155,6 @@ export default defineConfig([
     },
   },
   {
-    // Validate icon and category metadata against the schema referenced by their `$schema` field.
     files: ['icons/*.json', 'categories/*.json'],
     languageOptions: {
       parser: jsoncParser,
@@ -163,8 +162,17 @@ export default defineConfig([
     plugins: {
       'json-schema': jsonSchema,
     },
+  },
+  {
+    files: ['icons/*.json'],
     rules: {
-      'json-schema/no-invalid': 'error',
+      'json-schema/no-invalid': ['error', { schema: 'icon.schema.json' }],
+    },
+  },
+  {
+    files: ['categories/*.json'],
+    rules: {
+      'json-schema/no-invalid': ['error', { schema: 'category.schema.json' }],
     },
   },
 ]);

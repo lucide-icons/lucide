@@ -4,8 +4,9 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import { getStaticJSONValue } from 'jsonc-eslint-parser';
 
 /**
- * ESLint plugin that validates JSON files against the JSON Schema (draft 2020-12) referenced by
- * their `$schema` field, reporting each error at the offending property.
+ * ESLint plugin that validates JSON files against a configured JSON Schema (draft 2020-12),
+ * reporting each error at the offending property. It also requires the file's `$schema` field to
+ * point at that schema.
  *
  * Off-the-shelf plugins (e.g. eslint-plugin-json-schema-validator) only run Ajv in draft-07 mode,
  * which silently skips 2020-12 keywords such as `dependentRequired`.
@@ -64,9 +65,19 @@ const noInvalid = {
   meta: {
     type: 'problem',
     docs: {
-      description: 'Validate JSON files against the JSON Schema referenced by `$schema`',
+      description: 'Validate JSON files against a JSON Schema and require `$schema` to point at it',
     },
-    schema: [],
+    schema: [
+      {
+        type: 'object',
+        properties: {
+          // Path to the schema, relative to the ESLint working directory (the repo root).
+          schema: { type: 'string' },
+        },
+        required: ['schema'],
+        additionalProperties: false,
+      },
+    ],
   },
   create(context) {
     return {
@@ -84,10 +95,18 @@ const noInvalid = {
           return;
         }
 
-        const schemaPath = path.resolve(path.dirname(context.filename), data.$schema);
-        if (!fs.existsSync(schemaPath)) {
-          context.report({ node: root, message: `Schema "${data.$schema}" not found.` });
-          return;
+        // Validate against the configured schema, not whatever `$schema` points at, so a file can't
+        // opt out of validation by referencing a more permissive schema.
+        const schemaPath = path.resolve(context.cwd, context.options[0].schema);
+        const expectedRef = path
+          .relative(path.dirname(context.filename), schemaPath)
+          .split(path.sep)
+          .join('/');
+        if (path.resolve(path.dirname(context.filename), data.$schema) !== schemaPath) {
+          context.report({
+            node: findNode(root, '/$schema').reportNode,
+            message: `\`$schema\` must be "${expectedRef}".`,
+          });
         }
 
         const validate = getValidator(schemaPath);
