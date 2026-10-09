@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["edik17"],
+  "contributors": [
+    "rrod497",
+    "edik17",
+    "karsa-mistmere"
+  ],
   "tags": [
-    "screw",
     "fastener",
     "hardware",
     "bolt",
@@ -10,12 +13,9 @@
     "repair",
     "assembly",
     "diy",
-    "phillips",
     "flathead"
   ],
   "categories": [
-    "tools",
-    "home",
-    "design"
+    "tools"
   ]
 }
