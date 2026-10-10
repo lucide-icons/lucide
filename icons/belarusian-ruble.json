@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "js-best"
+  ],
+  "use-cases": [
+    "Displaying prices and amounts in BYN in e-commerce apps",
+    "Selecting BYN in multi-currency pickers",
+    "Labeling account balances and transactions in BYN",
+    "Showing BYN exchange rates in currency converters"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "byn",
+    "iso4217",
+    "fiat",
+    "prices",
+    "localization",
+    "banking",
+    "checkout",
+    "wallet",
+    "exchange-rate"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "account"
+  ]
+}
