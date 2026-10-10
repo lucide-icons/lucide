@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "signalgridco"
+  ],
+  "use-cases": [
+    "Artificial intelligence",
+    "Machine learning",
+    "AI assistants",
+    "Automation",
+    "Neural networks",
+    "Generative AI"
+  ],
+  "tags": [
+    "ai",
+    "artificial intelligence",
+    "machine learning",
+    "neural network",
+    "automation",
+    "intelligence",
+    "generative",
+    "assistant",
+    "chatbot",
+    "llm",
+    "ki"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
