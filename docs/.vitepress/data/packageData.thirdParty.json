@@ -241,7 +241,7 @@
       },
       {
         "alt": "Maven Central",
-        "src": "https://img.shields.io/github/v/release/sgruendel/lucide-jte",
+        "src": "https://img.shields.io/maven-central/v/io.github.sgruendel/lucide-jte.svg",
         "href": "https://central.sonatype.com/artifact/io.github.sgruendel/lucide-jte"
       }
     ],
