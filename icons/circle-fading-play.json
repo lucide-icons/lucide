@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "tatianatsiguleva"
+    "tatianatsiguleva",
+    "jordan808",
+    "jguddas",
+    "colebemis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Indicating short-form video clips in media browsing interfaces",
