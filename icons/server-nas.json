@@ -4,26 +4,26 @@
     "benhaube"
   ],
   "use-cases": [
-    "To indicate a Network Attached Storage server in a network",
-    "To indicate the status of a Network Attached Storage server",
-    "Representing a NAS in network diagrams",
-    "Selecting a backup destination",
-    "Link to nas administration dashboard",
-    "Indicating on-premises file storage"
+    "Representing network-attached storage devices in network diagrams",
+    "Displaying the status of network-attached storage devices",
+    "Selecting network-attached storage as a backup destination",
+    "Accessing a network-attached storage administration dashboard"
   ],
   "tags": [
-    "cloud",
     "storage",
-    "nas",
     "network",
     "server",
     "backup",
-    "raid"
+    "raid",
+    "files",
+    "sharing",
+    "disk",
+    "hardware",
+    "lan",
+    "cloud"
   ],
   "categories": [
     "devices",
-    "development",
-    "connectivity",
-    "files"
+    "development"
   ]
 }
