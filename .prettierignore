@@ -29,6 +29,7 @@ integrations/**/__screenshots__
 integrations/**/.output
 integrations/**/.nitro
 integrations/**/.nuxt
+integrations/**/.svelte-kit
 
 # lucide-svelte
 packages/svelte/src/icons/*.svelte
