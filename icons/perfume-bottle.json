@@ -4,9 +4,9 @@
     "rrod497"
   ],
   "use-cases": [
-    "Product category: perfume, cosmetics, self-care",
-    "Retail store indication: duty-free, boutique",
-    "Scented vs. unscented options: skincare, lotions, deodorant"
+    "Representing fragrance and cosmetic products in retail catalogs",
+    "Indicating duty-free and boutique fragrance stores",
+    "Distinguishing scented and unscented skincare products"
   ],
   "tags": [
     "parfum",
@@ -23,7 +23,7 @@
     "cosmetic"
   ],
   "categories": [
-    "social",
+    "shopping",
     "travel"
   ]
 }
