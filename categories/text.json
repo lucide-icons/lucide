@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Text formatting",
+  "description": "Icons for letters, typography, formatting, reading, writing, and text structure.",
   "icon": "type"
 }

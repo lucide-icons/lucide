@@ -7,18 +7,18 @@ interface IconStyleContext {
   size: Ref<number>;
   strokeWidth: Ref<number>;
   color: Ref<string>;
-  absoluteStrokeWidth: Ref<boolean>;
+  nonScalingStroke: Ref<boolean>;
   isCustomized: ComputedRef<boolean>;
   resetStyle: () => void;
 }
 
-type IconStyle = Pick<IconStyleContext, 'size' | 'strokeWidth' | 'color' | 'absoluteStrokeWidth'>;
+type IconStyle = Pick<IconStyleContext, 'size' | 'strokeWidth' | 'color' | 'nonScalingStroke'>;
 
 export const STYLE_DEFAULTS = {
   size: 24,
   strokeWidth: 2,
   color: 'currentColor',
-  absoluteStrokeWidth: false,
+  nonScalingStroke: false,
 };
 
 const persistedIconStyle = {
@@ -27,11 +27,9 @@ const persistedIconStyle = {
     initOnMounted: false,
   }),
   color: useLocalStorage('icon-color', STYLE_DEFAULTS.color, { initOnMounted: false }),
-  absoluteStrokeWidth: useLocalStorage(
-    'icon-absolute-stroke-width',
-    STYLE_DEFAULTS.absoluteStrokeWidth,
-    { initOnMounted: false },
-  ),
+  nonScalingStroke: useLocalStorage('icon-non-scaling-stroke', STYLE_DEFAULTS.nonScalingStroke, {
+    initOnMounted: false,
+  }),
 };
 
 function createIconStyleContext(style: IconStyle): IconStyleContext {
@@ -40,7 +38,7 @@ function createIconStyleContext(style: IconStyle): IconStyleContext {
       style.color.value !== STYLE_DEFAULTS.color ||
       style.strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
       style.size.value !== STYLE_DEFAULTS.size ||
-      style.absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
+      style.nonScalingStroke.value !== STYLE_DEFAULTS.nonScalingStroke
     );
   });
 
@@ -48,7 +46,7 @@ function createIconStyleContext(style: IconStyle): IconStyleContext {
     style.color.value = STYLE_DEFAULTS.color;
     style.strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
     style.size.value = STYLE_DEFAULTS.size;
-    style.absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
+    style.nonScalingStroke.value = STYLE_DEFAULTS.nonScalingStroke;
   }
 
   return {
@@ -65,7 +63,7 @@ export function useIconStyle() {
     size: ref(STYLE_DEFAULTS.size),
     strokeWidth: ref(STYLE_DEFAULTS.strokeWidth),
     color: ref(STYLE_DEFAULTS.color),
-    absoluteStrokeWidth: ref(STYLE_DEFAULTS.absoluteStrokeWidth),
+    nonScalingStroke: ref(STYLE_DEFAULTS.nonScalingStroke),
   });
 }
 
@@ -79,9 +77,9 @@ if (typeof document !== 'undefined') {
       persistedIconStyle.size,
       persistedIconStyle.strokeWidth,
       persistedIconStyle.color,
-      persistedIconStyle.absoluteStrokeWidth,
+      persistedIconStyle.nonScalingStroke,
     ],
-    ([size, strokeWidth, color, absoluteStrokeWidth]) => {
+    ([size, strokeWidth, color, nonScalingStroke]) => {
       const root = document.documentElement;
       root.style.setProperty('--customize-size', String(Math.min(256, Math.max(16, size))));
       root.style.setProperty(
@@ -89,7 +87,7 @@ if (typeof document !== 'undefined') {
         String(Math.min(3, Math.max(0.5, strokeWidth))),
       );
       if (CSS.supports('color', color)) root.style.setProperty('--customize-color', color);
-      root.classList.toggle('absolute-stroke-width', absoluteStrokeWidth);
+      root.classList.toggle('non-scaling-stroke', nonScalingStroke);
     },
     { immediate: true, flush: 'sync' },
   );

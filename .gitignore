@@ -19,8 +19,9 @@ stats
 integrations/**/.react-router
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__
-integrations/**/.nuxt
 integrations/**/.output
+integrations/**/.nitro
+integrations/**/.nuxt
 outlined
 lucide-font
 packages/**/src/icons/*.js
