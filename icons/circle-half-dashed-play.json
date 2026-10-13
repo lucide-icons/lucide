@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tatianatsiguleva"
+  ],
+  "use-cases": [
+    "Indicating short videos and reels in media and social apps",
+    "Providing an entry point for a shorts or reels feed",
+    "Marking short clips generated from live streams or long recordings",
+    "Representing short-form video content in content management tools"
+  ],
+  "tags": [
+    "short videos",
+    "short video",
+    "reels",
+    "shorts",
+    "short clips",
+    "clip",
+    "stories",
+    "video",
+    "short form",
+    "vertical video",
+    "highlights",
+    "social media"
+  ],
+  "categories": [
+    "multimedia",
+    "social"
+  ]
+}
