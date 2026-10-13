@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "tatianatsiguleva"
+    "tatianatsiguleva",
+    "danielbayley",
+    "jguddas",
+    "colebemis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Indicating short videos and reels in media and social apps",
