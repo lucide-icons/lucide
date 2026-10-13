@@ -32,6 +32,7 @@ mlops
 moleskine
 nonbinary
 pantone
+parfum
 phonendoscope
 quadcopter
 reapproval
