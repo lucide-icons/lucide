@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Shapes",
+  "description": "Icons for basic geometric shapes and symbols.",
   "icon": "triangle"
 }

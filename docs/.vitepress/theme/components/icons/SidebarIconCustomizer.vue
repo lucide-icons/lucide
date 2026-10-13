@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useMounted } from '@vueuse/core';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
 import InputField from '../base/InputField.vue';
@@ -6,19 +8,24 @@ import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
 
-const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle } =
+const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
   useIconStyleContext();
+
+// The server always renders the default style. Keep the first client render identical,
+// otherwise the hydrated DOM keeps the stale `disabled` attribute on the reset button.
+const isMounted = useMounted();
+const showCustomized = computed(() => isMounted.value && isCustomized.value);
 </script>
 
 <template>
   <div
     class="customizer-card"
-    :class="{ customized: isCustomized }"
+    :class="{ customized: showCustomized }"
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
       <ResetButton
-        :disabled="!isCustomized"
+        :disabled="!showCustomized"
         @click="resetStyle"
       />
     </div>
@@ -68,13 +75,13 @@ const { color, strokeWidth, size, absoluteStrokeWidth, isCustomized, resetStyle 
     </InputField>
 
     <InputField
-      id="absolute-stroke-width"
-      label="Absolute stroke width"
+      id="non-scaling-stroke"
+      label="Non-scaling stroke"
     >
       <Switch
-        id="absolute-stroke-width-switch"
-        name="absolute-stroke-width"
-        v-model="absoluteStrokeWidth"
+        id="non-scaling-stroke-switch"
+        name="non-scaling-stroke"
+        v-model="nonScalingStroke"
       />
     </InputField>
   </div>

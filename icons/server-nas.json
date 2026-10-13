@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube"
+  ],
+  "use-cases": [
+    "Representing network-attached storage devices in network diagrams",
+    "Displaying the status of network-attached storage devices",
+    "Selecting network-attached storage as a backup destination",
+    "Accessing a network-attached storage administration dashboard"
+  ],
+  "tags": [
+    "storage",
+    "network",
+    "server",
+    "backup",
+    "raid",
+    "files",
+    "sharing",
+    "disk",
+    "hardware",
+    "lan",
+    "cloud"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
