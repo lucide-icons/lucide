@@ -284,8 +284,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       '@vitest/browser-playwright':
         specifier: 5.0.3
         version: 5.0.3(playwright@1.58.2)(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))(vitest@5.0.3)
@@ -339,8 +339,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       '@vitest/browser-playwright':
         specifier: 5.0.3
         version: 5.0.3(playwright@1.58.2)(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))(vitest@5.0.3)
@@ -382,8 +382,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       '@vitest/browser-playwright':
         specifier: 5.0.3
         version: 5.0.3(playwright@1.58.2)(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))(vitest@5.0.3)
@@ -428,8 +428,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       '@vitest/browser-playwright':
         specifier: 5.0.3
         version: 5.0.3(playwright@1.58.2)(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))(vitest@5.0.3)
@@ -465,8 +465,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       '@vitest/browser-playwright':
         specifier: 5.0.3
         version: 5.0.3(playwright@1.58.2)(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))(vitest@5.0.3)
@@ -991,8 +991,8 @@ importers:
         specifier: ^19.3.0
         version: 19.3.0
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
@@ -1045,8 +1045,8 @@ importers:
         specifier: ^19.3.0
         version: 19.3.0
       '@vitejs/plugin-react':
-        specifier: ^6.1.1
-        version: 6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+        specifier: ^6.1.2
+        version: 6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
@@ -6487,13 +6487,13 @@ packages:
     peerDependencies:
       vite: ^8.3.2
 
-  '@vitejs/plugin-react@6.1.1':
-    resolution: {integrity: sha512-yxLaQV9gkhS8ezJqCM6+ndU7mDY6gqAg75NQ+0IjwEI8IYOmQCgkRwHKVSfWXW076DsqMo0Dk+0FK1U+M5RgFw==}
+  '@vitejs/plugin-react@6.1.2':
+    resolution: {integrity: sha512-fhJNGUdscQa4HkI0xFxwonWyhnVReCPDbXI7FH7jmzpnVCrFQI7PRrhWecO263610vOrs9tr2Y4xcf8uAdFxbw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@rolldown/plugin-babel': ^0.1.7 || ^0.2.0
       babel-plugin-react-compiler: ^1.0.0
-      oxc-transform-react: ^0.145.0
+      oxc-transform-react: ^0.152.0
       vite: ^8.3.2
     peerDependenciesMeta:
       '@rolldown/plugin-babel':
@@ -19123,12 +19123,12 @@ snapshots:
     dependencies:
       vite: 8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.104.1)(sass@1.104.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
 
-  '@vitejs/plugin-react@6.1.1(vite@8.3.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))':
+  '@vitejs/plugin-react@6.1.2(vite@8.3.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
 
-  '@vitejs/plugin-react@6.1.1(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))':
+  '@vitejs/plugin-react@6.1.2(vite@8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
