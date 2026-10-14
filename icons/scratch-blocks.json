@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mc20000-01",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing a block-based code editor in educational apps",
+    "Indicating a project created with Scratch or similar block editors",
+    "Toggling a visual programming editor view in development tools",
+    "Showing integrations with block-based programming platforms"
+  ],
+  "tags": [
+    "code",
+    "blocks",
+    "scratch",
+    "turbowarp",
+    "mistwarp",
+    "visual programming",
+    "block-based",
+    "drag-and-drop",
+    "editor",
+    "education",
+    "learning",
+    "programming",
+    "kids",
+    "integration"
+  ],
+  "categories": [
+    "development"
+  ]
+}

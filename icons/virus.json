@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing viral infections in healthcare apps",
+    "Indicating malware threats in security tools",
+    "Showing disease outbreaks in public health dashboards",
+    "Labeling pathogens in biology or science content"
+  ],
+  "tags": [
+    "pathogen",
+    "infection",
+    "disease",
+    "illness",
+    "contagion",
+    "outbreak",
+    "pandemic",
+    "epidemic",
+    "covid",
+    "coronavirus",
+    "germ",
+    "microbe",
+    "microorganism",
+    "biology",
+    "medical",
+    "healthcare",
+    "malware",
+    "cybersecurity",
+    "threat"
+  ],
+  "categories": [
+    "medical",
+    "science",
+    "security"
+  ]
+}

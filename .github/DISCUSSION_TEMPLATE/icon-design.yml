@@ -1,5 +1,4 @@
-name: Icon request
-description: Suggest a new icon for this project
+title: 'Icon Request: '
 body:
   - type: markdown
     attributes:

@@ -22,7 +22,7 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @returns {Array}
  */
 export const getClassNames = (
-  attrs: Record<string, number | string | string[]> | string,
+  attrs: Record<string, number | string | string[] | undefined> | string,
 ): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';

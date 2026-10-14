@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking lactose-free or non-dairy beverages",
+    "Indicating unavailable packaged drinks in menus",
+    "Showing restricted dairy products in diet filters",
+    "Representing excluded milk products for allergies"
+  ],
+  "tags": [
+    "milk",
+    "dairy",
+    "beverage",
+    "drink",
+    "diet",
+    "lactose free",
+    "non dairy",
+    "liquid",
+    "liter",
+    "litre",
+    "pint",
+    "pints",
+    "pasteurized",
+    "skim",
+    "skimmed",
+    "container",
+    "packaging",
+    "allergy",
+    "intolerance",
+    "vegan",
+    "unavailable"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
