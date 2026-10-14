@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "lt25106"
+  ],
+  "tags": [
+    "screamer",
+    "startler",
+    "surprise",
+    "bang",
+    "exclamation mark",
+    "protected",
+    "warning",
+    "alert",
+    "ecphoneme",
+    "shriek",
+    "imperative",
+    "anger",
+    "danger",
+    "slammer",
+    "factorial",
+    "humour",
+    "hidden",
+    "emphasis",
+    "click",
+    "negation",
+    "excellent",
+    "interjection",
+    "gasper",
+    "good"
+  ],
+  "categories": [
+    "notifications"
+  ],
+  "use-cases": []
+}
