@@ -16,6 +16,6 @@
   <LucideProvider>
     <House data-testid="provider-icon" />
   </LucideProvider>
-  <Pen data-testid="alias-icon" />
-  <Edit2 data-testid="canonical-icon" />
+  <Pen data-testid="canonical-icon" />
+  <Edit2 data-testid="alias-icon" />
 </main>
