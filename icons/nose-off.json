@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating loss of smell or anosmia",
+    "Marking scent-free products or spaces",
+    "Showing blocked breathing or nasal congestion",
+    "Identifying reduced fragrance sensitivity"
+  ],
+  "tags": [
+    "smell",
+    "scent",
+    "odor",
+    "anosmia",
+    "smell loss",
+    "scent free",
+    "congestion",
+    "breathing",
+    "allergy",
+    "olfactory",
+    "accessibility"
+  ],
+  "categories": [
+    "medical",
+    "accessibility"
+  ]
+}
