@@ -78,6 +78,8 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
+[//]: <> (Sponsor tiers start)
+
 ### Hero backers 🦸
 
 <a href="https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
@@ -90,6 +92,8 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 ### Backers ☕
 
 <a href="https://www.fina.money/"><img src="https://lucide.dev/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 

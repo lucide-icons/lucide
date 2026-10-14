@@ -90,6 +90,8 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
+[//]: <> (Sponsor tiers start)
+
 ### Hero backers 🦸
 
 <a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
@@ -102,6 +104,8 @@ Thank you to all the people who contributed to Lucide!
 ### Backers ☕
 
 <a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 
