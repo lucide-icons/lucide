@@ -4,6 +4,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "reflect",
     "mirror",
@@ -18,8 +19,7 @@
     {
       "name": "flip-vertical",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -1,0 +1,41 @@
+<svg width="320" height="149" viewBox="0 0 320 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2004_21485)">
+<g filter="url(#filter0_d_2004_21485)">
+<rect width="320" height="64" transform="translate(0 85)" fill="white" fill-opacity="0.01"/>
+<rect opacity="0.1" x="19" y="102" width="44" height="30" rx="15" fill="#00AAFF"/>
+<path d="M43.75 126V118C43.75 117.735 43.6446 117.48 43.4571 117.293C43.2696 117.105 43.0152 117 42.75 117H38.75C38.4848 117 38.2304 117.105 38.0429 117.293C37.8554 117.48 37.75 117.735 37.75 118V126" stroke="#00AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.75 115C31.7499 114.71 31.8133 114.422 31.9358 114.158C32.0582 113.894 32.2368 113.66 32.459 113.472L39.459 107.472C39.82 107.167 40.2774 107 40.75 107C41.2226 107 41.68 107.167 42.041 107.472L49.041 113.472C49.2632 113.66 49.4418 113.894 49.5642 114.158C49.6867 114.422 49.7501 114.71 49.75 115V124C49.75 124.531 49.5393 125.04 49.1642 125.415C48.7891 125.79 48.2804 126 47.75 126H33.75C33.2196 126 32.7109 125.79 32.3358 125.415C31.9607 125.04 31.75 124.531 31.75 124V115Z" stroke="#00AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M118.518 126C118.693 126.304 118.946 126.556 119.25 126.732C119.554 126.908 119.899 127 120.25 127C120.601 127 120.946 126.908 121.25 126.732C121.554 126.556 121.806 126.304 121.982 126" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M111.512 120.326C111.382 120.469 111.295 120.647 111.264 120.839C111.233 121.03 111.258 121.226 111.336 121.403C111.414 121.581 111.542 121.732 111.705 121.837C111.867 121.943 112.056 122 112.25 122H128.25C128.444 122 128.634 121.944 128.796 121.838C128.959 121.732 129.087 121.582 129.165 121.405C129.244 121.227 129.269 121.031 129.238 120.84C129.207 120.648 129.121 120.47 128.99 120.327C127.66 118.956 126.25 117.499 126.25 113C126.25 111.409 125.618 109.883 124.493 108.757C123.368 107.632 121.842 107 120.25 107C118.659 107 117.133 107.632 116.008 108.757C114.882 109.883 114.25 111.409 114.25 113C114.25 117.499 112.839 118.956 111.512 120.326Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M195.75 107V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M203.75 107V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M206.75 108H192.75C191.645 108 190.75 108.895 190.75 110V124C190.75 125.105 191.645 126 192.75 126H206.75C207.855 126 208.75 125.105 208.75 124V110C208.75 108.895 207.855 108 206.75 108Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190.75 114H208.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M195.75 118H195.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M199.75 118H199.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M203.75 118H203.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M195.75 122H195.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M199.75 122H199.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M203.75 122H203.76" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M285.175 125.056C284.951 123.646 284.231 122.362 283.145 121.435C282.058 120.508 280.677 119.999 279.249 119.999C277.821 119.999 276.44 120.509 275.354 121.436C274.268 122.363 273.548 123.647 273.324 125.057" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M279.25 120C281.459 120 283.25 118.209 283.25 116C283.25 113.791 281.459 112 279.25 112C277.041 112 275.25 113.791 275.25 116C275.25 118.209 277.041 120 279.25 120Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M279.25 127C284.773 127 289.25 122.523 289.25 117C289.25 111.477 284.773 107 279.25 107C273.727 107 269.25 111.477 269.25 117C269.25 122.523 273.727 127 279.25 127Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect width="320" height="85" fill="#010101" fill-opacity="0.3"/>
+</g>
+<defs>
+<filter id="filter0_d_2004_21485" x="-24" y="61" width="368" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="12"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2004_21485"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2004_21485" result="shape"/>
+</filter>
+<clipPath id="clip0_2004_21485">
+<rect width="320" height="149" fill="white"/>
+</clipPath>
+</defs>
+</svg>

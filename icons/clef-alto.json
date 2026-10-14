@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Labeling alto clef notation in sheet music editors",
+    "Representing viola parts in music composition or practice apps",
+    "Indicating C clef selection in notation software",
+    "Supporting clef choices in MIDI editors, instrument emulators, or music education tools"
+  ],
+  "tags": [
+    "do",
+    "c",
+    "music",
+    "note",
+    "key",
+    "soprano",
+    "mezzo",
+    "alto",
+    "staff",
+    "pitch",
+    "baritone",
+    "major",
+    "scale"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
