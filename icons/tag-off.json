@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere",
+    "Barakudum"
+  ],
+  "use-cases": [
+    "representing disabled, inactive, or missing tagging",
+    "indicating hidden or unavailable labels or tags"
+  ],
+  "tags": [
+    "label",
+    "badge",
+    "ticket",
+    "mark",
+    "price",
+    "sale",
+    "category",
+    "classification",
+    "metadata",
+    "hidden",
+    "disabled",
+    "inactive"
+  ],
+  "categories": [
+    "account",
+    "development",
+    "files"
+  ]
+}

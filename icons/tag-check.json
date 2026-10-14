@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere",
+    "Barakudum"
+  ],
+  "use-cases": [
+    "indicating validated, approved, or active tags",
+    "showing successfully assigned labels or categories"
+  ],
+  "tags": [
+    "label",
+    "badge",
+    "ticket",
+    "mark",
+    "category",
+    "classification",
+    "metadata",
+    "done",
+    "completed",
+    "verified",
+    "confirmed"
+  ],
+  "categories": [
+    "account",
+    "development",
+    "files"
+  ]
+}
