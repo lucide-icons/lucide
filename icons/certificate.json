@@ -3,6 +3,10 @@
   "contributors": [
     "rrod497"
   ],
+  "use-cases": [
+    "Representing SSL/TLS security certificates",
+    "Representing educational or professional certifications"
+  ],
   "tags": [
     "diploma",
     "official",
