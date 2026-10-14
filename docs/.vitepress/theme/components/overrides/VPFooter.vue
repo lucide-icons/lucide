@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar';
+import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js';
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 import { computed } from 'vue';
 import SurveyAskOverlay from '../SurveyAskOverlay.vue';
@@ -42,7 +42,6 @@ const links = computed(() => [
     class="VPFooter"
     :class="{ 'has-sidebar': hasSidebar }"
   >
-    <SurveyAskOverlay/>
     <div class="container">
       <div class="sponsors">
         <a

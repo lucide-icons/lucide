@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "ballot",
+    "vote",
+    "poll",
+    "referendum",
+    "political",
+    "governance",
+    "government",
+    "democracy",
+    "democratic",
+    "social",
+    "decision",
+    "decide",
+    "no",
+    "reject",
+    "spoiled",
+    "cross",
+    "incorrect",
+    "no confidence",
+    "wrong",
+    "error",
+    "output",
+    "result",
+    "log",
+    "close",
+    "remove",
+    "cancel"
+  ],
+  "categories": [
+    "layout",
+    "social",
+    "development"
+  ]
+}

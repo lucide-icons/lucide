@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sarajdhakal"
+  ],
+  "use-cases": [
+    "Displaying prices in Nepalese rupees (NPR)",
+    "Selecting Nepalese rupee in multi-currency selectors",
+    "Showing exchange rates for Nepalese rupee conversions",
+    "Indicating remittance transfers paid out in NPR"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "nepal",
+    "rupee",
+    "npr"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel"
+  ]
+}

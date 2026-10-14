@@ -209,5 +209,43 @@
     ],
     "source": "https://github.com/shx08/strapi-lucide-icons",
     "documentation": "https://github.com/shx08/strapi-lucide-icons/blob/main/README.md"
+  },
+  {
+    "name": "lucide-lit",
+    "description": "Implementation of Lucide icons as Lit web components.",
+    "icon": "/framework-logos/lit.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/@gyeonghokim/lucide-lit",
+        "href": "https://www.npmjs.com/package/@gyeonghokim/lucide-lit"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dw/@gyeonghokim/lucide-lit",
+        "href": "https://www.npmjs.com/package/@gyeonghokim/lucide-lit"
+      }
+    ],
+    "source": "https://github.com/GyeongHoKim/lucide-lit",
+    "documentation": "https://github.com/GyeongHoKim/lucide-lit/blob/main/README.md"
+  },
+  {
+    "name": "lucide-jte",
+    "description": "Implementation of Lucide icons for jte (Java Template Engine).",
+    "icon": "/framework-logos/java.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/github/v/release/sgruendel/lucide-jte",
+        "href": "https://github.com/sgruendel/lucide-jte/releases"
+      },
+      {
+        "alt": "Maven Central",
+        "src": "https://img.shields.io/maven-central/v/io.github.sgruendel/lucide-jte.svg",
+        "href": "https://central.sonatype.com/artifact/io.github.sgruendel/lucide-jte"
+      }
+    ],
+    "source": "https://github.com/sgruendel/lucide-jte",
+    "documentation": "https://github.com/sgruendel/lucide-jte/blob/main/README.md"
   }
 ]

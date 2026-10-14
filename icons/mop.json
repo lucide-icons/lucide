@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "representing floor cleaning and housekeeping tasks",
+    "indicating janitorial or sanitation services",
+    "showing cleaning supplies in home maintenance apps",
+    "showing cleaning-in-progress or wet floor warnings",
+    "representing cleaning supplies in ecommerce listings",
+    "adding housekeeping requests in hotel apps",
+    "scheduling recurring floor maintenance tasks",
+    "labeling janitorial services on property management dashboards"
+  ],
+  "tags": [
+    "cleaning",
+    "sweeping",
+    "scrubbing",
+    "housekeeping",
+    "hygiene",
+    "sanitation",
+    "chores",
+    "swab",
+    "tidy",
+    "floor",
+    "janitor",
+    "maintenance",
+    "wash",
+    "wipe",
+    "spotless",
+    "pristine",
+    "disinfect"
+  ],
+  "categories": [
+    "home",
+    "tools"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "polar",
+    "clock",
+    "wearable",
+    "wrist",
+    "strap",
+    "face",
+    "digital",
+    "touchscreen",
+    "smart",
+    "gadget",
+    "technology",
+    "mobile",
+    "loading",
+    "wait",
+    "busy",
+    "progress",
+    "spinner",
+    "spinning",
+    "throbber"
+  ],
+  "categories": [
+    "time",
+    "devices"
+  ]
+}

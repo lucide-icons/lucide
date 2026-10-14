@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "verified favorite",
+    "approved item",
+    "trusted content",
+    "featured content",
+    "recommended item",
+    "completed achievement",
+    "confirmed selection",
+    "verified bookmark",
+    "certified item",
+    "approved review"
+  ],
+  "tags": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating",
+    "check",
+    "star"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes",
+    "multimedia",
+    "weather",
+    "emoji",
+    "gaming"
+  ]
+}

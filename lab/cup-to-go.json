@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "coffee",
+    "roast",
+    "ground",
+    "blend",
+    "arabica",
+    "filter",
+    "instant",
+    "cafe",
+    "hot",
+    "drink",
+    "barista",
+    "fair trade",
+    "packaging",
+    "disposable",
+    "recycling",
+    "cardboard",
+    "plastic",
+    "take away"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
