@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "clock",
+    "wearable",
+    "wrist",
+    "strap",
+    "face",
+    "digital",
+    "touchscreen",
+    "smart",
+    "gadget",
+    "technology",
+    "mobile",
+    "battery",
+    "recharge",
+    "power",
+    "energy",
+    "zap"
+  ],
+  "categories": [
+    "time",
+    "devices"
+  ]
+}

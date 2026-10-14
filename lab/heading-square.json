@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "h1",
+    "html",
+    "markup",
+    "markdown",
+    "#",
+    "==",
+    "toolbar",
+    "formatting",
+    "styling",
+    "typography",
+    "hospital",
+    "accident",
+    "emergency",
+    "help"
+  ],
+  "categories": [
+    "text",
+    "tools",
+    "design",
+    "development",
+    "medical",
+    "shapes"
+  ]
+}

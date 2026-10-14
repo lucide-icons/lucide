@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "hairdresser",
+    "grooming",
+    "cut",
+    "shave",
+    "shop",
+    "salon",
+    "service",
+    "signage",
+    "stripes",
+    "spin",
+    "spiral",
+    "helix",
+    "twist",
+    "twirl",
+    "rotate"
+  ],
+  "categories": [
+    "maps",
+    "medical",
+    "people",
+    "social"
+  ]
+}

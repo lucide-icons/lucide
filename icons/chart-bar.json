@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "statistics",
     "analytics",
@@ -17,8 +18,7 @@
     {
       "name": "bar-chart-horizontal",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

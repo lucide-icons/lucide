@@ -1,11 +1,17 @@
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
 
+export interface Alias {
+  name: string;
+  deprecationReason: string;
+  deprecated: boolean;
+}
+
 export interface IconMetaData {
   tags: string[];
   categories: string[];
   contributors: string[];
-  aliases?: string[];
+  aliases?: Alias[];
   deprecated?: boolean;
   deprecationReason?: string;
   toBeRemovedInVersion?: string;
@@ -18,11 +24,15 @@ export interface IconEntity extends IconMetaData {
   externalLibrary?: ExternalLibs;
   createdRelease?: Release;
   changedRelease?: Release;
+  fromFork?: boolean;
+  awaitingRelease?: boolean;
+  popularity?: number;
 }
 
 export interface Category {
   name: string;
   title: string;
+  description: string;
   icon?: string;
   iconCount: number;
   icons?: IconEntity[];
@@ -42,7 +52,8 @@ export interface PackageItem {
   packageDirname?: string;
   description: string;
   icon: string;
-  iconDark: string;
+  iconDark?: string;
+  iconClass?: string;
   shields: Shield[];
   source: string;
   documentation: string;

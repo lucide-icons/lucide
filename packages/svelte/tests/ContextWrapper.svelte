@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Smile from '../src/icons/smile.svelte';
+  import FaceSlightlySmiling from '../src/icons/face-slightly-smiling.svelte';
   import { setLucideProps } from '../src/lucide-svelte.js';
 
   setLucideProps({
@@ -10,6 +10,6 @@
   });
 </script>
 
-<Smile aria-label="smile">
+<FaceSlightlySmiling aria-label="smile">
   <text>Test</text>
-</Smile>
+</FaceSlightlySmiling>

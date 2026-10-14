@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "daboudii",
+    "timmy471",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing polygon geometry in drawing tools",
+    "Indicating area boundaries on maps",
+    "Editing vector shapes in design software",
+    "Working with GIS regions or coordinate data"
+  ],
+  "tags": [
+    "map",
+    "vector",
+    "geometry",
+    "coordinates",
+    "shape",
+    "location",
+    "boundary",
+    "area",
+    "region",
+    "gis",
+    "geospatial",
+    "vertices",
+    "points",
+    "outline",
+    "drawing",
+    "design",
+    "math"
+  ],
+  "categories": [
+    "design",
+    "math",
+    "shapes"
+  ]
+}

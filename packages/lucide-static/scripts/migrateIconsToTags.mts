@@ -9,7 +9,7 @@ const icons = await readAllMetadata(ICONS_DIR);
 
 const tags = Object.keys(icons)
   .sort()
-  .reduce((acc, iconName) => {
+  .reduce<Record<string, string[]>>((acc, iconName) => {
     acc[iconName] = icons[iconName].tags;
     return acc;
   }, {});

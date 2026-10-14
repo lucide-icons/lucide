@@ -2,13 +2,28 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "it-is-not",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Managing cookie consent or privacy preferences",
+    "Representing website cookies and browser storage",
+    "Indicating cookie settings in privacy or security interfaces",
+    "Representing cookies as food in recipes, menus or food-related interfaces"
   ],
   "tags": [
     "biscuit",
+    "snack",
+    "dessert",
+    "food",
+    "sweet",
+    "bakery",
+    "consent",
     "privacy",
     "legal",
-    "food"
+    "tracking",
+    "browser",
+    "website"
   ],
   "categories": [
     "account",

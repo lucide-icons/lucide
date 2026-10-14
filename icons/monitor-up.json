@@ -5,14 +5,19 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "tv",
+    "computer",
     "screen",
     "display",
+    "desktop",
+    "external display",
     "upload",
     "connect",
     "remote",
-    "screen share"
+    "screen sharing",
+    "cast"
   ],
   "categories": [
     "connectivity",

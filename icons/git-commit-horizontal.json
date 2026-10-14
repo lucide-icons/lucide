@@ -5,6 +5,7 @@
     "ericfennis",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "version control",
@@ -20,8 +21,7 @@
     {
       "name": "git-commit",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

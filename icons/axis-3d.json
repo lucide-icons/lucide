@@ -4,6 +4,7 @@
     "lscheibel",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "gizmo",
     "coordinates"
@@ -15,8 +16,7 @@
     {
       "name": "axis-3-d",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

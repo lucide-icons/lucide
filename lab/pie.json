@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "tart",
+    "quiche",
+    "patty",
+    "flan",
+    "strudel",
+    "bakery",
+    "pastry",
+    "homemade",
+    "hot",
+    "steaming",
+    "cookery",
+    "oven"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

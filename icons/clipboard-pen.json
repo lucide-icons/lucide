@@ -5,6 +5,7 @@
     "ericfennis",
     "Spleefies"
   ],
+  "use-cases": [],
   "tags": [
     "paste",
     "signature"
@@ -16,8 +17,7 @@
     {
       "name": "clipboard-edit",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

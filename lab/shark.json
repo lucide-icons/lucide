@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "pectoral",
+    "fishing",
+    "infested",
+    "waters",
+    "warning",
+    "danger",
+    "alert",
+    "jaws",
+    "attack",
+    "aquatic",
+    "encounter",
+    "marine life",
+    "tourism",
+    "seaside",
+    "beach",
+    "ocean",
+    "depth",
+    "deep"
+  ],
+  "categories": [
+    "animals",
+    "travel"
+  ]
+}

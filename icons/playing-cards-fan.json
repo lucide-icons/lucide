@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing a player's hand in card games",
+    "Showing planning poker estimates in agile tools",
+    "Displaying icebreaker prompts in conversation apps",
+    "Marking spread or revealed collectible cards"
+  ],
+  "tags": [
+    "deck",
+    "fan",
+    "spread",
+    "hand",
+    "deal",
+    "dealt",
+    "draw",
+    "shuffle",
+    "tabletop",
+    "planning poker",
+    "scrum",
+    "agile",
+    "estimation",
+    "estimate",
+    "prompt",
+    "icebreaker",
+    "conversation",
+    "collectible",
+    "collection",
+    "trading",
+    "poker",
+    "casino",
+    "game",
+    "gambling",
+    "suit"
+  ],
+  "categories": [
+    "gaming",
+    "development",
+    "social"
+  ]
+}
