@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating heading text formatting",
+    "marking hospital locations",
+    "representing hydrogen in scientific contexts",
+    "indicating hours in time contexts",
+    "representing height in measurements"
+  ],
+  "tags": [
+    "h1",
+    "html",
+    "markup",
+    "markdown",
+    "alphabet",
+    "character",
+    "uppercase",
+    "heading",
+    "hospital",
+    "hydrogen",
+    "chemistry",
+    "hour",
+    "time",
+    "height",
+    "measurement",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "heading"
+    }
+  ]
+}

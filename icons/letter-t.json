@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "representing tesla units in magnetic contexts",
+    "indicating temperature values",
+    "representing tonne units in measurements",
+    "representing time values"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "tesla",
+    "magnetism",
+    "temperature",
+    "tonne",
+    "measurement",
+    "time",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}
