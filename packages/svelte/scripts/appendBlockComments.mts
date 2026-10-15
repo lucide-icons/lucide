@@ -14,20 +14,20 @@ const files = await readdir(targetDirectory, {
   encoding: 'utf-8',
 });
 
-// eslint-disable-next-line no-restricted-syntax
+ 
 for (const file of files) {
   const filepath = path.join(targetDirectory, file);
   const filestat = lstatSync(filepath);
 
-  // eslint-disable-next-line no-continue
+   
   if (filestat.isFile() === false || filestat.isDirectory()) continue;
 
-  // eslint-disable-next-line no-await-in-loop
+   
   const contents = (await readFile(filepath, { encoding: 'utf-8' })) as unknown as string;
   const ext = path.extname(filepath);
 
   if (/\.(js|mjs|cjs|ts)/.test(ext)) {
-    // eslint-disable-next-line no-await-in-loop
+     
     await writeFile(filepath, jsBanner + contents, { encoding: 'utf-8' });
   }
 }

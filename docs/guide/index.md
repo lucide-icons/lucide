@@ -26,11 +26,11 @@ In addition to design, code is also important. Assets like icons can significant
 
 Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
 
-However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](./accessibility.md).
+However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](../how-to/accessibility.md).
 
 ## Official Packages
 
-Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte), [Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/angular), [Astro](https://lucide.dev/guide/packages/lucide-astro), and [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs).
+Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](./lucide/index.md), [React](./react/index.md), [React Native](./react-native/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Preact](./preact/index.md), [Solid](./solid/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), and [Static](./static/index.md).
 
 ## Community
 

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { type JSX } from 'react';
 
 interface BackdropProps {
   src: string;

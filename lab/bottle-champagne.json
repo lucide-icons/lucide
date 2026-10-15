@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "alcohol",
+    "drink",
+    "glass",
+    "bubbly",
+    "sparkling",
+    "fizzy",
+    "bar",
+    "party",
+    "special occasion",
+    "celebration",
+    "victory",
+    "champion",
+    "luxury",
+    "nightclub",
+    "nightlife",
+    "sommelier",
+    "restaurant"
+  ],
+  "categories": [
+    "food-beverage",
+    "social"
+  ]
+}

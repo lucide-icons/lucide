@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "snack",
+    "meal",
+    "lunch",
+    "juice",
+    "smoothie",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet",
+    "fruit machine",
+    "slots",
+    "gambling",
+    "jackpot"
+  ],
+  "categories": [
+    "food-beverage",
+    "gaming"
+  ]
+}

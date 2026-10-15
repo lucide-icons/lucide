@@ -5,7 +5,10 @@ import { render } from './utils';
 
 describe('Using createLucideIcon', () => {
   it('should create a component from an iconNode', async () => {
-    const AirVent = createLucideIcon('AirVent', airVent);
+    const AirVent = createLucideIcon({
+      name: 'air-vent',
+      node: airVent,
+    });
     const { container } = await render(AirVent);
 
     expect(container.innerHTML).toBeDefined();

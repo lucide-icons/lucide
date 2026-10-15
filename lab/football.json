@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "rugby",
+    "american",
+    "touchdown",
+    "kick",
+    "pitch",
+    "team",
+    "goal",
+    "score",
+    "bounce",
+    "super bowl",
+    "nfl"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
