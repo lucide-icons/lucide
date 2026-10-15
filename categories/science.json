@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Science",
+  "description": "Icons for science, research, experiments, instruments, formulas, and discovery.",
   "icon": "flask-conical"
 }

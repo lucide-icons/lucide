@@ -4,7 +4,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "representing first place, championship wins, or competition victories",
+    "showing achievements, milestones, or completed challenge rewards",
+    "marking leaderboard positions, rankings, or tournament results",
+    "indicating prizes, awards, or recognition in sports and games",
+    "highlighting success states, personal bests, or celebratory accomplishments"
+  ],
   "tags": [
     "prize",
     "sports",
@@ -13,7 +19,16 @@
     "award",
     "champion",
     "celebration",
-    "victory"
+    "victory",
+    "competition",
+    "tournament",
+    "leaderboard",
+    "ranking",
+    "success",
+    "reward",
+    "cup",
+    "first",
+    "gold"
   ],
   "categories": [
     "sports",
