@@ -27,7 +27,7 @@ defineProps({
 
 <style scoped>
 .fake-input {
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-alt);
   border-radius: 8px;
   color: var(--vp-c-text-2);
   padding: 11px 16px;
