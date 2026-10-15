@@ -8,20 +8,26 @@ const loaded = ref(false)
 </script>
 
 <script lang="ts" setup>
-import '@docsearch/css'
+import '@docsearch/css/dist/style.css'
 import {
+  computed,
   defineAsyncComponent,
   onMounted,
   onUnmounted,
 } from 'vue'
 import type { DefaultTheme } from 'vitepress/theme'
 
-import { useData } from 'vitepress/dist/client/theme-default/composables/data'
+import { useData } from 'vitepress'
 import FakeInput from '../base/FakeInput.vue'
 
 const VPAlgoliaSearchBox = defineAsyncComponent(() => import('vitepress/dist/client/theme-default/components/VPAlgoliaSearchBox.vue'));
 
-const { theme, page } = useData()
+const { theme } = useData<DefaultTheme.Config>()
+
+const algolia = computed(
+  () =>
+    (theme.value.search?.options ?? theme.value.algolia) as DefaultTheme.AlgoliaSearchOptions,
+)
 
 // whether this instance is the one rendering the (hidden) search box
 const isOwner = ref(false)
@@ -39,10 +45,7 @@ const preconnect = () => {
     const preconnect = document.createElement('link')
     preconnect.id = id
     preconnect.rel = 'preconnect'
-    preconnect.href = `https://${
-      ((theme.value.search?.options as DefaultTheme.AlgoliaSearchOptions) ??
-        theme.value.algolia)!.appId
-    }-dsn.algolia.net`
+    preconnect.href = `https://${algolia.value.appId}-dsn.algolia.net`
     preconnect.crossOrigin = ''
     document.head.appendChild(preconnect)
   })
@@ -126,7 +129,7 @@ function isEditingContent(event: KeyboardEvent): boolean {
 
     <!-- docsearch renders its own button here; we only need its modal -->
     <div v-if="isOwner" class="docsearch-host">
-      <VPAlgoliaSearchBox :algolia="theme.search?.options ?? theme.algolia" />
+      <VPAlgoliaSearchBox :algolia="algolia" />
     </div>
   </div>
 </template>

@@ -10,14 +10,14 @@ import HomeHeroInfoBefore from './components/home/HomeHeroInfoBefore.vue';
 import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle';
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView';
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
-import FrameworkSelect from './components/guide/FrameworkSelect.vue';
+import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'sidebar-nav-before': () => h(FrameworkSelect),
+      'sidebar-nav-before': () => h(SideBarNavBefore),
       'home-hero-info-before': () => h(HomeHeroInfoBefore),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),

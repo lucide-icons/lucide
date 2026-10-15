@@ -30,6 +30,7 @@
   "author": "Eric Fennis",
   "license": "ISC",
   "devDependencies": {
+    "@docsearch/js": "3.8.2",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/shared": "workspace:*",
