@@ -5,13 +5,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "marking fediverse or ActivityPub profile links that are interoperable across platforms",
-    "representing the asterism typographic symbol (⁂) in text or publishing tools",
-    "indicating decentralized social network handles in blogs and about pages",
-    "labeling federation or multi-platform follow actions in social clients",
-    "decorative divider between sections in articles or posts",
-    "marking typographic ornaments or footnote groups in publishing templates",
-    "representing star patterns or constellations in astronomy or stargazing apps"
+    "Marking interoperable Fediverse profile links in social clients",
+    "Representing a three-star typographic symbol in publishing tools",
+    "Separating article sections with a decorative typographic mark",
+    "Representing star patterns in astronomy apps"
   ],
   "tags": [
     "asterisk",
