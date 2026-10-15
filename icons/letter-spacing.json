@@ -3,8 +3,11 @@
   "contributors": [
     "madebyoz"
   ],
+  "use-cases": [
+    "Adjusting spacing between characters in text editors and design tools"
+  ],
   "tags": [
-    "spacing",
+    "tracking",
     "kerning",
     "design",
     "lettering",
@@ -12,7 +15,8 @@
     "letters",
     "characters",
     "font",
-    "typography"
+    "typography",
+    "formatting"
   ],
   "categories": [
     "text"
