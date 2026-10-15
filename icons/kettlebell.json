@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["PrimeTestLab"],
+  "use-cases": [
+    "gym or fitness app workout category",
+    "strength training exercise list",
+    "sports equipment shop"
+  ],
+  "tags": ["gym", "fitness", "workout", "exercise", "weight", "training", "strength", "sport", "crossfit", "kettle bell"],
+  "categories": ["sports", "gaming"]
+}
