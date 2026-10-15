@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Adding a fragrance product to a cart or wishlist",
+    "Adding a new perfume to a beauty product catalog",
+    "Creating a new scent entry in a cosmetics inventory"
+  ],
+  "tags": [
+    "perfume",
+    "fragrance",
+    "cologne",
+    "scent",
+    "add",
+    "new",
+    "create",
+    "cosmetics",
+    "beauty"
+  ],
+  "categories": [
+    "shopping",
+    "travel"
+  ]
+}
