@@ -69,6 +69,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarSearch.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
@@ -124,6 +130,14 @@ export default defineConfig({
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
+    },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'R7KKMCPXOB',
+        apiKey: 'dd3101054267d35fb28f49c42715f1aa',
+        indexName: 'lucide'
+      }
     },
     carbonAds: {
       code: 'CWYIC53U',

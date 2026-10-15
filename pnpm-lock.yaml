@@ -134,6 +134,9 @@ importers:
 
   docs:
     dependencies:
+      '@docsearch/css':
+        specifier: 3.8.2
+        version: 3.8.2
       '@floating-ui/vue':
         specifier: ^2.0.1
         version: 2.0.1(vue@3.5.43(typescript@6.0.3))
