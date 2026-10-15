@@ -42,6 +42,9 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
+        with:
+          # The checkout is the base branch, so the PR head commit isn't available locally.
+          use_rest_api: true
 
       - name: Generate PR title
         id: generate
