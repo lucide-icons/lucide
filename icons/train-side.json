@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "SlDo"
+  ],
+  "tags": [
+    "station",
+    "transportation",
+    "vehicle",
+    "commute",
+    "travel",
+    "rail",
+    "liner",
+    "passenger",
+    "train",
+    "railway"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
