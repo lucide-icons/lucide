@@ -14,7 +14,6 @@ interface GenerateIconFiles {
   iconFileExtension?: string;
   separateIconFileExport?: boolean;
   separateIconFileExportExtension?: string;
-  exportIconData?: boolean;
   pretty?: boolean;
   iconsDir: string;
   iconMetaData: Record<string, IconMetadata>;
@@ -28,7 +27,6 @@ function generateIconFiles({
   iconFileExtension = '.js',
   separateIconFileExport = false,
   separateIconFileExportExtension,
-  exportIconData = false,
   pretty = true,
   iconsDir,
   iconMetaData,
@@ -88,8 +86,7 @@ function generateIconFiles({
     await fs.promises.writeFile(location, output, 'utf-8');
 
     if (separateIconFileExport) {
-      const exportList = exportIconData ? 'default, __iconData, __iconNode' : 'default';
-      const output = `export { ${exportList} } from "./${iconName}${iconFileExtension}";\n`;
+      const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
       const location = path.join(
         iconsDistDirectory,
         `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,

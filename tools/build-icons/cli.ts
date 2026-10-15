@@ -28,7 +28,6 @@ interface CliArguments {
   separateAliasesFileIgnore?: string;
   separateIconFileExport?: boolean;
   separateIconFileExportExtension?: string;
-  exportIconData?: boolean;
   aliasesFileExtension?: string;
   aliasImportFileExtension?: string;
   useDefaultExports?: boolean;
@@ -62,7 +61,6 @@ const {
   separateAliasesFileIgnore = undefined,
   separateIconFileExport = false,
   separateIconFileExportExtension = undefined,
-  exportIconData = false,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
   useDefaultExports = true,
@@ -91,7 +89,6 @@ async function buildIcons() {
     iconFileExtension,
     separateIconFileExport,
     separateIconFileExportExtension,
-    exportIconData,
     pretty: JSON.parse(String(pretty)),
     iconsDir: ICONS_DIR,
     iconMetaData,
@@ -109,7 +106,6 @@ async function buildIcons() {
       separateAliasesFile,
       separateAliasesFileExtension,
       separateAliasesFileIgnore,
-      exportIconData,
       showLog: !silent,
     });
   }
