@@ -8,6 +8,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "person",
     "account",
@@ -15,7 +16,8 @@
     "find",
     "scan",
     "magnifier",
-    "magnifying glass"
+    "magnifying glass",
+    "lens"
   ],
   "categories": [
     "account",

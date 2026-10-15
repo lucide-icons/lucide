@@ -5,6 +5,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "stack",
     "pile",
@@ -21,6 +22,7 @@
   "aliases": [
     {
       "name": "layers-3",
+      "deprecated": true,
       "deprecationReason": "alias.duplicate"
     }
   ]

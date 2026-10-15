@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "password",
     "secret",
@@ -21,6 +22,10 @@
     "development"
   ],
   "aliases": [
-    "asterisk-square"
+    {
+      "name": "asterisk-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

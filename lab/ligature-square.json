@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "toolbar",
+    "button",
+    "formatting",
+    "styling",
+    "typography",
+    "fonts",
+    "font book",
+    "collection",
+    "slab serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "alternates",
+    "alternatives",
+    "variants",
+    "variations",
+    "fi"
+  ],
+  "categories": [
+    "text",
+    "tools",
+    "design",
+    "shapes"
+  ]
+}

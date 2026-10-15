@@ -1,14 +1,20 @@
-import { IconEntity } from '../../.vitepress/theme/types';
+import iconNodes from '../../.vitepress/data/lab/iconNodes';
+import iconPopularity from '../../.vitepress/data/lab/iconPopularity';
+import iconMetaData from '../../.vitepress/data/lab/iconMetaData';
 
 export default {
   paths: async () => {
-    const iconDetailsResponse = await fetch('https://lab.lucide.dev/api/icon-details');
-    const iconDetails = (await iconDetailsResponse.json()) as Record<string, IconEntity>;
+    return Object.entries(iconNodes).map(([name, iconNode]) => {
+      const iconDetails = iconMetaData[name];
 
-    return Object.values(iconDetails).map((iconEntity) => {
+      delete iconDetails['$schema'];
+
       const params = {
+        name,
+        iconNode,
         externalLibrary: 'lab',
-        ...iconEntity,
+        popularity: iconPopularity[name]?.count ?? 0,
+        ...iconDetails,
       };
 
       return {

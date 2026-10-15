@@ -8,6 +8,14 @@
     }
   },
   {
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/",
+    "image": {
+      "light": "/company-logos/mdn-light.svg",
+      "dark": "/company-logos/mdn-dark.svg"
+    }
+  },
+  {
     "name": "Supabase",
     "url": "https://supabase.com",
     "image": {
@@ -24,27 +32,19 @@
     }
   },
   {
+    "name": "Nuxt",
+    "url": "https://nuxt.com/",
+    "image": {
+      "light": "/company-logos/nuxt-light.svg",
+      "dark": "/company-logos/nuxt-dark.svg"
+    }
+  },
+  {
     "name": "Open Collective",
     "url": "https://opencollective.com",
     "image": {
       "light": "/company-logos/open-collective-light.svg",
       "dark": "/company-logos/open-collective-dark.svg"
-    }
-  },
-  {
-    "name": "Super",
-    "url": "https://super.so",
-    "image": {
-      "light": "/company-logos/super-light.svg",
-      "dark": "/company-logos/super-dark.svg"
-    }
-  },
-  {
-    "name": "Noodle",
-    "url": "https://noodle.run/",
-    "image": {
-      "light": "/company-logos/noodle-light.svg",
-      "dark": "/company-logos/noodle-dark.svg"
     }
   }
 ]

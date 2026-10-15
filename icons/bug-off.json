@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "issue",
+    "fixed",
+    "resolved",
+    "testing",
     "debug",
     "code",
     "insect",

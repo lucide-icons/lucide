@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Youya-ui"
+  ],
+  "use-cases": [],
+  "tags": [
+    "footwear",
+    "sports",
+    "running",
+    "athletic",
+    "shoe",
+    "sneaker",
+    "training",
+    "exercise",
+    "fitness"
+  ],
+  "categories": [
+    "sports"
+  ]
+}

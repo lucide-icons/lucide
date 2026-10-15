@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "internet",
     "network",

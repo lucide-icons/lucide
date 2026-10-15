@@ -5,6 +5,7 @@
     "chessurisme",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "table",
     "rows",
@@ -29,6 +30,10 @@
     "math"
   ],
   "aliases": [
-    "grid-2-x-2-plus"
+    {
+      "name": "grid-2-x-2-plus",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

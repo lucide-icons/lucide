@@ -1,6 +1,6 @@
 type Booleanish = boolean | 'true' | 'false';
 
-interface AriaAttributes {
+export interface AriaAttributes {
   'aria-activedescendant'?: string | undefined;
   'aria-atomic'?: Booleanish | undefined;
   'aria-autocomplete'?: 'none' | 'inline' | 'list' | 'both' | undefined;
@@ -11,15 +11,7 @@ interface AriaAttributes {
   'aria-colspan'?: number | undefined;
   'aria-controls'?: string | undefined;
   'aria-current'?:
-    | boolean
-    | 'false'
-    | 'true'
-    | 'page'
-    | 'step'
-    | 'location'
-    | 'date'
-    | 'time'
-    | undefined;
+    boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time' | undefined;
   'aria-describedby'?: string | undefined;
   'aria-details'?: string | undefined;
   'aria-disabled'?: Booleanish | undefined;
@@ -29,15 +21,7 @@ interface AriaAttributes {
   'aria-flowto'?: string | undefined;
   'aria-grabbed'?: Booleanish | undefined;
   'aria-haspopup'?:
-    | boolean
-    | 'false'
-    | 'true'
-    | 'menu'
-    | 'listbox'
-    | 'tree'
-    | 'grid'
-    | 'dialog'
-    | undefined;
+    boolean | 'false' | 'true' | 'menu' | 'listbox' | 'tree' | 'grid' | 'dialog' | undefined;
   'aria-hidden'?: Booleanish | undefined;
   'aria-invalid'?: boolean | 'false' | 'true' | 'grammar' | 'spelling' | undefined;
   'aria-keyshortcuts'?: string | undefined;

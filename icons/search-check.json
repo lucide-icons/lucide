@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
@@ -11,7 +12,13 @@
     "found",
     "correct",
     "complete",
-    "tick"
+    "tick",
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
   ],
   "categories": [
     "text",

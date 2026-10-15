@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AlexNaskida",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "tools",
+    "maintenance",
+    "repair"
+  ],
+  "categories": [
+    "tools",
+    "development",
+    "home"
+  ]
+}

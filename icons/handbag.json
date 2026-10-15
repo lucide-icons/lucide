@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "bag",
+    "baggage",
+    "carry",
+    "clutch",
+    "fashion",
+    "luggage",
+    "purse",
+    "tote",
+    "travel"
+  ],
+  "categories": [
+    "shopping",
+    "transportation"
+  ]
+}

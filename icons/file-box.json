@@ -4,12 +4,36 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [
+    "representing 3D model files such as OBJ, STL, FBX, or GLTF",
+    "indicating CAD and engineering model documents",
+    "showing printable or manufacturable 3D assets",
+    "identifying files containing digital product models"
+  ],
   "tags": [
+    "document",
+    "page",
+    "sheet",
+    "cube",
     "box",
+    "3d",
+    "model",
+    "asset",
+    "object",
+    "geometry",
+    "mesh",
+    "ar",
+    "augmented reality",
+    "cad",
+    "design",
+    "blueprint",
+    "draft",
     "package",
-    "model"
+    "scene"
   ],
   "categories": [
-    "files"
+    "files",
+    "design",
+    "development"
   ]
 }

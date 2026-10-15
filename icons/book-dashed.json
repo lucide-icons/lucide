@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "coding",
@@ -25,6 +26,10 @@
     "development"
   ],
   "aliases": [
-    "book-template"
+    {
+      "name": "book-template",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

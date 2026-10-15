@@ -8,12 +8,18 @@
     "noEmit": true,
     "isolatedModules": true,
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@lucide/shared": ["../shared/src/index.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"]
+    },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom/vitest"]
   },
   "exclude": ["node_modules"],
+  "include": ["src", "tests", "__mocks__", "vitest.config.mts"]
 }

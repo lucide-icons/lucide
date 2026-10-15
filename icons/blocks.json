@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "addon",
     "plugin",
@@ -14,10 +16,13 @@
     "toys",
     "kids",
     "children",
-    "learning"
+    "learning",
+    "squares",
+    "corner"
   ],
   "categories": [
     "development",
+    "layout",
     "shapes"
   ]
 }

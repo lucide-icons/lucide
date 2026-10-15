@@ -16,10 +16,6 @@
     "title": "Arrows"
   },
   {
-    "name": "brands",
-    "title": "Brands"
-  },
-  {
     "name": "buildings",
     "title": "Buildings"
   },
@@ -101,11 +97,11 @@
   },
   {
     "name": "navigation",
-    "title": "Navigation"
+    "title": "Navigation & Places"
   },
   {
     "name": "notifications",
-    "title": "Notification"
+    "title": "Notifications"
   },
   {
     "name": "people",

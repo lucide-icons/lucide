@@ -1,78 +1,102 @@
 <script setup lang="ts">
-import type { IconEntity } from '../../types'
-import { computed } from 'vue'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import IconButton from '../base/IconButton.vue';
+import type { IconEntity } from '../../types';
+import { computed } from 'vue';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
+import Button from '../base/Button.vue';
 import IconContributors from './IconContributors.vue';
 import IconPreview from './IconPreview.vue';
-import { x, expand } from '../../../data/iconNodes'
+import { x, expand } from '../../../data/iconNodes';
 import { useRouter } from 'vitepress';
 import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
 import { satisfies } from 'semver';
 import { useExternalLibs } from '../../composables/useExternalLibs';
+import EditInStudioButton from './EditInStudioButton.vue';
 
 const props = defineProps<{
-  iconName: string | null
-}>()
+  iconName: string | null;
+}>();
 
-const { externalIconNodes } = useExternalLibs()
+const { externalIconNodes } = useExternalLibs();
 
-const { go } = useRouter()
+const { go } = useRouter();
 
 const icon = computedAsync<IconEntity | null>(async () => {
   if (props.iconName) {
     try {
       if (props.iconName.includes(':')) {
-        const [library, name] = props.iconName.split(':')
+        const [library, name] = props.iconName.split(':');
 
-        return externalIconNodes.value[library].find((icon) => icon.name === name)
+        return externalIconNodes.value[library].find((icon) => icon.name === name);
       } else {
-        return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+        return (await import(`../../../data/iconDetails/${props.iconName}.ts`))
+          .default as IconEntity;
       }
     } catch (err) {
       if (!props.iconName.includes(':')) {
-        go(`/icons/${props.iconName}`)
+        go(`/icons/${props.iconName}`);
       }
     }
   }
-  return null
-}, null)
+  return null;
+}, null);
 
-const emit = defineEmits(['close'])
-const isOpen = computed(() => !!icon.value)
+const emit = defineEmits(['close']);
+const isOpen = computed(() => !!icon.value);
 
 function releaseTagLink(version) {
-  const shouldAddV = satisfies(version, `<0.266.0`)
+  const shouldAddV = satisfies(version, `<0.266.0`);
 
-  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`;
 }
 
 function onClose() {
-  emit('close')
+  emit('close');
 }
 
-const CloseIcon = createLucideIcon('Close', x)
-const Expand = createLucideIcon('Expand', expand)
+const CloseIcon = createLucideIcon('Close', x);
+const Expand = createLucideIcon('Expand', expand);
 </script>
 
 <template>
-  <Transition name="drawer" appear>
-    <div class="overlay-container" v-if="icon">
+  <Transition
+    name="drawer"
+    appear
+  >
+    <div
+      class="overlay-container"
+      v-if="icon"
+    >
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <Badge
-            v-if="icon.createdRelease"
+            v-if="icon.awaitingRelease"
+            class="version awaiting-release"
+            >Unreleased</Badge
+          >
+          <Badge
+            v-else-if="icon.createdRelease"
             class="version"
             :href="releaseTagLink(icon.createdRelease.version)"
-          >v{{ icon.createdRelease.version }}</Badge>
-          <IconButton  @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}` : `/icons/${icon.name}`)">
+          >
+              {{ icon.createdRelease.version }}
+          </Badge>
+          <EditInStudioButton :icon="icon"/>
+          <Button
+            @click="
+              go(
+                icon.externalLibrary
+                  ? `/icons/${icon.externalLibrary}/${icon.name}`
+                  : `/icons/${icon.name}`,
+              )
+            "
+          >
             <component :is="Expand" />
-          </IconButton>
-          <IconButton  @click="onClose">
+          </Button>
+          <Button @click="onClose">
             <component :is="CloseIcon" />
-          </IconButton>
+          </Button>
         </nav>
         <IconPreview
           id="previewer"
@@ -80,9 +104,15 @@ const Expand = createLucideIcon('Expand', expand)
           :iconNode="icon.iconNode"
           customizable
         />
-        <IconInfo :icon="icon" popoverPosition="top">
+        <IconInfo
+          :icon="icon"
+          popoverPosition="top"
+        >
           <template v-slot:footer>
-            <IconContributors :icon="icon" class="contributors" />
+            <IconContributors
+              :icon="icon"
+              class="contributors"
+            />
           </template>
         </IconInfo>
       </div>
@@ -157,11 +187,15 @@ const Expand = createLucideIcon('Expand', expand)
 }
 
 .drawer-enter-active {
-  transition: opacity 0.5s, transform 0.25s ease;
+  transition:
+    opacity 0.5s,
+    transform 0.25s ease;
 }
 
 .drawer-leave-active {
-  transition: opacity 0.25s ease, transform 1.6s ease-out;
+  transition:
+    opacity 0.25s ease,
+    transform 1.6s ease-out;
 }
 
 .drawer-enter-from,
@@ -174,8 +208,14 @@ const Expand = createLucideIcon('Expand', expand)
   margin-right: 24px;
 }
 
-.contributors {
-  justify-content: flex-end;
+.version.awaiting-release {
+  color: var(--vp-c-danger-3);
 }
 
+.contributors {
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
 </style>

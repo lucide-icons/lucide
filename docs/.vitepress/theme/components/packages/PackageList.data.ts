@@ -2,7 +2,7 @@ import packageDataList from '../../../data/packageData.json';
 import thirdPartyPackages from '../../../data/packageData.thirdParty.json';
 import fetchPackages from '../../../lib/fetchPackages';
 
-export default {
+const loader = {
   async load() {
     const packageJsonList = await fetchPackages();
 
@@ -14,7 +14,8 @@ export default {
           return {
             ...pJson,
             ...packageData,
-            documentation: `/guide/packages/${packageData.docsAlias ?? pJson.name}`,
+            documentation:
+              packageData.documentation ?? `/guide/${packageData.docsAlias ?? pJson.name}`,
             source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageData.packageDirname ?? pJson.name}`,
             icon: `/framework-logos/${packageData.icon}.svg`,
             iconDark: Boolean(packageData.iconDark)
@@ -22,8 +23,14 @@ export default {
               : null,
           };
         })
+        .filter((pData) => !pData.hide)
         .sort((a, b) => a.order - b.order),
       thirdPartyPackages,
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

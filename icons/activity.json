@@ -4,6 +4,7 @@
     "colebemis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "pulse",
     "action",
@@ -21,7 +22,7 @@
     "hospital",
     "defibrillator",
     "earthquake",
-    "siesmic",
+    "seismic",
     "magnitude",
     "richter scale",
     "aftershock",

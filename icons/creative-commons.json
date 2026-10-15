@@ -3,9 +3,12 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "licence",
     "license"
   ],
-  "categories": []
+  "categories": [
+    "text"
+  ]
 }

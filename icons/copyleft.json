@@ -5,8 +5,11 @@
     "johnletey",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
     "licence"
   ],
-  "categories": []
+  "categories": [
+    "text"
+  ]
 }

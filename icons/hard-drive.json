@@ -3,8 +3,10 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "computer",
     "server",
@@ -12,7 +14,11 @@
     "data",
     "ssd",
     "disk",
-    "hard disk"
+    "hard disk",
+    "storage",
+    "hardware",
+    "backup",
+    "media"
   ],
   "categories": [
     "development",

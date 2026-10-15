@@ -3,8 +3,10 @@
   "contributors": [
     "mishkaio",
     "ericfennis",
-    "csandman"
+    "csandman",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "select",
     "cursor"

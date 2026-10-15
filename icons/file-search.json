@@ -6,11 +6,13 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "lost",
     "document",
     "find",
-    "browser"
+    "browser",
+    "lens"
   ],
   "categories": [
     "files"

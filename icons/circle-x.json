@@ -4,9 +4,11 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "cancel",
     "close",
+    "cross",
     "delete",
     "remove",
     "times",
@@ -25,6 +27,10 @@
     "development"
   ],
   "aliases": [
-    "x-circle"
+    {
+      "name": "x-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

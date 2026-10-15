@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "verified",
     "unverified",
@@ -20,6 +21,10 @@
     "math"
   ],
   "aliases": [
-    "percent-circle"
+    {
+      "name": "percent-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

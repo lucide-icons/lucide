@@ -1,3 +1,3 @@
-export * from './aliases';
-export * from './prefixed';
-export * from './suffixed';
+export * from './aliases.js';
+export * from './prefixed.js';
+export * from './suffixed.js';

@@ -4,15 +4,19 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "back",
     "menu"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ],
   "aliases": [
-    "chevron-down-circle"
+    {
+      "name": "chevron-down-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

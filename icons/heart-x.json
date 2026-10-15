@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas",
+    "Ayberkyvs",
+    "UsamaKhan",
+    "swastik7805"
+  ],
+  "use-cases": [],
+  "tags": [
+    "unlike",
+    "unfavorite",
+    "remove",
+    "reject",
+    "dismiss",
+    "delete",
+    "clear"
+  ],
+  "categories": [
+    "social",
+    "multimedia",
+    "design",
+    "shapes"
+  ]
+}

@@ -10,6 +10,7 @@ export const getOriginalSvg = (iconName: string, aliasName?: string, setAttrs = 
 
   if (setAttrs) {
     svgParsed.attributes['data-lucide'] = aliasName ?? iconName;
+    svgParsed.attributes['aria-hidden'] = 'true';
     svgParsed.attributes['class'] = `lucide lucide-${aliasName ?? iconName}`;
   }
 

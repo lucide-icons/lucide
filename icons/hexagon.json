@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "shape",
     "node.js",
@@ -12,7 +13,6 @@
   ],
   "categories": [
     "shapes",
-    "brands",
     "development"
   ]
 }

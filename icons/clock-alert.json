@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "jguddas"
+    "jguddas",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "time",
     "watch",

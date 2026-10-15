@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "data",
@@ -12,7 +14,8 @@
     "document",
     "scan",
     "magnifier",
-    "magnifying glass"
+    "magnifying glass",
+    "lens"
   ],
   "categories": [
     "text"

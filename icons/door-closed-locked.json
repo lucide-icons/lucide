@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "lukedukeus"
+  ],
+  "use-cases": [],
+  "tags": [
+    "entrance",
+    "entry",
+    "exit",
+    "ingress",
+    "egress",
+    "gate",
+    "gateway",
+    "emergency exit",
+    "lock"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "security"
+  ]
+}

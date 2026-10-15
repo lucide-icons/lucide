@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "water",
+    "sea",
+    "level",
+    "sound",
+    "hertz",
+    "wavelength",
+    "vibrate",
+    "high",
+    "tide",
+    "ocean",
+    "rising"
+  ],
+  "categories": [
+    "weather",
+    "sustainability"
+  ]
+}

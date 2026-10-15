@@ -1,8 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "cancel",
     "no",

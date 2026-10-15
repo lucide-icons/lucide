@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Turboman3000"
+  ],
+  "use-cases": [
+    "To create a new server in a dashboard"
+  ],
+  "tags": [
+    "add",
+    "create",
+    "new",
+    "cloud",
+    "storage",
+    "computing"
+  ],
+  "categories": [
+    "development",
+    "devices"
+  ]
+}
