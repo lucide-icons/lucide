@@ -32,6 +32,7 @@ export interface IconEntity extends IconMetaData {
 export interface Category {
   name: string;
   title: string;
+  description: string;
   icon?: string;
   iconCount: number;
   icons?: IconEntity[];

@@ -1,4 +1,4 @@
-import { h, JSX } from 'preact';
+import { h, type SignalLike } from 'preact';
 import { mergeClasses, toLucideIconData, toPascalCase } from '@lucide/shared';
 import Icon from './Icon';
 import type { LucideIcon, LucideIconData, LucideIconNode, LucideProps } from './types';
@@ -41,7 +41,7 @@ function createLucideIcon(
       {
         ...props,
         icon: iconData,
-        class: mergeClasses<string | JSX.SignalLike<string | undefined>>(classes, className),
+        class: mergeClasses<string | SignalLike<string | undefined>>(classes, className),
       },
       children,
     );

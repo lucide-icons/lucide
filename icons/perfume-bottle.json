@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing fragrance and cosmetic products in retail catalogs",
+    "Indicating duty-free and boutique fragrance stores",
+    "Distinguishing scented and unscented skincare products"
+  ],
+  "tags": [
+    "eau de parfum",
+    "eau de toilette",
+    "essence",
+    "aftershave",
+    "cologne",
+    "aroma",
+    "fragrance",
+    "smell",
+    "scent",
+    "bouquet",
+    "gift",
+    "duty free",
+    "spray",
+    "puff",
+    "atomizer",
+    "mist",
+    "beauty",
+    "skincare",
+    "cosmetics"
+  ],
+  "categories": [
+    "shopping",
+    "travel"
+  ]
+}
