@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { rotateCw } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
-import IconButton from './IconButton.vue';
+import Button from './Button.vue';
 </script>
 
 <template>
-  <IconButton class="reset-button">
+  <Button class="reset-button" aria-label="Reset style">
     <Icon
       :size="20"
       :iconNode="rotateCw"
+      name="rotate-cw"
     />
-  </IconButton>
+  </Button>
 </template>
 
 <style scoped>
 .reset-button {
+  transition: ease-in-out 0.1s opacity;
   background: none;
   padding: 0;
 }
@@ -26,6 +28,12 @@ import IconButton from './IconButton.vue';
 .reset-button:hover {
   background: none;
   border-color: transparent;
+}
+
+.reset-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* a rotate css animation keyframes */

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating package delivery to a home or residence",
+    "Representing packages left at a recipient's door",
+    "Tracking doorstep or unattended deliveries",
+    "Selecting a delivery location or drop-off point"
+  ],
+  "tags": [
+    "delivery",
+    "parcel",
+    "doorstep",
+    "shipping",
+    "drop-off",
+    "courier"
+  ],
+  "categories": [
+    "home",
+    "food-beverage",
+    "transportation"
+  ]
+}

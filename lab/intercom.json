@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "buzzer",
+    "speaker",
+    "voice",
+    "call",
+    "service",
+    "summon",
+    "hospitality",
+    "hotel",
+    "accommodation",
+    "sound",
+    "access",
+    "gate"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "travel",
+    "security"
+  ]
+}

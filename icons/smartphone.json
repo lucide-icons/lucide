@@ -5,12 +5,21 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing mobile phones in device settings",
+    "Showing mobile access or app availability",
+    "Indicating phone-based communication channels"
+  ],
   "tags": [
     "phone",
     "cellphone",
     "device",
-    "screen"
+    "mobile",
+    "screen",
+    "display",
+    "touchscreen",
+    "portable",
+    "responsive"
   ],
   "categories": [
     "connectivity",

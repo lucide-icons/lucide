@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "bowl",
+    "crush",
+    "grind",
+    "ingredients",
+    "herbs",
+    "spices",
+    "cooking",
+    "cookery",
+    "culinary",
+    "kitchen",
+    "equipment",
+    "utensil"
+  ],
+  "categories": [
+    "food-beverage",
+    "tools",
+    "home"
+  ]
+}

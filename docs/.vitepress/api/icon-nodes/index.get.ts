@@ -1,6 +1,5 @@
 import { eventHandler, getQuery, setResponseHeader } from 'h3';
 import iconNodes from '../../data/iconNodes';
-import { IconNodeWithKeys } from '../../theme/types';
 
 export default eventHandler((event) => {
   const query = getQuery(event);
@@ -19,7 +18,7 @@ export default eventHandler((event) => {
       return [name, iconNode];
     }
 
-    const newIconNode = (iconNode as IconNodeWithKeys).map(([name, { key, ...attrs }]) => {
+    const newIconNode = iconNode.map(([name, { key, ...attrs }]) => {
       return [name, attrs];
     });
 
