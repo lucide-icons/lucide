@@ -152,6 +152,10 @@ html {
   .VPHomeHero .container {
     flex-direction: row;
   }
+
+  .VPDoc:has(.vp-doc[class*=' _icons_']) {
+    padding: 32px 32px 0;
+  }
 }
 
 .VPNavBarHamburger .container > span {
@@ -284,6 +288,10 @@ html {
 
 .example-guidance--dont {
   --example-guidance-label-bg: var(--vp-c-danger-1);
+}
+
+.example-guidance--caution {
+  --example-guidance-label-bg: var(--vp-c-warning-1);
 }
 
 @media (min-width: 640px) {

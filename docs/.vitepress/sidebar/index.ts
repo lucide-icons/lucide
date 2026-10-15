@@ -36,6 +36,7 @@ const sidebar: Sidebar = {
   '/guide/react-native/': reactNativeSidebar,
   '/guide/angular/': angularSidebar,
   '/guide/static/': lucideStaticSidebar,
+  '/how-to': resourcesSidebar,
   '/community': resourcesSidebar,
   '/contribute': resourcesSidebar,
   '/license': resourcesSidebar,

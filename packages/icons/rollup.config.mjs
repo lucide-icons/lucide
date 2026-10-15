@@ -18,8 +18,20 @@ const bundles = [
   },
   {
     format: 'esm',
-    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
+    inputs: [...inputs, './src/dynamic.ts'],
     preserveModules: true,
+    extension: 'mjs',
+  },
+  {
+    format: 'cjs',
+    inputs: ['./src/build.ts'],
+    outputFile: 'dist/cjs/build.cjs',
+    extension: 'cjs',
+  },
+  {
+    format: 'esm',
+    inputs: ['./src/build.ts'],
+    outputFile: 'dist/esm/build.mjs',
     extension: 'mjs',
   },
 ];

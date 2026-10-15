@@ -53,10 +53,7 @@ export const getCommands = (src: string) =>
   getNodes(src)
     .map(convertToPathNode)
     .flatMap(({ d, name }, idx) =>
-      new SVGPathData(d)
-        .toAbs()
-        // @ts-expect-error `commands` is typed as a union of command types svgson does not narrow
-        .commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
+      new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
     );
 
 const getPaths = (src: string) => {

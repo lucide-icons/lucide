@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "kaleidosium",
+    "UbaidUllah9962"
+  ],
+  "use-cases": [
+    "Representing anonymous functions in code editors",
+    "Representing serverless functions in cloud architecture diagrams",
+    "Representing lambda notation in math and science"
+  ],
+  "tags": [
+    "greek",
+    "symbol",
+    "math",
+    "function",
+    "programming",
+    "serverless",
+    "anonymous",
+    "functional",
+    "cloud",
+    "wavelength",
+    "calculus",
+    "linear algebra"
+  ],
+  "categories": [
+    "development",
+    "math",
+    "science",
+    "text"
+  ]
+}

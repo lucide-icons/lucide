@@ -8,7 +8,7 @@ export default defineExportTemplate(
 
     return `
 import createLucideIcon from '../createLucideIcon';
-import type { LucideIconData } from '../types';
+import type { LucideIcon, LucideIconData } from '../types';
 
 export const __iconData: LucideIconData = ${JSON.stringify(iconData)}
 
@@ -23,7 +23,7 @@ export const __iconData: LucideIconData = ${JSON.stringify(iconData)}
  * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon(__iconData);
+const ${componentName}: LucideIcon = createLucideIcon(__iconData);
 
 export default ${componentName};
 `;

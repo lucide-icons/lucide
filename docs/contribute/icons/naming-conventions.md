@@ -82,19 +82,19 @@ Icon names **must** use American English, not local variants.
 Icon names **must** describe what the icon shows, not how someone might use it.
 
 :::: example
-::: do <LucideIcon :iconNode="save" /> `floppy-disk`
+::: do <LucideIcon name="save" :iconNode="save" /> `floppy-disk`
 The icon **shows** a floppy disk.
 :::
-::: dont <LucideIcon :iconNode="save" /> `save`
+::: dont <LucideIcon name="save" :iconNode="save" /> `save`
 Save is a use case.
 :::
 ::::
 
 :::: example
-::: do <LucideIcon :iconNode="ban" /> `circle-slash`
+::: do <LucideIcon name="ban" :iconNode="ban" /> `circle-slash`
 The icon **shows** a circle with a slash across it.
 :::
-::: dont <LucideIcon :iconNode="ban" /> `ban`
+::: dont <LucideIcon name="ban" :iconNode="ban" /> `ban`
 Ban is an action.
 :::
 ::::
@@ -110,10 +110,10 @@ Icons that belong to the same group **must** use the `<group>-<variant>` naming 
 The group name comes first. The variant comes after it.
 
 :::: example
-::: do <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`badge-plus` & `badge-check`</span>
+::: do <span><LucideIcon name="badge-plus" :iconNode="badgePlus" /> + <LucideIcon name="badge-check" :iconNode="badgeCheck" /></span> <span>`badge-plus` & `badge-check`</span>
 `badge` is the group.
 :::
-::: dont <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`plus-badge` & `check-badge`</span>
+::: dont <span><LucideIcon name="badge-plus" :iconNode="badgePlus" /> + <LucideIcon name="badge-check" :iconNode="badgeCheck" /></span> <span>`plus-badge` & `check-badge`</span>
 `plus` and `check` are not the group.
 :::
 ::::
@@ -123,10 +123,10 @@ The group name comes first. The variant comes after it.
 Alternate versions of an icon **must** be named for what makes them visually different. Do **not** use numbers just to separate one version from another.
 
 :::: example
-::: do <LucideIcon :iconNode="sendHorizontal" /> `send-horizontal`
+::: do <LucideIcon name="send-horizontal" :iconNode="sendHorizontal" /> `send-horizontal`
 The icon depicts a horizontal "send" symbol.
 :::
-::: dont <LucideIcon :iconNode="sendHorizontal" /> <span>`send-2` or `send-alt`</span>
+::: dont <LucideIcon name="send-horizontal" :iconNode="sendHorizontal" /> <span>`send-2` or `send-alt`</span>
 "send number 2" and "alternative send" are not clear names.
 :::
 ::::
@@ -136,19 +136,19 @@ The icon depicts a horizontal "send" symbol.
 Icon names **must not** include numbers unless the icon shows the number.
 
 :::: example
-::: do <LucideIcon :iconNode="arrowDown01" /> `arrow-down-0-1`
+::: do <LucideIcon name="arrow-down-0-1" :iconNode="arrowDown01" /> `arrow-down-0-1`
 The arrow points from 0 to 1.
 :::
-::: dont <LucideIcon :iconNode="sendHorizontal" /> `send-2`
+::: dont <LucideIcon name="send-horizontal" :iconNode="sendHorizontal" /> `send-2`
 The icon does not show the number 2.
 :::
 ::::
 
 :::: example
-::: do <LucideIcon :iconNode="clock3" /> `clock-3`
+::: do <LucideIcon name="clock-3" :iconNode="clock3" /> `clock-3`
 The hands point to 3 o'clock.
 :::
-::: dont <LucideIcon :iconNode="userRound" /> `user-3`
+::: dont <LucideIcon name="user-round" :iconNode="userRound" /> `user-3`
 The icon does not show the number 3.
 :::
 ::::
@@ -162,10 +162,10 @@ When an icon shows multiple elements of different sizes, order their names from 
 For an icon containing a circle and a person:
 
 :::: example
-::: do <LucideIcon :iconNode="moonStar" /> `moon-star`
+::: do <LucideIcon name="moon-star" :iconNode="moonStar" /> `moon-star`
 The `moon` is larger than the `star`.
 :::
-::: dont <LucideIcon :iconNode="circleUser" /> `person-circle`
+::: dont <LucideIcon name="circle-user" :iconNode="circleUser" /> `person-circle`
 The `person` is **not** larger than the `circle`.
 :::
 ::::
@@ -179,19 +179,19 @@ If elements overlap, name them from front to back.
 If they do not overlap, name them in English reading order: top to bottom, then left to right.
 
 :::: example
-::: do <LucideIcon :iconNode="pencilRuler" /> `pencil-ruler`
+::: do <LucideIcon name="pencil-ruler" :iconNode="pencilRuler" /> `pencil-ruler`
 The `pencil` is **in front** of the `ruler`, so it comes first.
 :::
-::: do <LucideIcon :iconNode="rulerDimensionLine" /> `ruler-dimension-line`
+::: do <LucideIcon name="ruler-dimension-line" :iconNode="rulerDimensionLine" /> `ruler-dimension-line`
 The ruler is below the dimension line, but it is **larger**, so it comes first.
 :::
 ::::
 
 :::: example
-::: do <LucideIcon :iconNode="sunSnow" /> `sun-snow`
+::: do <LucideIcon name="sun-snow" :iconNode="sunSnow" /> `sun-snow`
 The `sun` is **left of** the `snowflake`, so it comes first.
 :::
-::: dont <LucideIcon :iconNode="pencilRulerHorizontal" /> `ruler-pencil`
+::: dont <LucideIcon name="pencil-ruler-horizontal" :iconNode="pencilRulerHorizontal" /> `ruler-pencil`
 The `ruler` is **below** the `pencil`, so `pencil-ruler` is the correct name.
 :::
 ::::
@@ -201,10 +201,10 @@ The `ruler` is **below** the `pencil`, so `pencil-ruler` is the correct name.
 Modifiers **must** come after the element they describe: `<element>-<modifier>`.
 
 :::: example
-::: do <LucideIcon :iconNode="heartCrack" /> `heart-broken`
+::: do <LucideIcon name="heart-crack" :iconNode="heartCrack" /> `heart-broken`
 The icon shows a heart that is **cracked**.
 :::
-::: dont <LucideIcon :iconNode="boneFracture" /> `broken-bone`
+::: dont <LucideIcon name="bone-fracture" :iconNode="boneFracture" /> `broken-bone`
 The icon shows a bone that is **broken**, so name it `bone-broken`.
 :::
 ::::
@@ -212,12 +212,12 @@ The icon shows a bone that is **broken**, so name it `bone-broken`.
 When an icon has multiple modified elements, each modifier **must** follow the element it describes.
 
 :::: example
-::: do <LucideIcon :iconNode="circleFadingArrowUp" /> `circle-fading-arrow-up`
+::: do <LucideIcon name="circle-fading-arrow-up" :iconNode="circleFadingArrowUp" /> `circle-fading-arrow-up`
 The icon shows a **fading** circle with an arrow pointing **up** inside it.
 
 `circle` comes first because it is larger than `arrow`. `fading` follows `circle` because it modifies the circle. `up` follows `arrow` because it modifies the arrow.
 :::
-::: dont <LucideIcon :iconNode="notepadTextDashed" /> `notepad-text-dashed`
+::: dont <LucideIcon name="notepad-text-dashed" :iconNode="notepadTextDashed" /> `notepad-text-dashed`
 This icon shows a dashed notepad with text inside, so name it `notepad-dashed-text`.
 
 `notepad` comes first because it is larger than `text`. `dashed` follows `notepad` because it modifies the notepad. `text` follows both because `dashed` does not modify `text`.
