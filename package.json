@@ -11,6 +11,7 @@
     "test:integrations:vue": "pnpm --filter @lucide/vue build && pnpm -r --workspace-concurrency=1 --filter './integrations/lucide-vue/**' check",
     "test:integrations:svelte": "pnpm --filter @lucide/svelte build && pnpm -r --workspace-concurrency=1 --filter './integrations/lucide-svelte/**' check",
     "test:font": "pnpm --filter build-font test",
+    "test:scripts": "node --test scripts/*.test.mts",
     "lucide": "pnpm --filter lucide",
     "lucide-angular": "pnpm --filter lucide-angular",
     "lucide-react": "pnpm --filter lucide-react",
