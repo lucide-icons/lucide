@@ -1,4 +1,4 @@
-import { type FunctionComponent, type JSX } from 'preact';
+import { type FunctionComponent, type SVGAttributes } from 'preact';
 import type {
   LucideIconData as SharedLucideIconData,
   LucideIconNode as SharedLucideIconNode,
@@ -13,7 +13,7 @@ export type LucideIconData = SharedLucideIconData;
  */
 export type IconNode = LucideIconNode[];
 
-export interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref' | 'size'>> {
+export interface LucideProps extends Partial<Omit<SVGAttributes, 'ref' | 'size'>> {
   color?: string;
   size?: string | number;
   width?: string | number;

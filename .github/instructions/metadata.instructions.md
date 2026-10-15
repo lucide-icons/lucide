@@ -13,7 +13,7 @@ The `contributors` property is a required array of GitHub usernames for the peop
 
 The `tags` property is an array of strings that describe the icon and can be used for searching.
 Validate the tags against the `icon.schema.json` to ensure they are correctly formatted and adhere to the defined structure.
-Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase, and may also contain spaces (e.g. `magnifying glass`). The name of icon should not be included in the tags, as it is already specified.
+Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase, and may also contain spaces (e.g. `magnifying glass`). Don't include the full icon name, its space-separated form, or any individual part of its kebab-case name because those terms are already searchable. For example, don't suggest `mail-search`, `mail search`, `mail`, or `search` for the `mail-search` icon.
 
 ## Categories
 
@@ -32,7 +32,7 @@ A use-case tells a reader **where and why an icon would be used in a real interf
 - Write each use-case as a short phrase, not a sentence. Start with a present participle verb: *Representing…*, *Indicating…*, *Marking…*, *Showing…*, *Confirming…*, *Toggling…*, *Categorizing…*, *Searching…*.
 - Keep it to roughly 4–12 words. One clear idea per entry.
 - No trailing period. No leading bullet, number, or dash (the surrounding format supplies that).
-- Give each icon 1–4 use-cases, ordered most-common first. Prefer fewer strong entries over many weak or repetitive ones.
+- Give each icon 1 or more use-cases, ordered most-common first. More than 4 use-cases are allowed when they are distinct and useful. Prefer fewer strong entries over many weak or repetitive ones.
 
 ### Voice
 
