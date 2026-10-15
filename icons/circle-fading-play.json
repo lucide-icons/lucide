@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tatianatsiguleva",
+    "jordan808",
+    "jguddas",
+    "colebemis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating short-form video clips in media browsing interfaces",
+    "Representing preview or teaser playback for video thumbnails",
+    "Providing an entry point for stories, reels, or shorts in social apps",
+    "Marking auto-generated clips from live streams or long recordings"
+  ],
+  "tags": [
+    "short clips",
+    "shorts",
+    "reels",
+    "stories",
+    "video",
+    "highlights",
+    "social media",
+    "content",
+    "preview",
+    "teaser",
+    "clip",
+    "short form",
+    "vertical video"
+  ],
+  "categories": [
+    "multimedia",
+    "social"
+  ]
+}
