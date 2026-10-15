@@ -5,6 +5,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Representing music or an audio track"
+  ],
   "tags": [
     "audio",
     "music",
@@ -22,8 +25,7 @@
     {
       "name": "music-3",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }
