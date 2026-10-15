@@ -55,6 +55,7 @@
     "vue-tsc": "^3.3.11"
   },
   "dependencies": {
+    "@docsearch/css": "3.8.2",
     "@floating-ui/vue": "^2.0.1",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",

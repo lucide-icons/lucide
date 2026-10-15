@@ -65,6 +65,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarSearch.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
