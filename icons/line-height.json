@@ -3,13 +3,19 @@
   "contributors": [
     "madebyoz"
   ],
+  "use-cases": [
+    "Adjusting spacing between lines in text editors and design tools"
+  ],
   "tags": [
+    "leading",
     "text",
     "letters",
     "characters",
     "font",
     "typography",
-    "line-height"
+    "spacing",
+    "formatting",
+    "design"
   ],
   "categories": [
     "text"
