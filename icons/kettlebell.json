@@ -1,11 +1,35 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["PrimeTestLab"],
+  "contributors": [
+    "PrimeTestLab"
+  ],
   "use-cases": [
     "gym or fitness app workout category",
     "strength training exercise list",
-    "sports equipment shop"
+    "sports equipment shop",
+    "Representing kettlebell workouts or classes in fitness apps",
+    "Listing strength-training exercises in workout plans",
+    "Showing strength equipment in sports shop product listings",
+    "Marking strength-focused sessions in class schedules and calendars"
   ],
-  "tags": ["gym", "fitness", "workout", "exercise", "weight", "training", "strength", "sport", "crossfit", "kettle bell"],
-  "categories": ["sports", "gaming"]
+  "tags": [
+    "gym",
+    "fitness",
+    "workout",
+    "exercise",
+    "weight",
+    "training",
+    "strength",
+    "sport",
+    "kettle bell",
+    "gym equipment",
+    "functional training",
+    "conditioning",
+    "weightlifting",
+    "high intensity interval training"
+  ],
+  "categories": [
+    "sports",
+    "shopping"
+  ]
 }
