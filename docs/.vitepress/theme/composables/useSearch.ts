@@ -1,14 +1,15 @@
-import Fuse from 'fuse.js';
+import Fuse, { type FuseOptionKeyObject } from 'fuse.js';
 import { shallowRef, computed, Ref } from 'vue';
 
 const useSearch = <T>(
   query: Ref<string>,
   collection: Ref<T[]>,
-  keys: Fuse.FuseOptionKeyObject<T>[] = [],
+  keys: FuseOptionKeyObject<T>[] = [],
 ) => {
   const index = shallowRef(
     new Fuse(collection.value, {
       threshold: 0.2,
+      useExtendedSearch: true,
       keys,
     }),
   );
@@ -17,7 +18,9 @@ const useSearch = <T>(
     index.value.setCollection(collection.value);
 
     if (query.value) {
-      return index.value.search(query.value).map((result) => result.item);
+      return index.value
+        .search({ $and: query.value.split(' ').filter((t) => !!t) })
+        .map((result) => result.item);
     }
 
     return collection.value;

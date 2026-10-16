@@ -3,7 +3,7 @@ import { getHTMLBanner } from './license.mts';
 import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
 export default defineExportTemplate(
-  async ({ iconName, children, getSvg, deprecated, deprecationReason }) => {
+  async ({ iconName, iconData, getSvg, deprecated, deprecationReason }) => {
     const svgContents = await getSvg();
     const svgBase64 = base64SVG(svgContents);
 
@@ -11,11 +11,12 @@ export default defineExportTemplate(
 ${getHTMLBanner()}
 <script lang="ts">
 import Icon from '../Icon.svelte';
-import type { IconNode, IconProps } from '../types.js';
+import type { LucideProps, LucideIconData } from '../types.js';
 
-let props: IconProps = $props();
+let props: LucideProps = $props();
 
-const iconNode: IconNode = ${JSON.stringify(children)};
+const iconData: LucideIconData = ${JSON.stringify(iconData)};
+
 </script>
 
 <!--
@@ -28,7 +29,7 @@ Lucide SVG icon component, renders SVG Element with children.
 ${deprecated ? `\n@deprecated ${deprecationReason}\n` : ''}\
 -->
 
-<Icon name="${iconName}" {...props} iconNode={iconNode} />
+<Icon {...props} icon={iconData} />
 `;
   },
 );

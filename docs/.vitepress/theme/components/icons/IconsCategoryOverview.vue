@@ -122,7 +122,7 @@ const categoriesList = computed(() => {
 });
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () => searchQuery.value.length > 0 && (tags.value == null || categoriesMap.value == null),
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
@@ -163,7 +163,7 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/categories';
 
   if (searchQueryDebounced.value) {

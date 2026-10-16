@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "Setting auto layout direction to horizontal in design tools",
+    "Selecting flex-direction: row in devtools panels",
+    "Switching sections from stacked to side-by-side",
+    "Switching the canvas to a horizontal layout",
+    "Choosing side-by-side or two-column display",
+    "Representing css flex-direction: row in developer tools",
+    "Toggling panel orientation in a ui",
+    "Selecting left-to-right flow in design editors"
+  ],
+  "tags": [
+    "layout",
+    "direction",
+    "flex",
+    "flexbox",
+    "flex-direction",
+    "row",
+    "auto layout",
+    "horizontal",
+    "arrange",
+    "order",
+    "flow",
+    "stack"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
