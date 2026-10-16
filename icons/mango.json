@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Prsenapati09",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing tropical fruit in food and grocery apps",
+    "Indicating produce sections in shopping interfaces",
+    "Labeling tropical fruit filters in recipe and nutrition apps",
+    "Highlighting seasonal fruit in marketplaces"
+  ],
+  "tags": [
+    "fruit",
+    "food",
+    "tropical",
+    "summer",
+    "exotic",
+    "healthy",
+    "ripe",
+    "yellow",
+    "juice",
+    "smoothie",
+    "snack",
+    "produce",
+    "leaf"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
