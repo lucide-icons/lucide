@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "database settings or configuration page",
+    "managing database connections in an admin panel",
+    "database maintenance or migration tools",
+    "server and storage configuration in developer dashboards"
+  ],
+  "tags": [
+    "database",
+    "db",
+    "settings",
+    "configuration",
+    "preferences",
+    "gear",
+    "cog",
+    "admin",
+    "sql",
+    "storage",
+    "server",
+    "maintenance"
+  ],
+  "categories": [
+    "development",
+    "devices"
+  ]
+}
