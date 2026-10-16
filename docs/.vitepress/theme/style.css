@@ -129,6 +129,10 @@ html {
   flex-direction: column-reverse;
 }
 
+.content-body .search {
+  display: none;
+}
+
 @media (min-width: 960px) {
   .VPHomeHero .container .image {
     order: 1;
