@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "l0uisgrange",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "representing maritime freight or cargo shipments",
+    "indicating seaborne logistics in supply chain dashboards",
+    "marking ports, terminals, or dock operations on maps",
+    "showing import or export status in trade apps",
+    "offering a shipping option in e-commerce or order tracking",
+    "illustrating cargo capacity or vessel type in transport apps",
+    "denoting bulk or container shipping routes"
+  ],
+  "tags": [
+    "boat",
+    "knots",
+    "nautical mile",
+    "maritime",
+    "sailing",
+    "cruise",
+    "ocean liner",
+    "tanker",
+    "vessel",
+    "navy",
+    "cargo",
+    "container",
+    "freighter",
+    "freight",
+    "shipping",
+    "port",
+    "harbor",
+    "dock",
+    "logistics",
+    "import",
+    "export"
+  ],
+  "categories": [
+    "transportation",
+    "navigation",
+    "travel"
+  ]
+}

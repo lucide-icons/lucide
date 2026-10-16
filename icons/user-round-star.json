@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating an admin or super user",
+    "Marking a favourite person",
+    "Highlighting the best user in a category"
+  ],
+  "tags": [
+    "person",
+    "account",
+    "favorite",
+    "contact",
+    "like",
+    "review",
+    "rating",
+    "admin",
+    "avatar",
+    "profile",
+    "featured",
+    "moderator",
+    "verified",
+    "badge",
+    "award",
+    "champion",
+    "starred"
+  ],
+  "categories": [
+    "account"
+  ]
+}

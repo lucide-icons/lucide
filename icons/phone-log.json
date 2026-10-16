@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "Levi-Bensley"
+  ],
+  "tags": [
+    "telephone",
+    "communication",
+    "mobile",
+    "device",
+    "contact",
+    "history",
+    "data",
+    "information",
+    "call"
+  ],
+  "categories": [
+    "communication"
+  ],
+  "use-cases": [
+    "Reviewing recent incoming and outgoing calls",
+    "Displaying call history in communication apps"
+  ]
+}

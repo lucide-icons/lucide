@@ -13,7 +13,6 @@ export default defineExportTemplate(async ({
   const svgBase64 = base64SVG(svgContents);
 
   return `
-import defaultAttributes from '../defaultAttributes';
 import type { IconNode } from '../types';
 
 /**
