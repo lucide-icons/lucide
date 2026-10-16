@@ -5,14 +5,10 @@
     "rrod497"
   ],
   "use-cases": [
-    "Representing mango or tropical fruit",
-    "Indicating a food or grocery category",
-    "labeling tropical-flavored drinks or smoothies",
-    "marking mango as an ingredient in recipe apps",
-    "highlighting seasonal summer produce in marketplaces",
-    "tagging fresh fruit in grocery shopping lists",
-    "indicating tropical dishes or flavors on menus",
-    "representing healthy vitamin-rich snacks"
+    "Representing tropical fruit in food and grocery apps",
+    "Indicating produce sections in shopping interfaces",
+    "Labeling tropical fruit filters in recipe and nutrition apps",
+    "Highlighting seasonal fruit in marketplaces"
   ],
   "tags": [
     "fruit",
