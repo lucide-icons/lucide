@@ -20,12 +20,9 @@ const App = () => (
 );
 ```
 
-<hr>
-
-::: info Caveats
+## Caveats
 
 - All icons are imported during build time, which increases build time.
 - The bundler will create a separate module for each icon, which can increase the number of network requests.
 - You can encounter flashing when loading the icon, since the icon is loaded dynamically.
 - When using server-side rendering, you need to make sure that the icon is available during the initial render.
-:::
