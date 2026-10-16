@@ -1,11 +1,27 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["PrimeTestLab"],
+  "contributors": [
+    "PrimeTestLab"
+  ],
   "use-cases": [
     "opening a link in the web browser",
     "website or web app settings",
     "browser extension related features"
   ],
-  "tags": ["browser", "web", "website", "internet", "url", "address bar", "page", "online", "window"],
-  "categories": ["development", "layout", "connectivity"]
+  "tags": [
+    "browser",
+    "web",
+    "website",
+    "internet",
+    "url",
+    "address bar",
+    "page",
+    "online",
+    "window"
+  ],
+  "categories": [
+    "development",
+    "layout",
+    "connectivity"
+  ]
 }
