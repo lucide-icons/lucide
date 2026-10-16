@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Deleting a table from a document or spreadsheet",
+    "Removing a row or record from a data table",
+    "Dropping a database table"
+  ],
+  "tags": [
+    "table",
+    "remove",
+    "delete",
+    "subtract",
+    "spreadsheet",
+    "grid",
+    "rows",
+    "columns",
+    "database"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "layout"
+  ]
+}
