@@ -8,7 +8,6 @@ type IconProps =
       icon: LucideIconData;
       iconNode?: never;
       'icon-node'?: never;
-      name?: never;
     }
   | {
       icon?: never;
@@ -29,8 +28,8 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     iconNode,
     'icon-node': iconNodeKebabCase,
     icon = {
-      name: toKebabCase(name),
-      node: iconNode ?? iconNodeKebabCase,
+      name: name && toKebabCase(name),
+      node: iconNode ?? iconNodeKebabCase ?? [],
       size: 24,
       aliases: [],
     },
@@ -88,7 +87,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
   });
 
   return h('svg', svgAttributes, [
-    ...builtIconNode.map((child) => h(...child)),
+    ...builtIconNode.map(([tag, attrs]) => h(tag, attrs)),
     ...(defaultSlot ?? []),
   ]);
 };

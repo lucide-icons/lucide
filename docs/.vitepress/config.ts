@@ -15,6 +15,10 @@ const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
   'utf-8',
 );
+const iconStyleHeadScript = await readFile(
+  fileURLToPath(new URL('./theme/iconStyleHead.js', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -84,7 +88,10 @@ export default defineConfig({
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
@@ -97,7 +104,7 @@ export default defineConfig({
       {
         text: 'Resources',
         items: [
-          ...resourcesSidebar[0].items,
+          ...resourcesSidebar[0].items.map(({ text, link }) => ({ text, link })),
           { text: 'How to use icons', link: '/how-to/' },
           { text: 'Contributing icons', link: '/contribute/icons/' },
         ],

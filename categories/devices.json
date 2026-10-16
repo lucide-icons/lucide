@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Devices",
+  "description": "Icons for hardware, electronics, computers, peripherals, and connected devices.",
   "icon": "smartphone"
 }

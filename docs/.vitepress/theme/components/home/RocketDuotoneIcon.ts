@@ -1,4 +1,6 @@
-const RocketDuotoneIcon = [
+import type { LucideIconNode } from '@lucide/vue/src/types';
+
+const RocketDuotoneIcon: LucideIconNode[] = [
   [
     'path',
     {
@@ -16,6 +18,6 @@ const RocketDuotoneIcon = [
       'clip-rule': 'evenodd',
     },
   ],
-] as const;
+];
 
 export default RocketDuotoneIcon;
