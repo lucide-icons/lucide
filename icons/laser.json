@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "kotaindah55"
+  ],
+  "use-cases": [
+    "Annotating a screen during presentation",
+    "Drawing attention to a specific part during presentation"
+  ],
+  "tags": [
+    "annotation",
+    "draw",
+    "highlight",
+    "pointer",
+    "presentation",
+    "screen",
+    "spotlight"
+  ],
+  "categories": [
+    "cursors",
+    "tools",
+    "devices"
+  ]
+}
