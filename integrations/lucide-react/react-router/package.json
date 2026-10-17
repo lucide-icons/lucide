@@ -7,7 +7,8 @@
     "build": "react-router build",
     "typecheck": "react-router typegen && tsc --noEmit",
     "test:browser": "vitest run",
-    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+    "test:node": "node --test tests/exports.node.test.ts",
+    "check": "pnpm build && pnpm typecheck && pnpm test:node && pnpm test:browser"
   },
   "dependencies": {
     "@react-router/node": "8.3.1",
