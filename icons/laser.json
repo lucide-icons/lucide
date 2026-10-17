@@ -6,7 +6,9 @@
   ],
   "use-cases": [
     "Annotating a screen during presentation",
-    "Drawing attention to a specific part during presentation"
+    "Drawing attention to a specific part of a screen during presentation",
+    "Indicating a pointer location in remote presentation or screen-sharing tools",
+    "Representing a virtual pointer tool in design and whiteboard apps"
   ],
   "tags": [
     "annotation",
@@ -15,7 +17,10 @@
     "pointer",
     "presentation",
     "screen",
-    "spotlight"
+    "spotlight",
+    "pointer device",
+    "projection",
+    "guide"
   ],
   "categories": [
     "cursors",
