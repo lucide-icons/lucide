@@ -23,7 +23,10 @@
     "jump",
     "north",
     "caret",
-    "button"
+    "button",
+    "skip",
+    "fast",
+    "feed"
   ],
   "categories": [
     "arrows",

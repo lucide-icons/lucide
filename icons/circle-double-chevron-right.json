@@ -11,7 +11,8 @@
   "use-cases": [
     "Skipping to the last page in pagination controls",
     "Fast-forwarding playback in audio or video media players",
-    "Fast-navigating forward through steps in multi-step wizards"
+    "Fast-navigating forward through steps in multi-step wizards",
+    "Advancing to the final chapter or track in playlists and audiobooks"
   ],
   "tags": [
     "next",
@@ -24,7 +25,12 @@
     "music",
     "caret",
     "button",
-    "pagination"
+    "pagination",
+    "jump",
+    "player",
+    "playlist",
+    "track",
+    "chapter"
   ],
   "categories": [
     "arrows",

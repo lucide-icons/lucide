@@ -11,7 +11,8 @@
   "use-cases": [
     "Navigating to the bottom of a page or feed",
     "Fast-scrolling downwards in long document readers",
-    "Collapsing expanded panels or drawers downward"
+    "Collapsing expanded panels or drawers downward",
+    "Jumping to the latest message in chat and activity feeds"
   ],
   "tags": [
     "bottom",
@@ -22,7 +23,13 @@
     "jump",
     "south",
     "caret",
-    "button"
+    "button",
+    "skip",
+    "end",
+    "latest",
+    "feed",
+    "chat",
+    "fast"
   ],
   "categories": [
     "arrows",
