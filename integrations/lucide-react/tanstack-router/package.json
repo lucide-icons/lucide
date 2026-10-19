@@ -12,8 +12,8 @@
   "dependencies": {
     "@tanstack/react-router": "1.170.32",
     "lucide-react": "workspace:*",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@tanstack/router-plugin": "1.168.35",
