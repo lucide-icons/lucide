@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "madebyoz"
+  ],
+  "use-cases": [
+    "Adjusting spacing between lines in text editors and design tools"
+  ],
+  "tags": [
+    "leading",
+    "text",
+    "letters",
+    "characters",
+    "font",
+    "typography",
+    "spacing",
+    "paragraph",
+    "formatting",
+    "editor",
+    "readability",
+    "typesetting"
+  ],
+  "categories": [
+    "text"
+  ]
+}
