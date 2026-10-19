@@ -19,6 +19,11 @@
     "forward",
     "skip",
     "fast forward",
+  "tags": [
+    "next",
+    "forward",
+    "skip",
+    "fast forward",
     "last",
     "end",
     "east",
@@ -27,10 +32,13 @@
     "button",
     "pagination",
     "jump",
-    "player",
-    "playlist",
+    "seek",
+    "seek forward",
+    "player control",
+    "chapter",
     "track",
-    "chapter"
+    "timeline",
+    "navigation control"
   ],
   "categories": [
     "arrows",

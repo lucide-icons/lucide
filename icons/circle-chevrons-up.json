@@ -16,6 +16,9 @@
   "tags": [
     "top",
     "ascend",
+  "tags": [
+    "top",
+    "ascend",
     "page",
     "page up",
     "back to top",
@@ -25,8 +28,15 @@
     "caret",
     "button",
     "skip",
+    "pagination",
+    "first page",
     "fast",
-    "feed"
+    "fast scroll",
+    "rewind",
+    "jump to start",
+    "floating action button",
+    "anchor",
+    "timeline"
   ],
   "categories": [
     "arrows",

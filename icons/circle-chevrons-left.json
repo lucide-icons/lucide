@@ -20,6 +20,12 @@
     "backward",
     "first",
     "beginning",
+  "tags": [
+    "previous",
+    "rewind",
+    "backward",
+    "first",
+    "beginning",
     "start",
     "west",
     "music",
@@ -27,11 +33,16 @@
     "button",
     "pagination",
     "skip",
+    "skip-back",
+    "seek-back",
+    "media-controls",
     "player",
     "playlist",
     "track",
     "chapter",
-    "jump"
+    "jump",
+    "timeline",
+    "controls"
   ],
   "categories": [
     "arrows",
