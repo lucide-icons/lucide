@@ -3,6 +3,7 @@
   "description": "Status: featured or marked as favorite",
   "tags": [
     "featured",
-    "favorite"
+    "favorite",
+    "favourite"
   ]
 }
