@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley",
     "jguddas",
-    "nito"
+    "nito",
+    "karsa-mistmere",
+    "congemcd"
   ],
   "use-cases": [
     "Representing data as 2D areas in a circular format"
