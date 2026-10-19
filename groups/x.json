@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: removing, deleting or cancelling something",
+  "tags": [
+    "remove",
+    "delete",
+    "cancel"
+  ]
+}

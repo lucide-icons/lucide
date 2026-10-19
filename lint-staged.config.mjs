@@ -15,6 +15,11 @@ const config = {
     `cspell --no-progress ${filenames.join(' ')}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
+  'groups/*.json': (filenames) => [
+    `eslint ${filenames.join(' ')}`,
+    `cspell --no-progress ${filenames.join(' ')}`,
+    `prettier --write ${filenames.join(' ')}`,
+  ],
 };
 
 export default config;

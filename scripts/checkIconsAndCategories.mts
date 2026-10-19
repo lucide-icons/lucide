@@ -4,6 +4,7 @@ import {
   getCurrentDirPath,
   readAllMetadata,
   readMetadata,
+  readGroups,
 } from '../tools/build-helpers/helpers.ts';
 import { type IconMetadata } from '../tools/build-icons/types.ts';
 
@@ -15,7 +16,7 @@ try {
   icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
 } catch (error) {
   console.error(`Failed to read icon metadata: ${error instanceof Error ? error.message : String(error)}`);
-  console.error('This may be due to invalid extends references or circular dependencies.');
+  console.error('This may be due to invalid extends or group references, or circular dependencies.');
   process.exit(1);
 }
 
@@ -54,6 +55,7 @@ Object.keys(icons).forEach((iconName) => {
 });
 
 const EXTENDS_PREFIX = '$extends:';
+const GROUP_PREFIX = '$group:';
 
 const MARKED_FIELDS = ['tags', 'categories', 'contributors'] as const;
 type MarkedField = (typeof MARKED_FIELDS)[number];
@@ -64,7 +66,11 @@ const FIELD_LABELS: Record<MarkedField, string> = {
   contributors: 'contributor',
 };
 
-const isMarker = (entry: string) => entry.startsWith(EXTENDS_PREFIX);
+const isMarker = (entry: string) =>
+  entry.startsWith(EXTENDS_PREFIX) || entry.startsWith(GROUP_PREFIX);
+
+const groups = await readGroups();
+const usedGroups = new Set<string>();
 
 // `readAllMetadata` expands the markers, so the duplicate checks below read the
 // JSON as it is written on disk to see which entries are literals.
@@ -80,6 +86,13 @@ const rawIcons = Object.fromEntries(
 
 /** The values a single marker contributes to `field`. */
 const resolveMarker = (marker: string, field: MarkedField): string[] => {
+  if (marker.startsWith(GROUP_PREFIX)) {
+    const groupName = marker.slice(GROUP_PREFIX.length);
+    usedGroups.add(groupName);
+
+    return groups[groupName] ?? [];
+  }
+
   const parentName = marker.slice(EXTENDS_PREFIX.length);
 
   return (icons[parentName]?.[field] as string[] | undefined) ?? [];
@@ -113,6 +126,22 @@ Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   });
 });
 
+// An icon that lists every tag of a group as literals describes that group's
+// meaning by hand, so it should reference the group instead.
+Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
+  const tags = rawMetadata.tags ?? [];
+  const literals = new Set(tags.filter((entry) => !isMarker(entry)));
+
+  Object.entries(groups)
+    .filter(([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`))
+    .filter(([, groupTags]) => groupTags.every((tag) => literals.has(tag)))
+    .forEach(([groupName, groupTags]) => {
+      console.warn(
+        `Icon '${iconName}': tags ${groupTags.map((tag) => `'${tag}'`).join(', ')} are all in group '${groupName}' — use "${GROUP_PREFIX}${groupName}" instead.`,
+      );
+    });
+});
+
 Object.keys(categories).forEach((categoryName) => {
   const category = categories[categoryName];
   if (!category?.icon) {
@@ -123,6 +152,12 @@ Object.keys(categories).forEach((categoryName) => {
     error = true;
   }
 });
+
+Object.keys(groups)
+  .filter((groupName) => !usedGroups.has(groupName))
+  .forEach((groupName) => {
+    console.warn(`Group '${groupName}' is not used by any icon.`);
+  });
 
 if (error) {
   console.error('At least one error in icon JSONs prevents from committing changes.');

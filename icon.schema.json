@@ -128,7 +128,7 @@
           "pattern": "^\\$[a-zA-Z]"
         },
         "then": {
-          "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+          "pattern": "^\\$(extends|group):[a-z0-9]+(-[a-z0-9]+)*$"
         }
       },
       "minItems": 1,
