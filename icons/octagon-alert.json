@@ -11,8 +11,8 @@
     "alert"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "$extends:octagon",
+    "notifications"
   ],
   "aliases": [
     {

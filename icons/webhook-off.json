@@ -6,13 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "push api",
-    "interface",
-    "callback"
+    "$extends:webhook"
   ],
   "categories": [
-    "development",
-    "social",
-    "account"
+    "$extends:webhook"
   ]
 }

@@ -9,7 +9,6 @@
     "lost"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:bluetooth"
   ]
 }

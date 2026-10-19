@@ -6,19 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "birthday",
-    "birthdate",
-    "celebration",
-    "party",
-    "surprise",
-    "gateaux",
-    "dessert",
+    "$extends:cake",
     "candles",
-    "wish",
-    "fondant",
-    "icing sugar",
-    "sweet",
-    "baking"
+    "wish"
   ],
   "categories": [
     "food-beverage",

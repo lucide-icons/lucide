@@ -7,10 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "trackpad",
-    "cursor"
+    "$extends:touchpad"
   ],
   "categories": [
-    "devices"
+    "$extends:touchpad"
   ]
 }

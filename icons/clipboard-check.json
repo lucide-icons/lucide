@@ -16,6 +16,6 @@
     "task"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ]
 }

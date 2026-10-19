@@ -13,7 +13,7 @@
     "lens"
   ],
   "categories": [
-    "files"
+    "$extends:file-search"
   ],
   "aliases": [
     {

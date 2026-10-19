@@ -14,7 +14,7 @@
     "->"
   ],
   "categories": [
-    "arrows",
+    "$extends:square-arrow-right",
     "shapes",
     "layout",
     "multimedia"

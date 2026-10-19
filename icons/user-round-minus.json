@@ -11,7 +11,7 @@
     "unsubscribe"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

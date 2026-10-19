@@ -12,6 +12,6 @@
     "road"
   ],
   "categories": [
-    "transportation"
+    "$extends:bus"
   ]
 }

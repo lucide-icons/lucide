@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "computer",
-    "screen",
-    "remote"
+    "$extends:laptop"
   ],
   "categories": [
-    "devices"
+    "$extends:laptop"
   ],
   "aliases": [
     {

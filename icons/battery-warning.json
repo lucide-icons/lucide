@@ -7,15 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:alert",
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge"
+    "$extends:battery",
+    "$group:alert"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:battery"
   ]
 }

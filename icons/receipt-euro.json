@@ -17,6 +17,6 @@
     "€"
   ],
   "categories": [
-    "finance"
+    "$extends:receipt"
   ]
 }

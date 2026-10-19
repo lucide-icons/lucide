@@ -12,7 +12,6 @@
     "lens"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:package"
   ]
 }

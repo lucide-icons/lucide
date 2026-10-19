@@ -7,15 +7,13 @@
     "Creating a new server in a dashboard"
   ],
   "tags": [
+    "$extends:server",
     "add",
     "create",
     "new",
-    "cloud",
-    "storage",
     "computing"
   ],
   "categories": [
-    "development",
-    "devices"
+    "$extends:server"
   ]
 }

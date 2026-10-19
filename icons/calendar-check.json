@@ -21,6 +21,6 @@
     "task"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -11,8 +11,7 @@
     "expand"
   ],
   "categories": [
-    "arrows",
-    "layout",
-    "design"
+    "$extends:maximize",
+    "arrows"
   ]
 }

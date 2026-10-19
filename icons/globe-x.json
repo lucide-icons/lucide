@@ -18,8 +18,8 @@
     "signal off"
   ],
   "categories": [
+    "$extends:globe",
     "connectivity",
-    "devices",
-    "navigation"
+    "devices"
   ]
 }

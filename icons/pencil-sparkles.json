@@ -28,10 +28,7 @@
     "magician"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
-    "text",
+    "$extends:pencil",
     "photography"
   ]
 }

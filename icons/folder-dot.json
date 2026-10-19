@@ -5,7 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "root",
     "project",
     "pinned",
@@ -24,7 +24,7 @@
     "edit"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "development"
   ]
 }

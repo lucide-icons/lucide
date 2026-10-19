@@ -16,9 +16,6 @@
     "vision"
   ],
   "categories": [
-    "accessibility",
-    "photography",
-    "design",
-    "security"
+    "$extends:eye"
   ]
 }

@@ -44,8 +44,6 @@
     "ticked"
   ],
   "categories": [
-    "text",
-    "development",
-    "gaming"
+    "$extends:book"
   ]
 }

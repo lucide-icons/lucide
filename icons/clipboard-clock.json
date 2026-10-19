@@ -10,9 +10,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:clipboard",
     "$group:clock",
-    "copy",
-    "paste",
     "log",
     "clock",
     "watch",
@@ -29,7 +28,7 @@
     "logbook"
   ],
   "categories": [
-    "time",
-    "text"
+    "$extends:clipboard",
+    "time"
   ]
 }

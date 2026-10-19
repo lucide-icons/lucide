@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "computer",
-    "screen",
-    "remote",
+    "$extends:laptop-minimal",
     "success",
     "done",
     "todo",
@@ -17,7 +15,7 @@
     "task"
   ],
   "categories": [
-    "devices",
+    "$extends:laptop-minimal",
     "notifications"
   ]
 }

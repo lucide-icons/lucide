@@ -11,8 +11,8 @@
     "audio"
   ],
   "categories": [
-    "multimedia",
-    "shapes"
+    "$extends:octagon",
+    "multimedia"
   ],
   "aliases": [
     {

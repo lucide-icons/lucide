@@ -16,9 +16,6 @@
     "power"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "photography",
-    "weather"
+    "$extends:zap"
   ]
 }

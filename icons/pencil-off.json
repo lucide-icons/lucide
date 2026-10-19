@@ -29,9 +29,6 @@
     "artist"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
-    "text"
+    "$extends:pencil"
   ]
 }

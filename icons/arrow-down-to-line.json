@@ -19,7 +19,7 @@
     "vertical"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-down",
     "files",
     "development"
   ]

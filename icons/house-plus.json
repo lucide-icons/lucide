@@ -6,14 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "home",
-    "living",
+    "$extends:house",
     "medical",
     "new",
-    "addition",
-    "building",
-    "residence",
-    "architecture"
+    "addition"
   ],
   "categories": [
     "buildings",

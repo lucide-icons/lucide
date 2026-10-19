@@ -7,11 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "cloud",
-    "storage"
+    "$extends:server"
   ],
   "categories": [
-    "development",
-    "devices"
+    "$extends:server"
   ]
 }

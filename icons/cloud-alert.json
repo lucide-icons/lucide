@@ -10,8 +10,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:cloud",
     "$group:alert",
-    "weather",
     "alert",
     "error",
     "sync",

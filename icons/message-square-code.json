@@ -6,17 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:message-square",
     "$group:code",
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
     "code review"
   ],
   "categories": [
-    "development",
-    "social"
+    "$extends:message-square",
+    "development"
   ]
 }

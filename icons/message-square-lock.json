@@ -9,16 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-square",
     "secure",
     "encrypted"
   ],
   "categories": [
-    "social"
+    "$extends:message-square"
   ]
 }

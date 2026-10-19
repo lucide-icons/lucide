@@ -7,12 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "smoking",
+    "$extends:cigarette",
     "no-smoking"
   ],
   "categories": [
-    "travel",
-    "transportation",
-    "medical"
+    "$extends:cigarette"
   ]
 }

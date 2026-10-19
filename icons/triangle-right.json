@@ -17,7 +17,7 @@
     "increase"
   ],
   "categories": [
-    "shapes",
+    "$extends:triangle",
     "math"
   ]
 }

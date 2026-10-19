@@ -30,7 +30,6 @@
     "design"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layers"
   ]
 }

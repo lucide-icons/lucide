@@ -7,15 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-circle",
     "add"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ]
 }

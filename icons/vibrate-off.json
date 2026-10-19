@@ -6,12 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "smartphone",
-    "notification",
-    "rumble",
-    "haptic feedback",
-    "notifications",
-    "screen"
+    "$extends:vibrate",
+    "notifications"
   ],
   "categories": [
     "devices",

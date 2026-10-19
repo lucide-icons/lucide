@@ -11,6 +11,7 @@
     "Representing web development in developer tools"
   ],
   "tags": [
+    "$extends:globe",
     "website",
     "internet",
     "globe",
@@ -19,14 +20,10 @@
     "digital",
     "access",
     "global",
-    "link",
-    "world",
-    "browser",
-    "language",
-    "translate"
+    "link"
   ],
   "categories": [
-    "navigation",
+    "$extends:globe",
     "development"
   ]
 }

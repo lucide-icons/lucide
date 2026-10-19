@@ -15,8 +15,7 @@
     "save"
   ],
   "categories": [
-    "development",
-    "devices",
+    "$extends:hard-drive",
     "arrows",
     "files"
   ]

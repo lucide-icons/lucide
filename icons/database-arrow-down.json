@@ -22,7 +22,6 @@
     "downsize"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

@@ -14,6 +14,6 @@
     "x"
   ],
   "categories": [
-    "development"
+    "$extends:git-pull-request"
   ]
 }

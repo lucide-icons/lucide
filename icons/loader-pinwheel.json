@@ -6,13 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "loading",
-    "wait",
-    "busy",
-    "progress",
-    "throbber",
-    "spinner",
-    "spinning",
+    "$extends:loader",
     "beach ball",
     "frozen",
     "freeze"

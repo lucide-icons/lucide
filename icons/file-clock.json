@@ -12,7 +12,7 @@
     "clock"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "time"
   ]
 }

@@ -8,13 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "loop",
-    "arrows",
+    "$extends:repeat",
     "recurring",
     "again"
   ],
   "categories": [
-    "arrows",
-    "multimedia"
+    "$extends:repeat"
   ]
 }

@@ -11,7 +11,7 @@
     "disconnect"
   ],
   "categories": [
-    "connectivity",
-    "weather"
+    "$extends:cloud",
+    "connectivity"
   ]
 }

@@ -11,6 +11,6 @@
     "table"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

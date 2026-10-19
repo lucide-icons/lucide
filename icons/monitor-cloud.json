@@ -29,8 +29,7 @@
     "environment"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:monitor",
     "development"
   ]
 }

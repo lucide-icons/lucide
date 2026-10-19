@@ -27,7 +27,6 @@
     "computing"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

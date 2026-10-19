@@ -12,8 +12,8 @@
     "type"
   ],
   "categories": [
+    "$extends:file",
     "letters-digits",
-    "files",
     "text"
   ]
 }

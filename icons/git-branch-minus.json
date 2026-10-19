@@ -5,15 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "vcs",
-    "repository",
+    "$extends:git-branch",
     "delete",
     "remove",
     "-"
   ],
   "categories": [
-    "development"
+    "$extends:git-branch"
   ]
 }

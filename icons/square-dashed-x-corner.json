@@ -15,26 +15,9 @@
     "Toggling off marquee or selection mode in a design application"
   ],
   "tags": [
-    "deselect",
-    "unselect",
-    "delete",
-    "select",
-    "selection",
-    "border",
-    "width",
-    "layout",
-    "style",
-    "design",
-    "rectangular",
-    "marquee",
-    "box",
-    "rectangle",
-    "aspect ratio",
-    "1:1"
+    "$extends:square-dashed-x"
   ],
   "categories": [
-    "design",
-    "development",
-    "layout"
+    "$extends:square-dashed-x"
   ]
 }

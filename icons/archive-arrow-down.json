@@ -11,6 +11,8 @@
     "Saving files and records to an archive"
   ],
   "tags": [
+    "$extends:archive",
+    "unarchive",
     "index",
     "backup",
     "box",
@@ -21,7 +23,6 @@
     "save"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }

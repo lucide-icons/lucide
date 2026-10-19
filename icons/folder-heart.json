@@ -5,13 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "$group:heart",
-    "directory",
     "heart",
     "bookmark",
     "quick link"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

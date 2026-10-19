@@ -27,7 +27,6 @@
     "disconnect"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

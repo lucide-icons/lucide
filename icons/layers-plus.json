@@ -17,7 +17,6 @@
     "upgrade"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layers"
   ]
 }

@@ -14,7 +14,7 @@
     "nucleic acid"
   ],
   "categories": [
-    "medical",
+    "$extends:dna",
     "food-beverage"
   ]
 }

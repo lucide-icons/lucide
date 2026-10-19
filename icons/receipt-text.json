@@ -19,7 +19,6 @@
     "contract"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

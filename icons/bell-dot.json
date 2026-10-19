@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:bell",
     "$group:dot",
-    "alarm",
-    "sound",
-    "reminder",
     "unread"
   ],
   "categories": [
-    "account",
-    "notifications"
+    "$extends:bell"
   ]
 }

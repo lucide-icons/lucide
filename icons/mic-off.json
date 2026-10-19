@@ -15,9 +15,6 @@
     "microphone"
   ],
   "categories": [
-    "devices",
-    "communication",
-    "connectivity",
-    "multimedia"
+    "$extends:mic"
   ]
 }

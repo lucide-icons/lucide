@@ -14,7 +14,7 @@
     "edit"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

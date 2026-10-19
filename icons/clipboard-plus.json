@@ -8,8 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "copy",
-    "paste",
+    "$extends:clipboard",
     "add",
     "create",
     "new",
@@ -19,7 +18,7 @@
     "doctor"
   ],
   "categories": [
-    "text",
+    "$extends:clipboard",
     "medical"
   ]
 }

@@ -8,9 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "navigation",
-    "travel",
+    "$extends:map",
     "new",
     "add",
     "create"
