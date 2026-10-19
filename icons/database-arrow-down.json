@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "exporting or downloading data from a database",
+    "syncing data from a remote to a local environment"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "export",
+    "download",
+    "backup",
+    "pull",
+    "downsize"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

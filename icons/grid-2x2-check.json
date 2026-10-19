@@ -4,6 +4,7 @@
     "danielbayley",
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
     "table",
     "rows",
@@ -31,8 +32,7 @@
     {
       "name": "grid-2-x-2-check",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

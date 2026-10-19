@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "chessurisme",
+    "colebemis",
+    "psjdev"
+  ],
+  "use-cases": [
+    "Prompting users to select content for an empty slot",
+    "Adding an area to an existing selection in design editors",
+    "Marking a placeholder where users can add a block"
+  ],
+  "tags": [
+    "selection",
+    "select",
+    "add",
+    "new",
+    "placeholder",
+    "marquee",
+    "box",
+    "dashed",
+    "plus",
+    "insert",
+    "frame",
+    "empty"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "shapes"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "removing a database instance",
+    "deleting or detaching a database connection",
+    "reducing allocated database resources"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "minus",
+    "remove",
+    "delete",
+    "reduce"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
