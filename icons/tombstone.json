@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "ryck"
+  ],
+  "use-cases": [
+    "Marking death or game-over states in games, often paired with skull or ghost icons",
+    "Indicating cemetery or graveyard locations on maps",
+    "Marking deceased individuals in genealogy or family-tree applications",
+    "Flagging obsolete, deprecated, or retired items such as endpoints or pages"
+  ],
+  "tags": [
+    "grave",
+    "gravestone",
+    "headstone",
+    "cemetery",
+    "graveyard",
+    "death",
+    "memorial",
+    "funeral",
+    "halloween",
+    "rip",
+    "obituary",
+    "deceased",
+    "epitaph",
+    "mourning",
+    "bereavement",
+    "condolence",
+    "deprecated",
+    "retired",
+    "archived",
+    "decommissioned"
+  ],
+  "categories": [
+    "gaming",
+    "navigation",
+    "people",
+    "development"
+  ]
+}
