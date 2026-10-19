@@ -136,8 +136,8 @@ export default defineConfig({
       options: {
         appId: 'R7KKMCPXOB',
         apiKey: 'dd3101054267d35fb28f49c42715f1aa',
-        indexName: 'lucide'
-      }
+        indexName: 'lucide',
+      },
     },
     carbonAds: {
       code: 'CWYIC53U',
