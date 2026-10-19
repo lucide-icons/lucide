@@ -7,6 +7,9 @@
     "jamiemlaw",
     "ej52"
   ],
+  "use-cases": [
+    "Indicating disabled reasoning in an AI chat interface"
+  ],
   "tags": [
     "medical",
     "mind",
