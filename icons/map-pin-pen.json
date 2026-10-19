@@ -9,11 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:pen",
     "location",
     "waypoint",
     "marker",
-    "drop",
-    "edit"
+    "drop"
   ],
   "categories": [
     "navigation",

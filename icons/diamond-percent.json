@@ -5,11 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:percent",
     "verified",
     "unverified",
-    "sale",
-    "discount",
-    "offer",
     "marketing",
     "sticker",
     "price tag"

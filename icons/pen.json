@@ -9,9 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:pen",
     "pencil",
-    "change",
-    "create",
     "draw",
     "writer",
     "writing",

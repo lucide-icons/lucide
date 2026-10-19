@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Commerce: discounts and sales",
+  "tags": [
+    "discount",
+    "sale",
+    "offer"
+  ]
+}

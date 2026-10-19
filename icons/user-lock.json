@@ -6,11 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:lock",
     "person",
     "lock",
     "locked",
-    "account",
-    "secure"
+    "account"
   ],
   "categories": [
     "account",

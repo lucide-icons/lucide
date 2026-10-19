@@ -5,10 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:key",
     "directory",
     "key",
     "private",
-    "security",
     "protected"
   ],
   "categories": [

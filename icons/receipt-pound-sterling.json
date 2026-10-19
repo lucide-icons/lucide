@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:currency",
     "bill",
     "voucher",
     "slip",
     "check",
     "counterfoil",
     "british",
-    "currency",
     "gbp",
     "£"
   ],

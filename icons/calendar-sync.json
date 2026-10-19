@@ -8,9 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:sync",
     "repeat",
-    "refresh",
-    "reconnect",
     "transfer",
     "backup",
     "date",

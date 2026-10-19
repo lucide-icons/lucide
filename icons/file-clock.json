@@ -7,7 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "history",
+    "$group:clock",
     "log",
     "clock"
   ],

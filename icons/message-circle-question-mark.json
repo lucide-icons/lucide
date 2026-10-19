@@ -7,13 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:question-mark",
     "comment",
     "chat",
     "conversation",
     "dialog",
     "feedback",
-    "speech bubble",
-    "help"
+    "speech bubble"
   ],
   "categories": [
     "social"

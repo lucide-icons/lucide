@@ -6,11 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:sync",
     "directory",
-    "synchronize",
-    "synchronise",
-    "refresh",
-    "reconnect",
     "transfer",
     "backup"
   ],

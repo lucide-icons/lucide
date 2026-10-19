@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "disabled"
+    "$group:off"
   ],
   "categories": [
     "connectivity",
