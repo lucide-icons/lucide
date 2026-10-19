@@ -9,7 +9,12 @@
     "Indicating checkout in a property or space rental",
     "Indicating someone leaving the house",
     "Triggering a leaving-home routine in home automation",
-    "Logging out of an account"
+    "Logging out of an account",
+    "Indicating checkout in property or short-term rental apps",
+    "Marking a resident or guest leaving a home (presence detection)",
+    "Triggering a leaving-home routine or away mode in smart home apps",
+    "Representing move-out or vacating status in property management tools",
+    "Logging out of an account or ending a user session"
   ],
   "tags": [
     "home",
@@ -21,7 +26,18 @@
     "departure",
     "egress",
     "sign out",
-    "automation"
+    "automation",
+    "rental",
+    "booking",
+    "vacating",
+    "move-out",
+    "guest",
+    "tenant",
+    "property management",
+    "presence detection",
+    "away mode",
+    "security",
+    "logout"
   ],
   "categories": [
     "buildings",
