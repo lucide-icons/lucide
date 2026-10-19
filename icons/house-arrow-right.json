@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "jguddas",
+    "karsa-mistmere",
     "ericfennis"
   ],
   "use-cases": [
-    "indicating checkout in a property or space rental",
-    "indicating someone leaving the house",
-    "triggering a leaving-home routine in home automation",
-    "logging out of an account"
+    "Indicating checkout in a property or space rental",
+    "Indicating someone leaving the house",
+    "Triggering a leaving-home routine in home automation",
+    "Logging out of an account"
   ],
   "tags": [
     "home",
