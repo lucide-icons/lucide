@@ -7,6 +7,7 @@
   ],
   "use-cases": [
     "remove from favorites",
+    "remove from favourites",
     "unstar item",
     "reject favorite",
     "exclude item",
@@ -26,6 +27,7 @@
     "graphic",
     "bookmark",
     "favorite",
+    "favourite",
     "like",
     "review",
     "rating",
