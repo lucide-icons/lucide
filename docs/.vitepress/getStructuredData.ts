@@ -15,6 +15,11 @@ export default async function getStructuredData(iconName: string, pageData: Page
 
   const awaitingRelease = Boolean(params.awaitingRelease);
 
+  // Aliases come through either as plain names or as `{ name, deprecated, ... }` objects.
+  const aliases: string[] = (params.aliases ?? [])
+    .map((alias: string | { name?: string }) => (typeof alias === 'string' ? alias : alias?.name))
+    .filter((alias?: string): alias is string => Boolean(alias));
+
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -39,6 +44,7 @@ export default async function getStructuredData(iconName: string, pageData: Page
       '@type': 'ImageObject',
       '@id': `${url}#icon`,
       name: iconName,
+      ...(aliases.length ? { alternateName: aliases } : {}),
       // TODO: Add support for description extraction from icon metadata
       // description: 'An ...SVG icon from the Lucide icon set.',
       // `/api/icons/<name>` only renders core icons, a lab name would 404 there.

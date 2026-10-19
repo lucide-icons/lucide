@@ -1,23 +1,7 @@
 import type { LiteClient } from 'algoliasearch/lite';
 
-/**
- * Public search credentials. The search-only key is meant to be shipped in the client
- * bundle, so local dev, forks and preview deployments search the production index
- * without any configuration. `VITE_ALGOLIA_*` env vars override these defaults.
- *
- * The index itself is populated by the Algolia crawler; nothing in the docs writes to it.
- */
-const DEFAULTS = {
-  appId: 'R7KKMCPXOB',
-  searchApiKey: 'dd3101054267d35fb28f49c42715f1aa',
-  indexName: 'icons',
-};
-
-export const ALGOLIA_APP_ID = import.meta.env.VITE_ALGOLIA_APP_ID || DEFAULTS.appId;
-export const ALGOLIA_SEARCH_API_KEY =
-  import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY || DEFAULTS.searchApiKey;
-export const ALGOLIA_INDEX_NAME = import.meta.env.VITE_ALGOLIA_INDEX_NAME || DEFAULTS.indexName;
-
+export const ALGOLIA_APP_ID = 'R7KKMCPXOB';
+export const ALGOLIA_SEARCH_API_KEY = 'dd3101054267d35fb28f49c42715f1aa'; // public key.
 /**
  * The index caps retrievable hits at 1000 per query (`paginationLimitedTo`),
  * so a single page of this size is the most we can ever get back.
@@ -67,7 +51,7 @@ export async function searchIconIds(query: string): Promise<string[]> {
   } = await client.searchForHits<{ objectID: string }>({
     requests: [
       {
-        indexName: ALGOLIA_INDEX_NAME,
+        indexName: 'icons',
         query,
         hitsPerPage: HITS_PER_PAGE,
         attributesToRetrieve: ['objectID'],

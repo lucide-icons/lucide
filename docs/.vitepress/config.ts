@@ -10,6 +10,7 @@ import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
 import { transformPageData } from './transformPageData';
 import getHeadConfig from './getHeadConfig';
+import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_API_KEY } from './theme/utils/algolia';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -134,8 +135,8 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: 'R7KKMCPXOB',
-        apiKey: 'dd3101054267d35fb28f49c42715f1aa',
+        appId: ALGOLIA_APP_ID,
+        apiKey: ALGOLIA_SEARCH_API_KEY,
         indexName: 'lucide',
       },
     },
