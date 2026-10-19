@@ -16,9 +16,9 @@ const tiersEndMarker = '[//]: <> (Sponsor tiers end)';
  * Tiers that are not listed here fall back to their Open Collective name.
  */
 const TIER_TITLES: Record<string, string> = {
-  'hero-backer': 'Hero backers 🦸',
+'hero-backer': 'Hero Backer 🦸',
   'awesome-backer': 'Awesome backers 🍺',
-  backer: 'Backers ☕',
+  backer: 'Backer ☕️',
 };
 
 interface Account {
