@@ -5,12 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:heart",
     "date",
     "month",
     "year",
     "event",
     "heart",
-    "favourite",
     "subscribe",
     "valentines day"
   ],

@@ -6,11 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:alert",
     "email",
     "message",
     "letter",
-    "delivery error",
-    "exclamation mark"
+    "delivery error"
   ],
   "categories": [
     "mail"

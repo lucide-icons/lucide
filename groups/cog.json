@@ -1,0 +1,10 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: settings or configuration of something",
+  "tags": [
+    "settings",
+    "gear",
+    "configuration",
+    "preferences"
+  ]
+}

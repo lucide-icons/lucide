@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:alert",
     "comment",
     "chat",
     "conversation",
@@ -16,10 +17,8 @@
     "abuse",
     "offense",
     "alert",
-    "danger",
     "caution",
-    "protected",
-    "exclamation mark"
+    "protected"
   ],
   "categories": [
     "social",

@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:key",
     "key",
     "private",
-    "public",
-    "security"
+    "public"
   ],
   "categories": [
     "files",

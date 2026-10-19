@@ -6,12 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:alert",
     "hidden",
-    "warning",
     "alert",
-    "danger",
-    "protected",
-    "exclamation mark"
+    "protected"
   ],
   "categories": [
     "files",

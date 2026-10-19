@@ -1,0 +1,10 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Commerce: money in a specific currency",
+  "tags": [
+    "currency",
+    "money",
+    "finance",
+    "payment"
+  ]
+}

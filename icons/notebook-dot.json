@@ -8,6 +8,7 @@
     "Marking shared documentation with new information"
   ],
   "tags": [
+    "$group:dot",
     "document",
     "file",
     "journal",
@@ -16,7 +17,6 @@
     "record",
     "entry",
     "notebook",
-    "notification",
     "unread",
     "note"
   ],

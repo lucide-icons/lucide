@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:question-mark",
     "verified",
-    "unverified",
-    "help"
+    "unverified"
   ],
   "categories": [
     "accessibility",

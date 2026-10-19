@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:currency",
     "monetization",
-    "marketing",
-    "currency",
-    "money",
-    "payment"
+    "marketing"
   ],
   "categories": [
     "finance"

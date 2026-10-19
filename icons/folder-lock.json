@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:lock",
     "directory",
-    "lock",
-    "private",
-    "security",
-    "protected"
+    "lock"
   ],
   "categories": [
     "files",

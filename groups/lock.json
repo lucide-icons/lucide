@@ -1,0 +1,10 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: locked, private or secured",
+  "tags": [
+    "private",
+    "secure",
+    "security",
+    "protected"
+  ]
+}
