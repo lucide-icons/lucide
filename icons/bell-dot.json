@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dot",
     "alarm",
-    "notification",
     "sound",
     "reminder",
     "unread"

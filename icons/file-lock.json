@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:lock",
     "lock",
-    "password",
-    "security"
+    "password"
   ],
   "categories": [
     "files",

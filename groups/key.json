@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: access, credentials or passwords",
+  "tags": [
+    "password",
+    "security",
+    "access"
+  ]
+}

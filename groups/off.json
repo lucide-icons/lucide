@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: turned off, disabled or unavailable",
+  "tags": [
+    "disabled",
+    "inactive",
+    "unavailable"
+  ]
+}

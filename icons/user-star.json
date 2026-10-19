@@ -10,9 +10,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:star",
     "person",
     "account",
-    "favorite",
     "contact",
     "like",
     "review",
