@@ -129,7 +129,7 @@ function renderSponsor(account: Account) {
   const href = account.website || `https://opencollective.com/${account.slug}`;
   const alt = account.description ? `${account.name} – ${account.description}` : account.name;
 
-  return `<a href="${escapeHtml(href)}"><img src="${escapeHtml(getLogo(account))}" width="180" alt="${escapeHtml(alt)}" /></a>`;
+  return `<a href="${escapeHtml(href)}"><img src="${escapeHtml(getLogo(account))}" height="64" alt="${escapeHtml(alt)}" /></a>`;
 }
 
 function renderTiers({ tiers, orders }: Awaited<ReturnType<typeof fetchCollective>>) {
