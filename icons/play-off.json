@@ -10,11 +10,7 @@
     "Showing that a media file cannot be played"
   ],
   "tags": [
-    "audio",
-    "video",
-    "music",
-    "start",
-    "run",
+    "$extends:play",
     "off",
     "disabled",
     "blocked",

@@ -8,15 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "picture",
-    "photo",
+    "$extends:image",
     "upload",
     "import"
   ],
   "categories": [
-    "photography",
-    "text",
-    "multimedia",
-    "files"
+    "$extends:image"
   ]
 }

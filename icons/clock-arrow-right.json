@@ -9,14 +9,12 @@
     "Removing timing information from an item"
   ],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
     "range",
     "unassign"
   ],
   "categories": [
-    "time",
+    "$extends:clock",
     "people",
     "arrows"
   ]

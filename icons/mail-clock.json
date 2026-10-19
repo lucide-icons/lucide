@@ -11,10 +11,7 @@
     "Showing delayed delivery in messaging and productivity tools"
   ],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "unread",
+    "$extends:mail",
     "scheduled",
     "delayed",
     "send later",
@@ -25,9 +22,7 @@
     "timer"
   ],
   "categories": [
-    "text",
-    "account",
-    "mail",
+    "$extends:mail",
     "time",
     "notifications",
     "communication"

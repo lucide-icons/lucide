@@ -11,6 +11,6 @@
     "diagonal"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-up"
   ]
 }

@@ -16,7 +16,6 @@
     "insect"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

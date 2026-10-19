@@ -5,11 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "cannabis",
-    "weed",
-    "leaf"
+    "$extends:cannabis"
   ],
   "categories": [
-    "nature"
+    "$extends:cannabis"
   ]
 }

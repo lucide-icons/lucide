@@ -9,8 +9,7 @@
     "pocket"
   ],
   "categories": [
-    "account",
-    "finance"
+    "$extends:wallet"
   ],
   "aliases": [
     {

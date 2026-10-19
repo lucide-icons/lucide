@@ -11,12 +11,9 @@
     "Showing a camera feed is unavailable or blocked for privacy"
   ],
   "tags": [
-    "camera",
-    "security"
+    "$extends:webcam"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "communication"
+    "$extends:webcam"
   ]
 }

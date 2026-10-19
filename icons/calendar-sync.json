@@ -24,7 +24,7 @@
     "auto"
   ],
   "categories": [
-    "arrows",
-    "time"
+    "$extends:calendar",
+    "arrows"
   ]
 }

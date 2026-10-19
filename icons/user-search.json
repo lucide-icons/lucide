@@ -10,15 +10,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
     "$group:search",
-    "person",
-    "account",
-    "contact",
     "scan",
     "magnifier"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "social"
   ]
 }

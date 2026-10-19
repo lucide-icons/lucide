@@ -9,9 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "signal",
-    "wireless",
+    "$extends:wifi",
     "directory",
     "settings",
     "control",
@@ -21,8 +19,7 @@
     "gear"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:wifi",
     "files"
   ]
 }

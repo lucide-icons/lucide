@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:x",
-    "directory"
+    "$extends:folder",
+    "$group:x"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

@@ -8,13 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
     "$group:pen",
-    "person",
-    "account",
-    "contact",
     "profile"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

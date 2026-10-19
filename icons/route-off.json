@@ -5,12 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "path",
-    "journey",
-    "planner",
-    "points",
-    "stops",
-    "stations",
+    "$extends:route",
     "reset",
     "clear",
     "cancelled",
@@ -18,6 +13,6 @@
     "blocked"
   ],
   "categories": [
-    "navigation"
+    "$extends:route"
   ]
 }

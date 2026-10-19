@@ -20,7 +20,6 @@
     "rpm"
   ],
   "categories": [
-    "devices",
-    "multimedia"
+    "$extends:disc"
   ]
 }

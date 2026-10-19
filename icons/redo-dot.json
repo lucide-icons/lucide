@@ -13,7 +13,6 @@
     "forward"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "$extends:redo"
   ]
 }

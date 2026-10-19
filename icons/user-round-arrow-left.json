@@ -28,7 +28,7 @@
     "inbound"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "people",
     "arrows"
   ]

@@ -9,16 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:pen",
-    "location",
-    "waypoint",
-    "marker",
-    "drop"
+    "$extends:map-pin",
+    "$group:pen"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ],
   "aliases": [
     {

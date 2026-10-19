@@ -14,7 +14,7 @@
     "winner"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

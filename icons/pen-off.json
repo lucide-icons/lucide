@@ -31,8 +31,6 @@
     "artist"
   ],
   "categories": [
-    "text",
-    "design",
-    "tools"
+    "$extends:pen"
   ]
 }

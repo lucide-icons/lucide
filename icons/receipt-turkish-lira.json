@@ -19,6 +19,6 @@
     "₺"
   ],
   "categories": [
-    "finance"
+    "$extends:receipt"
   ]
 }

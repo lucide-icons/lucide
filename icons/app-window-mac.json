@@ -5,18 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "application",
-    "menu bar",
-    "pane",
+    "$extends:app-window",
     "preferences",
     "macos",
-    "osx",
-    "executable"
+    "osx"
   ],
   "categories": [
-    "layout",
-    "design",
-    "development",
-    "files"
+    "$extends:app-window"
   ]
 }

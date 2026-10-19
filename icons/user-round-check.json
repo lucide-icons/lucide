@@ -14,7 +14,7 @@
     "task"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

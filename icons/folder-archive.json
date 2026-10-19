@@ -11,6 +11,6 @@
     "package"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

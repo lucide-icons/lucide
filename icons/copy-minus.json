@@ -6,17 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
+    "$extends:copy",
     "remove",
     "delete",
     "collapse",
     "subtract",
-    "multiple",
     "-"
   ],
   "categories": [
-    "text",
+    "$extends:copy",
     "math"
   ]
 }

@@ -9,9 +9,7 @@
     "Setting expiration for scheduled tasks"
   ],
   "tags": [
-    "timer",
-    "time",
-    "sandglass",
+    "$extends:hourglass",
     "duration",
     "settings",
     "gear",

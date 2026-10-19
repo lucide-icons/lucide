@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:list-filter",
     "filter",
     "plus",
-    "options",
     "add"
   ],
   "categories": [
-    "text",
+    "$extends:list-filter",
     "layout"
   ]
 }

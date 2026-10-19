@@ -14,13 +14,7 @@
     "Marking new business or property locations on maps"
   ],
   "tags": [
-    "business",
-    "company",
-    "enterprise",
-    "skyscraper",
-    "organisation",
-    "organization",
-    "city",
+    "$extends:building-complex",
     "new",
     "add",
     "create",
@@ -34,7 +28,6 @@
     "property"
   ],
   "categories": [
-    "account",
-    "buildings"
+    "$extends:building-complex"
   ]
 }

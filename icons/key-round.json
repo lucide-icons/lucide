@@ -13,7 +13,6 @@
     "unlock"
   ],
   "categories": [
-    "security",
-    "account"
+    "$extends:key"
   ]
 }

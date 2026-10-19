@@ -9,6 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:globe",
     "globe",
     "earth",
     "planet",
@@ -17,10 +18,6 @@
     "off",
     "hide",
     "avoid",
-    "world",
-    "browser",
-    "language",
-    "translate",
     "internet",
     "offline",
     "disconnected",
@@ -31,7 +28,7 @@
     "signal off"
   ],
   "categories": [
-    "navigation",
+    "$extends:globe",
     "connectivity",
     "devices"
   ]

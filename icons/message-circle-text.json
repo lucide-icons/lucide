@@ -39,6 +39,6 @@
     "chatbot"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ]
 }

@@ -12,6 +12,6 @@
     "cog"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

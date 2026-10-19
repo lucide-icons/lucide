@@ -12,7 +12,7 @@
     "public"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "security"
   ],
   "aliases": [

@@ -22,7 +22,6 @@
     "reduce"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

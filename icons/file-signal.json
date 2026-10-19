@@ -12,7 +12,7 @@
     "volume"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

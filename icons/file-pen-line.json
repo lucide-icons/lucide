@@ -10,7 +10,7 @@
     "edit"
   ],
   "categories": [
-    "files"
+    "$extends:file-pen"
   ],
   "aliases": [
     {

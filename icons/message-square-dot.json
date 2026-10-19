@@ -6,18 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:message-square",
     "$group:dot",
     "unread",
-    "unresolved",
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble"
+    "unresolved"
   ],
   "categories": [
-    "social",
+    "$extends:message-square",
     "notifications"
   ]
 }

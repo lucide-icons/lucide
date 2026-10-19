@@ -12,18 +12,15 @@
     "Sorting wind strengths in weather tables"
   ],
   "tags": [
-    "weather",
-    "air",
+    "$extends:wind",
     "pressure",
-    "blow",
     "gust",
     "windy",
     "sort",
     "increase"
   ],
   "categories": [
-    "weather",
-    "sustainability",
+    "$extends:wind",
     "arrows",
     "navigation"
   ]

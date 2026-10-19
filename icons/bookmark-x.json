@@ -17,6 +17,6 @@
     "clear"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

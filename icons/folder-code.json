@@ -9,13 +9,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "$group:code",
-    "directory",
     "develop",
     "software"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "development"
   ]
 }

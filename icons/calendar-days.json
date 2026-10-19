@@ -12,6 +12,6 @@
     "event"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

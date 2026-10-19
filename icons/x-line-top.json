@@ -31,8 +31,7 @@
     "x̄"
   ],
   "categories": [
-    "letters-digits",
-    "notifications",
-    "math"
+    "$extends:x",
+    "letters-digits"
   ]
 }

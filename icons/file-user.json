@@ -8,12 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "$group:user",
     "personal information",
     "people",
     "listing",
     "networking",
-    "document",
     "cover letter",
     "resume",
     "cv",
@@ -21,7 +21,7 @@
     "application form"
   ],
   "categories": [
-    "account",
-    "files"
+    "$extends:file",
+    "account"
   ]
 }

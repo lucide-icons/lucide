@@ -17,6 +17,6 @@
     "task"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

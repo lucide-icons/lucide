@@ -19,6 +19,6 @@
     "tablet"
   ],
   "categories": [
-    "medical"
+    "$extends:pill"
   ]
 }

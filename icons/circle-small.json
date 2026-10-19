@@ -11,7 +11,7 @@
     "genderless"
   ],
   "categories": [
-    "shapes",
+    "$extends:circle",
     "medical"
   ]
 }

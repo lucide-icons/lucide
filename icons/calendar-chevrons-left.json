@@ -27,7 +27,7 @@
     "events"
   ],
   "categories": [
-    "time",
+    "$extends:calendar",
     "arrows",
     "navigation"
   ]

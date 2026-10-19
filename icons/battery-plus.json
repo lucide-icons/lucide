@@ -9,11 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge",
+    "$extends:battery",
     "plus",
     "economy",
     "health",

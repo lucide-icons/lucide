@@ -12,6 +12,6 @@
     "volume"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

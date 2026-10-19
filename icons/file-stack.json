@@ -15,7 +15,7 @@
     "history"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

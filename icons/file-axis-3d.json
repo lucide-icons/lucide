@@ -12,8 +12,8 @@
     "coordinates"
   ],
   "categories": [
-    "design",
-    "files"
+    "$extends:file",
+    "design"
   ],
   "aliases": [
     {

@@ -16,7 +16,7 @@
     "line"
   ],
   "categories": [
-    "transportation",
+    "$extends:train-front",
     "navigation"
   ]
 }

@@ -13,13 +13,12 @@
     "Requesting an additional card in banking apps"
   ],
   "tags": [
+    "$extends:credit-card",
     "debit",
-    "payment",
     "banking",
     "finance",
     "transaction",
     "wallet",
-    "purchase",
     "checkout",
     "billing",
     "account",
@@ -29,13 +28,10 @@
     "link",
     "save",
     "method",
-    "plastic",
-    "bank",
-    "cc"
+    "plastic"
   ],
   "categories": [
-    "account",
-    "finance",
+    "$extends:credit-card",
     "shopping"
   ]
 }

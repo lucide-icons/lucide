@@ -21,6 +21,6 @@
     "falling"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

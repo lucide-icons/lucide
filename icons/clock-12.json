@@ -7,13 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
     "noon",
     "midnight"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

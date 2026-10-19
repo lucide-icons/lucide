@@ -12,7 +12,7 @@
     "question"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

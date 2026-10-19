@@ -15,6 +15,6 @@
     "valentines day"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -19,7 +19,6 @@
     "pest control"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

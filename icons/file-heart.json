@@ -12,6 +12,6 @@
     "quick link"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

@@ -16,6 +16,6 @@
     "remove"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

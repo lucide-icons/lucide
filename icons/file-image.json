@@ -12,6 +12,6 @@
     "picture"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

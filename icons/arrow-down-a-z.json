@@ -17,10 +17,10 @@
     "alphabetical"
   ],
   "categories": [
+    "$extends:arrow-down",
     "letters-digits",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
     {

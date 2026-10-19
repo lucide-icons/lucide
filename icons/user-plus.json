@@ -15,6 +15,6 @@
     "subscribe"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

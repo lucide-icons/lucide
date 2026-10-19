@@ -21,8 +21,6 @@
     "trip"
   ],
   "categories": [
-    "transportation",
-    "navigation",
-    "travel"
+    "$extends:ship"
   ]
 }

@@ -30,6 +30,6 @@
     "subtract"
   ],
   "categories": [
-    "shopping"
+    "$extends:shopping-cart"
   ]
 }

@@ -5,15 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "index",
-    "backup",
-    "box",
-    "storage",
-    "records",
+    "$extends:archive",
     "junk"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }

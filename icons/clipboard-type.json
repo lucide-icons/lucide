@@ -11,7 +11,7 @@
     "text"
   ],
   "categories": [
-    "letters-digits",
-    "text"
+    "$extends:clipboard",
+    "letters-digits"
   ]
 }
