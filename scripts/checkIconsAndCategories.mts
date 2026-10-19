@@ -126,25 +126,19 @@ Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   });
 });
 
-// Check if the icon has literal tags that could be replaced by group references.
+// An icon that lists every tag of a group as literals describes that group's
+// meaning by hand, so it should reference the group instead.
 Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   const tags = rawMetadata.tags ?? [];
-  const unreferencedGroups = Object.entries(groups).filter(
-    ([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`),
-  );
+  const literals = new Set(tags.filter((entry) => !isMarker(entry)));
 
-  tags
-    .filter((entry) => !isMarker(entry))
-    .forEach((tag) => {
-      const matchingMarkers = unreferencedGroups
-        .filter(([, groupTags]) => groupTags.includes(tag))
-        .map(([groupName]) => `"${GROUP_PREFIX}${groupName}"`);
-
-      if (matchingMarkers.length > 0) {
-        console.error(
-          `Icon '${iconName}': tag '${tag}' is in ${matchingMarkers.join(', ')} — consider using the group instead.`,
-        );
-      }
+  Object.entries(groups)
+    .filter(([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`))
+    .filter(([, groupTags]) => groupTags.every((tag) => literals.has(tag)))
+    .forEach(([groupName, groupTags]) => {
+      console.warn(
+        `Icon '${iconName}': tags ${groupTags.map((tag) => `'${tag}'`).join(', ')} are all in group '${groupName}' — use "${GROUP_PREFIX}${groupName}" instead.`,
+      );
     });
 });
 
