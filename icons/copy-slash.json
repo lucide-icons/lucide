@@ -6,14 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:copy",
     "$group:slash",
-    "clone",
-    "duplicate",
     "cancel",
     "no",
     "stop",
     "error",
-    "multiple",
     "divide",
     "division",
     "split",
@@ -21,7 +19,7 @@
     "/"
   ],
   "categories": [
-    "text",
+    "$extends:copy",
     "development",
     "math"
   ]

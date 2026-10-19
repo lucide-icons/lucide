@@ -8,15 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:wallet",
     "wallet",
     "cards",
     "banking",
     "cash",
     "debit",
     "transport",
-    "money",
-    "finance",
-    "pocket",
     "credit",
     "purchase",
     "payment",
@@ -26,7 +24,6 @@
     "cc"
   ],
   "categories": [
-    "account",
-    "finance"
+    "$extends:wallet"
   ]
 }

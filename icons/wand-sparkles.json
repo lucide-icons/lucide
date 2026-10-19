@@ -10,10 +10,7 @@
     "magician"
   ],
   "categories": [
-    "design",
-    "gaming",
-    "cursors",
-    "photography"
+    "$extends:wand"
   ],
   "aliases": [
     {

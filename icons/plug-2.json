@@ -12,7 +12,6 @@
     "outlet"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:plug"
   ]
 }

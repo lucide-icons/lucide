@@ -14,9 +14,6 @@
     "film"
   ],
   "categories": [
-    "devices",
-    "communication",
-    "connectivity",
-    "photography"
+    "$extends:video"
   ]
 }

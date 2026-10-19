@@ -18,22 +18,11 @@
     "approved review"
   ],
   "tags": [
-    "bookmark",
-    "favorite",
-    "favourite",
-    "like",
-    "review",
-    "rating",
+    "$extends:star",
     "check",
     "star"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes",
-    "multimedia",
-    "weather",
-    "emoji",
-    "gaming"
+    "$extends:star"
   ]
 }

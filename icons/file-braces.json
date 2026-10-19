@@ -12,7 +12,7 @@
     "curly brackets"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ],
   "aliases": [

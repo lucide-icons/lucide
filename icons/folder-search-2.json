@@ -13,6 +13,6 @@
     "lens"
   ],
   "categories": [
-    "files"
+    "$extends:folder-search"
   ]
 }

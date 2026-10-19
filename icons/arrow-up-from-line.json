@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "forward",
-    "direction",
-    "north",
+    "$extends:arrow-up",
     "upload",
     "git",
     "version control",
@@ -18,7 +16,7 @@
     "vertical"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-up",
     "files",
     "development"
   ]

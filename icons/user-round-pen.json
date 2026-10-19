@@ -8,14 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
+    "$extends:user-round",
     "profile",
     "edit",
     "change"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ]
 }

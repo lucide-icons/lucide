@@ -18,6 +18,6 @@
     "first"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

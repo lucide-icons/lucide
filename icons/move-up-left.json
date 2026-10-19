@@ -9,6 +9,6 @@
     "direction"
   ],
   "categories": [
-    "arrows"
+    "$extends:move-up"
   ]
 }

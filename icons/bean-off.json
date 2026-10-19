@@ -6,16 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:bean",
     "soy free",
-    "legume",
-    "soy",
-    "food",
-    "seed",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:bean"
   ]
 }

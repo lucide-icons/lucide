@@ -12,7 +12,7 @@
     "headphones"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

@@ -19,7 +19,6 @@
     "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

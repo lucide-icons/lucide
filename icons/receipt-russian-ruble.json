@@ -16,7 +16,6 @@
     "₽"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

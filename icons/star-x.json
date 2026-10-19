@@ -19,30 +19,19 @@
     "clear favorite selection"
   ],
   "tags": [
+    "$extends:star",
     "mark",
     "symbol",
     "shape",
     "vector",
     "design",
     "graphic",
-    "bookmark",
-    "favorite",
-    "favourite",
-    "like",
-    "review",
-    "rating",
     "x",
     "cancel",
     "reject",
     "star"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes",
-    "multimedia",
-    "weather",
-    "emoji",
-    "gaming"
+    "$extends:star"
   ]
 }

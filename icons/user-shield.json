@@ -21,7 +21,7 @@
     "role"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "security",
     "development",
     "people"

@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "$group:sync",
-    "directory",
     "transfer",
     "backup"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "arrows"
   ]
 }

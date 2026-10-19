@@ -29,8 +29,7 @@
     "disinfect"
   ],
   "categories": [
-    "home",
-    "tools",
+    "$extends:mop",
     "design"
   ]
 }

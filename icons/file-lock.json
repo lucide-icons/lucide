@@ -12,7 +12,7 @@
     "password"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "security"
   ],
   "aliases": [

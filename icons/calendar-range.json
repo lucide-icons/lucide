@@ -15,6 +15,6 @@
     "period"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

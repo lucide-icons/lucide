@@ -8,10 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "world",
-    "browser",
-    "language",
-    "translate",
+    "$extends:globe",
     "internet",
     "web",
     "check",
@@ -23,6 +20,6 @@
     "status"
   ],
   "categories": [
-    "navigation"
+    "$extends:globe"
   ]
 }

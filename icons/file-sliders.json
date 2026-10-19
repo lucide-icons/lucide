@@ -19,7 +19,7 @@
     "executable"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

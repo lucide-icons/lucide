@@ -14,8 +14,6 @@
     "video"
   ],
   "categories": [
-    "photography",
-    "devices",
-    "communication"
+    "$extends:camera"
   ]
 }

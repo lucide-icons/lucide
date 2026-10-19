@@ -17,6 +17,6 @@
     "->"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-right"
   ]
 }

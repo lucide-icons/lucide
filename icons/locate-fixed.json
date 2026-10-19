@@ -8,12 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "map",
-    "gps",
-    "location",
-    "cross"
+    "$extends:locate"
   ],
   "categories": [
-    "navigation"
+    "$extends:locate"
   ]
 }

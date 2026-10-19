@@ -13,13 +13,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "folder",
     "bookmark",
     "file",
     "mark",
     "storage",
     "archive",
-    "directory",
     "project",
     "favorite",
     "favourite",
@@ -27,6 +27,6 @@
     "read later"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

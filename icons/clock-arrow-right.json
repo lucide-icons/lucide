@@ -9,14 +9,12 @@
     "unassign timing information"
   ],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
     "range",
     "unassign"
   ],
   "categories": [
-    "time",
+    "$extends:clock",
     "people",
     "arrows"
   ]

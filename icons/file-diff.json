@@ -10,7 +10,7 @@
     "patch"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

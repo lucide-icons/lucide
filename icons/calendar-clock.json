@@ -16,6 +16,6 @@
     "hour"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

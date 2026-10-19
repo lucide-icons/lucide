@@ -19,24 +19,13 @@
     "prioritize item"
   ],
   "tags": [
-    "bookmark",
-    "favorite",
-    "favourite",
-    "like",
-    "review",
-    "rating",
+    "$extends:star",
     "plus",
     "add",
     "join",
     "star"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes",
-    "multimedia",
-    "weather",
-    "emoji",
-    "gaming"
+    "$extends:star"
   ]
 }

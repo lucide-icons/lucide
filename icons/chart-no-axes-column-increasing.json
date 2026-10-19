@@ -7,14 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-no-axes-column",
     "trending up"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-no-axes-column"
   ],
   "aliases": [
     {

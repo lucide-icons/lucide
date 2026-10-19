@@ -5,15 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "closed captions",
-    "subtitles",
-    "subhead",
-    "transcription",
-    "transcribe",
-    "dialogue",
-    "accessibility"
+    "$extends:captions"
   ],
   "categories": [
-    "multimedia"
+    "$extends:captions"
   ]
 }

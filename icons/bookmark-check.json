@@ -16,6 +16,6 @@
     "todo"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

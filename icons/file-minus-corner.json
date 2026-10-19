@@ -10,7 +10,7 @@
     "document"
   ],
   "categories": [
-    "files"
+    "$extends:file-minus"
   ],
   "aliases": [
     {

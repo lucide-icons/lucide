@@ -28,8 +28,6 @@
     "accessibility"
   ],
   "categories": [
-    "medical",
-    "accessibility",
-    "communication"
+    "$extends:mouth"
   ]
 }

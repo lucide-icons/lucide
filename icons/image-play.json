@@ -8,14 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "picture",
-    "gif",
-    "photo"
+    "$extends:image",
+    "gif"
   ],
   "categories": [
-    "photography",
-    "text",
-    "multimedia",
-    "files"
+    "$extends:image"
   ]
 }

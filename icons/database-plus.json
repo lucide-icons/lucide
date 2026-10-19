@@ -23,7 +23,6 @@
     "expand"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

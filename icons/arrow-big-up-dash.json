@@ -21,9 +21,6 @@
     "boost"
   ],
   "categories": [
-    "arrows",
-    "text",
-    "development",
-    "gaming"
+    "$extends:arrow-big-up"
   ]
 }

@@ -6,12 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "$group:lock",
-    "directory",
     "lock"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "security"
   ]
 }

@@ -12,6 +12,6 @@
     "archive"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

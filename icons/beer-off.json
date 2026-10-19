@@ -7,13 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "alcohol",
-    "bar",
-    "beverage",
-    "brewery",
-    "drink"
+    "$extends:beer"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:beer"
   ]
 }

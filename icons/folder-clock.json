@@ -7,12 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "$group:clock",
-    "directory",
     "clock"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "time"
   ]
 }

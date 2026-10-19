@@ -12,7 +12,7 @@
     "document"
   ],
   "categories": [
-    "files"
+    "$extends:file-x"
   ],
   "aliases": [
     {

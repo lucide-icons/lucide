@@ -28,7 +28,7 @@
     "parents"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "people",
     "social"
   ]

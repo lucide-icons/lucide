@@ -13,7 +13,7 @@
     "account"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "security"
   ]
 }

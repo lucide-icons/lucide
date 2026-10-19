@@ -16,14 +16,12 @@
     "Labelling wireless security settings in router or network apps"
   ],
   "tags": [
+    "$extends:wifi",
     "admin",
-    "connection",
     "secure",
     "security",
-    "signal",
     "network",
     "password",
-    "wireless",
     "hotspot",
     "encrypted",
     "locked",
@@ -36,8 +34,7 @@
     "protected"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:wifi",
     "security"
   ]
 }

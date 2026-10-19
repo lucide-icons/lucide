@@ -38,8 +38,6 @@
     "export"
   ],
   "categories": [
-    "transportation",
-    "navigation",
-    "travel"
+    "$extends:ship"
   ]
 }

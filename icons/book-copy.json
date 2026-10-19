@@ -43,8 +43,6 @@
     "intellectual"
   ],
   "categories": [
-    "development",
-    "text",
-    "gaming"
+    "$extends:book"
   ]
 }

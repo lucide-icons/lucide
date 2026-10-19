@@ -5,12 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "h1",
-    "html",
-    "markup",
-    "markdown"
+    "$extends:heading"
   ],
   "categories": [
-    "text"
+    "$extends:heading"
   ]
 }

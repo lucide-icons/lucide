@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "mouse"
+    "$extends:pointer"
   ],
   "categories": [
-    "cursors"
+    "$extends:pointer"
   ]
 }

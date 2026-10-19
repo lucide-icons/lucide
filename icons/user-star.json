@@ -10,16 +10,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
     "$group:star",
-    "person",
-    "account",
-    "contact",
     "like",
     "review",
     "rating",
     "admin"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "email"
+    "$extends:reply"
   ],
   "categories": [
-    "mail"
+    "$extends:reply"
   ]
 }

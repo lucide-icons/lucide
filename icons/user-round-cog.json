@@ -12,7 +12,7 @@
     "gear"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

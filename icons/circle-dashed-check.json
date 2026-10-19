@@ -31,8 +31,7 @@
     "version control"
   ],
   "categories": [
-    "shapes",
-    "development",
+    "$extends:circle-dashed",
     "notifications"
   ]
 }

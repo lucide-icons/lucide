@@ -25,6 +25,6 @@
     "untag"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

@@ -10,13 +10,11 @@
     "open time settings"
   ],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
     "assign",
     "range"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

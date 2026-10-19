@@ -36,7 +36,6 @@
     "protected"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:trash"
   ]
 }

@@ -9,7 +9,6 @@
     "$group:off"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

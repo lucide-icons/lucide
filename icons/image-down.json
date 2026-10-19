@@ -8,16 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "picture",
-    "photo",
+    "$extends:image",
     "download",
     "save",
     "export"
   ],
   "categories": [
-    "photography",
-    "text",
-    "multimedia",
-    "files"
+    "$extends:image"
   ]
 }

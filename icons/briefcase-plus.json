@@ -15,10 +15,7 @@
     "indicating add to briefcase or save for later in a product/service listing"
   ],
   "tags": [
-    "work",
-    "bag",
-    "baggage",
-    "folder",
+    "$extends:briefcase",
     "new",
     "add",
     "create",
@@ -32,7 +29,7 @@
     "plus"
   ],
   "categories": [
-    "transportation",
+    "$extends:briefcase",
     "files",
     "account"
   ]

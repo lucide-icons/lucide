@@ -8,29 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "post-it",
-    "comment",
-    "annotation",
-    "reaction",
-    "memo",
-    "reminder",
-    "todo",
-    "task",
-    "idea",
-    "brainstorm",
-    "document",
-    "page",
-    "paper",
-    "sheet",
-    "stationary",
-    "office",
+    "$extends:sticky-note",
     "disabled",
     "hidden",
     "mute",
     "inactive"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:sticky-note"
   ]
 }

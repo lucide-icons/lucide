@@ -6,13 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:message-square",
     "$group:alert",
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
     "report",
     "abuse",
     "offense",
@@ -21,7 +16,7 @@
     "protected"
   ],
   "categories": [
-    "social",
+    "$extends:message-square",
     "notifications"
   ]
 }

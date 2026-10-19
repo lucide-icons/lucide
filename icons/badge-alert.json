@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "check",
-    "verified",
-    "unverified",
+    "$extends:badge",
     "security",
     "safety",
     "issue"

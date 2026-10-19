@@ -7,22 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:monitor",
     "$group:dot",
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "screen sharing",
     "status",
     "running",
-    "active",
-    "virtual machine",
-    "vm"
+    "active"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

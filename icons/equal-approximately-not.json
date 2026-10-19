@@ -27,7 +27,7 @@
     "variance"
   ],
   "categories": [
-    "math",
+    "$extends:equal-approximately",
     "development",
     "charts",
     "science"

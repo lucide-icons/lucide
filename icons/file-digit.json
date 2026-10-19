@@ -7,11 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "number",
-    "document"
+    "$extends:file",
+    "number"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

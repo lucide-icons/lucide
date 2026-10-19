@@ -16,6 +16,6 @@
     "lens"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

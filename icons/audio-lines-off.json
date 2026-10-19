@@ -49,7 +49,6 @@
     "song"
   ],
   "categories": [
-    "multimedia",
-    "communication"
+    "$extends:audio-lines"
   ]
 }

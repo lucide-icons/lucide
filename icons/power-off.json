@@ -13,6 +13,6 @@
     "switch"
   ],
   "categories": [
-    "connectivity"
+    "$extends:power"
   ]
 }

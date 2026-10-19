@@ -6,12 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-square",
     "clear",
     "close",
     "delete",
@@ -22,6 +17,6 @@
     "moderate"
   ],
   "categories": [
-    "social"
+    "$extends:message-square"
   ]
 }

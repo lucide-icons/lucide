@@ -7,19 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "camera",
-    "surveillance",
-    "recording",
-    "film",
-    "videotape",
-    "crime",
-    "watching"
+    "$extends:cctv"
   ],
   "categories": [
-    "security",
-    "devices",
-    "communication",
-    "connectivity",
-    "photography"
+    "$extends:cctv"
   ]
 }

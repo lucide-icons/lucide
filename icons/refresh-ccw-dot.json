@@ -21,7 +21,7 @@
     "version control"
   ],
   "categories": [
-    "arrows",
+    "$extends:refresh-ccw",
     "development"
   ]
 }

@@ -9,7 +9,7 @@
     "paste"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard-pen"
   ],
   "aliases": [
     {

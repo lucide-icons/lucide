@@ -12,7 +12,7 @@
     "protected"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "notifications"
   ],
   "aliases": [
