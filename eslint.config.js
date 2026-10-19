@@ -8,6 +8,8 @@ import htmlEslint from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
 import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
 import tseslint from 'typescript-eslint';
+import jsonSchema from './scripts/eslint/jsonSchemaPlugin.mjs';
+import * as jsoncParser from 'jsonc-eslint-parser';
 
 const gitignorePath = path.join(import.meta.dirname, '.gitignore');
 
@@ -150,6 +152,27 @@ export default defineConfig([
       '@html-eslint/element-newline': 'error',
       '@html-eslint/no-trailing-spaces': 'error',
       '@html-eslint/quotes': 'error',
+    },
+  },
+  {
+    files: ['icons/*.json', 'categories/*.json'],
+    languageOptions: {
+      parser: jsoncParser,
+    },
+    plugins: {
+      'json-schema': jsonSchema,
+    },
+  },
+  {
+    files: ['icons/*.json'],
+    rules: {
+      'json-schema/no-invalid': ['error', { schema: 'icon.schema.json' }],
+    },
+  },
+  {
+    files: ['categories/*.json'],
+    rules: {
+      'json-schema/no-invalid': ['error', { schema: 'category.schema.json' }],
     },
   },
 ]);
