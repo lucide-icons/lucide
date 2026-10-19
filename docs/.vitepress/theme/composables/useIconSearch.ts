@@ -1,5 +1,6 @@
 import { computed, ref, shallowRef, watch, type ComputedRef, type Ref } from 'vue';
 import { searchIconIds } from '../utils/algolia';
+import { DefaultTheme, useData } from 'vitepress';
 
 export interface SearchableIcon {
   name: string;
@@ -23,6 +24,7 @@ export interface UseIconSearchResult<T> {
 const useIconSearch = <T extends SearchableIcon>(
   query: Ref<string>,
   collection: Ref<T[]>,
+  algoliaSearchOptions: DefaultTheme.AlgoliaSearchOptions,
 ): UseIconSearchResult<T> => {
   const byId = computed(() => new Map(collection.value.map((icon) => [entityId(icon), icon])));
 
@@ -43,7 +45,7 @@ const useIconSearch = <T extends SearchableIcon>(
       isPending.value = true;
 
       try {
-        const ids = await searchIconIds(searchQuery);
+        const ids = await searchIconIds(searchQuery, algoliaSearchOptions);
 
         if (seq === requestSeq) {
           hitIds.value = ids;

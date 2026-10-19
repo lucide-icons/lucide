@@ -2,7 +2,7 @@
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
-import { useRoute } from 'vitepress';
+import { DefaultTheme, useData, useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
@@ -48,6 +48,9 @@ const props = defineProps<{
   icons: IconEntity[];
 }>();
 
+const { theme } = useData<DefaultTheme.Config>()
+  const algoliaSearchOptions = theme.value.search?.options as DefaultTheme.AlgoliaSearchOptions;
+
 const activeIconName = ref(null);
 const selectedSort = ref(SORTING[0]);
 
@@ -69,6 +72,7 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
 const { results: searchResults, isPending: isSearchPending } = useIconSearch(
   searchQueryDebounced,
   sortedIcons,
+  algoliaSearchOptions,
 );
 
 // While searching, "Popularity" keeps Algolia's relevance order.
@@ -145,7 +149,7 @@ function handleCloseDrawer() {
         ref="searchInput"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
-        @focus="prefetchAlgoliaClient"
+        @focus="() =>prefetchAlgoliaClient(algoliaSearchOptions)"
       />
 
       <Select

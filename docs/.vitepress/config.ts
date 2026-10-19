@@ -10,7 +10,7 @@ import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
 import { transformPageData } from './transformPageData';
 import getHeadConfig from './getHeadConfig';
-import { ALGOLIA_APP_ID, ALGOLIA_SEARCH_API_KEY } from './theme/utils/algolia';
+import { loadEnv } from 'vitepress';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -24,6 +24,9 @@ const iconStyleHeadScript = await readFile(
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
 const description = 'Beautiful & consistent icon toolkit made by the community.';
+
+
+const env = loadEnv(process.env.NODE_ENV, process.cwd());
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -135,8 +138,8 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: ALGOLIA_APP_ID,
-        apiKey: ALGOLIA_SEARCH_API_KEY,
+        appId: env.VITE_ALGOLIA_APP_ID,
+        apiKey: env.VITE_ALGOLIA_SEARCH_API_KEY,
         indexName: 'lucide',
       },
     },
