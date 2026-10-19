@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "devkamani9313"
+    "devkamani9313",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Representing breakfast items, rashers, or pork products",
