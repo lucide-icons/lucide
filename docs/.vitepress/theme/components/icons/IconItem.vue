@@ -204,7 +204,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
   max-height: 3rem;
 }
 
-html.absolute-stroke-width .lucide-icon.customizable {
+html.non-scaling-stroke .lucide-icon.customizable {
   stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
 }
 </style>

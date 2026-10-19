@@ -15,8 +15,7 @@
     "types": ["vite/client", "@testing-library/jest-dom/vitest"],
     "noEmit": true,
     "isolatedModules": true,
-    "outDir": "./dist",
-    "declarationDir": "./dist",
+    "skipLibCheck": true,
     "declaration": true
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { createElement, forwardRef, useEffect, useState } from 'react';
+import { createElement, forwardRef, useEffect, useState, type JSX } from 'react';
 import { LucideIcon, LucideIconData, LucideProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';

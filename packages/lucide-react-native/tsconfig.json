@@ -17,7 +17,9 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "skipLibCheck": false
+    "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom/vitest"]
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["src", "tests", "__mocks__", "vitest.config.mts"]
 }
