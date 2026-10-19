@@ -22,12 +22,14 @@ import FakeInput from '../base/FakeInput.vue'
 
 const VPAlgoliaSearchBox = defineAsyncComponent(() => import('vitepress/dist/client/theme-default/components/VPAlgoliaSearchBox.vue'));
 
-const { theme } = useData<DefaultTheme.Config>()
+const { theme, page } = useData<DefaultTheme.Config>()
 
 const algolia = computed(
   () =>
     (theme.value.search?.options ?? theme.value.algolia) as DefaultTheme.AlgoliaSearchOptions,
 )
+
+const isGuide = computed(() => page.value?.relativePath?.startsWith?.('guide'));
 
 // whether this instance is the one rendering the (hidden) search box
 const isOwner = ref(false)
@@ -117,7 +119,7 @@ function isEditingContent(event: KeyboardEvent): boolean {
 </script>
 
 <template>
-  <div class="VPNavBarSearch">
+  <div class="VPNavBarSearch" v-if="isGuide">
     <FakeInput
       class="nav-search-input"
       :shortcut="shortcutText"
@@ -136,27 +138,29 @@ function isEditingContent(event: KeyboardEvent): boolean {
 
 <style>
 
+.VPNavBarSearch {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .VPNavBarSearch {
     flex-grow: 1;
-    padding-left: 0px;
+    padding-left: 24px;
   }
 }
 
 @media (min-width: 960px) {
   .VPNavBarSearch {
-    padding-left: 0px;
+    padding-left: 32px;
   }
-}
-
-.VPNavBarSearch {
-  padding-top: 24px;
 }
 
 .VPNavBarSearch .nav-search-input {
   padding: 8px 12px;
   align-items: center;
   width: 100%;
+  max-width: 240px;
 }
 
 .VPNavBarSearch .docsearch-host {
