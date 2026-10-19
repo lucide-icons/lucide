@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "jguddas"
+  ],
+  "tags": [
+    "motorbike",
+    "moto",
+    "motorcycle",
+    "off-road",
+    "transport",
+    "vehicle",
+    "drive",
+    "ride",
+    "race",
+    "racing",
+    "trip",
+    "journey",
+    "delivery"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
