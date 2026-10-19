@@ -50,50 +50,58 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "accessibility",
-          "account",
-          "animals",
-          "arrows",
-          "buildings",
-          "charts",
-          "communication",
-          "connectivity",
-          "cursors",
-          "design",
-          "development",
-          "devices",
-          "emoji",
-          "files",
-          "finance",
-          "food-beverage",
-          "gaming",
-          "home",
-          "layout",
-          "mail",
-          "math",
-          "medical",
-          "multimedia",
-          "nature",
-          "navigation",
-          "notifications",
-          "people",
-          "photography",
-          "science",
-          "seasons",
-          "security",
-          "shapes",
-          "shopping",
-          "social",
-          "sports",
-          "sustainability",
-          "text",
-          "time",
-          "tools",
-          "transportation",
-          "travel",
-          "weather"
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "accessibility",
+              "account",
+              "animals",
+              "arrows",
+              "buildings",
+              "charts",
+              "communication",
+              "connectivity",
+              "cursors",
+              "design",
+              "development",
+              "devices",
+              "emoji",
+              "files",
+              "finance",
+              "food-beverage",
+              "gaming",
+              "home",
+              "layout",
+              "mail",
+              "math",
+              "medical",
+              "multimedia",
+              "nature",
+              "navigation",
+              "notifications",
+              "people",
+              "photography",
+              "science",
+              "seasons",
+              "security",
+              "shapes",
+              "shopping",
+              "social",
+              "sports",
+              "sustainability",
+              "text",
+              "time",
+              "tools",
+              "transportation",
+              "travel",
+              "weather"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+          }
         ]
       },
       "uniqueItems": true
@@ -101,7 +109,13 @@
     "contributors": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "if": {
+          "pattern": "^\\$[a-zA-Z]"
+        },
+        "then": {
+          "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+        }
       },
       "minItems": 1,
       "uniqueItems": true
@@ -109,7 +123,13 @@
     "tags": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "if": {
+          "pattern": "^\\$[a-zA-Z]"
+        },
+        "then": {
+          "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+        }
       },
       "minItems": 1,
       "uniqueItems": true

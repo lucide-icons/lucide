@@ -135,6 +135,32 @@ Write metadata for the specific variant:
 
 When a request covers several icons, assign each use case only to the icon it describes. Do not copy metadata to icons it does not describe.
 
+## Reusing metadata: `$extends:`
+
+Variant icons do not have to repeat the metadata of the icon they are built on. A `$extends:<icon-name>` marker means **is a**: at build time it is replaced, in place, by the resolved `tags`, `categories` or `contributors` of that icon.
+
+`alarm-clock-minus` is an alarm clock:
+
+```json
+{
+  "tags": ["$extends:alarm-clock", "remove"],
+  "categories": ["$extends:alarm-clock"]
+}
+```
+
+which resolves to:
+
+```json
+{
+  "tags": ["morning", "remove"],
+  "categories": ["devices", "notifications", "time"]
+}
+```
+
+Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Add the modifier's meaning as the icon's own tags instead.
+
+Put the marker first, before the icon's own values, and never repeat a value the marker already provides — `pnpm checkIcons` fails on that.
+
 ## Aliases
 
 Some icons can include an optional `aliases` field for alternate names.
@@ -147,6 +173,12 @@ Before submitting metadata changes, validate the icon JSON files:
 
 ```sh
 pnpm run lint:json:icons
+```
+
+`$extends:` markers are checked separately:
+
+```sh
+pnpm checkIcons
 ```
 
 You can also format changed files with Prettier:
@@ -166,4 +198,5 @@ Before opening a pull request, confirm that:
 - Tags are lowercase and useful for search.
 - Categories are allowed by `icon.schema.json`.
 - Metadata is specific to the icon and its variants.
-- `pnpm run lint:json:icons` passes.
+- Reused metadata uses `$extends:` for the base icon, with no repeated values.
+- `pnpm run lint:json:icons` and `pnpm checkIcons` pass.

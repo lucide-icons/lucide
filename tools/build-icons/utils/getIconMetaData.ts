@@ -2,6 +2,7 @@ import path from 'path';
 import { pathToFileURL } from 'url';
 import { readSvgDirectory } from '@lucide/helpers';
 import { type IconMetadata } from '../types.ts';
+import { resolveMetadataExtends } from '../../build-helpers/src/resolveMetadataExtends.ts';
 
 async function getIconMetaData(iconDirectory: string): Promise<Record<string, IconMetadata>> {
   const iconJsons = await readSvgDirectory(iconDirectory, '.json');
@@ -15,7 +16,10 @@ async function getIconMetaData(iconDirectory: string): Promise<Record<string, Ic
     }),
   );
 
-  return Object.fromEntries(aliasesEntries);
+  const metadataMap = Object.fromEntries(aliasesEntries);
+
+  // Resolve extends references
+  return await resolveMetadataExtends(metadataMap);
 }
 
 export default getIconMetaData;
