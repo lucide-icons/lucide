@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "DrashtiC07"
+  ],
+  "tags": [
+    "security",
+    "shield",
+    "protection",
+    "admin",
+    "guard",
+    "privacy",
+    "account",
+    "role",
+    "permissions"
+  ],
+  "categories": [
+    "account",
+    "security"
+  ]
+}
