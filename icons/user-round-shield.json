@@ -12,7 +12,10 @@
     "privacy",
     "account",
     "role",
-    "permissions"
+    "permissions",
+    "profile",
+    "identity",
+    "trusted"
   ],
   "categories": [
     "account",
