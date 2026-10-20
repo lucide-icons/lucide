@@ -1,11 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "karsa-mistmere",
+    "MArtytraM99",
     "DrashtiC07"
   ],
   "tags": [
     "security",
-    "shield",
     "protection",
     "admin",
     "guard",
