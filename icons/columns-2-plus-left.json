@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "JMOAWeber"
+  ],
+  "tags": [
+    "columns",
+    "settings",
+    "customize",
+    "table",
+    "grid",
+    "adjust",
+    "configuration",
+    "panel",
+    "layout",
+    "add",
+    "plus",
+    "left"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ]
+}
