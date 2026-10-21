@@ -1,0 +1,49 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "AlexandrePhilibert",
+    "danielbayley",
+    "ericfennis",
+    "colebemis",
+    "ypotti"
+  ],
+  "use-cases": [
+    "Navigating to the top of a page or feed",
+    "Fast-scrolling upwards in long document readers",
+    "Expanding collapsed panels or drawers upward"
+  ],
+  "tags": [
+    "top",
+    "ascend",
+    "page",
+    "page up",
+    "back to top",
+    "scroll",
+    "jump",
+    "north",
+    "caret",
+    "button",
+    "keyboard",
+    "skip",
+    "pagination",
+    "first page",
+    "fast",
+    "fast scroll",
+    "rewind",
+    "jump to start",
+    "floating action button",
+    "anchor",
+    "mac",
+    "control",
+    "ctrl",
+    "menu",
+    "panel",
+    "timeline"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}
