@@ -39,7 +39,7 @@
     "@types/react-dom": "^19.3.0",
     "@types/semver": "^7.8.0",
     "h3": "^1.15.11",
-    "markdown-it": "^15.0.1",
+    "markdown-it": "^15.0.3",
     "markdown-it-container": "^4.0.0",
     "nitropack": "^2.13.4",
     "rollup-plugin-copy": "^3.5.0",
