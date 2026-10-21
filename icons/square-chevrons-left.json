@@ -13,7 +13,10 @@
     "Skipping to the first page in pagination controls",
     "Rewinding playback in audio or video media players",
     "Fast-navigating backward through steps in multi-step wizards",
-    "Jumping to the first track or chapter in playlists"
+    "Jumping to the first track or chapter in playlists",
+    "Rewinding playback to the beginning in media players",
+    "Fast-navigating backward in multi-step wizards and forms",
+    "Jumping to the first track or chapter in playlists and audiobooks"
   ],
   "tags": [
     "previous",
@@ -41,7 +44,9 @@
     "chapter",
     "jump",
     "timeline",
-    "controls"
+    "controls",
+    "seek",
+    "media"
   ],
   "categories": [
     "arrows",

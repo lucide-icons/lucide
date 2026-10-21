@@ -12,7 +12,10 @@
   "use-cases": [
     "Navigating to the top of a page or feed",
     "Fast-scrolling upwards in long document readers",
-    "Expanding collapsed panels or drawers upward"
+    "Expanding collapsed panels or drawers upward",
+    "Jumping to the first item in paginated lists or tables",
+    "Skipping to the beginning of media playback or playlists",
+    "Returning to the start of a timeline or activity log"
   ],
   "tags": [
     "top",
@@ -40,10 +43,19 @@
     "ctrl",
     "menu",
     "panel",
-    "timeline"
+    "timeline",
+    "start",
+    "first",
+    "return",
+    "double arrow",
+    "seek",
+    "playlist",
+    "floating action"
   ],
   "categories": [
     "arrows",
-    "navigation"
+    "navigation",
+    "multimedia",
+    "layout"
   ]
 }

@@ -13,7 +13,9 @@
     "Navigating to the bottom of a page or feed",
     "Fast-scrolling downwards in long document readers",
     "Collapsing expanded panels or drawers downward",
-    "Jumping to the latest message in chat and activity feeds"
+    "Jumping to the latest message in chat and activity feeds",
+    "Skipping to the final item in paginated lists or tables",
+    "Skipping to the end of media playback or playlists"
   ],
   "tags": [
     "bottom",
@@ -36,10 +38,18 @@
     "fast",
     "media",
     "menu",
-    "panel"
+    "panel",
+    "double-arrow",
+    "outlined",
+    "border",
+    "seek",
+    "rewind",
+    "controls",
+    "fast-forward"
   ],
   "categories": [
     "arrows",
-    "navigation"
+    "navigation",
+    "multimedia"
   ]
 }
