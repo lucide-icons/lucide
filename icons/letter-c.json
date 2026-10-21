@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating Celsius temperature units",
+    "representing carbon in scientific contexts",
+    "indicating a grade or rating"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "celsius",
+    "temperature",
+    "carbon",
+    "chemistry",
+    "grade",
+    "rating",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}
