@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Inserting a new table into a document or spreadsheet",
+    "Adding a new row or record to a data table",
+    "Creating a new database table"
+  ],
+  "tags": [
+    "table",
+    "add",
+    "new",
+    "create",
+    "insert",
+    "spreadsheet",
+    "grid",
+    "rows",
+    "columns",
+    "database"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "layout"
+  ]
+}
