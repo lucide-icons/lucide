@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere",
+    "Barakudum"
+  ],
+  "use-cases": [
+    "removing assigned tags from files or resources",
+    "indicating removed labels in issue trackers"
+  ],
+  "tags": [
+    "label",
+    "badge",
+    "ticket",
+    "mark",
+    "category",
+    "classification",
+    "metadata",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "account",
+    "development",
+    "files"
+  ]
+}

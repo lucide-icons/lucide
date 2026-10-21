@@ -1,12 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "adam-kov",
     "colebemis",
     "csandman",
     "aaofyi",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "adam-kov",
+    "Barakudum",
+    "jguddas"
   ],
   "use-cases": [
     "removing a tag from an item",
@@ -17,11 +19,18 @@
     "badge",
     "ticket",
     "mark",
+    "category",
+    "classification",
+    "metadata",
+    "close",
+    "cancel",
     "x",
     "delete",
     "remove"
   ],
   "categories": [
-    "account"
+    "account",
+    "development",
+    "files"
   ]
 }
