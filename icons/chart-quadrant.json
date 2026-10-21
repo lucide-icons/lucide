@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis",
+    "nito"
+  ],
+  "use-cases": [
+    "Showing 2D data points on 4 areas",
+    "Visualizing 2D point distributions split into four sectors in analytics dashboards",
+    "Comparing two-variable trade-offs in decision-making and product strategy interfaces",
+    "Representing SWOT or other 2x2 strategic matrices in business tools"
+  ],
+  "tags": [
+    "quadrant",
+    "chart",
+    "diagram",
+    "statistics",
+    "analytics",
+    "graph",
+    "chart-scatter",
+    "scatterplot",
+    "2x2",
+    "matrix",
+    "segmentation",
+    "correlation",
+    "comparison",
+    "risk",
+    "swot",
+    "clustering"
+  ],
+  "categories": [
+    "charts",
+    "science",
+    "math"
+  ]
+}
