@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "ericfennis",
     "karsa-mistmere",
     "kotaindah55"
   ],
@@ -12,15 +13,16 @@
   ],
   "tags": [
     "annotation",
+    "beam",
     "draw",
+    "guide",
     "highlight",
     "pointer",
     "presentation",
     "screen",
     "spotlight",
     "pointer device",
-    "projection",
-    "guide"
+    "projection"
   ],
   "categories": [
     "cursors",

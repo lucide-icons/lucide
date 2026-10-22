@@ -9,10 +9,13 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 7H2" />
-  <path d="M12.352 15.352a1.205 1.205 0 010-1.704l1.296-1.296a1.205 1.205 0 011.704 0l6.028 6.028a1 1 0 11-3 3z" />
-  <path d="M13 13 4 4" />
-  <path d="m19.5 16.5-3 3" />
-  <path d="m4 10 6-6" />
-  <path d="M7 12V2" />
+  <path d="m13 8 .95-.95" />
+  <path d="M13.95 16.95 13 16" />
+  <path d="M22 12h-9" />
+  <path d="M4 12H2" />
+  <path d="M4.05 16.95 5 16" />
+  <path d="m5 8-.95-.95" />
+  <path d="M9 12h.01" />
+  <path d="M9 19v-2" />
+  <path d="M9 7V5" />
 </svg>
