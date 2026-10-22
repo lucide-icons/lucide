@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Selecting two-finger panning mode in a drawing or image editing app",
+    "Showing a two-finger touch gesture such as pinch, scroll or pan in onboarding tips",
+    "Indicating multi-touch input in trackpad or touchscreen settings"
+  ],
+  "tags": [
+    "hand",
+    "fingers",
+    "two",
+    "gesture",
+    "touch",
+    "multi-touch",
+    "pan",
+    "scroll",
+    "trackpad",
+    "count",
+    "peace"
+  ],
+  "categories": [
+    "cursors",
+    "accessibility"
+  ]
+}
