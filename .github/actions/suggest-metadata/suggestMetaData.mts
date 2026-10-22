@@ -9,9 +9,10 @@ import { parseArgs } from "node:util";
 import z from "zod";
 
 // Resolve repo paths relative to this script so they work no matter which
-// directory the script is invoked from (the workflow runs it from the repo root).
+// directory the script is invoked from. The script lives in
+// `.github/actions/suggest-metadata`, three levels below the repo root.
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.join(scriptDir, "..");
+const repoRoot = path.join(scriptDir, "../../..");
 const iconsDir = path.join(repoRoot, "icons");
 const categoriesDir = path.join(repoRoot, "categories");
 const metadataInstructionsPath = path.join(
