@@ -35,7 +35,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
-const useFileSystem = process.env.USE_FILE_SYSYEM === 'true' || false;
+const useFileSystem = process.env.USE_FILE_SYSTEM === 'true' || false;
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
