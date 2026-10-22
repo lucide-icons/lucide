@@ -19,7 +19,10 @@
     "scroll",
     "trackpad",
     "count",
-    "peace"
+    "peace",
+    "pinch",
+    "zoom",
+    "touchpad"
   ],
   "categories": [
     "cursors",
