@@ -6,7 +6,7 @@ inputs:
     description: OpenAI API key used to generate the suggestions.
     required: true
   github-token:
-    description: "GitHub token with `pull-requests: write` permission to post the review."
+    description: 'GitHub token with `pull-requests: write` permission to post the review.'
     required: true
   pull-request-number:
     description: Number of the pull request to review.

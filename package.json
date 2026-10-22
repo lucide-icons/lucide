@@ -32,9 +32,9 @@
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
-    "suggest:metadata": "node ./.github/actions/suggest-metadata/suggestMetaData.mts",
-    "suggest:metadata:debug": "node --env-file .github/actions/suggest-metadata/.env ./.github/actions/suggest-metadata/suggestMetaData.mts --debug",
-    "suggest:metadata:watch": "node --env-file .github/actions/suggest-metadata/.env --watch ./.github/actions/suggest-metadata/suggestMetaData.mts",
+    "suggest:metadata": "pnpm --filter @lucide/suggest-metadata-action start",
+    "suggest:metadata:debug": "pnpm --filter @lucide/suggest-metadata-action debug",
+    "suggest:metadata:watch": "pnpm --filter @lucide/suggest-metadata-action watch",
     "postinstall": "husky",
     "lint:es": "eslint . --ignore-pattern 'icons/*.json' --ignore-pattern 'categories/*.json'",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
@@ -71,7 +71,6 @@
     "ajv": "^8.20.0",
     "cpy-cli": "^7.0.0",
     "cspell": "^10.2.0",
-    "dotenv": "^17.4.2",
     "eslint": "^10.9.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import-x": "^4.17.1",
@@ -80,7 +79,6 @@
     "jsonc-eslint-parser": "^3.3.0",
     "lint-staged": "^17.4.1",
     "minimist": "^1.2.8",
-    "openai": "^7.9.0",
     "p-memoize": "^8.0.0",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "^0.14.1",
@@ -91,8 +89,7 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.69.0",
     "vitest": "5.0.3",
-    "yargs": "^18.1.0",
-    "zod": "^4.5.4"
+    "yargs": "^18.1.0"
   },
   "engines": {
     "node": ">=24.11.1"
