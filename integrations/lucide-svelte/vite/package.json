@@ -21,7 +21,7 @@
     "playwright": "1.58.2",
     "svelte-check": "^4.7.6",
     "typescript": "^6.0.3",
-    "vite": "^8.3.2",
+    "vite": "^8.3.3",
     "vitest": "5.0.3",
     "vitest-browser-svelte": "3.1.0"
   }
