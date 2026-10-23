@@ -52,4 +52,3 @@ runs:
         COMMIT_SHA: ${{ inputs.commit-sha }}
         OPENAI_API_MODEL: ${{ inputs.model }}
         SUGGESTIONS_CACHE_FILE: ${{ runner.temp }}/suggest-metadata/suggestions.json
-
