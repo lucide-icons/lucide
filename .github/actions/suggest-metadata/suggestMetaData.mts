@@ -36,7 +36,6 @@ const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 const useFileSystem = process.env.USE_FILE_SYSTEM === 'true' || false;
-const cacheFile = process.env.SUGGESTIONS_CACHE_FILE;
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
@@ -129,11 +128,28 @@ const metadataSchema = z.object({
 
 type MetadataSuggestion = z.infer<typeof metadataSchema>;
 
-// The action caches the suggestions under a key based on the pull request's
-// icon names, so a restored cache means the API doesn't need to be called again.
-const suggestionsCache: Record<string, MetadataSuggestion> = cacheFile
-  ? await fs.readFile(cacheFile, 'utf-8').then(JSON.parse, () => ({}))
-  : {};
+// The model's suggestions per icon name are stored as hidden JSON in the body
+// of each review, so later runs on the pull request only call the API for icons
+// that don't have suggestions yet (e.g. new or renamed icons).
+const CACHE_MARKER = /<!-- suggest-metadata-cache: (.*?) -->/;
+
+const suggestionsCache: Record<string, MetadataSuggestion> = {};
+const previousReviews = await octokit.paginate(octokit.pulls.listReviews, {
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+  per_page: 100,
+});
+for (const { user, body } of previousReviews) {
+  const cache = user?.login === username ? body?.match(CACHE_MARKER)?.[1] : undefined;
+  if (!cache) continue;
+
+  try {
+    Object.assign(suggestionsCache, JSON.parse(cache));
+  } catch {
+    // Ignore a malformed cache.
+  }
+}
 
 const { data: files } = await octokit.pulls.listFiles({
   owner,
@@ -368,12 +384,6 @@ const suggestionsByFile = await Promise.all(
   }),
 );
 
-// Write the cache before any early exit below, so the action can save it.
-if (cacheFile) {
-  await fs.mkdir(path.dirname(cacheFile), { recursive: true });
-  await fs.writeFile(cacheFile, JSON.stringify(suggestionsCache, null, 2));
-}
-
 const comments = suggestionsByFile.flatMap(
   ({ filename, iconName, fileContent, currentMetadata, suggested }) => {
     const lines = fileContent.split('\n');
@@ -443,6 +453,8 @@ if (comments.length === 0) {
 const reviewBody = `### 🤖 Metadata suggestions ✨
 I've asked ChatGPT for some suggestions for \`tags\`, \`categories\` and \`use-cases\`.
 Please review them and apply any that you find useful.
+
+<!-- suggest-metadata-cache: ${JSON.stringify(suggestionsCache).replaceAll('>', '\\u003e')} -->
 `;
 
 const review = {
