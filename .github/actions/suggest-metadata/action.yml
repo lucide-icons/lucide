@@ -17,7 +17,7 @@ inputs:
   model:
     description: OpenAI model used to generate the suggestions.
     required: false
-    default: gpt-5-mini
+    default: gpt-6-luna
 
 runs:
   using: composite
