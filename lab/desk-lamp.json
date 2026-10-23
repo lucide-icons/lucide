@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "office",
+    "workstation",
+    "table",
+    "drawers",
+    "household",
+    "lighting",
+    "ambience",
+    "ambiance"
+  ],
+  "categories": [
+    "furniture",
+    "home"
+  ]
+}

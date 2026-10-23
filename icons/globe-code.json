@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "AleksejDix"
+  ],
+  "use-cases": [
+    "Indicating global traffic in network monitoring dashboards",
+    "Representing web development in developer tools"
+  ],
+  "tags": [
+    "website",
+    "internet",
+    "globe",
+    "connection",
+    "network",
+    "digital",
+    "access",
+    "global",
+    "link",
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "categories": [
+    "navigation",
+    "development"
+  ]
+}

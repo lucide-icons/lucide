@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere",
+    "jordan-burnett"
+  ],
+  "use-cases": [
+    "indicating that a webcam is disabled or turned off",
+    "showing a camera feed is unavailable or blocked for privacy"
+  ],
+  "tags": [
+    "camera",
+    "security"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "communication"
+  ]
+}

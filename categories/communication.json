@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Communication",
+  "description": "Icons for speaking, listening, calling, messaging, broadcasting, and communication devices.",
   "icon": "message-circle"
 }

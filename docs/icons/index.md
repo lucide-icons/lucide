@@ -1,5 +1,6 @@
 ---
 title: Icons
+description: Browse all Lucide icons.
 layout: page
 outline: 2
 outlineTitle: Categories

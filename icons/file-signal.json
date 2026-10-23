@@ -5,6 +5,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "audio",
     "music",
@@ -17,8 +18,7 @@
     {
       "name": "file-volume-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

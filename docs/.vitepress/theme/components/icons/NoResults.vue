@@ -20,7 +20,7 @@ import {
   testTubeDiagonal,
   sword,
 } from '../../../data/iconNodes';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { useEventListener } from '@vueuse/core';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { IconNode } from '../../types';
@@ -39,7 +39,7 @@ interface Placeholder {
   finePrint?: string;
 }
 
-const brandPlaceholders: Placeholder[] = shallowReadonly([
+const brandPlaceholders: readonly Placeholder[] = shallowReadonly([
   {
     title: 'Boooo! What a scary brand logo!',
     message:
@@ -103,7 +103,7 @@ const brandPlaceholders: Placeholder[] = shallowReadonly([
   },
 ]);
 
-const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
+const notFoundPlaceholders: readonly Omit<Placeholder, 'title'>[] = shallowReadonly([
   {
     message: 'We’ve looked for this icon for a bird’s eye view, but could not find it.',
     icon: markRaw(bird),
@@ -130,7 +130,7 @@ const notFoundPlaceholders: Omit<Placeholder, 'title'>[] = shallowReadonly([
   },
 ]);
 
-function randomItem<T>(arr: T[]): T {
+function randomItem<T>(arr: readonly T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 

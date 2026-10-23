@@ -1,0 +1,46 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ypotti",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Skipping to the first page in pagination controls",
+    "Rewinding playback in audio or video media players",
+    "Fast-navigating backward through steps in multi-step wizards",
+    "Jumping to the first track or chapter in playlists"
+  ],
+  "tags": [
+    "previous",
+    "rewind",
+    "backward",
+    "first",
+    "beginning",
+    "start",
+    "west",
+    "music",
+    "caret",
+    "button",
+    "pagination",
+    "skip",
+    "skip-back",
+    "seek-back",
+    "media-controls",
+    "player",
+    "playlist",
+    "track",
+    "chapter",
+    "jump",
+    "timeline",
+    "controls"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "multimedia"
+  ]
+}
