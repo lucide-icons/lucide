@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joffx"
+  ],
+  "use-cases": [
+    "Representing hockey equipment in sports interfaces",
+    "Marking hockey-related games or gameplay modes",
+    "Categorizing hockey content in sports apps"
+  ],
+  "tags": [
+    "sport",
+    "campus",
+    "puck",
+    "athlete",
+    "ice",
+    "player",
+    "goal",
+    "cricket",
+    "bat",
+    "sports",
+    "game",
+    "equipment",
+    "stick",
+    "ball",
+    "match",
+    "play"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
