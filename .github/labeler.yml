@@ -90,6 +90,12 @@
       - any-glob-to-any-file:
           - 'packages/astro/*'
 
+# For changes in the Lucide hono package
+🔥 hono package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/hono/*'
+
 # For changes in the @lucide/icons package
 ❇️ lucide-icons:
   - changed-files:

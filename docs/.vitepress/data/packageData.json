@@ -174,6 +174,24 @@
       }
     ]
   },
+  "@lucide/hono": {
+    "docsAlias": "hono",
+    "packageDirname": "hono",
+    "order": 10,
+    "icon": "hono",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/hono",
+        "href": "https://www.npmjs.com/package/@lucide/hono"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/hono",
+        "href": "https://www.npmjs.com/package/@lucide/hono"
+      }
+    ]
+  },
   "lucide-static": {
     "order": 10,
     "icon": "svg",
