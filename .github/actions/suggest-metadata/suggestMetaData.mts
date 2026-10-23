@@ -151,8 +151,11 @@ const { data: pullRequest } = await octokit.pulls.get({
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
 
-// The action runs on every update of the pull request. Collect the suggestions
-// that were already posted, so the same suggestion is never posted twice.
+// The action runs on every update of the pull request. Collect the values that
+// were already suggested per file and field from the suggestion blocks of
+// earlier comments, so they are not suggested again. Comparing values rather
+// than whole comments keeps working when the surrounding array changes, e.g.
+// after a contributor adds a tag or applies part of a suggestion.
 const previousComments = (
   await octokit.paginate(octokit.pulls.listReviewComments, {
     owner,
@@ -161,6 +164,21 @@ const previousComments = (
     per_page: 100,
   })
 ).filter((comment) => comment.user?.login === username);
+
+const previouslySuggestedValues = new Map<string, string[]>();
+for (const { path: filePath, body } of previousComments) {
+  const field = body.match(/^Suggested `([^`]+)`/)?.[1];
+  const suggestion = body.match(/```suggestion\r?\n([\s\S]*?)\r?\n```/)?.[1];
+  if (!field || !suggestion) continue;
+
+  const values = suggestion.split('\n').flatMap((line) => {
+    const value = line.trim().match(/^("(?:[^"\\]|\\.)*"),?$/)?.[1];
+    return value ? [JSON.parse(value) as string] : [];
+  });
+
+  const key = `${filePath}:${field}`;
+  previouslySuggestedValues.set(key, [...(previouslySuggestedValues.get(key) ?? []), ...values]);
+}
 
 const changedFiles = files.filter(
   ({filename}) => filename.startsWith('icons/') && filename.includes('.json')
@@ -362,10 +380,17 @@ const comments = suggestionsByFile.flatMap(
     const chatGptQuery = `Suggest tags, categories and use-cases for a "${iconName}" icon in the Lucide icon library.`;
 
     // Build one inline GitHub suggestion per field. Values are deduped
-    // case-insensitively, and tags already searchable through the icon name are omitted.
+    // case-insensitively against the current and previously suggested values,
+    // and tags already searchable through the icon name are omitted.
     return METADATA_FIELDS.flatMap((field) => {
       const current: string[] = currentMetadata[field];
-      const newValues = getNewMetadataValues(field, current, suggested[field], iconName);
+      const previouslySuggested = previouslySuggestedValues.get(`${filename}:${field}`) ?? [];
+      const newValues = getNewMetadataValues(
+        field,
+        [...current, ...previouslySuggested],
+        suggested[field],
+        iconName,
+      );
 
       if (newValues.length === 0) {
         console.log(`No new ${field} to suggest for ${iconName}. Skipping...`);
@@ -390,14 +415,6 @@ const comments = suggestionsByFile.flatMap(
 ${suggestion}
 \`\`\`
 Want more ideas? [Ask ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(chatGptQuery)})`;
-
-      const isAlreadySuggested = previousComments.some(
-        (comment) => comment.path === filename && comment.body === body,
-      );
-      if (isAlreadySuggested) {
-        console.log(`The ${field} suggestion for ${iconName} was already posted. Skipping...`);
-        return [];
-      }
 
       const comment: ReviewComment = {
         path: filename,
