@@ -62,6 +62,7 @@
     "@floating-ui/vue": "^2.0.1",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",
+    "@openpanel/web": "^1.4.2",
     "@vueuse/components": "^14.4.0",
     "@vueuse/core": "^14.4.0",
     "@vueuse/integrations": "^14.4.0",
