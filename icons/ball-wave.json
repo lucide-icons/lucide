@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "felipeajzanetti",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "polo",
+    "watercraft",
+    "athlete",
+    "feature",
+    "sport",
+    "ball",
+    "aquatic",
+    "swimming",
+    "pool",
+    "team",
+    "game",
+    "competition",
+    "olympic",
+    "water",
+    "match"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
