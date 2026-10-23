@@ -25,7 +25,7 @@ Some icons are variants of another icon (for example `alarm-clock-minus` is an `
 
 ```jsonc
 {
-  "tags": ["$extends:alarm-clock", "remove"],
+  "tags": ["$extends:alarm-clock", "$group:minus"],
   "categories": ["$extends:alarm-clock"],
   "contributors": ["$extends:alarm-clock", "some-user"]
 }
@@ -35,14 +35,36 @@ When checking or adding a `$extends:` marker:
 
 - A marker must be exactly `"$extends:"` followed by the name of an **existing** icon — one that has its own `icons/<icon-name>.json` and `icons/<icon-name>.svg`. The icon name is the file name without the `.json` extension, written in lowercase kebab-case. Referencing a non-existent icon is invalid.
 - Markers are only supported inside the `tags`, `categories`, and `contributors` arrays. They are not a separate property.
-- Only use `$extends:` for the icon's **base icon** — the thing the icon _is_ (`file-plus` is a `file`, `alarm-clock-minus` is an `alarm-clock`). Never extend a **modifier** icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`, `separator`…), which makes no sense on an alarm clock. Add the modifier's meaning as literal tags instead.
+- Only use `$extends:` for the icon's **base icon** — the thing the icon _is_ (`file-plus` is a `file`, `alarm-clock-minus` is an `alarm-clock`). Never extend a **modifier** icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`, `separator`…), which makes no sense on an alarm clock. Use a group for the modifier's meaning instead.
 - An icon may not extend itself, and circular chains (A extends B, B extends A) are not allowed.
 - Ordering is preserved: inherited values are inserted at the marker's position, so place `$extends:` markers where the inherited values should appear (conventionally first, before the icon's own literal values).
 - Run `pnpm checkIcons` to validate all references. It fails on missing icons, self-references, and circular dependencies. Do not assume a marker is valid without confirming the target icon exists.
 
+## Groups
+
+`$extends:` says what an icon **is**; `$group:` says what its variant suffix (`-plus`, `-check`, `-off`…) **means**. A `"$group:<group-name>"` marker inside `tags` is replaced, in place, with the tags of `groups/<group-name>.json`.
+
+```jsonc
+{
+  // `file-minus` is a file, and its `-minus` variant means "remove"
+  "tags": ["$extends:file", "$group:minus", "erase"],
+  "categories": ["$extends:file"]
+}
+```
+
+When checking or adding a `$group:` marker:
+
+- A marker must be exactly `"$group:"` followed by the name of an existing file in `groups/`, without the `.json` extension, in lowercase kebab-case.
+- `$group:` is allowed **only** inside `tags`. It is not valid in `categories` or `contributors`.
+- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`. Suffixes with the same meaning share a group: `mail-warning` uses `$group:alert`, and every currency suffix uses `$group:currency`.
+- The same suffix can mean different things in different contexts — `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off` — so only use the group when the icon carries the group's meaning, and keep context-specific tags as literals.
+- Do not repeat a tag a group already provides, and do not use the same group twice in one array.
+- Conventional order: the `$extends:` base icon first, then `$group:` markers, then the icon's own literal tags.
+- Run `pnpm checkIcons` to validate the markers. It fails on unknown groups, on `$group:` outside `tags`, and on literals that a marker already provides.
+
 ## There should not be duplicates
 
-Never list a value that a `$extends:` marker already provides. Before adding a literal `tag`, `category`, or `contributor`, look at the referenced icon's metadata: if that icon already contains the value, do not also add it as a literal entry in the same array — the inherited value already covers it. For example, if `alarm-clock` already has the tag `morning`, an icon that uses `"$extends:alarm-clock"` in its `tags` must **not** also list `"morning"`.
+Never list a value that a `$extends:` or `$group:` marker already provides. Before adding a literal `tag`, `category`, or `contributor`, look at the referenced icon's metadata: if that icon already contains the value, do not also add it as a literal entry in the same array — the inherited value already covers it. For example, if `alarm-clock` already has the tag `morning`, an icon that uses `"$extends:alarm-clock"` in its `tags` must **not** also list `"morning"`.
 
 Likewise, do not reference the same icon more than once in a single field (no duplicate `$extends:` markers), and do not repeat literal values. The `tags`, `categories`, and `contributors` arrays must contain only unique entries (`uniqueItems` in `icon.schema.json`), and after extends resolution the final arrays must not contain any duplicates.
 
