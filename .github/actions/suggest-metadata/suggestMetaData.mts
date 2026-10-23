@@ -182,9 +182,16 @@ const previousComments = (
 ).filter((comment) => comment.user?.login === username);
 
 const previouslySuggestedValues = new Map<string, string[]>();
-for (const { path: filePath, body } of previousComments) {
-  const field = body.match(/^Suggested `([^`]+)`/)?.[1];
-  const suggestion = body.match(/```suggestion\r?\n([\s\S]*?)\r?\n```/)?.[1];
+// Files and fields that still have a suggestion that can be applied. A second
+// one would replace overlapping lines, and applying both would break the JSON.
+const openSuggestions = new Set<string>();
+for (const { path: filePath, body, line: commentLine } of previousComments) {
+  // Comments of the oldest format were posted without a closing fence, and
+  // don't start with "Suggested `field`". Their suggestion starts with the
+  // field's own line (e.g. `"tags": [`), so the field is read from there.
+  const suggestion = body.match(/```suggestion\r?\n([\s\S]*?)(?:\r?\n```|$)/)?.[1];
+  const field =
+    body.match(/^Suggested `([^`]+)`/)?.[1] ?? suggestion?.match(/^\s*"([^"]+)":/)?.[1];
   if (!field || !suggestion) continue;
 
   const values = suggestion.split('\n').flatMap((line) => {
@@ -194,6 +201,9 @@ for (const { path: filePath, body } of previousComments) {
 
   const key = `${filePath}:${field}`;
   previouslySuggestedValues.set(key, [...(previouslySuggestedValues.get(key) ?? []), ...values]);
+
+  // GitHub sets `line` to null once the commented lines have changed (outdated).
+  if (commentLine != null) openSuggestions.add(key);
 }
 
 const changedFiles = files.filter(
@@ -404,6 +414,11 @@ const comments = suggestionsByFile.flatMap(
 
       if (newValues.length === 0) {
         console.log(`No new ${field} to suggest for ${iconName}. Skipping...`);
+        return [];
+      }
+
+      if (openSuggestions.has(`${filename}:${field}`)) {
+        console.log(`An earlier ${field} suggestion for ${iconName} is still open. Skipping...`);
         return [];
       }
 
