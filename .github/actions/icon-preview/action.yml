@@ -10,14 +10,28 @@ inputs:
     required: false
     default: comment-markup.md
 
+outputs:
+  has-changes:
+    description: Whether any changed icons were found. When `false`, no output file is written.
+    value: ${{ steps.generate.outputs.has-changes }}
+
 runs:
   using: composite
   steps:
     - name: Generate comment markup
+      id: generate
       shell: bash
       run: |
+        markup="$(node "$GITHUB_ACTION_PATH/generateChangedIconsCommentMarkup.mts")"
+
+        if [ -z "$markup" ]; then
+          echo "has-changes=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+
         mkdir -p "$(dirname "$OUTPUT_FILE")"
-        node "$GITHUB_ACTION_PATH/generateChangedIconsCommentMarkup.mts" > "$OUTPUT_FILE"
+        printf '%s\n' "$markup" > "$OUTPUT_FILE"
+        echo "has-changes=true" >> "$GITHUB_OUTPUT"
       env:
         CHANGED_FILES: ${{ inputs.changed-files }}
         OUTPUT_FILE: ${{ inputs.output-file }}

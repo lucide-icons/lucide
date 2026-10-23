@@ -26,8 +26,9 @@ const changedFiles = changedFilesPathString
   .filter((file) => file.includes('.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
+// Print nothing to stdout, so the action writes no comment markup
 if (changedFiles.length === 0) {
-  console.log('No changed icons found');
+  console.error('No changed icons found');
   process.exit(0);
 }
 

@@ -39,12 +39,14 @@ jobs:
           echo ${{ github.event.number }} > ./pr/NR
 
       - name: Generate comment markup
+        id: comment-markup
         uses: ./.github/actions/icon-preview
         with:
           changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
           output-file: ./pr/comment-markup.md
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: steps.comment-markup.outputs.has-changes == 'true'
         with:
           name: pr_number
           path: pr/

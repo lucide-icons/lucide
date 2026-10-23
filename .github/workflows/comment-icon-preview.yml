@@ -21,6 +21,7 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
     steps:
       - name: 'Download artifact'
+        id: artifact
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
@@ -32,6 +33,13 @@ jobs:
             let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "pr_number"
             })[0];
+            // No artifact is uploaded when the pull request has no changed icons
+            if (!matchArtifact) {
+              core.info('No pr_number artifact found, skipping the comment');
+              core.setOutput('found', 'false');
+              return;
+            }
+            core.setOutput('found', 'true');
             let download = await github.rest.actions.downloadArtifact({
                owner: context.repo.owner,
                repo: context.repo.repo,
@@ -42,13 +50,16 @@ jobs:
             fs.writeFileSync('${{github.workspace}}/pr_number.zip', Buffer.from(download.data));
 
       - name: 'Unzip artifact'
+        if: steps.artifact.outputs.found == 'true'
         run: unzip pr_number.zip
 
       - name: 'Get PR number'
+        if: steps.artifact.outputs.found == 'true'
         run: echo "number=$(cat NR)" >> $GITHUB_OUTPUT
         id: pr-number
 
       - name: Find Comment
+        if: steps.artifact.outputs.found == 'true'
         uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
         id: pr-comment
         with:
@@ -57,6 +68,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Create or update comment
+        if: steps.artifact.outputs.found == 'true'
         uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
