@@ -123,6 +123,15 @@ importers:
         specifier: ^18.1.0
         version: 18.2.0
 
+  .github/actions/icon-preview:
+    dependencies:
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../../../tools/build-helpers
+      svgson:
+        specifier: ^5.3.1
+        version: 5.3.1
+
   .github/actions/suggest-metadata:
     dependencies:
       '@octokit/rest':

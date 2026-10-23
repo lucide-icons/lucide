@@ -18,8 +18,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
+          cache: 'pnpm'
           node-version-file: 'package.json'
 
       - name: Get changed files
@@ -28,9 +30,8 @@ jobs:
         with:
           files: icons/*.svg
 
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-      - name: Install svgson for code preview (safer and faster than installing all deps)
-        run: npm install svgson@5.3.1 --force
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --filter @lucide/icon-preview-action...
 
       - name: Save PR number
         run: |
@@ -38,10 +39,10 @@ jobs:
           echo ${{ github.event.number }} > ./pr/NR
 
       - name: Generate comment markup
-        run: node ./scripts/generateChangedIconsCommentMarkup.mts >> ./pr/comment-markup.md
-        id: comment-markup
-        env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        uses: ./.github/actions/icon-preview
+        with:
+          changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
+          output-file: ./pr/comment-markup.md
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:

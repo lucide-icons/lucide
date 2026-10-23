@@ -7,10 +7,11 @@ import {
   getCurrentDirPath,
   minifySvg,
   toPascalCase,
-} from '../tools/build-helpers/helpers.ts';
+} from '@lucide/helpers';
 
-const currentDir = getCurrentDirPath(import.meta.url);
-const ICONS_DIR = path.resolve(currentDir, '../icons');
+// The script lives in `.github/actions/icon-preview`, three levels below the repo root.
+const REPO_ROOT = path.resolve(getCurrentDirPath(import.meta.url), '../../..');
+const ICONS_DIR = path.join(REPO_ROOT, 'icons');
 const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
 const changedFilesPathString = process.env.CHANGED_FILES;
@@ -37,7 +38,7 @@ const getImageTagsByFiles = (
   linkToLucideStudio = false,
 ) =>
   files.map((file) => {
-    const svgContent = fs.readFileSync(path.join(process.cwd(), file), 'utf-8');
+    const svgContent = fs.readFileSync(path.join(REPO_ROOT, file), 'utf-8');
     const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
     const minifiedSvg = minifySvg(strippedAttrsSVG);
     const name = path.basename(file, '.svg');
@@ -147,7 +148,7 @@ const changeFilesSymmetryImageTagsFlipSlash = getImageTagsByFiles(
 
 const readyToUseCode = changedFiles
   .map((changedFile) => {
-    const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
+    const svgContent = fs.readFileSync(path.join(REPO_ROOT, changedFile), 'utf-8');
     const name = path.basename(changedFile, '.svg');
     return `const ${toPascalCase(name)}Icon = createLucideIcon('${toPascalCase(name)}', [
   ${parseSync(svgContent)

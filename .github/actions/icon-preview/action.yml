@@ -1,0 +1,23 @@
+name: Icon preview
+description: Generates the icon preview comment markup for changed icons in a pull request.
+
+inputs:
+  changed-files:
+    description: Space-separated list of changed icon files, relative to the repository root.
+    required: true
+  output-file:
+    description: File the comment markup is written to.
+    required: false
+    default: comment-markup.md
+
+runs:
+  using: composite
+  steps:
+    - name: Generate comment markup
+      shell: bash
+      run: |
+        mkdir -p "$(dirname "$OUTPUT_FILE")"
+        node "$GITHUB_ACTION_PATH/generateChangedIconsCommentMarkup.mts" > "$OUTPUT_FILE"
+      env:
+        CHANGED_FILES: ${{ inputs.changed-files }}
+        OUTPUT_FILE: ${{ inputs.output-file }}
