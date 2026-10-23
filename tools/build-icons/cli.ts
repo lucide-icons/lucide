@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'url';
 import getArgumentOptions from 'minimist';
 
 import { readSvgDirectory } from '@lucide/helpers';
@@ -76,7 +77,9 @@ async function buildIcons() {
 
   const icons = await renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
-  const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
+  const { default: iconFileTemplate } = await import(
+    pathToFileURL(path.resolve(process.cwd(), templateSrc)).href
+  );
 
   const iconMetaData = await getIconMetaData(ICONS_DIR);
 
@@ -135,4 +138,5 @@ try {
   await buildIcons();
 } catch (error) {
   console.error(error);
+  process.exitCode = 1;
 }

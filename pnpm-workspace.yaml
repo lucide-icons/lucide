@@ -3,6 +3,7 @@ packages:
   - 'tools/*'
   - 'docs'
   - 'integrations/*/*'
+  - '.github/actions/*'
 
 overrides:
   cross-spawn: 7.0.5
