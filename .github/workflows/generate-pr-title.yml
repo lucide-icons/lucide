@@ -48,25 +48,19 @@ jobs:
 
       - name: Generate PR title
         id: generate
-        run: |
-          NEW_TITLE="$(node ./scripts/generatePullRequestTitle.mts)"
-          {
-            echo "new_title<<PR_TITLE_EOF"
-            echo "$NEW_TITLE"
-            echo "PR_TITLE_EOF"
-          } >> "$GITHUB_OUTPUT"
-        env:
-          ADDED_FILES: ${{ steps.changed-files.outputs.added_files }}
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
-          CURRENT_TITLE: ${{ github.event.pull_request.title }}
+        uses: ./.github/actions/generate-pr-title
+        with:
+          added-files: ${{ steps.changed-files.outputs.added_files }}
+          changed-files: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
+          current-title: ${{ github.event.pull_request.title }}
 
       - name: Update PR title
-        if: steps.generate.outputs.new_title != ''
+        if: steps.generate.outputs.title != ''
         run: gh pr edit "$PR_NUMBER" --title "$NEW_TITLE"
         env:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-          NEW_TITLE: ${{ steps.generate.outputs.new_title }}
+          NEW_TITLE: ${{ steps.generate.outputs.title }}
 
   # Runs after the title is generated: an edit made with `GITHUB_TOKEN` does not
   # trigger new workflow runs, so a separate workflow would lint the old title.

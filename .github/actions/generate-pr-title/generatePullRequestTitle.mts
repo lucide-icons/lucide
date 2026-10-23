@@ -6,11 +6,11 @@
  * for icon contributions and, for every other kind of PR, inserts or updates the
  * conventional-commit scope so `lint-pr-title` is satisfied.
  *
- * It follows the convention of `generateChangedIconsCommentMarkup.mts`: it reads
- * its input from the environment, prints the result to stdout and has no other
- * side effects. It only imports Node built-ins and the shared
- * `conventional-commit-types.json` (a native JSON import), so Node can still run
- * it natively as an `.mts` file without a `pnpm install` step.
+ * It runs as the `generate-pr-title` composite action: it reads its input from
+ * the environment, prints the result to stdout and has no other side effects.
+ * It only imports Node built-ins and the shared `conventional-commit-types.json`
+ * (a native JSON import), so Node can still run it natively as an `.mts` file
+ * without a `pnpm install` step.
  *
  * Env input (CLI wrapper at the bottom):
  * - `ADDED_FILES_FILE`: path to a newline-separated list of added files, or
@@ -26,7 +26,7 @@ import { readFileSync } from 'node:fs';
 
 // Single source of truth for the conventional-commit types, shared with
 // `lint-pr-title` (amannn/action-semantic-pull-request).
-import VALID_TYPES from '../.github/conventional-commit-types.json' with { type: 'json' };
+import VALID_TYPES from '../../conventional-commit-types.json' with { type: 'json' };
 
 // Default type used in prefix mode when the current title has no valid type.
 // The path reliably tells us the scope but nothing about whether a change is a

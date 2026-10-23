@@ -123,6 +123,8 @@ importers:
         specifier: ^18.1.0
         version: 18.2.0
 
+  .github/actions/generate-pr-title: {}
+
   .github/actions/suggest-metadata:
     dependencies:
       '@octokit/rest':
