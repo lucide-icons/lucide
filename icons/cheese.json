@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MattGeiger"
+  ],
+  "tags": [
+    "milk",
+    "slice",
+    "melting",
+    "recipe",
+    "snack",
+    "dairy",
+    "cheese",
+    "swiss",
+    "wedge",
+    "food",
+    "edible",
+    "lactose",
+    "cheddar",
+    "trap",
+    "mouse"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
