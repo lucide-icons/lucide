@@ -29,12 +29,12 @@ jobs:
           node-version-file: 'package.json'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --filter @lucide/suggest-metadata-action
 
-      - name: Generate comment markup
-        run: node ./scripts/suggestMetaData.mts
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
-          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Suggest metadata
+        uses: ./.github/actions/suggest-metadata
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.number }}
+          commit-sha: ${{ github.event.pull_request.head.sha }}
