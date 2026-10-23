@@ -13,16 +13,13 @@
     "creating a new product or entry with a tag"
   ],
   "tags": [
-    "label",
-    "badge",
-    "ticket",
-    "mark",
+    "$extends:tag",
     "new",
     "add",
     "create",
     "+"
   ],
   "categories": [
-    "account"
+    "$extends:tag"
   ]
 }

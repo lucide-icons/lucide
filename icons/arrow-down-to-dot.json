@@ -13,6 +13,6 @@
     "into"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-down"
   ]
 }

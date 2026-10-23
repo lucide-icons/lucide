@@ -38,8 +38,7 @@
     "suit"
   ],
   "categories": [
-    "gaming",
-    "development",
+    "$extends:playing-cards",
     "social"
   ]
 }

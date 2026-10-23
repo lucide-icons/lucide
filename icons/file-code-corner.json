@@ -15,8 +15,7 @@
     "plist"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:file-code"
   ],
   "aliases": [
     {

@@ -12,8 +12,6 @@
     "monitor"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "communication"
+    "$extends:screen-share"
   ]
 }

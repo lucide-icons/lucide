@@ -12,6 +12,6 @@
     "direction"
   ],
   "categories": [
-    "arrows"
+    "$extends:move-down"
   ]
 }

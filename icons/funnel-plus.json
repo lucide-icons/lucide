@@ -9,13 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "filter",
-    "hopper",
+    "$extends:funnel",
     "add",
     "create",
     "new"
   ],
   "categories": [
-    "layout"
+    "$extends:funnel"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: magic, AI or smart features",
+  "tags": [
+    "magic",
+    "ai",
+    "smart"
+  ]
+}

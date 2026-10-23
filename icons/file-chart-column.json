@@ -13,7 +13,7 @@
     "presentation"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

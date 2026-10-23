@@ -11,6 +11,6 @@
     "remove"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

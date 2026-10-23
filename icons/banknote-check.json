@@ -8,11 +8,9 @@
     "confirm a payment method was added successfully"
   ],
   "tags": [
+    "$extends:banknote",
     "banknote",
     "bill",
-    "currency",
-    "payment",
-    "money",
     "finance",
     "document",
     "verification",
@@ -28,6 +26,6 @@
     "success"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

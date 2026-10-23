@@ -7,16 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "beaker",
-    "erlenmeyer",
-    "non toxic",
-    "lab",
-    "chemistry",
-    "experiment",
-    "test"
+    "$extends:flask-conical",
+    "non toxic"
   ],
   "categories": [
-    "science",
-    "gaming"
+    "$extends:flask-conical"
   ]
 }

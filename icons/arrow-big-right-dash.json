@@ -16,7 +16,6 @@
     "corner"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "$extends:arrow-big-right"
   ]
 }

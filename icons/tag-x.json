@@ -13,15 +13,12 @@
     "deleting a labeled product or entry"
   ],
   "tags": [
-    "label",
-    "badge",
-    "ticket",
-    "mark",
+    "$extends:tag",
     "x",
     "delete",
     "remove"
   ],
   "categories": [
-    "account"
+    "$extends:tag"
   ]
 }

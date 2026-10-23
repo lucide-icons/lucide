@@ -10,19 +10,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "stack",
-    "pile",
-    "pages",
-    "sheets",
-    "paperwork",
-    "copies",
-    "copy",
+    "$extends:layers",
     "layers",
     "remove",
     "delete"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layers"
   ]
 }

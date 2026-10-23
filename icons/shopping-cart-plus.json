@@ -30,6 +30,6 @@
     "buy"
   ],
   "categories": [
-    "shopping"
+    "$extends:shopping-cart"
   ]
 }

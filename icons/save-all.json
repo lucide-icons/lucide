@@ -11,7 +11,6 @@
     "copy"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:save"
   ]
 }

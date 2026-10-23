@@ -34,7 +34,7 @@
     "machine"
   ],
   "categories": [
-    "devices",
+    "$extends:printer",
     "tools"
   ]
 }

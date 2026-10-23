@@ -17,9 +17,9 @@
     "numerical"
   ],
   "categories": [
+    "$extends:arrow-up",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
     {

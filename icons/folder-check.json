@@ -6,14 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
-    "directory",
+    "$extends:folder",
+    "$group:check",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

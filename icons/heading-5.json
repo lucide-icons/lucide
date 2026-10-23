@@ -12,6 +12,6 @@
     "markdown"
   ],
   "categories": [
-    "text"
+    "$extends:heading"
   ]
 }

@@ -6,15 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "vcs",
-    "repository",
+    "$extends:git-branch",
     "add",
     "create",
     "+"
   ],
   "categories": [
-    "development"
+    "$extends:git-branch"
   ]
 }

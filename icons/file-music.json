@@ -22,7 +22,7 @@
     "octave"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "multimedia"
   ]
 }

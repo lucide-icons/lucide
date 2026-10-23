@@ -31,7 +31,6 @@
     "x̄"
   ],
   "categories": [
-    "notifications",
-    "math"
+    "$extends:x"
   ]
 }

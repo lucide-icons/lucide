@@ -40,7 +40,7 @@
     "chip"
   ],
   "categories": [
-    "devices",
+    "$extends:cpu",
     "development"
   ]
 }

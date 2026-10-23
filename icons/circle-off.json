@@ -24,6 +24,6 @@
     "failure"
   ],
   "categories": [
-    "shapes"
+    "$extends:circle"
   ]
 }

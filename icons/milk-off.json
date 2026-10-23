@@ -16,6 +16,6 @@
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:milk"
   ]
 }

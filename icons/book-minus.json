@@ -23,8 +23,6 @@
     "downgrade"
   ],
   "categories": [
-    "development",
-    "text",
-    "gaming"
+    "$extends:book"
   ]
 }

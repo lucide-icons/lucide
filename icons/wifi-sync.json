@@ -9,16 +9,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "signal",
-    "wireless",
+    "$extends:wifi",
     "synchronize",
     "reconnect",
     "reset",
     "restart"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

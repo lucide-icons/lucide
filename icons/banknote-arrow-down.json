@@ -8,10 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:banknote",
     "bill",
-    "currency",
-    "money",
-    "payment",
     "funds",
     "transaction",
     "cash",
@@ -26,6 +24,6 @@
     "decrease"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

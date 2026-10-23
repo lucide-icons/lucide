@@ -12,6 +12,6 @@
     "qr-code"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

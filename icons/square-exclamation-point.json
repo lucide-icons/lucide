@@ -13,10 +13,8 @@
     "Displaying diagnostic or troubleshooting information"
   ],
   "tags": [
-    "warning",
+    "$group:alert",
     "alert",
-    "danger",
-    "exclamation mark",
     "rectangle",
     "square",
     "notification",

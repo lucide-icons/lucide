@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark"
+    "$group:alert",
+    "alert"
   ],
   "categories": [
     "notifications"

@@ -12,8 +12,6 @@
     "speaker"
   ],
   "categories": [
-    "connectivity",
-    "communication",
-    "multimedia"
+    "$extends:volume"
   ]
 }

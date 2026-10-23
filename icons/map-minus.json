@@ -9,9 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "navigation",
-    "travel",
+    "$extends:map",
     "drop",
     "delete",
     "remove",

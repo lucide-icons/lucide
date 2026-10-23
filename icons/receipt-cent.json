@@ -6,20 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
-    "currency",
+    "$extends:receipt",
     "cents",
-    "dollar",
-    "usd",
-    "$",
     "¢"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

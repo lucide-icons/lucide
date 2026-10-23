@@ -11,8 +11,7 @@
     "Scheduling team meetings and gatherings"
   ],
   "tags": [
-    "group",
-    "people",
+    "$extends:users",
     "collaboration",
     "users",
     "team",
@@ -28,7 +27,7 @@
     "profiles"
   ],
   "categories": [
-    "account",
+    "$extends:users",
     "people",
     "communication"
   ]

@@ -9,7 +9,7 @@
     "signature"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

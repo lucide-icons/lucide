@@ -16,7 +16,6 @@
     "delivered"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:package"
   ]
 }

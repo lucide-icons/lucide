@@ -20,7 +20,6 @@
     "lines"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:notepad-text"
   ]
 }

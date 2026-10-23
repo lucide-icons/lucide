@@ -15,8 +15,8 @@
     "linter"
   ],
   "categories": [
+    "$extends:triangle",
     "notifications",
-    "shapes",
     "development"
   ],
   "aliases": [

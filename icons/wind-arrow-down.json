@@ -8,13 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "weather",
-    "air",
-    "pressure",
-    "blow"
+    "$extends:wind",
+    "pressure"
   ],
   "categories": [
-    "weather",
-    "sustainability"
+    "$extends:wind"
   ]
 }

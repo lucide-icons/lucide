@@ -7,13 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "parking lot",
-    "car park",
+    "$extends:square-parking",
     "no parking"
   ],
   "categories": [
-    "transportation",
-    "navigation"
+    "$extends:square-parking"
   ],
   "aliases": [
     {

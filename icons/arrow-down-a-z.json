@@ -17,9 +17,9 @@
     "alphabetical"
   ],
   "categories": [
+    "$extends:arrow-down",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
     {

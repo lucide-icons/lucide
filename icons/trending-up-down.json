@@ -17,7 +17,6 @@
     "volatile"
   ],
   "categories": [
-    "charts",
-    "arrows"
+    "$extends:trending-up"
   ]
 }

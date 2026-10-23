@@ -13,7 +13,6 @@
     "screen"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:smartphone"
   ]
 }

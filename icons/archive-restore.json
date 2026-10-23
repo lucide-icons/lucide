@@ -7,15 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "unarchive",
-    "index",
-    "backup",
-    "box",
-    "storage",
-    "records"
+    "$extends:archive",
+    "unarchive"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }

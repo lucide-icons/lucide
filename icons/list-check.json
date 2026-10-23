@@ -15,6 +15,6 @@
     "bom"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

@@ -9,21 +9,18 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
+    "$group:key",
     "passkey",
-    "password",
     "login",
     "authentication",
     "authorization",
     "roles",
     "permissions",
     "private",
-    "public",
-    "security",
-    "person",
-    "account",
-    "contact"
+    "public"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

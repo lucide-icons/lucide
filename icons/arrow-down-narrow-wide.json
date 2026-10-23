@@ -15,8 +15,8 @@
     "falling"
   ],
   "categories": [
+    "$extends:arrow-down",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ]
 }

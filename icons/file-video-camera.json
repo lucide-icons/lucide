@@ -12,7 +12,7 @@
     "film"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

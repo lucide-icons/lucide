@@ -19,6 +19,6 @@
     "cog"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

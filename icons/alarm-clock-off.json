@@ -8,12 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "morning",
+    "$extends:alarm-clock",
     "turn-off"
   ],
   "categories": [
-    "devices",
-    "notifications",
-    "time"
+    "$extends:alarm-clock"
   ]
 }

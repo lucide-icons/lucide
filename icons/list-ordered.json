@@ -12,6 +12,6 @@
     "queue"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

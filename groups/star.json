@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: featured or marked as favorite",
+  "tags": [
+    "featured",
+    "favorite",
+    "favourite"
+  ]
+}

@@ -12,6 +12,6 @@
     "link"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

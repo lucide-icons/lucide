@@ -11,6 +11,6 @@
     "lights"
   ],
   "categories": [
-    "photography"
+    "$extends:lightbulb"
   ]
 }

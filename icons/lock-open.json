@@ -10,7 +10,7 @@
     "security"
   ],
   "categories": [
-    "security"
+    "$extends:lock"
   ],
   "aliases": [
     {

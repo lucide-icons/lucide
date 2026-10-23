@@ -11,6 +11,6 @@
     "text"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ]
 }

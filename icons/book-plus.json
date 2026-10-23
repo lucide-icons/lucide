@@ -28,8 +28,6 @@
     "level up"
   ],
   "categories": [
-    "development",
-    "text",
-    "gaming"
+    "$extends:book"
   ]
 }

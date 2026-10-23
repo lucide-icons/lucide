@@ -8,11 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "remove",
     "delete"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

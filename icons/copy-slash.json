@@ -6,16 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
+    "$extends:copy",
+    "$group:slash",
     "cancel",
-    "ban",
     "no",
     "stop",
-    "forbidden",
-    "prohibited",
     "error",
-    "multiple",
     "divide",
     "division",
     "split",
@@ -23,7 +19,7 @@
     "/"
   ],
   "categories": [
-    "text",
+    "$extends:copy",
     "development",
     "math"
   ]

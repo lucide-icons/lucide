@@ -8,13 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove",
+    "$group:x",
     "unfollow",
     "unsubscribe",
     "unavailable"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }
