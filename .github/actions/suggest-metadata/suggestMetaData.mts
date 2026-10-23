@@ -34,9 +34,7 @@ const {
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
-const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 const useFileSystem = process.env.USE_FILE_SYSTEM === 'true' || false;
-const cacheFile = process.env.SUGGESTIONS_CACHE_FILE;
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
@@ -129,11 +127,28 @@ const metadataSchema = z.object({
 
 type MetadataSuggestion = z.infer<typeof metadataSchema>;
 
-// The action caches the suggestions under a key based on the pull request's
-// icon names, so a restored cache means the API doesn't need to be called again.
-const suggestionsCache: Record<string, MetadataSuggestion> = cacheFile
-  ? await fs.readFile(cacheFile, 'utf-8').then(JSON.parse, () => ({}))
-  : {};
+// The model's suggestions per icon name are stored as hidden JSON in the body
+// of each review, so later runs on the pull request only call the API for icons
+// that don't have suggestions yet (e.g. new or renamed icons).
+const CACHE_MARKER = /<!-- suggest-metadata-cache: (.*?) -->/;
+
+const suggestionsCache: Record<string, MetadataSuggestion> = {};
+const previousReviews = await octokit.paginate(octokit.pulls.listReviews, {
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+  per_page: 100,
+});
+for (const { user, body } of previousReviews) {
+  const cache = user?.login === username ? body?.match(CACHE_MARKER)?.[1] : undefined;
+  if (!cache) continue;
+
+  try {
+    Object.assign(suggestionsCache, JSON.parse(cache));
+  } catch {
+    // Ignore a malformed cache.
+  }
+}
 
 const { data: files } = await octokit.pulls.listFiles({
   owner,
@@ -151,6 +166,10 @@ const { data: pullRequest } = await octokit.pulls.get({
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
 
+// The commit the review comments are anchored to. Icon files are read at this
+// commit too, so line numbers match even if new commits are pushed mid-run.
+const commitSha = process.env.COMMIT_SHA || pullRequest.head.sha;
+
 // The action runs on every update of the pull request. Collect the values that
 // were already suggested per file and field from the suggestion blocks of
 // earlier comments, so they are not suggested again. Comparing values rather
@@ -166,9 +185,16 @@ const previousComments = (
 ).filter((comment) => comment.user?.login === username);
 
 const previouslySuggestedValues = new Map<string, string[]>();
-for (const { path: filePath, body } of previousComments) {
-  const field = body.match(/^Suggested `([^`]+)`/)?.[1];
-  const suggestion = body.match(/```suggestion\r?\n([\s\S]*?)\r?\n```/)?.[1];
+// Files and fields that still have a suggestion that can be applied. A second
+// one would replace overlapping lines, and applying both would break the JSON.
+const openSuggestions = new Set<string>();
+for (const { path: filePath, body, line: commentLine } of previousComments) {
+  // Comments of the oldest format were posted without a closing fence, and
+  // don't start with "Suggested `field`". Their suggestion starts with the
+  // field's own line (e.g. `"tags": [`), so the field is read from there.
+  const suggestion = body.match(/```suggestion\r?\n([\s\S]*?)(?:\r?\n```|$)/)?.[1];
+  const field =
+    body.match(/^Suggested `([^`]+)`/)?.[1] ?? suggestion?.match(/^\s*"([^"]+)":/)?.[1];
   if (!field || !suggestion) continue;
 
   const values = suggestion.split('\n').flatMap((line) => {
@@ -178,6 +204,9 @@ for (const { path: filePath, body } of previousComments) {
 
   const key = `${filePath}:${field}`;
   previouslySuggestedValues.set(key, [...(previouslySuggestedValues.get(key) ?? []), ...values]);
+
+  // GitHub sets `line` to null once the commented lines have changed (outdated).
+  if (commentLine != null) openSuggestions.add(key);
 }
 
 const changedFiles = files.filter(
@@ -333,22 +362,32 @@ async function getSuggestion(
   return suggested;
 }
 
-const suggestionsByFile = await Promise.all(
-  changedFiles.map(async ({ filename, raw_url }) => {
+const suggestionsByFile = (await Promise.all(
+  changedFiles.map(async ({ filename }) => {
     const iconName = path.basename(filename, '.json');
 
-    // Read the icon's current metadata (the PR head version) first, so we can
+    // Read the icon's current metadata at the reviewed commit first, so we can
     // both give it to the model as context and dedupe suggestions against it.
     let fileContent: string
     if (useFileSystem) {
       fileContent = await fs.readFile(path.join(repoRoot, filename), 'utf-8');
     } else {
-      const fileGithubRequest = await octokit.request(`GET ${raw_url}`, {
-        headers: {
-          'Accept': 'application/vnd.github.v3.raw',
-        },
-      });
-      fileContent = fileGithubRequest.data
+      try {
+        const { data } = await octokit.repos.getContent({
+          owner,
+          repo,
+          path: filename,
+          ref: commitSha,
+          mediaType: { format: 'raw' },
+        });
+        fileContent = data as unknown as string;
+      } catch (error) {
+        // The file list is for the latest head, so a file can be missing at
+        // the reviewed commit (added later, or removed). A later run covers it.
+        if ((error as { status?: number }).status !== 404) throw error;
+        console.log(`${filename} does not exist at ${commitSha}. Skipping...`);
+        return null;
+      }
     }
 
     const metadata = JSON.parse(fileContent)
@@ -366,13 +405,7 @@ const suggestionsByFile = await Promise.all(
 
     return { filename, iconName, fileContent, currentMetadata, suggested };
   }),
-);
-
-// Write the cache before any early exit below, so the action can save it.
-if (cacheFile) {
-  await fs.mkdir(path.dirname(cacheFile), { recursive: true });
-  await fs.writeFile(cacheFile, JSON.stringify(suggestionsCache, null, 2));
-}
+)).filter((file) => file !== null);
 
 const comments = suggestionsByFile.flatMap(
   ({ filename, iconName, fileContent, currentMetadata, suggested }) => {
@@ -394,6 +427,11 @@ const comments = suggestionsByFile.flatMap(
 
       if (newValues.length === 0) {
         console.log(`No new ${field} to suggest for ${iconName}. Skipping...`);
+        return [];
+      }
+
+      if (openSuggestions.has(`${filename}:${field}`)) {
+        console.log(`An earlier ${field} suggestion for ${iconName} is still open. Skipping...`);
         return [];
       }
 
@@ -443,6 +481,8 @@ if (comments.length === 0) {
 const reviewBody = `### 🤖 Metadata suggestions ✨
 I've asked ChatGPT for some suggestions for \`tags\`, \`categories\` and \`use-cases\`.
 Please review them and apply any that you find useful.
+
+<!-- suggest-metadata-cache: ${JSON.stringify(suggestionsCache).replaceAll('>', '\\u003e')} -->
 `;
 
 const review = {
