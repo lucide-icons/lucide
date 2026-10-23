@@ -2,10 +2,20 @@ name: Pull request metadata suggestions
 
 on:
   pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
     paths:
       - 'icons/*.json'
 
 permissions: {}
+
+# Queue runs instead of cancelling them, so a run that already called the
+# OpenAI API can save its cache before the next run restores it.
+concurrency:
+  group: metadata-suggestions-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
 
 jobs:
   pull-request-metadata-suggestions:
