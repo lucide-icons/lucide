@@ -1,21 +1,17 @@
-import fs from 'fs';
-import path from 'path';
 import { IconNodeWithKeys } from '../theme/types';
 import iconNodes from '../data/iconNodes';
+import iconMetaData from '../data/iconMetaData';
 import releaseMeta from '../data/releaseMetaData.json';
 
 const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
-
-const directory = path.join(process.cwd(), '../icons');
 
 export interface GetDataOptions {
   withChildKeys?: boolean;
 }
 
 export async function getData(name: string) {
-  const jsonPath = path.join(directory, `${name}.json`);
-  const jsonContent = fs.readFileSync(jsonPath, 'utf8');
-  const { tags, categories, contributors } = JSON.parse(jsonContent);
+  // Sourced from the generated index so `$extends:` markers are already resolved.
+  const { tags, categories, contributors } = iconMetaData[name] ?? {};
 
   const iconNode = iconNodes[name];
 
