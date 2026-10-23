@@ -34,7 +34,6 @@ const {
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
-const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 const useFileSystem = process.env.USE_FILE_SYSTEM === 'true' || false;
 
 const owner = 'lucide-icons';
@@ -166,6 +165,10 @@ const { data: pullRequest } = await octokit.pulls.get({
 });
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
+
+// The commit the review comments are anchored to. Icon files are read at this
+// commit too, so line numbers match even if new commits are pushed mid-run.
+const commitSha = process.env.COMMIT_SHA || pullRequest.head.sha;
 
 // The action runs on every update of the pull request. Collect the values that
 // were already suggested per file and field from the suggestion blocks of
@@ -359,22 +362,32 @@ async function getSuggestion(
   return suggested;
 }
 
-const suggestionsByFile = await Promise.all(
-  changedFiles.map(async ({ filename, raw_url }) => {
+const suggestionsByFile = (await Promise.all(
+  changedFiles.map(async ({ filename }) => {
     const iconName = path.basename(filename, '.json');
 
-    // Read the icon's current metadata (the PR head version) first, so we can
+    // Read the icon's current metadata at the reviewed commit first, so we can
     // both give it to the model as context and dedupe suggestions against it.
     let fileContent: string
     if (useFileSystem) {
       fileContent = await fs.readFile(path.join(repoRoot, filename), 'utf-8');
     } else {
-      const fileGithubRequest = await octokit.request(`GET ${raw_url}`, {
-        headers: {
-          'Accept': 'application/vnd.github.v3.raw',
-        },
-      });
-      fileContent = fileGithubRequest.data
+      try {
+        const { data } = await octokit.repos.getContent({
+          owner,
+          repo,
+          path: filename,
+          ref: commitSha,
+          mediaType: { format: 'raw' },
+        });
+        fileContent = data as unknown as string;
+      } catch (error) {
+        // The file list is for the latest head, so a file can be missing at
+        // the reviewed commit (added later, or removed). A later run covers it.
+        if ((error as { status?: number }).status !== 404) throw error;
+        console.log(`${filename} does not exist at ${commitSha}. Skipping...`);
+        return null;
+      }
     }
 
     const metadata = JSON.parse(fileContent)
@@ -392,7 +405,7 @@ const suggestionsByFile = await Promise.all(
 
     return { filename, iconName, fileContent, currentMetadata, suggested };
   }),
-);
+)).filter((file) => file !== null);
 
 const comments = suggestionsByFile.flatMap(
   ({ filename, iconName, fileContent, currentMetadata, suggested }) => {
