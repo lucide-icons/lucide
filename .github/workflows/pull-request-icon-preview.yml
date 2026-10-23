@@ -1,23 +1,33 @@
 name: Pull request icon preview
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'icons/*.svg'
 
 permissions: {}
 
+concurrency:
+  group: icon-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
-  generate-changed-icons-comment:
-    name: Generate Changed Icons Comment
+  icon-preview:
+    name: Icon Preview
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
+      pull-requests: write # Required to post the preview comment
 
     steps:
+      #  We check out the main branch of the main repository for security reasons.
+      #  The changed SVGs are read from the pull request head as plain files with
+      #  `git show`, so no code from the (untrusted) pull request is checked out or run.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: lucide-icons/lucide
+          persist-credentials: false
       - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -29,24 +39,34 @@ jobs:
         uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
         with:
           files: icons/*.svg
+          # The checkout is the base branch, so the PR head commit isn't available locally.
+          use_rest_api: true
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --filter @lucide/icon-preview-action...
-
-      - name: Save PR number
-        run: |
-          mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/NR
 
       - name: Generate comment markup
         id: comment-markup
         uses: ./.github/actions/icon-preview
         with:
           changed-files: ${{ steps.changed-files.outputs.all_changed_files }}
-          output-file: ./pr/comment-markup.md
+          ref: ${{ github.event.pull_request.head.sha }}
+          output-file: ${{ runner.temp }}/comment-markup.md
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - name: Find Comment
         if: steps.comment-markup.outputs.has-changes == 'true'
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
+        id: pr-comment
         with:
-          name: pr_number
-          path: pr/
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Added or changed icons
+
+      - name: Create or update comment
+        if: steps.comment-markup.outputs.has-changes == 'true'
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
+        with:
+          comment-id: ${{ steps.pr-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: ${{ runner.temp }}/comment-markup.md
+          edit-mode: replace

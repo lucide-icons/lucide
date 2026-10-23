@@ -12,6 +12,8 @@ import {
 // The script lives in `.github/actions/icon-preview`, three levels below the repo root.
 const REPO_ROOT = path.resolve(getCurrentDirPath(import.meta.url), '../../..');
 const ICONS_DIR = path.join(REPO_ROOT, 'icons');
+// The changed SVGs can be read from another directory, e.g. files taken from the pull request head
+const CHANGED_FILES_DIR = process.env.CHANGED_FILES_DIR || REPO_ROOT;
 const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
 const changedFilesPathString = process.env.CHANGED_FILES;
@@ -24,7 +26,8 @@ if (changedFilesPathString == null) {
 const changedFiles = changedFilesPathString
   .split(' ')
   .filter((file) => file.includes('.svg'))
-  .filter((file, idx, arr) => arr.indexOf(file) === idx);
+  .filter((file, idx, arr) => arr.indexOf(file) === idx)
+  .map((file) => path.join(CHANGED_FILES_DIR, file));
 
 // Print nothing to stdout, so the action writes no comment markup
 if (changedFiles.length === 0) {
@@ -39,7 +42,7 @@ const getImageTagsByFiles = (
   linkToLucideStudio = false,
 ) =>
   files.map((file) => {
-    const svgContent = fs.readFileSync(path.join(REPO_ROOT, file), 'utf-8');
+    const svgContent = fs.readFileSync(file, 'utf-8');
     const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
     const minifiedSvg = minifySvg(strippedAttrsSVG);
     const name = path.basename(file, '.svg');
@@ -52,10 +55,10 @@ const getImageTagsByFiles = (
   });
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);
-const svgFilePaths = svgFiles.map((file) => `icons/${file}`);
+const svgFilePaths = svgFiles.map((file) => path.join(ICONS_DIR, file));
 
 const iconsFilteredByName = (search: string) =>
-  svgFilePaths.filter((file) => file.includes(search));
+  svgFilePaths.filter((file) => path.basename(file).includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
   shuffleArray(svgFilePaths).slice(0, changedFiles.length),
@@ -149,7 +152,7 @@ const changeFilesSymmetryImageTagsFlipSlash = getImageTagsByFiles(
 
 const readyToUseCode = changedFiles
   .map((changedFile) => {
-    const svgContent = fs.readFileSync(path.join(REPO_ROOT, changedFile), 'utf-8');
+    const svgContent = fs.readFileSync(changedFile, 'utf-8');
     const name = path.basename(changedFile, '.svg');
     return `const ${toPascalCase(name)}Icon = createLucideIcon('${toPascalCase(name)}', [
   ${parseSync(svgContent)
