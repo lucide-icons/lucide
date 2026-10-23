@@ -65,9 +65,6 @@ importers:
       cspell:
         specifier: ^10.2.0
         version: 10.2.0
-      dotenv:
-        specifier: ^17.4.2
-        version: 17.4.2
       eslint:
         specifier: ^10.9.1
         version: 10.9.1(jiti@2.7.0)(supports-color@10.2.2)
@@ -92,9 +89,6 @@ importers:
       minimist:
         specifier: ^1.2.8
         version: 1.2.8
-      openai:
-        specifier: ^7.9.0
-        version: 7.9.0(undici@8.10.2)(ws@8.21.3)(zod@4.6.5)
       p-memoize:
         specifier: ^8.0.0
         version: 8.0.0
@@ -128,6 +122,18 @@ importers:
       yargs:
         specifier: ^18.1.0
         version: 18.2.0
+
+  .github/actions/suggest-metadata:
+    dependencies:
+      '@octokit/rest':
+        specifier: ^22.0.1
+        version: 22.0.1
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+      openai:
+        specifier: ^7.9.0
+        version: 7.9.0(undici@8.10.2)(ws@8.21.3)(zod@4.6.5)
       zod:
         specifier: ^4.5.4
         version: 4.6.5
