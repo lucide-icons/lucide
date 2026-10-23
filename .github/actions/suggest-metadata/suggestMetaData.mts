@@ -129,28 +129,11 @@ const metadataSchema = z.object({
 
 type MetadataSuggestion = z.infer<typeof metadataSchema>;
 
-// Model suggestions are cached per icon name (restored and saved by the action
-// with actions/cache), so the API is only called again for new or renamed icons.
-// Entries that no longer match the schema (e.g. a removed category) are dropped.
-async function loadSuggestionsCache() {
-  const cache: Record<string, MetadataSuggestion> = {};
-  if (!cacheFile) return cache;
-
-  try {
-    const entries = JSON.parse(await fs.readFile(cacheFile, 'utf-8'));
-    for (const [iconName, entry] of Object.entries(entries)) {
-      const result = metadataSchema.safeParse(entry);
-      if (result.success) cache[iconName] = result.data;
-    }
-  } catch {
-    // No cache restored yet.
-  }
-
-  return cache;
-}
-
-const suggestionsCache = await loadSuggestionsCache();
-let isCacheUpdated = false;
+// The action caches the suggestions under a key based on the pull request's
+// icon names, so a restored cache means the API doesn't need to be called again.
+const suggestionsCache: Record<string, MetadataSuggestion> = cacheFile
+  ? await fs.readFile(cacheFile, 'utf-8').then(JSON.parse, () => ({}))
+  : {};
 
 const { data: files } = await octokit.pulls.listFiles({
   owner,
@@ -328,7 +311,6 @@ async function getSuggestion(
 
   const suggested = metadataSchema.parse(JSON.parse(response.output_text));
   suggestionsCache[iconName] = suggested;
-  isCacheUpdated = true;
 
   return suggested;
 }
@@ -368,15 +350,10 @@ const suggestionsByFile = await Promise.all(
   }),
 );
 
-// Persist the cache before any early exit below, and tell the action whether
-// it changed so a new cache entry is only saved after new API calls.
+// Write the cache before any early exit below, so the action can save it.
 if (cacheFile) {
   await fs.mkdir(path.dirname(cacheFile), { recursive: true });
   await fs.writeFile(cacheFile, JSON.stringify(suggestionsCache, null, 2));
-}
-
-if (process.env.GITHUB_OUTPUT) {
-  await fs.appendFile(process.env.GITHUB_OUTPUT, `cache-updated=${isCacheUpdated}\n`);
 }
 
 const comments = suggestionsByFile.flatMap(

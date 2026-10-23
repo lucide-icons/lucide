@@ -22,17 +22,27 @@ inputs:
 runs:
   using: composite
   steps:
-    # Suggestions are cached per icon name, so the API is only called again
-    # when an icon is added or renamed in the pull request.
-    - name: Restore cached suggestions
-      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+    # Cache the suggestions by the pull request's icon names, so the API is only
+    # called again when icons are added, removed or renamed.
+    - name: Get changed icon names
+      id: icons
+      shell: bash
+      run: |
+        hash=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PULL_REQUEST_NUMBER/files" --paginate \
+          --jq '.[].filename | select(startswith("icons/") and endswith(".json"))' \
+          | sort | sha256sum | cut -d ' ' -f 1)
+        echo "hash=$hash" >> "$GITHUB_OUTPUT"
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
+
+    - name: Cache suggestions
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ${{ runner.temp }}/suggest-metadata/suggestions.json
-        key: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}
-        restore-keys: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}-
+        key: suggest-metadata-pr-${{ inputs.pull-request-number }}-${{ steps.icons.outputs.hash }}
 
     - name: Generate metadata suggestions
-      id: generate
       shell: bash
       run: node "$GITHUB_ACTION_PATH/suggestMetaData.mts"
       env:
@@ -43,9 +53,3 @@ runs:
         OPENAI_API_MODEL: ${{ inputs.model }}
         SUGGESTIONS_CACHE_FILE: ${{ runner.temp }}/suggest-metadata/suggestions.json
 
-    - name: Save cached suggestions
-      if: steps.generate.outputs.cache-updated == 'true'
-      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-      with:
-        path: ${{ runner.temp }}/suggest-metadata/suggestions.json
-        key: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}-${{ github.run_id }}-${{ github.run_attempt }}
