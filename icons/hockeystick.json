@@ -3,7 +3,11 @@
   "contributors": [
     "joffx"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing hockey equipment in sports interfaces",
+    "Marking hockey-related games or gameplay modes",
+    "Categorizing hockey content in sports apps"
+  ],
   "tags": [
     "sport",
     "campus",
