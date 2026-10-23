@@ -1,0 +1,10 @@
+{
+  "name": "@lucide/generate-pr-title-action",
+  "private": true,
+  "type": "module",
+  "description": "GitHub action that generates a conventional-commit pull request title from the files a pull request changes",
+  "scripts": {
+    "start": "node ./generatePullRequestTitle.mts",
+    "test": "node --test *.test.mts"
+  }
+}

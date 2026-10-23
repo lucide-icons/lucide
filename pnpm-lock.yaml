@@ -129,6 +129,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
 
+  .github/actions/generate-pr-title: {}
+
   .github/actions/icon-preview:
     dependencies:
       '@lucide/helpers':

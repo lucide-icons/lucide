@@ -1,0 +1,38 @@
+name: Generate PR title
+description: Generates a conventional-commit pull request title from the files the pull request adds and changes.
+
+inputs:
+  added-files:
+    description: Space-separated list of files the pull request adds.
+    required: true
+  changed-files:
+    description: Space-separated list of all files the pull request adds, modifies, renames or deletes.
+    required: true
+  current-title:
+    description: The current pull request title.
+    required: true
+
+outputs:
+  title:
+    description: The new pull request title, or an empty string when the title should stay as it is.
+    value: ${{ steps.generate.outputs.title }}
+
+runs:
+  using: composite
+  steps:
+    - name: Generate PR title
+      id: generate
+      shell: bash
+      # The inputs reach the script through `env`, never inlined into `run`: the
+      # current title is written by the PR author and would allow script injection.
+      run: |
+        TITLE="$(node "$GITHUB_ACTION_PATH/generatePullRequestTitle.mts")"
+        {
+          echo "title<<PR_TITLE_EOF"
+          echo "$TITLE"
+          echo "PR_TITLE_EOF"
+        } >> "$GITHUB_OUTPUT"
+      env:
+        ADDED_FILES: ${{ inputs.added-files }}
+        CHANGED_FILES: ${{ inputs.changed-files }}
+        CURRENT_TITLE: ${{ inputs.current-title }}
