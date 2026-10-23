@@ -22,7 +22,17 @@ inputs:
 runs:
   using: composite
   steps:
+    # Suggestions are cached per icon name, so the API is only called again
+    # when an icon is added or renamed in the pull request.
+    - name: Restore cached suggestions
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ runner.temp }}/suggest-metadata/suggestions.json
+        key: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}
+        restore-keys: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}-
+
     - name: Generate metadata suggestions
+      id: generate
       shell: bash
       run: node "$GITHUB_ACTION_PATH/suggestMetaData.mts"
       env:
@@ -31,3 +41,11 @@ runs:
         PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
         COMMIT_SHA: ${{ inputs.commit-sha }}
         OPENAI_API_MODEL: ${{ inputs.model }}
+        SUGGESTIONS_CACHE_FILE: ${{ runner.temp }}/suggest-metadata/suggestions.json
+
+    - name: Save cached suggestions
+      if: steps.generate.outputs.cache-updated == 'true'
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ runner.temp }}/suggest-metadata/suggestions.json
+        key: suggest-metadata-v1-pr-${{ inputs.pull-request-number }}-${{ github.run_id }}-${{ github.run_attempt }}

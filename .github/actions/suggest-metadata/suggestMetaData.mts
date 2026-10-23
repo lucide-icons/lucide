@@ -36,6 +36,7 @@ const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 const useFileSystem = process.env.USE_FILE_SYSTEM === 'true' || false;
+const cacheFile = process.env.SUGGESTIONS_CACHE_FILE;
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
@@ -128,6 +129,29 @@ const metadataSchema = z.object({
 
 type MetadataSuggestion = z.infer<typeof metadataSchema>;
 
+// Model suggestions are cached per icon name (restored and saved by the action
+// with actions/cache), so the API is only called again for new or renamed icons.
+// Entries that no longer match the schema (e.g. a removed category) are dropped.
+async function loadSuggestionsCache() {
+  const cache: Record<string, MetadataSuggestion> = {};
+  if (!cacheFile) return cache;
+
+  try {
+    const entries = JSON.parse(await fs.readFile(cacheFile, 'utf-8'));
+    for (const [iconName, entry] of Object.entries(entries)) {
+      const result = metadataSchema.safeParse(entry);
+      if (result.success) cache[iconName] = result.data;
+    }
+  } catch {
+    // No cache restored yet.
+  }
+
+  return cache;
+}
+
+const suggestionsCache = await loadSuggestionsCache();
+let isCacheUpdated = false;
+
 const { data: files } = await octokit.pulls.listFiles({
   owner,
   repo,
@@ -144,22 +168,16 @@ const { data: pullRequest } = await octokit.pulls.get({
 
 const prDescription = (pullRequest.body || '').slice(0, 4000);
 
-// TODO: Find a better way to check if the PR has been updated since the last review
-if (!debug) {
-  const { data: reviews } = await octokit.pulls.listReviews({
+// The action runs on every update of the pull request. Collect the suggestions
+// that were already posted, so the same suggestion is never posted twice.
+const previousComments = (
+  await octokit.paginate(octokit.pulls.listReviewComments, {
     owner,
     repo,
     pull_number: pullRequestNumber,
-  });
-  const hasUserReviews = reviews.some(review => review.user?.login === username);
-
-  if(hasUserReviews) {
-    console.log(
-      `Pull request #${pullRequestNumber} already has reviews from ${username}. Skipping...`,
-    );
-    process.exit(0);
-  }
-}
+    per_page: 100,
+  })
+).filter((comment) => comment.user?.login === username);
 
 const changedFiles = files.filter(
   ({filename}) => filename.startsWith('icons/') && filename.includes('.json')
@@ -230,9 +248,21 @@ function getNewMetadataValues(
   }, []);
 }
 
+// Render only the values to append to an existing multi-line array: the
+// current last item (now with a trailing comma) followed by the new values,
+// using the same indentation as the existing items.
+function buildAppendBlock(lastItemText: string, values: string[]) {
+  const itemIndent = lastItemText.match(/^\s*/)![0];
+  const lastItem = lastItemText.trimEnd();
+  const items = values.map((value) => `${itemIndent}${JSON.stringify(value)}`).join(',\n');
+  return `${lastItem.endsWith(',') ? lastItem : `${lastItem},`}\n${items}`;
+}
+
 // Locate the line range of an array property in the raw file so we can anchor a
 // GitHub suggestion to it. Handles both inline (`"use-cases": []`) and
 // multi-line arrays, and reports whether the closing line has a trailing comma.
+// For non-empty multi-line arrays it also returns the line of the last item, so
+// new values can be suggested right after it.
 function findFieldBlock(lines: string[], field: MetadataField) {
   const startIdx = lines.findIndex((line) => line.trimStart().startsWith(`"${field}":`));
   if (startIdx === -1) return null;
@@ -246,33 +276,18 @@ function findFieldBlock(lines: string[], field: MetadataField) {
   }
 
   const trailingComma = lines[endIdx].trim().endsWith(',') ? ',' : '';
-  return { startLine: startIdx + 1, endLine: endIdx + 1, trailingComma };
+  const lastItemLine = endIdx - 1 > startIdx ? endIdx : undefined;
+  return { startLine: startIdx + 1, endLine: endIdx + 1, lastItemLine, trailingComma };
 }
 
-const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
-  const iconName = path.basename(filename, '.json');
-
-  // Read the icon's current metadata (the PR head version) first, so we can
-  // both give it to the model as context and dedupe suggestions against it.
-  let fileContent: string
-  if (useFileSystem) {
-    fileContent = await fs.readFile(path.join(repoRoot, filename), 'utf-8');
-  } else {
-    const fileGithubRequest = await octokit.request(`GET ${raw_url}`, {
-      headers: {
-        'Accept': 'application/vnd.github.v3.raw',
-      },
-    });
-    fileContent = fileGithubRequest.data
+async function getSuggestion(
+  iconName: string,
+  currentMetadata: Record<MetadataField, string[]>,
+): Promise<MetadataSuggestion> {
+  if (suggestionsCache[iconName]) {
+    console.log(`Using cached suggestions for ${iconName}.`);
+    return suggestionsCache[iconName];
   }
-
-  const metadata = JSON.parse(fileContent)
-
-  const currentMetadata = {
-    tags: metadata.tags ?? [],
-    categories: metadata.categories ?? [],
-    "use-cases": metadata["use-cases"] ?? [],
-  };
 
   const input = [
     {
@@ -311,59 +326,120 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
       },
   });
 
-  const suggested: MetadataSuggestion = metadataSchema.parse(JSON.parse(response.output_text));
+  const suggested = metadataSchema.parse(JSON.parse(response.output_text));
+  suggestionsCache[iconName] = suggested;
+  isCacheUpdated = true;
 
-  console.log(`Suggestions for ${iconName}:`, suggested);
-  console.log(`Current metadata for ${iconName}:`, currentMetadata);
+  return suggested;
+}
 
-  const lines = fileContent.split('\n');
-  const chatGptQuery = `Suggest tags, categories and use-cases for a "${iconName}" icon in the Lucide icon library.`;
+const suggestionsByFile = await Promise.all(
+  changedFiles.map(async ({ filename, raw_url }) => {
+    const iconName = path.basename(filename, '.json');
 
-  // Build one inline GitHub suggestion per field. Values are deduped
-  // case-insensitively, and tags already searchable through the icon name are omitted.
-  const comments = METADATA_FIELDS.flatMap((field) => {
-    const current: string[] = currentMetadata[field];
-    const newValues = getNewMetadataValues(field, current, suggested[field], iconName);
-
-    if (newValues.length === 0) {
-      console.log(`No new ${field} to suggest for ${iconName}. Skipping...`);
-      return [];
+    // Read the icon's current metadata (the PR head version) first, so we can
+    // both give it to the model as context and dedupe suggestions against it.
+    let fileContent: string
+    if (useFileSystem) {
+      fileContent = await fs.readFile(path.join(repoRoot, filename), 'utf-8');
+    } else {
+      const fileGithubRequest = await octokit.request(`GET ${raw_url}`, {
+        headers: {
+          'Accept': 'application/vnd.github.v3.raw',
+        },
+      });
+      fileContent = fileGithubRequest.data
     }
 
-    const block = findFieldBlock(lines, field);
-    if (!block) {
-      console.log(`Could not locate "${field}" in ${filename}. Skipping...`);
-      return [];
-    }
+    const metadata = JSON.parse(fileContent)
 
-    const suggestion = buildArrayBlock(field, [...current, ...newValues], block.trailingComma);
+    const currentMetadata = {
+      tags: metadata.tags ?? [],
+      categories: metadata.categories ?? [],
+      "use-cases": metadata["use-cases"] ?? [],
+    };
 
-    const body = `Suggested \`${field}\` for the \`${iconName}\` icon.
+    const suggested = await getSuggestion(iconName, currentMetadata);
+
+    console.log(`Suggestions for ${iconName}:`, suggested);
+    console.log(`Current metadata for ${iconName}:`, currentMetadata);
+
+    return { filename, iconName, fileContent, currentMetadata, suggested };
+  }),
+);
+
+// Persist the cache before any early exit below, and tell the action whether
+// it changed so a new cache entry is only saved after new API calls.
+if (cacheFile) {
+  await fs.mkdir(path.dirname(cacheFile), { recursive: true });
+  await fs.writeFile(cacheFile, JSON.stringify(suggestionsCache, null, 2));
+}
+
+if (process.env.GITHUB_OUTPUT) {
+  await fs.appendFile(process.env.GITHUB_OUTPUT, `cache-updated=${isCacheUpdated}\n`);
+}
+
+const comments = suggestionsByFile.flatMap(
+  ({ filename, iconName, fileContent, currentMetadata, suggested }) => {
+    const lines = fileContent.split('\n');
+    const chatGptQuery = `Suggest tags, categories and use-cases for a "${iconName}" icon in the Lucide icon library.`;
+
+    // Build one inline GitHub suggestion per field. Values are deduped
+    // case-insensitively, and tags already searchable through the icon name are omitted.
+    return METADATA_FIELDS.flatMap((field) => {
+      const current: string[] = currentMetadata[field];
+      const newValues = getNewMetadataValues(field, current, suggested[field], iconName);
+
+      if (newValues.length === 0) {
+        console.log(`No new ${field} to suggest for ${iconName}. Skipping...`);
+        return [];
+      }
+
+      const block = findFieldBlock(lines, field);
+      if (!block) {
+        console.log(`Could not locate "${field}" in ${filename}. Skipping...`);
+        return [];
+      }
+
+      // Append the new values after the last item when possible, so the
+      // suggestion only shows what is added. Empty and inline arrays are
+      // replaced as a whole.
+      const suggestion = block.lastItemLine
+        ? buildAppendBlock(lines[block.lastItemLine - 1], newValues)
+        : buildArrayBlock(field, [...current, ...newValues], block.trailingComma);
+
+      const body = `Suggested \`${field}\` for the \`${iconName}\` icon.
 \`\`\`suggestion
 ${suggestion}
 \`\`\`
 Want more ideas? [Ask ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(chatGptQuery)})`;
 
-    const comment: ReviewComment = {
-      path: filename,
-      line: block.endLine,
-      side: "RIGHT",
-      body,
-    };
+      const isAlreadySuggested = previousComments.some(
+        (comment) => comment.path === filename && comment.body === body,
+      );
+      if (isAlreadySuggested) {
+        console.log(`The ${field} suggestion for ${iconName} was already posted. Skipping...`);
+        return [];
+      }
 
-    // Multi-line arrays need a start anchor; inline arrays are single-line.
-    if (block.endLine !== block.startLine) {
-      comment.start_line = block.startLine;
-      comment.start_side = "RIGHT";
-    }
+      const comment: ReviewComment = {
+        path: filename,
+        line: block.lastItemLine ?? block.endLine,
+        side: "RIGHT",
+        body,
+      };
 
-    return [comment];
-  });
+      // Replaced multi-line arrays need a start anchor; appends and inline
+      // arrays are single-line.
+      if (!block.lastItemLine && block.endLine !== block.startLine) {
+        comment.start_line = block.startLine;
+        comment.start_side = "RIGHT";
+      }
 
-  return comments;
-})
-
-const comments = (await Promise.all(suggestionsByFile)).flat()
+      return [comment];
+    });
+  },
+);
 
 if (comments.length === 0) {
   console.log('No new metadata to suggest for any icons.');
