@@ -23,7 +23,12 @@
     "snap",
     "canvas",
     "hide",
-    "disabled"
+    "disabled",
+    "spreadsheet",
+    "cells",
+    "data table",
+    "diagram",
+    "overlay"
   ],
   "categories": [
     "text",
