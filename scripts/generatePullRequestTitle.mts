@@ -6,7 +6,7 @@
  * for icon contributions and, for every other kind of PR, inserts or updates the
  * conventional-commit scope so `lint-pr-title` is satisfied.
  *
- * It follows the convention of `generateChangedIconsCommentMarkup.mts`: it reads
+ * It follows the convention of the icon-preview action script: it reads
  * its input from the environment, prints the result to stdout and has no other
  * side effects. It only imports Node built-ins and the shared
  * `conventional-commit-types.json` (a native JSON import), so Node can still run
