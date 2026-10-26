@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ypotti",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Skipping to the last page in pagination controls",
+    "Fast-forwarding playback in audio or video media players",
+    "Fast-navigating forward through steps in multi-step wizards",
+    "Advancing to the final chapter or track in playlists and audiobooks"
+  ],
+  "tags": [
+    "next",
+    "forward",
+    "skip",
+    "fast forward",
+    "last",
+    "end",
+    "east",
+    "music",
+    "caret",
+    "button",
+    "pagination",
+    "jump",
+    "seek",
+    "seek forward",
+    "player control",
+    "chapter",
+    "track",
+    "timeline",
+    "navigation control"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "multimedia"
+  ]
+}
