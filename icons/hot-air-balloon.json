@@ -4,7 +4,11 @@
     "roygommer",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting balloon-based aircraft in aviation weather dashboards",
+    "Displaying weather conditions for lighter-than-air aircraft",
+    "Representing recreational sightseeing flights in travel interfaces"
+  ],
   "tags": [
     "hotair",
     "aircraft",
