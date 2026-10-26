@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "j00zf"
+  ],
+  "use-cases": [
+    "secured home",
+    "home security",
+    "protected residence"
+  ],
+  "tags": [
+    "home",
+    "house",
+    "lock",
+    "security",
+    "privacy",
+    "protected",
+    "residence"
+  ],
+  "categories": [
+    "home",
+    "buildings",
+    "security"
+  ]
+}
