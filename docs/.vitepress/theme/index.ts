@@ -12,7 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import { op } from './utils/openpanel';
+import { op, track } from './utils/openpanel';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -35,6 +35,17 @@ const theme: Partial<Theme> = {
 
     // Wait for VitePress to update the document title before tracking the page view.
     router.onAfterRouteChange = () => nextTick(() => op?.screenView());
+
+    // The hero actions are rendered by VitePress from the home page frontmatter,
+    // so clicks on them are picked up with a delegated listener.
+    if (!import.meta.env.SSR) {
+      document.addEventListener('click', (event) => {
+        const link = (event.target as Element | null)?.closest?.('.VPHero .actions a');
+        if (link) {
+          track('home_hero_click', { text: link.textContent?.trim() });
+        }
+      });
+    }
   },
 };
 

@@ -17,3 +17,36 @@ export const op =
         trackAttributes: false,
       })
     : undefined;
+
+type TrackProperties = Record<string, unknown>;
+
+/**
+ * Track a custom event. No-op during SSR or when OpenPanel isn't configured.
+ */
+export function track(name: string, properties?: TrackProperties) {
+  op?.track(name, properties);
+}
+
+const debounceTimers = new Map<string, ReturnType<typeof setTimeout>>();
+
+/**
+ * Track an event only once the input settles, e.g. while dragging a slider.
+ * Calls sharing the same `key` replace each other until `delay` has passed.
+ */
+export function trackDebounced(
+  key: string,
+  name: string,
+  properties?: TrackProperties,
+  delay = 1000,
+) {
+  if (!op) return;
+
+  clearTimeout(debounceTimers.get(key));
+  debounceTimers.set(
+    key,
+    setTimeout(() => {
+      debounceTimers.delete(key);
+      track(name, properties);
+    }, delay),
+  );
+}
