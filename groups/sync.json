@@ -5,6 +5,10 @@
     "synchronize",
     "synchronise",
     "refresh",
-    "reconnect"
+    "reload",
+    "update",
+    "reconnect",
+    "retry",
+    "renew"
   ]
 }

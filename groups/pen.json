@@ -3,8 +3,23 @@
   "description": "Action: editing or writing something",
   "tags": [
     "edit",
+    "modify",
+    "update",
+    "revise",
+    "amend",
     "create",
     "change",
-    "write"
+    "write",
+    "compose",
+    "draft",
+    "author",
+    "annotate",
+    "comment",
+    "note",
+    "draw",
+    "sketch",
+    "doodle",
+    "rename",
+    "customize"
   ]
 }

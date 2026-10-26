@@ -3,6 +3,10 @@
   "description": "Action: pausing or suspending something",
   "tags": [
     "suspend",
+    "hold",
+    "halt",
+    "wait",
+    "freeze",
     "stop"
   ]
 }

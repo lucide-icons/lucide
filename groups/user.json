@@ -4,6 +4,11 @@
   "tags": [
     "person",
     "account",
-    "contact"
+    "contact",
+    "profile",
+    "member",
+    "client",
+    "participant",
+    "guest"
   ]
 }

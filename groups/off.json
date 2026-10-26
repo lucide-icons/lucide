@@ -4,6 +4,17 @@
   "tags": [
     "disabled",
     "inactive",
-    "unavailable"
+    "unavailable",
+    "deactivated",
+    "slash",
+    "blocked",
+    "prohibited",
+    "forbidden",
+    "disallowed",
+    "hidden",
+    "invisible",
+    "strikethrough",
+    "crossed out",
+    "diagonal line"
   ]
 }
