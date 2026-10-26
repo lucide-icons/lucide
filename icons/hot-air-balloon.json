@@ -1,11 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "roygommer"
+    "roygommer",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "hotair",
-    "balloon",
     "aircraft",
     "summer",
     "flight",
@@ -13,12 +14,9 @@
     "travel",
     "sky",
     "celebration",
-    "festive",
-    "hot-air-balloon"
+    "festive"
   ],
   "categories": [
-    "aircraft",
-    "balloon",
-    "sky"
+    "sports"
   ]
 }
