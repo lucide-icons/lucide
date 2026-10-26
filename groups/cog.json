@@ -5,6 +5,9 @@
     "settings",
     "gear",
     "configuration",
-    "preferences"
+    "preferences",
+    "options",
+    "customization",
+    "tools"
   ]
 }

@@ -3,6 +3,14 @@
   "description": "Action: stopping something that is running",
   "tags": [
     "halt",
-    "end"
+    "end",
+    "terminate",
+    "finish",
+    "cancel",
+    "abort",
+    "discontinue",
+    "interrupt",
+    "break",
+    "cease"
   ]
 }

@@ -3,6 +3,14 @@
   "description": "Status: time, history or scheduling of something",
   "tags": [
     "time",
+    "duration",
+    "interval",
+    "frequency",
+    "schedule",
+    "deadline",
+    "pending",
+    "delayed",
+    "watch",
     "history"
   ]
 }
