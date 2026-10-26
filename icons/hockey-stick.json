@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "joffx"
+    "joffx",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Representing hockey equipment in sports interfaces",
