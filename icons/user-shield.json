@@ -4,9 +4,9 @@
     "MArtytraM99"
   ],
   "use-cases": [
-    "representing user roles (admin, defender)",
-    "indicating protected or sensitive user information",
-    "indicating a protected user account"
+    "Representing privileged user roles such as admins",
+    "Indicating protected or sensitive user information",
+    "Indicating a protected user account"
   ],
   "tags": [
     "user",

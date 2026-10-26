@@ -5,15 +5,15 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating muted, blocked, or unavailable audio playback",
-    "showing that an audio track, waveform, or signal has been removed",
-    "marking controls that disable sound, music, voice, or broadcast output",
-    "representing cancelled recording, paused monitoring, or silenced audio analysis",
-    "identifying error states for sound processing, voice activity, or media levels",
-    "showing a device's speaker or system volume is turned off",
-    "indicating a user's microphone or input is muted",
-    "signaling muted notifications or alerts",
-    "representing muted voice chat in conferencing or multiplayer games"
+    "Indicating muted, blocked, or unavailable audio playback",
+    "Showing that an audio track, waveform, or signal has been removed",
+    "Marking controls that disable sound, music, voice, or broadcast output",
+    "Representing cancelled recording, paused monitoring, or silenced audio analysis",
+    "Identifying error states for sound processing, voice activity, or media levels",
+    "Showing a device's speaker or system volume is turned off",
+    "Indicating a user's microphone or input is muted",
+    "Signaling muted notifications or alerts",
+    "Representing muted voice chat in conferencing or multiplayer games"
   ],
   "tags": [
     "sound",

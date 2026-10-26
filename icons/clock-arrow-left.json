@@ -5,9 +5,9 @@
     "jguddas"
   ],
   "use-cases": [
-    "indicating the start of a time range",
-    "assign timing information",
-    "open time settings"
+    "Indicating the start of a time range",
+    "Assigning timing information to an item",
+    "Opening time settings for an item"
   ],
   "tags": [
     "time",
