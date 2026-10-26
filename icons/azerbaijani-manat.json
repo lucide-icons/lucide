@@ -11,7 +11,12 @@
     "currency",
     "money",
     "payment",
-    "azerbaijan"
+    "azerbaijan",
+    "azn",
+    "exchange",
+    "banking",
+    "pricing",
+    "currency symbol"
   ],
   "categories": [
     "finance"
