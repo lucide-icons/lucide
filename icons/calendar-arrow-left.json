@@ -29,7 +29,10 @@
     "past",
     "earlier",
     "reschedule",
-    "postpone"
+    "postpone",
+    "schedule",
+    "timeline",
+    "date picker"
   ],
   "categories": [
     "time",
