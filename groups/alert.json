@@ -4,6 +4,12 @@
   "tags": [
     "warning",
     "danger",
+    "caution",
+    "notice",
+    "error",
+    "risk",
+    "concern",
+    "hazard",
     "exclamation mark"
   ]
 }
