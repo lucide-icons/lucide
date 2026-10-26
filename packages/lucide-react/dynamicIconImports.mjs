@@ -1,1 +1,1 @@
-export { default } from './dist/esm/dynamicIconImports.js';
+export { default } from './dist/esm/dynamicIconImports.mjs';

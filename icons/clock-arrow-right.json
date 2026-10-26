@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "use-cases": [
+    "indicating the end of a time range",
+    "unassign timing information"
+  ],
+  "tags": [
+    "time",
+    "watch",
+    "alarm",
+    "range",
+    "unassign"
+  ],
+  "categories": [
+    "time",
+    "people",
+    "arrows"
+  ]
+}

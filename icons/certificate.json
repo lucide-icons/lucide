@@ -1,0 +1,44 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing SSL/TLS security certificates",
+    "Representing educational or professional certifications"
+  ],
+  "tags": [
+    "award",
+    "ribbon",
+    "medal",
+    "achievement",
+    "pinned",
+    "badge",
+    "recognition",
+    "laurel",
+    "commendation",
+    "diploma",
+    "official",
+    "proof",
+    "fact",
+    "verified",
+    "license",
+    "warrant",
+    "authorization",
+    "legal",
+    "ownership",
+    "credential",
+    "ssl",
+    "tls",
+    "security",
+    "trust",
+    "cybersecurity",
+    "authority",
+    "graduation",
+    "study"
+  ],
+  "categories": [
+    "connectivity",
+    "security"
+  ]
+}

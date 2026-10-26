@@ -13,23 +13,21 @@ const { go } = useRouter()
     <HomeSectionTitle>Available For:</HomeSectionTitle>
     <div class="packages-list">
       <a
-        v-for="{ name, logo, logoDark } in data.packages"
-        :href="`/guide/packages/${name}`"
+        v-for="{ name, label, path, logo, logoDark } in data.packages"
+        :href="path"
         class="package-logo"
-        :aria-label="`Read more about: ${name} package`"
-        @click.prevent="go(`/guide/packages/${name}`)"
+        @click.prevent="go(path)"
       >
         <img
           :src="logo"
           :class="{ light: logoDark, 'image-logo': true }"
-          :alt="`${name} logo`"
+          :alt="label"
           loading="lazy"
         />
-
         <img
           v-if="logoDark"
           :src="logoDark"
-          :alt="`${name} logo`"
+          :alt="label"
           class="image-logo dark"
           loading="lazy"
         />

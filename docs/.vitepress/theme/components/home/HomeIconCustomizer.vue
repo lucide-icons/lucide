@@ -1,59 +1,21 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import { syncRef, useCssVar } from '@vueuse/core'
-import HomeContainer from './HomeContainer.vue'
-import RangeSlider from '../base/RangeSlider.vue'
-import InputField from '../base/InputField.vue'
-import ColorPicker from '../base/ColorPicker.vue'
-import ResetButton from '../base/ResetButton.vue'
-import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
-import Switch from '../base/Switch.vue'
+import { computed } from 'vue';
+import { useIconStyle } from '../../composables/useIconStyle';
+import HomeContainer from './HomeContainer.vue';
+import RangeSlider from '../base/RangeSlider.vue';
+import InputField from '../base/InputField.vue';
+import ColorPicker from '../base/ColorPicker.vue';
+import ResetButton from '../base/ResetButton.vue';
+import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
+import Switch from '../base/Switch.vue';
 
+const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } = useIconStyle();
 
-const iconContainer = ref<HTMLElement | null>()
-const color = ref('currentColor')
-const strokeWidth = ref(2)
-const size = ref(24)
-const absoluteStrokeWidth = ref(false)
-
-const colorCssVar = useCssVar(
-  '--customize-color',
-  iconContainer,
-  {
-    initialValue: 'default'
-  }
-)
-
-const strokeWidthCssVar = useCssVar(
-  '--customize-strokeWidth',
-  iconContainer,
-  {
-    initialValue: '2'
-  }
-)
-
-const sizeCssVar = useCssVar(
-  '--customize-size',
-  iconContainer,
-  {
-    initialValue: '24'
-  }
-)
-
-syncRef(color, colorCssVar)
-syncRef(strokeWidth, strokeWidthCssVar)
-syncRef(size, sizeCssVar)
-
-function resetStyle () {
-  color.value = 'currentColor'
-  strokeWidth.value = 2
-  size.value = 24
-  absoluteStrokeWidth.value = false
-}
-
-watch(absoluteStrokeWidth, (enabled) => {
-  iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
-})
+const iconStyle = computed(() => ({
+  '--home-icon-color': color.value,
+  '--home-icon-stroke-width': String(strokeWidth.value),
+  '--home-icon-size': String(size.value),
+}));
 </script>
 
 <template>
@@ -62,7 +24,10 @@ watch(absoluteStrokeWidth, (enabled) => {
       <div class="card-column">
         <h2 class="title">
           Style as you please
-          <ResetButton @click="resetStyle"></ResetButton>
+          <ResetButton
+            :disabled="!isCustomized"
+            @click="resetStyle"
+          />
         </h2>
         <p class="copy">
           Lucide has a lot of customization options to match the icons with your UI.
@@ -78,7 +43,10 @@ watch(absoluteStrokeWidth, (enabled) => {
             class="color-picker-field"
           >
             <template #display>
-              <ColorPicker v-model="color" id="icon-color"  />
+              <ColorPicker
+                v-model="color"
+                id="icon-color-picker"
+              />
             </template>
           </InputField>
 
@@ -90,7 +58,7 @@ watch(absoluteStrokeWidth, (enabled) => {
               <span class="customize-label">{{ strokeWidth }}px</span>
             </template>
             <RangeSlider
-              id="stroke-width"
+              id="stroke-width-slider"
               name="stroke-width"
               v-model="strokeWidth"
               :min="1"
@@ -107,7 +75,7 @@ watch(absoluteStrokeWidth, (enabled) => {
               <span class="customize-label">{{ size }}px</span>
             </template>
             <RangeSlider
-              id="size"
+              id="size-slider"
               name="size"
               v-model="size"
               :min="16"
@@ -117,22 +85,25 @@ watch(absoluteStrokeWidth, (enabled) => {
           </InputField>
 
           <InputField
-            id="absolute-stroke-width"
-            label="Absolute Stroke width"
+            id="non-scaling-stroke"
+            label="Non-scaling stroke"
           >
             <template #display>
               <Switch
-                id="absolute-stroke-width"
-                name="absolute-stroke-width"
-                v-model="absoluteStrokeWidth"
+                id="non-scaling-stroke-switch"
+                name="non-scaling-stroke"
+                v-model="nonScalingStroke"
               />
             </template>
           </InputField>
         </div>
       </div>
 
-      <div class="icons-container card-column" ref="iconContainer">
-        <HomeIconCustomizerIcons />
+      <div class="icons-container card-column">
+        <HomeIconCustomizerIcons
+          :class="{ 'non-scaling-stroke': nonScalingStroke }"
+          :style="iconStyle"
+        />
       </div>
     </div>
   </HomeContainer>
@@ -179,10 +150,6 @@ watch(absoluteStrokeWidth, (enabled) => {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
-  /*
-  .card-column {
-    flex: 1;
-  } */
 }
 
 @media (min-width: 960px) {
@@ -191,7 +158,7 @@ watch(absoluteStrokeWidth, (enabled) => {
   }
 }
 
-.color-picker-field:deep(.display-value) {
-  width: 138px;
+.color-picker-field:deep(.icon-color-picker-input) {
+  width: 116px;
 }
 </style>

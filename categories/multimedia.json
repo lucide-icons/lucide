@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Multimedia",
+  "description": "Icons for audio, video, playback, recording, broadcasting, and media libraries.",
   "icon": "circle-play"
 }

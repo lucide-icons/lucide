@@ -5,6 +5,7 @@
     "jguddas",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "edit"
   ],
@@ -15,8 +16,7 @@
     {
       "name": "file-signature",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

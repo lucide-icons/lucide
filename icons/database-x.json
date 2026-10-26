@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "indicating a failed or lost database connection",
+    "displaying error states in monitoring tools",
+    "representing rejected queries or destructive operations"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "x",
+    "error",
+    "failed",
+    "invalid",
+    "rejected",
+    "denied",
+    "clear",
+    "remove",
+    "disconnect"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

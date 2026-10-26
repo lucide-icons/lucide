@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "whoisBugsbunny"
+  ],
+  "use-cases": [],
+  "tags": [
+    "star",
+    "math",
+    "shape",
+    "curve",
+    "sharp",
+    "four-pointed",
+    "hypocycloid",
+    "ai",
+    "artificial intelligence"
+  ],
+  "categories": [
+    "shapes",
+    "math"
+  ]
+}
