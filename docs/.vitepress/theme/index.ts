@@ -13,6 +13,7 @@ import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExte
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
 import { op } from './utils/openpanel';
+import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -35,6 +36,10 @@ const theme: Partial<Theme> = {
 
     // Wait for VitePress to update the document title before tracking the page view.
     router.onAfterRouteChange = () => nextTick(() => op?.screenView());
+
+    if (!import.meta.env.SSR) {
+      trackUnderlineDirection();
+    }
   },
 };
 

@@ -68,22 +68,45 @@ function onClick(categoryName: string) {
   padding-left: 13px;
 }
 
+/* Each category is a soft pill on hover: the name slides in a little and the count badge
+   takes the brand colour. The category in view keeps the brand colour. */
 .outline-link {
   display: flex;
-  align-items: baseline;
-  line-height: 28px;
+  align-items: center;
+  margin: 1px -8px;
+  padding: 0 6px 0 8px;
+  line-height: 26px;
   color: var(--vp-c-text-2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.5s;
+  border-radius: 6px;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
+  transition-duration: 0.25s !important;
   font-weight: 500;
 }
 
+.outline-link > span:first-child {
+  transition: transform 0.25s ease;
+  transition-duration: 0.25s !important;
+}
+
 .outline-link:hover,
-.outline-link.active {
+.outline-link:focus-visible {
+  outline: none;
   color: var(--vp-c-text-1);
-  transition: color 0.25s;
+  background-color: var(--vp-c-default-soft);
+}
+
+.outline-link:hover > span:first-child,
+.outline-link:focus-visible > span:first-child {
+  transform: translateX(3px);
+}
+
+.outline-link.active {
+  color: var(--vp-c-brand-1);
 }
 
 .outline-link.inactive {
@@ -96,10 +119,26 @@ function onClick(categoryName: string) {
 }
 
 .icon-count {
-  opacity: 0.5;
   margin-left: auto;
+  padding: 0 6px;
+  min-width: 26px;
+  line-height: 18px;
+  text-align: center;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  border-radius: 9px;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
+  transition-duration: 0.25s !important;
+}
+
+.outline-link:hover .icon-count,
+.outline-link:focus-visible .icon-count,
+.outline-link.active .icon-count {
+  color: var(--vp-c-brand-1);
+  background-color: color-mix(in srgb, var(--vp-c-brand) 14%, transparent);
 }
 
 .outline-link.inactive .icon-count {

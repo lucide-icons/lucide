@@ -71,6 +71,40 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* Page scrollbar in the site's colours: a slim rounded thumb on the page background */
+html::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html::-webkit-scrollbar-track,
+html::-webkit-scrollbar-corner {
+  background-color: var(--vp-c-bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-text-3);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 12px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vp-c-text-2);
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: var(--vp-c-brand-1);
+}
+
+/* Browsers without the scrollbar pseudo-elements, such as Firefox */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--vp-c-text-3) var(--vp-c-bg);
+  }
+}
+
 .VPHome {
   overflow-x: hidden;
 }
@@ -82,6 +116,30 @@ html {
 
 .VPNavBarTitle .title {
   font-size: 21px;
+}
+
+/* The logo looks the same after half a turn, so on hover it spins round half a turn with a
+   small bounce while the name takes the brand colour. Pressing it pushes it in a little. */
+.VPNavBarTitle .title .logo {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.VPNavBarTitle .title > span {
+  transition: color 0.3s ease !important;
+}
+
+.VPNavBarTitle .title:hover .logo,
+.VPNavBarTitle .title:focus-visible .logo {
+  transform: rotate(180deg) scale(1.08);
+}
+
+.VPNavBarTitle .title:active .logo {
+  transform: rotate(180deg) scale(0.92);
+}
+
+.VPNavBarTitle .title:hover > span,
+.VPNavBarTitle .title:focus-visible > span {
+  color: var(--vp-c-brand-1);
 }
 
 .VPHomeHero > .container {
@@ -166,21 +224,318 @@ html {
   border-radius: 2px;
 }
 
+/* Nav bar links: on hover an underline draws in from the side the mouse enters and leaves
+   towards the side it exits (see utils/underlineDirection.ts). Without that script it
+   draws in from the left and leaves to the right. It stays under the link of the current page. */
+.VPNav .VPNavBarMenuLink,
+.VPNav .VPNavBarMenuGroup .button {
+  position: relative;
+}
+
+.VPNav .VPNavBarMenuLink::before,
+.VPNav .VPNavBarMenuGroup .button::before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  left: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--vp-c-brand-1);
+  transform: scaleX(0);
+  transform-origin: var(--underline-origin, right);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  /* VitePress turns every transition off for reduced motion. This short, small underline
+     movement is kept, so the hover still feels smooth. */
+  transition-duration: 0.35s !important;
+}
+
+.VPNav .VPNavBarMenuLink:hover::before,
+.VPNav .VPNavBarMenuLink:focus-visible::before,
+.VPNav .VPNavBarMenuLink.active::before,
+.VPNav .VPNavBarMenuGroup:hover .button::before,
+.VPNav .VPNavBarMenuGroup .button[aria-expanded='true']::before,
+.VPNav .VPNavBarMenuGroup.active .button::before {
+  transform: scaleX(1);
+  transform-origin: var(--underline-origin, left);
+}
+
+/* The chevron turns up while the dropdown is open, and the menu slides down into place.
+   VitePress draws the down chevron as a right chevron turned by 90deg. */
+.VPNav .VPNavBarMenuGroup .text-icon {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.35s !important;
+}
+
+.VPNav .VPNavBarMenuGroup:hover .text-icon,
+.VPNav .VPNavBarMenuGroup .button[aria-expanded='true'] .text-icon {
+  transform: rotate(-90deg);
+}
+
+.VPNav .VPNavBarMenuGroup .button[aria-expanded='false'] + .menu {
+  transform: translateY(-8px);
+}
+
+.VPNav .VPNavBarMenuGroup:hover .button + .menu,
+.VPNav .VPNavBarMenuGroup .button[aria-expanded='true'] + .menu {
+  transform: translateY(0);
+}
+
+/* Appearance switch: the thumb sits 2px inside the track and slides over with a small bounce,
+   while the sun and the moon turn and grow as they swap places */
+.VPNav .VPSwitchAppearance .check {
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+html.dark .VPNav .VPSwitchAppearance .check {
+  transform: translateX(18px);
+}
+
+.VPNav .VPSwitchAppearance:hover .check,
+.VPNav .VPSwitchAppearance:focus-visible .check {
+  box-shadow:
+    var(--vp-shadow-1),
+    0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
+}
+
+.VPNav .VPSwitchAppearance .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.VPNav .VPSwitchAppearance .icon .sun,
+.VPNav .VPSwitchAppearance .icon .moon {
+  top: 2px;
+  left: 2px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.VPNav .VPSwitchAppearance .icon .moon,
+html.dark .VPNav .VPSwitchAppearance .icon .sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+.VPNav .VPSwitchAppearance .icon .sun,
+html.dark .VPNav .VPSwitchAppearance .icon .moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Nav bar social icons get a soft rounded background and lift a little on hover */
+.VPNav .VPSocialLinks .VPSocialLink {
+  border-radius: 8px;
+  transition:
+    color 0.25s,
+    background-color 0.25s,
+    transform 0.25s !important;
+}
+
+.VPNav .VPSocialLinks .VPSocialLink:hover,
+.VPNav .VPSocialLinks .VPSocialLink:focus-visible {
+  outline: none;
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
+  transform: translateY(-2px);
+}
+
 .package-lucide-logo {
   margin: 0 auto 48px;
   max-width: 480px;
 }
 
-.VPSidebar {
-  /* Hide Scrollbar */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
-  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
+/* Sidebar links: a soft pill on hover with the text sliding in a little, a light brand pill
+   for the current page, and a smooth turn of the section chevrons */
+.VPSidebar .VPSidebarItem.is-link > .item > .link {
+  margin: 1px -8px;
+  padding: 0 8px;
+  border-radius: 6px;
+  transition: background-color 0.25s !important;
 }
+
+.VPSidebar .VPSidebarItem.is-link > .item > .link > .text {
+  transition:
+    color 0.25s,
+    transform 0.25s ease !important;
+}
+
+.VPSidebar .VPSidebarItem.is-link > .item > .link:hover,
+.VPSidebar .VPSidebarItem.is-link > .item > .link:focus-visible {
+  outline: none;
+  background-color: var(--vp-c-default-soft);
+}
+
+.VPSidebar .VPSidebarItem.is-link > .item > .link:hover > .text,
+.VPSidebar .VPSidebarItem.is-link > .item > .link:focus-visible > .text {
+  transform: translateX(3px);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item > .link {
+  background-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
+}
+
+.VPSidebar .VPSidebarItem .caret-icon {
+  transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1) !important;
+}
+
+/* Links in the page text: a faint underline shows they are links, and on hover a solid
+   underline draws in from the left. Drawn with backgrounds so it also follows links that
+   wrap onto a second line. */
+.vp-doc a:not([class]) {
+  text-decoration: none;
+  padding-bottom: 1px;
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(
+      color-mix(in srgb, var(--vp-c-brand) 35%, transparent),
+      color-mix(in srgb, var(--vp-c-brand) 35%, transparent)
+    );
+  background-position:
+    0 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  background-size:
+    0% 2px,
+    100% 1px;
+  transition:
+    color 0.25s,
+    background-size 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.vp-doc a:not([class]):hover,
+.vp-doc a:not([class]):focus-visible {
+  background-size:
+    100% 2px,
+    100% 1px;
+}
+
+.vp-doc a:not([class]):has(img) {
+  background-image: none;
+}
+
+/* "Edit this page": a soft brand pill on hover, with the pen tilting as if it starts writing */
+.VPDocFooter .edit-link-button {
+  margin-left: -10px;
+  padding: 0 12px 0 10px;
+  border-radius: 8px;
+  transition:
+    color 0.25s,
+    background-color 0.25s !important;
+}
+
+.VPDocFooter .edit-link-button:hover,
+.VPDocFooter .edit-link-button:focus-visible {
+  outline: none;
+  background-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
+}
+
+.VPDocFooter .edit-link-icon {
+  transform-origin: 30% 70%;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.VPDocFooter .edit-link-button:hover .edit-link-icon,
+.VPDocFooter .edit-link-button:focus-visible .edit-link-icon {
+  transform: rotate(-14deg) scale(1.1);
+}
+
+/* Previous / next page links: Lucide's arrow-left and arrow-right icons point the way, and
+   on hover the card lifts with a light brand tint while its arrow moves on */
+.VPDocFooter .pager-link {
+  transition:
+    border-color 0.25s,
+    background-color 0.25s,
+    transform 0.25s ease,
+    box-shadow 0.25s !important;
+}
+
+.VPDocFooter .pager-link:hover,
+.VPDocFooter .pager-link:focus-visible {
+  outline: none;
+  transform: translateY(-2px);
+  background-color: color-mix(in srgb, var(--vp-c-brand) 6%, transparent);
+  box-shadow: var(--vp-shadow-2);
+}
+
+.VPDocFooter .pager-link .title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.VPDocFooter .pager-link.next .title {
+  justify-content: flex-end;
+}
+
+.VPDocFooter .pager-link.prev .title::before,
+.VPDocFooter .pager-link.next .title::after {
+  content: '';
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  transition: transform 0.25s ease !important;
+}
+
+.VPDocFooter .pager-link.prev .title::before {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 19-7-7 7-7'/%3E%3Cpath d='M19 12H5'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.VPDocFooter .pager-link.next .title::after {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.VPDocFooter .pager-link.prev:hover .title::before {
+  transform: translateX(-4px);
+}
+
+.VPDocFooter .pager-link.next:hover .title::after {
+  transform: translateX(4px);
+}
+
+/* "On this page" outline: each heading is a soft pill on hover and slides in a little,
+   the current heading takes the brand colour and the marker glides to it */
+.VPDoc .VPDocAsideOutline .outline-link {
+  margin: 0 -8px;
+  padding: 0 8px;
+  border-radius: 6px;
+  transition:
+    color 0.25s,
+    background-color 0.25s,
+    padding-left 0.25s ease !important;
+}
+
+.VPDoc .VPDocAsideOutline .outline-link:hover,
+.VPDoc .VPDocAsideOutline .outline-link:focus-visible {
+  outline: none;
+  padding-left: 12px;
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
+}
+
+.VPDoc .VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+}
+
+.VPDoc .VPDocAsideOutline .outline-marker {
+  transition:
+    top 0.35s cubic-bezier(0.34, 1.3, 0.64, 1),
+    opacity 0.25s !important;
+}
+
+/* Sidebar scrollbar: a slim rounded thumb that stays quiet until the sidebar is hovered */
 .VPSidebar::-webkit-scrollbar {
-  width: 0;
-  display: none;
+  width: 8px;
 }
 
 .VPSidebar::-webkit-scrollbar-track {
@@ -188,8 +543,27 @@ html {
 }
 
 .VPSidebar::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
+  background-color: var(--vp-c-divider);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.VPSidebar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-text-3);
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover,
+.VPSidebar::-webkit-scrollbar-thumb:active {
+  background-color: var(--vp-c-brand-1);
+}
+
+/* Browsers without the scrollbar pseudo-elements, such as Firefox */
+@supports not selector(::-webkit-scrollbar) {
+  .VPSidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--vp-c-text-3) transparent;
+  }
 }
 
 .custom-block.success {

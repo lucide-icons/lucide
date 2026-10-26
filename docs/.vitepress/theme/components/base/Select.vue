@@ -36,6 +36,8 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
       </ListboxButton>
 
       <transition
+        enter-active-class="transition-enter"
+        enter-from-class="transition-enter-from"
         leave-active-class="transition-leave"
         leave-from-class="transition-leave-from"
         leave-to-class="transition-leave-to"
@@ -99,6 +101,21 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   border-color: var(--vp-c-brand);
 }
 
+/* The button shows a brand border on hover and the chevrons take the text colour */
+.select-button {
+  cursor: pointer;
+  transition-duration: 0.25s !important;
+}
+
+.select-button:hover {
+  border-color: var(--vp-c-brand);
+}
+
+.select-button:hover .chevron-icon,
+.select-button[aria-expanded='true'] .chevron-icon {
+  color: var(--vp-c-text-1);
+}
+
 .select-text {
   display: block;
   overflow: hidden;
@@ -121,10 +138,26 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   height: 1.25rem;
   width: 1.25rem;
   color: #9ca3af;
+  transition: color 0.25s;
+  transition-duration: 0.25s !important;
+}
+
+/* The list fades in and slides down a little from the button */
+.transition-enter {
+  transition:
+    opacity 150ms ease-out,
+    transform 200ms cubic-bezier(0.34, 1.4, 0.64, 1);
+  transition-duration: 150ms, 200ms !important;
+}
+
+.transition-enter-from {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
 }
 
 .transition-leave {
   transition: opacity 100ms ease-in;
+  transition-duration: 100ms !important;
 }
 
 .transition-leave-from {
@@ -172,6 +205,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   transition:
     background-color 0.25s,
     color 0.25s;
+  transition-duration: 0.25s !important;
   list-style: none;
 }
 
