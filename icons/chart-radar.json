@@ -5,7 +5,8 @@
     "jguddas",
     "nito",
     "karsa-mistmere",
-    "congemcd"
+    "congemcd",
+    "ericfennis"
   ],
   "use-cases": [
     "Representing data as 2D areas in a circular format"
