@@ -79,7 +79,7 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   max-height: 3rem;
 }
 
-.icon-grid.absolute-stroke-width .lucide-icon {
+.icon-grid.non-scaling-stroke .lucide-icon {
   stroke-width: calc(var(--home-icon-stroke-width, 2) * 24 / var(--home-icon-size, 24));
 }
 </style>
