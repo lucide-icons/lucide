@@ -8,7 +8,7 @@ import { LucideBadgeAlert } from './icons/badge-alert';
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'lucide-static-hydration-root',
-  template: `<svg lucideBadgeAlert [absoluteStrokeWidth]="true"></svg>`,
+  template: `<svg lucideBadgeAlert [nonScalingStroke]="true"></svg>`,
   imports: [LucideBadgeAlert],
 })
 class StaticHydrationRootComponent {}

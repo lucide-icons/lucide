@@ -1,0 +1,44 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "felipeajzanetti",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Categorizing water polo events in sports apps",
+    "Marking water polo competitions in sports dashboards",
+    "Representing water polo in Olympic sport listings",
+    "Representing aquatic sports in dashboards and infographics"
+  ],
+  "tags": [
+    "polo",
+    "watercraft",
+    "athlete",
+    "feature",
+    "sport",
+    "ball",
+    "aquatic",
+    "swimming",
+    "pool",
+    "team",
+    "game",
+    "competition",
+    "olympic",
+    "water",
+    "match",
+    "aquatic sports",
+    "water polo",
+    "aquatics",
+    "water sports",
+    "pool sport",
+    "team sport",
+    "tournament",
+    "league"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

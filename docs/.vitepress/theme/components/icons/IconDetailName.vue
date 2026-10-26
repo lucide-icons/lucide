@@ -6,7 +6,11 @@ import useConfetti from '../../composables/useConfetti';
 const { animate, confetti } = useConfetti();
 const slots = useSlots();
 
-const copiedText = computed(() => slots.default?.()[0].children);
+const copiedText = computed(() => {
+  const children = slots.default?.()[0].children;
+
+  return typeof children === 'string' ? children : '';
+});
 
 function copyText() {
   navigator.clipboard.writeText(copiedText.value);
@@ -25,6 +29,7 @@ function copyText() {
     <slot />
     <Icon
       :iconNode="copy"
+      name="copy"
       :size="20"
       class="copy-icon"
     />
