@@ -30,7 +30,10 @@
     "later",
     "reschedule",
     "postpone",
-    "defer"
+    "defer",
+    "schedule",
+    "timeline",
+    "appointment"
   ],
   "categories": [
     "time",
