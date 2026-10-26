@@ -1,0 +1,67 @@
+name: Icon preview
+description: Generates the icon preview comment markup for changed icons in a pull request.
+
+inputs:
+  changed-files:
+    description: Space-separated list of changed icon files, relative to the repository root.
+    required: true
+  ref:
+    description: >-
+      Commit to read the changed icons from, e.g. the pull request head SHA. Only the changed SVG
+      files are taken from it with `git show`, nothing is checked out. Defaults to the working tree.
+    required: false
+    default: ''
+  output-file:
+    description: File the comment markup is written to.
+    required: false
+    default: comment-markup.md
+
+outputs:
+  has-changes:
+    description: Whether any changed icons were found. When `false`, no output file is written.
+    value: ${{ steps.generate.outputs.has-changes }}
+
+runs:
+  using: composite
+  steps:
+    - name: Read changed icons from ref
+      id: read-ref
+      if: inputs.ref != ''
+      shell: bash
+      run: |
+        git fetch --no-tags --depth=1 origin "$REF"
+
+        for file in $CHANGED_FILES; do
+          # Only plain icon file names, so nothing from the pull request ends up in a path or the markup
+          if [[ ! "$file" =~ ^icons/[a-z0-9-]+\.svg$ ]]; then
+            echo "::error::Unexpected changed file: $file"
+            exit 1
+          fi
+
+          mkdir -p "$RUNNER_TEMP/icon-preview/icons"
+          git show "$REF:$file" > "$RUNNER_TEMP/icon-preview/$file"
+        done
+
+        echo "dir=$RUNNER_TEMP/icon-preview" >> "$GITHUB_OUTPUT"
+      env:
+        CHANGED_FILES: ${{ inputs.changed-files }}
+        REF: ${{ inputs.ref }}
+
+    - name: Generate comment markup
+      id: generate
+      shell: bash
+      run: |
+        markup="$(node "$GITHUB_ACTION_PATH/generateChangedIconsCommentMarkup.mts")"
+
+        if [ -z "$markup" ]; then
+          echo "has-changes=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+
+        mkdir -p "$(dirname "$OUTPUT_FILE")"
+        printf '%s\n' "$markup" > "$OUTPUT_FILE"
+        echo "has-changes=true" >> "$GITHUB_OUTPUT"
+      env:
+        CHANGED_FILES: ${{ inputs.changed-files }}
+        CHANGED_FILES_DIR: ${{ steps.read-ref.outputs.dir }}
+        OUTPUT_FILE: ${{ inputs.output-file }}
