@@ -18,8 +18,7 @@
     "cancel"
   ],
   "categories": [
-    "$extends:alarm-clock",
-    "notifications"
+    "$extends:alarm-clock"
   ],
   "aliases": [
     {

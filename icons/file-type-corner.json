@@ -9,8 +9,7 @@
     "$extends:file-type"
   ],
   "categories": [
-    "$extends:file-type",
-    "letters-digits"
+    "$extends:file-type"
   ],
   "aliases": [
     {
