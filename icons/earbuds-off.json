@@ -4,16 +4,16 @@
     "rrod497"
   ],
   "use-cases": [
-    "Clearly indicating, in e-commerce store catalogs, audio products or earbud accessories.",
-    "Application as UI button in music apps to seamlessly switch audio output to connected wireless earphones.",
-    "Featuring in user manuals to visually guide customers through the bluetooth pairing process.",
-    "Represent earbuds or its status indicator n device settings for connected earbud devices."
+    "Application as UI button in music apps to switch off or disconnect audio output on wireless earphones.",
+    "Represent disconnected or disabled status of wireless audio devices in system settings.",
+    "Indicating that the usage of in-ear audio devices is prohibited, for example in workspaces that require attention to ambient sounds",
+    "Marking unavailable earphones in device pairing menus"
   ],
   "tags": [
     "earphones",
     "audio",
     "sound",
-    "bluethoot",
+    "bluetooth",
     "wireless",
     "music",
     "noise cancelling",
@@ -24,7 +24,10 @@
     "pairing",
     "hands-free",
     "speaker",
-    "volume"
+    "volume",
+    "disconnected",
+    "disabled",
+    "inactive"
   ],
   "categories": [
     "multimedia",
