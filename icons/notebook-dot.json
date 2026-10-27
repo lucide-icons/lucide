@@ -8,10 +8,10 @@
     "Marking shared documentation with new information"
   ],
   "tags": [
+    "$extends:notebook",
     "$group:dot",
     "document",
     "file",
-    "journal",
     "page",
     "paper",
     "record",

@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
     "code",
     "coding",
     "version control",
@@ -13,11 +14,7 @@
     "repository",
     "template",
     "draft",
-    "script",
     "screenplay",
-    "writing",
-    "writer",
-    "author",
     "unwritten",
     "unpublished",
     "untold"

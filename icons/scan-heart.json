@@ -6,13 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:scan",
+    "$group:heart",
     "health",
     "heart rate",
     "pulse",
     "monitoring",
     "healthiness",
-    "screening",
-    "dashed"
+    "screening"
   ],
   "categories": [
     "medical"

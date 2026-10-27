@@ -14,10 +14,8 @@
     "Accessing home security settings in residential alarm systems"
   ],
   "tags": [
+    "$extends:house",
     "$group:cog",
-    "home",
-    "building",
-    "residence",
     "property",
     "automation"
   ],

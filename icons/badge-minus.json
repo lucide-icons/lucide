@@ -8,8 +8,6 @@
   "tags": [
     "$extends:badge",
     "$group:minus",
-    "verified",
-    "unverified",
     "erase"
   ],
   "categories": [

@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "finance",
-    "pocket"
+    "$extends:wallet"
   ],
   "categories": [
     "$extends:wallet"

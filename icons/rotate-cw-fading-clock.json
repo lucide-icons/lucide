@@ -8,6 +8,8 @@
     "Indicating that a process is in progress"
   ],
   "tags": [
+    "$extends:rotate-cw",
+    "$group:clock",
     "clock",
     "waiting",
     "schedule",

@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "terminal",
     "bash",
     "script",

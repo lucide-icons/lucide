@@ -6,11 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "password",
-    "login",
-    "authentication",
-    "secure",
-    "unlock"
+    "$extends:key"
   ],
   "categories": [
     "$extends:key"

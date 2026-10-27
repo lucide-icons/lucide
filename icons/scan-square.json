@@ -13,21 +13,16 @@
     "Toggling scanning in camera or scanner apps"
   ],
   "tags": [
+    "$extends:scan",
     "scan",
-    "square",
     "detect",
     "recognition",
-    "select",
-    "frame",
     "object",
     "viewfinder",
     "capture",
     "shape",
-    "boundary",
-    "camera",
     "scanner",
     "overlay",
-    "focus",
     "crop",
     "marker"
   ],

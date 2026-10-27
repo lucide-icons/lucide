@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event"
+    "$extends:calendar"
   ],
   "categories": [
     "$extends:calendar"

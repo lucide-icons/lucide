@@ -19,10 +19,7 @@
     "Marking a device as assigned to a user in device management apps"
   ],
   "tags": [
-    "phone",
-    "cellphone",
-    "device",
-    "mobile",
+    "$extends:smartphone",
     "person",
     "profile",
     "account",

@@ -12,7 +12,7 @@
     "Indicating an inbound user request"
   ],
   "tags": [
-    "person",
+    "$extends:user-round",
     "assign",
     "move",
     "give",

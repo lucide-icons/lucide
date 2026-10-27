@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
     "$group:x",
     "unfollow",
     "unsubscribe",

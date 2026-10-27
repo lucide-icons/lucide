@@ -6,11 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:chart-line",
     "statistics",
     "analytics",
     "diagram",
-    "graph",
-    "presentation"
+    "graph"
   ],
   "categories": [
     "$extends:file"

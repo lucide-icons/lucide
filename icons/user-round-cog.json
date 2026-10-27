@@ -6,6 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user-round",
+    "$group:cog",
     "settings",
     "edit",
     "cog",

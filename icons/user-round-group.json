@@ -10,6 +10,7 @@
     "Managing multiple users in admin interfaces"
   ],
   "tags": [
+    "$extends:user-round",
     "group",
     "people",
     "team",

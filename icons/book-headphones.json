@@ -5,20 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:headphones",
     "audiobook",
-    "reading",
     "listening",
-    "sound",
-    "story",
-    "fiction",
-    "novel",
-    "information",
-    "knowledge",
-    "education",
-    "student",
-    "study",
-    "learning",
-    "research"
+    "sound"
   ],
   "categories": [
     "multimedia",

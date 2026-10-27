@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "arrow",
-    "direction"
+    "$extends:move-up"
   ],
   "categories": [
     "$extends:move-up"

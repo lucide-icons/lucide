@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:minus",
-    "email",
-    "message",
-    "letter"
+    "$extends:mail",
+    "$group:minus"
   ],
   "categories": [
     "mail"

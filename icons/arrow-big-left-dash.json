@@ -8,10 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "previous",
-    "back",
-    "direction",
-    "west",
+    "$extends:arrow-big-left",
     "turn",
     "corner"
   ],

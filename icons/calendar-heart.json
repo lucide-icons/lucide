@@ -5,11 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:calendar",
     "$group:heart",
-    "date",
-    "month",
-    "year",
-    "event",
     "heart",
     "subscribe",
     "valentines day"

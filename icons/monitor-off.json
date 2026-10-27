@@ -7,14 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:monitor",
     "$group:off",
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "screen sharing",
     "offline",
     "disconnected",
     "power"

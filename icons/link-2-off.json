@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "unchain",
-    "chain"
+    "$extends:link-2",
+    "unchain"
   ],
   "categories": [
-    "text"
+    "$extends:link-2"
   ]
 }

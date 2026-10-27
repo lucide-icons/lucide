@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:alarm-clock",
     "$group:check",
     "todo",
     "task"

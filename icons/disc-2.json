@@ -7,17 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "album",
-    "music",
-    "vinyl",
-    "record",
-    "cd",
-    "dvd",
-    "format",
-    "dj",
-    "spin",
-    "rotate",
-    "rpm"
+    "$extends:disc",
+    "record"
   ],
   "categories": [
     "$extends:disc"

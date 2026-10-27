@@ -9,6 +9,8 @@
     "Indicating a protected user account"
   ],
   "tags": [
+    "$extends:user",
+    "$group:shield",
     "user",
     "shield",
     "admin",

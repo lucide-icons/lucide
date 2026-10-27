@@ -11,13 +11,10 @@
     "Marking measurements outside acceptable variance"
   ],
   "tags": [
-    "calculate",
-    "math",
-    "operator",
+    "$extends:equal-approximately",
     "not",
     "approximately",
     "unequal",
-    "code",
     "≇",
     "tolerance",
     "threshold",

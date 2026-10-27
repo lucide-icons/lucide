@@ -7,12 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:id-card",
     "id-card",
     "id-card-lanyard",
-    "identity",
     "employee",
-    "gate-pass",
-    "badge"
+    "gate-pass"
   ],
   "categories": [
     "$extends:id-card"

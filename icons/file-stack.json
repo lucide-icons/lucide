@@ -6,6 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:files",
     "versions",
     "multiple",
     "copy",

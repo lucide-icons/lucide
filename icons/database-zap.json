@@ -5,11 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:database",
+    "$group:zap",
     "cache busting",
-    "storage",
-    "memory",
-    "bytes",
-    "servers",
     "power",
     "crash"
   ],

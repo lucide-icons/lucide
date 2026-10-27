@@ -5,20 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:ship",
     "steering",
-    "rudder",
-    "boat",
-    "knots",
-    "nautical mile",
-    "maritime",
-    "sailing",
-    "yacht",
-    "cruise",
-    "ocean liner",
-    "tanker",
-    "vessel",
-    "navy",
-    "trip"
+    "rudder"
   ],
   "categories": [
     "$extends:ship"
