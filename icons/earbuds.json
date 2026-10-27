@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Clearly indicating, in e-commerce store catalogs, audio products or earbud accessories.",
+    "Application as UI button in music apps to seamlessly switch audio output to connected wireless earphones.",
+    "Featuring in user manuals to visually guide customers through the bluetooth pairing process.",
+    "Represent earbuds or its status indicator n device settings for connected earbud devices."
+  ],
+  "tags": [
+    "earphones",
+    "audio",
+    "sound",
+    "bluethoot",
+    "wireless",
+    "music",
+    "noise cancelling",
+    "acoustics",
+    "stereo",
+    "media",
+    "listen",
+    "pairing",
+    "hands-free",
+    "speaker",
+    "volume"
+  ],
+  "categories": [
+    "multimedia",
+    "devices",
+    "connectivity"
+  ]
+}
