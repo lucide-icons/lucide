@@ -4,16 +4,17 @@
     "rrod497"
   ],
   "use-cases": [
-    "Clearly indicating, in e-commerce store catalogs, audio products or earbud accessories.",
-    "Application as UI button in music apps to seamlessly switch audio output to connected wireless earphones.",
-    "Featuring in user manuals to visually guide customers through the bluetooth pairing process.",
-    "Represent earbuds or its status indicator n device settings for connected earbud devices."
+    "Indicating audio products or earbud accessories in e-commerce store catalogs",
+    "Switching the audio output to connected wireless earphones in music apps",
+    "Representing the bluetooth pairing process in user manuals",
+    "Representing connected earbud device status indicators or device settings",
+    "Routing hands-free audio calls to wireless listening devices"
   ],
   "tags": [
     "earphones",
     "audio",
     "sound",
-    "bluethoot",
+    "bluetooth",
     "wireless",
     "music",
     "noise cancelling",
@@ -29,6 +30,7 @@
   "categories": [
     "multimedia",
     "devices",
-    "connectivity"
+    "connectivity",
+    "communication"
   ]
 }
