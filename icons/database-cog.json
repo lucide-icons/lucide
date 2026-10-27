@@ -10,19 +10,16 @@
     "Representing server and storage configuration in developer dashboards"
   ],
   "tags": [
-    "database",
     "db",
     "settings",
     "configuration",
     "preferences",
     "gear",
-    "cog",
     "admin",
     "sql",
     "storage",
     "server",
     "maintenance",
-    "data",
     "schema",
     "query",
     "relational"
