@@ -6,16 +6,11 @@
     "RajnishKMehta"
   ],
   "use-cases": [
-    "remove from favorites",
-    "unstar item",
-    "reject favorite",
-    "exclude item",
-    "remove bookmark",
-    "disallow recommendation",
-    "remove featured status",
-    "dismiss saved item",
-    "block preferred content",
-    "clear favorite selection"
+    "Rejecting or dismissing a favorite or saved item",
+    "Excluding an item from recommendations",
+    "Revoking the featured status of an item",
+    "Blocking unwanted content from preferred lists",
+    "Clearing a favorite selection"
   ],
   "tags": [
     "mark",

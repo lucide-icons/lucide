@@ -6,16 +6,11 @@
     "RajnishKMehta"
   ],
   "use-cases": [
-    "add to favorites",
-    "star item",
-    "add bookmark",
-    "save item",
-    "mark as favorite",
-    "add featured item",
-    "add recommendation",
-    "follow preferred content",
-    "add to saved items",
-    "prioritize item"
+    "Adding an item to favorites or bookmarks",
+    "Starring an item to save it for later",
+    "Adding an item to featured or recommended lists",
+    "Following preferred content or creators",
+    "Raising the priority of an item"
   ],
   "tags": [
     "bookmark",

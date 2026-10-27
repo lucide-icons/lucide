@@ -6,8 +6,8 @@
     "Ahmed-Dghaies"
   ],
   "use-cases": [
-    "Indicates that playback is disabled for video, live stream, or audio file",
-    "Indicates that video, live stream, or audio file cannot be played."
+    "Indicating playback is disabled for video, audio, or live streams",
+    "Showing that a media file cannot be played"
   ],
   "tags": [
     "audio",

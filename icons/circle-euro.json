@@ -4,8 +4,8 @@
     "Guido3000"
   ],
   "use-cases": [
-    "currency selector buttons",
-    "pricing badges"
+    "Selecting euro in currency selector buttons",
+    "Displaying prices in euros on pricing badges"
   ],
   "tags": [
     "symbol",
