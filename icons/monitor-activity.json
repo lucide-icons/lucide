@@ -11,7 +11,9 @@
     "Monitoring computer performance in system diagnostics tools",
     "Showing application health in service monitoring dashboards",
     "Displaying network activity in administration panels",
-    "Representing patient vital signs in clinical monitoring interfaces"
+    "Representing patient vital signs in clinical monitoring interfaces",
+    "Tracking server uptime and resource usage in infrastructure dashboards",
+    "Displaying hardware sensor readings in device management interfaces"
   ],
   "tags": [
     "tv",
