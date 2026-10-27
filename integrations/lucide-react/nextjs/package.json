@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "lucide-react": "workspace:*",
-    "next": "16.3.8",
+    "next": "16.4.1",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
@@ -21,7 +21,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/browser-playwright": "5.0.3",
     "typescript": "^6.0.3",
-    "vite": "^8.3.2",
+    "vite": "^8.3.3",
     "vitest": "5.0.3",
     "vitest-browser-react": "2.3.0"
   }
