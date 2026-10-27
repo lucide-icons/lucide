@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "redo",
-    "history",
+    "$extends:undo",
     "step",
     "back"
   ],

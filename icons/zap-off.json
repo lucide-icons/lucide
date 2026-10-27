@@ -8,12 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "flash",
-    "camera",
-    "lightning",
-    "electricity",
-    "energy",
-    "power"
+    "$extends:zap",
+    "$group:off"
   ],
   "categories": [
     "$extends:zap"

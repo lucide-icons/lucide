@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:redo",
     "redo",
-    "history",
     "step",
     "over",
     "forward"

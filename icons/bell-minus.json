@@ -9,10 +9,7 @@
   "tags": [
     "$extends:bell",
     "$group:minus",
-    "alarm",
-    "notification",
     "silent",
-    "reminder",
     "erase"
   ],
   "categories": [

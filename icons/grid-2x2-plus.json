@@ -7,22 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "table",
-    "rows",
-    "columns",
-    "blocks",
-    "plot",
-    "land",
-    "geometry",
-    "measure",
-    "data",
-    "size",
-    "width",
-    "height",
-    "distance",
-    "surface area",
-    "square meter",
-    "acre"
+    "$extends:grid-2x2",
+    "$group:plus",
+    "data"
   ],
   "categories": [
     "text",

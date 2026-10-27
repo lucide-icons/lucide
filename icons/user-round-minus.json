@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user-round",
     "$group:minus",
     "unfollow",
     "unsubscribe"

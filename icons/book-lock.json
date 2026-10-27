@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:lock",
     "code",
     "coding",
     "version control",
@@ -12,8 +14,7 @@
     "repository",
     "private",
     "secret",
-    "hidden",
-    "knowledge"
+    "hidden"
   ],
   "categories": [
     "development",

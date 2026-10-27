@@ -8,9 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "music",
-    "sound",
-    "speaker"
+    "$extends:volume"
   ],
   "categories": [
     "$extends:volume"

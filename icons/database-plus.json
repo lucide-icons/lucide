@@ -13,9 +13,6 @@
   "tags": [
     "$extends:database",
     "$group:plus",
-    "storage",
-    "memory",
-    "bytes",
     "server",
     "plus",
     "insert",

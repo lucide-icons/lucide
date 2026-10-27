@@ -5,14 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:scan",
     "face",
     "biometric",
     "identification",
     "authentication",
     "2fa",
     "access",
-    "login",
-    "dashed"
+    "login"
   ],
   "categories": [
     "account",

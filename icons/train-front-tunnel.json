@@ -5,15 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "railway",
-    "metro",
-    "subway",
-    "underground",
-    "speed",
-    "bullet",
-    "fast",
-    "track",
-    "line"
+    "$extends:train-front",
+    "speed"
   ],
   "categories": [
     "$extends:train-front",

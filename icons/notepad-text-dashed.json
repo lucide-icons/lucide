@@ -5,19 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "notebook",
-    "notes",
-    "pages",
-    "paper",
-    "stationery",
-    "diary",
-    "journal",
-    "writing",
-    "write",
-    "written",
+    "$extends:notepad-text",
     "draft",
-    "template",
-    "lines"
+    "template"
   ],
   "categories": [
     "$extends:notepad-text"

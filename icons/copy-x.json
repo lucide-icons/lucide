@@ -10,7 +10,6 @@
     "$group:x",
     "close",
     "clear",
-    "multiple",
     "multiply",
     "multiplication",
     "times"

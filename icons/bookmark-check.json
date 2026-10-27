@@ -6,12 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "read",
+    "$extends:bookmark",
+    "$group:check",
     "finished",
     "complete",
-    "clip",
-    "marker",
-    "tag",
     "task",
     "todo"
   ],

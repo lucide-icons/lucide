@@ -13,9 +13,10 @@
     "Renewing subscriptions or recurring services"
   ],
   "tags": [
+    "$extends:rotate-cw",
+    "$group:clock",
     "modify",
     "edit",
-    "refresh",
     "sync",
     "renew",
     "revision",
@@ -27,10 +28,6 @@
     "version",
     "time machine",
     "backup",
-    "clockwise",
-    "arrow",
-    "reload",
-    "rerun",
     "synchronize",
     "circular",
     "cycle",

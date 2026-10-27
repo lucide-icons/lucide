@@ -10,6 +10,7 @@
     "Managing multiple users in admin interfaces"
   ],
   "tags": [
+    "$extends:user",
     "group",
     "people",
     "team",

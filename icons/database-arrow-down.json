@@ -11,9 +11,7 @@
     "Syncing data from a remote to a local environment"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
+    "$extends:database",
     "server",
     "export",
     "download",

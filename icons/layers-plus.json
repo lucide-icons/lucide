@@ -8,11 +8,9 @@
   "tags": [
     "$extends:layers",
     "$group:plus",
-    "stack",
     "layers",
     "increase",
     "positive",
-    "copy",
     "upgrade"
   ],
   "categories": [

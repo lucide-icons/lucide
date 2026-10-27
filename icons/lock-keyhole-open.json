@@ -10,7 +10,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "security"
+    "$extends:lock-keyhole"
   ],
   "categories": [
     "$extends:lock-keyhole"

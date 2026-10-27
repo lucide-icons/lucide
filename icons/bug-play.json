@@ -8,12 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "issue",
-    "testing",
-    "debug",
-    "reproduce",
-    "code",
-    "insect"
+    "$extends:bug",
+    "reproduce"
   ],
   "categories": [
     "$extends:bug"

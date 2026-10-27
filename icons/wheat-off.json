@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "corn",
-    "cereal",
-    "grain",
+    "$extends:wheat",
+    "$group:off",
     "gluten free",
     "allergy",
     "intolerance",

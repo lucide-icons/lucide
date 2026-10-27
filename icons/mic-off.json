@@ -9,10 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "record",
-    "sound",
-    "mute",
-    "microphone"
+    "$extends:mic",
+    "$group:off",
+    "mute"
   ],
   "categories": [
     "$extends:mic"

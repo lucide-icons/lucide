@@ -8,6 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:columns-3",
+    "$group:cog",
     "columns",
     "settings",
     "customize",

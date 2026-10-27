@@ -12,6 +12,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:bookmark",
+    "$group:off",
     "unsaved",
     "unfavorite",
     "unmarked",
@@ -21,7 +23,6 @@
     "unpin",
     "unread",
     "unclip",
-    "marker",
     "untag"
   ],
   "categories": [

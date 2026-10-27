@@ -15,11 +15,8 @@
     "Moving forward through dates in date pickers"
   ],
   "tags": [
-    "date",
+    "$extends:calendar",
     "day",
-    "month",
-    "year",
-    "event",
     "arrow",
     "direction",
     "navigation",

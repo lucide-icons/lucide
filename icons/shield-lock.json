@@ -12,13 +12,12 @@
     "Marking secure or encrypted file storage"
   ],
   "tags": [
-    "antivirus",
+    "$extends:shield",
+    "$group:lock",
     "authentication",
     "authorization",
     "credentials",
-    "cybersecurity",
     "data protection",
-    "defense",
     "encryption",
     "guard",
     "login",
@@ -28,7 +27,6 @@
     "ssl",
     "tls",
     "two-factor authentication",
-    "verification",
     "vpn"
   ],
   "categories": [

@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "fullscreen",
-    "arrows",
-    "expand"
+    "$extends:maximize",
+    "arrows"
   ],
   "categories": [
     "$extends:maximize",

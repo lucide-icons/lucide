@@ -10,7 +10,6 @@
   "tags": [
     "$extends:clipboard",
     "$group:minus",
-    "copy",
     "erase",
     "document",
     "medical",

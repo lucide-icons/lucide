@@ -8,6 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:alarm-clock",
+    "$group:plus",
     "add"
   ],
   "categories": [

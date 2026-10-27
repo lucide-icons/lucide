@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
+    "$group:check",
     "day",
-    "month",
-    "year",
-    "event",
     "confirm",
     "subscribe",
     "schedule",

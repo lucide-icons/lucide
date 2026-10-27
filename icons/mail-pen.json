@@ -13,10 +13,8 @@
     "Editing email addresses on settings pages"
   ],
   "tags": [
+    "$extends:mail",
     "$group:pen",
-    "email",
-    "message",
-    "letter",
     "pen",
     "writing",
     "reply"

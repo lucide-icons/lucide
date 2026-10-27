@@ -8,11 +8,8 @@
   "tags": [
     "$extends:calendar",
     "$group:minus",
-    "date",
-    "day",
-    "month",
-    "year",
-    "event"
+    "$group:off",
+    "day"
   ],
   "categories": [
     "$extends:calendar"

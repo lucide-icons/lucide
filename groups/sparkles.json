@@ -2,6 +2,7 @@
   "$schema": "../group.schema.json",
   "description": "Action: magic, AI or smart features",
   "tags": [
+    "sparkle",
     "magic",
     "ai",
     "stars",
@@ -11,6 +12,8 @@
     "shine",
     "magic",
     "enchantment",
+    "polish",
+    "sanitize",
     "ai",
     "artificial intelligence",
     "smart",
