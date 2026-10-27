@@ -4,10 +4,10 @@
     "PrimeTestLab"
   ],
   "use-cases": [
-    "database settings or configuration page",
-    "managing database connections in an admin panel",
-    "database maintenance or migration tools",
-    "server and storage configuration in developer dashboards"
+    "Representing database settings or configuration page",
+    "Representing managing database connections in an admin panel",
+    "Indicating database maintenance or migration tools",
+    "Representing server and storage configuration in developer dashboards"
   ],
   "tags": [
     "database",
@@ -28,7 +28,6 @@
     "relational"
   ],
   "categories": [
-    "development",
-    "devices"
+    "development"
   ]
 }
