@@ -5,7 +5,11 @@
     "MArtytraM99",
     "DrashtiC07"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing protected user accounts or secure profiles",
+    "Indicating access permissions for a user account",
+    "Showing account protection settings"
+  ],
   "tags": [
     "security",
     "protection",
