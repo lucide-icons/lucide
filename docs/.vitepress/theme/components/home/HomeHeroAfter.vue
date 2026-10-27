@@ -6,7 +6,6 @@ import { data } from './HomeHeroIconsCard.data';
 import FakeInput from '../base/FakeInput.vue';
 import { nextTick, provide } from 'vue';
 import useSearchShortcut from '../../utils/useSearchShortcut';
-import useScrollDepthTracking from '../../composables/useScrollDepthTracking';
 import { track } from '../../utils/openpanel';
 
 const { go } = useRouter();
@@ -15,8 +14,6 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
   track('home_search_click', { via: 'shortcut' });
   go('/icons/?focus');
 });
-
-useScrollDepthTracking('home_scroll_depth');
 
 function onSearchClick() {
   track('home_search_click', { via: 'click' });

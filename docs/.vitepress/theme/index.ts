@@ -33,12 +33,45 @@ const theme: Partial<Theme> = {
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
 
-    // Wait for VitePress to update the document title before tracking the page view.
-    router.onAfterRouteChange = () => nextTick(() => op?.screenView());
+    // Only one scroll depth event per page leave: closing a tab fires all the leave events below.
+    // Starts as sent, because VitePress also calls onBeforeRouteChange for the initial page load.
+    let scrollDepthSent = true;
 
-    // The hero actions are rendered by VitePress from the home page frontmatter,
-    // so clicks on them are picked up with a delegated listener.
+    function trackScrollDepth() {
+      if (scrollDepthSent) return;
+      scrollDepthSent = true;
+
+      const { scrollHeight, clientHeight } = document.documentElement;
+      const scrollable = scrollHeight - clientHeight;
+      const percent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
+
+      track('scroll_depth', { percent });
+    }
+
+    // Track before the route changes, VitePress resets the scroll position for the new page.
+    router.onBeforeRouteChange = () => {
+      if (!import.meta.env.SSR) trackScrollDepth();
+    };
+
+    router.onAfterRouteChange = () => {
+      scrollDepthSent = false;
+      // Wait for VitePress to update the document title before tracking the page view.
+      return nextTick(() => op?.screenView());
+    };
+
     if (!import.meta.env.SSR) {
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          trackScrollDepth();
+        } else {
+          scrollDepthSent = false;
+        }
+      });
+      window.addEventListener('pagehide', trackScrollDepth);
+      window.addEventListener('beforeunload', trackScrollDepth);
+
+      // The hero actions are rendered by VitePress from the home page frontmatter,
+      // so clicks on them are picked up with a delegated listener.
       document.addEventListener('click', (event) => {
         const link = (event.target as Element | null)?.closest?.('.VPHero .actions a');
         if (link) {
