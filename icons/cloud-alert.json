@@ -11,7 +11,7 @@
   "use-cases": [],
   "tags": [
     "$extends:cloud",
-    "$group:alert",
+    "$group:exclamation-mark",
     "alert",
     "error",
     "sync",

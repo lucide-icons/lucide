@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:battery",
-    "$group:alert"
+    "$group:exclamation-mark"
   ],
   "categories": [
     "$extends:battery"
