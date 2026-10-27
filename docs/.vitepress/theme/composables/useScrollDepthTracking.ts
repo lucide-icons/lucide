@@ -1,35 +1,51 @@
-import { onMounted } from 'vue';
+import { onBeforeUnmount, onMounted } from 'vue';
 import { useEventListener, useThrottleFn } from '@vueuse/core';
 import { track } from '../utils/openpanel';
 
-const MILESTONES = [25, 50, 75, 100];
+const MILESTONES = [0, 25, 50, 75, 100];
 
 /**
- * Sends `eventName` once per milestone (25/50/75/100%) the visitor scrolls to on this page.
+ * Records the deepest point the visitor scrolls to and sends it as a single `eventName`
+ * when they leave the page: navigating away, closing the tab, or hiding it (mobile
+ * browsers often skip `pagehide`). If a hidden tab becomes visible again, tracking resumes
+ * and the next leave sends a new event.
  */
 export default function useScrollDepthTracking(eventName: string) {
-  const reached = new Set<number>();
+  let maxPercent = 0;
+  let sent = false;
 
-  const onScroll = useThrottleFn(
-    () => {
-      const { scrollHeight, clientHeight } = document.documentElement;
-      const scrollable = scrollHeight - clientHeight;
-      if (scrollable <= 0) return;
+  function measure() {
+    const { scrollHeight, clientHeight } = document.documentElement;
+    const scrollable = scrollHeight - clientHeight;
+    const percent = scrollable <= 0 ? 100 : Math.round((window.scrollY / scrollable) * 100);
 
-      const percent = Math.round((window.scrollY / scrollable) * 100);
+    maxPercent = Math.max(maxPercent, Math.min(100, percent));
+  }
 
-      for (const milestone of MILESTONES) {
-        if (percent >= milestone && !reached.has(milestone)) {
-          reached.add(milestone);
-          track(eventName, { percent: milestone });
-        }
-      }
-    },
-    250,
-    true,
-  );
+  function flush() {
+    if (sent) return;
+    sent = true;
+
+    measure();
+    const milestone = MILESTONES.filter((value) => value <= maxPercent).at(-1);
+    track(eventName, { percent: maxPercent, milestone });
+  }
+
+  const onScroll = useThrottleFn(measure, 250, true);
 
   onMounted(() => {
+    measure();
+
     useEventListener(window, 'scroll', onScroll, { passive: true });
+    useEventListener(window, 'pagehide', flush);
+    useEventListener(document, 'visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        flush();
+      } else {
+        sent = false;
+      }
+    });
   });
+
+  onBeforeUnmount(flush);
 }
