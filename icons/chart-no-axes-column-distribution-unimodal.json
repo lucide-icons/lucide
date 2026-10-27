@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mikkelhundborg",
+    "Kukzze"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "bell curve",
+    "normal distribution",
+    "gaussian"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

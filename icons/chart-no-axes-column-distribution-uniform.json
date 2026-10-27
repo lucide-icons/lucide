@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mikkelhundborg",
+    "Kukzze"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "uniform",
+    "flat",
+    "even distribution"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
