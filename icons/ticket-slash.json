@@ -20,10 +20,8 @@
     "refused",
     "banned",
     "barred",
-    "cancelled",
     "cancellation",
     "refunded",
-    "clear",
     "error"
   ],
   "categories": [

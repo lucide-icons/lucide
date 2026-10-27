@@ -12,6 +12,7 @@
   ],
   "tags": [
     "$extends:mouth",
+    "$group:off",
     "mute",
     "silence",
     "speechless",

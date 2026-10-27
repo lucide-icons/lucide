@@ -16,18 +16,15 @@
   ],
   "tags": [
     "$extends:message-circle-dashed",
+    "$group:check",
     "pending",
     "provisional",
     "verification",
     "confirmation",
-    "success",
     "status",
-    "check",
     "approval",
     "moderate",
-    "resolved",
-    "done",
-    "complete"
+    "resolved"
   ],
   "categories": [
     "$extends:message-circle-dashed",

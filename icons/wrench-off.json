@@ -13,10 +13,9 @@
   ],
   "tags": [
     "$extends:wrench",
-    "off",
+    "$group:off",
     "service",
-    "maintenance",
-    "disabled"
+    "maintenance"
   ],
   "categories": [
     "$extends:wrench"

@@ -16,7 +16,6 @@
   "tags": [
     "$extends:building-complex",
     "$group:plus",
-    "increase",
     "office",
     "headquarters",
     "startup",

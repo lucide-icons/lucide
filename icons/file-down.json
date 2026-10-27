@@ -8,6 +8,7 @@
   "tags": [
     "$extends:file",
     "$extends:download",
+    "$group:direction-down",
     "download"
   ],
   "categories": [

@@ -8,9 +8,8 @@
   "use-cases": [],
   "tags": [
     "$extends:monitor",
+    "$group:check",
     "connected",
-    "success",
-    "verified",
     "running",
     "active"
   ],

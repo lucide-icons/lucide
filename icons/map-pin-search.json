@@ -10,6 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:map-pin",
+    "$group:search",
     "navigation",
     "travel"
   ],

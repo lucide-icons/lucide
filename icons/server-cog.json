@@ -7,9 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:server",
-    "computing",
-    "cog",
-    "gear"
+    "$group:cog",
+    "computing"
   ],
   "categories": [
     "$extends:server"

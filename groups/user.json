@@ -2,6 +2,11 @@
   "$schema": "../group.schema.json",
   "description": "Subject: a person or an account",
   "tags": [
+    "user",
+    "people",
+    "identity",
+    "individual",
+    "personal",
     "person",
     "account",
     "contact",

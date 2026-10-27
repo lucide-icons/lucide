@@ -9,10 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:brain",
-    "$group:cog",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$group:cog"
   ],
   "categories": [
     "science",

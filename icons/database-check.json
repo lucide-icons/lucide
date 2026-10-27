@@ -14,9 +14,7 @@
   "tags": [
     "$extends:database",
     "$group:check",
-    "server",
-    "check",
-    "success"
+    "server"
   ],
   "categories": [
     "$extends:database"

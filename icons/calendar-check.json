@@ -8,12 +8,8 @@
   "tags": [
     "$extends:calendar",
     "$group:check",
-    "day",
-    "confirm",
     "subscribe",
-    "schedule",
-    "todo",
-    "task"
+    "schedule"
   ],
   "categories": [
     "$extends:calendar"

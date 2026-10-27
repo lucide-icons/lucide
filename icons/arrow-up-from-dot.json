@@ -6,6 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-up",
+    "$group:direction-up",
     "step",
     "out"
   ],

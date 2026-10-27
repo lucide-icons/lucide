@@ -10,9 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:printer",
-    "cross",
-    "cancel",
-    "remove",
+    "$group:x",
     "error"
   ],
   "categories": [

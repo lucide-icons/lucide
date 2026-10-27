@@ -10,14 +10,7 @@
   ],
   "tags": [
     "$extends:user",
-    "$extends:shield",
-    "user",
-    "shield",
-    "protected",
-    "guard",
-    "profile",
-    "security",
-    "privacy",
+    "$group:shield",
     "permissions",
     "role"
   ],

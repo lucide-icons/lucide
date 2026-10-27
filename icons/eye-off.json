@@ -10,7 +10,6 @@
   "tags": [
     "$extends:eye",
     "$group:off",
-    "hide",
     "conceal",
     "mask"
   ],

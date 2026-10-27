@@ -12,6 +12,8 @@
     "new",
     "status",
     "online",
-    "active"
+    "active",
+    "unread",
+    "current"
   ]
 }

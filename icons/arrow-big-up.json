@@ -10,15 +10,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "shift",
     "keyboard",
     "button",
     "mac",
     "capitalize",
     "capitalise",
-    "forward",
-    "direction",
-    "north"
+    "forward"
   ],
   "categories": [
     "arrows",

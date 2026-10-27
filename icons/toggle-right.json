@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-right",
     "on",
     "off",
     "switch",

@@ -12,7 +12,6 @@
     "nothing",
     "null",
     "void",
-    "cancel",
     "no",
     "stop",
     "error",
@@ -22,8 +21,7 @@
     "failure",
     "divide",
     "division",
-    "or",
-    "/"
+    "or"
   ],
   "categories": [
     "development",

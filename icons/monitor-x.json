@@ -9,7 +9,6 @@
   "tags": [
     "$extends:monitor",
     "$group:x",
-    "close",
     "error",
     "failed",
     "disconnected",

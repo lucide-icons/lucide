@@ -8,8 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "$group:clock",
-    "clock"
+    "$group:clock"
   ],
   "categories": [
     "$extends:folder",

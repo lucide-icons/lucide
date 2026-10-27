@@ -8,13 +8,8 @@
     "Representing the Kazakh Tenge in currency conversion tools or financial reports"
   ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
-    "kazakhstan",
-    "currency-symbol",
-    "exchange",
-    "cash"
+    "$group:currency",
+    "kazakhstan"
   ],
   "categories": [
     "finance"

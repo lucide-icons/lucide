@@ -2,7 +2,13 @@
   "$schema": "../group.schema.json",
   "description": "Status: time, history or scheduling of something",
   "tags": [
+    "clock",
     "time",
+    "hour",
+    "minute",
+    "second",
+    "timestamp",
+    "timer",
     "duration",
     "interval",
     "frequency",

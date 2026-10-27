@@ -6,12 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
+    "$group:x",
     "stop",
     "alert",
     "warning",
-    "times",
-    "clear",
     "math"
   ],
   "categories": [

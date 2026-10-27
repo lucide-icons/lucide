@@ -20,12 +20,8 @@
   ],
   "tags": [
     "$extends:smartphone",
-    "person",
-    "profile",
-    "account",
+    "$group:user",
     "avatar",
-    "contact",
-    "identity",
     "owner",
     "authentication"
   ],

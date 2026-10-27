@@ -9,7 +9,6 @@
     "$extends:layers",
     "$group:plus",
     "layers",
-    "increase",
     "positive",
     "upgrade"
   ],

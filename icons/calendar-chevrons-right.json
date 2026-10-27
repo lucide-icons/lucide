@@ -13,15 +13,13 @@
   ],
   "tags": [
     "$extends:calendar",
-    "navigation",
+    "$group:direction-right",
+    "$group:navigation-last",
     "arrow",
-    "direction",
     "symbol",
     "pointer",
     "indicator",
-    "previous",
     "menu",
-    "day",
     "events"
   ],
   "categories": [

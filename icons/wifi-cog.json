@@ -10,13 +10,9 @@
   "use-cases": [],
   "tags": [
     "$extends:wifi",
+    "$group:cog",
     "directory",
-    "settings",
-    "control",
-    "preferences",
-    "cog",
-    "edit",
-    "gear"
+    "control"
   ],
   "categories": [
     "$extends:wifi",

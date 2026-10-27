@@ -9,8 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "like",
-    "love",
+    "$group:heart",
     "emotion",
     "suit",
     "playing",

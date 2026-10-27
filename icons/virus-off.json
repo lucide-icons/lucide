@@ -11,8 +11,8 @@
   ],
   "tags": [
     "$extends:virus",
+    "$group:off",
     "antivirus",
-    "blocked",
     "removed",
     "clean",
     "safe",

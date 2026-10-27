@@ -13,7 +13,6 @@
     "unguard",
     "unblock",
     "clean",
-    "clear",
     "disinfect",
     "patch",
     "fix",
@@ -28,8 +27,7 @@
     "deactivate",
     "decommission",
     "downgraded",
-    "minimum",
-    "-"
+    "minimum"
   ],
   "categories": [
     "account",

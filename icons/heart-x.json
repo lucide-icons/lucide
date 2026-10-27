@@ -14,10 +14,7 @@
   "tags": [
     "$group:x",
     "unlike",
-    "unfavorite",
-    "reject",
-    "dismiss",
-    "clear"
+    "unfavorite"
   ],
   "categories": [
     "social",

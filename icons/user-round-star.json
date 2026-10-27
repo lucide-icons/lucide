@@ -13,21 +13,13 @@
   ],
   "tags": [
     "$extends:user-round",
-    "favorite",
-    "favourite",
-    "like",
-    "review",
-    "rating",
+    "$group:star",
     "admin",
     "avatar",
-    "profile",
-    "featured",
     "moderator",
     "verified",
     "badge",
-    "award",
-    "champion",
-    "starred"
+    "champion"
   ],
   "categories": [
     "$extends:user-round"

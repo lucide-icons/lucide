@@ -8,9 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:move-down"
+    "$extends:move",
+    "$group:direction-down-left"
   ],
   "categories": [
-    "$extends:move-down"
+    "arrows"
   ]
 }

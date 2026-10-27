@@ -11,7 +11,8 @@
     "Representing antimicrobial treatment in medical interfaces"
   ],
   "tags": [
-    "$extends:germ"
+    "$extends:germ",
+    "$group:off"
   ],
   "categories": [
     "$extends:germ"

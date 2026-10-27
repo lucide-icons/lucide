@@ -9,21 +9,12 @@
   ],
   "tags": [
     "$extends:banknote",
+    "$group:check",
     "banknote",
-    "bill",
-    "finance",
     "document",
     "verification",
-    "tick",
-    "verified",
-    "accepted",
-    "done",
-    "complete",
     "found",
-    "paid",
-    "task",
-    "check",
-    "success"
+    "paid"
   ],
   "categories": [
     "$extends:banknote"

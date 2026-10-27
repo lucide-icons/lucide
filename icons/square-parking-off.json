@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:square-parking",
+    "$group:off",
     "no parking"
   ],
   "categories": [

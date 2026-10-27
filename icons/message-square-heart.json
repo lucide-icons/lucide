@@ -7,9 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:message-square",
+    "$group:heart",
     "positive",
-    "like",
-    "love",
     "interest",
     "valentine",
     "dating",

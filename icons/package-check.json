@@ -9,9 +9,6 @@
   "tags": [
     "$extends:package",
     "$group:check",
-    "confirm",
-    "todo",
-    "task",
     "delivered"
   ],
   "categories": [

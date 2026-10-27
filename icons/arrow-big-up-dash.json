@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-big-up",
+    "$group:direction-up",
     "caps lock",
     "capitals",
     "faster",

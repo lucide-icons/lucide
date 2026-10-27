@@ -7,8 +7,6 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:x",
-    "$group:x",
     "line",
     "top",
     "arrow",

@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:house",
-    "wifi",
+    "$extends:wifi",
     "connectivity"
   ],
   "categories": [

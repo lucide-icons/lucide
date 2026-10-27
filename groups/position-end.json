@@ -1,0 +1,8 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Placement: at the ending or trailing edge",
+  "tags": [
+    "ending",
+    "trailing"
+  ]
+}

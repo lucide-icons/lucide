@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:image",
+    "$group:direction-up",
     "upload",
     "import"
   ],

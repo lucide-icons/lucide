@@ -11,10 +11,7 @@
   "use-cases": [],
   "tags": [
     "$extends:book",
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark"
+    "$group:exclamation-mark"
   ],
   "categories": [
     "$extends:book"

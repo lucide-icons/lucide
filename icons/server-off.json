@@ -7,7 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:server"
+    "$extends:server",
+    "$group:off"
   ],
   "categories": [
     "$extends:server"

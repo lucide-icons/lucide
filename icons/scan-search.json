@@ -6,8 +6,8 @@
   "use-cases": [],
   "tags": [
     "$extends:scan",
+    "$group:search",
     "preview",
-    "zoom",
     "expand",
     "fullscreen",
     "gallery",

@@ -7,10 +7,10 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-down",
+    "$group:direction-down",
     "download",
     "expand",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
     "$extends:arrow-down",

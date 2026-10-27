@@ -10,15 +10,11 @@
   "use-cases": [],
   "tags": [
     "$extends:battery",
-    "plus",
+    "$group:plus",
     "economy",
     "health",
-    "add",
-    "new",
     "maximum",
-    "upgrade",
-    "extra",
-    "+"
+    "upgrade"
   ],
   "categories": [
     "devices"

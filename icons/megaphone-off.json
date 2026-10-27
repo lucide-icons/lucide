@@ -6,7 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:megaphone",
-    "disable",
+    "$group:off",
     "silent"
   ],
   "categories": [

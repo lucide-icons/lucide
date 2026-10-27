@@ -8,11 +8,10 @@
   "use-cases": [],
   "tags": [
     "$extends:monitor",
+    "$group:pause",
     "video",
     "movie",
     "film",
-    "pause",
-    "suspend",
     "hibernate",
     "boot"
   ],

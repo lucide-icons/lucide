@@ -9,11 +9,10 @@
   "use-cases": [],
   "tags": [
     "$extends:mouse-pointer-2",
+    "$group:off",
     "pointer",
     "mouse",
     "cursor",
-    "off",
-    "disable",
     "arrow",
     "navigation",
     "selection",

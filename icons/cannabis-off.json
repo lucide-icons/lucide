@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:cannabis"
+    "$extends:cannabis",
+    "$group:off"
   ],
   "categories": [
     "$extends:cannabis"

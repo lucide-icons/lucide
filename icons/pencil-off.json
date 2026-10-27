@@ -15,8 +15,7 @@
     "locked",
     "read-only",
     "unmodifiable",
-    "frozen",
-    "restricted"
+    "frozen"
   ],
   "categories": [
     "$extends:pencil"

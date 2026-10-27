@@ -9,11 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:off",
     "music",
     "audio",
     "sound",
-    "mute",
-    "off"
+    "mute"
   ],
   "categories": [
     "multimedia",

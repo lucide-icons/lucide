@@ -7,8 +7,6 @@
   "tags": [
     "$extends:ticket",
     "$group:x",
-    "cancelled",
-    "cancellation",
     "refunded",
     "used",
     "void",
@@ -20,9 +18,7 @@
     "barred",
     "forbidden",
     "prohibited",
-    "clear",
-    "error",
-    "x"
+    "error"
   ],
   "categories": [
     "transportation"

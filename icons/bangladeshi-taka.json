@@ -11,15 +11,9 @@
     "Indicating BDT amounts in invoices and payments"
   ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
+    "$group:currency",
     "bdt",
     "৳",
-    "currency symbol",
-    "cash",
-    "banknote",
-    "price",
     "remittance",
     "ecommerce"
   ],

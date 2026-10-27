@@ -9,11 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:shield",
-    "$group:user",
-    "shield",
-    "user",
-    "protected",
-    "guard"
+    "$group:user"
   ],
   "categories": [
     "account",

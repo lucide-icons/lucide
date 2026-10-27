@@ -8,8 +8,8 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
-    "code review",
-    "coding"
+    "$group:code",
+    "code review"
   ],
   "categories": [
     "$extends:message-circle",

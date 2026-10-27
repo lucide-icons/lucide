@@ -2,8 +2,12 @@
   "$schema": "../group.schema.json",
   "description": "Status: locked, private or secured",
   "tags": [
+    "lock",
     "padlock",
     "private",
+    "privacy",
+    "protection",
+    "password",
     "secure",
     "security",
     "safety",

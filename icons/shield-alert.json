@@ -51,8 +51,7 @@
     "hit",
     "expired",
     "disabled",
-    "inactive",
-    "!"
+    "inactive"
   ],
   "categories": [
     "account",

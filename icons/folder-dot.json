@@ -6,11 +6,10 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
+    "$group:dot",
     "root",
     "project",
     "pinned",
-    "active",
-    "current",
     "cogged",
     "gear",
     "mechanical",

@@ -7,10 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$group:key",
-    "key",
-    "private",
-    "public"
+    "$group:key"
   ],
   "categories": [
     "$extends:file",

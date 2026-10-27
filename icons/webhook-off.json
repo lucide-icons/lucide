@@ -6,7 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:webhook"
+    "$extends:webhook",
+    "$group:off"
   ],
   "categories": [
     "$extends:webhook"

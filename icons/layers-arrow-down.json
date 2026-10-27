@@ -12,6 +12,7 @@
   ],
   "tags": [
     "$extends:layers",
+    "$group:direction-down",
     "send to back",
     "send backward",
     "back",

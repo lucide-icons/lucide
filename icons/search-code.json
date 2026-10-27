@@ -7,6 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:search",
+    "$group:code",
     "grep",
     "chevrons",
     "<>"

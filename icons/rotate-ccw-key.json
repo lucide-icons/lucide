@@ -8,8 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:rotate-ccw",
-    "password",
-    "key",
+    "$group:key",
     "change"
   ],
   "categories": [

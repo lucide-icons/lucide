@@ -9,11 +9,8 @@
   "use-cases": [],
   "tags": [
     "$extends:message-square",
-    "moderate",
-    "check",
-    "done",
-    "todo",
-    "complete"
+    "$group:check",
+    "moderate"
   ],
   "categories": [
     "$extends:message-square",

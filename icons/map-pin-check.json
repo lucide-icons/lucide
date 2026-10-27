@@ -9,10 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:map-pin",
-    "done",
-    "tick",
-    "complete",
-    "task",
+    "$group:check",
     "added"
   ],
   "categories": [

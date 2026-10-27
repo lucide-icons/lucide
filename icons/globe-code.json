@@ -12,6 +12,7 @@
   ],
   "tags": [
     "$extends:globe",
+    "$group:code",
     "website",
     "internet",
     "globe",

@@ -9,9 +9,7 @@
     "$group:minus",
     "cancel",
     "unbook",
-    "subtract",
-    "decrease",
-    "-"
+    "decrease"
   ],
   "categories": [
     "transportation"

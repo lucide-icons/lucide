@@ -7,11 +7,6 @@
   "use-cases": [],
   "tags": [
     "$group:x",
-    "close",
-    "cross",
-    "ex",
-    "times",
-    "clear",
     "math",
     "multiply",
     "multiplication"

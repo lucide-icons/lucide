@@ -9,8 +9,7 @@
   "tags": [
     "$extends:file",
     "$group:question-mark",
-    "readme",
-    "question"
+    "readme"
   ],
   "categories": [
     "$extends:file"

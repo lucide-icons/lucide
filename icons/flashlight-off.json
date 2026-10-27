@@ -9,7 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:flashlight"
+    "$extends:flashlight",
+    "$group:off"
   ],
   "categories": [
     "$extends:flashlight"

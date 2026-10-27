@@ -1,0 +1,16 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Position: the last item in a sequence",
+  "tags": [
+    "navigation",
+    "final",
+    "ending",
+    "end",
+    "last page",
+    "latest",
+    "following",
+    "forward",
+    "forwards",
+    "subsequent"
+  ]
+}

@@ -8,10 +8,9 @@
   "use-cases": [],
   "tags": [
     "$extends:tv-minimal",
+    "$group:play",
     "movie",
     "ott",
-    "running",
-    "start",
     "film"
   ],
   "categories": [

@@ -2,11 +2,15 @@
   "$schema": "../group.schema.json",
   "description": "Status: access, credentials or passwords",
   "tags": [
+    "key",
     "password",
     "security",
+    "secure",
+    "keychain",
+    "key ring",
     "access",
     "credentials",
-    "unlock",
+    "unlocked",
     "permission",
     "authentication",
     "authorization",
@@ -16,7 +20,10 @@
     "API key",
     "encryption",
     "protection",
+    "protected",
     "privacy",
+    "private",
+    "public",
     "license",
     "ownership"
   ]

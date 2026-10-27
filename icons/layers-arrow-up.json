@@ -12,6 +12,7 @@
   ],
   "tags": [
     "$extends:layers",
+    "$group:direction-up",
     "bring to front",
     "bring forward",
     "front",

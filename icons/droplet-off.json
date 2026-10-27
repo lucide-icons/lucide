@@ -10,7 +10,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:droplet"
+    "$extends:droplet",
+    "$group:off"
   ],
   "categories": [
     "$extends:droplet"

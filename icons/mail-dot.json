@@ -13,14 +13,13 @@
   ],
   "tags": [
     "$extends:mail",
+    "$group:dot",
     "mail",
     "envelope",
     "communication",
     "post",
     "send",
-    "address",
-    "notification",
-    "dot"
+    "address"
   ],
   "categories": [
     "$extends:mail"

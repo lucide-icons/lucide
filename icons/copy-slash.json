@@ -8,15 +8,13 @@
   "tags": [
     "$extends:copy",
     "$group:off",
-    "cancel",
     "no",
     "stop",
     "error",
     "divide",
     "division",
     "split",
-    "or",
-    "/"
+    "or"
   ],
   "categories": [
     "$extends:copy",

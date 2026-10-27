@@ -7,8 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:exclamation-mark",
-    "alert"
+    "$group:exclamation-mark"
   ],
   "categories": [
     "$extends:octagon",

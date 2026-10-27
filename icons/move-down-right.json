@@ -5,9 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:move-down"
+    "$extends:move",
+    "$group:direction-down-right"
   ],
   "categories": [
-    "$extends:move-down"
+    "arrows"
   ]
 }

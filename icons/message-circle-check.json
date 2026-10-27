@@ -6,11 +6,8 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
-    "moderate",
-    "check",
-    "done",
-    "todo",
-    "complete"
+    "$group:check",
+    "moderate"
   ],
   "categories": [
     "$extends:message-circle",

@@ -6,10 +6,8 @@
   "use-cases": [],
   "tags": [
     "$extends:search",
-    "stop",
-    "clear",
-    "cancel",
-    "abort"
+    "$group:x",
+    "stop"
   ],
   "categories": [
     "$extends:search"

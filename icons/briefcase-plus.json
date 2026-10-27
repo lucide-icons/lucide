@@ -17,14 +17,12 @@
   "tags": [
     "$extends:briefcase",
     "$group:plus",
-    "increase",
     "briefcase",
     "portfolio",
     "business",
     "career",
     "employment",
-    "professional",
-    "plus"
+    "professional"
   ],
   "categories": [
     "$extends:briefcase",

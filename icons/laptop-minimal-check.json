@@ -7,12 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:laptop-minimal",
-    "success",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$group:check"
   ],
   "categories": [
     "$extends:laptop-minimal",

@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:cigarette",
+    "$group:off",
     "no-smoking"
   ],
   "categories": [

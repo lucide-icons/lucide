@@ -8,11 +8,8 @@
   "tags": [
     "$extends:copy",
     "$group:x",
-    "close",
-    "clear",
     "multiply",
-    "multiplication",
-    "times"
+    "multiplication"
   ],
   "categories": [
     "notifications",

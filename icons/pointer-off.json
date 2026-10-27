@@ -6,7 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:pointer"
+    "$extends:pointer",
+    "$group:off"
   ],
   "categories": [
     "$extends:pointer"

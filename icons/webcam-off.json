@@ -11,7 +11,8 @@
     "showing a camera feed is unavailable or blocked for privacy"
   ],
   "tags": [
-    "$extends:webcam"
+    "$extends:webcam",
+    "$group:off"
   ],
   "categories": [
     "$extends:webcam"

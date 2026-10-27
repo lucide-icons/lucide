@@ -9,8 +9,7 @@
   "tags": [
     "$extends:file",
     "$group:clock",
-    "log",
-    "clock"
+    "log"
   ],
   "categories": [
     "$extends:file",

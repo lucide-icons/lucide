@@ -7,11 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:user-round",
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "$group:search"
   ],
   "categories": [
     "$extends:user-round",

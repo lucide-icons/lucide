@@ -8,22 +8,11 @@
     "reordering a list in descending order"
   ],
   "tags": [
+    "$group:sort",
     "list",
-    "order",
-    "arrangement",
     "organization",
-    "sequence",
-    "ranking",
     "categories",
-    "presentation",
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "presentation"
   ],
   "categories": [
     "$extends:list",

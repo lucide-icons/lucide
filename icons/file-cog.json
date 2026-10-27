@@ -10,9 +10,7 @@
   "tags": [
     "$extends:file",
     "$group:cog",
-    "executable",
-    "cog",
-    "edit"
+    "executable"
   ],
   "categories": [
     "$extends:file"

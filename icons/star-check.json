@@ -19,8 +19,7 @@
   ],
   "tags": [
     "$extends:star",
-    "check",
-    "star"
+    "$group:check"
   ],
   "categories": [
     "$extends:star"

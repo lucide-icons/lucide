@@ -8,9 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:user",
-    "$group:cog",
-    "edit",
-    "cog"
+    "$group:cog"
   ],
   "categories": [
     "$extends:user"

@@ -6,16 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
+    "$group:search",
     "data",
     "copy",
     "txt",
     "pdf",
-    "document",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "document"
   ],
   "categories": [
     "text"

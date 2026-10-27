@@ -8,13 +8,14 @@
   "tags": [
     "$extends:arrow-down",
     "$extends:download",
+    "$group:direction-down",
+    "$group:navigation-last",
     "behind",
     "download",
     "git",
     "version control",
     "collapse",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
     "$extends:arrow-down",

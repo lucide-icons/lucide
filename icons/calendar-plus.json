@@ -9,7 +9,6 @@
   "tags": [
     "$extends:calendar",
     "$group:plus",
-    "day",
     "subscribe"
   ],
   "categories": [

@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:refresh-cw",
-    "cancel",
+    "$group:off",
     "no",
     "stop",
     "error",

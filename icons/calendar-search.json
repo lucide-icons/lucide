@@ -9,9 +9,7 @@
   "tags": [
     "$extends:calendar",
     "$group:search",
-    "day",
-    "events",
-    "search"
+    "events"
   ],
   "categories": [
     "$extends:calendar"

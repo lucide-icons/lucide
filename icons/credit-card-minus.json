@@ -26,9 +26,7 @@
     "transaction",
     "billing",
     "account",
-    "checkout",
-    "subtract",
-    "minus"
+    "checkout"
   ],
   "categories": [
     "$extends:credit-card",

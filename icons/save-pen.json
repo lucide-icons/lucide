@@ -13,8 +13,8 @@
   ],
   "tags": [
     "$extends:save",
-    "directory",
-    "rename"
+    "$group:pen",
+    "directory"
   ],
   "categories": [
     "$extends:save"

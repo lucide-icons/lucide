@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "add",
-    "new",
-    "increase",
-    "increment",
+    "$group:plus",
     "positive",
     "calculate",
     "crosshair",
@@ -20,13 +17,11 @@
     "reticule",
     "maximum",
     "upgrade",
-    "extra",
     "operator",
     "join",
     "concatenate",
     "code",
-    "coding",
-    "+"
+    "coding"
   ],
   "categories": [
     "math",

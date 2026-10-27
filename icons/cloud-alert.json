@@ -12,10 +12,8 @@
   "tags": [
     "$extends:cloud",
     "$group:exclamation-mark",
-    "alert",
     "sync",
-    "network",
-    "exclamation"
+    "network"
   ],
   "categories": [
     "development"

@@ -2,8 +2,23 @@
   "$schema": "../group.schema.json",
   "description": "Action: removing, deleting or cancelling something",
   "tags": [
+    "x",
     "remove",
     "delete",
-    "cancel"
+    "cancel",
+    "clear",
+    "close",
+    "discard",
+    "dismiss",
+    "erase",
+    "abort",
+    "reject",
+    "canceled",
+    "cancelled",
+    "cancellation",
+    "cross",
+    "times",
+    "ex",
+    "×"
   ]
 }

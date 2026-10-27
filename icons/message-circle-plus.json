@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
-    "add"
+    "$group:plus"
   ],
   "categories": [
     "$extends:message-circle"

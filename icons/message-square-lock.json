@@ -10,8 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:message-square",
-    "secure",
-    "encrypted"
+    "$group:lock"
   ],
   "categories": [
     "$extends:message-square"

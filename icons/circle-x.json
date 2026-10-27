@@ -7,10 +7,6 @@
   "use-cases": [],
   "tags": [
     "$group:x",
-    "close",
-    "cross",
-    "times",
-    "clear",
     "error",
     "incorrect",
     "wrong",

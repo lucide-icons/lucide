@@ -13,6 +13,7 @@
   ],
   "tags": [
     "$extends:credit-card",
+    "$group:check",
     "debit",
     "banking",
     "finance",
@@ -22,13 +23,7 @@
     "billing",
     "account",
     "cardholder",
-    "verified",
-    "approved",
-    "authorized",
-    "valid",
-    "success",
-    "complete",
-    "check"
+    "authorized"
   ],
   "categories": [
     "$extends:credit-card",

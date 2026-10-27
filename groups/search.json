@@ -2,6 +2,12 @@
   "$schema": "../group.schema.json",
   "description": "Action: searching or finding something",
   "tags": [
+    "search",
+    "magnifier",
+    "scan",
+    "scanning",
+    "browsing",
+    "finding",
     "find",
     "lookup",
     "query",

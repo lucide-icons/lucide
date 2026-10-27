@@ -6,8 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:git-branch",
-    "$group:minus",
-    "-"
+    "$group:minus"
   ],
   "categories": [
     "$extends:git-branch"

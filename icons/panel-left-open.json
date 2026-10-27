@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:panel-left",
+    "$group:direction-left",
     "show",
     "reveal",
     "chevron",

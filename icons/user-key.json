@@ -13,9 +13,7 @@
     "$group:key",
     "login",
     "roles",
-    "permissions",
-    "private",
-    "public"
+    "permissions"
   ],
   "categories": [
     "$extends:user"

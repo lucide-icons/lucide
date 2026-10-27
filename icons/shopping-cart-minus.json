@@ -19,8 +19,7 @@
     "order",
     "retail",
     "decrease",
-    "quantity",
-    "subtract"
+    "quantity"
   ],
   "categories": [
     "$extends:shopping-cart"

@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:pilcrow",
-    "direction"
+    "$group:direction-left"
   ],
   "categories": [
     "$extends:pilcrow"

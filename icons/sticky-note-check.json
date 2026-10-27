@@ -9,11 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:sticky-note",
-    "done",
-    "complete",
-    "success",
-    "check",
-    "verified"
+    "$group:check"
   ],
   "categories": [
     "$extends:sticky-note"

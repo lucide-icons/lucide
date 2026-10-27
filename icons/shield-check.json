@@ -10,7 +10,6 @@
     "$extends:shield",
     "$group:check",
     "secured",
-    "protected",
     "guarded",
     "defended",
     "blocked",
@@ -30,10 +29,6 @@
     "cleaned",
     "disinfected",
     "uninfected",
-    "task",
-    "completed",
-    "todo",
-    "ticked",
     "checked"
   ],
   "categories": [

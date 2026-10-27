@@ -8,7 +8,6 @@
   "tags": [
     "$extends:message-square",
     "$group:dot",
-    "unread",
     "unresolved"
   ],
   "categories": [

@@ -11,9 +11,7 @@
   "tags": [
     "$extends:calendar",
     "$group:cog",
-    "day",
-    "events",
-    "cog"
+    "events"
   ],
   "categories": [
     "$extends:calendar"

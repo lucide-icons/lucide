@@ -11,9 +11,7 @@
   "use-cases": [],
   "tags": [
     "$extends:user",
-    "$group:search",
-    "scan",
-    "magnifier"
+    "$group:search"
   ],
   "categories": [
     "$extends:user",

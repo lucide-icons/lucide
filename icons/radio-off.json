@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:radio"
+    "$extends:radio",
+    "$group:off"
   ],
   "categories": [
     "$extends:radio"

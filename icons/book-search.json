@@ -7,10 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:book",
-    "$group:search",
-    "browsing",
-    "finding",
-    "scanning"
+    "$group:search"
   ],
   "categories": [
     "$extends:book"

@@ -12,7 +12,6 @@
   "tags": [
     "$extends:user",
     "$group:star",
-    "like",
     "admin"
   ],
   "categories": [

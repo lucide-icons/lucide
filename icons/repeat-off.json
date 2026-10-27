@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:repeat",
+    "$group:off",
     "recurring",
     "again"
   ],

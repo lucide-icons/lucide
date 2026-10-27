@@ -10,9 +10,7 @@
     "$extends:monitor",
     "$group:cog",
     "executable",
-    "edit",
     "system",
-    "control panel",
     "network",
     "computing"
   ],

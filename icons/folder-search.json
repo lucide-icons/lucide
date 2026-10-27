@@ -8,7 +8,6 @@
   "tags": [
     "$extends:folder",
     "$group:search",
-    "search",
     "lost",
     "browser"
   ],

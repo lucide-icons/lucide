@@ -7,7 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:copy",
-    "done"
+    "$group:check"
   ],
   "categories": [
     "$extends:copy",

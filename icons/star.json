@@ -6,12 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "bookmark",
-    "favorite",
-    "favourite",
-    "like",
-    "review",
-    "rating"
+    "$group:star"
   ],
   "categories": [
     "account",

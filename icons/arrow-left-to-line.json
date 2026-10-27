@@ -7,9 +7,10 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-left",
+    "$group:direction-left",
+    "$group:navigation-first",
     "collapse",
     "fold",
-    "horizontal",
     "|<-"
   ],
   "categories": [

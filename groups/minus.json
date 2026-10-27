@@ -2,7 +2,14 @@
   "$schema": "../group.schema.json",
   "description": "Action: removing or deleting something",
   "tags": [
+    "minus",
     "remove",
-    "delete"
+    "delete",
+    "erase",
+    "subtract",
+    "reduce",
+    "clear",
+    "exclude",
+    "-"
   ]
 }

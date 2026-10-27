@@ -8,9 +8,7 @@
     "$extends:user-round",
     "$group:check",
     "followed",
-    "subscribed",
-    "todo",
-    "task"
+    "subscribed"
   ],
   "categories": [
     "$extends:user-round"

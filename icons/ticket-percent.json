@@ -6,12 +6,9 @@
   "use-cases": [],
   "tags": [
     "$extends:ticket",
-    "discount",
-    "reduced",
-    "offer",
+    "$group:percent",
     "book",
-    "purchase",
-    "%"
+    "purchase"
   ],
   "categories": [
     "transportation",

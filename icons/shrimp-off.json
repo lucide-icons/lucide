@@ -10,6 +10,7 @@
   ],
   "tags": [
     "$extends:shrimp",
+    "$group:off",
     "allergy",
     "intolerance",
     "diet"

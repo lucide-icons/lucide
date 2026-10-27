@@ -8,9 +8,7 @@
   "tags": [
     "$extends:copy",
     "$group:minus",
-    "collapse",
-    "subtract",
-    "-"
+    "collapse"
   ],
   "categories": [
     "$extends:copy",

@@ -39,15 +39,13 @@
     "audited",
     "unverified",
     "uncertified",
-    "cancel",
     "error",
     "attacked",
     "damaged",
     "injured",
     "hit",
     "expired",
-    "eliminated",
-    "/"
+    "eliminated"
   ],
   "categories": [
     "account",

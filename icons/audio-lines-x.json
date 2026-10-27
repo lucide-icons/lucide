@@ -17,11 +17,10 @@
   ],
   "tags": [
     "$extends:audio-lines",
+    "$group:x",
     "mute",
     "silence",
     "disabled",
-    "cancel",
-    "remove",
     "unavailable",
     "equalizer",
     "equaliser",

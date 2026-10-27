@@ -9,8 +9,7 @@
   "tags": [
     "$extends:message-circle",
     "$group:x",
-    "clear",
-    "close",
+    "$group:off",
     "silence",
     "mute",
     "moderate"
