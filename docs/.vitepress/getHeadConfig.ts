@@ -17,6 +17,13 @@ const getHeadConfig = ({
     },
   ],
   [
+    'link',
+    {
+      rel: 'preconnect',
+      href: 'https://insights.lucide.dev',
+    },
+  ],
+  [
     'script',
     {
       src: 'https://analytics.lucide.dev/js/script.js',

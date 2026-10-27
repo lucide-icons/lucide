@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Digital Audio Workstations (DAWs) or music production software to represent MIDI track routing, virtual instrument tracks, or guitar controller settings.",
+    "Music streaming apps to represent rock playlists, genre categories, or live radio stations.",
+    "Event ticketing websites to highlight upcoming rock concerts and music festivals.",
+    "Online music store platforms to categorize instruments, gear, or digital audio tracks.",
+    "Music education blogs to tag articles, video tutorials, or guitar lesson courses."
+  ],
+  "tags": [
+    "acoustic",
+    "instrument",
+    "strings",
+    "riff",
+    "rock",
+    "band",
+    "country",
+    "concert",
+    "performance",
+    "play",
+    "lead",
+    "loud",
+    "music",
+    "audio",
+    "sound",
+    "noise"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
