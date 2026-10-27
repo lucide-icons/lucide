@@ -17,7 +17,8 @@
     "unschedule"
   ],
   "categories": [
-    "$extends:alarm-clock"
+    "$extends:alarm-clock",
+    "notifications"
   ],
   "aliases": [
     {

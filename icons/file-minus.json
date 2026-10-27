@@ -12,7 +12,9 @@
   "tags": [
     "$extends:file",
     "$group:minus",
-    "erase"
+    "erase",
+    "discard",
+    "exclude"
   ],
   "categories": [
     "$extends:file"
