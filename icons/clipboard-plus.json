@@ -9,9 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:clipboard",
-    "add",
-    "create",
-    "new",
+    "$group:plus",
     "document",
     "medical",
     "report",

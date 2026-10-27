@@ -14,9 +14,7 @@
   ],
   "tags": [
     "$extends:tag",
-    "x",
-    "delete",
-    "remove"
+    "$group:x"
   ],
   "categories": [
     "$extends:tag"

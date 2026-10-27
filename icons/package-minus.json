@@ -7,8 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove"
+    "$extends:package",
+    "$group:minus"
   ],
   "categories": [
     "development"

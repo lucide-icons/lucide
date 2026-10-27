@@ -7,6 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:x",
     "line",
     "top",
     "arrow",
@@ -16,10 +17,7 @@
     "direction",
     "vector",
     "symbol",
-    "cancel",
     "close",
-    "delete",
-    "remove",
     "times",
     "clear",
     "math",

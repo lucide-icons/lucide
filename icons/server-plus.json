@@ -8,9 +8,7 @@
   ],
   "tags": [
     "$extends:server",
-    "add",
-    "create",
-    "new",
+    "$group:plus",
     "computing"
   ],
   "categories": [

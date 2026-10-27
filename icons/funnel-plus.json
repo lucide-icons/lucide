@@ -10,9 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:funnel",
-    "add",
-    "create",
-    "new"
+    "$group:plus"
   ],
   "categories": [
     "$extends:funnel"

@@ -16,9 +16,7 @@
   ],
   "tags": [
     "$extends:briefcase",
-    "new",
-    "add",
-    "create",
+    "$group:plus",
     "increase",
     "briefcase",
     "portfolio",

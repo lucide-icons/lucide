@@ -10,8 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:funnel",
-    "remove",
-    "delete"
+    "$group:x"
   ],
   "categories": [
     "$extends:funnel"

@@ -11,15 +11,14 @@
     "adding a database connection in a client or admin panel"
   ],
   "tags": [
+    "$extends:database",
+    "$group:plus",
     "storage",
     "memory",
     "bytes",
     "server",
     "plus",
-    "add",
-    "create",
     "insert",
-    "new",
     "expand"
   ],
   "categories": [

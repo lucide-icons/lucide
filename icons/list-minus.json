@@ -6,11 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
     "playlist",
-    "remove",
     "song",
     "subtract",
-    "delete",
     "unqueue"
   ],
   "categories": [

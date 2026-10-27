@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:x",
     "entry",
     "pass",
     "voucher",
@@ -24,8 +25,6 @@
     "barred",
     "forbidden",
     "prohibited",
-    "delete",
-    "remove",
     "clear",
     "error",
     "x"
