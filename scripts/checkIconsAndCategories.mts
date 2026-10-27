@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import path from 'path';
 import {
   readSvgDirectory,
@@ -153,6 +154,33 @@ Object.keys(categories).forEach((categoryName) => {
     error = true;
   }
 });
+
+// The schema lists every group as an enum so editors can autocomplete the
+// markers; it has to match the files in `groups/`.
+const iconSchema = JSON.parse(
+  await fs.readFile(path.resolve(currentDir, '../icon.schema.json'), 'utf-8'),
+);
+const schemaGroups = new Set<string>(
+  (iconSchema.$defs.groupMarker.enum as string[]).map((marker) =>
+    marker.slice(GROUP_PREFIX.length),
+  ),
+);
+
+Object.keys(groups)
+  .filter((groupName) => !schemaGroups.has(groupName))
+  .forEach((groupName) => {
+    console.error(`Group '${groupName}' is missing from $defs.groupMarker in icon.schema.json.`);
+    error = true;
+  });
+
+[...schemaGroups]
+  .filter((groupName) => typeof groups[groupName] === 'undefined')
+  .forEach((groupName) => {
+    console.error(
+      `'${GROUP_PREFIX}${groupName}' in icon.schema.json refers to the non-existing group 'groups/${groupName}.json'.`,
+    );
+    error = true;
+  });
 
 Object.keys(groups)
   .filter((groupName) => !usedGroups.has(groupName))

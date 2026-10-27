@@ -23,6 +23,7 @@ The file name without `.json` is the group name: the variant suffix it belongs t
 - **Keep groups small and generic.** Only tags that hold for *every* icon that uses the group. If a tag is true for just some of them, it belongs on those icons as a literal.
 - **Not every icon with the suffix uses the group.** `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off`, and `-x` means "delete" on `file-x` but "mute" on `volume-x`. Only icons where the variant carries the group's meaning use the marker; the others keep literal tags.
 - **Do not add a group before it is used.** `pnpm checkIcons` warns about groups no icon references.
+- **Register the group in the icon schema.** Add `"$group:<group-name>"` to `$defs.groupMarker` in `icon.schema.json`, so editors can autocomplete it; `pnpm checkIcons` fails when the list and `groups/` differ.
 - **Groups do not nest.** A group's `tags` are literal tags only — no `$extends:` or `$group:` markers.
 - Tags are lowercase, and follow the same conventions as icon tags.
 
