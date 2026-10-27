@@ -15,9 +15,7 @@
   ],
   "tags": [
     "$extends:building-complex",
-    "new",
-    "add",
-    "create",
+    "$group:plus",
     "increase",
     "office",
     "headquarters",

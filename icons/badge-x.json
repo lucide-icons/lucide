@@ -6,11 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:badge",
+    "$group:x",
     "verified",
     "unverified",
-    "lost",
-    "delete",
-    "remove"
+    "lost"
   ],
   "categories": [
     "social"

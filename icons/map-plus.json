@@ -9,9 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:map",
-    "new",
-    "add",
-    "create"
+    "$group:plus"
   ],
   "categories": [
     "navigation"

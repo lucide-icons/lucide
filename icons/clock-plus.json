@@ -8,9 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:clock",
-    "add",
-    "create",
-    "new"
+    "$group:plus"
   ],
   "categories": [
     "$extends:clock"

@@ -8,9 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:clipboard",
+    "$group:minus",
     "copy",
-    "delete",
-    "remove",
     "erase",
     "document",
     "medical",

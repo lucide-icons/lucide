@@ -9,10 +9,8 @@
   "use-cases": [],
   "tags": [
     "$extends:sticky-note",
-    "close",
-    "cancel",
-    "delete",
-    "remove"
+    "$group:x",
+    "close"
   ],
   "categories": [
     "$extends:sticky-note"

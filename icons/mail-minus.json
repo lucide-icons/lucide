@@ -6,11 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
     "email",
     "message",
-    "letter",
-    "remove",
-    "delete"
+    "letter"
   ],
   "categories": [
     "mail"

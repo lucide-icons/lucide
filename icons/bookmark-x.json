@@ -6,14 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:bookmark",
+    "$group:x",
     "read",
     "clip",
     "marker",
     "tag",
-    "cancel",
     "close",
-    "delete",
-    "remove",
     "clear"
   ],
   "categories": [

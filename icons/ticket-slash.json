@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
+    "$group:off",
     "entry",
     "pass",
     "voucher",
@@ -28,8 +30,6 @@
     "cancelled",
     "cancellation",
     "refunded",
-    "delete",
-    "remove",
     "clear",
     "error"
   ],
