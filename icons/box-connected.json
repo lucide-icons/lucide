@@ -8,7 +8,10 @@
     "Linking modules together",
     "Representing a supply chain connection",
     "Representing a network of nodes or computers",
-    "Representing a chain of blocks"
+    "Showing dependencies between software packages or modules",
+    "Representing connections between stages in supply chain diagrams",
+    "Representing connections between computers in network diagrams",
+    "Representing linked nodes in blockchain explorers"
   ],
   "tags": [
     "cubes",
@@ -20,7 +23,11 @@
     "blockchain",
     "network",
     "nodes",
-    "supply chain"
+    "supply chain",
+    "integration",
+    "component",
+    "logistics",
+    "distributed"
   ],
   "categories": [
     "development"
