@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "roygommer",
+    "jamiemlaw"
+  ],
+  "use-cases": [
+    "Selecting balloon-based aircraft in aviation weather dashboards",
+    "Displaying weather conditions for lighter-than-air aircraft",
+    "Representing recreational sightseeing flights in travel interfaces"
+  ],
+  "tags": [
+    "aircraft",
+    "flight",
+    "adventure",
+    "travel",
+    "sky",
+    "celebration",
+    "festive"
+  ],
+  "categories": [
+    "sports"
+  ]
+}

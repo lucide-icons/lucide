@@ -86,7 +86,7 @@
     "rollup": "^4.63.1",
     "solid-js": "next",
     "typescript": "^6.0.3",
-    "vite": "^7.3.6"
+    "vite": "^8.3.3"
   },
   "peerDependencies": {
     "solid-js": "^2.0.0-rc.0"
