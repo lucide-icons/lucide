@@ -17,8 +17,7 @@
     "non dairy",
     "allergy",
     "intolerance",
-    "vegan",
-    "unavailable"
+    "vegan"
   ],
   "categories": [
     "$extends:carton"

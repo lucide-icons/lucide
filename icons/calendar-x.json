@@ -9,7 +9,6 @@
     "$extends:calendar",
     "$group:x",
     "day",
-    "remove",
     "busy"
   ],
   "categories": [

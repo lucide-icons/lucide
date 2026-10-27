@@ -12,10 +12,7 @@
     "delivered",
     "success",
     "read",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

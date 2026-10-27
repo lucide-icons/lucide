@@ -21,7 +21,6 @@
     "scanned",
     "found",
     "audited",
-    "verified",
     "certification",
     "certified",
     "tested",
@@ -34,7 +33,6 @@
     "task",
     "completed",
     "todo",
-    "done",
     "ticked",
     "checked"
   ],

@@ -13,11 +13,9 @@
   "tags": [
     "$extends:siren",
     "$group:off",
-    "disabled",
     "mute",
     "silent",
-    "silence",
-    "inactive"
+    "silence"
   ],
   "categories": [
     "medical"

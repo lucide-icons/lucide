@@ -11,10 +11,8 @@
     "$extends:globe",
     "$group:lock",
     "vpn",
-    "private",
     "privacy",
     "network",
-    "security",
     "encryption",
     "protection",
     "connection"

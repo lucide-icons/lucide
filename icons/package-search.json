@@ -9,9 +9,7 @@
   "tags": [
     "$extends:package",
     "$group:search",
-    "find",
-    "product process",
-    "lens"
+    "product process"
   ],
   "categories": [
     "$extends:package"

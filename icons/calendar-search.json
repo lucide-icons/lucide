@@ -11,8 +11,7 @@
     "$group:search",
     "day",
     "events",
-    "search",
-    "lens"
+    "search"
   ],
   "categories": [
     "$extends:calendar"

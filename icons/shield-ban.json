@@ -19,7 +19,6 @@
     "defenseless",
     "defenceless",
     "undefended",
-    "blocked",
     "stopped",
     "intercepted",
     "interception",
@@ -48,8 +47,6 @@
     "hit",
     "expired",
     "eliminated",
-    "disabled",
-    "inactive",
     "/"
   ],
   "categories": [

@@ -10,11 +10,7 @@
     "$extends:package",
     "$group:check",
     "confirm",
-    "verified",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task",
     "delivered"
   ],

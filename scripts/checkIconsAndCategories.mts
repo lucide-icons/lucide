@@ -169,7 +169,7 @@ const schemaGroups = new Set<string>(
 Object.keys(groups)
   .filter((groupName) => !schemaGroups.has(groupName))
   .forEach((groupName) => {
-    console.error(`Group '${groupName}' is missing from $defs.groupMarker in icon.schema.json.`);
+    console.error(`Group '${groupName}' is missing in icon.schema.json.`);
     error = true;
   });
 

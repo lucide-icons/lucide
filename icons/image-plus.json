@@ -9,9 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:image",
-    "$group:plus",
-    "add",
-    "create"
+    "$group:plus"
   ],
   "categories": [
     "photography",

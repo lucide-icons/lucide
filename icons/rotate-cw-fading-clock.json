@@ -12,13 +12,9 @@
     "$group:clock",
     "clock",
     "waiting",
-    "schedule",
     "hourglass",
     "loading",
-    "pause",
-    "pending",
-    "time",
-    "watch"
+    "pause"
   ],
   "categories": [
     "time"
