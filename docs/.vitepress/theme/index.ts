@@ -1,4 +1,4 @@
-import { h, nextTick } from 'vue';
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import './style.css';
 import 'virtual:group-icons.css';
@@ -12,7 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import { op, resetScrollDepth, track, trackScrollDepth } from './utils/openpanel';
+import { setupTracking } from './utils/openpanel';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -33,37 +33,7 @@ const theme: Partial<Theme> = {
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
 
-    // Track before the route changes, VitePress resets the scroll position for the new page.
-    router.onBeforeRouteChange = () => {
-      if (!import.meta.env.SSR) trackScrollDepth();
-    };
-
-    router.onAfterRouteChange = () => {
-      resetScrollDepth();
-      // Wait for VitePress to update the document title before tracking the page view.
-      return nextTick(() => op?.screenView());
-    };
-
-    if (!import.meta.env.SSR) {
-      document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'hidden') {
-          trackScrollDepth();
-        } else {
-          resetScrollDepth();
-        }
-      });
-      window.addEventListener('pagehide', trackScrollDepth);
-      window.addEventListener('beforeunload', trackScrollDepth);
-
-      // The hero actions are rendered by VitePress from the home page frontmatter,
-      // so clicks on them are picked up with a delegated listener.
-      document.addEventListener('click', (event) => {
-        const link = (event.target as Element | null)?.closest?.('.VPHero .actions a');
-        if (link) {
-          track('home_hero_click', { text: link.textContent?.trim() });
-        }
-      });
-    }
+    setupTracking(router);
   },
 };
 
