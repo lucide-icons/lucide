@@ -1,0 +1,55 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube"
+  ],
+  "use-cases": [
+    "Indicating a segregated IoT network in router firmware",
+    "Indicating an alarm armed in home mode",
+    "Indicating firewall protection for a home network",
+    "Showing home insurance coverage for a property",
+    "Representing secure smart-device groups in smart-home hubs",
+    "Showing monitored alarm enrollment on a dashboard"
+  ],
+  "tags": [
+    "cybersecurity",
+    "secure",
+    "safety",
+    "protection",
+    "guardian",
+    "armored",
+    "armoured",
+    "defense",
+    "defence",
+    "defender",
+    "block",
+    "threat",
+    "prevention",
+    "antivirus",
+    "vigilance",
+    "vigilant",
+    "detection",
+    "scan",
+    "strength",
+    "strong",
+    "tough",
+    "invincible",
+    "invincibility",
+    "invulnerable",
+    "undamaged",
+    "audit",
+    "admin",
+    "property",
+    "household",
+    "connectivity",
+    "building",
+    "residence"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "home",
+    "connectivity"
+  ]
+}

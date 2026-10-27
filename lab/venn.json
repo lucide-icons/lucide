@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "venn diagram",
+    "overlap",
+    "compare",
+    "common",
+    "blend mode",
+    "opacity",
+    "transparency"
+  ],
+  "categories": [
+    "design",
+    "charts"
+  ]
+}

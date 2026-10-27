@@ -9,7 +9,7 @@ const props = defineProps<{
   name: string;
   popoverPosition?: 'top' | 'bottom';
 }>();
-const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext();
+const { size, color, strokeWidth, nonScalingStroke } = useIconStyleContext();
 const { animate, confetti } = useConfetti();
 const componentName = computed(() => {
   return (toPascalCase(props.name) as string).replace(/\s/g, '');
@@ -30,8 +30,8 @@ function copyJSX() {
     attrs.push(`strokeWidth={${strokeWidth.value}}`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`);
+  if (nonScalingStroke.value) {
+    attrs.push(`nonScalingStroke`);
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
@@ -60,8 +60,8 @@ function copyVue() {
     attrs.push(`:stroke-width="${strokeWidth.value}"`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`);
+  if (nonScalingStroke.value) {
+    attrs.push(`nonScalingStroke`);
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
@@ -86,8 +86,8 @@ function copyAngular() {
     attrs.push(`[strokeWidth]="${strokeWidth.value}"`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`[absoluteStrokeWidth]="true"`);
+  if (nonScalingStroke.value) {
+    attrs.push(`[nonScalingStroke]="true"`);
   }
 
   const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`;

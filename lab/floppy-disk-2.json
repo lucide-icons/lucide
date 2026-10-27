@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "format",
+    "data",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "label"
+  ],
+  "categories": [
+    "files",
+    "devices"
+  ]
+}

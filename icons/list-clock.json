@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw",
+    "kemie"
+  ],
+  "use-cases": [
+    "Showing the edit or revision history of a list item",
+    "Indicating recently viewed list entries",
+    "Displaying a list of recently changed tasks",
+    "Representing an activity or audit log for list-based content",
+    "Marking last-updated or timestamped list rows"
+  ],
+  "tags": [
+    "history",
+    "log",
+    "clock",
+    "time",
+    "recent",
+    "updated",
+    "revision",
+    "activity",
+    "timestamp",
+    "audit",
+    "list"
+  ],
+  "categories": [
+    "text",
+    "time",
+    "notifications"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ryck",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Navigating to the next day, week or month in calendar views",
+    "Rescheduling or postponing an event to a later date",
+    "Viewing upcoming events in a schedule",
+    "Moving forward through dates in date pickers"
+  ],
+  "tags": [
+    "date",
+    "day",
+    "month",
+    "year",
+    "event",
+    "arrow",
+    "direction",
+    "navigation",
+    "next",
+    "forward",
+    "future",
+    "upcoming",
+    "later",
+    "reschedule",
+    "postpone",
+    "defer",
+    "schedule",
+    "timeline",
+    "appointment"
+  ],
+  "categories": [
+    "time",
+    "arrows",
+    "navigation"
+  ]
+}

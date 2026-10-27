@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hkayrad"
+  ],
+  "use-cases": [
+    "Displaying prices or amounts in Kazakh tenge in financial apps",
+    "Representing Kazakh tenge in currency conversion tools or financial reports"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "kazakhstan",
+    "currency-symbol",
+    "exchange",
+    "cash"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

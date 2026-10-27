@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "Setting auto layout direction to vertical in design tools",
+    "Selecting flex-direction: column in developer tools or style panels",
+    "Stacking content blocks from top to bottom",
+    "Switching to column view in file managers or galleries",
+    "Indicating vertical stacking mode in UI editors or prototyping tools",
+    "Choosing vertical orientation in responsive layout controls"
+  ],
+  "tags": [
+    "layout",
+    "direction",
+    "flex",
+    "flexbox",
+    "flex-direction",
+    "column",
+    "auto layout",
+    "vertical",
+    "arrange",
+    "order",
+    "flow",
+    "stack"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
