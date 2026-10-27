@@ -11,9 +11,8 @@
   "use-cases": [],
   "tags": [
     "$extends:layers",
-    "layers",
-    "remove",
-    "delete"
+    "$group:minus",
+    "layers"
   ],
   "categories": [
     "$extends:layers"

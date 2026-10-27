@@ -8,11 +8,9 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
+    "$group:x",
     "clear",
     "close",
-    "delete",
-    "remove",
-    "cancel",
     "silence",
     "mute",
     "moderate"

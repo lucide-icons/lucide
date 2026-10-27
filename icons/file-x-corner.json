@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:x",
     "lost",
-    "delete",
-    "remove",
     "document"
   ],
   "categories": [

@@ -7,11 +7,9 @@
   "use-cases": [],
   "tags": [
     "$extends:message-square",
+    "$group:x",
     "clear",
     "close",
-    "delete",
-    "remove",
-    "cancel",
     "silence",
     "mute",
     "moderate"

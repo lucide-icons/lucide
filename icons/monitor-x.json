@@ -8,14 +8,13 @@
   "use-cases": [],
   "tags": [
     "$extends:monitor",
+    "$group:x",
     "close",
     "error",
     "failed",
     "disconnected",
     "stop",
-    "suspend",
-    "remove",
-    "delete"
+    "suspend"
   ],
   "categories": [
     "$extends:monitor"

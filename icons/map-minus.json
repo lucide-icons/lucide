@@ -10,9 +10,8 @@
   "use-cases": [],
   "tags": [
     "$extends:map",
+    "$group:minus",
     "drop",
-    "delete",
-    "remove",
     "erase"
   ],
   "categories": [

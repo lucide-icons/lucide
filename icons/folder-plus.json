@@ -9,9 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "add",
-    "create",
-    "new"
+    "$group:plus"
   ],
   "categories": [
     "$extends:folder"

@@ -14,9 +14,8 @@
   ],
   "tags": [
     "$extends:credit-card",
+    "$group:minus",
     "debit",
-    "remove",
-    "delete",
     "unlink",
     "revoke",
     "decline",

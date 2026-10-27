@@ -136,9 +136,10 @@ Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
     .filter(([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`))
     .filter(([, groupTags]) => groupTags.every((tag) => literals.has(tag)))
     .forEach(([groupName, groupTags]) => {
-      console.warn(
+      console.error(
         `Icon '${iconName}': tags ${groupTags.map((tag) => `'${tag}'`).join(', ')} are all in group '${groupName}' — use "${GROUP_PREFIX}${groupName}" instead.`,
       );
+      error = true;
     });
 });
 

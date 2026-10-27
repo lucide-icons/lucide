@@ -9,8 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "remove",
-    "delete"
+    "$group:minus"
   ],
   "categories": [
     "$extends:folder"

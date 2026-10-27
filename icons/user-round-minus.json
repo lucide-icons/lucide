@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove",
+    "$group:minus",
     "unfollow",
     "unsubscribe"
   ],

@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "cancel",
+    "$group:x",
     "close",
-    "delete",
-    "remove",
     "times",
     "clear",
     "math",

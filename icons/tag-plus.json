@@ -14,9 +14,7 @@
   ],
   "tags": [
     "$extends:tag",
-    "new",
-    "add",
-    "create",
+    "$group:plus",
     "+"
   ],
   "categories": [
