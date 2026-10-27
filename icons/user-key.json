@@ -11,10 +11,7 @@
   "tags": [
     "$extends:user",
     "$group:key",
-    "passkey",
     "login",
-    "authentication",
-    "authorization",
     "roles",
     "permissions",
     "private",

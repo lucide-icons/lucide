@@ -13,7 +13,6 @@
     "$extends:cloud",
     "$group:exclamation-mark",
     "alert",
-    "error",
     "sync",
     "network",
     "exclamation"

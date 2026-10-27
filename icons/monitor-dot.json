@@ -9,9 +9,7 @@
   "tags": [
     "$extends:monitor",
     "$group:dot",
-    "status",
-    "running",
-    "active"
+    "running"
   ],
   "categories": [
     "$extends:monitor"

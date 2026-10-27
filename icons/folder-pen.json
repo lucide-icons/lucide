@@ -6,8 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "$group:pen",
-    "rename"
+    "$group:pen"
   ],
   "categories": [
     "$extends:folder"
