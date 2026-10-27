@@ -30,7 +30,14 @@
     "diagnostics",
     "metrics",
     "telemetry",
-    "network"
+    "network",
+    "observability",
+    "uptime",
+    "server",
+    "infrastructure",
+    "resource usage",
+    "system status",
+    "real-time"
   ],
   "categories": [
     "connectivity",
