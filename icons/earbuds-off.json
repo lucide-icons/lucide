@@ -4,10 +4,9 @@
     "rrod497"
   ],
   "use-cases": [
-    "Application as UI button in music apps to switch off or disconnect audio output on wireless earphones.",
-    "Represent disconnected or disabled status of wireless audio devices in system settings.",
-    "Indicating that the usage of in-ear audio devices is prohibited, for example in workspaces that require attention to ambient sounds",
-    "Marking unavailable earphones in device pairing menus"
+    "Disconnecting the audio output from wireless earphones in music apps",
+    "Representing disconnected or disabled status in the bluetooth pairing process in user manuals",
+    "Indicating that the usage of in-ear audio devices is prohibited, for example in workspaces that require attention to ambient sounds"
   ],
   "tags": [
     "earphones",
@@ -32,6 +31,7 @@
   "categories": [
     "multimedia",
     "devices",
-    "connectivity"
+    "connectivity",
+    "communication"
   ]
 }
