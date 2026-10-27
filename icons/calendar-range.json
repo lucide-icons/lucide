@@ -6,11 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
     "day",
-    "month",
-    "year",
-    "event",
     "range",
     "period"
   ],

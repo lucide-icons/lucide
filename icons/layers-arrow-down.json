@@ -11,6 +11,7 @@
     "moving an item behind all others in layer order"
   ],
   "tags": [
+    "$extends:layers",
     "send to back",
     "send backward",
     "back",
@@ -22,7 +23,6 @@
     "behind",
     "reorder",
     "arrange",
-    "stack",
     "stacking",
     "z-index",
     "depth",

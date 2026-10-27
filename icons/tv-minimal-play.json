@@ -9,7 +9,6 @@
   "tags": [
     "$extends:tv-minimal",
     "movie",
-    "live",
     "ott",
     "running",
     "start",

@@ -12,9 +12,8 @@
     "representing rejected queries or destructive operations"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
+    "$extends:database",
+    "$group:x",
     "server",
     "x",
     "error",

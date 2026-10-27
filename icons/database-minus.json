@@ -14,9 +14,6 @@
   "tags": [
     "$extends:database",
     "$group:minus",
-    "storage",
-    "memory",
-    "bytes",
     "server",
     "minus",
     "reduce"

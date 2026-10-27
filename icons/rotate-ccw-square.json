@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "left",
-    "counter-clockwise",
+    "$extends:rotate-ccw",
     "rotate",
     "image",
     "90",

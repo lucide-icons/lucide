@@ -11,6 +11,8 @@
     "indicates that file/document has been saved automatically"
   ],
   "tags": [
+    "$extends:save",
+    "$group:check",
     "save",
     "save-check",
     "floppy-disk",

@@ -8,10 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "mind",
-    "intellect",
-    "artificial intelligence",
-    "ai",
+    "$extends:brain",
+    "$group:cog",
     "deep learning",
     "machine learning",
     "computing"

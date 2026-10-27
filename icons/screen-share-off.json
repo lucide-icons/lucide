@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "desktop",
-    "disconnect",
-    "monitor"
+    "$extends:screen-share",
+    "$group:off",
+    "disconnect"
   ],
   "categories": [
     "$extends:screen-share"

@@ -8,6 +8,8 @@
     "To indicate that a process is happening"
   ],
   "tags": [
+    "$extends:rotate-cw",
+    "$group:clock",
     "clock",
     "waiting",
     "schedule",

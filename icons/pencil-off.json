@@ -9,6 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:pencil",
+    "$group:off",
     "disabled",
     "inactive",
     "non-editable",
@@ -16,17 +18,7 @@
     "read-only",
     "unmodifiable",
     "frozen",
-    "restricted",
-    "rubber",
-    "edit",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
-    "stationery",
-    "artist"
+    "restricted"
   ],
   "categories": [
     "$extends:pencil"

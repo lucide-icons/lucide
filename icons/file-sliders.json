@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:sliders-horizontal",
     "cogged",
     "gear",
     "mechanical",

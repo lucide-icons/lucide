@@ -7,9 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "home",
-    "living",
-    "building",
+    "$extends:house",
     "wifi",
     "connectivity"
   ],

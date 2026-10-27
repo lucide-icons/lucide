@@ -5,12 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
     "book",
     "purchase",
     "add",

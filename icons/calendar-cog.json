@@ -9,10 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
+    "$group:cog",
     "day",
-    "month",
-    "year",
     "events",
     "settings",
     "gear",

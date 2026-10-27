@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:smartphone",
     "contactless",
     "payment",
-    "near-field communication",
-    "screen"
+    "near-field communication"
   ],
   "categories": [
     "communication",

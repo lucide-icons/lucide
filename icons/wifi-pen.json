@@ -8,6 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:wifi",
+    "$group:pen",
     "edit",
     "wifi",
     "pen",

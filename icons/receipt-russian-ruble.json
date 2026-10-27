@@ -6,12 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
-    "currency",
+    "$extends:receipt",
     "rub",
     "₽"
   ],

@@ -7,11 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
+    "$group:clock",
     "day",
-    "month",
-    "year",
-    "event",
     "clock",
     "hour"
   ],

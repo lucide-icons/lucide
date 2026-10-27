@@ -9,23 +9,11 @@
     "showing magical cleanup actions in smart home apps"
   ],
   "tags": [
+    "$extends:mop",
     "$group:sparkles",
-    "cleaning",
-    "scrubbing",
-    "sweeping",
     "sparkle",
-    "housekeeping",
-    "hygiene",
-    "sanitation",
-    "chores",
-    "swab",
-    "tidy",
-    "floor",
-    "spotless",
-    "pristine",
     "polish",
-    "sanitize",
-    "disinfect"
+    "sanitize"
   ],
   "categories": [
     "$extends:mop",

@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:x",
-    "lost",
-    "document"
+    "$extends:file-x",
+    "$group:x"
   ],
   "categories": [
     "$extends:file-x"

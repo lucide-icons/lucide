@@ -11,20 +11,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:pencil",
     "pencil",
-    "change",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
     "biro",
     "ink",
     "marker",
-    "felt tip",
-    "stationery",
-    "artist"
+    "felt tip"
   ],
   "categories": [
     "text",

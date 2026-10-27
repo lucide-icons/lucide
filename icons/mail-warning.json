@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:mail",
     "$group:exclamation-mark",
-    "email",
-    "message",
-    "letter",
     "delivery error"
   ],
   "categories": [

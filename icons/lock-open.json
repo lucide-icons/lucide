@@ -7,7 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "security"
+    "$extends:lock"
   ],
   "categories": [
     "$extends:lock"

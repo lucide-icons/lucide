@@ -7,6 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:key",
     "code",
     "coding",
     "version control",
@@ -17,9 +19,7 @@
     "secret",
     "unlocked",
     "hidden",
-    "revealed",
-    "knowledge",
-    "learning"
+    "revealed"
   ],
   "categories": [
     "development",

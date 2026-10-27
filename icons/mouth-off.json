@@ -11,21 +11,14 @@
     "Representing loss of taste or oral sensitivity"
   ],
   "tags": [
-    "speech",
-    "voice",
-    "talk",
+    "$extends:mouth",
     "mute",
     "silence",
     "speechless",
     "taste loss",
     "flavor loss",
     "ageusia",
-    "tasteless",
-    "gustatory",
-    "oral",
-    "dental",
-    "communication",
-    "accessibility"
+    "tasteless"
   ],
   "categories": [
     "$extends:mouth"

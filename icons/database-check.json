@@ -12,9 +12,8 @@
     "confirming backup integrity or successful sync"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
+    "$extends:database",
+    "$group:check",
     "server",
     "check",
     "success",

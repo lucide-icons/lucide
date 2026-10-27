@@ -6,8 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
+    "$extends:badge",
     "help"
   ],
   "categories": [

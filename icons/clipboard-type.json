@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "paste",
+    "$extends:clipboard",
     "format",
     "text"
   ],

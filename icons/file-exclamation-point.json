@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "$group:exclamation-mark",
     "hidden",
     "alert",

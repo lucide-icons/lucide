@@ -7,10 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
     "sort",
     "order",
     "ascending",
