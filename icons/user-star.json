@@ -13,8 +13,6 @@
     "$extends:user",
     "$group:star",
     "like",
-    "review",
-    "rating",
     "admin"
   ],
   "categories": [

@@ -9,10 +9,7 @@
   "use-cases": [],
   "tags": [
     "$group:check",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

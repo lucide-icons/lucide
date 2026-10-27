@@ -9,7 +9,6 @@
   "use-cases": [],
   "tags": [
     "$group:currency",
-    "bill",
     "voucher",
     "slip",
     "check",

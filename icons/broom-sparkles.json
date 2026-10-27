@@ -14,7 +14,6 @@
     "$extends:broom",
     "$group:sparkles",
     "sparkle",
-    "automation",
     "pristine"
   ],
   "categories": [
