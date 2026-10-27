@@ -4,9 +4,6 @@
     "Carlito-la-banane"
   ],
   "use-cases": [
-    "Representing a load balancer in cloud infrastructure",
-    "Showing traffic distributed across multiple servers",
-    "Indicating a task split into parallel processes",
     "Representing a load balancer in cloud service consoles",
     "Showing incoming traffic distributed across multiple backends",
     "Indicating a task split into parallel worker threads or processes",
