@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Showing a dependency between two packages",
+    "Linking modules together",
+    "Representing a supply chain connection",
+    "Representing a network of nodes or computers",
+    "Representing a chain of blocks"
+  ],
+  "tags": [
+    "cubes",
+    "package",
+    "module",
+    "dependencies",
+    "link",
+    "chain",
+    "blockchain",
+    "network",
+    "nodes",
+    "supply chain"
+  ],
+  "categories": [
+    "development"
+  ]
+}
