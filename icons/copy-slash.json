@@ -7,7 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:copy",
-    "$group:slash",
+    "$group:off",
     "cancel",
     "no",
     "stop",

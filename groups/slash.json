@@ -1,9 +1,0 @@
-{
-  "$schema": "../group.schema.json",
-  "description": "Status: forbidden, blocked or prohibited",
-  "tags": [
-    "forbidden",
-    "prohibited",
-    "ban"
-  ]
-}

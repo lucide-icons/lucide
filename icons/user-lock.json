@@ -9,7 +9,6 @@
     "$group:lock",
     "person",
     "lock",
-    "locked",
     "account"
   ],
   "categories": [
