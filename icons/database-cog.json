@@ -21,7 +21,11 @@
     "sql",
     "storage",
     "server",
-    "maintenance"
+    "maintenance",
+    "data",
+    "schema",
+    "query",
+    "relational"
   ],
   "categories": [
     "development",
