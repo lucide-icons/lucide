@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Monitoring computer performance in system diagnostics tools",
+    "Showing application health in service monitoring dashboards",
+    "Displaying network activity in administration panels",
+    "Representing patient vital signs in clinical monitoring interfaces"
+  ],
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "virtual machine",
+    "vm",
+    "computer",
+    "pulse",
+    "heartbeat",
+    "health",
+    "vitals",
+    "performance",
+    "diagnostics",
+    "metrics",
+    "telemetry",
+    "network"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}
