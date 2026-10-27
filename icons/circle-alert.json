@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:alert",
+    "$group:exclamation-mark",
     "alert"
   ],
   "categories": [

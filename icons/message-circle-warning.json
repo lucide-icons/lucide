@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
-    "$group:alert",
+    "$group:exclamation-mark",
     "report",
     "abuse",
     "offense",
