@@ -9,7 +9,6 @@
     "$extends:badge",
     "$group:percent",
     "marketing",
-    "sticker",
     "price tag"
   ],
   "categories": [

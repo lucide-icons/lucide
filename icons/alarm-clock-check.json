@@ -17,8 +17,7 @@
     "task",
     "reminder",
     "schedule",
-    "wake-up",
-    "confirmed"
+    "wake-up"
   ],
   "categories": [
     "$extends:alarm-clock"
