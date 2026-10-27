@@ -9,7 +9,7 @@ editLink: false
 
 _Last updated: 27 October 2026_
 
-Lucide is an open-source project. We built lucide.dev to collect as little about you as possible: no accounts, no tracking cookies, and no selling of data. This page explains what does happen when you visit, and why.
+Lucide is an open-source project. We built lucide.dev to collect as little about you as possible: We aim to collect as little personal data as possible. We don't sell your personal data, and we don't require an account to browse our website. This page explains what does happen when you visit, and why.
 
 This statement covers **lucide.dev** only. Our merch shop (merch.lucide.dev), GitHub, Discord, Open Collective and other sites we link to have their own privacy policies.
 
@@ -25,12 +25,9 @@ The site runs on [Vercel](https://vercel.com/legal/privacy-policy). Like any web
 
 ### Analytics
 
-We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run two tools on our own subdomains, and the data they collect is stored in the EU:
+We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run **OpenPanel** on our own subdomain (insights.lucide.dev), and the data it collects is stored in the EU. It counts page views and how the site is used: which icons are copied or opened in Lucide Studio, when an icon search starts, changes to the icon customiser and sorting, clicks on the home page buttons and packages, and how far down a page you scroll.
 
-- **Plausible** (analytics.lucide.dev) counts page views.
-- **OpenPanel** (insights.lucide.dev) counts page views and how the site is used: which icons are copied or opened in Lucide Studio, when an icon search starts, changes to the icon customiser and sorting, clicks on the home page buttons and packages, and how far down a page you scroll.
-
-Neither tool sets cookies or stores anything in your browser. Along with these events they record general information such as the referring site, browser type, device type and country. Visits are counted with a temporary, anonymised identifier that cannot be used to recognise you on other sites or on later days. We don't track clicks on outgoing links, and we never combine this data with other sources.
+OpenPanel doesn't set cookies or store anything in your browser. Along with these events it records general information such as the referring site, browser type, device type and country. Visits are counted with a temporary, anonymised identifier that cannot be used to recognise you on other sites or on later days. We don't track clicks on outgoing links, and we never combine this data with other sources.
 
 ### Search
 
@@ -50,13 +47,13 @@ The version and download badges on the packages page are loaded from [Shields.io
 
 lucide.dev does not use tracking or advertising cookies of its own.
 
-| Name | Type | Purpose | Duration |
+| What | Type | Purpose | Duration |
 | --- | --- | --- | --- |
-| `__vdpl` | Cookie (Vercel) | Keeps you on the same version of the site while it's being updated, so pages don't break mid-visit | Session |
-| `icon-size`, `icon-stroke-width`, `icon-color`, `icon-non-scaling-stroke` | Local storage | Remembers your icon customiser settings | Until you clear them |
-| `vitepress-theme-appearance` | Local storage | Remembers light or dark mode | Until you clear them |
-| `lucide-docs-fallback-framework` and code tab choices | Local storage | Remembers which framework you're reading the docs for | Until you clear them |
-| DocSearch recent searches | Local storage | Shows your recent searches in the search box | Until you clear them |
+| Deployment version (`__vdpl`) | Cookie (Vercel) | Keeps you on the same version of the site while it's being updated, so pages don't break mid-visit | Session |
+| Icon customiser settings | Local storage | Remembers the size, stroke width, colour and stroke scaling you chose | Until you clear them |
+| Appearance | Local storage | Remembers light or dark mode | Until you clear them |
+| Framework choice | Local storage | Remembers which framework you're reading the docs for | Until you clear them |
+| Recent and favourite searches | Local storage | Shows them in the search box | Until you clear them |
 
 These items are needed for features you use, or they store choices you made yourself. They never leave your browser, and you can clear them at any time in your browser settings.
 
