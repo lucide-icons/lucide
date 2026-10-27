@@ -38,7 +38,7 @@ const pickIcons = [
   'map-pinned',
   'megaphone',
   'moon',
-  'music',
+  'sixteenth-notes',
   'phone',
   'power-off',
   'radio',
@@ -69,7 +69,7 @@ const pickIcons = [
   'stethoscope',
 ];
 
-export default {
+const loader = {
   async load() {
     const icons = Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }));
 
@@ -96,3 +96,8 @@ export default {
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

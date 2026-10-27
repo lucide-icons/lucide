@@ -129,6 +129,10 @@ html {
   flex-direction: column-reverse;
 }
 
+.content-body .search {
+  display: none;
+}
+
 @media (min-width: 960px) {
   .VPHomeHero .container .image {
     order: 1;
@@ -151,6 +155,10 @@ html {
 
   .VPHomeHero .container {
     flex-direction: row;
+  }
+
+  .VPDoc:has(.vp-doc[class*=' _icons_']) {
+    padding: 32px 32px 0;
   }
 }
 

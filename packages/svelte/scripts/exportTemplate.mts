@@ -9,13 +9,22 @@ export default defineExportTemplate(
 
     return `\
 ${getHTMLBanner()}
+<script module lang="ts">
+import type { LucideIconData, LucideIconNode } from '../types.js';
+
+export const __iconData: LucideIconData = ${JSON.stringify(iconData)};
+
+/**
+ * @deprecated Access \`__iconData\` instead.
+ */
+export const __iconNode: LucideIconNode[] = __iconData.node;
+</script>
+
 <script lang="ts">
 import Icon from '../Icon.svelte';
-import type { LucideProps, LucideIconData } from '../types.js';
+import type { LucideProps } from '../types.js';
 
 let props: LucideProps = $props();
-
-const iconData: LucideIconData = ${JSON.stringify(iconData)};
 
 </script>
 
@@ -29,7 +38,7 @@ Lucide SVG icon component, renders SVG Element with children.
 ${deprecated ? `\n@deprecated ${deprecationReason}\n` : ''}\
 -->
 
-<Icon {...props} icon={iconData} />
+<Icon {...props} icon={__iconData} />
 `;
   },
 );
