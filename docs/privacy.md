@@ -15,22 +15,22 @@ This statement covers **lucide.dev** only. Our merch shop (merch.lucide.dev), Gi
 
 ## Who is responsible
 
-lucide.dev is run by the Lucide maintainers, represented by Eric Fennis, based in the Netherlands. For questions about this statement or your data, contact us at [info@lucide.dev](mailto:info@lucide.dev).
+lucide.dev is run by the Lucide Icons, based in the Netherlands. For questions about this statement or your data, contact us at [info@lucide.dev](mailto:info@lucide.dev).
 
 ## What we collect and why
 
 ### Hosting
 
-The site runs on [Vercel](https://vercel.com/legal/privacy-policy). Like any web server, Vercel processes your IP address, browser user agent and the pages you request so it can deliver the site and protect it against abuse. These logs are kept for a short time and are not used to profile you.
+The site runs on [Vercel](https://vercel.com/legal/privacy-policy). Like any web server, Vercel processes your IP address, browser user agent and the pages you request so it can deliver the site and protect it against abuse. These logs are stored for 1 day and are not used to profile you.
 
 ### Analytics
 
-We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run two tools on our own subdomains:
+We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run two tools on our own subdomains, and the data they collect is stored in the EU:
 
-- **Plausible** (analytics.lucide.dev)
-- **OpenPanel** (insights.lucide.dev)
+- **Plausible** (analytics.lucide.dev) counts page views.
+- **OpenPanel** (insights.lucide.dev) counts page views and how the site is used: which icons are copied or opened in Lucide Studio, when an icon search starts, changes to the icon customiser and sorting, clicks on the home page buttons and packages, and how far down a page you scroll.
 
-Neither tool sets cookies or stores anything in your browser. They record page views together with general information such as the referring site, browser type, device type and country. Visits are counted with a temporary, anonymised identifier that cannot be used to recognise you on other sites or on later days. We don't track clicks on outgoing links, and we never combine this data with other sources.
+Neither tool sets cookies or stores anything in your browser. Along with these events they record general information such as the referring site, browser type, device type and country. Visits are counted with a temporary, anonymised identifier that cannot be used to recognise you on other sites or on later days. We don't track clicks on outgoing links, and we never combine this data with other sources.
 
 ### Search
 
@@ -40,9 +40,11 @@ Site search is provided by [Algolia DocSearch](https://www.algolia.com/policies/
 
 On some pages, a single ad is shown by [Carbon Ads](https://www.carbonads.net/privacy) (BuySellAds). The ads help fund the project's development. Ads are chosen by the content of the page, not by your interests or browsing history. To show an ad, count impressions and clicks, and prevent fraud, Carbon receives your IP address (used to estimate your country) and basic browser information. Carbon's privacy policy describes how it handles this data.
 
-### GitHub content
+### Third-party images
 
 Contributor and team avatars are loaded directly from GitHub, so GitHub receives your IP address when those images load. See [GitHub's privacy statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement).
+
+The version and download badges on the packages page are loaded from [Shields.io](https://shields.io), so Shields.io receives your IP address when those images load.
 
 ## Cookies and browser storage
 
@@ -64,7 +66,7 @@ We process this data on the basis of our legitimate interest (Article 6(1)(f) GD
 
 ## International transfers
 
-Vercel, Algolia, Carbon Ads and GitHub may process data outside the European Economic Area, including in the United States. Where this happens, these providers rely on safeguards such as the EU–US Data Privacy Framework or the European Commission's Standard Contractual Clauses.
+Vercel, Algolia, Carbon Ads, GitHub and Shields.io may process data outside the European Economic Area, including in the United States. Where this happens, these providers rely on safeguards such as the EU–US Data Privacy Framework or the European Commission's Standard Contractual Clauses.
 
 ## Your rights
 
