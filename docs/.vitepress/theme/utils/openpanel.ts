@@ -50,3 +50,30 @@ export function trackDebounced(
     }, delay),
   );
 }
+
+// Only one scroll depth event per page leave: closing a tab fires visibilitychange, pagehide
+// and beforeunload. Starts as sent, because VitePress also calls onBeforeRouteChange for the
+// initial page load.
+let scrollDepthSent = true;
+
+/**
+ * Track how far (in percent) the visitor scrolled down the current page.
+ * Sends at most once until `resetScrollDepth` is called.
+ */
+export function trackScrollDepth() {
+  if (scrollDepthSent) return;
+  scrollDepthSent = true;
+
+  const { scrollHeight, clientHeight } = document.documentElement;
+  const scrollable = scrollHeight - clientHeight;
+  const percent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
+
+  track('scroll_depth', { percent });
+}
+
+/**
+ * Allow the next page leave to be tracked again, e.g. after a route change.
+ */
+export function resetScrollDepth() {
+  scrollDepthSent = false;
+}

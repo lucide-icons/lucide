@@ -12,7 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import { op, track } from './utils/openpanel';
+import { op, resetScrollDepth, track, trackScrollDepth } from './utils/openpanel';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -33,28 +33,13 @@ const theme: Partial<Theme> = {
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
 
-    // Only one scroll depth event per page leave: closing a tab fires all the leave events below.
-    // Starts as sent, because VitePress also calls onBeforeRouteChange for the initial page load.
-    let scrollDepthSent = true;
-
-    function trackScrollDepth() {
-      if (scrollDepthSent) return;
-      scrollDepthSent = true;
-
-      const { scrollHeight, clientHeight } = document.documentElement;
-      const scrollable = scrollHeight - clientHeight;
-      const percent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
-
-      track('scroll_depth', { percent });
-    }
-
     // Track before the route changes, VitePress resets the scroll position for the new page.
     router.onBeforeRouteChange = () => {
       if (!import.meta.env.SSR) trackScrollDepth();
     };
 
     router.onAfterRouteChange = () => {
-      scrollDepthSent = false;
+      resetScrollDepth();
       // Wait for VitePress to update the document title before tracking the page view.
       return nextTick(() => op?.screenView());
     };
@@ -64,7 +49,7 @@ const theme: Partial<Theme> = {
         if (document.visibilityState === 'hidden') {
           trackScrollDepth();
         } else {
-          scrollDepthSent = false;
+          resetScrollDepth();
         }
       });
       window.addEventListener('pagehide', trackScrollDepth);
