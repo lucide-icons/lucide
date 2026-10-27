@@ -8,7 +8,12 @@
     "Disabling emergency alarms or sirens in security panels",
     "Muting alert notifications in emergency services dashboards",
     "Indicating an inactive or off-duty emergency vehicle status",
-    "Toggling emergency alert modes off in disaster management apps"
+    "Toggling emergency alert modes off in disaster management apps",
+    "Muting alarm sounds in security or monitoring dashboards",
+    "Indicating an emergency siren is disabled on a vehicle fleet map",
+    "Toggling off audible alerts in hospital or EMS control panels",
+    "Suppressing push notifications for emergency broadcasts",
+    "Marking off-duty status for emergency response vehicles"
   ],
   "tags": [
     "police",
