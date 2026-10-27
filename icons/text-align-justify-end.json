@@ -11,10 +11,10 @@
     "Formatting paragraphs with right-justified layout in document editors"
   ],
   "tags": [
+    "$group:position-right",
     "paragraph",
     "alignment",
     "justified",
-    "right",
     "end",
     "typography",
     "editor",

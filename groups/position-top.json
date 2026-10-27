@@ -2,13 +2,13 @@
   "$schema": "../group.schema.json",
   "description": "Placement: at the top or upper edge",
   "tags": [
+    "position",
+    "placement",
+    "top",
+    "topmost",
+    "top edge",
+    "upper edge",
     "upper",
-    "above",
-    "ascend",
-    "page up",
-    "north",
-    "home",
-    "first page",
-    "earliest"
+    "above"
   ]
 }

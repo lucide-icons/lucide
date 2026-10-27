@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:direction-right",
+    "$group:position-right",
     "sidebar",
     "secondary",
     "drawer"

@@ -7,7 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:direction-left",
+    "$group:position-left",
     "primary",
     "drawer"
   ],

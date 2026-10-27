@@ -2,13 +2,13 @@
   "$schema": "../group.schema.json",
   "description": "Placement: at the bottom or lower edge",
   "tags": [
+    "position",
+    "placement",
+    "bottom",
+    "bottommost",
+    "bottom edge",
+    "lower edge",
     "lower",
-    "below",
-    "descend",
-    "page down",
-    "south",
-    "end",
-    "last page",
-    "latest"
+    "below"
   ]
 }

@@ -6,7 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:direction-left",
+    "$group:position-top",
+    "$group:position-left",
     "menu bar",
     "sidebar",
     "primary",

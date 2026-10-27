@@ -7,7 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:panel-right",
-    "$group:direction-right",
+    "$group:direction-left",
     "show",
     "reveal",
     "chevron",

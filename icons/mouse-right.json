@@ -9,7 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:mouse",
-    "$group:direction-right"
+    "$group:position-right"
   ],
   "categories": [
     "$extends:mouse"
