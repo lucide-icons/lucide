@@ -7,10 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$extends:headphone",
-    "music",
-    "audio",
-    "sound",
+    "$extends:headphones",
     "headphones"
   ],
   "categories": [

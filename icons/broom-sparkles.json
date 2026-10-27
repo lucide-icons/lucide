@@ -13,7 +13,6 @@
   "tags": [
     "$extends:broom",
     "$group:sparkles",
-    "sparkle",
     "pristine"
   ],
   "categories": [

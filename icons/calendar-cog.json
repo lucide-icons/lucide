@@ -13,8 +13,6 @@
     "$group:cog",
     "day",
     "events",
-    "settings",
-    "gear",
     "cog"
   ],
   "categories": [

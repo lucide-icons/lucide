@@ -17,8 +17,6 @@
     "$extends:door-closed",
     "$group:cog",
     "room",
-    "settings",
-    "gear",
     "access",
     "automation"
   ],

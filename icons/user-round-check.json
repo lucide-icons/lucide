@@ -9,10 +9,7 @@
     "$group:check",
     "followed",
     "subscribed",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

@@ -7,11 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$extends:chart-line",
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$extends:chart-line"
   ],
   "categories": [
     "$extends:file"

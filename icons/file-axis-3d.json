@@ -8,11 +8,8 @@
   "tags": [
     "$extends:file",
     "$extends:axis-3d",
-    "model",
     "3d",
-    "axis",
-    "coordinates"
-
+    "axis"
   ],
   "categories": [
     "$extends:file",

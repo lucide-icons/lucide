@@ -15,7 +15,6 @@
     "$extends:shield",
     "$group:lock",
     "authentication",
-    "authorization",
     "credentials",
     "data protection",
     "encryption",

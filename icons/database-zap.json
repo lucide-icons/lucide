@@ -6,9 +6,8 @@
   "use-cases": [],
   "tags": [
     "$extends:database",
-    "$group:zap",
+    "$extends:zap",
     "cache busting",
-    "power",
     "crash"
   ],
   "categories": [

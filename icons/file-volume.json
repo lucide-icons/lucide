@@ -10,7 +10,6 @@
     "$extends:file",
     "$extends:volume",
     "audio",
-    "music",
     "volume"
   ],
   "categories": [

@@ -6,8 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:hard-drive",
-    "$extends:download",
-    "save"
+    "$extends:download"
   ],
   "categories": [
     "$extends:hard-drive",

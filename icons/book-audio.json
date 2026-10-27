@@ -6,10 +6,9 @@
   "use-cases": [],
   "tags": [
     "$extends:book",
-    "$extends:audio",
+    "$extends:audio-lines",
     "audiobook",
-    "listening",
-    "sound"
+    "listening"
   ],
   "categories": [
     "multimedia",

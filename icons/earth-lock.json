@@ -10,10 +10,8 @@
     "$extends:earth",
     "$group:lock",
     "vpn",
-    "private",
     "privacy",
     "network",
-    "security",
     "encryption",
     "protection",
     "connection"

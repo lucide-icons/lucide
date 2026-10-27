@@ -16,7 +16,6 @@
     "repository",
     "private",
     "public",
-    "secret",
     "unlocked",
     "hidden",
     "revealed"

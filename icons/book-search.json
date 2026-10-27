@@ -8,9 +8,7 @@
   "tags": [
     "$extends:book",
     "$group:search",
-    "discover",
     "browsing",
-    "lookup",
     "finding",
     "scanning"
   ],

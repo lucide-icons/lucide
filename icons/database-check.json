@@ -16,11 +16,7 @@
     "$group:check",
     "server",
     "check",
-    "success",
-    "valid",
-    "verified",
-    "confirmed",
-    "complete"
+    "success"
   ],
   "categories": [
     "$extends:database"

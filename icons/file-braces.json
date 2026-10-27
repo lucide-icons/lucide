@@ -7,11 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$extends:braces",
-    "code",
-    "json",
-    "curly braces",
-    "curly brackets"
+    "$extends:braces"
   ],
   "categories": [
     "$extends:file",
