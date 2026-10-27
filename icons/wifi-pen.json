@@ -10,10 +10,8 @@
   "tags": [
     "$extends:wifi",
     "$group:pen",
-    "edit",
     "wifi",
     "pen",
-    "change",
     "network"
   ],
   "categories": [

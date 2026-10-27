@@ -14,11 +14,6 @@
   "tags": [
     "$extends:monitor",
     "$extends:smartphone",
-    "phone",
-    "cellphone",
-    "device",
-    "mobile",
-    "responsive",
     "screens",
     "sync",
     "cast"

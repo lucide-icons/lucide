@@ -10,10 +10,8 @@
     "$extends:download",
     "behind",
     "download",
-    "save",
     "git",
     "version control",
-    "pull",
     "collapse",
     "fold",
     "vertical"

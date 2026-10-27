@@ -11,12 +11,10 @@
     "$extends:columns-3",
     "$group:cog",
     "columns",
-    "settings",
     "customize",
     "table",
     "grid",
     "adjust",
-    "configuration",
     "panel",
     "layout"
   ],

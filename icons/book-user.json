@@ -7,7 +7,6 @@
   "tags": [
     "$extends:book",
     "$group:user",
-    "person",
     "people",
     "family",
     "friends",

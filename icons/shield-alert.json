@@ -41,7 +41,6 @@
     "audited",
     "unverified",
     "uncertified",
-    "warning",
     "emergency",
     "attention",
     "urgent",
@@ -53,8 +52,6 @@
     "expired",
     "disabled",
     "inactive",
-    "error",
-    "exclamation mark",
     "!"
   ],
   "categories": [

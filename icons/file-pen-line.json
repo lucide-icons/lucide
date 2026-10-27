@@ -8,8 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file-pen",
-    "$group:pen",
-    "edit"
+    "$group:pen"
   ],
   "categories": [
     "$extends:file-pen"

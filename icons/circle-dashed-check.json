@@ -15,7 +15,6 @@
   "tags": [
     "$extends:circle-dashed",
     "$extends:circle-check",
-    "approved",
     "changes",
     "revision",
     "reapproval",

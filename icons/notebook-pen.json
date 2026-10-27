@@ -9,7 +9,6 @@
     "$group:pen",
     "pencil",
     "noted",
-    "write",
     "eraser",
     "rubber"
   ],

@@ -8,10 +8,8 @@
   "tags": [
     "$extends:user-round",
     "$group:cog",
-    "settings",
     "edit",
-    "cog",
-    "gear"
+    "cog"
   ],
   "categories": [
     "$extends:user-round"

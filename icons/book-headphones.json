@@ -6,10 +6,9 @@
   "use-cases": [],
   "tags": [
     "$extends:book",
-    "$group:headphones",
+    "$extends:headphones",
     "audiobook",
-    "listening",
-    "sound"
+    "listening"
   ],
   "categories": [
     "multimedia",

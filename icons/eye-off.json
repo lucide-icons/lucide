@@ -12,8 +12,7 @@
     "$group:off",
     "hide",
     "conceal",
-    "mask",
-    "hidden"
+    "mask"
   ],
   "categories": [
     "$extends:eye"

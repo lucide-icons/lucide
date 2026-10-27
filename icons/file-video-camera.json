@@ -9,9 +9,7 @@
   "tags": [
     "$extends:file",
     "$extends:video",
-    "movie",
-    "video",
-    "film"
+    "video"
   ],
   "categories": [
     "$extends:file"

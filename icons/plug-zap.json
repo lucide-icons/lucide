@@ -10,7 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:plug",
-    "$group:zap",
+    "$extends:zap",
     "charge",
     "charging",
     "battery",

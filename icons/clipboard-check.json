@@ -11,10 +11,7 @@
     "$group:check",
     "copied",
     "pasted",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

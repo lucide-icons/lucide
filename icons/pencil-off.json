@@ -11,8 +11,6 @@
   "tags": [
     "$extends:pencil",
     "$group:off",
-    "disabled",
-    "inactive",
     "non-editable",
     "locked",
     "read-only",

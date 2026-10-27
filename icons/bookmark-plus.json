@@ -8,8 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:bookmark",
-    "$group:plus",
-    "add"
+    "$group:plus"
   ],
   "categories": [
     "$extends:bookmark"
