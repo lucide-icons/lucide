@@ -6,10 +6,17 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that scheduled alarms are disabled",
+    "Toggling alarm notifications off in clock settings"
+  ],
   "tags": [
     "$extends:alarm-clock",
-    "turn-off"
+    "turn-off",
+    "silent",
+    "silence",
+    "disarmed",
+    "muted"
   ],
   "categories": [
     "$extends:alarm-clock"
