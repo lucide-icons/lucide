@@ -15,7 +15,11 @@
     "backup",
     "box",
     "storage",
-    "records"
+    "records",
+    "restore",
+    "retrieve",
+    "recover",
+    "reactivate"
   ],
   "aliases": [
     {
