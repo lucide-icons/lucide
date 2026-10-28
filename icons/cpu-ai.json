@@ -41,7 +41,6 @@
   ],
   "categories": [
     "$extends:cpu",
-    "letters-digits",
     "development"
   ]
 }
