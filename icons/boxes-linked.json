@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Showing dependencies between software packages or modules",
+    "Representing connections between stages in supply chain diagrams",
+    "Representing connections between computers in network diagrams",
+    "Representing linked nodes in blockchain explorers",
+    "Visualizing connected components in system architecture diagrams",
+    "Showing linked inventory units in logistics workflows"
+  ],
+  "tags": [
+    "cubes",
+    "package",
+    "module",
+    "dependencies",
+    "link",
+    "chain",
+    "blockchain",
+    "network",
+    "nodes",
+    "supply chain",
+    "integration",
+    "component",
+    "logistics",
+    "distributed",
+    "interconnected",
+    "relationship",
+    "coupling",
+    "system architecture",
+    "distributed systems",
+    "inventory"
+  ],
+  "categories": [
+    "development"
+  ]
+}

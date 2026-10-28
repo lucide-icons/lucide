@@ -30,9 +30,9 @@
     "design"
   ],
   "use-cases": [
-    "indicating a disabled or unavailable state",
-    "marking something as blocked or prohibited",
-    "showing a deactivated interface element",
-    "representing a closed or inactive component"
+    "Indicating a disabled or unavailable state",
+    "Marking something as blocked or prohibited",
+    "Showing a deactivated interface element",
+    "Representing a closed or inactive component"
   ]
 }

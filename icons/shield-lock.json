@@ -5,11 +5,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "encryption settings",
-    "secure login",
-    "privacy controls",
-    "security software",
-    "secure file storage"
+    "Representing encryption settings in security apps",
+    "Indicating secure login or authentication",
+    "Opening privacy controls in account settings",
+    "Representing security software or antivirus tools",
+    "Marking secure or encrypted file storage"
   ],
   "tags": [
     "antivirus",

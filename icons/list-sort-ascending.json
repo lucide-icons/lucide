@@ -4,8 +4,8 @@
     "ericfennis"
   ],
   "use-cases": [
-    "sorting items in a table by column (name, date, price, status)",
-    "reordering a list in ascending order"
+    "Sorting table columns in ascending order",
+    "Reordering a list from lowest to highest or A to Z"
   ],
   "tags": [
     "list",

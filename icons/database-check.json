@@ -7,9 +7,9 @@
     "rrod497"
   ],
   "use-cases": [
-    "indicating a successful database connection",
-    "showing a verified or healthy database instance",
-    "confirming backup integrity or successful sync"
+    "Indicating a successful database connection",
+    "Showing a verified or healthy database instance",
+    "Confirming backup integrity or successful sync"
   ],
   "tags": [
     "storage",

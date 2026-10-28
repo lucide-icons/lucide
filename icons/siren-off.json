@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "xougui",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Disabling emergency alarms or sirens in security control panels",
+    "Muting audible alerts in hospital or EMS dashboards",
+    "Turning off emergency alert modes in disaster management apps",
+    "Indicating disabled sirens on emergency vehicle fleet maps"
+  ],
+  "tags": [
+    "police",
+    "ambulance",
+    "emergency",
+    "security",
+    "alert",
+    "alarm",
+    "light",
+    "disabled",
+    "mute",
+    "silent",
+    "silence",
+    "inactive"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

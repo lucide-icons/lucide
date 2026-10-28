@@ -5,10 +5,10 @@
     "danielbayley"
   ],
   "use-cases": [
-    "representing 3D model files such as OBJ, STL, FBX, or GLTF",
-    "indicating CAD and engineering model documents",
-    "showing printable or manufacturable 3D assets",
-    "identifying files containing digital product models"
+    "Representing 3D model files such as OBJ, STL, FBX, or GLTF",
+    "Indicating CAD and engineering model documents",
+    "Showing printable or manufacturable 3D assets",
+    "Identifying files containing digital product models"
   ],
   "tags": [
     "document",
