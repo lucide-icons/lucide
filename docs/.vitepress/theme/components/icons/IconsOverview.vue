@@ -17,6 +17,7 @@ import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { track, trackDebounced } from '../../utils/openpanel';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -33,7 +34,7 @@ const SORTING = [
     name: 'Name',
     value: 'name',
   },
-]
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -49,7 +50,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -168,6 +169,31 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 
 watch(searchQueryDebounced, () => {
   scrollTo(0);
+});
+
+let hasStartedSearching = false;
+
+watch(searchQueryDebounced, (query) => {
+  if (query === '') return;
+
+  if (!hasStartedSearching) {
+    hasStartedSearching = true;
+    track('icons_search_start');
+  }
+
+  trackDebounced('icons_search', 'icons_search', { query, results: searchResults.value.length });
+});
+
+// Debounced so only the query the visitor settles on is tracked, not every keystroke.
+watch(searchPlaceholder, ({ isNoResults, isBrand }) => {
+  const query = searchQueryDebounced.value;
+  if (!isNoResults || isSearchMetadataLoading.value || !query) return;
+
+  trackDebounced('icons_search_no_results', 'icons_search_no_results', { query, isBrand });
+});
+
+watch(selectedSort, (sort) => {
+  track('icons_sort_change', { sort: sort.value });
 });
 
 function handleCloseDrawer() {

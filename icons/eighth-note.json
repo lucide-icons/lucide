@@ -7,7 +7,7 @@
     "jamiemlaw"
   ],
   "use-cases": [
-    "Representing music or an audio track",
+    "Representing a song or single audio track",
     "Representing a single eighth note in music notation"
   ],
   "tags": [

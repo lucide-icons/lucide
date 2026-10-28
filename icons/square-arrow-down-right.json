@@ -13,8 +13,7 @@
     "turn"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "$extends:square-arrow-down"
   ],
   "aliases": [
     {

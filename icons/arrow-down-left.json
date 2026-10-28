@@ -9,6 +9,6 @@
     "$group:direction-down-left"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-down"
   ]
 }

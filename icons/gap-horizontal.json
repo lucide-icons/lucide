@@ -5,10 +5,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating horizontal gap setting in a design inspector",
-    "representing the column-gap control in grid or flex panels",
-    "adjusting horizontal spacing between components in a page builder",
-    "visualizing a spacing token in a design system or theme editor"
+    "Indicating horizontal gap setting in a design inspector",
+    "Representing the column-gap control in grid or flex panels",
+    "Adjusting horizontal spacing between components in a page builder",
+    "Visualizing a spacing token in a design system or theme editor"
   ],
   "tags": [
     "gap",

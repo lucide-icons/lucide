@@ -12,6 +12,7 @@
   ],
   "categories": [
     "$extends:file",
+    "letters-digits",
     "development"
   ]
 }

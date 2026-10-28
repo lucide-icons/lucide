@@ -13,7 +13,7 @@
     "share"
   ],
   "categories": [
-    "arrows",
+    "$extends:square-arrow-up",
     "social"
   ],
   "aliases": [
