@@ -4,8 +4,8 @@
     "Patolord"
   ],
   "use-cases": [
-    "indicate injury or fracture status in health/fitness tracking",
-    "show an error or failed state in healthcare UI flows"
+    "Indicating injury or fracture status in health and fitness tracking",
+    "Showing an error or failed state in healthcare interfaces"
   ],
   "tags": [
     "bone",

@@ -11,9 +11,8 @@
   ],
   "use-cases": [
     "Deselecting a selection in an image editor",
-    "Clearing a selected range in a spreadsheet",
     "Removing selected files from a file manager selection",
-    "Toggling off marquee/selection mode in a design application"
+    "Toggling off marquee or selection mode in a design application"
   ],
   "tags": [
     "deselect",

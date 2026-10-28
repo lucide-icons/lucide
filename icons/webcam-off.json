@@ -7,8 +7,8 @@
     "jordan-burnett"
   ],
   "use-cases": [
-    "indicating that a webcam is disabled or turned off",
-    "showing a camera feed is unavailable or blocked for privacy"
+    "Indicating that a webcam is disabled or turned off",
+    "Showing a camera feed is unavailable or blocked for privacy"
   ],
   "tags": [
     "camera",

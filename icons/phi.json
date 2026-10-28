@@ -4,9 +4,9 @@
     "whoisBugsbunny"
   ],
   "use-cases": [
-    "representing the golden ratio",
-    "indicating mathematical formulas",
-    "labeling scientific variables"
+    "Representing the golden ratio",
+    "Indicating mathematical formulas or constants",
+    "Labeling scientific variables in equations"
   ],
   "tags": [
     "math",
@@ -20,6 +20,7 @@
     "magnetic-flux"
   ],
   "categories": [
+    "letters-digits",
     "math",
     "science"
   ]

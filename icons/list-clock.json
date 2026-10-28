@@ -6,11 +6,11 @@
     "kemie"
   ],
   "use-cases": [
-    "showing the edit or revision history of a list item",
-    "indicating recently viewed list entries",
-    "displaying a list of recently changed tasks",
-    "representing an activity or audit log for list-based content",
-    "marking last-updated or timestamped list rows"
+    "Showing the edit or revision history of a list item",
+    "Indicating recently viewed list entries",
+    "Displaying a list of recently changed tasks",
+    "Representing an activity or audit log for list-based content",
+    "Marking last-updated or timestamped list rows"
   ],
   "tags": [
     "history",

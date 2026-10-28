@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "kotaindah55"
+  ],
+  "use-cases": [
+    "Annotating a screen during presentation",
+    "Drawing attention to a specific part of a screen during presentation",
+    "Indicating a pointer location in remote presentation or screen-sharing tools",
+    "Representing a virtual pointer tool in design and whiteboard apps"
+  ],
+  "tags": [
+    "annotation",
+    "beam",
+    "draw",
+    "guide",
+    "highlight",
+    "pointer",
+    "presentation",
+    "screen",
+    "spotlight",
+    "pointer device",
+    "projection"
+  ],
+  "categories": [
+    "tools"
+  ]
+}
