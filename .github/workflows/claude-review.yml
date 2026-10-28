@@ -87,7 +87,7 @@ jobs:
             Don't post an inline comment for an issue that is already raised there, even if the line number moved.
           claude_args: |
             --max-turns 30
-            --allowedTools "Read,Write,Glob,Grep,mcp__github_inline_comment__create_inline_comment,Bash(gh pr diff:*),Bash(gh pr view:*)"
+            --allowedTools "Read,Write(./claude-review.md),Glob,Grep,mcp__github_inline_comment__create_inline_comment,Bash(gh pr diff:*),Bash(gh pr view:*)"
 
       - name: Add comment marker
         id: summary
