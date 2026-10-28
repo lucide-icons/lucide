@@ -6,16 +6,11 @@
     "RajnishKMehta"
   ],
   "use-cases": [
-    "verified favorite",
-    "approved item",
-    "trusted content",
-    "featured content",
-    "recommended item",
-    "completed achievement",
-    "confirmed selection",
-    "verified bookmark",
-    "certified item",
-    "approved review"
+    "Marking a favorite or bookmark as verified",
+    "Indicating approved, certified, or trusted content",
+    "Highlighting featured or recommended items",
+    "Showing a completed achievement in games or apps",
+    "Confirming a selected rating or review"
   ],
   "tags": [
     "bookmark",

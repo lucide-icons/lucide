@@ -2,8 +2,7 @@ import { bundledLanguages, type ThemeRegistration } from 'shiki';
 import { createHighlighter } from 'shiki';
 
 export type ThemeOptions =
-  | ThemeRegistration
-  | { light: ThemeRegistration; dark: ThemeRegistration };
+  ThemeRegistration | { light: ThemeRegistration; dark: ThemeRegistration };
 
 const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlighter = await createHighlighter({

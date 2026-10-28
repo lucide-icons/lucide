@@ -17,6 +17,7 @@ import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { track, trackDebounced } from '../../utils/openpanel';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -33,8 +34,7 @@ const SORTING = [
     name: 'Name',
     value: 'name',
   },
-]
-
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -50,7 +50,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -72,6 +72,8 @@ const sortedIcons = computed(() => {
       return [...props.icons].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
     case 'release-date':
       return [...props.icons].sort((a, b) => {
+        if (a.awaitingRelease !== b.awaitingRelease) return a.awaitingRelease ? -1 : 1;
+
         const aDate = a.createdRelease?.date ? new Date(a.createdRelease.date).getTime() : 0;
         const bDate = b.createdRelease?.date ? new Date(b.createdRelease.date).getTime() : 0;
         return bDate - aDate;
@@ -88,9 +90,13 @@ const mappedIcons = computed(() => {
     return sortedIcons.value;
   }
 
+  if (categories.value == null) {
+    return sortedIcons.value;
+  }
+
   return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+    const iconCategories = categories.value[icon.name] ?? [];
 
     return {
       ...icon,
@@ -115,7 +121,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () => searchQuery.value.length > 0 && (tags.value == null || categories.value == null),
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
 const chunkedIcons = computed(() => {
@@ -165,10 +171,35 @@ watch(searchQueryDebounced, () => {
   scrollTo(0);
 });
 
+let hasStartedSearching = false;
+
+watch(searchQueryDebounced, (query) => {
+  if (query === '') return;
+
+  if (!hasStartedSearching) {
+    hasStartedSearching = true;
+    track('icons_search_start');
+  }
+
+  trackDebounced('icons_search', 'icons_search', { query, results: searchResults.value.length });
+});
+
+// Debounced so only the query the visitor settles on is tracked, not every keystroke.
+watch(searchPlaceholder, ({ isNoResults, isBrand }) => {
+  const query = searchQueryDebounced.value;
+  if (!isNoResults || isSearchMetadataLoading.value || !query) return;
+
+  trackDebounced('icons_search_no_results', 'icons_search_no_results', { query, isBrand });
+});
+
+watch(selectedSort, (sort) => {
+  track('icons_sort_change', { sort: sort.value });
+});
+
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/';
 
   if (searchQueryDebounced.value) {
@@ -203,6 +234,7 @@ function handleCloseDrawer() {
         <template #start-icon>
           <Icon
             :iconNode="listSortDescending"
+            name="list-sort-descending"
             class="chevron-icon"
             aria-hidden="true"
           />

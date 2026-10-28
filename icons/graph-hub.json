@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Carlito-la-banane"
+  ],
+  "use-cases": [
+    "Representing a load balancer in cloud service consoles",
+    "Showing incoming traffic distributed across multiple backends",
+    "Indicating a task split into parallel worker threads or processes",
+    "Marking fan-out patterns in system architecture or topology diagrams"
+  ],
+  "tags": [
+    "load balancer",
+    "distribute",
+    "traffic",
+    "network",
+    "nodes",
+    "parallel",
+    "branch",
+    "hierarchy",
+    "routing",
+    "dispatcher",
+    "cluster",
+    "backend",
+    "fan-out",
+    "topology",
+    "orchestration"
+  ],
+  "categories": [
+    "connectivity",
+    "development"
+  ]
+}
