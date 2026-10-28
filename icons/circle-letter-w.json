@@ -4,11 +4,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing watt units in power contexts",
-    "indicating west on a compass or map",
-    "representing width in measurements",
-    "representing tungsten in scientific contexts",
-    "indicating wins or winning states"
+    "Representing watt units in power contexts",
+    "Indicating west on a compass or map",
+    "Representing width in measurements",
+    "Representing tungsten in scientific contexts",
+    "Indicating wins or winning states"
   ],
   "tags": [
     "alphabet",

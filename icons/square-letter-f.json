@@ -4,11 +4,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating Fahrenheit temperature units",
-    "representing female markers or labels",
-    "indicating a failing grade or rating",
-    "representing force in physics contexts",
-    "labeling aperture or f-stop settings"
+    "Indicating Fahrenheit temperature units",
+    "Representing female markers or labels",
+    "Indicating a failing grade or rating",
+    "Representing force in physics contexts",
+    "Labeling aperture or f-stop settings"
   ],
   "tags": [
     "alphabet",
