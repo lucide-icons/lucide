@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking learner driver status",
+    "Indicating litre units in measurements",
+    "Indicating left direction or alignment",
+    "Representing length in measurements"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "learner",
+    "driver",
+    "litre",
+    "left",
+    "length",
+    "measurement",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

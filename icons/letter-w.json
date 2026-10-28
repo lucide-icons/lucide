@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing watt units in power contexts",
+    "Indicating west on a compass or map",
+    "Representing width in measurements",
+    "Representing tungsten in scientific contexts",
+    "Indicating wins or winning states"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "watt",
+    "power",
+    "west",
+    "width",
+    "measurement",
+    "tungsten",
+    "chemistry",
+    "win",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

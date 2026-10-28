@@ -6,7 +6,6 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Representing music or an audio track",
     "Representing a half note in music notation"
   ],
   "tags": [

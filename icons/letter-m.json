@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating millions or mega units",
+    "Representing metre units in measurements",
+    "Representing male markers or labels",
+    "Indicating medium size"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "million",
+    "mega",
+    "metre",
+    "measurement",
+    "male",
+    "medium",
+    "size",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

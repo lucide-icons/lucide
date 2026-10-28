@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley",
+    "bduffany"
+  ],
+  "use-cases": [
+    "Archiving email messages from an inbox",
+    "Saving files and records to an archive"
+  ],
+  "tags": [
+    "$extends:archive",
+    "unarchive",
+    "email",
+    "download",
+    "save"
+  ],
+  "categories": [
+    "$extends:archive"
+  ]
+}

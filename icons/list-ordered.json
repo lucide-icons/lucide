@@ -12,6 +12,7 @@
     "queue"
   ],
   "categories": [
-    "$extends:list"
+    "$extends:list",
+    "letters-digits"
   ]
 }

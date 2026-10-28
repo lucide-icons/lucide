@@ -5,9 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:heading"
+    "$extends:letter-h",
+    "h1"
   ],
   "categories": [
-    "$extends:heading"
+    "$extends:letter-h"
   ]
 }

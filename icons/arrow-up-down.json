@@ -21,6 +21,6 @@
     "move"
   ],
   "categories": [
-    "$extends:arrow-up"
+    "arrows"
   ]
 }

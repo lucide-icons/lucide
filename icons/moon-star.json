@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:moon"
+    "$extends:moon",
+    "star"
   ],
   "categories": [
     "$extends:moon"

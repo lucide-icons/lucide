@@ -6,11 +6,10 @@
     "jguddas"
   ],
   "use-cases": [
-    "indicating a 3D printer or fabrication machine",
-    "representing rapid prototyping and additive manufacturing",
-    "showing prototyping and model production",
-    "representing maker tools and digital fabrication",
-    "indicating a 3D printing job or workflow"
+    "Indicating a 3D printer or fabrication machine",
+    "Representing rapid prototyping and additive manufacturing",
+    "Representing maker tools and digital fabrication",
+    "Indicating a 3D printing job or workflow"
   ],
   "tags": [
     "model",

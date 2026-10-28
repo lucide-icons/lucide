@@ -12,6 +12,7 @@
   ],
   "categories": [
     "$extends:arrow-down",
+    "letters-digits",
     "text",
     "layout"
   ],

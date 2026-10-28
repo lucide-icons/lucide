@@ -5,9 +5,9 @@
     "jaynewey"
   ],
   "use-cases": [
-    "representing canned drinks like soda or beer",
-    "representing canned foods like soup or legumes",
-    "representing litter/waste"
+    "Representing canned drinks like soda or beer",
+    "Representing canned foods like soup or legumes",
+    "Representing litter or waste"
   ],
   "tags": [
     "beverage",
