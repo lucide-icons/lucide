@@ -10,8 +10,7 @@
     "Indicating a grade or rating"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "licence",
     "license",
@@ -20,10 +19,7 @@
     "carbon",
     "chemistry",
     "grade",
-    "rating",
-    "text",
-    "font",
-    "typography"
+    "rating"
   ],
   "categories": [
     "letters-digits",

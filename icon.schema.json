@@ -201,6 +201,7 @@
         "$group:exclamation-mark",
         "$group:heart",
         "$group:key",
+        "$group:letter",
         "$group:lock",
         "$group:minus",
         "$group:navigation-first",
