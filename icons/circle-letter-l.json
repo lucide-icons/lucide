@@ -4,10 +4,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "marking learner driver status",
-    "indicating litre units in measurements",
-    "indicating left direction or alignment",
-    "representing length in measurements"
+    "Marking learner driver status",
+    "Indicating litre units in measurements",
+    "Indicating left direction or alignment",
+    "Representing length in measurements"
   ],
   "tags": [
     "alphabet",

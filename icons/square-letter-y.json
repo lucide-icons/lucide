@@ -4,10 +4,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing the Y-axis in charts or geometry",
-    "indicating yes or confirmation",
-    "representing years in date or time contexts",
-    "representing Y chromosomes"
+    "Representing the Y-axis in charts or geometry",
+    "Indicating yes or confirmation",
+    "Representing years in date or time contexts",
+    "Representing Y chromosomes"
   ],
   "tags": [
     "alphabet",
