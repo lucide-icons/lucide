@@ -22,6 +22,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write # Required to post review comments
+      id-token: write # Required for Workload Identity Federation with the Claude API
 
     steps:
       #  We check out the main branch of the main repository for security reasons.
@@ -34,7 +35,11 @@ jobs:
 
       - uses: anthropics/claude-code-action@d70510b174a1244958df0b03166a54912811f3e6 # v1.0.264
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Workload Identity Federation: exchanges the GitHub OIDC token for a short-lived
+          # Claude API token, so no API key secret is needed. These IDs are not secrets.
+          anthropic_federation_rule_id: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          anthropic_organization_id: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          anthropic_service_account_id: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Most PRs come from forks. Safe because Claude only gets read-only tools plus PR commenting.
           allowed_non_write_users: '*'
