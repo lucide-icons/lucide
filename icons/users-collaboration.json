@@ -26,6 +26,6 @@
   ],
   "categories": [
     "$extends:users",
-    "communication"
+    "social"
   ]
 }

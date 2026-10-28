@@ -18,7 +18,6 @@
   ],
   "categories": [
     "$extends:spline",
-    "arrows",
     "cursors"
   ]
 }

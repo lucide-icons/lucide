@@ -24,6 +24,6 @@
   ],
   "categories": [
     "$extends:car",
-    "connectivity"
+    "devices"
   ]
 }

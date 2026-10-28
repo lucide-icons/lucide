@@ -18,6 +18,6 @@
     "silence"
   ],
   "categories": [
-    "medical"
+    "$extends:siren"
   ]
 }

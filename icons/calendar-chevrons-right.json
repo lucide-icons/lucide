@@ -23,7 +23,6 @@
     "events"
   ],
   "categories": [
-    "$extends:calendar",
-    "arrows"
+    "$extends:calendar"
   ]
 }

@@ -30,8 +30,6 @@
   "categories": [
     "$extends:folder",
     "account",
-    "social",
-    "people",
-    "security"
+    "people"
   ]
 }

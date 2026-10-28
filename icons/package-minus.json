@@ -11,6 +11,6 @@
     "$group:minus"
   ],
   "categories": [
-    "development"
+    "$extends:package"
   ]
 }

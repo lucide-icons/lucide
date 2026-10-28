@@ -22,6 +22,7 @@
     "lan"
   ],
   "categories": [
-    "$extends:server"
+    "$extends:server",
+    "files"
   ]
 }

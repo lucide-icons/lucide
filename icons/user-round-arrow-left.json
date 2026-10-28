@@ -29,7 +29,6 @@
   ],
   "categories": [
     "$extends:user-round",
-    "people",
-    "arrows"
+    "people"
   ]
 }

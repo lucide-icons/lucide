@@ -31,7 +31,6 @@
     "design"
   ],
   "categories": [
-    "$extends:layers",
-    "arrows"
+    "$extends:layers"
   ]
 }

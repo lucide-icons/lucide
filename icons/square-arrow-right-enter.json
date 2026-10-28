@@ -20,7 +20,6 @@
   ],
   "categories": [
     "$extends:square-arrow-right",
-    "multimedia",
     "account"
   ]
 }

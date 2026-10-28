@@ -24,7 +24,6 @@
   ],
   "categories": [
     "$extends:list",
-    "time",
-    "notifications"
+    "time"
   ]
 }
