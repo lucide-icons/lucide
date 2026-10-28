@@ -5,11 +5,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating heading text formatting",
-    "marking hospital locations",
-    "representing hydrogen in scientific contexts",
-    "indicating hours in time contexts",
-    "representing height in measurements"
+    "Indicating heading text formatting",
+    "Marking hospital locations",
+    "Representing hydrogen in scientific contexts",
+    "Indicating hours in time contexts",
+    "Representing height in measurements"
   ],
   "tags": [
     "h1",

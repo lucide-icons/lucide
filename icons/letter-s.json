@@ -7,12 +7,12 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating south on a compass or map",
-    "indicating small size",
-    "representing seconds in time contexts",
-    "representing sulfur in scientific contexts",
-    "indicating save actions",
-    "representing siemens units in electrical contexts"
+    "Indicating south on a compass or map",
+    "Indicating small size",
+    "Representing seconds in time contexts",
+    "Representing sulfur in scientific contexts",
+    "Indicating save actions",
+    "Representing siemens units in electrical contexts"
   ],
   "tags": [
     "alphabet",

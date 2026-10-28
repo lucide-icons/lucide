@@ -4,12 +4,12 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "marking parking locations",
-    "representing phosphorus in scientific contexts",
-    "indicating p-values in statistics",
-    "marking soft dynamics in music notation",
-    "representing pages or pagination",
-    "representing probability in math contexts"
+    "Marking parking locations",
+    "Representing phosphorus in scientific contexts",
+    "Indicating p-values in statistics",
+    "Marking soft dynamics in music notation",
+    "Representing pages or pagination",
+    "Representing probability in math contexts"
   ],
   "tags": [
     "alphabet",
