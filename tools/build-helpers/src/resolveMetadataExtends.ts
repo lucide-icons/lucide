@@ -123,7 +123,9 @@ export const validateExtendsReferences = (
 
       const parentName = getExtendsTarget(entry);
       if (!allMetadata[parentName]) {
-        throw new Error(`Icon '${iconName}' extends non-existent icon '${parentName}'.`);
+        throw new Error(
+          `Icon '${iconName}' extends non-existent icon '${parentName}'.}`,
+        );
       }
     }
   }
