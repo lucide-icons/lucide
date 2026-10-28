@@ -4,13 +4,13 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating a grade or rating",
-    "representing accessibility settings",
-    "labeling blood type A",
-    "representing audio controls or settings",
-    "indicating ampere units in electrical contexts",
-    "indicating text appearance settings",
-    "representing font selection or typography controls"
+    "Indicating a grade or rating",
+    "Representing accessibility settings",
+    "Labeling blood type A",
+    "Representing audio controls or settings",
+    "Indicating ampere units in electrical contexts",
+    "Indicating text appearance settings",
+    "Representing font selection or typography controls"
   ],
   "tags": [
     "alphabet",

@@ -4,10 +4,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing tesla units in magnetic contexts",
-    "indicating temperature values",
-    "representing tonne units in measurements",
-    "representing time values"
+    "Representing tesla units in magnetic contexts",
+    "Indicating temperature values",
+    "Representing tonne units in measurements",
+    "Representing time values"
   ],
   "tags": [
     "alphabet",

@@ -4,12 +4,12 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating close or dismiss actions",
-    "representing multiplication in math contexts",
-    "marking an unknown variable",
-    "representing the X-axis in charts or geometry",
-    "indicating intersections or crosses",
-    "representing X chromosomes"
+    "Indicating close or dismiss actions",
+    "Representing multiplication in math contexts",
+    "Marking an unknown variable",
+    "Representing the X-axis in charts or geometry",
+    "Indicating intersections or crosses",
+    "Representing X chromosomes"
   ],
   "tags": [
     "alphabet",

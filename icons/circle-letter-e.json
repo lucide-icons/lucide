@@ -4,11 +4,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "marking explicit content",
-    "indicating east on a compass or map",
-    "representing an empty state",
-    "representing energy in scientific contexts",
-    "indicating a grade or rating"
+    "Marking explicit content",
+    "Indicating east on a compass or map",
+    "Representing an empty state",
+    "Representing energy in scientific contexts",
+    "Indicating a grade or rating"
   ],
   "tags": [
     "alphabet",
