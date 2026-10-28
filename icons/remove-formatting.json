@@ -5,10 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "$group:minus",
-    "text",
-    "font",
-    "typography",
     "format",
     "x",
     "times"

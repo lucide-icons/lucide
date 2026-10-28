@@ -7,8 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:clipboard",
-    "format",
-    "text"
+    "$group:letter",
+    "format"
   ],
   "categories": [
     "$extends:clipboard"

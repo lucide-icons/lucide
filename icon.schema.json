@@ -189,6 +189,7 @@
         "$group:code",
         "$group:cog",
         "$group:currency",
+        "$group:digit",
         "$group:direction-down",
         "$group:direction-down-left",
         "$group:direction-down-right",

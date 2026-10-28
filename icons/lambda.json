@@ -11,6 +11,7 @@
     "Representing lambda notation in math and science"
   ],
   "tags": [
+    "$group:letter",
     "greek",
     "symbol",
     "math",

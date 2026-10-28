@@ -6,11 +6,11 @@
   "use-cases": [],
   "tags": [
     "$extends:book",
+    "$group:letter",
     "thesaurus",
     "synonym",
     "language",
     "translate",
-    "typography",
     "fonts",
     "collection"
   ],
