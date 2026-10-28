@@ -56,19 +56,88 @@ const tags = await fetchAllReleases();
 const forkIconNames = await getIconNamesAtTag(tags[0]);
 const releasedIconNames = await getIconNamesAtTag(tags[tags.length - 1]);
 
+interface IconFile {
+  status: string;
+  file: string;
+  renamedFile?: string;
+}
+
+const getAliasesAtTag = async (tag: string, iconName: string): Promise<string[]> => {
+  try {
+    const { aliases = [] } = JSON.parse(await git.show([`${tag}:icons/${iconName}.json`]));
+
+    return aliases.map((alias) => (typeof alias === 'string' ? alias : alias.name));
+  } catch {
+    return [];
+  }
+};
+
+// Git pairs removed and added files by content similarity, which also matches unrelated
+// icons. Only trust unchanged files, and pair the rest by the aliases they had at that tag.
+const resolveRenames = async (tag: string, iconFiles: IconFile[]) => {
+  const removedIconNames = new Set<string>();
+  const addedIconNames: string[] = [];
+  const resolvedFiles: IconFile[] = [];
+
+  iconFiles.forEach((iconFile) => {
+    const { status, file, renamedFile } = iconFile;
+
+    if (!file.endsWith('.svg') || status === 'R100' || !['A', 'R'].includes(status[0])) {
+      resolvedFiles.push(iconFile);
+      return;
+    }
+
+    if (status.startsWith('R')) {
+      removedIconNames.add(path.basename(file, '.svg'));
+    }
+
+    addedIconNames.push(path.basename(renamedFile ?? file, '.svg'));
+  });
+
+  for (const iconName of addedIconNames) {
+    const aliases = await getAliasesAtTag(tag, iconName);
+    const previousIconName = aliases.find((alias) => removedIconNames.has(alias));
+
+    if (previousIconName) {
+      removedIconNames.delete(previousIconName);
+      resolvedFiles.push({
+        status: 'R',
+        file: `icons/${previousIconName}.svg`,
+        renamedFile: `icons/${iconName}.svg`,
+      });
+    } else {
+      resolvedFiles.push({ status: 'A', file: `icons/${iconName}.svg` });
+    }
+  }
+
+  return resolvedFiles;
+};
+
 const comparisonsPromises = tags.map(async (tag, index) => {
   const previousTag = tags[index - 1];
 
   if (!previousTag) return undefined;
 
-  const diff = await git.diff(['--name-status', '--oneline', previousTag, tag]);
-  const files = diff.split('\n').map((line) => {
+  // Limit the diff to icons/ so files moved in from elsewhere (e.g. lab/) show up as
+  // additions instead of renames from a path outside icons/
+  const diff = await git.diff([
+    '--name-status',
+    '--oneline',
+    previousTag,
+    tag,
+    '--',
+    ':(top)icons/',
+  ]);
+  const files: IconFile[] = diff.split('\n').map((line) => {
     const [status, file, renamedFile] = line.split('\t');
 
     return { status, file, renamedFile };
   });
 
-  const iconFiles = files.filter(({ file }) => file != null && file.startsWith('icons/'));
+  const iconFiles = await resolveRenames(
+    tag,
+    files.filter(({ file }) => file != null && file.startsWith('icons/')),
+  );
   let date = (await git.show(['-s', '--format=%cI', tag])).trim();
 
   // Fallback to dat of fork if date is not valid
@@ -82,6 +151,9 @@ const comparisonsPromises = tags.map(async (tag, index) => {
     iconFiles,
   };
 });
+
+// Icon names that exist since the fork, including the names they were renamed to
+const forkOriginIconNames = new Set(forkIconNames);
 
 const comparisons = (await Promise.all(comparisonsPromises)).filter((comparison) => comparison != null && Object.keys(comparison.iconFiles).length > 0);
 const newReleaseMetaData = {};
@@ -123,6 +195,16 @@ comparisons.forEach(({ tag, iconFiles, date }) => {
         version,
         date,
       };
+
+      if (forkOriginIconNames.has(iconName)) {
+        forkOriginIconNames.add(renamedIconName);
+      }
+
+      // Keep the release the icon was created in under its new name
+      if (newReleaseMetaData[iconName].createdRelease) {
+        newReleaseMetaData[renamedIconName].createdRelease =
+          newReleaseMetaData[iconName].createdRelease;
+      }
     }
 
     if (status === 'A') {
@@ -169,7 +251,7 @@ try {
       const aliases = iconMetaData.aliases ?? [];
 
       const fromFork = [iconName, ...aliases.map((alias) => alias.name)].some((name) =>
-        forkIconNames.has(name),
+        forkOriginIconNames.has(name),
       );
       const awaitingRelease = !releasedIconNames.has(iconName);
 
