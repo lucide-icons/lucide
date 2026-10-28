@@ -34,7 +34,7 @@ jobs:
 
       - uses: anthropics/claude-code-action@d70510b174a1244958df0b03166a54912811f3e6 # v1.0.264
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Most PRs come from forks. Safe because Claude only gets read-only tools plus PR commenting.
           allowed_non_write_users: '*'
