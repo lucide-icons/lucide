@@ -1,0 +1,51 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating millions or mega units",
+    "Representing metre units in measurements",
+    "Representing male markers or labels",
+    "Indicating medium size"
+  ],
+  "tags": [
+    "metro",
+    "subway",
+    "underground",
+    "track",
+    "line",
+    "alphabet",
+    "character",
+    "uppercase",
+    "million",
+    "mega",
+    "metre",
+    "measurement",
+    "male",
+    "medium",
+    "size",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits",
+    "transportation",
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "m-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "square-m",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

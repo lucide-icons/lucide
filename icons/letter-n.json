@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating north on a compass or map",
+    "Indicating neutral gear in vehicles",
+    "Marking new items or content",
+    "Representing nitrogen in scientific contexts",
+    "Indicating newton units in force contexts",
+    "Representing sample size in statistics"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "north",
+    "neutral",
+    "gear",
+    "new",
+    "nitrogen",
+    "chemistry",
+    "newton",
+    "force",
+    "sample size",
+    "statistics",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}
