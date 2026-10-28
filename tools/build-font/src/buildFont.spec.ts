@@ -18,6 +18,7 @@ describe('buildFont', () => {
   });
 
   it('calls svgtofont with expected settings and unicode resolver', async () => {
+    // @ts-expect-error Mocking svgtofont for testing purposes
     vi.mocked(svgtofont).mockResolvedValue(undefined);
 
     await buildFont({
@@ -35,13 +36,23 @@ describe('buildFont', () => {
 
     const [options] = vi.mocked(svgtofont).mock.calls[0];
 
+    if (options === undefined) throw new Error('svgtofont options are undefined');
+
     expect(options.src).toBe('/icons');
     expect(options.dist).toBe('/dist');
     expect(options.fontName).toBe('lucide');
     expect(options.classNamePrefix).toBe('icon');
     expect(options.addLigatures).toBe(true);
-    expect(options.getIconUnicode('camera')).toEqual([String.fromCharCode(57400), 57400]);
-    expect(() => options.getIconUnicode('missing')).toThrow('No codepoint found for icon: missing');
+    const getIconUnicode = options.getIconUnicode;
+
+    if (getIconUnicode === undefined) {
+      throw new Error('getIconUnicode is undefined');
+    }
+
+    expect(getIconUnicode('camera', '57400', 0)).toEqual([String.fromCharCode(57400), 57400]);
+    expect(() => getIconUnicode('missing', '57400', 0)).toThrow(
+      'No codepoint found for icon: missing',
+    );
   });
 
   it('logs errors from svgtofont and still finishes timing', async () => {
