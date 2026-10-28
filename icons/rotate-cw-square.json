@@ -14,9 +14,6 @@
     "°"
   ],
   "categories": [
-    "$extends:rotate-cw",
-    "design",
-    "photography",
-    "arrows"
+    "$extends:rotate-cw"
   ]
 }

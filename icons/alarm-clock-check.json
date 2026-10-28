@@ -14,8 +14,7 @@
     "$extends:alarm-clock",
     "$group:check",
     "reminder",
-    "wake-up",
-    "schedule"
+    "wake-up"
   ],
   "categories": [
     "$extends:alarm-clock"

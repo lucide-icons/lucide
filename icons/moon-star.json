@@ -8,7 +8,6 @@
     "$extends:moon"
   ],
   "categories": [
-    "$extends:moon",
-    "weather"
+    "$extends:moon"
   ]
 }

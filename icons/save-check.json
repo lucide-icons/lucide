@@ -20,8 +20,6 @@
     "save-success"
   ],
   "categories": [
-    "$extends:save",
-    "text",
-    "files"
+    "$extends:save"
   ]
 }
