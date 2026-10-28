@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "DrashtiC07"
+  ],
+  "use-cases": [
+    "Displaying prices in United Arab Emirates dirhams",
+    "Selecting AED as a payment currency",
+    "Formatting monetary amounts in UAE dirhams"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "finance",
+    "price",
+    "aed",
+    "arab emirates dirham",
+    "uae",
+    "United Arab Emirates",
+    "cash",
+    "currency symbol",
+    "middle east",
+    "gulf",
+    "banking",
+    "invoice",
+    "exchange rate"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
