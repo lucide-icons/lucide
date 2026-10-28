@@ -7,8 +7,8 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "bringing a selected object to the front of a stack",
-    "moving an item in front of all others in layer order"
+    "Bringing a selected object to the front of a stack",
+    "Moving an item in front of all others in layer order"
   ],
   "tags": [
     "bring to front",

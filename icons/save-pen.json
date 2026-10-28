@@ -8,8 +8,8 @@
     "vaporvee"
   ],
   "use-cases": [
-    "saving a file with a specific name and/or to a specific location",
-    "exporting or saving a copy of the current document with a different name or format"
+    "Saving a file with a specific name or location",
+    "Saving a copy of a document under a different name or format"
   ],
   "tags": [
     "floppy disk",

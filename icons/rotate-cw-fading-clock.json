@@ -4,8 +4,8 @@
     "NielsLazaroms"
   ],
   "use-cases": [
-    "To indicate when you need to process items.",
-    "To indicate that a process is happening"
+    "Indicating items queued for processing",
+    "Indicating that a process is in progress"
   ],
   "tags": [
     "clock",

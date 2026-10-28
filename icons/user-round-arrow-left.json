@@ -5,11 +5,11 @@
     "jguddas"
   ],
   "use-cases": [
-    "assigning a task to the current user",
-    "marking a message as directed to me",
-    "navigating to the user's profile",
-    "setting the current user as recipient",
-    "indicating an inbound user request"
+    "Assigning a task to the current user",
+    "Marking a message as directed to the current user",
+    "Navigating to the user's profile",
+    "Setting the current user as recipient",
+    "Indicating an inbound user request"
   ],
   "tags": [
     "person",
