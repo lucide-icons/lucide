@@ -26,7 +26,6 @@
   "categories": [
     "$extends:folder",
     "charts",
-    "development",
-    "design"
+    "development"
   ]
 }

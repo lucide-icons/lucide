@@ -13,7 +13,6 @@
     "first aid"
   ],
   "categories": [
-    "$extends:briefcase",
     "medical"
   ]
 }

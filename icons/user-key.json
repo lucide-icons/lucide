@@ -16,6 +16,7 @@
     "permissions"
   ],
   "categories": [
-    "$extends:user"
+    "$extends:user",
+    "security"
   ]
 }

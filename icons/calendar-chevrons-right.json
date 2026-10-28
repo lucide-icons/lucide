@@ -24,7 +24,6 @@
   ],
   "categories": [
     "$extends:calendar",
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

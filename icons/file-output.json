@@ -12,7 +12,6 @@
     "$extends:file"
   ],
   "categories": [
-    "$extends:file",
-    "arrows"
+    "$extends:file"
   ]
 }

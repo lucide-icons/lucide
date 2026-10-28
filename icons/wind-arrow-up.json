@@ -21,8 +21,6 @@
     "increase"
   ],
   "categories": [
-    "$extends:wind",
-    "arrows",
-    "navigation"
+    "$extends:wind"
   ]
 }

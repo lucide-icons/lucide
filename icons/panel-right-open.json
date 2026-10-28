@@ -15,7 +15,6 @@
     "<"
   ],
   "categories": [
-    "$extends:panel-right",
-    "arrows"
+    "$extends:panel-right"
   ]
 }

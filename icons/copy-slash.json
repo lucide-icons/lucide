@@ -17,8 +17,6 @@
     "or"
   ],
   "categories": [
-    "$extends:copy",
-    "development",
-    "math"
+    "$extends:copy"
   ]
 }

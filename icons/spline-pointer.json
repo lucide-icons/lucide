@@ -19,7 +19,6 @@
   "categories": [
     "$extends:spline",
     "arrows",
-    "cursors",
-    "tools"
+    "cursors"
   ]
 }

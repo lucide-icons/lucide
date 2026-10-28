@@ -21,6 +21,7 @@
   ],
   "categories": [
     "$extends:save",
-    "development"
+    "text",
+    "files"
   ]
 }

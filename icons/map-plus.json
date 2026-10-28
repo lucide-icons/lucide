@@ -12,6 +12,7 @@
     "$group:plus"
   ],
   "categories": [
-    "navigation"
+    "navigation",
+    "travel"
   ]
 }

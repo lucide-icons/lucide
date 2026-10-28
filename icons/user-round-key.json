@@ -16,6 +16,7 @@
     "permissions"
   ],
   "categories": [
-    "$extends:user-round"
+    "$extends:user-round",
+    "security"
   ]
 }

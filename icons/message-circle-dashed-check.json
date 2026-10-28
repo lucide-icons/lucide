@@ -27,7 +27,6 @@
     "resolved"
   ],
   "categories": [
-    "$extends:message-circle-dashed",
-    "account"
+    "$extends:message-circle-dashed"
   ]
 }

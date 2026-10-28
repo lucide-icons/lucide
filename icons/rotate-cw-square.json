@@ -15,7 +15,8 @@
   ],
   "categories": [
     "$extends:rotate-cw",
-    "layout",
-    "tools"
+    "design",
+    "photography",
+    "arrows"
   ]
 }

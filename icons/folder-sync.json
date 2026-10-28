@@ -12,7 +12,6 @@
     "backup"
   ],
   "categories": [
-    "$extends:folder",
-    "arrows"
+    "$extends:folder"
   ]
 }

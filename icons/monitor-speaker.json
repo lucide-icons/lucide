@@ -15,6 +15,7 @@
     "presentation"
   ],
   "categories": [
-    "$extends:monitor"
+    "$extends:monitor",
+    "connectivity"
   ]
 }

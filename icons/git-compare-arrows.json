@@ -8,7 +8,6 @@
     "$extends:git-compare"
   ],
   "categories": [
-    "$extends:git-compare",
-    "arrows"
+    "$extends:git-compare"
   ]
 }

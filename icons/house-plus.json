@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new property or home, e.g. in real estate apps",
+    "Represent medical facilities or additions to a home"
+  ],
   "tags": [
     "$extends:house",
     "$group:plus",

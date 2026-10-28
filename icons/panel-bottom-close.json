@@ -13,7 +13,6 @@
     "down"
   ],
   "categories": [
-    "$extends:panel-bottom",
-    "arrows"
+    "$extends:panel-bottom"
   ]
 }

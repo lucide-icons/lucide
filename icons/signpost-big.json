@@ -3,13 +3,11 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "$extends:signpost"
+  ],
   "tags": [
-    "bidirectional",
-    "left",
-    "right",
-    "east",
-    "west"
+    "$extends:signpost"
   ],
   "categories": [
     "$extends:signpost"
