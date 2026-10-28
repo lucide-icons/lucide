@@ -6,14 +6,10 @@
     "RajnishKMehta"
   ],
   "use-cases": [
-    "remove from favorites",
-    "unstar item",
-    "remove bookmark",
-    "deselect favorite",
-    "remove featured item",
-    "lower priority item",
-    "remove recommendation",
-    "remove saved item"
+    "Removing an item from favorites or bookmarks",
+    "Removing the star from a saved item",
+    "Removing an item from featured or recommended lists",
+    "Lowering the priority of an item"
   ],
   "tags": [
     "bookmark",

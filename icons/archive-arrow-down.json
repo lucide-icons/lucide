@@ -3,16 +3,22 @@
   "contributors": [
     "karsa-mistmere",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "bduffany"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Archiving email messages from an inbox",
+    "Saving files and records to an archive"
+  ],
   "tags": [
-    "unarchive",
     "index",
     "backup",
     "box",
     "storage",
-    "records"
+    "records",
+    "email",
+    "download",
+    "save"
   ],
   "categories": [
     "files",

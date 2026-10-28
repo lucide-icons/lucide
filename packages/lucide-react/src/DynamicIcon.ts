@@ -55,11 +55,21 @@ const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
     const [iconData, setIconData] = useState<LucideIconData>();
 
     useEffect(() => {
+      let ignore = false;
+
       getIconData(name)
-        .then(setIconData)
+        .then((data) => {
+          if (!ignore) {
+            setIconData(data);
+          }
+        })
         .catch((error) => {
           console.error(error);
         });
+
+      return () => {
+        ignore = true;
+      };
     }, [name]);
 
     if (iconData == null) {

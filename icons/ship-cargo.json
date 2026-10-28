@@ -6,13 +6,13 @@
     "jguddas"
   ],
   "use-cases": [
-    "representing maritime freight or cargo shipments",
-    "indicating seaborne logistics in supply chain dashboards",
-    "marking ports, terminals, or dock operations on maps",
-    "showing import or export status in trade apps",
-    "offering a shipping option in e-commerce or order tracking",
-    "illustrating cargo capacity or vessel type in transport apps",
-    "denoting bulk or container shipping routes"
+    "Representing maritime freight or cargo shipments",
+    "Indicating seaborne logistics in supply chain dashboards",
+    "Marking ports, terminals, or dock operations on maps",
+    "Showing import or export status in trade apps",
+    "Offering a shipping option in e-commerce or order tracking",
+    "Illustrating cargo capacity or vessel type in transport apps",
+    "Denoting bulk or container shipping routes"
   ],
   "tags": [
     "boat",

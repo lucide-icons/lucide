@@ -7,9 +7,9 @@
     "rrod497"
   ],
   "use-cases": [
-    "removing a database instance",
-    "deleting or detaching a database connection",
-    "reducing allocated database resources"
+    "Removing a database instance",
+    "Deleting or detaching a database connection",
+    "Reducing allocated database resources"
   ],
   "tags": [
     "storage",
