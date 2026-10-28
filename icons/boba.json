@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "DrashtiC07"
+  ],
+  "use-cases": [
+    "Representing bubble tea, boba, or milk tea beverages in food and delivery apps",
+    "Selecting boba drink options on restaurant, cafe, or ordering menus",
+    "Indicating cafes, tea shops, and beverage places in maps or guides",
+    "Representing modern cafe culture, cold drinks, and tapioca snacks"
+  ],
+  "tags": [
+    "drink",
+    "tea",
+    "boba",
+    "bubble tea",
+    "tapioca",
+    "milk tea",
+    "cafe",
+    "straw",
+    "pearls",
+    "beverage",
+    "cold drink"
+  ],
+  "categories": [
+    "food-beverage"
+  ],
+  "aliases": [
+    {
+      "name": "bubble-tea"
+    },
+    {
+      "name": "cup-boba"
+    }
+  ]
+}
