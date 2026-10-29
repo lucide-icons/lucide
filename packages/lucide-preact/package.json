@@ -56,9 +56,9 @@
     "@testing-library/preact": "^3.2.4",
     "jest-serializer-html": "^7.1.0",
     "preact": "^11.0.1",
-    "rollup": "^4.63.1",
+    "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vite": "^8.3.3"
   },
   "peerDependencies": {
