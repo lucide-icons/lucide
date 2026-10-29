@@ -1045,19 +1045,19 @@ importers:
         version: link:../shared
       '@preact/preset-vite':
         specifier: ^2.10.6
-        version: 2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@11.0.1)(rollup@4.65.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+        version: 2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@11.0.2)(rollup@4.65.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       '@testing-library/jest-dom':
         specifier: ^7.0.1
         version: 7.0.1(@testing-library/dom@10.4.2)(vitest@5.0.3)
       '@testing-library/preact':
-        specifier: ^3.2.4
-        version: 3.2.4(preact@11.0.1)
+        specifier: ^3.2.6
+        version: 3.2.6(preact@11.0.2)
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
       preact:
-        specifier: ^11.0.1
-        version: 11.0.1
+        specifier: ^11.0.2
+        version: 11.0.2
       rollup:
         specifier: ^4.65.0
         version: 4.65.1
@@ -6237,10 +6237,6 @@ packages:
     resolution: {integrity: sha512-yzr2S9HyAIdhz2/6qHgbs665Q7PKVcDF05vsOlHPxG1mo36gKVesdYVeDLnXgfjJ03CrKRk08knc6+E/9m8v2Q==}
     engines: {node: '>=18'}
 
-  '@testing-library/dom@8.20.1':
-    resolution: {integrity: sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==}
-    engines: {node: '>=12'}
-
   '@testing-library/dom@9.3.4':
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
@@ -6255,8 +6251,8 @@ packages:
       vitest:
         optional: true
 
-  '@testing-library/preact@3.2.4':
-    resolution: {integrity: sha512-F+kJ243LP6VmEK1M809unzTE/ijg+bsMNuiRN0JEDIJBELKKDNhdgC/WrUSZ7klwJvtlO3wQZ9ix+jhObG07Fg==}
+  '@testing-library/preact@3.2.6':
+    resolution: {integrity: sha512-qvl5x9zxY50sY3XukHT874eGK5Q7k+JzWrC1bQIN0vbiXWPfVGjHtBmT78cEQpI6NoDoN8bUbwLvOXDK5p5Fzw==}
     engines: {node: '>= 12'}
     peerDependencies:
       preact: '>=10 || ^10.0.0-alpha.0 || ^10.0.0-beta.0'
@@ -11268,8 +11264,8 @@ packages:
       preact-render-to-string:
         optional: true
 
-  preact@11.0.1:
-    resolution: {integrity: sha512-TNNwEq++jYNHy747LziCjPRVgEwnLSOIOAw/oYcjI3Tdnubx2EXtt76I0an8PATvUWtx/DX1kFIg1eFN+O/fkw==}
+  preact@11.0.2:
+    resolution: {integrity: sha512-ofG+Lqznbt13JKDjdWPLTo5ONBqcNgidqnLRzJBG6PZjzGXOLRd5y9r448+HUofTyDbgKWVrPhHP0IgcxEZslQ==}
     peerDependencies:
       preact-render-to-string: '>=6.7.0'
     peerDependenciesMeta:
@@ -17746,12 +17742,12 @@ snapshots:
 
   '@poppinss/exception@1.2.3': {}
 
-  '@preact/preset-vite@2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@11.0.1)(rollup@4.65.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
+  '@preact/preset-vite@2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@11.0.2)(rollup@4.65.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/plugin-transform-react-jsx': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/plugin-transform-react-jsx-development': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@prefresh/vite': 2.4.12(preact@11.0.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+      '@prefresh/vite': 2.4.12(preact@11.0.2)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       '@rollup/pluginutils': 5.4.0(rollup@4.65.1)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.29.7(supports-color@10.2.2))
       debug: 4.4.3(supports-color@10.2.2)
@@ -17767,20 +17763,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.3': {}
 
-  '@prefresh/core@1.5.11(preact@11.0.1)':
+  '@prefresh/core@1.5.11(preact@11.0.2)':
     dependencies:
-      preact: 11.0.1
+      preact: 11.0.2
 
   '@prefresh/utils@1.2.1': {}
 
-  '@prefresh/vite@2.4.12(preact@11.0.1)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
+  '@prefresh/vite@2.4.12(preact@11.0.2)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@prefresh/babel-plugin': 0.5.3
-      '@prefresh/core': 1.5.11(preact@11.0.1)
+      '@prefresh/core': 1.5.11(preact@11.0.2)
       '@prefresh/utils': 1.2.1
       '@rollup/pluginutils': 4.2.1
-      preact: 11.0.1
+      preact: 11.0.2
       vite: 8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)
     transitivePeerDependencies:
       - supports-color
@@ -18945,17 +18941,6 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/dom@8.20.1':
-    dependencies:
-      '@babel/code-frame': 7.29.7
-      '@babel/runtime': 7.29.10
-      '@types/aria-query': 5.0.4
-      aria-query: 5.1.3
-      chalk: 4.1.2
-      dom-accessibility-api: 0.5.16
-      lz-string: 1.5.0
-      pretty-format: 27.5.1
-
   '@testing-library/dom@9.3.4':
     dependencies:
       '@babel/code-frame': 7.29.7
@@ -18979,10 +18964,10 @@ snapshots:
     optionalDependencies:
       vitest: 5.0.3(@types/node@26.4.1)(@vitest/browser-playwright@5.0.3)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(jsdom@30.1.3)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.105.1)(sass@1.105.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
 
-  '@testing-library/preact@3.2.4(preact@11.0.1)':
+  '@testing-library/preact@3.2.6(preact@11.0.2)':
     dependencies:
-      '@testing-library/dom': 8.20.1
-      preact: 11.0.1
+      '@testing-library/dom': 10.4.2
+      preact: 11.0.2
 
   '@testing-library/react@16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
@@ -24893,7 +24878,7 @@ snapshots:
 
   preact@10.29.8: {}
 
-  preact@11.0.1: {}
+  preact@11.0.2: {}
 
   prelude-ls@1.2.1: {}
 
