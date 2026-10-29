@@ -7,8 +7,8 @@
     "rrod497"
   ],
   "use-cases": [
-    "creating a new database instance",
-    "adding a database connection in a client or admin panel"
+    "Creating a new database instance",
+    "Adding a database connection in a client or admin panel"
   ],
   "tags": [
     "storage",

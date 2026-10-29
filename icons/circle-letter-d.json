@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating drive gear in vehicles",
+    "Representing diameter in measurements",
+    "Labeling vitamin D",
+    "Indicating a grade or rating"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "drive",
+    "gear",
+    "diameter",
+    "measurement",
+    "vitamin",
+    "grade",
+    "rating",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

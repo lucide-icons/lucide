@@ -7,8 +7,8 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "raising a selected layer by one step",
-    "moving an item forward in layer order"
+    "Raising a selected layer by one step",
+    "Moving an item forward in layer order"
   ],
   "tags": [
     "move forward",

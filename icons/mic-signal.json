@@ -5,11 +5,11 @@
     "jguddas"
   ],
   "use-cases": [
-    "representing a microphone actively broadcasting or transmitting voice",
-    "indicating live podcast, radio, streaming, or voice channel features",
-    "showing wireless microphone connections or remote audio capture",
-    "marking push-to-talk, voice chat, or walkie-talkie communication controls",
-    "identifying features that send spoken audio across a network or airwaves"
+    "Representing a microphone actively broadcasting or transmitting voice",
+    "Indicating live podcast, radio, streaming, or voice channel features",
+    "Showing wireless microphone connections or remote audio capture",
+    "Marking push-to-talk, voice chat, or walkie-talkie communication controls",
+    "Identifying features that send spoken audio across a network or airwaves"
   ],
   "tags": [
     "podcast",

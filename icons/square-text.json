@@ -5,11 +5,11 @@
     "samuelalake"
   ],
   "use-cases": [
-    "representing a text block or content card",
-    "indicating a document, article, or post",
-    "using as a placeholder for text content in a layout",
-    "labeling a notes or memo feature",
-    "denoting a text-only module or widget in a dashboard"
+    "Representing a text block or content card",
+    "Indicating a document, article, or post",
+    "Marking a placeholder for text content in a layout",
+    "Labeling a notes or memo feature",
+    "Denoting a text-only module or widget in a dashboard"
   ],
   "tags": [
     "text",

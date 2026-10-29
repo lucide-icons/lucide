@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing oxygen in scientific contexts",
+    "Labeling blood type O",
+    "Indicating an off state",
+    "Marking a zero-like option or value"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "oxygen",
+    "chemistry",
+    "blood type",
+    "off",
+    "zero",
+    "marker",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

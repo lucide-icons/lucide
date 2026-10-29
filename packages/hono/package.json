@@ -55,7 +55,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "hono": "^4.13.8",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.63.1",
+    "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
     "typescript": "^6.0.3",
     "vite": "^8.3.3"

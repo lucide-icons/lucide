@@ -4,6 +4,8 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
     "bill",
@@ -16,7 +18,6 @@
     "₹"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "finance"
   ]
 }
