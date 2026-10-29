@@ -1164,8 +1164,8 @@ importers:
         specifier: ^0.88.0
         version: 0.88.0(@babel/core@8.0.5)(@types/react@19.3.0)(react@19.3.1)(supports-color@10.2.2)
       react-native-svg:
-        specifier: ^15.15.5
-        version: 15.15.5(react-native@0.88.0(@babel/core@8.0.5)(@types/react@19.3.0)(react@19.3.1)(supports-color@10.2.2))(react@19.3.1)
+        specifier: ^15.16.0
+        version: 15.16.0(react-native@0.88.0(@babel/core@8.0.5)(@types/react@19.3.0)(react@19.3.1)(supports-color@10.2.2))(react@19.3.1)
       rollup:
         specifier: ^4.65.0
         version: 4.65.1
@@ -11405,8 +11405,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-native-svg@15.15.5:
-    resolution: {integrity: sha512-L4go5jA+GWutdJ/JucuN20cjAbMg1HmMtAP+wZ+3JLCf6Jd0bhXQHxciRP/AQm/FlrIEZwkMcHNZP+FXAiic0w==}
+  react-native-svg@15.16.0:
+    resolution: {integrity: sha512-uh8yktufYeRU3W9Omi8+SPyLF9BVN4JmLflSgc9oOcKkSKk/S5JUmmTjKZq/L8GHfQUtCvcu/W6X4xhEfBBAjQ==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -25002,7 +25002,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-svg@15.15.5(react-native@0.88.0(@babel/core@8.0.5)(@types/react@19.3.0)(react@19.3.1)(supports-color@10.2.2))(react@19.3.1):
+  react-native-svg@15.16.0(react-native@0.88.0(@babel/core@8.0.5)(@types/react@19.3.0)(react@19.3.1)(supports-color@10.2.2))(react@19.3.1):
     dependencies:
       css-select: 5.2.2
       css-tree: 1.1.3
