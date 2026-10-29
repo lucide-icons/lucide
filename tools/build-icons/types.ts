@@ -41,6 +41,7 @@ export type IconMetadataBase = {
   tags: string[];
   deprecationReason?: IconDeprecationReason;
   deprecated?: boolean;
+  toBeRemovedInVersion?: string;
 };
 
 export type IconMetadataWithDeprecation = IconMetadataBase & {
