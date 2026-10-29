@@ -6,10 +6,9 @@
     "ericfennis"
   ],
   "use-cases": [
-    "Represents scheduled communication",
-    "Represents send later icons",
-    "Indication scheduled mail",
-    "Indication delayed delivery features in messaging, email, and productivity tools"
+    "Representing scheduled emails or messages",
+    "Indicating a send later option in email clients",
+    "Showing delayed delivery in messaging and productivity tools"
   ],
   "tags": [
     "email",
@@ -18,7 +17,7 @@
     "unread",
     "scheduled",
     "delayed",
-    "sendlater",
+    "send later",
     "delivery",
     "reminder",
     "pending",

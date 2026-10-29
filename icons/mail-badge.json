@@ -9,10 +9,10 @@
     "danielbayley"
   ],
   "use-cases": [
-    "indicating certified or registered email",
-    "marking messages with proof of delivery",
-    "marking a message as signed or sealed",
-    "labeling official or legal correspondence"
+    "Indicating certified or registered email",
+    "Marking messages with proof of delivery",
+    "Marking a message as signed or sealed",
+    "Labeling official or legal correspondence"
   ],
   "tags": [
     "email",

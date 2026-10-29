@@ -1,6 +1,6 @@
 'use client';
 
-import { createElement, forwardRef, useEffect, useState } from 'react';
+import { createElement, forwardRef, useEffect, useState, type JSX } from 'react';
 import { LucideIcon, LucideIconData, LucideProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';
@@ -55,11 +55,21 @@ const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
     const [iconData, setIconData] = useState<LucideIconData>();
 
     useEffect(() => {
+      let ignore = false;
+
       getIconData(name)
-        .then(setIconData)
+        .then((data) => {
+          if (!ignore) {
+            setIconData(data);
+          }
+        })
         .catch((error) => {
           console.error(error);
         });
+
+      return () => {
+        ignore = true;
+      };
     }, [name]);
 
     if (iconData == null) {

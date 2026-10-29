@@ -10,14 +10,15 @@ import HomeHeroInfoBefore from './components/home/HomeHeroInfoBefore.vue';
 import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle';
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView';
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
-import FrameworkSelect from './components/guide/FrameworkSelect.vue';
+import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
+import { setupTracking } from './utils/openpanel';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'sidebar-nav-before': () => h(FrameworkSelect),
+      'sidebar-nav-before': () => h(SideBarNavBefore),
       'home-hero-info-before': () => h(HomeHeroInfoBefore),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
@@ -26,11 +27,13 @@ const theme: Partial<Theme> = {
       // 'layout-top': () => h(LayoutTop),
     });
   },
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
     app.provide(ICON_STYLE_CONTEXT, iconStyleContext);
     app.provide(CATEGORY_VIEW_CONTEXT, categoryViewContext);
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
+
+    setupTracking(router);
   },
 };
 

@@ -7,8 +7,8 @@
     "ericfennis"
   ],
   "use-cases": [
-    "indicates that autosave is active",
-    "indicates that file/document has been saved automatically"
+    "Indicating that autosave is active",
+    "Indicating a file or document was saved automatically"
   ],
   "tags": [
     "save",

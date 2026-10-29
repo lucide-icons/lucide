@@ -3,9 +3,11 @@
   "contributors": [
     "Guido3000"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
   "use-cases": [
-    "currency selector buttons",
-    "pricing badges"
+    "Selecting euro in currency selector buttons",
+    "Displaying prices in euros on pricing badges"
   ],
   "tags": [
     "symbol",

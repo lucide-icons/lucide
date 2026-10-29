@@ -5,12 +5,10 @@
   ],
   "use-cases": [
     "Setting auto layout direction to horizontal in design tools",
-    "Selecting flex-direction: row in devtools panels",
+    "Selecting flex-direction: row in developer tools or style panels",
     "Switching sections from stacked to side-by-side",
-    "Switching the canvas to a horizontal layout",
-    "Choosing side-by-side or two-column display",
-    "Representing css flex-direction: row in developer tools",
-    "Toggling panel orientation in a ui",
+    "Choosing a side-by-side or two-column display",
+    "Toggling panel orientation to horizontal",
     "Selecting left-to-right flow in design editors"
   ],
   "tags": [

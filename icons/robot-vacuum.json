@@ -5,8 +5,8 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Representing automated floor cleaning on a smart home app control panel",
-    "Displaying as a device icon on a local network clients list",
+    "Representing automated floor cleaning in smart home control panels",
+    "Identifying robot vacuums in network client lists",
     "Controlling robotic cleaning devices from connected home dashboards",
     "Scheduling recurring vacuum runs in housekeeping apps",
     "Monitoring cleaning progress on mapped floor plans"
@@ -18,7 +18,6 @@
     "housekeeping",
     "tool",
     "maintenance",
-    "smarthome",
     "sweeping",
     "hygiene",
     "chores",

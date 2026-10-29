@@ -9,8 +9,8 @@
     "dkast"
   ],
   "use-cases": [
-    "Represents a takeout for a restaurant/food delivery application",
-    "Represents a lunch takeout"
+    "Representing takeout orders in restaurant or food delivery apps",
+    "Indicating takeout lunch options"
   ],
   "tags": [
     "storage",
@@ -20,7 +20,7 @@
     "eco-friendly",
     "kraft",
     "retail",
-    "doggybag"
+    "doggy bag"
   ],
   "categories": [
     "food-beverage",

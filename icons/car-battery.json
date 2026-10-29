@@ -4,14 +4,14 @@
     "andreynaz4renko"
   ],
   "use-cases": [
-    "Showing battery status, power, and charging state",
-    "Category icon for car batteries, jump starters, or battery testers",
-    "Menu or shortcut for power-related info"
+    "Showing car battery status, power, or charging state",
+    "Categorizing car batteries, jump starters, or battery testers",
+    "Opening power-related vehicle information"
   ],
   "tags": [
     "battery",
     "automobile",
-    "powercell",
+    "power cell",
     "electric",
     "power",
     "electricity",
