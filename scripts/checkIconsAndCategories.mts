@@ -3,12 +3,22 @@ import {
   readSvgDirectory,
   getCurrentDirPath,
   readAllMetadata,
+  readMetadata,
 } from '../tools/build-helpers/helpers.ts';
 import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
+let icons: Record<string, IconMetadata>;
+
+try {
+  icons = await readAllMetadata(ICONS_DIR) as Record<string, IconMetadata>;
+} catch (error) {
+  console.error(`Failed to read icon metadata: ${error instanceof Error ? error.message : String(error)}`);
+  console.error('This may be due to invalid extends references or circular dependencies.');
+  process.exit(1);
+}
+
 const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
 const categories = await readAllMetadata(CATEGORIES_DIR) as Record<string, {
   icon: string;
@@ -40,6 +50,66 @@ Object.keys(icons).forEach((iconName) => {
       console.error(`Icon '${iconName}' refers to the non-existing category '${categoryName}'.`);
       error = true;
     }
+  });
+});
+
+const EXTENDS_PREFIX = '$extends:';
+
+const MARKED_FIELDS = ['tags', 'categories', 'contributors'] as const;
+type MarkedField = (typeof MARKED_FIELDS)[number];
+
+const FIELD_LABELS: Record<MarkedField, string> = {
+  tags: 'tag',
+  categories: 'category',
+  contributors: 'contributor',
+};
+
+const isMarker = (entry: string) => entry.startsWith(EXTENDS_PREFIX);
+
+// `readAllMetadata` expands the markers, so the duplicate checks below read the
+// JSON as it is written on disk to see which entries are literals.
+const iconJsonFiles = await readSvgDirectory(ICONS_DIR, '.json');
+const rawIcons = Object.fromEntries(
+  await Promise.all(
+    iconJsonFiles.map(async (file) => [
+      path.basename(file, '.json'),
+      (await readMetadata(file, ICONS_DIR)) as Partial<Record<MarkedField, string[]>>,
+    ]),
+  ),
+) as Record<string, Partial<Record<MarkedField, string[]>>>;
+
+/** The values a single marker contributes to `field`. */
+const resolveMarker = (marker: string, field: MarkedField): string[] => {
+  const parentName = marker.slice(EXTENDS_PREFIX.length);
+
+  return (icons[parentName]?.[field] as string[] | undefined) ?? [];
+};
+
+Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
+  MARKED_FIELDS.forEach((field) => {
+    const entries = rawMetadata[field] ?? [];
+    const literals = new Set(entries.filter((entry) => !isMarker(entry)));
+    const seenMarkers = new Set<string>();
+
+    entries.filter(isMarker).forEach((marker) => {
+      if (seenMarkers.has(marker)) {
+        console.error(
+          `Icon '${iconName}': '${marker}' is listed twice in '${field}' — remove the duplicate marker.`,
+        );
+        error = true;
+        return;
+      }
+      seenMarkers.add(marker);
+
+      resolveMarker(marker, field)
+        .filter((value) => literals.has(value))
+        .forEach((value) => {
+          console.error(
+            `Icon '${iconName}': ${FIELD_LABELS[field]} '${value}' is already provided by ${marker} — remove the literal.`,
+          );
+          error = true;
+        });
+    });
   });
 });
 
