@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:digit",
     "$group:direction-right",
-    "numerical",
     "decimal",
     "increase",
     "more",
@@ -15,8 +15,7 @@
     "rounding",
     "digits",
     "fraction",
-    "float",
-    "number"
+    "float"
   ],
   "categories": [
     "design",

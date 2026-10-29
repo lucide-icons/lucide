@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:digit",
     "$group:direction-up",
-    "$group:sort",
-    "numerical"
+    "$group:sort"
   ],
   "categories": [
     "$extends:arrow-up",

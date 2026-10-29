@@ -7,6 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:letter-h",
+    "$group:digit",
     "h4"
   ],
   "categories": [

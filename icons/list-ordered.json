@@ -7,7 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "number",
+    "$group:digit",
     "order",
     "queue"
   ],

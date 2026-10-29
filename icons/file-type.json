@@ -7,9 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "font",
-    "text",
-    "typography",
+    "$group:letter",
     "type"
   ],
   "categories": [
