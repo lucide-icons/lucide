@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing gravity or g-force",
+    "Indicating gram units in measurements"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "gravity",
+    "g-force",
+    "gram",
+    "measurement",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

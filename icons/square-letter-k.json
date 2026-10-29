@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating thousands or kilo units",
+    "Representing kelvin temperature units",
+    "Representing potassium in scientific contexts"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "thousand",
+    "kilo",
+    "kelvin",
+    "temperature",
+    "potassium",
+    "chemistry",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}
