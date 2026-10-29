@@ -6,8 +6,8 @@
     "Turboman3000"
   ],
   "use-cases": [
-    "Adding new ISP",
-    "Adding new Translation"
+    "Adding an internet service provider in network settings",
+    "Adding a translation or language in localization settings"
   ],
   "tags": [
     "globe",
@@ -15,7 +15,15 @@
     "network",
     "connection",
     "world",
-    "plus"
+    "plus",
+    "add",
+    "global",
+    "earth",
+    "location",
+    "language",
+    "country",
+    "coverage",
+    "publish"
   ],
   "categories": [
     "connectivity",
