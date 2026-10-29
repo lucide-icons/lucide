@@ -85,7 +85,7 @@
     "rollup-plugin-dts": "^6.5.1",
     "rollup": "^4.65.0",
     "solid-js": "next",
-    "typescript": "^7.0.2",
+    "typescript": "^6.0.3",
     "vite": "^8.3.3"
   },
   "peerDependencies": {

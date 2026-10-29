@@ -48,6 +48,6 @@
     "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
     "svgson": "^5.3.1",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   }
 }
