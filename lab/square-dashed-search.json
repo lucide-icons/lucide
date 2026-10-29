@@ -6,7 +6,8 @@
   "use-cases": [
     "Searching within a selected region",
     "Finding content inside a placeholder area",
-    "Scanning a marquee selection"
+    "Scanning a marquee selection",
+    "zoom selection"
   ],
   "tags": [
     "find",
