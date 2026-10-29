@@ -13,6 +13,7 @@ sunlounger
 monstera
 
 # Search tags and terms used in icon and category metadata
+checkmark
 ageusia
 artboard
 barbeque
