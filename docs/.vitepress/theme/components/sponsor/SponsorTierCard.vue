@@ -3,19 +3,14 @@ import { computed } from 'vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import Icon from '@lucide/vue/src/Icon';
 import { check } from '../../../data/iconNodes';
-import {
-  GITHUB_SPONSORS_URL,
-  OPEN_COLLECTIVE_URL,
-  formatEuro,
-  getPreviousTier,
-  type Tier,
-} from './tiers';
+import { formatEuro, getPreviousTier, getTierLinks, type Tier } from './tiers';
 
 const props = defineProps<{
   tier: Tier;
 }>();
 
 const previousTier = computed(() => getPreviousTier(props.tier.id));
+const links = computed(() => getTierLinks(props.tier.id));
 </script>
 
 <template>
@@ -59,13 +54,13 @@ const previousTier = computed(() => getPreviousTier(props.tier.id));
 
     <div class="actions">
       <VPButton
-        :href="OPEN_COLLECTIVE_URL"
+        :href="links.openCollective"
         text="Open Collective"
         :theme="tier.featured ? 'brand' : 'alt'"
         class="primary-action"
       />
       <a
-        :href="GITHUB_SPONSORS_URL"
+        :href="links.githubSponsors"
         target="_blank"
         rel="noreferrer"
         class="secondary-action"

@@ -118,7 +118,6 @@ export default defineConfig({
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
-      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,

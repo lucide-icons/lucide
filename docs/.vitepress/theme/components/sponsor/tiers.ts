@@ -1,3 +1,5 @@
+import { TIER_LINKS } from './tierLinks';
+
 export const OPEN_COLLECTIVE_URL = 'https://opencollective.com/lucide-icons';
 export const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/lucide-icons';
 export const PARTNER_EMAIL = 'info@lucide.dev';
@@ -87,6 +89,16 @@ export const getPreviousTier = (id: TierId) => TIERS[TIERS.findIndex((tier) => t
 /** The highest tier a monthly amount qualifies for, or `null` below the lowest tier. */
 export function getTierForAmount(monthly: number) {
   return [...TIERS].reverse().find((tier) => monthly >= tier.monthly) ?? null;
+}
+
+/** Checkout links for a tier, or the general sponsor pages without a tier. */
+export function getTierLinks(id?: TierId) {
+  const links = id ? TIER_LINKS[id] : undefined;
+
+  return {
+    openCollective: links?.openCollective || OPEN_COLLECTIVE_URL,
+    githubSponsors: links?.githubSponsors || GITHUB_SPONSORS_URL,
+  };
 }
 
 export const formatEuro = (amount: number) => `€${amount.toLocaleString('en-US')}`;

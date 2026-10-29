@@ -33,6 +33,7 @@ interface Order {
 interface CollectiveResponse {
   data?: {
     account: {
+      stats: { contributorsCount: number | null } | null;
       orders: { nodes: Order[] };
     } | null;
   };
@@ -54,6 +55,9 @@ export interface Sponsor {
 const query = /* GraphQL */ `
   query Sponsors($slug: String!) {
     account(slug: $slug) {
+      stats {
+        contributorsCount
+      }
       orders(filter: INCOMING, status: [ACTIVE], limit: 1000) {
         nodes {
           amount {
@@ -72,7 +76,7 @@ const query = /* GraphQL */ `
   }
 `;
 
-async function fetchOrders() {
+async function fetchCollective() {
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
   if (process.env.OPENCOLLECTIVE_TOKEN) {
     headers['Personal-Token'] = process.env.OPENCOLLECTIVE_TOKEN;
@@ -98,7 +102,7 @@ async function fetchOrders() {
     throw new Error(`Could not find Open Collective account "${COLLECTIVE_SLUG}"`);
   }
 
-  return data.account.orders.nodes;
+  return data.account;
 }
 
 function getLogo({ slug, imageUrl }: Account) {
@@ -149,13 +153,17 @@ function toSponsors(orders: Order[]) {
 }
 
 let sponsors: Sponsor[] = [];
+/** Everyone who ever contributed financially, including past and one-time contributors. */
+let allTimeCount: number | null = null;
 
 try {
-  sponsors = toSponsors(await fetchOrders());
+  const collective = await fetchCollective();
+  sponsors = toSponsors(collective.orders.nodes);
+  allTimeCount = collective.stats?.contributorsCount ?? null;
 } catch (error) {
   console.warn(`Could not fetch sponsors, writing an empty list. ${error}`);
 }
 
 fs.mkdirSync(dataDirectory, { recursive: true });
-fs.writeFileSync(outputPath, JSON.stringify({ sponsors }, null, 2), 'utf-8');
+fs.writeFileSync(outputPath, JSON.stringify({ allTimeCount, sponsors }, null, 2), 'utf-8');
 console.log(`Wrote ${sponsors.length} sponsors to ${outputPath}`);

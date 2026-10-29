@@ -12,6 +12,9 @@ export interface Sponsor {
 
 export const sponsors: Sponsor[] = sponsorsData.sponsors;
 
+/** Everyone who ever contributed on Open Collective, `null` when the build couldn't fetch it. */
+export const allTimeSponsorCount: number | null = sponsorsData.allTimeCount;
+
 export const getSponsorsByTier = (tierId: TierId) =>
   sponsors.filter(({ monthlyAmount }) => getTierForAmount(monthlyAmount)?.id === tierId);
 

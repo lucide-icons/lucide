@@ -5,14 +5,7 @@ import Icon from '@lucide/vue/src/Icon';
 import { check } from '../../../data/iconNodes';
 import SponsorSection from './SponsorSection.vue';
 import SponsorSectionHeader from './SponsorSectionHeader.vue';
-import {
-  GITHUB_SPONSORS_URL,
-  OPEN_COLLECTIVE_URL,
-  TIERS,
-  formatEuro,
-  getPreviousTier,
-  getTierForAmount,
-} from './tiers';
+import { TIERS, formatEuro, getPreviousTier, getTierForAmount, getTierLinks } from './tiers';
 
 type Frequency = 'monthly' | 'once';
 
@@ -35,6 +28,9 @@ const total = computed(() => {
 });
 
 const tier = computed(() => (isMonthly.value ? getTierForAmount(total.value) : null));
+
+// Only a monthly preset matches a tier's checkout, other amounts go to the general pages.
+const links = computed(() => getTierLinks(customAmount.value === '' ? tier.value?.id : undefined));
 
 const amountText = computed(() => formatEuro(total.value));
 
@@ -159,11 +155,11 @@ function pickAmount(value: number) {
           </div>
           <div class="summary-actions">
             <VPButton
-              :href="OPEN_COLLECTIVE_URL"
+              :href="links.openCollective"
               text="Open Collective"
             />
             <VPButton
-              :href="GITHUB_SPONSORS_URL"
+              :href="links.githubSponsors"
               text="GitHub Sponsors"
               theme="alt"
             />

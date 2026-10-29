@@ -2,18 +2,32 @@
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import SponsorSection from './SponsorSection.vue';
 import { data } from './SponsorStats.data';
-import { sponsors } from './sponsors';
+import { allTimeSponsorCount } from './sponsors';
+
+/** Rounds down to a short "120M+" / "25k+" figure. */
+function formatCompact(value: number) {
+  if (value >= 1_000_000) return `${Math.floor(value / 1_000_000)}M+`;
+  if (value >= 1_000) return `${Math.floor(value / 1_000)}k+`;
+  return value.toLocaleString('en-US');
+}
 
 const stats = [
-  ...(data.stars != null
-    ? [{ value: `${Math.floor(data.stars / 1000)}k+`, label: 'GitHub stars' }]
-    : []),
+  { value: data.weeklyDownloads, label: 'Weekly downloads', format: formatCompact },
+  { value: data.stars, label: 'GitHub stars', format: formatCompact },
   {
-    value: `${(Math.floor(data.iconsCount / 100) * 100).toLocaleString('en-US')}+`,
+    value: data.iconsCount,
     label: 'Icons',
+    format: (value: number) => `${(Math.floor(value / 100) * 100).toLocaleString('en-US')}+`,
   },
-  { value: sponsors.length.toLocaleString('en-US'), label: 'Sponsors' },
-];
+  {
+    value: allTimeSponsorCount,
+    label: 'All-time sponsors',
+    format: (value: number) => value.toLocaleString('en-US'),
+  },
+]
+  // Stats the build couldn't fetch are left out.
+  .filter((stat): stat is typeof stat & { value: number } => stat.value != null)
+  .map(({ value, label, format }) => ({ value: format(value), label }));
 </script>
 
 <template>
@@ -111,9 +125,8 @@ const stats = [
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
 }
 
 .stat {
