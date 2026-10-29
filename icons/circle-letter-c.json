@@ -4,6 +4,7 @@
     "karsa-mistmere"
   ],
   "use-cases": [
+    "Indicating original artistic, literary, musical, or intellectual work that is protected by copyright",
     "Indicating Celsius temperature units",
     "Representing carbon in scientific contexts",
     "Indicating a grade or rating"
@@ -12,6 +13,8 @@
     "alphabet",
     "character",
     "uppercase",
+    "licence",
+    "license",
     "celsius",
     "temperature",
     "carbon",
@@ -23,6 +26,12 @@
     "typography"
   ],
   "categories": [
-    "letters-digits"
+    "letters-digits",
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "copyright"
+    }
   ]
 }

@@ -15,7 +15,6 @@
     "first"
   ],
   "categories": [
-    "$extends:calendar",
-    "letters-digits"
+    "$extends:calendar"
   ]
 }
