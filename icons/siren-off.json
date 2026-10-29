@@ -11,20 +11,13 @@
     "Indicating disabled sirens on emergency vehicle fleet maps"
   ],
   "tags": [
-    "police",
-    "ambulance",
-    "emergency",
-    "security",
-    "alert",
-    "alarm",
-    "light",
-    "disabled",
+    "$extends:siren",
+    "$group:off",
     "mute",
     "silent",
-    "silence",
-    "inactive"
+    "silence"
   ],
   "categories": [
-    "medical"
+    "$extends:siren"
   ]
 }

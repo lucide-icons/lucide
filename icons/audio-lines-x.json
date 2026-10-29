@@ -16,40 +16,17 @@
     "Representing muted voice chat in conferencing or multiplayer games"
   ],
   "tags": [
-    "sound",
-    "noise",
+    "$extends:audio-lines",
+    "$group:x",
     "mute",
     "silence",
     "disabled",
-    "cancel",
-    "remove",
     "unavailable",
-    "listen",
-    "hearing",
     "equalizer",
     "equaliser",
-    "hertz",
-    "frequency",
-    "wavelength",
-    "vibrate",
-    "sine",
-    "waveform",
-    "synthesizer",
-    "synthesiser",
-    "levels",
-    "track",
-    "music",
-    "playback",
-    "radio",
-    "broadcast",
-    "airwaves",
-    "voice",
-    "vocals",
-    "singer",
-    "song"
+    "waveform"
   ],
   "categories": [
-    "multimedia",
-    "communication"
+    "$extends:audio-lines"
   ]
 }

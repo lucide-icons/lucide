@@ -6,29 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "measurements",
-    "centimeters",
-    "cm",
-    "millimeters",
-    "mm",
-    "metre",
-    "foot",
-    "feet",
-    "inches",
-    "units",
-    "size",
-    "length",
-    "width",
-    "height",
-    "dimensions",
-    "depth",
-    "breadth",
-    "extent",
-    "stationery"
+    "$extends:ruler"
   ],
   "categories": [
-    "tools",
-    "design",
-    "layout"
+    "$extends:ruler"
   ]
 }

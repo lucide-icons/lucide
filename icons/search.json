@@ -7,19 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens",
-    "locate",
-    "explore",
-    "discover",
-    "enlarge",
-    "zoom"
+    "$group:search",
+    "enlarge"
   ],
   "categories": [
-    "text",
-    "social"
+    "text"
   ]
 }

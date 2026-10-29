@@ -7,11 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
+    "$extends:receipt",
     "details",
     "small print",
     "terms",
@@ -19,7 +15,6 @@
     "contract"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

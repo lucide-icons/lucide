@@ -11,9 +11,8 @@
     "Syncing data from a remote to a local environment"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
+    "$extends:database",
+    "$group:direction-down",
     "server",
     "export",
     "download",
@@ -22,7 +21,6 @@
     "downsize"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

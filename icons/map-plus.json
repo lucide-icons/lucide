@@ -8,14 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "navigation",
-    "travel",
-    "new",
-    "add",
-    "create"
+    "$extends:map",
+    "$group:plus"
   ],
   "categories": [
-    "navigation"
+    "navigation",
+    "travel"
   ]
 }

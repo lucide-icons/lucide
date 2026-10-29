@@ -10,12 +10,7 @@
     "Marking USB-C inputs and outputs on devices"
   ],
   "tags": [
-    "universal",
-    "serial",
-    "bus",
-    "controller",
-    "connector",
-    "interface",
+    "$extends:usb",
     "socket",
     "plug",
     "slot",
@@ -24,9 +19,6 @@
     "output"
   ],
   "categories": [
-    "devices",
-    "multimedia",
-    "home",
-    "gaming"
+    "$extends:usb"
   ]
 }

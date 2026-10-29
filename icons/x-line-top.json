@@ -7,6 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:x",
+    "$group:x",
     "line",
     "top",
     "arrow",
@@ -16,23 +18,12 @@
     "direction",
     "vector",
     "symbol",
-    "cancel",
-    "close",
-    "delete",
-    "remove",
-    "times",
-    "clear",
-    "math",
-    "multiply",
-    "multiplication",
     "mean",
     "median",
     "average",
     "x̄"
   ],
   "categories": [
-    "letters-digits",
-    "notifications",
-    "math"
+    "$extends:x"
   ]
 }

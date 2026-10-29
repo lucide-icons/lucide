@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "dark",
-    "night",
+    "$extends:moon",
     "star"
   ],
   "categories": [
-    "accessibility",
-    "weather"
+    "$extends:moon"
   ]
 }

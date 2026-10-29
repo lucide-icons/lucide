@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "finance",
-    "pocket"
+    "$extends:wallet"
   ],
   "categories": [
-    "account",
-    "finance"
+    "$extends:wallet"
   ],
   "aliases": [
     {

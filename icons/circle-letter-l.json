@@ -10,18 +10,14 @@
     "Representing length in measurements"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "learner",
     "driver",
     "litre",
     "left",
     "length",
-    "measurement",
-    "text",
-    "font",
-    "typography"
+    "measurement"
   ],
   "categories": [
     "letters-digits"

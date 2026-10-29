@@ -9,13 +9,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "photo",
-    "webcam",
-    "video"
+    "$extends:camera",
+    "$group:off"
   ],
   "categories": [
-    "photography",
-    "devices",
-    "communication"
+    "$extends:camera"
   ]
 }

@@ -15,6 +15,7 @@
     "logs"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

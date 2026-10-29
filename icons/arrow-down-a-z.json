@@ -6,21 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling",
+    "$group:letter",
+    "$group:direction-down",
+    "$group:sort",
     "alphabetical"
   ],
   "categories": [
-    "letters-digits",
+    "$extends:arrow-down",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
     {

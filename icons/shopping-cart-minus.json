@@ -12,24 +12,16 @@
     "Indicating fewer items in a purchase"
   ],
   "tags": [
-    "trolley",
-    "cart",
-    "basket",
-    "e-commerce",
+    "$extends:shopping-cart",
+    "$group:minus",
     "ecommerce",
-    "store",
-    "purchase",
-    "products",
-    "items",
     "checkout",
     "order",
     "retail",
-    "remove",
     "decrease",
-    "quantity",
-    "subtract"
+    "quantity"
   ],
   "categories": [
-    "shopping"
+    "$extends:shopping-cart"
   ]
 }

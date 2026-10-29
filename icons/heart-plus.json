@@ -11,18 +11,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "plus",
-    "like",
-    "favorite",
-    "add",
-    "health",
+    "$group:heart",
+    "$group:plus",
     "support"
   ],
   "categories": [
-    "medical",
-    "account",
-    "multimedia",
-    "gaming",
     "social"
   ]
 }

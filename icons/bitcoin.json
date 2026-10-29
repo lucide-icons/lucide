@@ -6,21 +6,17 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:currency",
     "cryptocurrency",
     "digital",
     "blockchain",
-    "finance",
     "coin",
     "market",
     "decentralized",
     "investment",
-    "crypto",
-    "currency",
-    "money",
-    "payment"
+    "crypto"
   ],
   "categories": [
-    "development",
     "finance"
   ]
 }

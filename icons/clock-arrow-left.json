@@ -10,13 +10,12 @@
     "Opening time settings for an item"
   ],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
+    "$group:direction-left",
     "assign",
     "range"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

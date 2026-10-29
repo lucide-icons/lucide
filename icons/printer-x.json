@@ -9,15 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "fax",
-    "office",
-    "device",
-    "cross",
-    "cancel",
-    "remove",
+    "$extends:printer",
+    "$group:x",
     "error"
   ],
   "categories": [
-    "devices"
+    "$extends:printer"
   ]
 }

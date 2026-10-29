@@ -1,0 +1,12 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Placement: at the right side or edge",
+  "tags": [
+    "position",
+    "placement",
+    "right",
+    "right edge",
+    "rightmost",
+    "right side"
+  ]
+}

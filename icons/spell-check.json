@@ -6,6 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
+    "$group:check",
     "spelling",
     "error",
     "mistake",
@@ -17,7 +19,6 @@
     "a"
   ],
   "categories": [
-    "letters-digits",
     "text",
     "development"
   ]

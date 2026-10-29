@@ -6,15 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-bar",
     "multivariate",
     "categorical",
     "comparison"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-bar"
   ]
 }

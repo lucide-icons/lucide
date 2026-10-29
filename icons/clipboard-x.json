@@ -7,12 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "copy",
-    "paste",
-    "discard",
-    "remove"
+    "$extends:clipboard",
+    "$group:x"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ]
 }

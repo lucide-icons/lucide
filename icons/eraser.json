@@ -7,15 +7,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
     "pencil",
     "drawing",
     "undo",
-    "delete",
-    "clear",
-    "trash",
-    "remove"
+    "trash"
   ],
   "categories": [
-    "text"
+    "text",
+    "design"
   ]
 }

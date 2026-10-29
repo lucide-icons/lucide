@@ -10,18 +10,14 @@
     "Marking a zero-like option or value"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "oxygen",
     "chemistry",
     "blood type",
     "off",
     "zero",
-    "marker",
-    "text",
-    "font",
-    "typography"
+    "marker"
   ],
   "categories": [
     "letters-digits"

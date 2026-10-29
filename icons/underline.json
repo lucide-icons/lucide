@@ -8,11 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
     "format"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

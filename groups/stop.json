@@ -1,0 +1,16 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: stopping something that is running",
+  "tags": [
+    "halt",
+    "end",
+    "terminate",
+    "finish",
+    "cancel",
+    "abort",
+    "discontinue",
+    "interrupt",
+    "break",
+    "cease"
+  ]
+}

@@ -5,11 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:plus",
     "keyframe",
-    "add",
-    "new",
-    "increase",
-    "increment",
     "positive",
     "calculate",
     "toolbar",
@@ -20,14 +17,10 @@
     "sight",
     "reticule",
     "maximum",
-    "upgrade",
-    "extra",
-    "+"
+    "upgrade"
   ],
   "categories": [
     "multimedia",
-    "photography",
-    "tools",
-    "devices"
+    "design"
   ]
 }

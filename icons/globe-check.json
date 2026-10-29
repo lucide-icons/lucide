@@ -8,21 +8,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "world",
-    "browser",
-    "language",
-    "translate",
+    "$extends:globe",
+    "$group:check",
     "internet",
     "web",
-    "check",
-    "verified",
-    "success",
-    "valid",
     "available",
     "online",
     "status"
   ],
   "categories": [
-    "navigation"
+    "$extends:globe"
   ]
 }

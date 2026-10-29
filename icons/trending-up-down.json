@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:direction-down",
     "arrows",
     "estimated",
     "indeterminate",
@@ -17,7 +19,6 @@
     "volatile"
   ],
   "categories": [
-    "charts",
-    "arrows"
+    "$extends:trending-up"
   ]
 }

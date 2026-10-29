@@ -12,12 +12,11 @@
     "Saving a copy of a document under a different name or format"
   ],
   "tags": [
-    "floppy disk",
-    "directory",
-    "rename"
+    "$extends:save",
+    "$group:pen",
+    "directory"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:save"
   ]
 }

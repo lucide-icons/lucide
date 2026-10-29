@@ -9,8 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:image",
     "resize",
-    "picture",
     "sharpen",
     "increase"
   ],
