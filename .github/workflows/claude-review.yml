@@ -2,11 +2,11 @@ name: Claude PR review
 
 on:
   pull_request_target:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
-      - reopened
+    # types:
+    #   - opened
+    #   - synchronize
+    #   - ready_for_review
+    #   - reopened
 
 permissions: {}
 
