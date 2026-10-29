@@ -5,8 +5,8 @@
     "jguddas"
   ],
   "use-cases": [
-    "indicating the end of a time range",
-    "unassign timing information"
+    "Indicating the end of a time range",
+    "Removing timing information from an item"
   ],
   "tags": [
     "time",

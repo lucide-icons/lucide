@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating joule units in energy contexts",
+    "Representing Java or JavaScript shorthand"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "joule",
+    "energy",
+    "java",
+    "javascript",
+    "code",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

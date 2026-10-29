@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useMounted } from '@vueuse/core';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
@@ -7,6 +7,8 @@ import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
+import useTrackStyleChanges from '../../composables/useTrackStyleChanges';
+import { track } from '../../utils/openpanel';
 
 const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
   useIconStyleContext();
@@ -15,6 +17,15 @@ const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
 // otherwise the hydrated DOM keeps the stale `disabled` attribute on the reset button.
 const isMounted = useMounted();
 const showCustomized = computed(() => isMounted.value && isCustomized.value);
+
+onMounted(() => {
+  useTrackStyleChanges('icons_customizer_change', { color, strokeWidth, size, nonScalingStroke });
+});
+
+function onReset() {
+  track('icons_customizer_reset');
+  resetStyle();
+}
 </script>
 
 <template>
@@ -26,7 +37,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
       <h2 class="card-title">Customizer</h2>
       <ResetButton
         :disabled="!showCustomized"
-        @click="resetStyle"
+        @click="onReset"
       />
     </div>
     <InputField

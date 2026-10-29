@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Adding a new kanban board in project management apps",
+    "Creating a new board from an empty state or dashboard",
+    "Toolbar action to open a new agile board or sprint view",
+    "Indicating add-column or add-board affordances next to kanban views",
+    "Empty-state call-to-action to set up a kanban board",
+    "Onboarding step to prompt creation of a first project board"
+  ],
+  "tags": [
+    "board",
+    "project",
+    "add",
+    "create",
+    "plus",
+    "agile",
+    "tickets",
+    "issues",
+    "productivity",
+    "columns",
+    "workflow",
+    "planning",
+    "dashboard",
+    "workspace",
+    "collaboration",
+    "cards"
+  ],
+  "categories": [
+    "charts",
+    "development",
+    "design",
+    "layout"
+  ]
+}

@@ -9,8 +9,8 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "adding a tag to an item",
-    "creating a new product or entry with a tag"
+    "Adding a tag to an item",
+    "Creating a new product or entry with a tag"
   ],
   "tags": [
     "label",

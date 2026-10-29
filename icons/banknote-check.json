@@ -4,8 +4,8 @@
     "mfjramirezf"
   ],
   "use-cases": [
-    "confirm a paid product",
-    "confirm a payment method was added successfully"
+    "Confirming a product has been paid for",
+    "Confirming a payment method was added successfully"
   ],
   "tags": [
     "banknote",

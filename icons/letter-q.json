@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating questions or help prompts",
+    "Representing queues or waiting lines",
+    "Representing electric charge in scientific contexts",
+    "Indicating quality labels or ratings"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "question",
+    "help",
+    "queue",
+    "charge",
+    "electricity",
+    "quality",
+    "rating",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}
