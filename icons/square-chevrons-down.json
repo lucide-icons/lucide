@@ -1,0 +1,55 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "AlexandrePhilibert",
+    "danielbayley",
+    "ericfennis",
+    "colebemis",
+    "ypotti"
+  ],
+  "use-cases": [
+    "Navigating to the bottom of a page or feed",
+    "Fast-scrolling downwards in long document readers",
+    "Collapsing expanded panels or drawers downward",
+    "Jumping to the latest message in chat and activity feeds",
+    "Skipping to the final item in paginated lists or tables",
+    "Skipping to the end of media playback or playlists"
+  ],
+  "tags": [
+    "bottom",
+    "descend",
+    "page",
+    "page down",
+    "scroll",
+    "jump",
+    "south",
+    "caret",
+    "button",
+    "keyboard",
+    "skip",
+    "end",
+    "last page",
+    "latest",
+    "feed",
+    "chat",
+    "pagination",
+    "fast",
+    "media",
+    "menu",
+    "panel",
+    "double-arrow",
+    "outlined",
+    "border",
+    "seek",
+    "rewind",
+    "controls",
+    "fast-forward"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "multimedia"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating a grade or rating",
+    "Representing accessibility settings",
+    "Labeling blood type A",
+    "Representing audio controls or settings",
+    "Indicating ampere units in electrical contexts",
+    "Indicating text appearance settings",
+    "Representing font selection or typography controls"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "grade",
+    "rating",
+    "accessibility",
+    "blood type",
+    "audio",
+    "ampere",
+    "electricity",
+    "appearance",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits",
+    "text"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "johnletey",
+    "csandman",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating south on a compass or map",
+    "Indicating small size",
+    "Representing seconds in time contexts",
+    "Representing sulfur in scientific contexts",
+    "Indicating save actions",
+    "Representing siemens units in electrical contexts"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "south",
+    "small",
+    "size",
+    "second",
+    "time",
+    "sulfur",
+    "chemistry",
+    "save",
+    "siemens",
+    "electricity",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

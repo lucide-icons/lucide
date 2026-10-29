@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing scheduled emails or messages",
+    "Indicating a send later option in email clients",
+    "Showing delayed delivery in messaging and productivity tools"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "unread",
+    "scheduled",
+    "delayed",
+    "send later",
+    "delivery",
+    "reminder",
+    "pending",
+    "outgoing",
+    "timer"
+  ],
+  "categories": [
+    "text",
+    "account",
+    "mail",
+    "time",
+    "notifications",
+    "communication"
+  ]
+}

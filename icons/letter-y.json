@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing the Y-axis in charts or geometry",
+    "Indicating yes or confirmation",
+    "Representing years in date or time contexts",
+    "Representing Y chromosomes"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "y-axis",
+    "axis",
+    "yes",
+    "confirm",
+    "year",
+    "time",
+    "chromosome",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

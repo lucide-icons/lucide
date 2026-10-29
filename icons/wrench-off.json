@@ -8,8 +8,8 @@
     "nilsjonsson"
   ],
   "use-cases": [
-    "Indicates that a service or maintenance mode is disabled",
-    "Used on a button or toggle to turn service/maintenance mode off"
+    "Indicating that service or maintenance mode is disabled",
+    "Turning off service or maintenance mode with a button or toggle"
   ],
   "tags": [
     "account",

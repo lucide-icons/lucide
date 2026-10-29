@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing instrument tracks or guitar settings in music production software",
+    "Categorizing rock playlists or genres in music streaming apps",
+    "Highlighting rock concerts and music festivals on ticketing websites",
+    "Categorizing instruments and gear in online music stores",
+    "Tagging guitar lessons and tutorials in music education content"
+  ],
+  "tags": [
+    "acoustic",
+    "instrument",
+    "strings",
+    "riff",
+    "rock",
+    "band",
+    "country",
+    "concert",
+    "performance",
+    "play",
+    "lead",
+    "loud",
+    "music",
+    "audio",
+    "sound",
+    "noise"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

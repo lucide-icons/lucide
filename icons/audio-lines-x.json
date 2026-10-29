@@ -1,0 +1,55 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating muted, blocked, or unavailable audio playback",
+    "Showing that an audio track, waveform, or signal has been removed",
+    "Marking controls that disable sound, music, voice, or broadcast output",
+    "Representing cancelled recording, paused monitoring, or silenced audio analysis",
+    "Identifying error states for sound processing, voice activity, or media levels",
+    "Showing a device's speaker or system volume is turned off",
+    "Indicating a user's microphone or input is muted",
+    "Signaling muted notifications or alerts",
+    "Representing muted voice chat in conferencing or multiplayer games"
+  ],
+  "tags": [
+    "sound",
+    "noise",
+    "mute",
+    "silence",
+    "disabled",
+    "cancel",
+    "remove",
+    "unavailable",
+    "listen",
+    "hearing",
+    "equalizer",
+    "equaliser",
+    "hertz",
+    "frequency",
+    "wavelength",
+    "vibrate",
+    "sine",
+    "waveform",
+    "synthesizer",
+    "synthesiser",
+    "levels",
+    "track",
+    "music",
+    "playback",
+    "radio",
+    "broadcast",
+    "airwaves",
+    "voice",
+    "vocals",
+    "singer",
+    "song"
+  ],
+  "categories": [
+    "multimedia",
+    "communication"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing AI-assisted cleaning or automation features",
+    "Indicating spotless or freshly mopped surfaces",
+    "Showing automated mopping actions in smart home apps"
+  ],
+  "tags": [
+    "cleaning",
+    "scrubbing",
+    "sweeping",
+    "ai",
+    "magic",
+    "sparkle",
+    "smart",
+    "automation",
+    "housekeeping",
+    "hygiene",
+    "sanitation",
+    "chores",
+    "swab",
+    "tidy",
+    "floor",
+    "spotless",
+    "pristine",
+    "polish",
+    "sanitize",
+    "disinfect"
+  ],
+  "categories": [
+    "home",
+    "tools",
+    "design"
+  ]
+}

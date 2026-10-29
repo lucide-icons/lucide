@@ -39,7 +39,7 @@ function App() {
 ```vue
 <script setup>
 import { burger } from '@lucide/lab';
-import { Icon } from 'lucide-vue-next';
+import { Icon } from '@lucide/vue';
 </script>
 
 <template>
@@ -70,7 +70,7 @@ import { atSignCircle } from '@lucide/lab';
 
 ```svelte
 <script>
-import { Icon } from 'lucide-svelte';
+import { Icon } from '@lucide/svelte';
 import { burger, sausage } from '@lucide/lab';
 </script>
 

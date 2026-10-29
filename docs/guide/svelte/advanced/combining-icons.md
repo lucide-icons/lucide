@@ -2,6 +2,7 @@
 title: Combining icons - Svelte
 description: Learn how to combine multiple icons into a single icon nested SVG elements in your Svelte application.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
@@ -20,12 +21,12 @@ import User from '@lucide/svelte/icons/user';
 </script>
 
 <div class="app">
-  <Scan size="48">
+  <Scan size="48" nonScalingStroke>
     <User
       size="12"
       x="6"
       y="6"
-      absoluteStrokeWidth
+      nonScalingStroke
     />
   </Scan>
 </div>

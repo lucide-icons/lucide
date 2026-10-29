@@ -71,6 +71,7 @@
           "gaming",
           "home",
           "layout",
+          "letters-digits",
           "mail",
           "math",
           "medical",
@@ -141,7 +142,7 @@
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.renamed"]
+      "enum": ["icon.design", "icon.use-case"]
     },
     "aliasDeprecationReasons": {
       "type": "string",

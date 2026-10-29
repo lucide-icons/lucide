@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "tylerkade",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Adding luggage to a booking in travel apps",
+    "Adding a new business or company profile",
+    "Creating or saving a professional portfolio",
+    "Adding a job or role to a user profile",
+    "Saving a product or service listing for later"
+  ],
+  "tags": [
+    "work",
+    "bag",
+    "baggage",
+    "folder",
+    "new",
+    "add",
+    "create",
+    "increase",
+    "briefcase",
+    "portfolio",
+    "business",
+    "career",
+    "employment",
+    "professional",
+    "plus"
+  ],
+  "categories": [
+    "transportation",
+    "files",
+    "account"
+  ]
+}
