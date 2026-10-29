@@ -1,13 +1,17 @@
 [
   {
     "name": "Eric Fennis",
-    "title": "Creator of Lucide & Software engineer @nedap",
+    "title": "Creator & Maintainer of Lucide",
     "image": "https://github.com/ericfennis.png?size=192",
     "sponsor": "https://github.com/sponsors/ericfennis",
     "socialLinks": [
       {
         "icon": "github",
         "link": "https://github.com/ericfennis"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/ericfennis"
       },
       {
         "icon": "x",
@@ -32,7 +36,7 @@
   },
   {
     "name": "Jakob Guddas",
-    "title": "Maintainer of Lucide & Software engineer @LEGO",
+    "title": "Creator of Lucide Studio& Software engineer @LEGO",
     "image": "https://github.com/jguddas.png?size=192",
     "socialLinks": [
       {
