@@ -5,14 +5,18 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a document from a file manager",
+    "Removing an attachment from a form"
+  ],
   "tags": [
-    "delete",
-    "remove",
+    "$extends:file",
+    "$group:minus",
     "erase",
-    "document"
+    "discard",
+    "exclude"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

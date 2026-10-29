@@ -155,7 +155,7 @@ export default defineConfig([
     },
   },
   {
-    files: ['icons/*.json', 'categories/*.json'],
+    files: ['icons/*.json', 'categories/*.json', 'groups/*.json'],
     languageOptions: {
       parser: jsoncParser,
     },
@@ -173,6 +173,12 @@ export default defineConfig([
     files: ['categories/*.json'],
     rules: {
       'json-schema/no-invalid': ['error', { schema: 'category.schema.json' }],
+    },
+  },
+  {
+    files: ['groups/*.json'],
+    rules: {
+      'json-schema/no-invalid': ['error', { schema: 'group.schema.json' }],
     },
   },
 ]);

@@ -135,16 +135,20 @@ Write metadata for the specific variant:
 
 When a request covers several icons, assign each use case only to the icon it describes. Do not copy metadata to icons it does not describe.
 
-## Reusing metadata: `$extends:`
+## Reusing metadata: `$extends:` and `$group:`
 
-Variant icons do not have to repeat the metadata of the icon they are built on. A `$extends:<icon-name>` marker means **is a**: at build time it is replaced, in place, by the resolved `tags`, `categories` or `contributors` of that icon.
+Variant icons do not have to repeat the metadata they share with other icons. Two inline markers are resolved at build time and replaced, in place, by the values they stand for.
 
-`alarm-clock-minus` is an alarm clock:
+`$extends:<icon-name>` means **is a**. It pulls in the resolved `tags`, `categories` or `contributors` of the icon the variant is built on.
+
+`$group:<group-name>` means **does this**. It pulls in the tags of `groups/<group-name>.json`, a small reusable set of tags for one icon variant, named after its suffix (`plus`, `minus`, `check`, `off`…). It is only allowed in `tags`.
+
+`file-minus` is a file, and its `-minus` variant means "remove":
 
 ```json
 {
-  "tags": ["$extends:alarm-clock", "remove"],
-  "categories": ["$extends:alarm-clock"]
+  "tags": ["$extends:file", "$group:minus", "erase"],
+  "categories": ["$extends:file"]
 }
 ```
 
@@ -152,14 +156,14 @@ which resolves to:
 
 ```json
 {
-  "tags": ["morning", "remove"],
-  "categories": ["devices", "notifications", "time"]
+  "tags": ["document", "remove", "delete", "erase"],
+  "categories": ["files"]
 }
 ```
 
-Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Add the modifier's meaning as the icon's own tags instead.
+Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Reach for the variant's group instead (`$group:minus`), whose tags describe what the variant means rather than the glyph.
 
-Put the marker first, before the icon's own values, and never repeat a value the marker already provides — `pnpm checkIcons` fails on that.
+Order the entries base icon first, then groups, then the icon's own tags, and never repeat a value a marker already provides — `pnpm checkIcons` fails on that.
 
 ## Aliases
 
@@ -175,7 +179,7 @@ Before submitting metadata changes, validate the icon JSON files:
 pnpm run lint:json:icons
 ```
 
-`$extends:` markers are checked separately:
+`$extends:` and `$group:` markers are checked separately, together with the groups themselves:
 
 ```sh
 pnpm checkIcons
@@ -198,5 +202,5 @@ Before opening a pull request, confirm that:
 - Tags are lowercase and useful for search.
 - Categories are allowed by `icon.schema.json`.
 - Metadata is specific to the icon and its variants.
-- Reused metadata uses `$extends:` for the base icon, with no repeated values.
+- Reused metadata uses `$extends:` for the base icon and `$group:` for the modifier's meaning, with no repeated values.
 - `pnpm run lint:json:icons` and `pnpm checkIcons` pass.
