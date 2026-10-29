@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import Icon from '@lucide/vue/src/Icon';
+import Kbd from '../base/Kbd.vue';
 import { keyboard, x } from '~/.vitepress/data/iconNodes';
 
 const dialog = ref<HTMLDialogElement | null>(null);
@@ -11,8 +12,9 @@ const shortcuts = [
   { keys: ['Shift', 'Click'], description: 'Copy the SVG of an icon' },
   { keys: ['mod', 'Click'], description: 'Copy the name of an icon' },
   { keys: ['Arrow keys'], description: 'Move through the search results' },
+  { keys: ['Enter'], description: 'Open the selected icon' },
   { keys: ['mod', 'C'], description: 'Copy the name of the selected icon' },
-  { keys: ['mod', 'Shift', 'C'], description: 'Copy the SVG of the selected icon' },
+  { keys: ['Shift', 'C'], description: 'Copy the SVG of the selected icon' },
   { keys: ['Shift', '?'], description: 'Show keyboard shortcuts' },
 ];
 
@@ -121,14 +123,14 @@ onBeforeUnmount(() => {
               class="shortcut-plus"
               >+</span
             >
-            <kbd>{{ keyLabel(key) }}</kbd>
+            <Kbd>{{ keyLabel(key) }}</Kbd>
           </template>
           <template v-if="shortcut.alternative">
             <span class="shortcut-or">or</span>
-            <kbd
+            <Kbd
               v-for="key in shortcut.alternative"
               :key="key"
-              >{{ key }}</kbd
+              >{{ key }}</Kbd
             >
           </template>
         </dt>
@@ -239,20 +241,6 @@ onBeforeUnmount(() => {
   margin: 0;
   color: var(--vp-c-text-2);
   font-size: 14px;
-}
-
-kbd {
-  min-width: 24px;
-  padding: 2px 6px;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--vp-c-text-2);
-  background: var(--vp-c-default-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
 }
 
 .shortcut-plus,

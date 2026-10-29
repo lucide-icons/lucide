@@ -12,6 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
+import Toaster from './components/base/Toaster.vue';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -22,6 +23,7 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
+      'layout-bottom': () => h(Toaster),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),
     });
