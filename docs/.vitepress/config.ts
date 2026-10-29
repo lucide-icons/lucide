@@ -88,6 +88,7 @@ export default defineConfig({
           'index.md',
           'packages.md',
           'showcase.md',
+          'sponsor.md',
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
@@ -117,6 +118,7 @@ export default defineConfig({
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
