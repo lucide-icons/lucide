@@ -6,16 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "settings",
+    "$extends:folder",
+    "$group:cog",
     "control",
-    "preferences",
     "cog",
-    "edit",
-    "gear"
+    "edit"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ],
   "aliases": [
     {

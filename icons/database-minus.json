@@ -12,17 +12,13 @@
     "Reducing allocated database resources"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
+    "$extends:database",
+    "$group:minus",
     "server",
     "minus",
-    "remove",
-    "delete",
     "reduce"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

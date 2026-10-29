@@ -6,14 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
-    "remove"
+    "$extends:calendar-x"
   ],
   "categories": [
-    "time"
+    "$extends:calendar-x"
   ]
 }

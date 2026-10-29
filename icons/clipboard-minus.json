@@ -8,9 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "copy",
-    "delete",
-    "remove",
+    "$extends:clipboard",
+    "$group:minus",
     "erase",
     "document",
     "medical",
@@ -18,7 +17,7 @@
     "doctor"
   ],
   "categories": [
-    "text",
+    "$extends:clipboard",
     "medical"
   ]
 }

@@ -6,21 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "reading",
-    "library",
-    "study",
-    "education",
-    "research",
-    "knowledge",
-    "discover",
+    "$extends:book",
+    "$group:search",
     "browsing",
-    "lookup",
     "finding",
     "scanning"
   ],
   "categories": [
-    "text",
-    "development",
-    "gaming"
+    "$extends:book"
   ]
 }

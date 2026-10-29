@@ -7,23 +7,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-circle",
+    "$group:x",
     "clear",
     "close",
-    "delete",
-    "remove",
-    "cancel",
     "silence",
     "mute",
     "moderate"
   ],
   "categories": [
-    "account",
-    "social"
+    "$extends:message-circle",
+    "account"
   ]
 }

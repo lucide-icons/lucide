@@ -1,0 +1,21 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: turned off, disabled or unavailable",
+  "tags": [
+    "disabled",
+    "inactive",
+    "unavailable",
+    "deactivated",
+    "slash",
+    "blocked",
+    "ban",
+    "prohibited",
+    "forbidden",
+    "disallowed",
+    "hidden",
+    "invisible",
+    "strikethrough",
+    "crossed out",
+    "diagonal line"
+  ]
+}

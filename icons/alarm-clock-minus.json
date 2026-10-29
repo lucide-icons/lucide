@@ -14,11 +14,11 @@
     "$extends:alarm-clock",
     "$group:minus",
     "reminder",
-    "unschedule"
+    "unschedule",
+    "cancel"
   ],
   "categories": [
-    "$extends:alarm-clock",
-    "notifications"
+    "$extends:alarm-clock"
   ],
   "aliases": [
     {

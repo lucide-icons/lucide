@@ -8,10 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:banknote",
+    "$group:x",
     "bill",
-    "currency",
-    "money",
-    "payment",
     "funds",
     "transaction",
     "cash",
@@ -21,11 +20,9 @@
     "rejected",
     "canceled",
     "declined",
-    "lost",
-    "delete",
-    "remove"
+    "lost"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

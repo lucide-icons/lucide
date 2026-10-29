@@ -1,0 +1,16 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: warning or something that needs attention",
+  "tags": [
+    "warning",
+    "danger",
+    "caution",
+    "notice",
+    "error",
+    "risk",
+    "concern",
+    "hazard",
+    "exclamation mark",
+    "exclamation point"
+  ]
+}

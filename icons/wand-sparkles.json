@@ -5,15 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "magic",
+    "$extends:wand",
+    "$group:sparkles",
     "wizard",
     "magician"
   ],
   "categories": [
-    "design",
-    "gaming",
-    "cursors",
-    "photography"
+    "$extends:wand"
   ],
   "aliases": [
     {

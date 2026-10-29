@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "upload",
     "import",
     "export"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "arrows"
   ]
 }

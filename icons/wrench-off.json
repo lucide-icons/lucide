@@ -12,21 +12,13 @@
     "Turning off service or maintenance mode with a button or toggle"
   ],
   "tags": [
-    "account",
-    "settings",
-    "spanner",
-    "diy",
-    "toolbox",
-    "build",
-    "construction",
+    "$extends:wrench",
     "off",
     "service",
     "maintenance",
     "disabled"
   ],
   "categories": [
-    "account",
-    "development",
-    "tools"
+    "$extends:wrench"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Subject: a person or an account",
+  "tags": [
+    "person",
+    "account",
+    "contact",
+    "profile",
+    "member",
+    "client",
+    "participant",
+    "guest"
+  ]
+}

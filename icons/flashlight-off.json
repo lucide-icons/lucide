@@ -9,16 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "torch",
-    "light",
-    "beam",
-    "emergency",
-    "safety",
-    "tool",
-    "bright"
+    "$extends:flashlight"
   ],
   "categories": [
-    "photography",
-    "devices"
+    "$extends:flashlight"
   ]
 }

@@ -7,6 +7,7 @@
   "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
+    "$group:currency",
     "discount",
     "offer",
     "sale",
@@ -14,11 +15,8 @@
     "tag",
     "monetization",
     "marketing",
-    "finance",
     "financial",
     "exchange",
-    "transaction",
-    "payment",
     "€"
   ],
   "categories": [

@@ -16,7 +16,7 @@
     "Organizing personal contacts or address book entries"
   ],
   "tags": [
-    "directory",
+    "$extends:folder",
     "profile",
     "person",
     "personal",
@@ -30,7 +30,7 @@
     "owner"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "account",
     "social",
     "people",

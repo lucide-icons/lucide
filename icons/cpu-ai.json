@@ -40,8 +40,8 @@
     "chip"
   ],
   "categories": [
+    "$extends:cpu",
     "letters-digits",
-    "devices",
     "development"
   ]
 }

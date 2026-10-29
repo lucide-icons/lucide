@@ -7,15 +7,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:clipboard",
+    "$group:check",
     "copied",
     "pasted",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ]
 }

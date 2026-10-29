@@ -6,13 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
-    "sale",
-    "discount",
-    "offer",
+    "$extends:badge",
+    "$group:percent",
     "marketing",
-    "sticker",
     "price tag"
   ],
   "categories": [

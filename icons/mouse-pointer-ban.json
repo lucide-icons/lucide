@@ -13,7 +13,6 @@
     "freeze"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:mouse-pointer"
   ]
 }

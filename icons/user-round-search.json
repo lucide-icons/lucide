@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
+    "$extends:user-round",
     "find",
     "scan",
     "magnifier",
@@ -16,7 +14,7 @@
     "lens"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "social"
   ]
 }

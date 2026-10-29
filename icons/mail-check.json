@@ -6,17 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
+    "$extends:mail",
+    "$group:check",
     "subscribe",
     "delivered",
     "success",
     "read",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [

@@ -11,6 +11,8 @@
     "Indicating a file or document was saved automatically"
   ],
   "tags": [
+    "$extends:save",
+    "$group:check",
     "save",
     "save-check",
     "floppy-disk",
@@ -19,8 +21,7 @@
     "save-success"
   ],
   "categories": [
-    "text",
-    "files",
+    "$extends:save",
     "development"
   ]
 }

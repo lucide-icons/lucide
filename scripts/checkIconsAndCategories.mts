@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import path from 'path';
 import {
   readSvgDirectory,
@@ -126,25 +127,20 @@ Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   });
 });
 
-// Check if the icon has literal tags that could be replaced by group references.
+// An icon that lists every tag of a group as literals describes that group's
+// meaning by hand, so it should reference the group instead.
 Object.entries(rawIcons).forEach(([iconName, rawMetadata]) => {
   const tags = rawMetadata.tags ?? [];
-  const unreferencedGroups = Object.entries(groups).filter(
-    ([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`),
-  );
+  const literals = new Set(tags.filter((entry) => !isMarker(entry)));
 
-  tags
-    .filter((entry) => !isMarker(entry))
-    .forEach((tag) => {
-      const matchingMarkers = unreferencedGroups
-        .filter(([, groupTags]) => groupTags.includes(tag))
-        .map(([groupName]) => `"${GROUP_PREFIX}${groupName}"`);
-
-      if (matchingMarkers.length > 0) {
-        console.error(
-          `Icon '${iconName}': tag '${tag}' is in ${matchingMarkers.join(', ')} — consider using the group instead.`,
-        );
-      }
+  Object.entries(groups)
+    .filter(([groupName]) => !tags.includes(`${GROUP_PREFIX}${groupName}`))
+    .filter(([, groupTags]) => groupTags.every((tag) => literals.has(tag)))
+    .forEach(([groupName, groupTags]) => {
+      console.error(
+        `Icon '${iconName}': tags ${groupTags.map((tag) => `'${tag}'`).join(', ')} are all in group '${groupName}' — use "${GROUP_PREFIX}${groupName}" instead.`,
+      );
+      error = true;
     });
 });
 
@@ -158,6 +154,33 @@ Object.keys(categories).forEach((categoryName) => {
     error = true;
   }
 });
+
+// The schema lists every group as an enum so editors can autocomplete the
+// markers; it has to match the files in `groups/`.
+const iconSchema = JSON.parse(
+  await fs.readFile(path.resolve(currentDir, '../icon.schema.json'), 'utf-8'),
+);
+const schemaGroups = new Set<string>(
+  (iconSchema.$defs.groupMarker.enum as string[]).map((marker) =>
+    marker.slice(GROUP_PREFIX.length),
+  ),
+);
+
+Object.keys(groups)
+  .filter((groupName) => !schemaGroups.has(groupName))
+  .forEach((groupName) => {
+    console.error(`Group '${groupName}' is missing in icon.schema.json.`);
+    error = true;
+  });
+
+[...schemaGroups]
+  .filter((groupName) => typeof groups[groupName] === 'undefined')
+  .forEach((groupName) => {
+    console.error(
+      `'${GROUP_PREFIX}${groupName}' in icon.schema.json refers to the non-existing group 'groups/${groupName}.json'.`,
+    );
+    error = true;
+  });
 
 Object.keys(groups)
   .filter((groupName) => !usedGroups.has(groupName))

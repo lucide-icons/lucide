@@ -8,14 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "edit",
+    "$extends:wifi",
+    "$group:pen",
     "wifi",
     "pen",
-    "change",
     "network"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

@@ -6,13 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "h5",
-    "html",
-    "markup",
-    "markdown"
+    "$extends:letter-h",
+    "h5"
   ],
   "categories": [
-    "letters-digits",
-    "text"
+    "$extends:letter-h"
   ]
 }

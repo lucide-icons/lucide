@@ -1,0 +1,19 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: searching or finding something",
+  "tags": [
+    "find",
+    "lookup",
+    "query",
+    "locate",
+    "explore",
+    "discover",
+    "browse",
+    "inspect",
+    "examine",
+    "investigate",
+    "magnifying glass",
+    "lens",
+    "zoom"
+  ]
+}

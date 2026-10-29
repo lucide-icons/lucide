@@ -5,14 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:scan",
     "preview",
     "zoom",
     "expand",
     "fullscreen",
     "gallery",
-    "image",
-    "focus",
-    "lens"
+    "image"
   ],
   "categories": [
     "photography",

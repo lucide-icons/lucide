@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
+    "$extends:clock",
     "sort",
     "order",
     "ascending",
@@ -19,6 +17,6 @@
     "falling"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

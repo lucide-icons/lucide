@@ -12,6 +12,7 @@
     "Fast-forwarding through calendar views"
   ],
   "tags": [
+    "$extends:calendar",
     "navigation",
     "arrow",
     "direction",
@@ -20,14 +21,11 @@
     "indicator",
     "previous",
     "menu",
-    "date",
     "day",
-    "month",
-    "year",
     "events"
   ],
   "categories": [
-    "time",
+    "$extends:calendar",
     "arrows",
     "navigation"
   ]

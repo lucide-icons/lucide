@@ -5,12 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "north",
+    "$extends:arrow-up",
     "step",
     "out"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-up"
   ]
 }

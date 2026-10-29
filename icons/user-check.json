@@ -8,15 +8,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user",
+    "$group:check",
     "followed",
     "subscribed",
-    "done",
     "todo",
-    "tick",
-    "complete",
     "task"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

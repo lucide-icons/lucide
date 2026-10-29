@@ -5,18 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "computer",
-    "server",
-    "memory",
-    "data",
-    "ssd",
-    "disk",
-    "hard disk",
+    "$extends:hard-drive",
+    "$extends:upload",
     "save"
   ],
   "categories": [
-    "development",
-    "devices",
+    "$extends:hard-drive",
     "arrows",
     "files"
   ]

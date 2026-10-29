@@ -1,0 +1,18 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: done, completed or confirmed",
+  "tags": [
+    "done",
+    "complete",
+    "finished",
+    "successful",
+    "confirmed",
+    "verified",
+    "validated",
+    "approved",
+    "accepted",
+    "correct",
+    "valid",
+    "tick"
+  ]
+}

@@ -8,13 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "loading",
-    "wait",
-    "busy",
-    "progress",
-    "spinner",
-    "spinning",
-    "throbber",
+    "$extends:loader",
     "circle"
   ],
   "categories": [

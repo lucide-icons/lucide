@@ -5,11 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "floppy disk",
+    "$extends:save",
     "unsalvageable"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:save"
   ]
 }

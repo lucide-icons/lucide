@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
-    "delete",
-    "remove",
+    "$extends:badge",
+    "$group:minus",
     "erase"
   ],
   "categories": [

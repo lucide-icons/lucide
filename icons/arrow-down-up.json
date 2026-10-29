@@ -20,6 +20,6 @@
     "move"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-down"
   ]
 }

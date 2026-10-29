@@ -5,15 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:ticket",
     "discount",
     "reduced",
     "offer",
-    "voucher",
-    "entry",
-    "pass",
-    "event",
-    "concert",
-    "show",
     "book",
     "purchase",
     "%"

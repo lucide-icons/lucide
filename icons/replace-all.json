@@ -7,12 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "search",
-    "substitute",
-    "swap",
-    "change"
+    "$extends:replace"
   ],
   "categories": [
-    "text"
+    "$extends:replace"
   ]
 }

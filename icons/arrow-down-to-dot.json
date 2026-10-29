@@ -5,14 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "south",
+    "$extends:arrow-down",
     "waypoint",
     "location",
     "step",
     "into"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-down"
   ]
 }

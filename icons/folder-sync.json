@@ -6,16 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "synchronize",
-    "synchronise",
-    "refresh",
-    "reconnect",
+    "$extends:folder",
+    "$group:sync",
     "transfer",
     "backup"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "arrows"
   ]
 }

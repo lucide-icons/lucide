@@ -9,12 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "navigation",
-    "travel",
+    "$extends:map",
+    "$group:minus",
     "drop",
-    "delete",
-    "remove",
     "erase"
   ],
   "categories": [

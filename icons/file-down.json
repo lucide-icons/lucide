@@ -6,12 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "download",
-    "import",
-    "export"
+    "$extends:file",
+    "$extends:download",
+    "download"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "arrows"
   ]
 }

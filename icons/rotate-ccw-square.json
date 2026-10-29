@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "left",
-    "counter-clockwise",
+    "$extends:rotate-ccw",
     "rotate",
     "image",
     "90",
@@ -15,10 +14,8 @@
     "°"
   ],
   "categories": [
+    "$extends:rotate-ccw",
     "layout",
-    "design",
-    "photography",
-    "tools",
-    "arrows"
+    "tools"
   ]
 }

@@ -6,13 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:key",
     "key",
     "private",
-    "public",
-    "security"
+    "public"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "security"
   ],
   "aliases": [

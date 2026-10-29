@@ -5,12 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
+    "$group:x",
     "cancelled",
     "cancellation",
     "refunded",
@@ -24,8 +20,6 @@
     "barred",
     "forbidden",
     "prohibited",
-    "delete",
-    "remove",
     "clear",
     "error",
     "x"

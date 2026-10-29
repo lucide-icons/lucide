@@ -1,0 +1,23 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: access, credentials or passwords",
+  "tags": [
+    "password",
+    "security",
+    "access",
+    "credentials",
+    "unlock",
+    "permission",
+    "authentication",
+    "authorization",
+    "passkey",
+    "secret",
+    "token",
+    "API key",
+    "encryption",
+    "protection",
+    "privacy",
+    "license",
+    "ownership"
+  ]
+}

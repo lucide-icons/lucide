@@ -7,17 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
+    "$group:plus",
     "day",
-    "month",
-    "year",
-    "event",
-    "add",
-    "subscribe",
-    "create",
-    "new"
+    "subscribe"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

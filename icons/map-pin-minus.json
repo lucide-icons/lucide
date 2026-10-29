@@ -8,17 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
-    "drop",
-    "delete",
-    "remove",
+    "$extends:map-pin",
+    "$group:minus",
     "erase"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ]
 }

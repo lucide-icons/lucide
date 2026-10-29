@@ -9,29 +9,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "disabled",
-    "inactive",
+    "$extends:pencil",
+    "$group:off",
     "non-editable",
     "locked",
     "read-only",
     "unmodifiable",
     "frozen",
-    "restricted",
-    "rubber",
-    "edit",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
-    "stationery",
-    "artist"
+    "restricted"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
-    "text"
+    "$extends:pencil"
   ]
 }

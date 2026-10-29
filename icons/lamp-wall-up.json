@@ -7,13 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "lighting",
-    "household",
-    "wall",
-    "home",
-    "furniture"
+    "$extends:lamp",
+    "wall"
   ],
   "categories": [
-    "home"
+    "$extends:lamp"
   ]
 }

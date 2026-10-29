@@ -7,14 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark"
+    "$group:exclamation-mark",
+    "alert"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "$extends:octagon",
+    "notifications"
   ],
   "aliases": [
     {

@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "smile",
-    "happy",
-    "good",
+    "$extends:face-slightly-smiling",
+    "$extends:group",
     "react",
     "reaction",
-    "emoji",
-    "add",
-    "emotion"
+    "add"
   ],
   "categories": [
     "emoji",

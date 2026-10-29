@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
+    "$extends:book",
+    "$group:user",
     "people",
     "family",
     "friends",

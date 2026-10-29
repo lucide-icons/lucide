@@ -12,10 +12,9 @@
     "Highlighting the best user in a category"
   ],
   "tags": [
-    "person",
-    "account",
+    "$extends:user-round",
     "favorite",
-    "contact",
+    "favourite",
     "like",
     "review",
     "rating",
@@ -31,6 +30,6 @@
     "starred"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ]
 }

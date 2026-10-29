@@ -9,9 +9,10 @@
     "Indicating a protected user account"
   ],
   "tags": [
+    "$extends:user",
+    "$extends:shield",
     "user",
     "shield",
-    "admin",
     "protected",
     "guard",
     "profile",
@@ -21,7 +22,7 @@
     "role"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "security",
     "development",
     "people"

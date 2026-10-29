@@ -13,7 +13,7 @@
     "new"
   ],
   "categories": [
-    "multimedia",
-    "text"
+    "$extends:list",
+    "multimedia"
   ]
 }

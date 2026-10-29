@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "projects",
     "manage",
     "overview",
@@ -19,14 +20,13 @@
     "agile",
     "code",
     "coding",
-    "directory",
     "project",
     "root"
   ],
   "categories": [
+    "$extends:folder",
     "charts",
     "development",
-    "design",
-    "files"
+    "design"
   ]
 }

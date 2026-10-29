@@ -10,11 +10,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "weather",
-    "danger",
-    "warning",
+    "$extends:cloud",
+    "$group:exclamation-mark",
     "alert",
-    "error",
     "sync",
     "network",
     "exclamation"

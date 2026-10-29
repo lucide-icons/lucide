@@ -13,16 +13,13 @@
     "Displaying diagnostic or troubleshooting information"
   ],
   "tags": [
-    "warning",
+    "$group:exclamation-mark",
     "alert",
-    "danger",
-    "exclamation mark",
     "rectangle",
     "square",
     "notification",
     "attention",
-    "important",
-    "caution"
+    "important"
   ],
   "categories": [
     "notifications",

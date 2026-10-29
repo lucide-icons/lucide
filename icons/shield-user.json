@@ -8,12 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:shield",
+    "$group:user",
     "shield",
     "user",
-    "admin",
-    "protection",
     "protected",
-    "safety",
     "guard"
   ],
   "categories": [

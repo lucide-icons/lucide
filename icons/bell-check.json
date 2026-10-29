@@ -9,13 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "sound",
-    "reminder"
+    "$extends:bell"
   ],
   "categories": [
-    "account",
-    "notifications"
+    "$extends:bell"
   ]
 }

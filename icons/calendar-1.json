@@ -7,10 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
     "single",
     "singular",
     "once",
@@ -18,7 +15,7 @@
     "first"
   ],
   "categories": [
-    "letters-digits",
-    "time"
+    "$extends:calendar",
+    "letters-digits"
   ]
 }

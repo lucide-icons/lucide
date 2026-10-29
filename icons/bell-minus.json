@@ -7,12 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
+    "$extends:bell",
+    "$group:minus",
     "silent",
-    "reminder",
-    "delete",
-    "remove",
     "erase"
   ],
   "categories": [

@@ -7,15 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
+    "$extends:calendar",
+    "$group:search",
     "day",
-    "month",
-    "year",
     "events",
-    "search",
-    "lens"
+    "search"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

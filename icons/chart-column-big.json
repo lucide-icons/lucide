@@ -6,13 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$extends:chart-column"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-column"
   ],
   "aliases": [
     {

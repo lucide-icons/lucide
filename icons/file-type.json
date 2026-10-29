@@ -6,14 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "font",
     "text",
     "typography",
     "type"
   ],
   "categories": [
+    "$extends:file",
     "letters-digits",
-    "files",
     "text"
   ]
 }

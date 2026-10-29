@@ -7,12 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "settings",
+    "$extends:user",
+    "$group:cog",
     "edit",
-    "cog",
-    "gear"
+    "cog"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

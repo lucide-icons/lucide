@@ -8,9 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:panel-left",
     "sidebar",
-    "primary",
-    "drawer",
     "show",
     "reveal",
     "padding",
@@ -21,6 +20,6 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-left"
   ]
 }

@@ -7,14 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "primary",
-    "drawer",
+    "$extends:panel-left",
     "hide",
     "chevron",
     "<"
   ],
   "categories": [
-    "layout",
+    "$extends:panel-left",
     "arrows"
   ],
   "aliases": [

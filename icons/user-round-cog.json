@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "settings",
+    "$extends:user-round",
+    "$group:cog",
     "edit",
-    "cog",
-    "gear"
+    "cog"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {
