@@ -6,7 +6,8 @@
   "use-cases": [
     "Indicating that a website or domain is blocked",
     "Showing that a service is not available in a region",
-    "Disabling public or internet access for a resource"
+    "Disabling public or internet access for a resource",
+    "Applying parental controls or content filters to website access"
   ],
   "tags": [
     "globe",
@@ -19,7 +20,12 @@
     "restricted",
     "forbidden",
     "geo blocking",
-    "offline"
+    "offline",
+    "parental controls",
+    "content filter",
+    "geoblocking",
+    "region lock",
+    "public access"
   ],
   "categories": [
     "navigation",
