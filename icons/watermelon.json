@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ishanbagra18"
+  ],
+  "use-cases": [
+    "Food delivery, grocery, and recipe apps",
+    "Calorie, nutrition, and meal trackers",
+    "Summer, picnic, or seasonal fruit categories",
+    "Fruit machine and slot machine game themes"
+  ],
+  "tags": [
+    "fruit",
+    "melon",
+    "slice",
+    "food",
+    "snack",
+    "summer",
+    "produce",
+    "juicy",
+    "refreshment",
+    "lunch",
+    "juice",
+    "smoothie",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet",
+    "fruit machine",
+    "slots",
+    "gambling",
+    "jackpot"
+  ],
+  "categories": [
+    "food-beverage",
+    "gaming"
+  ]
+}
