@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "forward",
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
     "more than",
     "greater",

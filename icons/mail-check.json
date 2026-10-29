@@ -10,10 +10,7 @@
     "$group:check",
     "subscribe",
     "delivered",
-    "success",
-    "read",
-    "todo",
-    "task"
+    "read"
   ],
   "categories": [
     "mail"

@@ -17,11 +17,9 @@
   ],
   "tags": [
     "$extends:folder",
-    "profile",
+    "$group:user",
     "shared",
-    "people",
     "document",
-    "accounts",
     "group",
     "team",
     "permission",

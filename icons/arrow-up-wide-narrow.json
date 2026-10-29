@@ -5,14 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$group:direction-up",
+    "$group:sort"
   ],
   "categories": [
     "$extends:arrow-up",

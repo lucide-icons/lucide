@@ -15,12 +15,10 @@
   "tags": [
     "$group:clock",
     "log",
-    "clock",
     "recent",
     "updated",
     "revision",
     "activity",
-    "timestamp",
     "audit",
     "list"
   ],

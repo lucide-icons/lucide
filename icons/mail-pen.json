@@ -15,8 +15,6 @@
   "tags": [
     "$extends:mail",
     "$group:pen",
-    "pen",
-    "writing",
     "reply"
   ],
   "categories": [

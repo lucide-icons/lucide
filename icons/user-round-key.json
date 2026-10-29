@@ -10,16 +10,10 @@
   "use-cases": [],
   "tags": [
     "$extends:user-round",
-    "passkey",
-    "password",
+    "$group:key",
     "login",
-    "authentication",
-    "authorization",
     "roles",
-    "permissions",
-    "private",
-    "public",
-    "security"
+    "permissions"
   ],
   "categories": [
     "$extends:user-round"

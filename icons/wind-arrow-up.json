@@ -13,6 +13,7 @@
   ],
   "tags": [
     "$extends:wind",
+    "$group:direction-up",
     "pressure",
     "gust",
     "windy",

@@ -9,12 +9,9 @@
   "use-cases": [],
   "tags": [
     "$extends:globe",
+    "$group:check",
     "internet",
     "web",
-    "check",
-    "verified",
-    "success",
-    "valid",
     "available",
     "online",
     "status"

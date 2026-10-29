@@ -13,6 +13,7 @@
   ],
   "tags": [
     "$extends:credit-card",
+    "$group:x",
     "debit",
     "banking",
     "finance",
@@ -26,9 +27,7 @@
     "rejected",
     "failed",
     "invalid",
-    "canceled",
-    "error",
-    "cancel"
+    "error"
   ],
   "categories": [
     "$extends:credit-card",

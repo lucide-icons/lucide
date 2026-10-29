@@ -8,8 +8,6 @@
   "tags": [
     "$extends:message-square",
     "$group:x",
-    "clear",
-    "close",
     "silence",
     "mute",
     "moderate"

@@ -17,21 +17,14 @@
   ],
   "tags": [
     "$extends:wifi",
+    "$group:lock",
     "admin",
-    "secure",
-    "security",
-    "network",
-    "password",
     "hotspot",
-    "encrypted",
-    "locked",
-    "private",
     "ssid",
     "guest",
     "router",
     "access",
-    "authentication",
-    "protected"
+    "authentication"
   ],
   "categories": [
     "$extends:wifi",

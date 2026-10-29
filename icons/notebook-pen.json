@@ -7,7 +7,6 @@
   "tags": [
     "$extends:notebook",
     "$group:pen",
-    "pencil",
     "noted",
     "eraser",
     "rubber"

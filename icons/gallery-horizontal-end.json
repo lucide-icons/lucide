@@ -6,6 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:gallery-horizontal",
+    "$group:position-right",
     "history",
     "versions",
     "backup",

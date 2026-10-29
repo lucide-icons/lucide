@@ -10,7 +10,6 @@
   "tags": [
     "$extends:rotate-cw",
     "$group:clock",
-    "clock",
     "waiting",
     "hourglass",
     "loading",

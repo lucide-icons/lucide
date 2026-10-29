@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:panel-top",
+    "$group:position-bottom",
     "sidebar",
     "primary",
     "show",

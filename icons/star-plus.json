@@ -14,10 +14,8 @@
   ],
   "tags": [
     "$extends:star",
-    "plus",
-    "add",
-    "join",
-    "star"
+    "$group:plus",
+    "join"
   ],
   "categories": [
     "$extends:star"

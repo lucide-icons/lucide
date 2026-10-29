@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:image",
+    "$group:play",
     "gif"
   ],
   "categories": [

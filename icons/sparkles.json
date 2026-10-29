@@ -12,11 +12,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "stars",
+    "$group:sparkles",
     "effect",
     "filter",
-    "night",
-    "magic"
+    "night"
   ],
   "categories": [
     "cursors",

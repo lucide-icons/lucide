@@ -7,14 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:clock",
-    "sort",
-    "order",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$group:direction-up",
+    "$group:sort"
   ],
   "categories": [
     "$extends:clock"

@@ -9,11 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:banknote",
-    "bill",
-    "funds",
-    "transaction",
-    "cash",
-    "finance",
+    "$group:direction-down",
     "withdraw",
     "expense",
     "out",

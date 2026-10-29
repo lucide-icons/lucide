@@ -12,7 +12,7 @@
   ],
   "tags": [
     "$extends:alarm-clock",
-    "turn-off",
+    "$group:off",
     "silent",
     "silence",
     "disarmed",

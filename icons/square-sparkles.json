@@ -11,9 +11,9 @@
     "Representing generative AI image creation tools"
   ],
   "tags": [
+    "$group:sparkles",
     "picture",
-    "photo",
-    "sparkles"
+    "photo"
   ],
   "categories": [
     "photography",

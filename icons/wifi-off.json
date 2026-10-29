@@ -7,7 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:wifi",
-    "$group:off"
+    "$group:off",
+    "disconnected"
   ],
   "categories": [
     "$extends:wifi"

@@ -9,10 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:wifi",
-    "$group:pen",
-    "wifi",
-    "pen",
-    "network"
+    "$group:pen"
   ],
   "categories": [
     "$extends:wifi"

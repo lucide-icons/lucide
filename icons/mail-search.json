@@ -6,8 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:mail",
-    "$group:search",
-    "search"
+    "$group:search"
   ],
   "categories": [
     "mail"

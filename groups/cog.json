@@ -2,12 +2,19 @@
   "$schema": "../group.schema.json",
   "description": "Action: settings or configuration of something",
   "tags": [
-    "settings",
+    "cog",
+    "cogwheel",
     "gear",
+    "pinion",
+    "sprocket",
+    "settings",
     "configuration",
     "preferences",
     "options",
     "customization",
+    "controls",
+    "control panel",
+    "edit",
     "tools"
   ]
 }

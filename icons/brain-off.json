@@ -12,10 +12,7 @@
   ],
   "tags": [
     "$extends:brain",
-    "$group:off",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$group:off"
   ],
   "categories": [
     "$extends:brain",

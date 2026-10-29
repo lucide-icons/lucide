@@ -7,9 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:house",
-    "medical",
-    "new",
-    "addition"
+    "$group:plus",
+    "medical"
   ],
   "categories": [
     "buildings",

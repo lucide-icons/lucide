@@ -14,8 +14,7 @@
     "$extends:alarm-clock",
     "$group:minus",
     "reminder",
-    "unschedule",
-    "cancel"
+    "unschedule"
   ],
   "categories": [
     "$extends:alarm-clock"

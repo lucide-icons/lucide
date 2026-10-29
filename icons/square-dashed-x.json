@@ -16,9 +16,9 @@
   ],
   "tags": [
     "$extends:square-dashed",
+    "$group:x",
     "deselect",
     "unselect",
-    "delete",
     "select",
     "border",
     "width",

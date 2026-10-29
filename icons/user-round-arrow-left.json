@@ -13,6 +13,7 @@
   ],
   "tags": [
     "$extends:user-round",
+    "$group:direction-left",
     "assign",
     "move",
     "give",
@@ -20,7 +21,6 @@
     "self",
     "me",
     "myself",
-    "profile",
     "avatar",
     "incoming",
     "recipient",

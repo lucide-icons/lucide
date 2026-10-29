@@ -15,13 +15,11 @@
     "$extends:database",
     "$group:x",
     "server",
-    "x",
     "error",
     "failed",
     "invalid",
     "rejected",
     "denied",
-    "clear",
     "disconnect"
   ],
   "categories": [

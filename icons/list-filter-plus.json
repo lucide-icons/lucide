@@ -7,9 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:list-filter",
-    "filter",
-    "plus",
-    "add"
+    "$group:plus",
+    "filter"
   ],
   "categories": [
     "$extends:list-filter",

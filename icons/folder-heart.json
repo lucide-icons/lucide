@@ -7,7 +7,6 @@
   "tags": [
     "$extends:folder",
     "$group:heart",
-    "heart",
     "bookmark",
     "quick link"
   ],

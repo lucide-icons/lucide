@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "magnifying glass",
-    "plus"
+    "$group:plus",
+    "magnifying glass"
   ],
   "categories": [
     "accessibility",

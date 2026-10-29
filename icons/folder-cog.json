@@ -8,9 +8,7 @@
   "tags": [
     "$extends:folder",
     "$group:cog",
-    "control",
-    "cog",
-    "edit"
+    "control"
   ],
   "categories": [
     "$extends:folder"

@@ -8,8 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:clipboard",
-    "discard",
-    "remove"
+    "$group:x"
   ],
   "categories": [
     "$extends:clipboard"

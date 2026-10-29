@@ -7,7 +7,6 @@
   "tags": [
     "$extends:calendar",
     "$group:heart",
-    "heart",
     "subscribe",
     "valentines day"
   ],

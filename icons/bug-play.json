@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:bug",
+    "$group:play",
     "reproduce"
   ],
   "categories": [

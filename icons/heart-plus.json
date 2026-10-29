@@ -11,12 +11,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "plus",
-    "like",
-    "favorite",
-    "favourite",
-    "add",
-    "health",
+    "$group:heart",
+    "$group:plus",
     "support"
   ],
   "categories": [

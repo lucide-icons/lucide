@@ -7,9 +7,8 @@
   "use-cases": [],
   "tags": [
     "$extends:copy",
-    "add",
-    "expand",
-    "+"
+    "$group:plus",
+    "expand"
   ],
   "categories": [
     "$extends:copy",

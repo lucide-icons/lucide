@@ -7,9 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:bookmark",
-    "$group:check",
-    "task",
-    "todo"
+    "$group:check"
   ],
   "categories": [
     "$extends:bookmark"

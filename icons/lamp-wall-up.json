@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:lamp",
+    "$group:direction-up",
     "wall"
   ],
   "categories": [

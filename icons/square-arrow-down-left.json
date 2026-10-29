@@ -6,9 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:square-arrow-down",
-    "south-west",
-    "diagonal",
+    "$group:direction-down-left",
+    "sign",
+    "keyboard",
+    "button",
     "turn"
   ],
   "categories": [

@@ -8,7 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:mouse"
+    "$extends:mouse",
+    "$group:position-right"
   ],
   "categories": [
     "$extends:mouse"

@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-next",
     "backwards",
     "reverse",
     "slow",

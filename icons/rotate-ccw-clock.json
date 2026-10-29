@@ -14,8 +14,7 @@
   ],
   "tags": [
     "$extends:rotate-ccw",
-    "history",
-    "time",
+    "$group:clock",
     "timeline",
     "version",
     "time machine",

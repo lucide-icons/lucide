@@ -14,7 +14,6 @@
   ],
   "tags": [
     "$group:exclamation-mark",
-    "alert",
     "rectangle",
     "square",
     "notification",

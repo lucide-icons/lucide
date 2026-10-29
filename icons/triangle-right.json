@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-right",
     "volume",
     "controls",
     "controller",

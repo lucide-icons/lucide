@@ -7,9 +7,9 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-left",
+    "$group:direction-left",
     "expand",
     "fold",
-    "horizontal",
     "<-|"
   ],
   "categories": [

@@ -9,10 +9,8 @@
   "use-cases": [],
   "tags": [
     "$extends:search",
+    "$group:exclamation-mark",
     "stop",
-    "warning",
-    "alert",
-    "error",
     "anomaly"
   ],
   "categories": [

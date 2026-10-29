@@ -8,10 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:calendar",
-    "$group:clock",
-    "day",
-    "clock",
-    "hour"
+    "$group:clock"
   ],
   "categories": [
     "$extends:calendar"

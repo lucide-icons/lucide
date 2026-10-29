@@ -6,11 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:plus",
     "playlist",
-    "add",
     "song",
-    "track",
-    "new"
+    "track"
   ],
   "categories": [
     "$extends:list",

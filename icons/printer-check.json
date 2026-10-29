@@ -9,7 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:printer",
-    "success",
+    "$group:check",
     "printed"
   ],
   "categories": [

@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:wind",
+    "$group:direction-down",
     "pressure"
   ],
   "categories": [

@@ -11,10 +11,7 @@
   ],
   "tags": [
     "$extends:play",
-    "off",
-    "disabled",
-    "blocked",
-    "forbidden"
+    "$group:off"
   ],
   "categories": [
     "multimedia"

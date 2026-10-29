@@ -6,7 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:locate"
+    "$extends:locate",
+    "$group:off"
   ],
   "categories": [
     "$extends:locate"

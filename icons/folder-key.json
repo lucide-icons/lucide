@@ -6,10 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "$group:key",
-    "key",
-    "private",
-    "protected"
+    "$group:key"
   ],
   "categories": [
     "$extends:folder",

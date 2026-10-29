@@ -5,6 +5,7 @@
     "currency",
     "money",
     "cash",
+    "banknote",
     "funds",
     "finance",
     "payment",
@@ -20,6 +21,13 @@
     "amount",
     "revenue",
     "income",
-    "expense"
+    "expense",
+    "banking",
+    "exchange",
+    "financial",
+    "economy",
+    "pricing",
+    "prices",
+    "monetization"
   ]
 }

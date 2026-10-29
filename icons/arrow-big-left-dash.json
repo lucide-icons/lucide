@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-big-left",
+    "$group:direction-left",
     "turn",
     "corner"
   ],

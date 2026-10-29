@@ -13,10 +13,7 @@
   "tags": [
     "$extends:alarm-clock",
     "$group:check",
-    "todo",
-    "task",
     "reminder",
-    "schedule",
     "wake-up"
   ],
   "categories": [

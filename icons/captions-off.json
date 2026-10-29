@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:captions"
+    "$extends:captions",
+    "$group:off"
   ],
   "categories": [
     "$extends:captions"

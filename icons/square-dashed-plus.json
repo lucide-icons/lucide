@@ -16,12 +16,9 @@
   ],
   "tags": [
     "$extends:square-dashed",
+    "$group:plus",
     "select",
-    "add",
-    "new",
     "placeholder",
-    "plus",
-    "insert",
     "frame",
     "empty"
   ],

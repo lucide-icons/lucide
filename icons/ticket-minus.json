@@ -7,11 +7,8 @@
   "tags": [
     "$extends:ticket",
     "$group:minus",
-    "cancel",
     "unbook",
-    "subtract",
-    "decrease",
-    "-"
+    "decrease"
   ],
   "categories": [
     "transportation"

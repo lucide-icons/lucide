@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:link-2",
+    "$group:off",
     "unchain"
   ],
   "categories": [

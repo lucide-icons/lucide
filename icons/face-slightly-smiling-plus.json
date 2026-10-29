@@ -8,9 +8,9 @@
   "tags": [
     "$extends:face-slightly-smiling",
     "$extends:group",
+    "$group:plus",
     "react",
-    "reaction",
-    "add"
+    "reaction"
   ],
   "categories": [
     "emoji",

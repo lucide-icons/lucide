@@ -12,14 +12,12 @@
   ],
   "tags": [
     "$extends:mail",
+    "$group:clock",
     "scheduled",
-    "delayed",
     "send later",
     "delivery",
     "reminder",
-    "pending",
-    "outgoing",
-    "timer"
+    "outgoing"
   ],
   "categories": [
     "$extends:mail",

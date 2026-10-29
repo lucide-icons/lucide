@@ -13,7 +13,6 @@
   "tags": [
     "$extends:users-round",
     "collaboration",
-    "users",
     "team",
     "communication",
     "cooperative",
@@ -23,8 +22,7 @@
     "shared",
     "delegation",
     "handoff",
-    "coauthor",
-    "profiles"
+    "coauthor"
   ],
   "categories": [
     "$extends:users-round",

@@ -6,11 +6,10 @@
   "use-cases": [],
   "tags": [
     "$extends:route",
+    "$group:off",
     "reset",
     "clear",
-    "cancelled",
-    "closed",
-    "blocked"
+    "closed"
   ],
   "categories": [
     "$extends:route"

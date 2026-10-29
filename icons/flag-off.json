@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:flag",
+    "$group:off",
     "unflag",
     "unmark"
   ],

@@ -8,10 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:brain",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$extends:brain"
   ],
   "categories": [
     "science",

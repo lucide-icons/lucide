@@ -6,10 +6,8 @@
   "use-cases": [],
   "tags": [
     "$extends:search",
-    "found",
-    "correct",
-    "complete",
-    "tick"
+    "$group:check",
+    "found"
   ],
   "categories": [
     "$extends:search"

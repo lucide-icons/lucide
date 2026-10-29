@@ -14,8 +14,6 @@
     "$extends:database",
     "$group:plus",
     "server",
-    "plus",
-    "insert",
     "expand"
   ],
   "categories": [

@@ -7,8 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:file-minus",
-    "$group:minus"
+    "$extends:file-minus"
   ],
   "categories": [
     "$extends:file-minus"

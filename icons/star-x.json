@@ -14,16 +14,13 @@
   ],
   "tags": [
     "$extends:star",
+    "$group:x",
     "mark",
     "symbol",
     "shape",
     "vector",
     "design",
-    "graphic",
-    "x",
-    "cancel",
-    "reject",
-    "star"
+    "graphic"
   ],
   "categories": [
     "$extends:star"

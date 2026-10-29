@@ -13,6 +13,8 @@
   "use-cases": [],
   "tags": [
     "$extends:list",
+    "$group:direction-down",
+    "$group:direction-up",
     "items",
     "collapse",
     "expand",
@@ -25,8 +27,7 @@
     "more",
     "less",
     "fold",
-    "unfold",
-    "vertical"
+    "unfold"
   ],
   "categories": [
     "$extends:list",

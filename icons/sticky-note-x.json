@@ -9,8 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:sticky-note",
-    "$group:x",
-    "close"
+    "$group:x"
   ],
   "categories": [
     "$extends:sticky-note"

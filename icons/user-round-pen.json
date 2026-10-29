@@ -9,9 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:user-round",
-    "profile",
-    "edit",
-    "change"
+    "$group:pen"
   ],
   "categories": [
     "$extends:user-round"

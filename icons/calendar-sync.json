@@ -10,7 +10,6 @@
   "tags": [
     "$extends:calendar",
     "$group:sync",
-    "repeat",
     "transfer",
     "backup",
     "subscribe",

@@ -7,10 +7,11 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-up",
+    "$group:direction-up",
+    "$group:navigation-first",
     "upload",
     "collapse",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
     "$extends:arrow-up",

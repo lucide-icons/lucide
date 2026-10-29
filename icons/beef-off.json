@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:beef",
+    "$group:off",
     "vegetarian"
   ],
   "categories": [

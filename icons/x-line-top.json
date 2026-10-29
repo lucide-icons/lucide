@@ -24,7 +24,6 @@
     "x̄"
   ],
   "categories": [
-    "$extends:x",
-    "letters-digits"
+    "$extends:x"
   ]
 }

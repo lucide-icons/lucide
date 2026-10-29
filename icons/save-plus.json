@@ -12,11 +12,9 @@
   ],
   "tags": [
     "$extends:save",
+    "$group:plus",
     "save",
-    "plus",
-    "add",
-    "update",
-    "create"
+    "update"
   ],
   "categories": [
     "$extends:save"

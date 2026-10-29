@@ -7,6 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:panel-top",
+    "$group:direction-down",
     "menu bar",
     "show",
     "reveal",

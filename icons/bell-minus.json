@@ -9,8 +9,7 @@
   "tags": [
     "$extends:bell",
     "$group:minus",
-    "silent",
-    "erase"
+    "silent"
   ],
   "categories": [
     "notifications"

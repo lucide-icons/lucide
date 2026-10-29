@@ -7,13 +7,14 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-right",
+    "$group:direction-right",
+    "$group:navigation-last",
     "tab",
     "keyboard",
     "mac",
     "indent",
     "collapse",
     "fold",
-    "horizontal",
     "->|"
   ],
   "categories": [

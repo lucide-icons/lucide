@@ -5,7 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:square-dashed-bottom"
+    "$extends:square-dashed-bottom",
+    "$group:code"
   ],
   "categories": [
     "$extends:square-dashed-bottom"

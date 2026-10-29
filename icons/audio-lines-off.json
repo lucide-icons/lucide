@@ -17,12 +17,10 @@
   ],
   "tags": [
     "$extends:audio-lines",
+    "$group:off",
     "audio",
     "mute",
     "silence",
-    "off",
-    "disabled",
-    "inactive",
     "equalizer",
     "equaliser",
     "waveform"

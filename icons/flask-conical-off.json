@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:flask-conical",
+    "$group:off",
     "non toxic"
   ],
   "categories": [

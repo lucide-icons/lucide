@@ -8,7 +8,6 @@
   "tags": [
     "$extends:file",
     "$group:heart",
-    "heart",
     "bookmark",
     "quick link"
   ],

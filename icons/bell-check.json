@@ -9,7 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:bell"
+    "$extends:bell",
+    "$group:check"
   ],
   "categories": [
     "$extends:bell"

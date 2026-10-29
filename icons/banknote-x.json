@@ -10,15 +10,9 @@
   "tags": [
     "$extends:banknote",
     "$group:x",
-    "bill",
-    "funds",
-    "transaction",
-    "cash",
-    "finance",
     "error",
     "failed",
     "rejected",
-    "canceled",
     "declined",
     "lost"
   ],

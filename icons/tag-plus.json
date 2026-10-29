@@ -14,8 +14,7 @@
   ],
   "tags": [
     "$extends:tag",
-    "$group:plus",
-    "+"
+    "$group:plus"
   ],
   "categories": [
     "$extends:tag"

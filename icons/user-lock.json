@@ -7,8 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:user",
-    "$group:lock",
-    "lock"
+    "$group:lock"
   ],
   "categories": [
     "$extends:user",

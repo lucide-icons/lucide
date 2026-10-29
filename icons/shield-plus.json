@@ -8,8 +8,6 @@
   "tags": [
     "$extends:shield",
     "$group:plus",
-    "extra",
-    "added",
     "professional",
     "enterprise",
     "full",
@@ -18,8 +16,7 @@
     "ultra",
     "activate",
     "enable",
-    "medic",
-    "+"
+    "medic"
   ],
   "categories": [
     "account",

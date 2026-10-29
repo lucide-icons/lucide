@@ -9,10 +9,8 @@
   "use-cases": [],
   "tags": [
     "$extends:sticky-note",
-    "disabled",
-    "hidden",
-    "mute",
-    "inactive"
+    "$group:off",
+    "mute"
   ],
   "categories": [
     "$extends:sticky-note"

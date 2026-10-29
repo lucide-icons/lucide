@@ -7,10 +7,10 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-right",
+    "$group:direction-right",
     "export",
     "expand",
     "fold",
-    "horizontal",
     "|->"
   ],
   "categories": [

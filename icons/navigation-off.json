@@ -6,7 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:navigation"
+    "$extends:navigation",
+    "$group:off"
   ],
   "categories": [
     "$extends:navigation"

@@ -9,6 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-big-down",
+    "$group:direction-down",
     "slow",
     "download"
   ],

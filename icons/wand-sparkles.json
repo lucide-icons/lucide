@@ -5,10 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:wand",
-    "$group:sparkles",
-    "wizard",
-    "magician"
+    "$extends:wand"
   ],
   "categories": [
     "$extends:wand"

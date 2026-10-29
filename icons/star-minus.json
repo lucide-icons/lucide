@@ -13,10 +13,8 @@
   ],
   "tags": [
     "$extends:star",
-    "minus",
-    "remove",
-    "deselect",
-    "star"
+    "$group:minus",
+    "deselect"
   ],
   "categories": [
     "$extends:star"

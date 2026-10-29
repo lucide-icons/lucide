@@ -29,11 +29,7 @@
     "plain language",
     "true",
     "truth",
-    "corrected",
-    "task",
-    "todo",
-    "completed",
-    "ticked"
+    "corrected"
   ],
   "categories": [
     "$extends:book"

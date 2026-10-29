@@ -9,6 +9,9 @@
     "update",
     "reconnect",
     "retry",
-    "renew"
+    "renew",
+    "rerun",
+    "repeat",
+    "cycle"
   ]
 }

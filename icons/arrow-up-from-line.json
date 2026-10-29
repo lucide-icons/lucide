@@ -7,13 +7,13 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-up",
+    "$group:direction-up",
     "upload",
     "git",
     "version control",
     "push",
     "expand",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
     "$extends:arrow-up",

@@ -10,8 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:wifi",
-    "synchronize",
-    "reconnect",
+    "$group:sync",
     "reset",
     "restart"
   ],

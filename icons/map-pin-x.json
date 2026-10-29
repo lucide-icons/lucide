@@ -9,8 +9,7 @@
   "use-cases": [],
   "tags": [
     "$extends:map-pin",
-    "$group:x",
-    "erase"
+    "$group:x"
   ],
   "categories": [
     "$extends:map-pin"

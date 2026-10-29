@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "add",
-    "new",
-    "increase",
-    "increment",
+    "$group:plus",
     "positive",
     "calculate",
     "calculator",
@@ -18,13 +15,11 @@
     "toolbar",
     "maximum",
     "upgrade",
-    "extra",
     "operator",
     "join",
     "concatenate",
     "code",
-    "coding",
-    "+"
+    "coding"
   ],
   "categories": [
     "math",

@@ -4,6 +4,8 @@
     "ocavue"
   ],
   "tags": [
+    "$group:position-bottom",
+    "$group:position-right",
     "mouse",
     "grab",
     "handle",

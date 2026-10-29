@@ -12,6 +12,7 @@
   ],
   "tags": [
     "$extends:toothbrush",
+    "$group:sparkles",
     "fresh",
     "clean"
   ],

@@ -2,6 +2,7 @@
   "$schema": "../group.schema.json",
   "description": "Status: featured or marked as favorite",
   "tags": [
+    "starred",
     "featured",
     "favorite",
     "favourite",
@@ -17,6 +18,7 @@
     "quality",
     "award",
     "achievement",
-    "excellence"
+    "excellence",
+    "like"
   ]
 }

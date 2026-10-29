@@ -14,6 +14,7 @@
     "Marking auto-generated clips from live streams or long recordings"
   ],
   "tags": [
+    "$group:play",
     "short clips",
     "shorts",
     "reels",
@@ -22,7 +23,6 @@
     "highlights",
     "social media",
     "content",
-    "preview",
     "teaser",
     "clip",
     "short form",

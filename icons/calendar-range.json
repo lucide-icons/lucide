@@ -7,7 +7,6 @@
   "use-cases": [],
   "tags": [
     "$extends:calendar",
-    "day",
     "range",
     "period"
   ],

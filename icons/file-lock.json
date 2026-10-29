@@ -8,9 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "$group:lock",
-    "lock",
-    "password"
+    "$group:lock"
   ],
   "categories": [
     "$extends:file",

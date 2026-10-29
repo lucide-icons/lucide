@@ -8,14 +8,8 @@
   "use-cases": [],
   "tags": [
     "$extends:calendar",
-    "sort",
-    "order",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$group:direction-up",
+    "$group:sort"
   ],
   "categories": [
     "$extends:calendar"

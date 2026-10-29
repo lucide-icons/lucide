@@ -6,6 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:arrow-down",
+    "$group:direction-down",
     "waypoint",
     "location",
     "step",

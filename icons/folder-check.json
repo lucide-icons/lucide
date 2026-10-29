@@ -7,9 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:folder",
-    "$group:check",
-    "todo",
-    "task"
+    "$group:check"
   ],
   "categories": [
     "$extends:folder"

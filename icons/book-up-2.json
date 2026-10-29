@@ -6,6 +6,7 @@
   "use-cases": [],
   "tags": [
     "$extends:book-up",
+    "$group:direction-up",
     "force"
   ],
   "categories": [
