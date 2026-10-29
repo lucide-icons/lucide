@@ -13,6 +13,7 @@
     "$group:lock"
   ],
   "categories": [
-    "$extends:message-square"
+    "$extends:message-square",
+    "security"
   ]
 }

@@ -26,9 +26,6 @@
   ],
   "categories": [
     "$extends:folder",
-    "account",
-    "social",
-    "people",
-    "security"
+    "account"
   ]
 }

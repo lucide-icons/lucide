@@ -16,6 +16,8 @@
     "network"
   ],
   "categories": [
-    "development"
+    "development",
+    "notifications",
+    "weather"
   ]
 }

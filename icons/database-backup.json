@@ -16,9 +16,6 @@
     "left"
   ],
   "categories": [
-    "$extends:database",
-    "arrows",
-    "design",
-    "photography"
+    "$extends:database"
   ]
 }

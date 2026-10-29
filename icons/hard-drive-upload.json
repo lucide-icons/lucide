@@ -10,8 +10,6 @@
     "save"
   ],
   "categories": [
-    "$extends:hard-drive",
-    "arrows",
-    "files"
+    "$extends:hard-drive"
   ]
 }

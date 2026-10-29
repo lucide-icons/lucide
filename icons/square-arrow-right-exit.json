@@ -16,8 +16,6 @@
   ],
   "categories": [
     "$extends:square-arrow-right",
-    "shapes",
-    "layout",
-    "multimedia"
+    "account"
   ]
 }

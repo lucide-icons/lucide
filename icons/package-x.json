@@ -11,6 +11,7 @@
     "$group:x"
   ],
   "categories": [
-    "development"
+    "development",
+    "files"
   ]
 }

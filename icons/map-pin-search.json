@@ -15,7 +15,6 @@
     "travel"
   ],
   "categories": [
-    "$extends:map-pin",
-    "text"
+    "$extends:map-pin"
   ]
 }

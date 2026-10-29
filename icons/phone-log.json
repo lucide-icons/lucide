@@ -20,7 +20,7 @@
     "information"
   ],
   "categories": [
-    "communication"
+    "$extends:phone"
   ],
   "use-cases": [
     "Reviewing recent incoming and outgoing calls",

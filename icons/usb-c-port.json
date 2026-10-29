@@ -19,7 +19,6 @@
     "output"
   ],
   "categories": [
-    "$extends:usb",
-    "gaming"
+    "$extends:usb"
   ]
 }

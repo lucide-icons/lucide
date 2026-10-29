@@ -13,7 +13,6 @@
     "moderate"
   ],
   "categories": [
-    "$extends:message-square",
-    "account"
+    "$extends:message-square"
   ]
 }

@@ -9,6 +9,6 @@
     "$group:direction-up-left"
   ],
   "categories": [
-    "$extends:move-up"
+    "$extends:move"
   ]
 }

@@ -13,6 +13,7 @@
     "picture"
   ],
   "categories": [
-    "$extends:file"
+    "$extends:file",
+    "photography"
   ]
 }

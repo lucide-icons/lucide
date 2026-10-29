@@ -13,6 +13,6 @@
   ],
   "categories": [
     "notifications",
-    "math"
+    "$extends:copy"
   ]
 }

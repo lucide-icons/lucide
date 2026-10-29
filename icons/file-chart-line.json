@@ -10,7 +10,8 @@
     "$extends:chart-line"
   ],
   "categories": [
-    "$extends:file"
+    "$extends:file",
+    "charts"
   ],
   "aliases": [
     {

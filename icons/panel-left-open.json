@@ -16,8 +16,7 @@
     ">"
   ],
   "categories": [
-    "$extends:panel-left",
-    "arrows"
+    "$extends:panel-left"
   ],
   "aliases": [
     {

@@ -28,7 +28,8 @@
     "transmission"
   ],
   "categories": [
-    "$extends:mic"
+    "$extends:mic",
+    "connectivity"
   ],
   "aliases": [
     {

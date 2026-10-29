@@ -29,8 +29,6 @@
     "date picker"
   ],
   "categories": [
-    "time",
-    "arrows",
-    "navigation"
+    "$extends:calendar"
   ]
 }

@@ -26,7 +26,6 @@
   "categories": [
     "$extends:equal-approximately",
     "development",
-    "charts",
     "science"
   ]
 }

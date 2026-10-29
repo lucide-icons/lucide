@@ -14,7 +14,8 @@
     "presentation"
   ],
   "categories": [
-    "$extends:file"
+    "$extends:file",
+    "charts"
   ],
   "aliases": [
     {

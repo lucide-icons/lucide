@@ -9,6 +9,7 @@
     "$extends:list"
   ],
   "categories": [
-    "$extends:list"
+    "$extends:list",
+    "layout"
   ]
 }

@@ -26,8 +26,6 @@
     "signal off"
   ],
   "categories": [
-    "$extends:globe",
-    "connectivity",
-    "devices"
+    "$extends:globe"
   ]
 }

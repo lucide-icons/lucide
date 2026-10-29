@@ -19,7 +19,6 @@
   "categories": [
     "$extends:tablet",
     "design",
-    "development",
-    "tools"
+    "development"
   ]
 }

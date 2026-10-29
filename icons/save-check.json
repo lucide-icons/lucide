@@ -20,7 +20,6 @@
     "save-success"
   ],
   "categories": [
-    "$extends:save",
-    "development"
+    "$extends:save"
   ]
 }

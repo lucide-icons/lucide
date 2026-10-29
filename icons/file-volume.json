@@ -13,6 +13,7 @@
     "volume"
   ],
   "categories": [
-    "$extends:file"
+    "$extends:file",
+    "multimedia"
   ]
 }

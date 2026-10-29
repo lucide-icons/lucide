@@ -12,7 +12,6 @@
     "$extends:phone"
   ],
   "categories": [
-    "arrows",
     "connectivity",
     "devices",
     "communication"

@@ -14,8 +14,6 @@
     "°"
   ],
   "categories": [
-    "$extends:rotate-cw",
-    "layout",
-    "tools"
+    "$extends:rotate-cw"
   ]
 }

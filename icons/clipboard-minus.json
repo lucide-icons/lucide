@@ -16,7 +16,6 @@
     "doctor"
   ],
   "categories": [
-    "$extends:clipboard",
-    "medical"
+    "$extends:clipboard"
   ]
 }

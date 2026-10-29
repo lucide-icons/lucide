@@ -30,7 +30,6 @@
     "unfold"
   ],
   "categories": [
-    "$extends:list",
-    "arrows"
+    "$extends:list"
   ]
 }

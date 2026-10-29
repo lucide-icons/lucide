@@ -8,7 +8,6 @@
     "$extends:git-pull-request-create"
   ],
   "categories": [
-    "$extends:git-pull-request-create",
-    "arrows"
+    "$extends:git-pull-request-create"
   ]
 }

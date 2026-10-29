@@ -13,7 +13,6 @@
     "export"
   ],
   "categories": [
-    "$extends:file",
-    "arrows"
+    "$extends:file"
   ]
 }

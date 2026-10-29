@@ -10,7 +10,6 @@
     "$extends:clipboard"
   ],
   "categories": [
-    "$extends:clipboard",
-    "arrows"
+    "$extends:clipboard"
   ]
 }

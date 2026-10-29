@@ -15,8 +15,6 @@
     "unassign"
   ],
   "categories": [
-    "$extends:clock",
-    "people",
-    "arrows"
+    "$extends:clock"
   ]
 }

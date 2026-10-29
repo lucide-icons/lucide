@@ -15,7 +15,6 @@
     "control"
   ],
   "categories": [
-    "$extends:wifi",
-    "files"
+    "$extends:wifi"
   ]
 }

@@ -12,7 +12,7 @@
     "button"
   ],
   "categories": [
-    "$extends:square-arrow-up"
+    "arrows"
   ],
   "aliases": [
     {

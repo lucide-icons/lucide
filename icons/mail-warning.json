@@ -11,6 +11,7 @@
     "delivery error"
   ],
   "categories": [
-    "mail"
+    "mail",
+    "notifications"
   ]
 }

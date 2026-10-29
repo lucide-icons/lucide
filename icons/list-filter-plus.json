@@ -11,7 +11,6 @@
     "filter"
   ],
   "categories": [
-    "$extends:list-filter",
-    "layout"
+    "$extends:list-filter"
   ]
 }

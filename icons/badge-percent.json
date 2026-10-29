@@ -10,7 +10,6 @@
     "$group:percent"
   ],
   "categories": [
-    "social",
     "finance",
     "shopping",
     "math"
