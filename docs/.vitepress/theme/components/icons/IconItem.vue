@@ -38,17 +38,31 @@ const href = computed(() =>
   props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
 );
 
+async function copyToClipboard(text: string) {
+  await navigator.clipboard.writeText(text);
+
+  confettiText.value = copiedText;
+  confetti();
+}
+
+function copySVG(iconButton: HTMLElement) {
+  const svgString = getSVGIcon(iconButton.querySelector('svg'), {
+    class: `lucide lucide-${props.name}`,
+  });
+
+  return copyToClipboard(svgString);
+}
+
 async function navigateToIcon(event) {
   if (event.shiftKey) {
     event.preventDefault();
-    const svgString = getSVGIcon(event.target.firstChild, {
-      class: `lucide lucide-${props.name}`,
-    });
+    await copySVG(event.currentTarget);
+    return;
+  }
 
-    await navigator.clipboard.writeText(svgString);
-
-    confettiText.value = copiedText;
-    confetti();
+  if (event.ctrlKey || event.metaKey) {
+    event.preventDefault();
+    await copyToClipboard(props.name);
     return;
   }
 
@@ -76,6 +90,23 @@ async function navigateToIcon(event) {
   }
 }
 
+// On a selected (focused) icon: Ctrl/Cmd + C copies its name, Ctrl/Cmd + Shift + C its SVG
+async function handleKeydown(event: KeyboardEvent) {
+  if (!(event.ctrlKey || event.metaKey) || event.key.toLowerCase() !== 'c') return;
+
+  if (event.shiftKey) {
+    event.preventDefault();
+    await copySVG(event.currentTarget as HTMLElement);
+    return;
+  }
+
+  // Leave a normal copy alone when some text on the page is selected
+  if (window.getSelection()?.toString()) return;
+
+  event.preventDefault();
+  await copyToClipboard(props.name);
+}
+
 const DiamondIcon = createLucideIcon('Diamond', diamond);
 </script>
 
@@ -83,7 +114,9 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
   <Tooltip :title="name">
     <a
       class="icon-button confetti-button vp-raw"
+      tabindex="0"
       @click="navigateToIcon"
+      @keydown="handleKeydown"
       :class="{ active, animate }"
       :aria-label="name"
       :data-confetti-text="confettiText"
@@ -186,8 +219,13 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
   background-color: var(--vp-button-alt-active-bg);
 }
 
-.icon-button.active {
+.icon-button.active,
+.icon-button:focus-visible {
   border-color: var(--vp-c-brand);
+}
+
+.icon-button:focus-visible {
+  outline: none;
 }
 
 .lucide-icon {
