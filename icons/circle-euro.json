@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Guido3000"
+  ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [
+    "Selecting euro in currency selector buttons",
+    "Displaying prices in euros on pricing badges"
+  ],
+  "tags": [
+    "symbol",
+    "economy",
+    "banking",
+    "europe",
+    "€",
+    "euro",
+    "currency",
+    "money",
+    "payment",
+    "coin",
+    "finance",
+    "financial",
+    "exchange"
+  ],
+  "categories": [
+    "shopping",
+    "finance"
+  ]
+}

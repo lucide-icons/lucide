@@ -2,8 +2,12 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jamiemlaw"
+    "jamiemlaw",
+    "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",
@@ -15,7 +19,6 @@
     "₺"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "finance"
   ]
 }

@@ -5,6 +5,7 @@
     "vichotech",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "letters",
@@ -13,6 +14,7 @@
     "typography"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "development"
   ]

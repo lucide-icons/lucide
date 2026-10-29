@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing a half note in music notation"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "sound",
+    "note",
+    "crotchet",
+    "minim",
+    "quarter note"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "music-3",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

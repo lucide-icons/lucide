@@ -4,12 +4,14 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "verified",
     "unverified",
     "help"
   ],
   "categories": [
+    "letters-digits",
     "account",
     "accessibility",
     "social"

@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "Detecting or selecting objects in a camera or AR viewfinder",
+    "Selecting shapes or regions in design or image editors",
+    "Indicating camera scan mode or a live scanning area",
+    "Marking the crop area for square thumbnails",
+    "Representing a region of interest for OCR or barcode capture",
+    "Visualizing detected objects in augmented reality overlays",
+    "Toggling scanning in camera or scanner apps"
+  ],
+  "tags": [
+    "scan",
+    "square",
+    "detect",
+    "recognition",
+    "select",
+    "frame",
+    "object",
+    "viewfinder",
+    "capture",
+    "shape",
+    "boundary",
+    "camera",
+    "scanner",
+    "overlay",
+    "focus",
+    "crop",
+    "marker"
+  ],
+  "categories": [
+    "photography",
+    "design",
+    "development"
+  ]
+}

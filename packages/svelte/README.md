@@ -10,9 +10,9 @@ Lucide icon library for Svelte 5 applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
+  [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/@lucide/svelte)
   ![NPM Downloads](https://img.shields.io/npm/dw/%40lucide%2Fsvelte)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
@@ -20,14 +20,14 @@ Lucide icon library for Svelte 5 applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  <a href="https://lucide.dev/guide/svelte">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Implementation of the Lucide icon library for svelte applications.
 
 ## Installation
 
@@ -47,6 +47,8 @@ yarn add @lucide/svelte
 bun add @lucide/svelte
 ```
 
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the [`lucide-svelte`](https://www.npmjs.com/package/lucide-svelte) package.
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-svelte)
@@ -59,15 +61,35 @@ Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintaine
 
 Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
+[//]: <> (Sponsors)
+
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+
+
+[//]: <> (Sponsor tiers start)
+
+### Hero Backer 🦸
+
+<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="64" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
+<a href="https://opencollective.com/zephyr-cloud"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" height="64" alt="Zephyr Cloud" /></a>
 
 ### Awesome backers 🍺
 
-<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="64" alt="Pax Historia" /></a>
+<a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="64" alt="pdfme – Free and Open source PDF generation library!" /></a>
+
+### Backer ☕️
+
+<a href="https://www.fina.money"><img src="https://lucide.dev/sponsors/fina-money.png" height="64" alt="Fina Money – Build the most flexible finance tracker" /></a>
+<a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="64" alt="Ruud" /></a>
+
+[//]: <> (Sponsor tiers end)
+
+### Other contributors 💸
+
+You can find all our past and non-recurring financial contributors at [our Open Collective page](https://opencollective.com/lucide-icons).

@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Sorting table columns in ascending order",
+    "Reordering a list from lowest to highest or A to Z"
+  ],
+  "tags": [
+    "list",
+    "order",
+    "arrangement",
+    "organization",
+    "sequence",
+    "ranking",
+    "categories",
+    "presentation",
+    "filter",
+    "sort",
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}

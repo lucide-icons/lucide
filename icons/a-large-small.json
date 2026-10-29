@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "use-cases": [
+    "Indicating large and small text sizes",
+    "Adjusting text size in text editors",
+    "Indicating heading and body text styles"
+  ],
   "contributors": [
     "it-is-not",
     "jguddas",
@@ -15,6 +20,7 @@
     "formatting"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "design"
   ]

@@ -4,12 +4,14 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "paste",
     "format",
     "text"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

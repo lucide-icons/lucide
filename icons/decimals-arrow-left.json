@@ -4,6 +4,7 @@
     "AnnaSasDev",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "numerical",
     "decimal",
@@ -18,6 +19,7 @@
     "number"
   ],
   "categories": [
+    "letters-digits",
     "design",
     "text",
     "arrows",

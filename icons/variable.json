@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "coding",
@@ -20,6 +21,7 @@
     ")"
   ],
   "categories": [
+    "letters-digits",
     "development",
     "math"
   ]

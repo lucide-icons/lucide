@@ -6,11 +6,13 @@
     "csandman",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "format"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

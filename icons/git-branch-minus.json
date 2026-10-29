@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joris-gallot"
+  ],
+  "use-cases": [],
+  "tags": [
+    "code",
+    "version control",
+    "vcs",
+    "repository",
+    "delete",
+    "remove",
+    "-"
+  ],
+  "categories": [
+    "development"
+  ]
+}

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "dictionary",
     "define",
@@ -44,6 +45,7 @@
     "ordered"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "gaming"
   ]

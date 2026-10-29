@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "h1",
     "html",
@@ -10,6 +11,7 @@
     "markdown"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

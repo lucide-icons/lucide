@@ -5,6 +5,7 @@
     "johnletey",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
     "cross out",
     "delete",
@@ -12,6 +13,7 @@
     "format"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

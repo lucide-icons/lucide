@@ -6,6 +6,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "mention",
     "at",
@@ -14,6 +15,7 @@
     "@"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "account"
   ]

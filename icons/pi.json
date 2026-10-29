@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "constant",
     "code",
@@ -15,6 +16,7 @@
     "formula"
   ],
   "categories": [
+    "letters-digits",
     "development",
     "math"
   ]

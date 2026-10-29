@@ -5,11 +5,13 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "number",
     "document"
   ],
   "categories": [
+    "letters-digits",
     "files",
     "development"
   ]

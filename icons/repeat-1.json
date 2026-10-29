@@ -3,10 +3,12 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "replay"
   ],
   "categories": [
+    "letters-digits",
     "multimedia"
   ]
 }

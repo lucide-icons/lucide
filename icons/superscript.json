@@ -4,11 +4,13 @@
     "nabanita-sarkar",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "exponent"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

@@ -34,7 +34,13 @@ export default function useScrollToCategory({
     }
   }
 
-  watch(selectedCategory, scrollToSelectedCategory);
+  watch(selectedCategory, (value) => {
+    if (value) {
+      scrollToSelectedCategory(value);
+    } else {
+      scrollTo(0);
+    }
+  });
 
   onMounted(() => {
     setTimeout(() => {
@@ -43,7 +49,11 @@ export default function useScrollToCategory({
   });
 
   watch(searchQueryDebounced, () => {
-    scrollTo(0);
+    if (selectedCategory.value) {
+      scrollToSelectedCategory(selectedCategory.value);
+    } else {
+      scrollTo(0);
+    }
   });
 
   watch(categories, (items) => {

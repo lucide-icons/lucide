@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "font",
@@ -11,6 +12,7 @@
     "alternatives"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

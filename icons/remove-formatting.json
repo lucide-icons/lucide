@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "font",
@@ -15,6 +16,7 @@
     "clear"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

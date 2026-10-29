@@ -4,6 +4,7 @@
     "ericfennis",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "tv",
     "movie",
@@ -17,6 +18,7 @@
     "accessibility"
   ],
   "categories": [
+    "letters-digits",
     "accessibility",
     "multimedia"
   ]

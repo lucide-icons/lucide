@@ -4,12 +4,14 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "font",
     "typography"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

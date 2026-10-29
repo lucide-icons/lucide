@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "october-learns"
+  ],
+  "tags": [
+    "/",
+    "not",
+    "slash",
+    "off",
+    "disabled",
+    "inactive",
+    "cancel",
+    "none",
+    "block",
+    "forbidden",
+    "unavailable",
+    "stopped",
+    "checkbox",
+    "unchecked",
+    "toggle",
+    "negation",
+    "form",
+    "ui"
+  ],
+  "categories": [
+    "shapes",
+    "design"
+  ],
+  "use-cases": [
+    "Indicating a disabled or unavailable state",
+    "Marking something as blocked or prohibited",
+    "Showing a deactivated interface element",
+    "Representing a closed or inactive component"
+  ]
+}

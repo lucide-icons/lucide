@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "spelling",
     "error",
@@ -16,6 +17,7 @@
     "a"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "development"
   ]

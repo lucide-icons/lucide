@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "jamiemlaw",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Marking content as sponsored",
+    "Linking to an advertise-with-us page"
+  ],
+  "tags": [
+    "advert",
+    "affiliate",
+    "brand",
+    "campaign",
+    "commercial",
+    "marketing",
+    "monetize",
+    "paid",
+    "partner",
+    "promo",
+    "sponsor",
+    "audio description",
+    "video description",
+    "described video",
+    "visual description"
+  ],
+  "categories": [
+    "letters-digits",
+    "multimedia",
+    "accessibility",
+    "notifications"
+  ]
+}

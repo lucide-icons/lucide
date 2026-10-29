@@ -3,11 +3,13 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "licence",
     "license"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

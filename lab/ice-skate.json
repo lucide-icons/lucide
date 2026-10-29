@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "skates",
+    "ice rink",
+    "figure skating",
+    "speed skating",
+    "boots",
+    "shoes",
+    "footwear",
+    "winter"
+  ],
+  "categories": [
+    "sports",
+    "seasons"
+  ]
+}

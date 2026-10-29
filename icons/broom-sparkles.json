@@ -1,0 +1,44 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing AI-assisted sweeping or cleaning automation",
+    "Indicating spotless or freshly swept floors",
+    "Showing automated sweeping actions in smart home apps",
+    "Representing enchanted brooms or Halloween themes"
+  ],
+  "tags": [
+    "broomstick",
+    "brush",
+    "sweep",
+    "sweeping",
+    "floor",
+    "cleaning",
+    "ai",
+    "magic",
+    "sparkle",
+    "smart",
+    "automation",
+    "housekeeping",
+    "chores",
+    "tidy",
+    "spotless",
+    "pristine",
+    "dust",
+    "debris",
+    "bristles",
+    "handle",
+    "janitor",
+    "maintenance",
+    "witch",
+    "halloween"
+  ],
+  "categories": [
+    "tools",
+    "home",
+    "gaming"
+  ]
+}

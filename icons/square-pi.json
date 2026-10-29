@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "constant",
     "code",
@@ -14,6 +15,7 @@
     "formula"
   ],
   "categories": [
+    "letters-digits",
     "development",
     "math"
   ],
@@ -21,8 +23,7 @@
     {
       "name": "pi-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

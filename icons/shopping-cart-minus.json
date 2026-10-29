@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ajay199210",
+    "jguddas",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Removing products from a shopping cart",
+    "Updating order contents in ecommerce apps",
+    "Indicating fewer items in a purchase"
+  ],
+  "tags": [
+    "trolley",
+    "cart",
+    "basket",
+    "e-commerce",
+    "ecommerce",
+    "store",
+    "purchase",
+    "products",
+    "items",
+    "checkout",
+    "order",
+    "retail",
+    "remove",
+    "decrease",
+    "quantity",
+    "subtract"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}

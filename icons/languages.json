@@ -5,10 +5,12 @@
     "mittalyashu",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
     "translate"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

@@ -1,11 +1,13 @@
 ---
+title: Packages
+description: Discover the various packages available in the Lucide ecosystem.
 layout: page
 outline: 2
 outlineTitle: Packages
 ---
 <script setup>
-import PageContainer from '.vitepress/theme/components/PageContainer.vue'
-import PackageList from '.vitepress/theme/components/packages/PackageList.vue'
+import PageContainer from '~/.vitepress/theme/components/PageContainer.vue'
+import PackageList from '~/.vitepress/theme/components/packages/PackageList.vue'
 </script>
 
 <div class="VPDoc content">

@@ -1,0 +1,54 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating that a resource or area is protected and requires authorized access",
+    "Representing access control and permission management settings",
+    "Showing security options for accounts, applications, or protected systems",
+    "Indicating content or functionality restricted to authenticated users",
+    "Representing authentication and secure sign-in features",
+    "Showing protected credentials, secrets, or other sensitive information",
+    "Representing identity and account protection features",
+    "Indicating security policies or authorization requirements"
+  ],
+  "tags": [
+    "cybersecurity",
+    "secure",
+    "safety",
+    "protection",
+    "defense",
+    "defence",
+    "defender",
+    "block",
+    "threat",
+    "prevention",
+    "antivirus",
+    "vigilance",
+    "vigilant",
+    "detection",
+    "scan",
+    "find",
+    "strength",
+    "strong",
+    "tough",
+    "invincible",
+    "invincibility",
+    "invulnerable",
+    "undamaged",
+    "audit",
+    "admin",
+    "verification",
+    "crest",
+    "bravery",
+    "trooper",
+    "pawn"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "files"
+  ]
+}

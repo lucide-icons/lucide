@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "digits",
@@ -14,6 +15,7 @@
     "boolean"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "development"
   ]

@@ -4,6 +4,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "h3",
     "html",
@@ -11,6 +12,7 @@
     "markdown"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

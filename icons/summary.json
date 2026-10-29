@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jpjacobpadilla",
+    "jguddas",
+    "ajokt123"
+  ],
+  "use-cases": [
+    "Summarizing content with AI",
+    "Summarizing long email threads",
+    "Turning meeting transcripts into summaries",
+    "Summarizing articles or long documents"
+  ],
+  "tags": [
+    "brief",
+    "abstract",
+    "synopsis",
+    "report",
+    "digest",
+    "outline",
+    "recap",
+    "condensation",
+    "summary",
+    "ai",
+    "text",
+    "overview"
+  ],
+  "categories": [
+    "text"
+  ]
+}

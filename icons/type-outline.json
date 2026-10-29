@@ -5,6 +5,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "font",
@@ -16,6 +17,7 @@
     "line"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }
