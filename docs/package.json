@@ -51,7 +51,7 @@
     "svg-path-commander": "^2.3.3",
     "svg-pathdata": "^9.0.0",
     "svgson": "^5.3.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-group-icons": "^1.7.6",
     "vitepress-plugin-llms": "^1.13.5",

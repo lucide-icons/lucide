@@ -48,10 +48,10 @@
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^6.0.10",
     "@vue/test-utils": "2.5.1",
-    "rollup": "^4.63.1",
+    "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
     "vue": "^3.5.44"
   },
   "peerDependencies": {

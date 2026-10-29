@@ -79,10 +79,10 @@
     "react-dom": "19.3.1",
     "react-native": "^0.88.0",
     "react-native-svg": "^15.15.5",
-    "rollup": "^4.63.1",
+    "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.3"
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
     "@types/react": "*",

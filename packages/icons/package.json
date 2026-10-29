@@ -66,11 +66,11 @@
     "@rollup/plugin-replace": "^6.0.3",
     "@testing-library/jest-dom": "^7.0.1",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.63.1",
+    "rollup": "^4.65.0",
     "rollup-plugin-dts": "^6.5.1",
     "rollup-plugin-preserve-directives": "^0.4.0",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
     "vitest": "5.0.3"
   }
 }

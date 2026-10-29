@@ -20,8 +20,8 @@
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/browser-playwright": "5.0.3",
     "playwright": "1.58.2",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
     "vitest": "5.0.3",
     "vitest-browser-react": "2.3.0"
   }
