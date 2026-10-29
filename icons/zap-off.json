@@ -12,6 +12,7 @@
     "$group:off"
   ],
   "categories": [
-    "$extends:zap"
+    "photography",
+    "devices"
   ]
 }
