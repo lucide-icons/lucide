@@ -8,15 +8,11 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation"
+    "$extends:chart-pie"
   ],
   "categories": [
     "$extends:file",
-    "charts"
+    "$extends:chart-pie"
   ],
   "aliases": [
     {
