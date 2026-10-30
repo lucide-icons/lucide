@@ -7,9 +7,7 @@
   "use-cases": [],
   "tags": [
     "$extends:chart-bar",
-    "multivariate",
-    "categorical",
-    "comparison"
+    "multivariate"
   ],
   "categories": [
     "$extends:chart-bar"
