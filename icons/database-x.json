@@ -14,7 +14,6 @@
   "tags": [
     "$extends:database",
     "$group:x",
-    "server",
     "error",
     "failed",
     "invalid",

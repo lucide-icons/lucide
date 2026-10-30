@@ -13,7 +13,6 @@
   "tags": [
     "$extends:database",
     "$group:plus",
-    "server",
     "expand"
   ],
   "categories": [

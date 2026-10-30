@@ -12,6 +12,7 @@
     "Showing linked inventory units in logistics workflows"
   ],
   "tags": [
+    "$group:graph",
     "cubes",
     "package",
     "module",
@@ -19,8 +20,6 @@
     "link",
     "chain",
     "blockchain",
-    "network",
-    "nodes",
     "supply chain",
     "integration",
     "component",

@@ -13,6 +13,7 @@ import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExte
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
 import { setupTracking } from './utils/openpanel';
+import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -34,6 +35,10 @@ const theme: Partial<Theme> = {
     app.component('SnackPlayer', SnackPlayer);
 
     setupTracking(router);
+
+    if (!import.meta.env.SSR) {
+      trackUnderlineDirection();
+    }
   },
 };
 

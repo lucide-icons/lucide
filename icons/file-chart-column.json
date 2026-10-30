@@ -7,15 +7,11 @@
   "use-cases": [],
   "tags": [
     "$extends:file",
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation"
+    "$extends:chart-column"
   ],
   "categories": [
     "$extends:file",
-    "charts"
+    "$extends:chart-column"
   ],
   "aliases": [
     {

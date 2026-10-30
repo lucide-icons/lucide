@@ -14,10 +14,7 @@
   "tags": [
     "$extends:database",
     "$group:direction-up",
-    "server",
-    "import",
     "upload",
-    "backup",
     "push",
     "upscale"
   ],
