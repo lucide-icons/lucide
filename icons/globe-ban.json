@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Indicating that a website or domain is blocked",
+    "Showing that a service is not available in a region",
+    "Disabling public or internet access for a resource",
+    "Applying parental controls or content filters to website access"
+  ],
+  "tags": [
+    "globe",
+    "world",
+    "internet",
+    "web",
+    "website",
+    "blocked",
+    "banned",
+    "restricted",
+    "forbidden",
+    "geo blocking",
+    "offline",
+    "parental controls",
+    "content filter",
+    "geoblocking",
+    "region lock",
+    "public access"
+  ],
+  "categories": [
+    "navigation",
+    "connectivity",
+    "security"
+  ]
+}
