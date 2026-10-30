@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "picture",
-    "photo"
+    "$extends:image",
+    "$group:off"
   ],
   "categories": [
     "photography",

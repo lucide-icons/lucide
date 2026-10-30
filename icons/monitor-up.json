@@ -7,16 +7,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "screen",
-    "display",
+    "$extends:monitor",
+    "$group:direction-up",
     "upload",
     "connect",
     "remote",
-    "screen share"
+    "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

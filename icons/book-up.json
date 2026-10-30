@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:direction-up",
     "code",
     "coding",
     "version control",

@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing teams in account interfaces",
+    "Representing communities in social apps",
+    "Showing group membership status",
+    "Managing multiple users in admin interfaces"
+  ],
+  "tags": [
+    "$extends:user",
+    "group",
+    "team",
+    "community",
+    "membership",
+    "collaboration",
+    "organization",
+    "directory",
+    "staff",
+    "family",
+    "ancestry",
+    "ancestors",
+    "lineage",
+    "parents"
+  ],
+  "categories": [
+    "$extends:user",
+    "people",
+    "social"
+  ]
+}

@@ -6,15 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "beer",
-    "brewery",
-    "drink",
+    "$extends:hop",
+    "$group:off",
     "hop free",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:hop"
   ]
 }

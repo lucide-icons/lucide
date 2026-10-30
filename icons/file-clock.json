@@ -7,12 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "history",
-    "log",
-    "clock"
+    "$extends:file",
+    "$group:clock",
+    "log"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "time"
   ]
 }

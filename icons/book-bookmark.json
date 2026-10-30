@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:book",
+    "dictionary",
+    "saved",
+    "later",
+    "future",
+    "reference",
+    "index",
+    "code",
+    "coding",
+    "version control",
+    "git",
+    "repository"
+  ],
+  "categories": [
+    "$extends:book"
+  ],
+  "aliases": [
+    {
+      "name": "book-marked",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

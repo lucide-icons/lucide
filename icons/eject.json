@@ -6,11 +6,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "eject removable media",
-    "unmount external storage",
-    "optical disc drive",
-    "media player controls",
-    "hardware controls"
+    "Ejecting removable media or optical discs",
+    "Unmounting external storage devices",
+    "Ejecting media in media player controls",
+    "Representing eject buttons on hardware controls"
   ],
   "tags": [
     "disc",

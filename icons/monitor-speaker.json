@@ -6,12 +6,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "devices",
+    "$extends:monitor",
     "connect",
-    "cast"
+    "cast",
+    "audio",
+    "sound",
+    "volume",
+    "presentation"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor",
+    "connectivity"
   ]
 }

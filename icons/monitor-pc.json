@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing desktop computer setups",
+    "Showing workstation or gaming PC devices",
+    "Identifying personal computers in device lists",
+    "Managing computer hardware in IT dashboards"
+  ],
+  "tags": [
+    "$extends:monitor",
+    "$extends:pc-case"
+  ],
+  "categories": [
+    "devices",
+    "development",
+    "gaming"
+  ]
+}

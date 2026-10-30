@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking explicit content",
+    "Indicating east on a compass or map",
+    "Representing an empty state",
+    "Representing energy in scientific contexts",
+    "Indicating a grade or rating"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "explicit",
+    "content rating",
+    "east",
+    "empty",
+    "energy",
+    "grade",
+    "rating"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

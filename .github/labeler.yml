@@ -23,12 +23,18 @@
       - any-glob-to-any-file:
           - 'icons/*.json'
           - categories/*
+          - groups/*
 
 # For changes or added icons
 🎨 icon:
   - changed-files:
       - any-glob-to-any-file:
           - 'icons/*.svg'
+
+🔬 Lab icon:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'lab/*.svg'
 
 # For changes in the lucide package
 🧳 lucide package:
@@ -77,6 +83,7 @@
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-solid/*'
+          - 'packages/solid/*'
 
 # For changes in the Lucide astro package
 🚀 astro package:

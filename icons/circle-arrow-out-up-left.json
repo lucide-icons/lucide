@@ -5,17 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up-left",
     "outwards",
-    "direction",
-    "north-west",
-    "diagonal",
     "keyboard",
     "button",
     "escape"
   ],
   "categories": [
-    "arrows",
-    "development"
+    "arrows"
   ],
   "aliases": [
     {

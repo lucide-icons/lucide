@@ -6,13 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "music",
-    "audio",
-    "sound",
+    "$extends:file",
+    "$extends:headphones",
     "headphones"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "multimedia"
   ],
   "aliases": [
     {

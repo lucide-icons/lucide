@@ -8,14 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "bill",
-    "currency",
-    "money",
-    "payment",
-    "funds",
-    "transaction",
-    "cash",
-    "finance",
+    "$extends:banknote",
+    "$group:direction-up",
     "deposit",
     "earnings",
     "income",
@@ -26,6 +20,6 @@
     "increase"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

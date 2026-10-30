@@ -8,22 +8,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:arrow-big-up",
+    "$group:direction-up",
     "caps lock",
     "capitals",
-    "keyboard",
-    "button",
-    "mac",
-    "forward",
-    "direction",
-    "north",
     "faster",
     "speed",
     "boost"
   ],
   "categories": [
-    "arrows",
-    "text",
-    "development",
-    "gaming"
+    "$extends:arrow-big-up"
   ]
 }

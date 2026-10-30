@@ -7,22 +7,16 @@
     "rrod497"
   ],
   "use-cases": [
-    "removing a database instance",
-    "deleting or detaching a database connection",
-    "reducing allocated database resources"
+    "Removing a database instance",
+    "Deleting or detaching a database connection",
+    "Reducing allocated database resources"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "server",
-    "minus",
-    "remove",
-    "delete",
-    "reduce"
+    "$extends:database",
+    "$group:minus",
+    "server"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking registered trademark references",
+    "Indicating right direction or alignment",
+    "Indicating reverse gear in vehicles",
+    "Representing resistance in electrical contexts",
+    "Representing radius in geometry",
+    "Indicating ratings or reviews"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "registered trademark",
+    "trademark",
+    "right",
+    "reverse",
+    "gear",
+    "resistance",
+    "electricity",
+    "radius",
+    "geometry",
+    "rating",
+    "review"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

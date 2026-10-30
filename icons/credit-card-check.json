@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Confirming a saved payment card is valid",
+    "Indicating an approved card payment during checkout",
+    "Verifying a payment method in billing settings",
+    "Showing successful card authorization in banking apps"
+  ],
+  "tags": [
+    "$extends:credit-card",
+    "$group:check",
+    "debit",
+    "banking",
+    "finance",
+    "transaction",
+    "wallet",
+    "checkout",
+    "billing",
+    "account",
+    "cardholder",
+    "authorized"
+  ],
+  "categories": [
+    "$extends:credit-card",
+    "shopping"
+  ]
+}

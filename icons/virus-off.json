@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating no malware threats in security tools",
+    "Showing cleared infections in healthcare apps",
+    "Marking reduced infection risk in health dashboards",
+    "Representing blocked pathogens in science content"
+  ],
+  "tags": [
+    "$extends:virus",
+    "$group:off",
+    "antivirus",
+    "removed",
+    "clean",
+    "safe",
+    "prevention",
+    "quarantine"
+  ],
+  "categories": [
+    "$extends:virus"
+  ]
+}

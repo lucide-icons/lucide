@@ -9,10 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences"
+    "$group:cog"
   ],
   "categories": [
     "account"

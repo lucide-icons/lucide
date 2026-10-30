@@ -9,9 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "virtual machine",
+    "$extends:monitor",
     "virtual desktop",
-    "vm",
     "vdi",
     "computing",
     "remote work",
@@ -20,14 +19,10 @@
     "software as a service",
     "saas",
     "workstation",
-    "environment",
-    "tv",
-    "screen",
-    "display"
+    "environment"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:monitor",
     "development"
   ]
 }
