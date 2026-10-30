@@ -19,7 +19,7 @@ iconJsonFiles.forEach((iconJsonFile) => {
   const iconName = path.basename(iconJsonFile, '.json');
 
   iconMetaIndexFileImports.push(
-    `import ${toCamelCase(iconName)}Metadata from '../../../icons/${iconName}.json';`,
+    `import ${toCamelCase(iconName)}Metadata from '../../../icons/${iconName}.json' with { type: 'json' };`,
   );
   iconMetaIndexFileExports.push(`  '${iconName}': ${toCamelCase(iconName)}Metadata,`);
 });

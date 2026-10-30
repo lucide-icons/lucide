@@ -179,6 +179,9 @@ function scrollTrack(direction: 1 | -1) {
   padding-right: 24px;
   scroll-padding-right: 24px;
   scrollbar-width: thin;
+  scroll-snap-align: center;
+  scroll-padding-left: 24px;
+  scroll-padding-right: 24px;
 }
 
 .track:focus-visible {
@@ -202,14 +205,28 @@ function scrollTrack(direction: 1 | -1) {
 
 .fade-left {
   left: 0;
-  width: 96px;
+  width: 48px;
   background: linear-gradient(to left, transparent, var(--vp-c-bg));
 }
 
 .fade-right {
   right: 0;
-  width: 160px;
+  width: 48px;
   background: linear-gradient(to right, transparent, var(--vp-c-bg) 85%);
+}
+
+@media (min-width: 640px) {
+  .fade-left {
+    width: 96px;
+  }
+
+  .fade-right {
+    width: 160px;
+  }
+
+  .track {
+    scroll-snap-align: start;
+  }
 }
 
 .partner {

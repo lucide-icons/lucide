@@ -60,7 +60,6 @@ const showHandles = ref(true);
 // motion-v passes the variant label that finished, not the resolved variant
 const onAnimationComplete = (variant: unknown) => {
   if (variant === 'visible') drawAnimation.value = 'exit';
-  if (variant === 'exit') showHandles.value = false;
 };
 
 // Only rendered on the client, so reduced motion is known before the first frame
