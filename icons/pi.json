@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "constant",
     "code",
     "coding",

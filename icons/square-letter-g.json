@@ -8,16 +8,12 @@
     "Indicating gram units in measurements"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "gravity",
     "g-force",
     "gram",
-    "measurement",
-    "text",
-    "font",
-    "typography"
+    "measurement"
   ],
   "categories": [
     "letters-digits"

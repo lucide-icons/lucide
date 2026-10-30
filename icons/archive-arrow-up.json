@@ -10,16 +10,8 @@
     "Restoring archived files and records to active storage"
   ],
   "tags": [
-    "unarchive",
-    "index",
-    "backup",
-    "box",
-    "storage",
-    "records",
-    "restore",
-    "retrieve",
-    "recover",
-    "reactivate"
+    "$extends:archive",
+    "unarchive"
   ],
   "aliases": [
     {
@@ -29,7 +21,6 @@
     }
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }

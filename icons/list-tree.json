@@ -10,8 +10,8 @@
     "browser"
   ],
   "categories": [
+    "$extends:list",
     "files",
-    "text",
     "layout"
   ]
 }

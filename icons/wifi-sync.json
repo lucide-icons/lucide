@@ -9,16 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "signal",
-    "wireless",
-    "synchronize",
-    "reconnect",
+    "$extends:wifi",
+    "$group:sync",
     "reset",
     "restart"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

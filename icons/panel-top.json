@@ -6,13 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-top",
     "drawer",
     "browser",
     "webpage"
   ],
   "categories": [
-    "layout",
-    "design",
-    "development"
+    "layout"
   ]
 }

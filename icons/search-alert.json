@@ -8,24 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
+    "$extends:search",
+    "$group:exclamation-mark",
     "stop",
-    "warning",
-    "alert",
-    "error",
-    "anomaly",
-    "lens",
-    "locate",
-    "explore",
-    "discover",
-    "enlarge",
-    "zoom"
+    "anomaly"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:search"
   ]
 }

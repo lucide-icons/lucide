@@ -6,12 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "add",
-    "create",
-    "new",
+    "$extends:mail",
+    "$group:plus",
     "compose"
   ],
   "categories": [

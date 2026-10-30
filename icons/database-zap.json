@@ -5,16 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:database",
+    "$extends:zap",
     "cache busting",
-    "storage",
-    "memory",
-    "bytes",
-    "servers",
-    "power",
     "crash"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

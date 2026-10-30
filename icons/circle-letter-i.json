@@ -9,17 +9,13 @@
     "Representing electric current in scientific contexts"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "information",
     "help",
     "input",
     "current",
-    "electricity",
-    "text",
-    "font",
-    "typography"
+    "electricity"
   ],
   "categories": [
     "letters-digits"

@@ -6,13 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
-    "done",
-    "multiple"
+    "$extends:copy",
+    "$group:check"
   ],
   "categories": [
-    "text",
+    "$extends:copy",
     "notifications"
   ]
 }

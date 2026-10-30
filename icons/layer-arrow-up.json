@@ -11,6 +11,7 @@
     "Moving an item forward in layer order"
   ],
   "tags": [
+    "$group:direction-up",
     "move forward",
     "forward",
     "raise",

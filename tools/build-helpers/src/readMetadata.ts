@@ -18,5 +18,9 @@ export const readMetadata = async (fileName: string, directory: string): Promise
     metadataFileContent = metadataFileContent.toString('utf-8');
   }
 
-  return JSON.parse(metadataFileContent);
+  try {
+    return JSON.parse(metadataFileContent);
+  } catch (error) {
+    throw new Error(`Error parsing metadata file ${fileName}: ${String(error)}`);
+  }
 };

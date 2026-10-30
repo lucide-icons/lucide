@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "tv",
     "resolution",
     "video",
@@ -16,7 +17,6 @@
     "1080p"
   ],
   "categories": [
-    "letters-digits",
     "devices",
     "multimedia"
   ]

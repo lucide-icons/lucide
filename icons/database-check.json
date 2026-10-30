@@ -12,19 +12,11 @@
     "Confirming backup integrity or successful sync"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "server",
-    "check",
-    "success",
-    "valid",
-    "verified",
-    "confirmed",
-    "complete"
+    "$extends:database",
+    "$group:check",
+    "server"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

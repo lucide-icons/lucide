@@ -7,24 +7,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "screen sharing",
+    "$extends:monitor",
+    "$group:stop",
     "video",
     "movie",
     "film",
-    "stop",
-    "shutdown",
-    "virtual machine",
-    "vm"
+    "shutdown"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:monitor",
     "multimedia"
   ]
 }

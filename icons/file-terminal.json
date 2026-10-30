@@ -6,13 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "terminal",
     "bash",
     "script",
     "executable"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }
