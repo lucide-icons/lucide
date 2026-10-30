@@ -21,7 +21,10 @@
     "zoom",
     "region",
     "area",
-    "box"
+    "box",
+    "inspection",
+    "visual search",
+    "region of interest"
   ],
   "categories": [
     "design",
