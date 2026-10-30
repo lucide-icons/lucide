@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-top",
     "window",
     "webpage",
     "block",

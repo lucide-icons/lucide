@@ -11,10 +11,7 @@
     "Showing contactless or chip card payment options"
   ],
   "tags": [
-    "bank",
-    "purchase",
-    "payment",
-    "cc",
+    "$extends:credit-card",
     "atm",
     "terminal",
     "checkout",

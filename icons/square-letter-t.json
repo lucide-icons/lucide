@@ -10,18 +10,14 @@
     "Representing time values"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "tesla",
     "magnetism",
     "temperature",
     "tonne",
     "measurement",
-    "time",
-    "text",
-    "font",
-    "typography"
+    "time"
   ],
   "categories": [
     "letters-digits"

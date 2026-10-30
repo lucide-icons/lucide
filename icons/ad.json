@@ -11,6 +11,7 @@
     "Linking to an advertise-with-us page"
   ],
   "tags": [
+    "$group:letter",
     "advert",
     "affiliate",
     "brand",
@@ -28,9 +29,7 @@
     "visual description"
   ],
   "categories": [
-    "letters-digits",
     "multimedia",
-    "accessibility",
-    "notifications"
+    "accessibility"
   ]
 }

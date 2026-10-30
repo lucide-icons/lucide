@@ -5,13 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "camping",
-    "campsite",
-    "holiday",
-    "retreat",
-    "nomadic",
-    "wilderness",
-    "outdoors"
+    "$extends:tent"
   ],
   "categories": [
     "travel",

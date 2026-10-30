@@ -7,12 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "readme",
-    "help",
-    "question"
+    "$extends:file",
+    "$group:question-mark",
+    "readme"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

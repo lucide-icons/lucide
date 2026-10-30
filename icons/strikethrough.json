@@ -7,13 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
+    "$group:minus",
     "cross out",
-    "delete",
-    "remove",
     "format"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

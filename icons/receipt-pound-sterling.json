@@ -8,17 +8,13 @@
   "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
+    "$extends:receipt",
+    "$group:currency",
     "british",
-    "currency",
     "gbp",
     "£"
   ],
   "categories": [
-    "finance"
+    "$extends:receipt"
   ]
 }

@@ -6,13 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:star",
+    "$group:off",
     "dislike",
     "unlike",
     "remove",
     "unrate"
   ],
   "categories": [
-    "multimedia",
     "social"
   ]
 }

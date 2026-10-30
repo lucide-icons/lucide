@@ -12,23 +12,11 @@
     "Lowering the priority of an item"
   ],
   "tags": [
-    "bookmark",
-    "favorite",
-    "like",
-    "review",
-    "rating",
-    "minus",
-    "remove",
-    "deselect",
-    "star"
+    "$extends:star",
+    "$group:minus",
+    "deselect"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes",
-    "multimedia",
-    "weather",
-    "emoji",
-    "gaming"
+    "$extends:star"
   ]
 }

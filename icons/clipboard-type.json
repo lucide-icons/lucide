@@ -6,12 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "paste",
-    "format",
-    "text"
+    "$extends:clipboard",
+    "$group:letter",
+    "format"
   ],
   "categories": [
-    "letters-digits",
-    "text"
+    "$extends:clipboard"
   ]
 }

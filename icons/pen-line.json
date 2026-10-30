@@ -10,23 +10,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "pencil",
-    "change",
-    "create",
-    "draw",
-    "writer",
-    "writing",
-    "biro",
-    "ink",
-    "marker",
-    "felt tip",
-    "stationery",
-    "artist"
+    "$extends:pen"
   ],
   "categories": [
-    "text",
-    "design",
-    "tools"
+    "$extends:pen"
   ],
   "aliases": [
     {

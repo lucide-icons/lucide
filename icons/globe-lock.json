@@ -8,20 +8,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:globe",
+    "$group:lock",
     "vpn",
-    "private",
-    "privacy",
     "network",
-    "world",
-    "browser",
-    "security",
     "encryption",
-    "protection",
     "connection"
   ],
   "categories": [
     "security",
-    "development",
-    "devices"
+    "connectivity"
   ]
 }

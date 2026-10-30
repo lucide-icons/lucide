@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "statistics",
     "analytics",
     "diagram",
@@ -13,7 +14,8 @@
     "presentation"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "charts"
   ],
   "aliases": [
     {

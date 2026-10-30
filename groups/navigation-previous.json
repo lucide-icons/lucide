@@ -1,0 +1,13 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Position: the preceding item in a sequence",
+  "tags": [
+    "navigation",
+    "preceding",
+    "back",
+    "backward",
+    "backwards",
+    "prior",
+    "previous page"
+  ]
+}

@@ -16,8 +16,7 @@
     "html",
     "markup",
     "markdown",
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "heading",
     "hospital",
@@ -26,10 +25,7 @@
     "hour",
     "time",
     "height",
-    "measurement",
-    "text",
-    "font",
-    "typography"
+    "measurement"
   ],
   "categories": [
     "letters-digits"

@@ -5,13 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "h1",
-    "html",
-    "markup",
-    "markdown"
+    "$extends:letter-h",
+    "$group:digit",
+    "h1"
   ],
   "categories": [
-    "letters-digits",
-    "text"
+    "$extends:letter-h"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: starting, running or executing something",
+  "tags": [
+    "start",
+    "run",
+    "running",
+    "execute",
+    "launch",
+    "resume",
+    "preview",
+    "begin",
+    "continue",
+    "proceed",
+    "activate",
+    "trigger",
+    "initiate"
+  ]
+}

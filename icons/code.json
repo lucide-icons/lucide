@@ -5,8 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:code",
     "source",
-    "programming",
     "html",
     "xml"
   ],

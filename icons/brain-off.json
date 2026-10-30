@@ -11,23 +11,11 @@
     "Indicating disabled reasoning in an AI chat interface"
   ],
   "tags": [
-    "medical",
-    "mind",
-    "mental",
-    "intellect",
-    "cerebral",
-    "consciousness",
-    "genius",
-    "artificial intelligence",
-    "ai",
-    "think",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$extends:brain",
+    "$group:off"
   ],
   "categories": [
-    "medical",
-    "science",
+    "$extends:brain",
     "development"
   ]
 }

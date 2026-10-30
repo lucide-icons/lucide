@@ -8,19 +8,11 @@
   "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
-    "currency",
+    "$extends:receipt",
     "cents",
-    "dollar",
-    "usd",
-    "$",
     "¢"
   ],
   "categories": [
-    "finance"
+    "$extends:receipt"
   ]
 }

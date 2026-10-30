@@ -23,7 +23,7 @@
     "car"
   ],
   "categories": [
-    "connectivity",
-    "transportation"
+    "$extends:car",
+    "devices"
   ]
 }

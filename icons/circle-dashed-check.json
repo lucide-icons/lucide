@@ -13,8 +13,8 @@
     "Confirming completion with revisions still pending"
   ],
   "tags": [
-    "approved",
-    "pending",
+    "$extends:circle-dashed",
+    "$extends:circle-check",
     "changes",
     "revision",
     "reapproval",
@@ -22,17 +22,10 @@
     "schedule",
     "assignment",
     "request",
-    "review",
-    "progress",
-    "issue",
-    "draft",
-    "code",
-    "coding",
-    "version control"
+    "review"
   ],
   "categories": [
-    "shapes",
-    "development",
+    "$extends:circle-dashed",
     "notifications"
   ]
 }

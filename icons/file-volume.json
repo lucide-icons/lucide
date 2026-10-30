@@ -7,11 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:volume",
     "audio",
-    "music",
     "volume"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "multimedia"
   ]
 }

@@ -5,17 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "dish",
-    "restaurant",
-    "course",
-    "meal",
-    "seafood",
-    "pet",
-    "sea",
-    "marine"
+    "$extends:fish"
   ],
   "categories": [
-    "food-beverage",
-    "animals"
+    "$extends:fish"
   ]
 }
