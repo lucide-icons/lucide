@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HectorZaGa",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "Indicating inward collapse or alignment toward a central vertical guide",
+    "Folding columns or margins to a central divider line"
+  ],
+  "tags": [
+    "arrow",
+    "collapse",
+    "fold",
+    "inward",
+    "center",
+    "divider",
+    "horizontal",
+    "line"
+  ],
+  "categories": [
+    "arrows",
+    "layout"
+  ]
+}
