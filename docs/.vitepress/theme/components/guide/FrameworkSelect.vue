@@ -35,6 +35,7 @@ const frameworks: Framework[] = [
     iconDark: '/framework-logos/astro-dark.svg',
     value: '/guide/astro/',
   },
+  { name: 'Hono', icon: '/framework-logos/hono.svg', value: '/guide/hono/' },
   { name: 'Static', icon: '/framework-logos/svg.svg', value: '/guide/static/' },
 ];
 
