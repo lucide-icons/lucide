@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:margin"
+  ],
+  "use-cases": [
+    "Adjusting outer spacing above and below elements in layout editors",
+    "Setting top and bottom page margins in document editors"
+  ],
+  "tags": [
+    "$extends:margin",
+    "$group:position-top",
+    "$group:position-bottom"
+  ],
+  "categories": [
+    "$extends:margin"
+  ]
+}

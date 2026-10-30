@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:margin"
+  ],
+  "use-cases": [
+    "Adjusting space to the left of an element in layout editors",
+    "Setting the left page margin in document editors"
+  ],
+  "tags": [
+    "$extends:margin",
+    "$group:position-left",
+    "indent"
+  ],
+  "categories": [
+    "$extends:margin"
+  ]
+}
