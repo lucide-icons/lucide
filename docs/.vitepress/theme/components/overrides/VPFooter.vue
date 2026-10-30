@@ -60,7 +60,6 @@ const links = computed(() => [
           v-for="link in links"
           :href="link.href"
           :key="link.text"
-          class="footer-link"
           :rel="link.href.startsWith('http') ? 'noreferrer noopener' : undefined"
         >
           {{ link.text }}
@@ -91,19 +90,8 @@ const links = computed(() => [
   background-color: var(--vp-c-bg);
 }
 
-/* On pages with a sidebar the footer moves over by the sidebar width, like the page content,
-   so its links are on every page */
-@media (min-width: 960px) {
-  .VPFooter.has-sidebar {
-    padding-left: calc(var(--vp-sidebar-width) + 32px);
-  }
-}
-
-@media (min-width: 1440px) {
-  .VPFooter.has-sidebar {
-    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px);
-    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) + 32px);
-  }
+.VPFooter.has-sidebar {
+  display: none;
 }
 
 .container {
@@ -137,38 +125,6 @@ const links = computed(() => [
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-/* Same hover underline as the nav bar links, see utils/underlineDirection.ts */
-.footer-link {
-  position: relative;
-  transition: color 0.25s;
-}
-
-.footer-link:hover,
-.footer-link:focus-visible {
-  color: var(--vp-c-brand-1);
-}
-
-.footer-link::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -4px;
-  left: 0;
-  height: 2px;
-  border-radius: 2px;
-  background-color: var(--vp-c-brand-1);
-  transform: scaleX(0);
-  transform-origin: var(--underline-origin, right);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.35s !important;
-}
-
-.footer-link:hover::before,
-.footer-link:focus-visible::before {
-  transform: scaleX(1);
-  transform-origin: var(--underline-origin, left);
 }
 
 @media (min-width: 1152px) {
