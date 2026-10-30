@@ -6,7 +6,7 @@ import SponsorSection from './SponsorSection.vue';
 <template>
   <SponsorSection class="cta">
     <div class="cta-card">
-      <h2 class="title">Built something with Lucide?</h2>
+      <h2 class="title">You like building with Lucide?</h2>
       <p class="description">
         Help keep it beautiful and consistent for everyone who comes after you.
       </p>
@@ -55,8 +55,8 @@ import SponsorSection from './SponsorSection.vue';
 }
 
 .description {
-  margin: 0;
-  max-width: 560px;
+  margin-bottom: 24px;
+  max-width: 640px;
   font-size: 18px;
   line-height: 28px;
   color: var(--vp-c-text-2);

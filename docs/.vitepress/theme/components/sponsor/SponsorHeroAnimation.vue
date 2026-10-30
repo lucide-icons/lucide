@@ -6,83 +6,32 @@ import { motion, type Options as MotionOptions } from 'motion-v';
 type Variants = MotionOptions['variants'];
 
 /**
- * The logo drawing from the home hero animation, played once and stopped at the coloured logo.
+ * Draws the heart icon the way the SVG editor previews it (handles and arc radii),
+ * played once and stopped at the red heart.
  */
 
-const LOGO_PATHS = [
-  'M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557',
-  'M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21',
-];
+const HEART_PATH =
+  'M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5';
 
-const MARKERS = [
-  [14, 12],
-  [18, 3.05557],
-  [10, 12],
-  [6.06253, 21],
-];
+const VERTICES =
+  'M2 9.5h.01M11.591 5.824h.01M12.409 5.824h.01M22 9.5h.01M19 15h.01M13.508 20.313h.01M10.508 20.332h.01M5 15h.01';
+
+const MARKERS = [[2, 9.5]];
 
 /** Bezier handles as [x1, y1, x2, y2] segments, grouped by when they appear. */
 const HANDLE_GROUPS = [
-  { delay: 0.2, segments: [[14, 12, 14, 9.79086]] },
-  {
-    delay: 0.4,
-    segments: [
-      [10, 8, 12.2091, 8],
-      [10, 8, 7.79086, 8],
-    ],
-  },
-  {
-    delay: 0.6,
-    segments: [
-      [6, 12, 6, 9.79086],
-      [6, 12, 6, 16.4183],
-    ],
-  },
-  {
-    delay: 0.8,
-    segments: [
-      [14, 20, 9.58172, 20],
-      [14, 20, 18.4183, 20],
-    ],
-  },
-  {
-    delay: 1,
-    segments: [
-      [22, 12, 22, 16.4183],
-      [22, 12, 22, 8.446],
-    ],
-  },
-  { delay: 1.2, segments: [[18, 3.05557, 20.455, 5.25285]] },
-  { delay: 0.2, segments: [[10, 12, 10, 14.2091]] },
-  {
-    delay: 0.4,
-    segments: [
-      [14, 16, 11.7909, 16],
-      [14, 16, 16.2091, 16],
-    ],
-  },
-  {
-    delay: 0.6,
-    segments: [
-      [18, 12, 18, 14.2091],
-      [18, 12, 18, 7.58172],
-    ],
-  },
-  {
-    delay: 0.8,
-    segments: [
-      [10, 4, 14.4183, 4],
-      [10, 4, 5.58172, 4],
-    ],
-  },
-  {
-    delay: 1,
-    segments: [
-      [2, 12, 2, 7.58172],
-      [2, 12, 2, 15.5841],
-    ],
-  },
-  { delay: 1.2, segments: [[6.06253, 21, 3.57127, 18.8012]] },
+  { delay: 0.2, segments: [[22, 9.5, 22, 11.79]] },
+  { delay: 0.4, segments: [[19, 15, 20.5, 13.5]] },
+  { delay: 0.6, segments: [[5, 15, 3.5, 13.5]] },
+  { delay: 0.8, segments: [[2, 9.5, 2, 11.8]] },
+];
+
+/** Arc radius guides: the arc's centre and radius, drawn from one arc end to the centre to the other. */
+const ARC_GUIDES = [
+  { cx: 7.5, cy: 9.5, r: 5.5, from: [2, 9.5], to: [11.591, 5.824], delay: 0.3 },
+  { cx: 12, cy: 5.4415, r: 0.56, from: [11.591, 5.824], to: [12.409, 5.824], delay: 0.5 },
+  { cx: 16.5101, cy: 9.4738, r: 5.49, from: [12.409, 5.824], to: [22, 9.5], delay: 0.7 },
+  { cx: 11.9996, cy: 18.9997, r: 2, from: [13.508, 20.313], to: [10.508, 20.332], delay: 0.9 },
 ];
 
 const draw: Variants = {
@@ -95,21 +44,23 @@ const draw: Variants = {
       opacity: { delay: 2.4, duration: 0.1 },
     },
   },
-  exit: (index) => ({
-    stroke: index === 0 ? 'var(--vp-c-text-1)' : 'var(--vp-c-brand)',
+  exit: {
+    stroke: 'var(--vp-c-brand)',
     pathLength: 1.02,
     opacity: 1,
     transition: {
       duration: 0.8,
     },
-  }),
+  },
 };
 
 const drawAnimation = ref('visible');
+const showHandles = ref(true);
 
 // motion-v passes the variant label that finished, not the resolved variant
 const onAnimationComplete = (variant: unknown) => {
   if (variant === 'visible') drawAnimation.value = 'exit';
+  if (variant === 'exit') showHandles.value = false;
 };
 
 // Only rendered on the client, so reduced motion is known before the first frame
@@ -118,7 +69,10 @@ const reducedMotion = ref(false);
 
 onMounted(() => {
   reducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reducedMotion.value) drawAnimation.value = 'exit';
+  if (reducedMotion.value) {
+    drawAnimation.value = 'exit';
+    showHandles.value = false;
+  }
   mounted.value = true;
 });
 
@@ -127,6 +81,9 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
 </script>
 
 <template>
+  <div
+    class="home-hero-animation-container"
+  >
   <div
     class="sponsor-hero-animation"
     aria-hidden="true"
@@ -160,34 +117,64 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
         />
       </g>
 
-      <g stroke-width="2">
-        <motion.path
-          v-for="(d, index) in LOGO_PATHS"
-          :key="d"
-          :d="d"
-          :style="{ stroke: 'var(--vp-c-gray-1)' }"
-          :initial="initial('hidden')"
-          :animate="drawAnimation"
-          :variants="draw"
-          :custom="index"
-          @animation-complete="onAnimationComplete"
-        />
-      </g>
+      <motion.g
+        stroke-width="0.12"
+        stroke-dasharray="0 0.25 0.25"
+        stroke="#777"
+        stroke-opacity="0.3"
+        :initial="initial({ opacity: 1 })"
+        :animate="{ opacity: showHandles ? 1 : 0 }"
+        :transition="{ duration: 0.6 }"
+      >
+        <motion.g
+          v-for="arc in ARC_GUIDES"
+          :key="`${arc.cx},${arc.cy}`"
+          :initial="initial({ opacity: 0, scale: 0.2 })"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: arc.delay, duration: 0.3 }"
+        >
+          <path :d="`M${arc.from.join(' ')}L${arc.cx} ${arc.cy}L${arc.to.join(' ')}`" />
+          <circle
+            :cx="arc.cx"
+            :cy="arc.cy"
+            r="0.25"
+            stroke-dasharray="0"
+            stroke="red"
+          />
+          <circle
+            :cx="arc.cx"
+            :cy="arc.cy"
+            :r="arc.r"
+            stroke="red"
+          />
+        </motion.g>
+      </motion.g>
 
-      <g
+      <motion.path
+        :d="HEART_PATH"
+        stroke-width="2"
+        :style="{ stroke: 'var(--vp-c-gray-1)' }"
+        :initial="initial('hidden')"
+        :animate="drawAnimation"
+        :variants="draw"
+        @animation-complete="onAnimationComplete"
+      />
+
+      <motion.g
         :style="{ stroke: 'var(--vp-c-text-1)' }"
         stroke-width="0.125"
+        :initial="initial({ opacity: 1 })"
+        :animate="{ opacity: showHandles ? 1 : 0 }"
+        :transition="{ duration: 0.2 }"
       >
         <motion.path
-          v-for="d in LOGO_PATHS"
-          :key="d"
-          :d="d"
+          :d="HEART_PATH"
           :initial="initial({ opacity: 0 })"
           :animate="{ opacity: 1 }"
           :transition="{ delay: 1.6, duration: 1.5 }"
         />
         <motion.path
-          d="M14 12h.01M10 8h.01M6 12h.01M14 20h.01M22 12h.01M18 3.05557h.01M10 12h.01M14 16h.01M18 12h.01M10 4h.01M2 12h.01M6.06253 21h.01"
+          :d="VERTICES"
           :initial="initial({ opacity: 0 })"
           :animate="{ opacity: 1 }"
           :transition="{ delay: 0.2, duration: 0.3 }"
@@ -202,12 +189,15 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
           :animate="{ opacity: 1, scale: 1 }"
           :transition="{ duration: 0.8 }"
         />
-      </g>
+      </motion.g>
 
-      <g
+      <motion.g
         stroke-width="0.12"
         stroke="#FFF"
         stroke-opacity="0.3"
+        :initial="initial({ opacity: 1 })"
+        :animate="{ opacity: showHandles ? 1 : 0 }"
+        :transition="{ duration: 0.6 }"
       >
         <motion.g
           v-for="(group, index) in HANDLE_GROUPS"
@@ -228,12 +218,17 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
             />
           </template>
         </motion.g>
-      </g>
+      </motion.g>
     </svg>
   </div>
+</div>
 </template>
 
 <style scoped>
+.sponsor-hero-animation-container {
+  margin: -48px -24px 0;
+  display: flex;
+}
 .sponsor-hero-animation {
   position: relative;
   width: 100%;
@@ -241,6 +236,12 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   margin: 0 auto;
   aspect-ratio: 8 / 5;
   overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .sponsor-hero-animation {
+    max-width: 860px;
+  }
 }
 
 .hero-background {
