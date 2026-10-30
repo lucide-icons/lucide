@@ -43,7 +43,7 @@
   border: 1px solid var(--vp-input-border-color);
   background-color: var(--vp-input-switch-bg-color);
   transition: border-color 0.25s, background-color 0.4s ease;
-  transition-duration: 0.25s, 0.4s !important;
+  transition-duration: 0.25s, 0.4s;
   border-radius: 11px;
 }
 
@@ -70,7 +70,7 @@
   transition:
     transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.2s ease;
-  transition-duration: 0.4s, 0.2s !important;
+  transition-duration: 0.4s, 0.2s;
   width: 16px;
   height: 16px;
   border-radius: 8px;

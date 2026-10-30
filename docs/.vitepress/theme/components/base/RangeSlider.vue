@@ -112,12 +112,12 @@ const percentage = computed<string>(() => `${((Number(props.modelValue) - props.
     box-shadow: var(--vp-shadow-2);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transition-duration: 0.2s !important;
+    transition-duration: 0.2s;
 }
 
 .slider input::-moz-range-thumb {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transition-duration: 0.2s !important;
+    transition-duration: 0.2s;
 }
 
 /* The thumb grows with a soft brand ring on hover and focus, and a little more while dragged */

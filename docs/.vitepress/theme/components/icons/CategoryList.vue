@@ -75,7 +75,7 @@ watch(headers, () => {
   font-size: 14px;
   display: block;
   transition: color 0.25s, transform 0.25s ease;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   padding: 4px 0;
 }
 

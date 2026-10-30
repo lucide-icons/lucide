@@ -44,7 +44,7 @@ defineProps({
     border-color 0.25s,
     background-color 0.25s,
     box-shadow 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 /* A quiet border at rest; on hover the border takes the brand colour with a soft ring,
@@ -60,7 +60,7 @@ defineProps({
 .search-icon {
   flex-shrink: 0;
   transition: color 0.25s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition-duration: 0.25s, 0.3s !important;
+  transition-duration: 0.25s, 0.3s;
 }
 
 .fake-input:hover .search-icon,

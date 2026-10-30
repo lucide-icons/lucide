@@ -69,7 +69,7 @@ defineProps<TeamMember>()
   background-color: var(--vp-c-bg);
   box-shadow: 0 0 0 0 transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition-duration: 0.3s !important;
+  transition-duration: 0.3s;
 }
 
 /* The photo lifts with a brand ring while the card is hovered */
@@ -120,13 +120,13 @@ defineProps<TeamMember>()
   border-radius: 18px;
   background-color: var(--vp-c-bg);
   transition: color 0.25s, background-color 0.25s, border-color 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .sponsor-heart {
   color: var(--vp-c-sponsor);
   transition: color 0.25s, fill 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .sponsor-button:hover,
@@ -166,7 +166,7 @@ defineProps<TeamMember>()
 .member-social-links :deep(.VPSocialLink) {
   border-radius: 8px;
   transition: color 0.25s, background-color 0.25s, transform 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .member-social-links :deep(.VPSocialLink:hover),

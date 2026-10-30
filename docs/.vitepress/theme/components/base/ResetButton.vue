@@ -26,7 +26,7 @@ const spinning = ref(false);
 <style scoped>
 .reset-button {
   transition: ease-in-out 0.25s opacity;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   background: none;
   padding: 0;
 }

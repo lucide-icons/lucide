@@ -80,7 +80,7 @@ const model = computed({
   background-color: var(--vp-input-switch-bg-color);
   border-radius: 4px;
   transition: border-color 0.2s, box-shadow 0.2s;
-  transition-duration: 0.2s !important;
+  transition-duration: 0.2s;
 }
 
 .checkbox:hover,

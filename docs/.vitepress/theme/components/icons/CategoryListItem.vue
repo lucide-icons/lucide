@@ -84,13 +84,13 @@ function onClick(categoryName: string) {
   transition:
     color 0.25s,
     background-color 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   font-weight: 500;
 }
 
 .outline-link > span:first-child {
   transition: transform 0.25s ease;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .outline-link:hover,
@@ -131,7 +131,7 @@ function onClick(categoryName: string) {
   transition:
     color 0.25s,
     background-color 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .outline-link:hover .icon-count,

@@ -34,7 +34,7 @@ defineProps<{
   width: 100%;
   height: 100%;
   transition: border-color 0.25s, background-color 0.25s, transform 0.25s ease, box-shadow 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ defineProps<{
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity 0.25s, transform 0.25s ease;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 .overview-link:hover .title::after,

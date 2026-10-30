@@ -61,7 +61,7 @@ defineProps<{
   margin: auto;
   opacity: 0.8;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s;
-  transition-duration: 0.4s, 0.3s !important;
+  transition-duration: 0.4s, 0.3s;
 }
 
 .company:hover .logo,
@@ -82,7 +82,7 @@ defineProps<{
   opacity: 0;
   transform: translateY(3px);
   transition: opacity 0.3s, transform 0.3s ease;
-  transition-duration: 0.3s !important;
+  transition-duration: 0.3s;
 }
 
 .company:hover .company-name,
@@ -103,7 +103,7 @@ defineProps<{
   opacity: 0;
   transform: translate(-6px, 6px);
   transition: opacity 0.3s, transform 0.3s ease;
-  transition-duration: 0.3s !important;
+  transition-duration: 0.3s;
 }
 
 .company:hover .company-arrow,

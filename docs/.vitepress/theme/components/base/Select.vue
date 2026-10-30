@@ -94,7 +94,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
     border-color 0.25s,
     background-color 0.25s,
     box-shadow 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   width: 100%;
   align-items: center;
 }
@@ -137,7 +137,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   width: 1.25rem;
   color: #9ca3af;
   transition: color 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
 }
 
 /* The list fades in and slides down a little from the button */
@@ -145,7 +145,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   transition:
     opacity 150ms ease-out,
     transform 200ms cubic-bezier(0.34, 1.4, 0.64, 1);
-  transition-duration: 150ms, 200ms !important;
+  transition-duration: 150ms, 200ms;
 }
 
 .transition-enter-from {
@@ -155,7 +155,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
 
 .transition-leave {
   transition: opacity 100ms ease-in;
-  transition-duration: 100ms !important;
+  transition-duration: 100ms;
 }
 
 .transition-leave-from {
@@ -203,7 +203,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   transition:
     background-color 0.25s,
     color 0.25s;
-  transition-duration: 0.25s !important;
+  transition-duration: 0.25s;
   list-style: none;
 }
 
