@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "ram",
     "random access",
@@ -17,7 +18,6 @@
     "gb"
   ],
   "categories": [
-    "devices",
-    "gaming"
+    "devices"
   ]
 }

@@ -3,16 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "index",
-    "backup",
-    "box",
-    "storage",
-    "records",
+    "$extends:archive",
+    "$group:x",
     "junk"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }

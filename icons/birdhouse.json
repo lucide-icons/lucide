@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hieu-onefold",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "birdhouse",
+    "bird",
+    "garden",
+    "home",
+    "house",
+    "woodwork"
+  ],
+  "categories": [
+    "nature",
+    "animals",
+    "home"
+  ]
+}

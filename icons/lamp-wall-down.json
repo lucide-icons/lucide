@@ -5,14 +5,13 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "lighting",
-    "household",
-    "wall",
-    "home",
-    "furniture"
+    "$extends:lamp",
+    "$group:direction-down",
+    "wall"
   ],
   "categories": [
-    "home"
+    "$extends:lamp"
   ]
 }

@@ -5,6 +5,7 @@
     "jguddas",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "reaction",
     "emotion",
@@ -13,6 +14,7 @@
     "feedback"
   ],
   "categories": [
-    "social"
+    "social",
+    "emoji"
   ]
 }

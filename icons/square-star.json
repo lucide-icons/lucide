@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:star",
     "badge",
     "medal",
     "honour",

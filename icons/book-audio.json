@@ -3,21 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$extends:audio-lines",
     "audiobook",
-    "reading",
-    "listening",
-    "sound",
-    "story",
-    "fiction",
-    "novel",
-    "information",
-    "knowledge",
-    "education",
-    "student",
-    "study",
-    "learning",
-    "research"
+    "listening"
   ],
   "categories": [
     "multimedia",

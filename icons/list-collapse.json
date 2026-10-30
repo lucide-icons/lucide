@@ -5,6 +5,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "items",
     "collapse",
@@ -21,6 +22,6 @@
     "unfold"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

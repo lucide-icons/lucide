@@ -5,6 +5,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "tipi",
     "teepee",
@@ -22,7 +23,6 @@
   ],
   "categories": [
     "travel",
-    "nature",
-    "sustainability"
+    "nature"
   ]
 }

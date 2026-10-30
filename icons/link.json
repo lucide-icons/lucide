@@ -5,12 +5,12 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "chain",
     "url"
   ],
   "categories": [
-    "text",
-    "account"
+    "text"
   ]
 }

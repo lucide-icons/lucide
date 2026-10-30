@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Indicating past events in calendars",
+    "Rewinding through calendar views"
+  ],
+  "tags": [
+    "$extends:calendar",
+    "$group:direction-left",
+    "$group:navigation-first",
+    "arrow",
+    "symbol",
+    "pointer",
+    "indicator",
+    "menu",
+    "events"
+  ],
+  "categories": [
+    "$extends:calendar"
+  ]
+}

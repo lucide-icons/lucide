@@ -1,70 +1,78 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ButtonMenu from '../base/ButtonMenu.vue'
+import ButtonMenu from '../base/ButtonMenu.vue';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import useConfetti from '../../composables/useConfetti';
+import { track } from '../../utils/openpanel';
 import getSVGIcon from '../../utils/getSVGIcon';
 import downloadData from '../../utils/downloadData';
 
-const downloadText = 'Download!'
-const copiedText = 'Copied!'
-const confettiText = ref(copiedText)
+const downloadText = 'Download!';
+const copiedText = 'Copied!';
+const confettiText = ref(copiedText);
 const props = defineProps<{
-  name: string
-  popoverPosition?: 'top' | 'bottom'
-}>()
+  name: string;
+  popoverPosition?: 'top' | 'bottom';
+  trackingSource?: 'drawer' | 'page';
+}>();
 
-const { size } = useIconStyleContext()
+function trackCopy(action: string) {
+  track('icon_copy', { icon: props.name, action, source: props.trackingSource });
+}
 
-const { animate, confetti } = useConfetti()
+const { size } = useIconStyleContext();
+
+const { animate, confetti } = useConfetti();
 
 function copySVG() {
-  confettiText.value = copiedText
-  const svgString = getSVGIcon()
+  trackCopy('copy_svg');
+  confettiText.value = copiedText;
+  const svgString = getSVGIcon();
 
-  navigator.clipboard.writeText(svgString)
+  navigator.clipboard.writeText(svgString);
 
-  confetti()
+  confetti();
 }
 
 function copyDataUrl() {
-  confettiText.value = copiedText
-  const svgString = getSVGIcon()
+  trackCopy('copy_data_url');
+  confettiText.value = copiedText;
+  const svgString = getSVGIcon();
 
   // Create SVG data url
-  const dataUrl = `data:image/svg+xml;base64,${btoa(svgString)}`
-  navigator.clipboard.writeText(dataUrl)
+  const dataUrl = `data:image/svg+xml;base64,${btoa(svgString)}`;
+  navigator.clipboard.writeText(dataUrl);
 
-  confetti()
+  confetti();
 }
 
 function downloadSVG() {
-  confettiText.value = downloadText
-  const svgString = getSVGIcon()
+  trackCopy('download_svg');
+  confettiText.value = downloadText;
+  const svgString = getSVGIcon();
 
-  downloadData(`${props.name}.svg`, `data:image/svg+xml;base64,${btoa(svgString)}`)
-  confetti()
+  downloadData(`${props.name}.svg`, `data:image/svg+xml;base64,${btoa(svgString)}`);
+  confetti();
 }
 
 function downloadPNG() {
-  confettiText.value = downloadText
-  const svgString = getSVGIcon()
+  trackCopy('download_png');
+  confettiText.value = downloadText;
+  const svgString = getSVGIcon();
 
   const canvas = document.createElement('canvas');
   canvas.width = size.value;
   canvas.height = size.value;
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
 
   const image = new Image();
   image.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
-  image.onload = function() {
+  image.onload = function () {
     ctx.drawImage(image, 0, 0);
-    downloadData(`${props.name}.png`, canvas.toDataURL('image/png'))
-    confetti()
-  }
+    downloadData(`${props.name}.png`, canvas.toDataURL('image/png'));
+    confetti();
+  };
 }
-
-
 </script>
 
 <template>
@@ -75,10 +83,10 @@ function downloadPNG() {
     :data-confetti-text="confettiText"
     :popoverPosition="popoverPosition"
     :options="[
-      { text: 'Copy SVG' , onClick: copySVG },
-      { text: 'Copy Data URL' , onClick: copyDataUrl },
-      { text: 'Download SVG' , onClick: downloadSVG },
-      { text: 'Download PNG' , onClick: downloadPNG },
+      { text: 'Copy SVG', onClick: copySVG },
+      { text: 'Copy Data URL', onClick: copyDataUrl },
+      { text: 'Download SVG', onClick: downloadSVG },
+      { text: 'Download PNG', onClick: downloadPNG },
     ]"
   />
 </template>

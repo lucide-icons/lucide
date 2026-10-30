@@ -7,13 +7,12 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "attachment",
     "file"
   ],
   "categories": [
-    "text",
-    "design",
     "files",
     "mail"
   ]

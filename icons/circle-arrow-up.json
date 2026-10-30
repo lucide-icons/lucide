@@ -4,24 +4,22 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "forward",
-    "direction",
-    "north",
     "sign",
     "button"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {
       "name": "arrow-up-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

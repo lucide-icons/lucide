@@ -8,18 +8,13 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "$extends:user",
+    "$group:search"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "social"
   ]
 }

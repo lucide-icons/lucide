@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:file",
+    "$group:exclamation-mark",
+    "hidden",
+    "protected"
+  ],
+  "categories": [
+    "$extends:file",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "file-warning",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

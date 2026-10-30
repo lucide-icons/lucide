@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juanisidoro",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:layers",
+    "$group:plus",
+    "layers",
+    "positive",
+    "upgrade"
+  ],
+  "categories": [
+    "$extends:layers"
+  ]
+}

@@ -3,12 +3,9 @@
   "contributors": [
     "nstokoe"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "area"
+    "$group:chart"
   ],
   "categories": [
     "charts"
@@ -17,8 +14,7 @@
     {
       "name": "area-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

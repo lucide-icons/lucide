@@ -4,21 +4,19 @@
     "karsa-mistmere",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
-    "settings",
-    "edit",
-    "cog",
-    "gear"
+    "$extends:user-round",
+    "$group:cog"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {
       "name": "user-cog-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

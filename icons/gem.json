@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "diamond",
     "crystal",
@@ -22,7 +23,6 @@
   ],
   "categories": [
     "gaming",
-    "development",
     "finance"
   ]
 }

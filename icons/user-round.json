@@ -3,20 +3,18 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact"
+    "$extends:user"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ],
   "aliases": [
     {
       "name": "user-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

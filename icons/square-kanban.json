@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "projects",
     "manage",
@@ -23,15 +24,13 @@
   ],
   "categories": [
     "charts",
-    "development",
-    "design"
+    "development"
   ],
   "aliases": [
     {
       "name": "kanban-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

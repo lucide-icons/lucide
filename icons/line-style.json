@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dg-ac"
+  ],
+  "use-cases": [],
+  "tags": [
+    "line",
+    "stroke",
+    "style",
+    "dashed",
+    "border"
+  ],
+  "categories": [
+    "design"
+  ]
+}

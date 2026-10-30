@@ -3,20 +3,18 @@
   "contributors": [
     "danielbayley",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "backwards",
-    "reverse",
+    "$extends:arrow-big-down",
+    "$group:direction-down",
     "slow",
-    "direction",
-    "south",
     "download"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming",
+    "$extends:arrow-big-down",
     "files"
   ]
 }

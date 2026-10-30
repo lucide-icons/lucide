@@ -3,8 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "right",
+    "$group:position-right",
     "items",
     "flex",
     "justify"

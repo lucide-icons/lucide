@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "signpost",
     "direction",
@@ -16,7 +17,6 @@
   "categories": [
     "arrows",
     "navigation",
-    "development",
-    "gaming"
+    "development"
   ]
 }

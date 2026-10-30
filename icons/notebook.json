@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "notepad",
     "notes",
@@ -33,8 +34,6 @@
   ],
   "categories": [
     "text",
-    "communication",
-    "social",
     "design"
   ]
 }

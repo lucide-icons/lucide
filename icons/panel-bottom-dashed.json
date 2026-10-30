@@ -5,9 +5,9 @@
     "ericfennis",
     "irvineacosta"
   ],
+  "use-cases": [],
   "tags": [
-    "drawer",
-    "dock",
+    "$extends:panel-bottom",
     "show",
     "reveal",
     "padding",
@@ -17,14 +17,13 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-bottom"
   ],
   "aliases": [
     {
       "name": "panel-bottom-inactive",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

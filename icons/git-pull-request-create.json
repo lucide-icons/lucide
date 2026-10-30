@@ -3,15 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "open",
-    "plus",
-    "add",
-    "+"
+    "$extends:git-pull-request",
+    "$group:plus"
   ],
   "categories": [
-    "development"
+    "$extends:git-pull-request"
   ]
 }

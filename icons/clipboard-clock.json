@@ -8,28 +8,21 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "copy",
-    "paste",
-    "history",
+    "$extends:clipboard",
+    "$group:clock",
     "log",
-    "clock",
-    "time",
-    "watch",
     "alarm",
-    "hour",
-    "minute",
     "reminder",
     "scheduled",
-    "deadline",
-    "pending",
     "time tracking",
     "timesheets",
     "appointment",
     "logbook"
   ],
   "categories": [
-    "time",
-    "text"
+    "$extends:clipboard",
+    "time"
   ]
 }

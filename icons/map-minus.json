@@ -7,14 +7,11 @@
     "MarianoFranzese",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "location",
-    "navigation",
-    "travel",
-    "drop",
-    "delete",
-    "remove",
-    "erase"
+    "$extends:map",
+    "$group:minus",
+    "drop"
   ],
   "categories": [
     "navigation",

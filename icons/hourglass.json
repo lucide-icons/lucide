@@ -3,9 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "timer",
-    "time",
+    "$group:clock",
     "sandglass"
   ],
   "categories": [

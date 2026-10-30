@@ -6,11 +6,13 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "dark",
     "night"
   ],
   "categories": [
-    "accessibility"
+    "accessibility",
+    "weather"
   ]
 }

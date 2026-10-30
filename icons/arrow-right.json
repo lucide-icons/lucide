@@ -4,15 +4,14 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "forward",
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
-    "direction",
-    "east",
     "->"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

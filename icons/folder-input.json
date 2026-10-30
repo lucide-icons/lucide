@@ -4,13 +4,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "import",
     "export"
   ],
   "categories": [
-    "files",
-    "arrows"
+    "$extends:folder"
   ]
 }

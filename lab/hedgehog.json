@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "porcupine",
+    "prickly",
+    "spiny",
+    "spiky",
+    "spikes",
+    "defences",
+    "defend",
+    "mammal",
+    "woodland",
+    "garden"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

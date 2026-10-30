@@ -5,14 +5,15 @@
     "jguddas",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "contactless",
     "payment",
     "near-field communication"
   ],
   "categories": [
-    "communication",
     "finance",
-    "devices"
+    "devices",
+    "connectivity"
   ]
 }

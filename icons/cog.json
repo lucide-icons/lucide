@@ -4,15 +4,10 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:cog",
     "computing",
-    "settings",
-    "cog",
-    "edit",
-    "gear",
-    "preferences",
-    "controls",
-    "configuration",
     "fixed",
     "build",
     "construction",

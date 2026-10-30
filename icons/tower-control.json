@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "it-is-not"
   ],
+  "use-cases": [],
   "tags": [
     "airport",
     "travel",
@@ -13,6 +14,7 @@
   ],
   "categories": [
     "travel",
-    "transportation"
+    "transportation",
+    "buildings"
   ]
 }

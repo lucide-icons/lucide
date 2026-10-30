@@ -4,17 +4,16 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:bean",
+    "$group:off",
     "soy free",
-    "legume",
-    "soy",
-    "food",
-    "seed",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:bean"
   ]
 }

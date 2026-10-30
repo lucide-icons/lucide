@@ -4,19 +4,15 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "cancel",
-    "close",
-    "delete",
-    "remove",
-    "clear",
-    "multiple",
+    "$extends:copy",
+    "$group:x",
     "multiply",
-    "multiplication",
-    "times"
+    "multiplication"
   ],
   "categories": [
     "notifications",
-    "math"
+    "$extends:copy"
   ]
 }

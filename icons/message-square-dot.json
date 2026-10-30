@@ -4,18 +4,14 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "unread",
-    "unresolved",
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble"
+    "$extends:message-square",
+    "$group:dot",
+    "unresolved"
   ],
   "categories": [
-    "social",
+    "$extends:message-square",
     "notifications"
   ]
 }

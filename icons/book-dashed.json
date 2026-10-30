@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:book",
     "code",
     "coding",
     "version control",
@@ -12,24 +14,20 @@
     "repository",
     "template",
     "draft",
-    "script",
     "screenplay",
-    "writing",
-    "writer",
-    "author",
     "unwritten",
     "unpublished",
     "untold"
   ],
   "categories": [
-    "development"
+    "development",
+    "text"
   ],
   "aliases": [
     {
       "name": "book-template",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0.0"
+      "deprecated": true
     }
   ]
 }

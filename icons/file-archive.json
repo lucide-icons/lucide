@@ -5,12 +5,14 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
     "zip",
     "package",
     "archive"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "radio",
     "speakers",
@@ -15,7 +16,6 @@
   ],
   "categories": [
     "devices",
-    "multimedia",
-    "social"
+    "multimedia"
   ]
 }

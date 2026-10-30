@@ -5,15 +5,12 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "$group:search",
+    "enlarge"
   ],
   "categories": [
-    "text",
-    "social"
+    "text"
   ]
 }

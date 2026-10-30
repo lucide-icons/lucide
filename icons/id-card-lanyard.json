@@ -5,16 +5,15 @@
     "UsamaKhan",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:id-card",
     "id-card",
     "id-card-lanyard",
-    "identity",
     "employee",
-    "gate-pass",
-    "badge"
+    "gate-pass"
   ],
   "categories": [
-    "security",
-    "account"
+    "$extends:id-card"
   ]
 }

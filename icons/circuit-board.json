@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "computing",
     "electricity",
@@ -11,6 +12,7 @@
   ],
   "categories": [
     "science",
-    "development"
+    "development",
+    "devices"
   ]
 }

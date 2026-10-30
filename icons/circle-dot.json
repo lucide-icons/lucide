@@ -3,9 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "pending",
-    "dot",
     "progress",
     "issue",
     "code",
@@ -13,10 +13,28 @@
     "version control",
     "choices",
     "multiple choice",
-    "choose"
+    "choose",
+    "album",
+    "music",
+    "songs",
+    "format",
+    "cd",
+    "dvd",
+    "vinyl",
+    "sleeve",
+    "cover",
+    "platinum",
+    "compilation",
+    "ep",
+    "recording",
+    "playback",
+    "spin",
+    "rotate",
+    "rpm",
+    "dj"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "$extends:circle",
+    "development"
   ]
 }

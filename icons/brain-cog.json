@@ -6,14 +6,10 @@
     "it-is-not",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
-    "mind",
-    "intellect",
-    "artificial intelligence",
-    "ai",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$extends:brain",
+    "$group:cog"
   ],
   "categories": [
     "science",

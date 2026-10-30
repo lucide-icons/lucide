@@ -3,20 +3,15 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "path",
-    "journey",
-    "planner",
-    "points",
-    "stops",
-    "stations",
+    "$extends:route",
+    "$group:off",
     "reset",
     "clear",
-    "cancelled",
-    "closed",
-    "blocked"
+    "closed"
   ],
   "categories": [
-    "navigation"
+    "$extends:route"
   ]
 }

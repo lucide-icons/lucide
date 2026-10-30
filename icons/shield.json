@@ -4,20 +4,13 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "cybersecurity",
-    "secure",
-    "safety",
-    "protection",
-    "guardian",
+    "$group:shield",
     "armored",
     "armoured",
-    "defense",
-    "defence",
-    "defender",
     "block",
     "threat",
-    "prevention",
     "antivirus",
     "vigilance",
     "vigilant",
@@ -52,7 +45,6 @@
     "account",
     "security",
     "development",
-    "gaming",
-    "shapes"
+    "gaming"
   ]
 }

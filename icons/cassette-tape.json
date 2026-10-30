@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "audio",
     "music",
@@ -10,10 +11,7 @@
     "play"
   ],
   "categories": [
-    "connectivity",
     "devices",
-    "multimedia",
-    "communication",
-    "files"
+    "multimedia"
   ]
 }

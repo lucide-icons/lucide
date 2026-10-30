@@ -5,21 +5,17 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:earth",
+    "$group:lock",
     "vpn",
-    "private",
-    "privacy",
     "network",
-    "world",
-    "browser",
-    "security",
     "encryption",
-    "protection",
     "connection"
   ],
   "categories": [
     "security",
-    "development",
-    "devices"
+    "connectivity"
   ]
 }

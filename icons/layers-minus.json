@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "juanisidoro",
+    "karsa-mistmere",
+    "Spleefies"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:layers",
+    "$group:minus",
+    "layers"
+  ],
+  "categories": [
+    "$extends:layers"
+  ]
+}

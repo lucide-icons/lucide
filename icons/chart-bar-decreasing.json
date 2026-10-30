@@ -3,14 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-bar",
     "trending down"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-bar"
   ]
 }

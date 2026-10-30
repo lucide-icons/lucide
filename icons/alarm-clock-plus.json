@@ -6,20 +6,22 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Adding a scheduled wake-up reminder in clock apps",
+    "Creating an additional alarm for a daily routine"
+  ],
   "tags": [
-    "add"
+    "$extends:alarm-clock",
+    "$group:plus"
   ],
   "categories": [
-    "devices",
-    "notifications",
-    "time"
+    "$extends:alarm-clock"
   ],
   "aliases": [
     {
       "name": "alarm-plus",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

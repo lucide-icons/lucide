@@ -8,15 +8,14 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:minus",
     "file",
     "paper",
     "tear",
     "cut",
-    "delete",
     "destroy",
-    "remove",
-    "erase",
     "document",
     "destruction",
     "secure",
@@ -31,7 +30,7 @@
     "permanent"
   ],
   "categories": [
-    "mail",
-    "files"
+    "files",
+    "security"
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:face-slightly-smiling",
+    "$extends:group",
+    "$group:plus",
+    "react",
+    "reaction"
+  ],
+  "categories": [
+    "emoji",
+    "social",
+    "communication"
+  ],
+  "aliases": [
+    {
+      "name": "smile-plus",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

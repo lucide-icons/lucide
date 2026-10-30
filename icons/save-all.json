@@ -5,12 +5,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:save",
     "floppy disks",
     "copy"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:save"
   ]
 }

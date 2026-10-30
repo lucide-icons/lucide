@@ -4,15 +4,16 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:candy",
+    "$group:off",
     "sugar free",
-    "food",
-    "sweet",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:candy"
   ]
 }

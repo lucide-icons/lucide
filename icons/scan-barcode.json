@@ -3,8 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "checkout",
+    "$extends:scan",
     "till",
     "cart",
     "transaction",

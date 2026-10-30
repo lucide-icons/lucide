@@ -3,13 +3,11 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
+    "$group:minus",
+    "$group:off",
     "redeemed",
     "used",
     "marked",
@@ -22,14 +20,8 @@
     "refused",
     "banned",
     "barred",
-    "forbidden",
-    "prohibited",
-    "cancelled",
     "cancellation",
     "refunded",
-    "delete",
-    "remove",
-    "clear",
     "error"
   ],
   "categories": [

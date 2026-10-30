@@ -4,12 +4,14 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
     "diff",
     "patch"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

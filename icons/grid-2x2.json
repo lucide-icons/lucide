@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "table",
     "rows",
@@ -25,15 +26,13 @@
   "categories": [
     "text",
     "layout",
-    "design",
-    "math"
+    "design"
   ],
   "aliases": [
     {
       "name": "grid-2-x-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

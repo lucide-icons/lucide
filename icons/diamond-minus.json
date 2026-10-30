@@ -3,12 +3,11 @@
   "contributors": [
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:minus",
     "keyframe",
-    "subtract",
-    "remove",
     "decrease",
-    "reduce",
     "calculator",
     "button",
     "keyboard",
@@ -30,8 +29,6 @@
   ],
   "categories": [
     "multimedia",
-    "photography",
-    "tools",
-    "devices"
+    "design"
   ]
 }

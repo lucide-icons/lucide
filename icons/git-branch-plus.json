@@ -4,12 +4,12 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "add",
-    "create",
-    "+"
+    "$extends:git-branch",
+    "$group:plus"
   ],
   "categories": [
-    "development"
+    "$extends:git-branch"
   ]
 }

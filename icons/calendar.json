@@ -4,10 +4,13 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "day",
     "date",
     "month",
     "year",
+    "timestamp",
     "event",
     "birthday",
     "birthdate"

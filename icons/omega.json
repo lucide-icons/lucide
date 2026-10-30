@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "greek",
     "symbol",
     "mathematics",
@@ -19,8 +21,8 @@
     "philosophy"
   ],
   "categories": [
+    "letters-digits",
     "math",
-    "development",
     "text",
     "science"
   ]

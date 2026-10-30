@@ -4,16 +4,15 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:minus",
     "playlist",
-    "remove",
     "song",
-    "subtract",
-    "delete",
     "unqueue"
   ],
   "categories": [
-    "multimedia",
-    "text"
+    "$extends:list",
+    "multimedia"
   ]
 }

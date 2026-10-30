@@ -3,21 +3,19 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-bottom",
     "desktop",
     "applications",
     "launch",
     "home",
     "menu bar",
-    "bottom",
     "line",
     "macos",
     "osx"
   ],
   "categories": [
-    "layout",
-    "design",
-    "development",
-    "files"
+    "layout"
   ]
 }

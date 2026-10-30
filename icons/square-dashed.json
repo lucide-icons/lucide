@@ -7,6 +7,7 @@
     "karsa-mistmere",
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
     "selection",
     "square",
@@ -17,15 +18,14 @@
     "box"
   ],
   "categories": [
-    "text",
-    "design"
+    "design",
+    "cursors"
   ],
   "aliases": [
     {
       "name": "box-select",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -4,20 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "birthday",
-    "birthdate",
-    "celebration",
-    "party",
-    "surprise",
-    "gateaux",
-    "dessert",
-    "candles",
-    "wish",
-    "fondant",
-    "icing sugar",
-    "sweet",
-    "baking"
+    "$extends:cake"
   ],
   "categories": [
     "food-beverage",

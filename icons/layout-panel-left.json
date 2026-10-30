@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-left",
     "app",
     "home",
     "start",

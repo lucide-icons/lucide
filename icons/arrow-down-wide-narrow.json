@@ -5,27 +5,21 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$group:direction-down",
+    "$group:sort"
   ],
   "categories": [
+    "$extends:arrow-down",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
     {
       "name": "sort-desc",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

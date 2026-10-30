@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "licence",
     "license"
   ],

@@ -4,10 +4,12 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "mouse"
+    "$extends:pointer",
+    "$group:off"
   ],
   "categories": [
-    "cursors"
+    "$extends:pointer"
   ]
 }

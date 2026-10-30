@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-bottom",
     "insert",
     "add",
     "top",
@@ -25,7 +27,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "tools"
+    "design"
   ]
 }

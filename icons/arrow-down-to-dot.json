@@ -3,16 +3,16 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
-    "south",
+    "$extends:arrow-down",
+    "$group:direction-down",
     "waypoint",
     "location",
     "step",
     "into"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:arrow-down"
   ]
 }

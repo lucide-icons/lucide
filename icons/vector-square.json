@@ -4,6 +4,7 @@
     "chessurisme",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "shape",
     "geometry",
@@ -20,7 +21,6 @@
   "categories": [
     "shapes",
     "math",
-    "design",
-    "tools"
+    "design"
   ]
 }

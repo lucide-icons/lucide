@@ -6,11 +6,12 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "weather",
+    "$extends:cloud",
     "blizzard"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud"
   ]
 }

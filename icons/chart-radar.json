@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "nito",
+    "karsa-mistmere",
+    "congemcd",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing data as 2D areas in a circular format"
+  ],
+  "tags": [
+    "$group:chart",
+    "radar",
+    "chart",
+    "shape",
+    "gem",
+    "mineral",
+    "pentagon",
+    "multidimensional",
+    "metrics",
+    "performance",
+    "comparison",
+    "profile",
+    "attributes"
+  ],
+  "categories": [
+    "charts",
+    "shapes",
+    "science"
+  ]
+}

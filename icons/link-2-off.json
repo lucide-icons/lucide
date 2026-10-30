@@ -5,11 +5,13 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "unchain",
-    "chain"
+    "$extends:link-2",
+    "$group:off",
+    "unchain"
   ],
   "categories": [
-    "text"
+    "$extends:link-2"
   ]
 }

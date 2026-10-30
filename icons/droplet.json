@@ -6,6 +6,7 @@
     "csandman",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
     "water",
     "weather",
@@ -18,7 +19,6 @@
     "globule"
   ],
   "categories": [
-    "weather",
-    "gaming"
+    "weather"
   ]
 }

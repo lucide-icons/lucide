@@ -4,13 +4,11 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "vehicle",
-    "drive",
-    "trip",
-    "journey"
+    "$extends:car"
   ],
   "categories": [
-    "transportation"
+    "$extends:car"
   ]
 }

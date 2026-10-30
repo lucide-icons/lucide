@@ -5,20 +5,20 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "readme",
-    "help",
-    "question"
+    "$extends:file",
+    "$group:question-mark",
+    "readme"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {
       "name": "file-question",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

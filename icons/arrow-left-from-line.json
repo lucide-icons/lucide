@@ -4,18 +4,15 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "previous",
-    "back",
-    "direction",
-    "west",
+    "$extends:arrow-left",
+    "$group:direction-left",
     "expand",
     "fold",
-    "horizontal",
     "<-|"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:arrow-left"
   ]
 }

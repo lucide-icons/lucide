@@ -4,20 +4,14 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "stack",
-    "pile",
-    "pages",
-    "sheets",
-    "paperwork",
-    "copies",
-    "copy",
+    "$extends:layers",
     "duplicate",
     "double",
     "shortcuts"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layers"
   ]
 }

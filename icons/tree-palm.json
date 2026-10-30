@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "vacation",
     "leisure",
@@ -10,14 +11,14 @@
   ],
   "categories": [
     "nature",
-    "sustainability"
+    "sustainability",
+    "travel"
   ],
   "aliases": [
     {
       "name": "palmtree",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

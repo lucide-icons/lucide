@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "domingasp",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:mouse-pointer-2",
+    "$group:off",
+    "pointer",
+    "mouse",
+    "cursor",
+    "arrow",
+    "navigation",
+    "selection",
+    "no-click",
+    "interaction"
+  ],
+  "categories": [
+    "$extends:mouse-pointer-2"
+  ]
+}

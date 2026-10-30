@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
+    "$extends:receipt",
+    "$group:currency",
     "british",
-    "currency",
     "gbp",
     "£"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

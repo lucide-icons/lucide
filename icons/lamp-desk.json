@@ -5,15 +5,13 @@
     "jguddas",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "lighting",
-    "household",
+    "$extends:lamp",
     "office",
-    "desk",
-    "home",
-    "furniture"
+    "desk"
   ],
   "categories": [
-    "home"
+    "$extends:lamp"
   ]
 }

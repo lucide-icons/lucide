@@ -4,12 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "monetization",
-    "marketing",
-    "currency",
-    "money",
-    "payment"
+    "$group:currency",
+    "marketing"
   ],
   "categories": [
     "finance"

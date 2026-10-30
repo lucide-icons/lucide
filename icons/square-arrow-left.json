@@ -4,26 +4,24 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:navigation-previous",
     "previous",
-    "back",
-    "direction",
-    "west",
     "sign",
     "keyboard",
     "button",
     "<-"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ],
   "aliases": [
     {
       "name": "arrow-left-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

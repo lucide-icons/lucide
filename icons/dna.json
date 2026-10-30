@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "gene",
     "gmo",
@@ -12,6 +13,7 @@
     "nucleic acid"
   ],
   "categories": [
-    "medical"
+    "medical",
+    "science"
   ]
 }

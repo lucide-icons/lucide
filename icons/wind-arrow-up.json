@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jamiemlaw",
+    "jamesgpearce"
+  ],
+  "use-cases": [
+    "Indicating maximum wind speeds or gusts",
+    "Sorting wind strengths in weather tables"
+  ],
+  "tags": [
+    "$extends:wind",
+    "$group:direction-up",
+    "pressure",
+    "gust",
+    "windy",
+    "sort",
+    "increase"
+  ],
+  "categories": [
+    "$extends:wind"
+  ]
+}

@@ -3,9 +3,9 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
-    "time",
-    "watch",
+    "$group:clock",
     "alarm"
   ],
   "categories": [

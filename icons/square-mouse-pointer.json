@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "inspector",
     "element",
@@ -19,17 +20,14 @@
     "node"
   ],
   "categories": [
-    "arrows",
     "cursors",
-    "development",
-    "tools"
+    "development"
   ],
   "aliases": [
     {
       "name": "inspect",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

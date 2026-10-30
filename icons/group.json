@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "cubes",
     "packages",
@@ -14,6 +15,7 @@
     "dashed"
   ],
   "categories": [
-    "files"
+    "layout",
+    "design"
   ]
 }

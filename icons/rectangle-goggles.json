@@ -4,6 +4,7 @@
     "EthanHazel",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "vr",
     "virtual",
@@ -15,7 +16,6 @@
   "categories": [
     "devices",
     "gaming",
-    "multimedia",
-    "connectivity"
+    "multimedia"
   ]
 }

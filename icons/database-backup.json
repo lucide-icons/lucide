@@ -6,22 +6,16 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "servers",
+    "$extends:database",
     "backup",
-    "timemachine",
+    "time machine",
     "rotate",
     "arrow",
     "left"
   ],
   "categories": [
-    "devices",
-    "arrows",
-    "design",
-    "development",
-    "photography"
+    "$extends:database"
   ]
 }

@@ -2,19 +2,35 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing wayfinding, directions, or a route marker",
+    "Indicating a specific location or point of interest",
+    "Marking important milestones or checkpoints"
   ],
   "tags": [
+    "navigation",
+    "direction",
+    "arrow",
+    "wayfinding",
+    "guide",
+    "location",
+    "pointer",
+    "route",
+    "indicator",
+    "marker",
     "bidirectional",
     "left",
     "right",
     "east",
-    "west"
+    "west",
+    "milestone",
+    "checkpoint"
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "development",
-    "gaming"
+    "navigation"
   ]
 }

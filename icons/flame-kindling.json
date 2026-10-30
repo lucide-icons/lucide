@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "campfire",
     "camping",
@@ -15,8 +16,6 @@
     "sticks"
   ],
   "categories": [
-    "nature",
-    "social",
-    "gaming"
+    "nature"
   ]
 }

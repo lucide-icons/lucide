@@ -3,28 +3,11 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "album",
-    "music",
-    "songs",
-    "format",
-    "cd",
-    "dvd",
-    "vinyl",
-    "sleeve",
-    "cover",
-    "platinum",
-    "compilation",
-    "ep",
-    "recording",
-    "playback",
-    "spin",
-    "rotate",
-    "rpm",
-    "dj"
+    "$extends:disc"
   ],
   "categories": [
-    "devices",
-    "multimedia"
+    "$extends:disc"
   ]
 }

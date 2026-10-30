@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Shrinks99"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:message-circle",
+    "$group:check",
+    "moderate"
+  ],
+  "categories": [
+    "$extends:message-circle"
+  ]
+}

@@ -5,10 +5,10 @@
     "pgbradbury",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "password",
-    "key",
-    "refresh",
+    "$extends:rotate-ccw",
+    "$group:key",
     "change"
   ],
   "categories": [

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating that audio levels, playback, or monitoring are turned off",
+    "Showing muted sound, silenced voice activity, or disabled audio output",
+    "Marking controls that pause waveform visualization or stop live audio analysis",
+    "Representing inactive music, radio, broadcast, or voice signal displays",
+    "Identifying settings that disable sound processing, hearing feedback, or media levels",
+    "Showing a muted microphone during voice or video calls",
+    "Indicating speaker or headphone output is disabled in system audio controls",
+    "Marking disabled waveform or spectrum visualization in audio editors and DAWs",
+    "Showing that sound notifications or alerts are silenced"
+  ],
+  "tags": [
+    "$extends:audio-lines",
+    "$group:off",
+    "audio",
+    "mute",
+    "silence",
+    "equalizer",
+    "equaliser",
+    "waveform"
+  ],
+  "categories": [
+    "$extends:audio-lines"
+  ]
+}

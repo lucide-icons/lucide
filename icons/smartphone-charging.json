@@ -4,15 +4,12 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "phone",
-    "cellphone",
-    "device",
-    "power",
-    "screen"
+    "$extends:smartphone",
+    "power"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:smartphone"
   ]
 }

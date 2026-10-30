@@ -3,31 +3,18 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "fork",
-    "knife",
-    "cutlery",
-    "flatware",
-    "tableware",
-    "silverware",
-    "food",
-    "restaurant",
-    "meal",
-    "breakfast",
-    "dinner",
-    "supper"
+    "$extends:utensils"
   ],
   "categories": [
-    "food-beverage",
-    "travel",
-    "navigation"
+    "$extends:utensils"
   ],
   "aliases": [
     {
       "name": "fork-knife-crossed",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

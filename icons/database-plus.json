@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Creating a new database instance",
+    "Adding a database connection in a client or admin panel"
+  ],
+  "tags": [
+    "$extends:database",
+    "$group:plus",
+    "server",
+    "expand"
+  ],
+  "categories": [
+    "$extends:database"
+  ]
+}

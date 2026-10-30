@@ -4,8 +4,10 @@
     "nabanita-sarkar",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
+    "$group:digit",
     "exponent"
   ],
   "categories": [

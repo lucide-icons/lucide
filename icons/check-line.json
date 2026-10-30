@@ -4,14 +4,11 @@
     "colebemis",
     "oosawy"
   ],
+  "use-cases": [],
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:check"
   ],
   "categories": [
-    "notifications"
+    "$extends:check"
   ]
 }

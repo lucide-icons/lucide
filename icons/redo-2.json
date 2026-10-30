@@ -5,13 +5,11 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "undo",
-    "rerun",
-    "history"
+    "$extends:redo"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "$extends:redo"
   ]
 }

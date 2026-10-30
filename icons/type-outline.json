@@ -5,10 +5,9 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "text",
-    "font",
-    "typography",
+    "$extends:type",
     "silhouette",
     "profile",
     "contour",
@@ -16,6 +15,6 @@
     "line"
   ],
   "categories": [
-    "text"
+    "$extends:type"
   ]
 }

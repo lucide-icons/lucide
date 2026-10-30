@@ -4,15 +4,14 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:play",
     "music",
     "audio",
-    "video",
-    "start",
-    "run"
+    "video"
   ],
   "categories": [
-    "arrows",
     "multimedia"
   ]
 }

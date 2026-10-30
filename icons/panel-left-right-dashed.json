@@ -6,10 +6,11 @@
     "irvineacosta",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:panel-left",
+    "$group:position-right",
     "sidebar",
-    "primary",
-    "drawer",
     "show",
     "reveal",
     "padding",
@@ -20,6 +21,6 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-left"
   ]
 }

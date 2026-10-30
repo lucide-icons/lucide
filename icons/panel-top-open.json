@@ -4,16 +4,17 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:panel-top",
+    "$group:direction-down",
     "menu bar",
-    "drawer",
     "show",
     "reveal",
     "chevron",
     "down"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "layout"
   ]
 }

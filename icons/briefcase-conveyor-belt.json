@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "baggage",
     "luggage",
@@ -13,7 +14,6 @@
     "carousel"
   ],
   "categories": [
-    "travel",
-    "transportation"
+    "$extends:briefcase"
   ]
 }

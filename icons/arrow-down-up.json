@@ -3,7 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:direction-up",
+    "$group:sort",
     "bidirectional",
     "two-way",
     "2-way",
@@ -14,12 +18,9 @@
     "flow",
     "mobile data",
     "internet",
-    "sort",
-    "reorder",
     "move"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

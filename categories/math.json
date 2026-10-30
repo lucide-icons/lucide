@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Mathematics",
+  "description": "Icons for math symbols, geometry, measurement, arithmetic, and calculation.",
   "icon": "divide"
 }

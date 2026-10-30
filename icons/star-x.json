@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "Rejecting or dismissing a favorite or saved item",
+    "Excluding an item from recommendations",
+    "Revoking the featured status of an item",
+    "Blocking unwanted content from preferred lists",
+    "Clearing a favorite selection"
+  ],
+  "tags": [
+    "$extends:star",
+    "$group:x",
+    "mark",
+    "symbol",
+    "shape",
+    "vector",
+    "design",
+    "graphic"
+  ],
+  "categories": [
+    "$extends:star"
+  ]
+}

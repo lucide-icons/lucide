@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Indicating a successful database connection",
+    "Showing a verified or healthy database instance",
+    "Confirming backup integrity or successful sync"
+  ],
+  "tags": [
+    "$extends:database",
+    "$group:check",
+    "server"
+  ],
+  "categories": [
+    "$extends:database"
+  ]
+}

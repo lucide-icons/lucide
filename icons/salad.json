@@ -3,6 +3,7 @@
   "contributors": [
     "kemie"
   ],
+  "use-cases": [],
   "tags": [
     "food",
     "vegetarian",
@@ -15,7 +16,6 @@
     "health"
   ],
   "categories": [
-    "food-beverage",
-    "emoji"
+    "food-beverage"
   ]
 }

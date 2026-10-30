@@ -4,27 +4,18 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "user",
-    "person",
-    "family",
-    "friend",
-    "acquaintance",
-    "listing",
-    "networking"
+    "$extends:contact"
   ],
   "categories": [
-    "account",
-    "connectivity",
-    "communication",
-    "social"
+    "$extends:contact"
   ],
   "aliases": [
     {
       "name": "contact-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

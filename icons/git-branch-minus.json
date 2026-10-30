@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joris-gallot"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:git-branch",
+    "$group:minus"
+  ],
+  "categories": [
+    "$extends:git-branch"
+  ]
+}

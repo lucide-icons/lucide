@@ -6,6 +6,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "audio",
@@ -13,9 +14,6 @@
   ],
   "categories": [
     "multimedia",
-    "connectivity",
-    "devices",
-    "files",
-    "gaming"
+    "devices"
   ]
 }

@@ -7,8 +7,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "call",
+    "$extends:phone",
+    "$group:off",
     "mute"
   ],
   "categories": [

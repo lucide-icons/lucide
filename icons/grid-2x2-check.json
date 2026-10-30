@@ -4,35 +4,21 @@
     "danielbayley",
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
-    "table",
-    "rows",
-    "columns",
-    "blocks",
-    "plot",
-    "land",
-    "geometry",
-    "measure",
-    "data",
-    "size",
-    "width",
-    "height",
-    "distance",
-    "surface area",
-    "square meter",
-    "acre"
+    "$extends:grid-2x2",
+    "$group:check",
+    "data"
   ],
   "categories": [
     "text",
-    "layout",
-    "math"
+    "layout"
   ],
   "aliases": [
     {
       "name": "grid-2-x-2-check",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

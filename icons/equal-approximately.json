@@ -3,11 +3,10 @@
   "contributors": [
     "ksk3110"
   ],
+  "use-cases": [],
   "tags": [
-    "about",
-    "calculate",
-    "math",
-    "operater"
+    "$extends:equal",
+    "about"
   ],
   "categories": [
     "math"

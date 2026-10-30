@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley",
+    "Barakudum"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:sticky-note",
+    "$group:plus"
+  ],
+  "categories": [
+    "$extends:sticky-note"
+  ]
+}
