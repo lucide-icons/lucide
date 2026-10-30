@@ -14,36 +14,11 @@
     "marking database files in code repositories or issue trackers"
   ],
   "tags": [
-    "sql",
-    "db",
-    "data",
-    "storage",
-    "query",
-    "sqlite",
-    "mysql",
-    "backup",
-    "export",
-    "import",
-    "dump",
-    "restore",
-    "migration",
-    "schema",
-    "records",
-    "tables",
-    "snapshot",
-    "archive",
-    "server",
-    "attachment",
-    "artifact",
-    "log",
-    "relational",
-    "dataset",
-    "dbms",
-    "structured data",
-    "data source"
+    "$extends:file",
+    "$extends:database"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }
