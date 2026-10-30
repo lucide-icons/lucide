@@ -9,7 +9,9 @@
     "Indicating URL and web address input fields in forms"
   ],
   "tags": [
-    "$extends:link-2"
+    "$extends:link-2",
+    "hyperlink",
+    "web address"
   ],
   "categories": [
     "$extends:link-2"
