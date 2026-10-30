@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "gridalchemy"
+  ],
+  "use-cases": [
+    "Hiding grid lines on a canvas or artboard",
+    "Indicating that snap to grid is turned off",
+    "Hiding the cell grid in spreadsheets"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns",
+    "guides",
+    "snap",
+    "canvas",
+    "hide",
+    "disabled",
+    "spreadsheet",
+    "cells",
+    "data table",
+    "diagram",
+    "overlay"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "design"
+  ]
+}
