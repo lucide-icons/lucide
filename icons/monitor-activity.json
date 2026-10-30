@@ -17,6 +17,7 @@
   ],
   "tags": [
     "$extends:monitor",
+    "$extends:activity",
     "pulse",
     "heartbeat",
     "health",
