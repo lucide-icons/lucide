@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas",
+    "sezze",
+    "thanakritju"
+  ],
+  "use-cases": [],
+  "tags": [
+    "return",
+    "package",
+    "shipment",
+    "move",
+    "logistics",
+    "shipping",
+    "framed",
+    "box",
+    "container",
+    "storage",
+    "sealed",
+    "delivery",
+    "undelivered",
+    "unopened",
+    "packed",
+    "archive",
+    "zip",
+    "module",
+    "returned"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
