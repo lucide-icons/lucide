@@ -5,10 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$group:chart",
     "curve",
     "continuous",
     "smooth",

@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:chart",
     "$group:direction-up",
     "$group:direction-down",
     "arrows",

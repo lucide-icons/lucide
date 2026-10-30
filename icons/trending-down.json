@@ -6,8 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:direction-down",
-    "statistics"
+    "$group:chart",
+    "$group:direction-down"
   ],
   "categories": [
     "charts",

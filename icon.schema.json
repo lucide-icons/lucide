@@ -184,6 +184,7 @@
       "type": "string",
       "description": "Pulls in the tags of groups/<name>.json.",
       "enum": [
+        "$group:chart",
         "$group:check",
         "$group:clock",
         "$group:code",
@@ -200,6 +201,7 @@
         "$group:direction-up-right",
         "$group:dot",
         "$group:exclamation-mark",
+        "$group:graph",
         "$group:heart",
         "$group:key",
         "$group:letter",

@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "codeiku",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Showing normal distributions in statistical analysis tools",
+    "Visualizing probability density in educational materials",
+    "Comparing measurements against a distribution in analytics dashboards"
+  ],
+  "tags": [
+    "$group:chart",
+    "distribution",
+    "normal distribution",
+    "gaussian",
+    "probability",
+    "frequency",
+    "density",
+    "symmetric",
+    "standard deviation"
+  ],
+  "categories": [
+    "charts",
+    "math"
+  ]
+}
