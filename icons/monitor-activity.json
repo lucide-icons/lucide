@@ -18,10 +18,8 @@
   "tags": [
     "$extends:monitor",
     "$extends:activity",
-    "pulse",
     "heartbeat",
     "health",
-    "vitals",
     "performance",
     "diagnostics",
     "metrics",
