@@ -119,8 +119,8 @@ function onReset() {
   margin-bottom: 24px;
   position: relative;
   z-index: 0;
-  border: 1px solid transparent;
   transition: border-color 0.4s ease-in-out;
+  background: var(--vp-c-bg);
 }
 
 .customizer-card.customized {

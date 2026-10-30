@@ -124,7 +124,7 @@ const iconStyle = computed(() => ({
 <style scoped>
 .customizer-card {
   display: flex;
-      height: 100%;
+  height: 100%;
   padding: 24px;
   --slider-bar-color: var(--vp-c-bg-soft-down);
   --color-picker-bg: var(--vp-c-bg-soft-down);

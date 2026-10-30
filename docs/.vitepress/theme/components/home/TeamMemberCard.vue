@@ -21,7 +21,9 @@ defineProps<TeamMember>()
 <template>
   <div>
     <Card class="member-card">
+      <a :href="socialLinks[0]?.link" target="_blank" rel="noreferrer noopener">
       <img :src="image" :alt="name" class="member-image"/>
+      </a>
       <h3 class="member-name">
         {{name}}
       </h3>
@@ -72,8 +74,7 @@ defineProps<TeamMember>()
   transition-duration: 0.3s !important;
 }
 
-/* The photo lifts with a brand ring while the card is hovered */
-.member-card:hover .member-image {
+.member-image:hover {
   transform: scale(1.06);
   box-shadow: 0 0 0 3px var(--vp-c-bg-soft), 0 0 0 5px var(--vp-c-brand-1);
 }
@@ -105,7 +106,6 @@ defineProps<TeamMember>()
   gap: 8px;
 }
 
-/* Sponsor button: fills with the sponsor colour on hover while the heart beats */
 .sponsor-button {
   display: inline-flex;
   align-items: center;
