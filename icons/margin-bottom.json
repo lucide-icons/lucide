@@ -1,24 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "irvineacosta"
+    "$extends:margin"
+  ],
+  "use-cases": [
+    "Adjusting space below an element in layout editors",
+    "Setting the bottom page margin in document editors"
   ],
   "tags": [
-    "margin",
-    "design",
-    "padding",
-    "spacing",
-    "space",
-    "offset",
-    "alignment",
-    "position",
-    "layout",
-    "css",
-    "bottom",
-    "ui"
+    "$extends:margin",
+    "$group:position-bottom"
   ],
   "categories": [
-    "layout",
-    "design"
+    "$extends:margin"
   ]
 }

@@ -3,20 +3,24 @@
   "contributors": [
     "irvineacosta"
   ],
+  "use-cases": [
+    "Adjusting outer spacing on all sides in layout editors",
+    "Setting page margins on all sides in document editors"
+  ],
   "tags": [
     "margin",
     "design",
     "padding",
     "spacing",
+    "outer spacing",
+    "box model",
+    "whitespace",
     "space",
     "offset",
     "alignment",
     "position",
     "layout",
     "css",
-    "vertical",
-    "y",
-    "y-axis",
     "ui"
   ],
   "categories": [
