@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "domarku"
+  ],
+  "use-cases": [
+    "Searching within a selected region",
+    "Finding content inside a placeholder area",
+    "Scanning a marquee selection",
+    "zoom selection"
+  ],
+  "tags": [
+    "find",
+    "magnifier",
+    "magnifying glass",
+    "scan",
+    "selection",
+    "marquee",
+    "locate",
+    "lens",
+    "zoom",
+    "region",
+    "area",
+    "box",
+    "inspection",
+    "visual search",
+    "region of interest"
+  ],
+  "categories": [
+    "design",
+    "text",
+    "cursors"
+  ]
+}
