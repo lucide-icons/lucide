@@ -243,9 +243,6 @@ html::-webkit-scrollbar-thumb:active {
   transform: scaleX(0);
   transform-origin: var(--underline-origin, right);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  /* VitePress turns every transition off for reduced motion. This short, small underline
-     movement is kept, so the hover still feels smooth. */
-  transition-duration: 0.35s !important;
 }
 
 .VPNav .VPNavBarMenuLink:hover::before,
@@ -268,7 +265,6 @@ html::-webkit-scrollbar-thumb:active {
    VitePress draws the down chevron as a right chevron turned by 90deg. */
 .VPNav .VPNavBarMenuGroup .text-icon {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.35s !important;
 }
 
 .VPNav .VPNavBarMenuGroup:hover .text-icon,
@@ -292,7 +288,7 @@ html::-webkit-scrollbar-thumb:active {
   left: 2px;
   width: 16px;
   height: 16px;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 html.dark .VPNav .VPSwitchAppearance .check {
@@ -317,7 +313,7 @@ html.dark .VPNav .VPSwitchAppearance .check {
   left: 2px;
   transition:
     opacity 0.3s ease,
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .VPNav .VPSwitchAppearance .icon .moon,
@@ -338,7 +334,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   transition:
     color 0.25s,
     background-color 0.25s,
-    transform 0.25s !important;
+    transform 0.25s;
 }
 
 .VPNav .VPSocialLinks .VPSocialLink:hover,
@@ -360,13 +356,13 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   margin: 1px -8px;
   padding: 0 8px;
   border-radius: 6px;
-  transition: background-color 0.25s !important;
+  transition: background-color 0.25s;
 }
 
 .VPSidebar .VPSidebarItem.is-link > .item > .link > .text {
   transition:
     color 0.25s,
-    transform 0.25s ease !important;
+    transform 0.25s ease;
 }
 
 .VPSidebar .VPSidebarItem.is-link > .item > .link:hover,
@@ -385,7 +381,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 }
 
 .VPSidebar .VPSidebarItem .caret-icon {
-  transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
 /* Links in the page text: a faint underline shows they are links, and on hover a solid
@@ -409,7 +405,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
     100% 1px;
   transition:
     color 0.25s,
-    background-size 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .vp-doc a:not([class]):hover,
@@ -430,7 +426,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   border-radius: 8px;
   transition:
     color 0.25s,
-    background-color 0.25s !important;
+    background-color 0.25s;
 }
 
 .VPDocFooter .edit-link-button:hover,
@@ -441,7 +437,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 
 .VPDocFooter .edit-link-icon {
   transform-origin: 30% 70%;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .VPDocFooter .edit-link-button:hover .edit-link-icon,
@@ -456,7 +452,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
     border-color 0.25s,
     background-color 0.25s,
     transform 0.25s ease,
-    box-shadow 0.25s !important;
+    box-shadow 0.25s;
 }
 
 .VPDocFooter .pager-link:hover,
@@ -486,7 +482,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   width: 16px;
   height: 16px;
   background-color: currentColor;
-  transition: transform 0.25s ease !important;
+  transition: transform 0.25s ease;
 }
 
 .VPDocFooter .pager-link.prev .title::before {
@@ -516,7 +512,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   transition:
     color 0.25s,
     background-color 0.25s,
-    padding-left 0.25s ease !important;
+    padding-left 0.25s ease;
 }
 
 .VPDoc .VPDocAsideOutline .outline-link:hover,
@@ -534,7 +530,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 .VPDoc .VPDocAsideOutline .outline-marker {
   transition:
     top 0.35s cubic-bezier(0.34, 1.3, 0.64, 1),
-    opacity 0.25s !important;
+    opacity 0.25s;
 }
 
 /* Sidebar scrollbar: a slim rounded thumb that stays quiet until the sidebar is hovered */
