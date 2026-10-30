@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing romantic interest and dating applications.",
+    "Indicating a successful connection or matching partner.",
+    "Usage in games to represent infatuation status.",
+    "Indicating marital or relationship status in social network profile pages.",
+    "Representing Valentine's day in retail applications."
+  ],
+  "tags": [
+    "love",
+    "emotion",
+    "cupid",
+    "fate",
+    "passion",
+    "infatuation",
+    "attraction",
+    "partner",
+    "relationship",
+    "marriage",
+    "dating",
+    "romantic",
+    "valentine",
+    "wife",
+    "husband",
+    "engage"
+  ],
+  "categories": [
+    "social",
+    "emoji",
+    "gaming",
+    "people"
+  ]
+}
