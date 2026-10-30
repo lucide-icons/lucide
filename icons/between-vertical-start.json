@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-top",
     "insert",
     "add",
     "bottom",
@@ -26,7 +27,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "tools"
+    "design"
   ]
 }

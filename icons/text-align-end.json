@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-right",
     "text",
-    "alignment",
-    "right"
+    "alignment"
   ],
   "categories": [
     "text"

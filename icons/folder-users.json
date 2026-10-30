@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing shared network directories in operating systems",
+    "Showing shared drives in cloud storage apps",
+    "Organizing team or project collaboration workspaces",
+    "Organizing group contacts or address book entries"
+  ],
+  "tags": [
+    "$extends:folder",
+    "$group:user",
+    "shared",
+    "document",
+    "group",
+    "team",
+    "permission",
+    "access",
+    "collaboration",
+    "organization"
+  ],
+  "categories": [
+    "$extends:folder",
+    "account",
+    "people"
+  ]
+}

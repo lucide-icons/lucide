@@ -15,6 +15,10 @@ const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
   'utf-8',
 );
+const iconStyleHeadScript = await readFile(
+  fileURLToPath(new URL('./theme/iconStyleHead.js', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -65,6 +69,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarSearch.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
@@ -84,7 +94,10 @@ export default defineConfig({
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
@@ -117,6 +130,14 @@ export default defineConfig({
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
+    },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'R7KKMCPXOB',
+        apiKey: 'dd3101054267d35fb28f49c42715f1aa',
+        indexName: 'lucide',
+      },
     },
     carbonAds: {
       code: 'CWYIC53U',

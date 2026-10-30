@@ -8,12 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "add",
-    "create",
-    "new"
+    "$extends:folder",
+    "$group:plus"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

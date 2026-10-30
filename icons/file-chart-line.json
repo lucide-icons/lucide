@@ -6,14 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation"
+    "$extends:file",
+    "$extends:chart-line"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "charts"
   ],
   "aliases": [
     {

@@ -9,14 +9,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "camera",
-    "movie",
-    "film"
+    "$extends:video",
+    "$group:off"
   ],
   "categories": [
-    "devices",
-    "communication",
-    "connectivity",
-    "photography"
+    "$extends:video"
   ]
 }

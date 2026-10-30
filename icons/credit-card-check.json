@@ -12,30 +12,21 @@
     "Showing successful card authorization in banking apps"
   ],
   "tags": [
+    "$extends:credit-card",
+    "$group:check",
     "debit",
-    "payment",
     "banking",
     "finance",
     "transaction",
     "wallet",
-    "purchase",
     "checkout",
     "billing",
     "account",
     "cardholder",
-    "verified",
-    "approved",
-    "authorized",
-    "valid",
-    "success",
-    "complete",
-    "check",
-    "bank",
-    "cc"
+    "authorized"
   ],
   "categories": [
-    "account",
-    "finance",
+    "$extends:credit-card",
     "shopping"
   ]
 }

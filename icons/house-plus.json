@@ -4,16 +4,14 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new property or home, e.g. in real estate apps",
+    "Represent medical facilities or additions to a home"
+  ],
   "tags": [
-    "home",
-    "living",
-    "medical",
-    "new",
-    "addition",
-    "building",
-    "residence",
-    "architecture"
+    "$extends:house",
+    "$group:plus",
+    "medical"
   ],
   "categories": [
     "buildings",

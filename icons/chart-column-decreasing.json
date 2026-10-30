@@ -5,13 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-column",
     "trending down"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-column"
   ]
 }

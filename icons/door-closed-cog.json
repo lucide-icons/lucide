@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "lukedukeus",
+    "danielbayley",
+    "jguddas",
+    "UsamaKhan",
+    "ajaxjiang96"
+  ],
+  "use-cases": [
+    "Opening room configuration in a smart home app",
+    "Setting automatic opening schedules for a building entrance",
+    "Managing visitor access to a shared entrance"
+  ],
+  "tags": [
+    "$extends:door-closed",
+    "$group:cog",
+    "room",
+    "access",
+    "automation"
+  ],
+  "categories": [
+    "home",
+    "security"
+  ]
+}

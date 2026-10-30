@@ -4,29 +4,18 @@
     "ericfennis"
   ],
   "use-cases": [
-    "sorting items in a table by column (name, date, price, status)",
-    "reordering a list in descending order"
+    "Sorting table columns in descending order",
+    "Reordering a list from highest to lowest or Z to A"
   ],
   "tags": [
+    "$group:sort",
     "list",
-    "order",
-    "arrangement",
     "organization",
-    "sequence",
-    "ranking",
     "categories",
-    "presentation",
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "presentation"
   ],
   "categories": [
-    "text",
+    "$extends:list",
     "layout"
   ]
 }

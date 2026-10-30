@@ -6,11 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "oblique",
-    "text",
     "format"
   ],
   "categories": [
+    "letters-digits",
     "text"
   ]
 }

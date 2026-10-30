@@ -8,11 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "device",
-    "scroll",
-    "click"
+    "$extends:mouse",
+    "$group:position-left"
   ],
   "categories": [
-    "devices"
+    "$extends:mouse"
   ]
 }

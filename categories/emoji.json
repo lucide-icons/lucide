@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Emoji",
+  "description": "Icons for expressive symbols, faces, gestures, hearts, stars, and zodiac signs.",
   "icon": "face-slightly-smiling"
 }

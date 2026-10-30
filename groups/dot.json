@@ -1,0 +1,19 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: a notification or indicator on something",
+  "tags": [
+    "notification",
+    "indicator",
+    "badge",
+    "pill",
+    "bullet",
+    "spot",
+    "marker",
+    "new",
+    "status",
+    "online",
+    "active",
+    "unread",
+    "current"
+  ]
+}

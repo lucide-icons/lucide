@@ -5,14 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
-    "cancelled",
-    "cancellation",
+    "$extends:ticket",
+    "$group:x",
     "refunded",
     "used",
     "void",
@@ -24,11 +18,7 @@
     "barred",
     "forbidden",
     "prohibited",
-    "delete",
-    "remove",
-    "clear",
-    "error",
-    "x"
+    "error"
   ],
   "categories": [
     "transportation"

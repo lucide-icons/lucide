@@ -5,9 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
+    "$extends:mail",
+    "$group:question-mark",
     "delivery",
     "undelivered"
   ],

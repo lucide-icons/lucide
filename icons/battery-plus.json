@@ -9,20 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge",
-    "plus",
+    "$extends:battery",
+    "$group:plus",
     "economy",
     "health",
-    "add",
-    "new",
     "maximum",
-    "upgrade",
-    "extra",
-    "+"
+    "upgrade"
   ],
   "categories": [
     "devices"
