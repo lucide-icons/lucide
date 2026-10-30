@@ -7,6 +7,7 @@ import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
+import Card from '../base/Card.vue';
 
 const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
   useIconStyleContext();
@@ -18,7 +19,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
 </script>
 
 <template>
-  <div
+  <Card
     class="customizer-card"
     :class="{ customized: showCustomized }"
   >
@@ -84,7 +85,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
         v-model="nonScalingStroke"
       />
     </InputField>
-  </div>
+  </Card>
 </template>
 
 <style scoped>
@@ -102,10 +103,8 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
   font-size: 16px;
 }
 
-.customizer-card {
-  background: var(--vp-c-bg);
+.card.customizer-card {
   padding: 12px 24px 24px;
-  border-radius: 12px;
   margin-bottom: 24px;
   position: relative;
   z-index: 0;

@@ -118,30 +118,6 @@ html::-webkit-scrollbar-thumb:active {
   font-size: 21px;
 }
 
-/* The logo looks the same after half a turn, so on hover it spins round half a turn with a
-   small bounce while the name takes the brand colour. Pressing it pushes it in a little. */
-.VPNavBarTitle .title .logo {
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-}
-
-.VPNavBarTitle .title > span {
-  transition: color 0.3s ease !important;
-}
-
-.VPNavBarTitle .title:hover .logo,
-.VPNavBarTitle .title:focus-visible .logo {
-  transform: rotate(180deg) scale(1.08);
-}
-
-.VPNavBarTitle .title:active .logo {
-  transform: rotate(180deg) scale(0.92);
-}
-
-.VPNavBarTitle .title:hover > span,
-.VPNavBarTitle .title:focus-visible > span {
-  color: var(--vp-c-brand-1);
-}
-
 .VPHomeHero > .container {
   gap: 24px;
 }
@@ -164,6 +140,10 @@ html::-webkit-scrollbar-thumb:active {
 .VPHomeHero .container .image-container {
   height: auto;
   justify-content: flex-end;
+}
+
+.VPFeature {
+  border: 1px solid var(--vp-c-divider) !important;
 }
 
 .VPFeature .icon {
@@ -230,6 +210,7 @@ html::-webkit-scrollbar-thumb:active {
 .VPNav .VPNavBarMenuLink,
 .VPNav .VPNavBarMenuGroup .button {
   position: relative;
+  transition: opacity 0.25s;
 }
 
 .VPNav .VPNavBarMenuLink::before,
@@ -258,6 +239,12 @@ html::-webkit-scrollbar-thumb:active {
 .VPNav .VPNavBarMenuGroup.active .button::before {
   transform: scaleX(1);
   transform-origin: var(--underline-origin, left);
+}
+
+/* On hover the link text dims, like the dropdown buttons do; the current page keeps its brand colour */
+.VPNav .VPNavBarMenuLink:not(.active):hover {
+  color: var(--vp-c-text-1);
+  opacity: 0.8;
 }
 
 /* The chevron turns up while the dropdown is open, and the menu slides down into place.

@@ -46,8 +46,6 @@ defineProps<{
   display: flex;
   height: 100%;
   padding: 48px 0;
-  transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s;
-  transition-duration: 0.3s !important;
 }
 
 /* On hover the card lifts with a brand border, the logo grows and moves up a little to make
@@ -55,9 +53,6 @@ defineProps<{
 .company:hover,
 .company:focus-visible {
   outline: none;
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--vp-c-brand) 45%, transparent);
-  box-shadow: var(--vp-shadow-3);
 }
 
 .logo {
@@ -72,7 +67,7 @@ defineProps<{
 .company:hover .logo,
 .company:focus-visible .logo {
   opacity: 1;
-  transform: translateY(-10px) scale(1.06);
+  transform: translateY(-8px) scale(1.02);
 }
 
 .company-name {
@@ -85,7 +80,7 @@ defineProps<{
   font-weight: 600;
   color: var(--vp-c-text-2);
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(3px);
   transition: opacity 0.3s, transform 0.3s ease;
   transition-duration: 0.3s !important;
 }

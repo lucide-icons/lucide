@@ -66,7 +66,6 @@ defineProps({
 .fake-input:hover .search-icon,
 .fake-input:focus-visible .search-icon {
   color: var(--vp-c-brand-1);
-  transform: rotate(-12deg) scale(1.1);
 }
 
 .shortcut {

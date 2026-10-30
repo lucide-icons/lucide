@@ -8,6 +8,7 @@ import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
 import Switch from '../base/Switch.vue';
+import Card from '../base/Card.vue';
 
 const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } = useIconStyle();
 
@@ -20,7 +21,7 @@ const iconStyle = computed(() => ({
 
 <template>
   <HomeContainer>
-    <div class="card">
+    <Card class="customizer-card">
       <div class="card-column">
         <h2 class="title">
           Style as you please
@@ -105,16 +106,14 @@ const iconStyle = computed(() => ({
           :style="iconStyle"
         />
       </div>
-    </div>
+    </Card>
   </HomeContainer>
 </template>
 
 <style scoped>
-.card {
-  display: block;
-  border-radius: 12px;
-  height: 100%;
-  background-color: var(--vp-c-bg-soft);
+.customizer-card {
+  display: flex;
+      height: 100%;
   padding: 24px;
   --slider-bar-color: var(--vp-c-bg-soft-down);
   --color-picker-bg: var(--vp-c-bg-soft-down);

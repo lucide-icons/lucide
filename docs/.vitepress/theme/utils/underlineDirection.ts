@@ -1,6 +1,5 @@
-// Links with a hover underline: the nav bar menu and the footer links
-const UNDERLINED_LINKS =
-  '.VPNav .VPNavBarMenuLink, .VPNav .VPNavBarMenuGroup, .VPFooter .footer-link';
+// Links with a hover underline: the nav bar menu
+const UNDERLINED_LINKS = '.VPNav .VPNavBarMenuLink, .VPNav .VPNavBarMenuGroup';
 
 // Makes the hover underline follow the mouse: it draws in from the side the pointer enters
 // and leaves towards the side the pointer exits. The side is passed to the CSS as a variable.

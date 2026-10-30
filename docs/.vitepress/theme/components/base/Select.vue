@@ -85,30 +85,28 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   padding: 7px 14px;
   height: auto;
   font-size: 14px;
-  border: 1px solid transparent;
-  cursor: text;
+  border: 1px solid var(--vp-c-divider);
+  cursor: pointer;
   display: flex;
   gap: 12px;
   transition:
     color 0.25s,
     border-color 0.25s,
-    background-color 0.25s;
+    background-color 0.25s,
+    box-shadow 0.25s;
+  transition-duration: 0.25s !important;
   width: 100%;
   align-items: center;
 }
 
-.select-button:focus {
+/* Same as FakeInput: a quiet border at rest, a brand border with a soft ring on hover, focus
+   and while open, and the chevrons take the text colour */
+.select-button:hover,
+.select-button:focus,
+.select-button[aria-expanded='true'] {
+  outline: none;
   border-color: var(--vp-c-brand);
-}
-
-/* The button shows a brand border on hover and the chevrons take the text colour */
-.select-button {
-  cursor: pointer;
-  transition-duration: 0.25s !important;
-}
-
-.select-button:hover {
-  border-color: var(--vp-c-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 15%, transparent);
 }
 
 .select-button:hover .chevron-icon,

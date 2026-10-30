@@ -59,17 +59,17 @@
 
 .switch:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
 }
 
-/* The thumb sits 2px inside the track, slides with a small bounce and stretches while pressed */
+/* The thumb sits 2px inside the track and slides with a small bounce. Like the RangeSlider
+   thumb, it grows with a soft brand ring on hover and focus, and a little more while pressed */
 .thumb {
   display: inline-block;
   margin: 2px;
   background-color: #fff;
   transition:
     transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-    width 0.2s ease;
+    box-shadow 0.2s ease;
   transition-duration: 0.4s, 0.2s !important;
   width: 16px;
   height: 16px;
@@ -78,16 +78,28 @@
   box-shadow: var(--vp-shadow-1);
 }
 
+.switch:hover .thumb,
+.switch:focus-visible .thumb {
+  transform: scale(1.1);
+  box-shadow: var(--vp-shadow-1), 0 0 0 5px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
+}
+
 .switch:active .thumb {
-  width: 20px;
+  transform: scale(1.2);
+  box-shadow: var(--vp-shadow-1), 0 0 0 7px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
 }
 
 .switch.enabled .thumb {
   transform: translateX(18px);
 }
 
+.switch.enabled:hover .thumb,
+.switch.enabled:focus-visible .thumb {
+  transform: translateX(18px) scale(1.1);
+}
+
 .switch.enabled:active .thumb {
-  transform: translateX(14px);
+  transform: translateX(18px) scale(1.2);
 }
 
 /* ------------------- */
