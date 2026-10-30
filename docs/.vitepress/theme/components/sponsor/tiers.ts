@@ -101,4 +101,26 @@ export function getTierLinks(id?: TierId) {
   };
 }
 
+export type Frequency = 'monthly' | 'once';
+
+/** Checkout links prefilled with a custom amount and frequency. */
+export function getAmountLinks(amount: number, frequency: Frequency) {
+  const isMonthly = frequency === 'monthly';
+
+  const openCollectiveParams = new URLSearchParams({
+    interval: isMonthly ? 'month' : 'oneTime',
+    amount: String(amount),
+    contributeAs: 'me',
+  });
+  const githubSponsorsParams = new URLSearchParams({
+    frequency: isMonthly ? 'recurring' : 'one-time',
+    amount: String(amount),
+  });
+
+  return {
+    openCollective: `${OPEN_COLLECTIVE_URL}/donate?${openCollectiveParams}`,
+    githubSponsors: `${GITHUB_SPONSORS_URL}/sponsorships?${githubSponsorsParams}`,
+  };
+}
+
 export const formatEuro = (amount: number) => `€${amount.toLocaleString('en-US')}`;

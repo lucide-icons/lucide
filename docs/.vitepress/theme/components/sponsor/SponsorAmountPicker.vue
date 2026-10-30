@@ -5,9 +5,15 @@ import Icon from '@lucide/vue/src/Icon';
 import { check } from '../../../data/iconNodes';
 import SponsorSection from './SponsorSection.vue';
 import SponsorSectionHeader from './SponsorSectionHeader.vue';
-import { TIERS, formatEuro, getPreviousTier, getTierForAmount, getTierLinks } from './tiers';
-
-type Frequency = 'monthly' | 'once';
+import {
+  TIERS,
+  formatEuro,
+  getAmountLinks,
+  getPreviousTier,
+  getTierForAmount,
+  getTierLinks,
+  type Frequency,
+} from './tiers';
 
 const frequencies: { id: Frequency; label: string }[] = [
   { id: 'monthly', label: 'Monthly' },
@@ -29,8 +35,16 @@ const total = computed(() => {
 
 const tier = computed(() => (isMonthly.value ? getTierForAmount(total.value) : null));
 
-// Only a monthly preset matches a tier's checkout, other amounts go to the general pages.
-const links = computed(() => getTierLinks(customAmount.value === '' ? tier.value?.id : undefined));
+// A monthly preset opens its tier's checkout, other amounts open a checkout prefilled with
+// the amount. The platforms expect whole amounts, so decimals are rounded.
+const links = computed(() => {
+  const value = Math.round(total.value);
+
+  if (customAmount.value === '' && tier.value) return getTierLinks(tier.value.id);
+  if (value > 0) return getAmountLinks(value, frequency.value);
+
+  return getTierLinks();
+});
 
 const amountText = computed(() => formatEuro(total.value));
 
