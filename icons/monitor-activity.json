@@ -16,12 +16,7 @@
     "Displaying hardware sensor readings in device management interfaces"
   ],
   "tags": [
-    "tv",
-    "screen",
-    "display",
-    "virtual machine",
-    "vm",
-    "computer",
+    "$extends:monitor",
     "pulse",
     "heartbeat",
     "health",
@@ -37,7 +32,9 @@
     "infrastructure",
     "resource usage",
     "system status",
-    "real-time"
+    "real-time",
+    "monitoring",
+    "dashboard"
   ],
   "categories": [
     "connectivity",
