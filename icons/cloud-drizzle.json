@@ -8,10 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "weather",
+    "$extends:cloud",
     "shower"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud"
   ]
 }

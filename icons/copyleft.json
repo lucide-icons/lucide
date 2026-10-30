@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "licence"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

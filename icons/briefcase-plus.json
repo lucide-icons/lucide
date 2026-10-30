@@ -15,24 +15,17 @@
     "Saving a product or service listing for later"
   ],
   "tags": [
-    "work",
-    "bag",
-    "baggage",
-    "folder",
-    "new",
-    "add",
-    "create",
-    "increase",
+    "$extends:briefcase",
+    "$group:plus",
     "briefcase",
     "portfolio",
     "business",
     "career",
     "employment",
-    "professional",
-    "plus"
+    "professional"
   ],
   "categories": [
-    "transportation",
+    "$extends:briefcase",
     "files",
     "account"
   ]

@@ -6,13 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "cab",
-    "vehicle",
-    "drive",
-    "trip",
-    "journey"
+    "$extends:car",
+    "cab"
   ],
   "categories": [
-    "transportation"
+    "$extends:car"
   ]
 }

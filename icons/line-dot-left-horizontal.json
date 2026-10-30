@@ -8,10 +8,9 @@
     "Indicating measurements at a metal bar's starting point"
   ],
   "tags": [
+    "$group:direction-left",
     "line",
-    "dot",
     "left",
-    "horizontal",
     "shape",
     "symbol",
     "navigation",

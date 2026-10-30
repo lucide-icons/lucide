@@ -5,15 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "calculate",
+    "$extends:equal",
     "off",
-    "math",
-    "operator",
-    "code",
     "≠"
   ],
   "categories": [
-    "math",
-    "development"
+    "$extends:equal"
   ]
 }

@@ -8,13 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "password",
+    "$group:key",
     "login",
-    "authentication",
-    "secure",
-    "unlock",
-    "keychain",
-    "key ring",
     "fob"
   ],
   "categories": [

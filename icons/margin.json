@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta"
+  ],
+  "use-cases": [
+    "Adjusting outer spacing on all sides in layout editors",
+    "Setting page margins on all sides in document editors"
+  ],
+  "tags": [
+    "margin",
+    "design",
+    "style",
+    "padding",
+    "spacing",
+    "gap",
+    "outer spacing",
+    "box model",
+    "whitespace",
+    "space",
+    "offset",
+    "alignment",
+    "position",
+    "layout",
+    "css",
+    "ui"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ]
+}

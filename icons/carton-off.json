@@ -11,29 +11,15 @@
     "Representing excluded milk products for allergies"
   ],
   "tags": [
-    "milk",
-    "dairy",
-    "beverage",
-    "drink",
-    "diet",
+    "$extends:carton",
+    "$group:off",
     "lactose free",
     "non dairy",
-    "liquid",
-    "liter",
-    "litre",
-    "pint",
-    "pints",
-    "pasteurized",
-    "skim",
-    "skimmed",
-    "container",
-    "packaging",
     "allergy",
     "intolerance",
-    "vegan",
-    "unavailable"
+    "vegan"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:carton"
   ]
 }

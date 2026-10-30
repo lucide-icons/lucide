@@ -9,8 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "like",
-    "love",
+    "$group:heart",
     "emotion",
     "suit",
     "playing",
@@ -19,7 +18,6 @@
   "categories": [
     "medical",
     "social",
-    "multimedia",
     "emoji",
     "gaming",
     "shapes"

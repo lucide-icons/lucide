@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "audio",
     "sound",
     "noise",
@@ -22,7 +23,7 @@
     "octave"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "multimedia"
   ]
 }

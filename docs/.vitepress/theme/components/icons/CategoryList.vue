@@ -74,7 +74,8 @@ watch(headers, () => {
   line-height: 24px;
   font-size: 14px;
   display: block;
-  transition: color 0.25s;
+  transition: color 0.25s, transform 0.25s ease;
+  transition-duration: 0.25s;
   padding: 4px 0;
 }
 
@@ -85,6 +86,13 @@ watch(headers, () => {
 
 .sidebar-link:hover, .sidebar-link.active {
   color: var(--vp-c-brand);
+}
+
+/* All and Categories slide in a little on hover */
+.sidebar-link:hover,
+.sidebar-link:focus-visible {
+  outline: none;
+  transform: translateX(4px);
 }
 .content {
   margin-top: 12px;
@@ -101,8 +109,9 @@ watch(headers, () => {
   left: -1px;
   z-index: 0;
   opacity: 0;
-  width: 1px;
+  width: 2px;
   height: 18px;
+  border-radius: 1px;
   background-color: var(--vp-c-brand);
   transition: top 0.25s cubic-bezier(0, 1, 0.5, 1), background-color 0.5s, opacity 0.25s;
 }

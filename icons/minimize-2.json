@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "exit fullscreen",
-    "arrows",
-    "close",
-    "shrink"
+    "$extends:minimize",
+    "arrows"
   ],
   "categories": [
-    "arrows",
-    "layout",
-    "design"
+    "$extends:minimize",
+    "arrows"
   ]
 }

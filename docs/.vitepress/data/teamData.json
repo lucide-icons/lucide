@@ -16,6 +16,10 @@
       {
         "icon": "x",
         "link": "https://x.com/ericfennis"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/ericfennis"
       }
     ]
   },
@@ -36,7 +40,7 @@
   },
   {
     "name": "Jakob Guddas",
-    "title": "Creator of Lucide Studio& Software engineer @LEGO",
+    "title": "Creator of Lucide Studio & Software engineer @LEGO",
     "image": "https://github.com/jguddas.png?size=192",
     "socialLinks": [
       {

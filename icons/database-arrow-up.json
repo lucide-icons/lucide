@@ -12,18 +12,13 @@
     "Pushing local data to a remote database"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "server",
-    "import",
+    "$extends:database",
+    "$group:direction-up",
     "upload",
-    "backup",
     "push",
     "upscale"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

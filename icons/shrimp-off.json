@@ -9,28 +9,13 @@
     "Marking seafood-free items on a menu"
   ],
   "tags": [
-    "marine",
-    "creature",
-    "fisherman",
-    "ocean",
-    "fresh",
-    "cuisine",
-    "marine-life",
-    "seafood",
-    "shellfish",
-    "crustacean",
-    "prawn",
-    "scallop",
-    "whelk",
-    "arthropod",
-    "littleneck",
-    "quahog",
+    "$extends:shrimp",
+    "$group:off",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "animals",
-    "food-beverage"
+    "$extends:shrimp"
   ]
 }

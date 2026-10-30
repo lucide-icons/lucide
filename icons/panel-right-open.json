@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "sidebar",
-    "secondary",
-    "drawer",
+    "$extends:panel-right",
+    "$group:direction-left",
     "show",
     "reveal",
     "chevron",
@@ -16,7 +15,6 @@
     "<"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "$extends:panel-right"
   ]
 }

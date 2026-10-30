@@ -15,6 +15,7 @@
     "Signifying integrations with AI services, APIs, or platforms"
   ],
   "tags": [
+    "$group:letter",
     "ai",
     "artificial intelligence",
     "machine learning",
@@ -40,8 +41,7 @@
     "chip"
   ],
   "categories": [
-    "letters-digits",
-    "devices",
+    "$extends:cpu",
     "development"
   ]
 }

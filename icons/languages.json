@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "translate"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

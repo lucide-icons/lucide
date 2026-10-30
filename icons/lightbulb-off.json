@@ -8,9 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "lights"
+    "$extends:lightbulb",
+    "$group:off"
   ],
   "categories": [
-    "photography"
+    "$extends:lightbulb"
   ]
 }

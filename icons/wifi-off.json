@@ -6,10 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "disabled"
+    "$extends:wifi",
+    "$group:off",
+    "disconnected"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

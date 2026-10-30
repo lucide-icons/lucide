@@ -11,7 +11,7 @@
     "tab"
   ],
   "categories": [
-    "text",
+    "$extends:list",
     "development"
   ],
   "aliases": [

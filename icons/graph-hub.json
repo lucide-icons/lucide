@@ -10,11 +10,10 @@
     "Marking fan-out patterns in system architecture or topology diagrams"
   ],
   "tags": [
+    "$group:graph",
     "load balancer",
     "distribute",
     "traffic",
-    "network",
-    "nodes",
     "parallel",
     "branch",
     "hierarchy",
@@ -23,7 +22,6 @@
     "cluster",
     "backend",
     "fan-out",
-    "topology",
     "orchestration"
   ],
   "categories": [

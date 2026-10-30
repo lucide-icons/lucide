@@ -6,16 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "display",
-    "play",
-    "video",
-    "pop out",
-    "always on top",
-    "window",
-    "inset",
-    "multitask"
+    "$extends:picture-in-picture"
   ],
   "categories": [
-    "multimedia"
+    "$extends:picture-in-picture"
   ]
 }

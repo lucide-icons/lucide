@@ -12,12 +12,9 @@
     "Representing SWOT or other 2x2 strategic matrices in business tools"
   ],
   "tags": [
+    "$group:chart",
     "quadrant",
     "chart",
-    "diagram",
-    "statistics",
-    "analytics",
-    "graph",
     "chart-scatter",
     "scatter plot",
     "2x2",

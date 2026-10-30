@@ -5,13 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "redo",
-    "history",
+    "$extends:undo",
     "step",
     "back"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "$extends:undo"
   ]
 }

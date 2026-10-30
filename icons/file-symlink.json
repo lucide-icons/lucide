@@ -7,11 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "symlink",
     "symbolic",
     "link"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

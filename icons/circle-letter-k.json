@@ -9,18 +9,14 @@
     "Representing potassium in scientific contexts"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "thousand",
     "kilo",
     "kelvin",
     "temperature",
     "potassium",
-    "chemistry",
-    "text",
-    "font",
-    "typography"
+    "chemistry"
   ],
   "categories": [
     "letters-digits"

@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-padding"
+  ],
+  "use-cases": [
+    "Adjusting inner spacing left of content in layout editors",
+    "Setting left cell padding in table editors"
+  ],
+  "tags": [
+    "$extends:square-padding",
+    "$group:position-left",
+    "indent"
+  ],
+  "categories": [
+    "$extends:square-padding"
+  ]
+}

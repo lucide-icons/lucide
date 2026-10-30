@@ -16,28 +16,18 @@
     "Labelling wireless security settings in router or network apps"
   ],
   "tags": [
+    "$extends:wifi",
+    "$group:lock",
     "admin",
-    "connection",
-    "secure",
-    "security",
-    "signal",
-    "network",
-    "password",
-    "wireless",
     "hotspot",
-    "encrypted",
-    "locked",
-    "private",
     "ssid",
     "guest",
     "router",
     "access",
-    "authentication",
-    "protected"
+    "authentication"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:wifi",
     "security"
   ]
 }

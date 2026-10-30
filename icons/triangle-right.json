@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-right",
     "volume",
     "controls",
     "controller",
@@ -17,7 +18,7 @@
     "increase"
   ],
   "categories": [
-    "shapes",
+    "$extends:triangle",
     "math"
   ]
 }

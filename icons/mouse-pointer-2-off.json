@@ -8,21 +8,18 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:mouse-pointer-2",
+    "$group:off",
     "pointer",
     "mouse",
     "cursor",
-    "off",
-    "disable",
     "arrow",
     "navigation",
     "selection",
-    "select",
-    "click",
     "no-click",
     "interaction"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:mouse-pointer-2"
   ]
 }
