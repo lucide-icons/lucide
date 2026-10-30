@@ -3,20 +3,25 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing macOS desktop applications in platform selectors",
+    "Previewing desktop software interfaces in product mockups",
+    "Indicating a native macOS application surface"
+  ],
   "tags": [
-    "application",
-    "menu bar",
-    "pane",
+    "$extends:app-window",
     "preferences",
     "macos",
     "osx",
-    "executable"
+    "desktop",
+    "title bar",
+    "traffic lights",
+    "close button",
+    "minimize",
+    "maximize",
+    "native app"
   ],
   "categories": [
-    "layout",
-    "design",
-    "development",
-    "files"
+    "$extends:app-window"
   ]
 }

@@ -6,17 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "south-west",
-    "diagonal",
+    "$group:direction-down-left",
     "sign",
-    "turn",
     "keyboard",
-    "button"
+    "button",
+    "turn"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {

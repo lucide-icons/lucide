@@ -8,17 +8,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:building",
     "business",
     "company",
     "enterprise",
     "skyscraper",
-    "organisation",
-    "organization",
     "city"
   ],
   "categories": [
-    "account",
-    "buildings"
+    "$extends:building"
   ],
   "aliases": [
     {

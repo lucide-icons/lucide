@@ -9,10 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "document"
+    "$extends:file"
   ],
   "categories": [
-    "files",
-    "arrows"
+    "$extends:file"
   ]
 }

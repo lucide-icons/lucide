@@ -4,10 +4,11 @@
     "jguddas"
   ],
   "use-cases": [
-    "show rankings or leaderboards",
-    "display top winners after a game or competition"
+    "Showing rankings or leaderboards",
+    "Displaying top winners after a game or competition"
   ],
   "tags": [
+    "$group:digit",
     "award",
     "stage",
     "winner",

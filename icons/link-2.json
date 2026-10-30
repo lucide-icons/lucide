@@ -9,11 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "chain",
-    "url"
+    "$extends:link"
   ],
   "categories": [
-    "text",
-    "account"
+    "$extends:link"
   ]
 }

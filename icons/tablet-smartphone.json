@@ -9,23 +9,16 @@
     "Representing mobile-first design workflows"
   ],
   "tags": [
+    "$extends:tablet",
     "phone",
     "cellphone",
-    "device",
-    "mobile",
-    "screen",
-    "display",
-    "touchscreen",
-    "portable",
-    "responsive",
     "screens",
     "browser",
     "testing"
   ],
   "categories": [
-    "devices",
+    "$extends:tablet",
     "design",
-    "development",
-    "tools"
+    "development"
   ]
 }

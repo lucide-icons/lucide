@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "subtract",
-    "remove",
+    "$group:minus",
     "decrease",
     "decrement",
-    "reduce",
     "negative",
     "calculate",
     "line",
@@ -32,7 +30,6 @@
   "categories": [
     "math",
     "development",
-    "text",
-    "tools"
+    "text"
   ]
 }

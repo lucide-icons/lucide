@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disconnecting or unplugging a device",
+    "Indicating a API management page"
+  ],
   "tags": [
     "electricity",
     "energy",
@@ -15,6 +18,7 @@
   ],
   "categories": [
     "devices",
-    "development"
+    "development",
+    "connectivity"
   ]
 }

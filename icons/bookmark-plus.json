@@ -7,9 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "add"
+    "$extends:bookmark",
+    "$group:plus"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

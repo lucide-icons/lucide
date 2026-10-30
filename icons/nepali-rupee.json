@@ -10,15 +10,12 @@
     "Indicating remittance transfers paid out in NPR"
   ],
   "tags": [
-    "currency",
-    "money",
+    "$group:currency",
     "nepal",
     "rupee",
     "npr"
   ],
   "categories": [
-    "finance",
-    "shopping",
-    "travel"
+    "finance"
   ]
 }

@@ -1,4 +1,4 @@
-import { h, nextTick } from 'vue';
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import './style.css';
 import 'virtual:group-icons.css';
@@ -12,7 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import { op } from './utils/openpanel';
+import { setupTracking } from './utils/openpanel';
 import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
@@ -34,8 +34,7 @@ const theme: Partial<Theme> = {
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
 
-    // Wait for VitePress to update the document title before tracking the page view.
-    router.onAfterRouteChange = () => nextTick(() => op?.screenView());
+    setupTracking(router);
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();

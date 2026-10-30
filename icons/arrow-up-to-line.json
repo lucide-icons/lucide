@@ -6,16 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "forward",
-    "direction",
-    "north",
+    "$extends:arrow-up",
+    "$group:direction-up",
+    "$group:navigation-first",
     "upload",
     "collapse",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-up",
     "files"
   ]
 }

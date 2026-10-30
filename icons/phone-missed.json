@@ -9,7 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "call"
+    "$extends:phone"
   ],
   "categories": [
     "connectivity",

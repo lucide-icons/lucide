@@ -14,11 +14,9 @@
     "Managing visitor access to a shared entrance"
   ],
   "tags": [
+    "$extends:door-closed",
+    "$group:cog",
     "room",
-    "entrance",
-    "entry",
-    "settings",
-    "gear",
     "access",
     "automation"
   ],

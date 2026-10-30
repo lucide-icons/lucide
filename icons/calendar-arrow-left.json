@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ryck",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Navigating to the previous day, week or month in calendar views",
+    "Rescheduling an event to an earlier date",
+    "Viewing past events or history in a schedule",
+    "Moving back through dates in date pickers"
+  ],
+  "tags": [
+    "$extends:calendar",
+    "$group:direction-left",
+    "$group:navigation-previous",
+    "arrow",
+    "previous",
+    "past",
+    "earlier",
+    "reschedule",
+    "postpone",
+    "schedule",
+    "timeline",
+    "date picker"
+  ],
+  "categories": [
+    "$extends:calendar"
+  ]
+}

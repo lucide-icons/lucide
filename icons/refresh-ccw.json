@@ -10,14 +10,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:sync",
     "arrows",
     "rotate",
-    "reload",
-    "rerun",
-    "synchronise",
-    "synchronize",
-    "circular",
-    "cycle"
+    "circular"
   ],
   "categories": [
     "arrows"

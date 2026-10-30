@@ -15,28 +15,18 @@
     "Showing completed review status for comments"
   ],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "draft",
+    "$extends:message-circle-dashed",
+    "$group:check",
     "pending",
     "provisional",
     "verification",
     "confirmation",
-    "success",
     "status",
-    "check",
     "approval",
     "moderate",
-    "resolved",
-    "done",
-    "complete"
+    "resolved"
   ],
   "categories": [
-    "social",
-    "account"
+    "$extends:message-circle-dashed"
   ]
 }

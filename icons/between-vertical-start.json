@@ -5,13 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-top",
     "insert",
     "add",
     "bottom",
     "slot",
     "squeeze",
     "space",
-    "vertical",
     "grid",
     "table",
     "columns",
@@ -26,7 +26,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "tools"
+    "design"
   ]
 }

@@ -6,7 +6,6 @@
   "use-cases": [],
   "tags": [
     "pending",
-    "dot",
     "progress",
     "issue",
     "code",
@@ -35,7 +34,7 @@
     "dj"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "$extends:circle",
+    "development"
   ]
 }

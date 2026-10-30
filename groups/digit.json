@@ -1,0 +1,11 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Typography: a numeric digit or numeral",
+  "tags": [
+    "digit",
+    "number",
+    "numeral",
+    "numeric",
+    "numerical"
+  ]
+}

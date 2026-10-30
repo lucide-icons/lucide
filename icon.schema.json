@@ -50,50 +50,59 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "accessibility",
-          "account",
-          "animals",
-          "arrows",
-          "buildings",
-          "charts",
-          "communication",
-          "connectivity",
-          "cursors",
-          "design",
-          "development",
-          "devices",
-          "emoji",
-          "files",
-          "finance",
-          "food-beverage",
-          "gaming",
-          "home",
-          "layout",
-          "mail",
-          "math",
-          "medical",
-          "multimedia",
-          "nature",
-          "navigation",
-          "notifications",
-          "people",
-          "photography",
-          "science",
-          "seasons",
-          "security",
-          "shapes",
-          "shopping",
-          "social",
-          "sports",
-          "sustainability",
-          "text",
-          "time",
-          "tools",
-          "transportation",
-          "travel",
-          "weather"
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "accessibility",
+              "account",
+              "animals",
+              "arrows",
+              "buildings",
+              "charts",
+              "communication",
+              "connectivity",
+              "cursors",
+              "design",
+              "development",
+              "devices",
+              "emoji",
+              "files",
+              "finance",
+              "food-beverage",
+              "gaming",
+              "home",
+              "layout",
+              "letters-digits",
+              "mail",
+              "math",
+              "medical",
+              "multimedia",
+              "nature",
+              "navigation",
+              "notifications",
+              "people",
+              "photography",
+              "science",
+              "seasons",
+              "security",
+              "shapes",
+              "shopping",
+              "social",
+              "sports",
+              "sustainability",
+              "text",
+              "time",
+              "tools",
+              "transportation",
+              "travel",
+              "weather"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+          }
         ]
       },
       "uniqueItems": true
@@ -101,7 +110,13 @@
     "contributors": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "if": {
+          "pattern": "^\\$[a-zA-Z]"
+        },
+        "then": {
+          "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+        }
       },
       "minItems": 1,
       "uniqueItems": true
@@ -109,7 +124,21 @@
     "tags": {
       "type": "array",
       "items": {
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string",
+            "not": {
+              "pattern": "^\\$[a-zA-Z]"
+            }
+          },
+          {
+            "type": "string",
+            "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          {
+            "$ref": "#/$defs/groupMarker"
+          }
+        ]
       },
       "minItems": 1,
       "uniqueItems": true
@@ -150,6 +179,57 @@
     "versionNumber": {
       "type": "string",
       "pattern": "v[0-9]+(\\.[0-9]+)+"
+    },
+    "groupMarker": {
+      "type": "string",
+      "description": "Pulls in the tags of groups/<name>.json.",
+      "enum": [
+        "$group:check",
+        "$group:clock",
+        "$group:code",
+        "$group:cog",
+        "$group:currency",
+        "$group:digit",
+        "$group:direction-down",
+        "$group:direction-down-left",
+        "$group:direction-down-right",
+        "$group:direction-left",
+        "$group:direction-right",
+        "$group:direction-up",
+        "$group:direction-up-left",
+        "$group:direction-up-right",
+        "$group:dot",
+        "$group:exclamation-mark",
+        "$group:heart",
+        "$group:key",
+        "$group:letter",
+        "$group:lock",
+        "$group:minus",
+        "$group:navigation-first",
+        "$group:navigation-last",
+        "$group:navigation-next",
+        "$group:navigation-previous",
+        "$group:off",
+        "$group:pause",
+        "$group:pen",
+        "$group:percent",
+        "$group:play",
+        "$group:plus",
+        "$group:position-bottom",
+        "$group:position-left",
+        "$group:position-right",
+        "$group:position-top",
+        "$group:question-mark",
+        "$group:search",
+        "$group:shield",
+        "$group:sort",
+        "$group:sparkles",
+        "$group:star",
+        "$group:stop",
+        "$group:sync",
+        "$group:user",
+        "$group:x"
+      ]
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."

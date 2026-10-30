@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "sound",
-    "reminder"
+    "$extends:bell"
   ],
   "categories": [
     "notifications"

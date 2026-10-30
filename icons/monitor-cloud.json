@@ -9,15 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "virtual machine",
+    "$extends:monitor",
     "virtual desktop",
-    "vm",
     "vdi",
     "computing",
     "remote work",
@@ -29,8 +22,7 @@
     "environment"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:monitor",
     "development"
   ]
 }

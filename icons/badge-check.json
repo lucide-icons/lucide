@@ -13,8 +13,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "check"
+    "$extends:badge",
+    "$group:check"
   ],
   "categories": [
     "social"

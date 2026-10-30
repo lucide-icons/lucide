@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useIconStyle } from '../../composables/useIconStyle';
 import HomeContainer from './HomeContainer.vue';
 import RangeSlider from '../base/RangeSlider.vue';
@@ -9,8 +9,19 @@ import ResetButton from '../base/ResetButton.vue';
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
 import Switch from '../base/Switch.vue';
 import Card from '../base/Card.vue';
+import useTrackStyleChanges from '../../composables/useTrackStyleChanges';
+import { track } from '../../utils/openpanel';
 
 const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } = useIconStyle();
+
+onMounted(() => {
+  useTrackStyleChanges('home_customizer_change', { color, strokeWidth, size, nonScalingStroke });
+});
+
+function onReset() {
+  track('home_customizer_reset');
+  resetStyle();
+}
 
 const iconStyle = computed(() => ({
   '--home-icon-color': color.value,
@@ -27,7 +38,7 @@ const iconStyle = computed(() => ({
           Style as you please
           <ResetButton
             :disabled="!isCustomized"
-            @click="resetStyle"
+            @click="onReset"
           />
         </h2>
         <p class="copy">
