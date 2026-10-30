@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hzhang2048",
+    "halcyon-past"
+  ],
+  "use-cases": [
+    "Copying webpage or record links in sharing menus",
+    "Indicating URL and web address input fields in forms"
+  ],
+  "tags": [
+    "$extends:link-2"
+  ],
+  "categories": [
+    "$extends:link-2"
+  ]
+}
