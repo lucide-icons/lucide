@@ -5,11 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "rename"
+    "$extends:folder",
+    "$group:pen"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ],
   "aliases": [
     {

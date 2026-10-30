@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "spreadsheet",
-    "grid",
+    "$extends:table",
     "row"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:table"
   ]
 }

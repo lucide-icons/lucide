@@ -7,12 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "on",
-    "off",
-    "device",
-    "switch"
+    "$extends:power",
+    "$group:off"
   ],
   "categories": [
-    "connectivity"
+    "$extends:power"
   ]
 }

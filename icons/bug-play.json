@@ -8,15 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "issue",
-    "testing",
-    "debug",
-    "reproduce",
-    "code",
-    "insect"
+    "$extends:bug",
+    "$group:play",
+    "reproduce"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

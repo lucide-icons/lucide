@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "north-east",
-    "diagonal"
+    "$group:direction-up-right"
   ],
   "categories": [
     "arrows"

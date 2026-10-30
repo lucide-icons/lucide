@@ -7,13 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "add",
-    "create",
-    "new",
-    "document"
+    "$extends:file-plus"
   ],
   "categories": [
-    "files"
+    "$extends:file-plus"
   ],
   "aliases": [
     {

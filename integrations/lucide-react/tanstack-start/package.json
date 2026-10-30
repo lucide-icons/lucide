@@ -13,8 +13,8 @@
     "@tanstack/react-router": "1.170.41",
     "@tanstack/react-start": "1.168.60",
     "lucide-react": "workspace:*",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
@@ -23,8 +23,8 @@
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/browser-playwright": "5.0.3",
     "typescript": "^6.0.3",
-    "vite": "^8.3.2",
-    "vitest": "5.0.3",
+    "vite": "^8.3.3",
+    "vitest": "5.0.5",
     "vitest-browser-react": "2.3.0"
   }
 }

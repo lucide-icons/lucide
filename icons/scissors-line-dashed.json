@@ -5,12 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:scissors",
     "cut here",
     "along",
-    "snip",
-    "chop",
-    "stationery",
-    "crafts",
     "instructions",
     "diagram"
   ],

@@ -6,12 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
+    "$extends:monitor",
     "connect",
     "cast",
     "audio",
@@ -20,7 +15,7 @@
     "presentation"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor",
+    "connectivity"
   ]
 }

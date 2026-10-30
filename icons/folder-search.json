@@ -6,14 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "search",
-    "find",
+    "$extends:folder",
+    "$group:search",
     "lost",
-    "browser",
-    "lens"
+    "browser"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }
