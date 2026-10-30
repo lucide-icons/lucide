@@ -13,10 +13,7 @@
   "tags": [
     "$extends:database",
     "$group:direction-down",
-    "server",
-    "export",
     "download",
-    "backup",
     "pull",
     "downsize"
   ],

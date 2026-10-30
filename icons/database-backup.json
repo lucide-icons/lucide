@@ -9,7 +9,6 @@
   "use-cases": [],
   "tags": [
     "$extends:database",
-    "backup",
     "time machine",
     "rotate",
     "arrow",
