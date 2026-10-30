@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "roygommer"
+  ],
+  "tags": [
+    "airplane",
+    "plane",
+    "flight",
+    "transport",
+    "travel",
+    "aircraft",
+    "vehicle",
+    "traveling",
+    "aviation",
+    "transportation",
+    "small-airplane"
+  ],
+  "categories": [
+    "cessna",
+    "general-aviation",
+    "sky",
+    "flying",
+    "adventure",
+    "aircraft"
+  ]
+}
