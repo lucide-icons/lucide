@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { motion, type Options as MotionOptions } from 'motion-v';
+import { useMediaQuery } from '@vueuse/core';
 
 // motion-v re-exports framer-motion's `Variants`, which doesn't match the `variants` prop of its components
 type Variants = MotionOptions['variants'];
@@ -64,14 +65,13 @@ const onAnimationComplete = (variant: unknown) => {
 
 // Only rendered on the client, so reduced motion is known before the first frame
 const mounted = ref(false);
-const reducedMotion = ref(false);
+const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
 
 onMounted(() => {
-  reducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reducedMotion.value) {
     drawAnimation.value = 'exit';
-    showHandles.value = false;
   }
+
   mounted.value = true;
 });
 
@@ -152,7 +152,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
       <motion.path
         :d="HEART_PATH"
         stroke-width="2"
-        :style="{ stroke: 'var(--vp-c-gray-1)' }"
+        :style="{ stroke: reducedMotion? 'var(--vp-c-brand)' : 'var(--vp-c-gray-1)' }"
         :initial="initial('hidden')"
         :animate="drawAnimation"
         :variants="draw"
