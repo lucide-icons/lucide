@@ -17,6 +17,7 @@
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mts",
     "prebuild:iconPopularity": "node --env-file-if-exists=.env ./scripts/writeiconPopularity.mts && node ./scripts/writeiconPopularityIndex.mts",
     "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mts",
+    "prebuild:sponsors": "node --env-file-if-exists=.env ./scripts/writeSponsorsData.mts",
     "prebuild:writeLabIconNodes": "node ./scripts/writeLabIconNodes.mts",
     "prebuild:writeLabIconMetaIndex": "node ./scripts/writeLabIconMetaIndex.mts",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mts",
