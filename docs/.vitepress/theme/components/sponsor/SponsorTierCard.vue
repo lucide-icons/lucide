@@ -10,7 +10,7 @@ const props = defineProps<{
 }>();
 
 const previousTier = computed(() => getPreviousTier(props.tier.id));
-const links = computed(() => getTierLinks(props.tier.id));
+const links = computed(() => getTierLinks(props.tier));
 </script>
 
 <template>

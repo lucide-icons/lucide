@@ -40,7 +40,7 @@ const tier = computed(() => (isMonthly.value ? getTierForAmount(total.value) : n
 const links = computed(() => {
   const value = Math.round(total.value);
 
-  if (customAmount.value === '' && tier.value) return getTierLinks(tier.value.id);
+  if (customAmount.value === '' && tier.value) return getTierLinks(tier.value);
   if (value > 0) return getAmountLinks(value, frequency.value);
 
   return getTierLinks();

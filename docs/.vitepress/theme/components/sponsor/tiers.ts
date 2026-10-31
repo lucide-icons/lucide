@@ -1,5 +1,3 @@
-import { TIER_LINKS } from './tierLinks';
-
 export const OPEN_COLLECTIVE_URL = 'https://opencollective.com/lucide-icons';
 export const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/lucide-icons';
 export const PARTNER_EMAIL = 'info@lucide.dev';
@@ -19,6 +17,18 @@ export interface Tier {
   /** Perks this tier adds on top of the previous one. */
   perks: string[];
   featured?: boolean;
+  /**
+   * Tier slug on Open Collective. Open the tier on opencollective.com/lucide-icons and copy
+   * it from the "Contribute" link, e.g. `basic-73095` from
+   * https://opencollective.com/lucide-icons/contribute/basic-73095/checkout
+   */
+  openCollectiveTier: string;
+  /**
+   * Tier id on GitHub Sponsors. Open the tier on github.com/sponsors/lucide-icons and copy
+   * the `tier_id` from its link, e.g. `671689` from
+   * https://github.com/sponsors/lucide-icons/sponsorships?tier_id=671689
+   */
+  githubSponsorsTierId: number;
 }
 
 export const TIERS: Tier[] = [
@@ -29,6 +39,8 @@ export const TIERS: Tier[] = [
     audience: 'For individuals',
     summary: 'Sponsor badge and a Discord sponsor role.',
     perks: ['Sponsor badge', 'Discord sponsor role'],
+    openCollectiveTier: 'basic-73095',
+    githubSponsorsTierId: 671689,
   },
   {
     id: 'backer',
@@ -37,6 +49,8 @@ export const TIERS: Tier[] = [
     audience: 'For individuals and freelancers',
     summary: 'Name and avatar on lucide.dev/sponsor, plus your name in the README.',
     perks: ['Name and avatar on lucide.dev/sponsor', 'Name in the README'],
+    openCollectiveTier: 'awesome-backer-73677',
+    githubSponsorsTierId: 671692,
   },
   {
     id: 'bronze',
@@ -49,6 +63,8 @@ export const TIERS: Tier[] = [
       'Small logo in the README and npm package READMEs',
       'Lucide sticker sheet',
     ],
+    openCollectiveTier: 'donation-55643',
+    githubSponsorsTierId: 675253,
   },
   {
     id: 'gold',
@@ -63,6 +79,8 @@ export const TIERS: Tier[] = [
       'One-time welcome t-shirt',
     ],
     featured: true,
+    openCollectiveTier: 'champions-circle-73678',
+    githubSponsorsTierId: 675254,
   },
   {
     id: 'platinum',
@@ -78,6 +96,8 @@ export const TIERS: Tier[] = [
       'Dedicated welcome post',
       'Private channel with maintainers',
     ],
+    openCollectiveTier: 'platinum-107266',
+    githubSponsorsTierId: 675255,
   },
 ];
 
@@ -91,29 +111,34 @@ export function getTierForAmount(monthly: number) {
   return [...TIERS].reverse().find((tier) => monthly >= tier.monthly) ?? null;
 }
 
-/** Checkout links for a tier, or the general sponsor pages without a tier. */
-export function getTierLinks(id?: TierId) {
-  const links = id ? TIER_LINKS[id] : undefined;
-
-  return {
-    openCollective: links?.openCollective || OPEN_COLLECTIVE_URL,
-    githubSponsors: links?.githubSponsors || GITHUB_SPONSORS_URL,
-  };
-}
-
 export type Frequency = 'monthly' | 'once';
 
-/** Checkout links prefilled with a custom amount and frequency. */
-export function getAmountLinks(amount: number, frequency: Frequency) {
-  const isMonthly = frequency === 'monthly';
-
-  const openCollectiveParams = new URLSearchParams({
-    interval: isMonthly ? 'month' : 'oneTime',
+const getOpenCollectiveParams = (amount: number, frequency: Frequency) =>
+  new URLSearchParams({
+    interval: frequency === 'monthly' ? 'month' : 'oneTime',
     amount: String(amount),
     contributeAs: 'me',
   });
+
+/** Checkout links for a tier, or the general sponsor pages without a tier. */
+export function getTierLinks(tier?: Tier) {
+  if (!tier) {
+    return { openCollective: OPEN_COLLECTIVE_URL, githubSponsors: GITHUB_SPONSORS_URL };
+  }
+
+  const openCollectiveParams = getOpenCollectiveParams(tier.monthly, 'monthly');
+
+  return {
+    openCollective: `${OPEN_COLLECTIVE_URL}/contribute/${tier.openCollectiveTier}/checkout?${openCollectiveParams}`,
+    githubSponsors: `${GITHUB_SPONSORS_URL}/sponsorships?tier_id=${tier.githubSponsorsTierId}`,
+  };
+}
+
+/** Checkout links prefilled with a custom amount and frequency. */
+export function getAmountLinks(amount: number, frequency: Frequency) {
+  const openCollectiveParams = getOpenCollectiveParams(amount, frequency);
   const githubSponsorsParams = new URLSearchParams({
-    frequency: isMonthly ? 'recurring' : 'one-time',
+    frequency: frequency === 'monthly' ? 'recurring' : 'one-time',
     amount: String(amount),
   });
 
