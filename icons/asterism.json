@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking interoperable Fediverse profile links in social clients",
+    "Representing a three-star typographic symbol in publishing tools",
+    "Separating article sections with a decorative typographic mark",
+    "Representing star patterns in astronomy apps"
+  ],
+  "tags": [
+    "asterisk",
+    "fediverse",
+    "activitypub",
+    "symbol",
+    "typography",
+    "social",
+    "decentralized",
+    "federation",
+    "stars",
+    "three",
+    "ornament",
+    "punctuation",
+    "divider"
+  ],
+  "categories": [
+    "text",
+    "social",
+    "design"
+  ]
+}
