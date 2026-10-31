@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
-import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
+import useIconGridVirtualizer, {
+  ICON_GRID_GAP,
+  ICON_SIZE,
+  useIconGridColumns,
+} from '../../composables/useIconGridVirtualizer';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
@@ -19,8 +23,6 @@ import Icon from '@lucide/vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
 import { track, trackDebounced } from '../../utils/openpanel';
 
-const ICON_SIZE = 56;
-const ICON_GRID_GAP = 8;
 const SORTING = [
   {
     name: 'Popularity',
@@ -60,11 +62,9 @@ const {
 } = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
-const { width: containerWidth } = useElementSize(overviewEl);
-
-const columnSize = computed(() => {
-  return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
-});
+const listEl = ref<HTMLElement | null>(null);
+const gridColumns = useIconGridColumns(overviewEl);
+const { containerWidth, columnSize } = gridColumns;
 
 const sortedIcons = computed(() => {
   switch (selectedSort.value.value) {
@@ -128,15 +128,13 @@ const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
 });
 
-const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedIcons, {
-  itemHeight: ICON_SIZE + ICON_GRID_GAP,
-  overscan: 10,
+const { virtualRows, totalSize, offsetTop, measureElement, scrollToTop } = useIconGridVirtualizer({
+  columns: gridColumns,
+  listEl,
+  rows: chunkedIcons,
 });
 
 onMounted(() => {
-  containerProps.ref.value = document.documentElement;
-  useEventListener(window, 'scroll', containerProps.onScroll);
-
   // Check if we should focus the search input from URL parameter
   const route = useRoute();
   if (route.data?.relativePath && window.location.search.includes('focus')) {
@@ -168,7 +166,7 @@ const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
 
 watch(searchQueryDebounced, () => {
-  scrollTo(0);
+  scrollToTop();
 });
 
 let hasStartedSearching = false;
@@ -248,25 +246,37 @@ function handleCloseDrawer() {
       @clear="searchQuery = ''"
     />
     <IconGrid
-      v-else-if="list.length === 0"
+      v-else-if="virtualRows.length === 0"
       overlayMode
       :icons="searchResults.slice(0, initialGridItems)"
       :activeIcon="activeIconName"
       @setActiveIcon="setActiveIconName"
     />
     <div
-      v-bind="wrapperProps"
-      class="icon"
       v-else
+      ref="listEl"
+      class="virtual-list"
+      :style="{ height: `${totalSize}px` }"
     >
-      <IconGrid
-        v-for="{ index, data: icons } in list"
-        :key="index"
-        overlayMode
-        :icons="icons"
-        :activeIcon="activeIconName"
-        @setActiveIcon="setActiveIconName"
-      />
+      <div
+        class="virtual-list-rows"
+        :style="{ transform: `translateY(${offsetTop}px)` }"
+      >
+        <div
+          v-for="row in virtualRows"
+          :key="String(row.key)"
+          :ref="measureElement"
+          :data-index="row.index"
+          class="virtual-row"
+        >
+          <IconGrid
+            overlayMode
+            :icons="chunkedIcons[row.index]"
+            :activeIcon="activeIconName"
+            @setActiveIcon="setActiveIconName"
+          />
+        </div>
+      </div>
     </div>
   </div>
 
@@ -285,6 +295,23 @@ function handleCloseDrawer() {
 
 .icon {
   aspect-ratio: 1/1;
+}
+
+.virtual-list {
+  position: relative;
+  width: 100%;
+}
+
+.virtual-list-rows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Contain the row's bottom margin, so the measured height includes it. */
+.virtual-row {
+  display: flow-root;
 }
 
 .input-wrapper {

@@ -6,14 +6,16 @@ import { useCategoryView } from './useCategoryView';
 interface UseScrollToCategory {
   categories: Ref<Pick<Category, 'name' | 'icons'>[]>;
   categoriesList: Ref<CategoryRow[]>;
-  scrollTo: (index: number) => void;
+  scrollToIndex: (index: number) => void;
+  scrollToTop: () => void;
   searchQueryDebounced: Ref<string>;
 }
 
 export default function useScrollToCategory({
   categories,
   categoriesList,
-  scrollTo,
+  scrollToIndex,
+  scrollToTop,
   searchQueryDebounced,
 }: UseScrollToCategory) {
   const { selectedCategory, categoryCounts } = useCategoryView();
@@ -28,7 +30,7 @@ export default function useScrollToCategory({
 
       if (categoryRowIndex !== -1) {
         setTimeout(() => {
-          scrollTo(categoryRowIndex);
+          scrollToIndex(categoryRowIndex);
         }, 0);
       }
     }
@@ -38,7 +40,7 @@ export default function useScrollToCategory({
     if (value) {
       scrollToSelectedCategory(value);
     } else {
-      scrollTo(0);
+      scrollToTop();
     }
   });
 
@@ -52,7 +54,7 @@ export default function useScrollToCategory({
     if (selectedCategory.value) {
       scrollToSelectedCategory(selectedCategory.value);
     } else {
-      scrollTo(0);
+      scrollToTop();
     }
   });
 

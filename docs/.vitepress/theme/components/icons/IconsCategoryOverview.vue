@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, watch, defineAsyncComponent } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
@@ -9,15 +9,17 @@ import StickyBar from './StickyBar.vue';
 import IconsCategory, { CategoryRow } from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
-import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import useScrollToCategory from '../../composables/useScrollToCategory';
+import useIconGridVirtualizer, {
+  useIconGridColumns,
+} from '../../composables/useIconGridVirtualizer';
 import { useCategoryView } from '../../composables/useCategoryView';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 
-const ICON_SIZE = 56;
-const ICON_GRID_GAP = 8;
+/** Estimated height of a category heading row. Rows are measured once rendered. */
+const CATEGORY_HEADING_HEIGHT = 64;
 
 const props = defineProps<{
   icons: IconEntity[];
@@ -52,11 +54,10 @@ const {
 } = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
-const { width: containerWidth } = useElementSize(overviewEl);
-
-const columnSize = computed(() => {
-  return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
-});
+const listEl = ref<HTMLElement | null>(null);
+const stickyBar = ref<InstanceType<typeof StickyBar> | null>(null);
+const gridColumns = useIconGridColumns(overviewEl);
+const { columnSize } = gridColumns;
 
 const mappedIcons = computed(() => {
   if (tags.value == null) {
@@ -125,21 +126,23 @@ const isSearchMetadataLoading = computed(
   () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
-const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
-  itemHeight: ICON_SIZE + ICON_GRID_GAP,
-  overscan: 10,
-});
+const { virtualRows, totalSize, offsetTop, measureElement, scrollToIndex, scrollToTop } =
+  useIconGridVirtualizer({
+    columns: gridColumns,
+    listEl,
+    stickyEl: stickyBar,
+    rows: categoriesList,
+    estimateRowSize: (row, iconRowHeight) =>
+      row.type === 'category' ? CATEGORY_HEADING_HEIGHT : iconRowHeight,
+    getRowKey: (row, index) => (row.type === 'category' ? `category-${row.name}` : index),
+  });
 
 useScrollToCategory({
   categories,
   categoriesList,
-  scrollTo,
+  scrollToIndex,
+  scrollToTop,
   searchQueryDebounced,
-});
-
-onMounted(() => {
-  containerProps.ref.value = document.documentElement;
-  useEventListener(window, 'scroll', containerProps.onScroll);
 });
 
 function loadSearchMetadata() {
@@ -184,7 +187,10 @@ function handleCloseDrawer() {
     class="overview-container"
     :class="{ 'icon-drawer-open': activeIconName }"
   >
-    <StickyBar class="category-search">
+    <StickyBar
+      ref="stickyBar"
+      class="category-search"
+    >
       <InputSearch
         :placeholder="`Search ${icons.length} icons…`"
         v-model="searchQuery"
@@ -200,14 +206,29 @@ function handleCloseDrawer() {
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
-    <div v-bind="wrapperProps">
-      <IconsCategory
-        v-for="{ index, data } in list"
-        :categoryRow="data"
-        :activeIconName="activeIconName"
-        @setActiveIcon="setActiveIconName"
-        :key="index"
-      />
+    <div
+      ref="listEl"
+      class="virtual-list"
+      :style="{ height: `${totalSize}px` }"
+    >
+      <div
+        class="virtual-list-rows"
+        :style="{ transform: `translateY(${offsetTop}px)` }"
+      >
+        <div
+          v-for="row in virtualRows"
+          :key="String(row.key)"
+          :ref="measureElement"
+          :data-index="row.index"
+          class="virtual-row"
+        >
+          <IconsCategory
+            :categoryRow="categoriesList[row.index]"
+            :activeIconName="activeIconName"
+            @setActiveIcon="setActiveIconName"
+          />
+        </div>
+      </div>
     </div>
   </div>
   <IconDetailOverlay
@@ -220,6 +241,23 @@ function handleCloseDrawer() {
 </template>
 
 <style scoped>
+.virtual-list {
+  position: relative;
+  width: 100%;
+}
+
+.virtual-list-rows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Contain the row's margins, so the measured height includes them. */
+.virtual-row {
+  display: flow-root;
+}
+
 .input-wrapper {
   width: 100%;
 }
