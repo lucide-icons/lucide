@@ -10,7 +10,7 @@
     "Accessing a network-attached storage administration dashboard"
   ],
   "tags": [
-    "storage",
+    "$extends:server",
     "network",
     "server",
     "backup",
@@ -19,11 +19,10 @@
     "sharing",
     "disk",
     "hardware",
-    "lan",
-    "cloud"
+    "lan"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:server",
+    "files"
   ]
 }

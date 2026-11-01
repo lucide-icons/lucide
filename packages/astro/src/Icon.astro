@@ -28,7 +28,7 @@ const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   strokeWidth,
   absoluteStrokeWidth,
   nonScalingStroke,
-  className,
+  ...(className !== undefined && { className }),
   hasA11yProp: hasA11yProp(rest),
 });
 

@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating rack units in server or equipment contexts",
+    "Representing uranium in scientific contexts"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "rack unit",
+    "server",
+    "equipment",
+    "uranium",
+    "chemistry"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

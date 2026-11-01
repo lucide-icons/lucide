@@ -6,15 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
     "range",
     "period"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

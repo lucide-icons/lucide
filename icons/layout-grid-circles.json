@@ -15,9 +15,7 @@
     "Representing a dot matrix or dot-matrix display"
   ],
   "tags": [
-    "app",
-    "home",
-    "start",
+    "$extends:layout-grid",
     "dot matrix",
     "dots",
     "menu",
@@ -35,7 +33,6 @@
     "shortcuts"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layout-grid"
   ]
 }

@@ -6,19 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "user",
-    "person",
-    "family",
-    "friend",
-    "acquaintance",
-    "listing",
-    "networking"
+    "$extends:contact"
   ],
   "categories": [
-    "account",
-    "connectivity",
-    "communication",
-    "social"
+    "$extends:contact"
   ],
   "aliases": [
     {

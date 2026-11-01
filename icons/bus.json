@@ -11,7 +11,9 @@
     "bus",
     "vehicle",
     "transport",
-    "trip"
+    "trip",
+    "coach",
+    "road"
   ],
   "categories": [
     "transportation"

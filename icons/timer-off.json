@@ -7,11 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "time",
-    "timer",
-    "stopwatch"
+    "$extends:timer",
+    "$group:off"
   ],
   "categories": [
-    "time"
+    "$extends:timer"
   ]
 }

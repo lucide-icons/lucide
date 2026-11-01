@@ -7,20 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "screen sharing",
+    "$extends:monitor",
+    "$group:off",
     "offline",
-    "disabled",
     "disconnected",
     "power"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }
