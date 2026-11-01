@@ -3,7 +3,7 @@ description: Learn the best practices for writing use cases for Lucide icons.
 ---
 
 <script setup>
-import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareParking, triangleAlert, wifiOff } from '~/.vitepress/data/iconNodes';
+import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareLetterP, triangleAlert, wifiOff } from '~/.vitepress/data/iconNodes';
 import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 </script>
 

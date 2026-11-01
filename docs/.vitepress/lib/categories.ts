@@ -16,6 +16,7 @@ export function getAllCategoryFiles(): Omit<Category, 'iconCount'>[] {
     return {
       name,
       title: parsedFileContent.title,
+      description: parsedFileContent.description,
     };
   });
 }

@@ -6,16 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "todo",
-    "done",
-    "check",
-    "tick",
-    "complete",
-    "tasks",
+    "$group:check",
     "items",
     "pending"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

@@ -8,15 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "previous",
-    "back",
-    "direction",
-    "west",
+    "$extends:arrow-big-left",
+    "$group:direction-left",
     "turn",
     "corner"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "$extends:arrow-big-left"
   ]
 }

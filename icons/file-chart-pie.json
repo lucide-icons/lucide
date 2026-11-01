@@ -7,14 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation"
+    "$extends:file",
+    "$extends:chart-pie"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "$extends:chart-pie"
   ],
   "aliases": [
     {

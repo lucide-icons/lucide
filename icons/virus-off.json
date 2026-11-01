@@ -10,27 +10,9 @@
     "Representing blocked pathogens in science content"
   ],
   "tags": [
-    "pathogen",
-    "infection",
-    "disease",
-    "illness",
-    "contagion",
-    "outbreak",
-    "pandemic",
-    "epidemic",
-    "covid",
-    "coronavirus",
-    "germ",
-    "microbe",
-    "microorganism",
-    "biology",
-    "medical",
-    "healthcare",
-    "malware",
-    "cybersecurity",
-    "threat",
+    "$extends:virus",
+    "$group:off",
     "antivirus",
-    "blocked",
     "removed",
     "clean",
     "safe",
@@ -38,8 +20,6 @@
     "quarantine"
   ],
   "categories": [
-    "medical",
-    "science",
-    "security"
+    "$extends:virus"
   ]
 }

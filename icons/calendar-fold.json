@@ -5,16 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
-    "birthday",
-    "birthdate",
+    "$extends:calendar",
     "ics"
   ],
   "categories": [
-    "time",
+    "$extends:calendar",
     "files"
   ]
 }

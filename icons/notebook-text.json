@@ -5,34 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "notepad",
-    "notes",
+    "$extends:notebook",
     "pages",
     "paper",
-    "stationery",
-    "sketchbook",
-    "organizer",
-    "organiser",
-    "planner",
-    "diary",
-    "journal",
-    "writing",
     "write",
-    "written",
-    "reading",
-    "high school",
-    "university",
-    "college",
-    "academy",
-    "student",
-    "study",
-    "research",
-    "homework",
     "lines",
     "opened"
   ],
   "categories": [
-    "text",
-    "social"
+    "text"
   ]
 }

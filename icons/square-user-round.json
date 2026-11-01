@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact"
+    "$extends:square-user"
   ],
   "categories": [
-    "account"
+    "$extends:square-user"
   ],
   "aliases": [
     {
