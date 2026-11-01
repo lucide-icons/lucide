@@ -13,10 +13,9 @@
     "Indicating a declined or canceled card payment"
   ],
   "tags": [
+    "$extends:credit-card",
+    "$group:minus",
     "debit",
-    "payment",
-    "remove",
-    "delete",
     "unlink",
     "revoke",
     "decline",
@@ -27,16 +26,10 @@
     "transaction",
     "billing",
     "account",
-    "purchase",
-    "checkout",
-    "subtract",
-    "minus",
-    "bank",
-    "cc"
+    "checkout"
   ],
   "categories": [
-    "account",
-    "finance",
+    "$extends:credit-card",
     "shopping"
   ]
 }

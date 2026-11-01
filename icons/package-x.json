@@ -7,10 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove"
+    "$extends:package",
+    "$group:x"
   ],
   "categories": [
-    "development"
+    "development",
+    "files"
   ]
 }

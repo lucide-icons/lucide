@@ -8,10 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
-    "drop",
+    "$extends:map-pin",
     "home",
     "living",
     "building",
@@ -28,8 +25,6 @@
     "landmark"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ]
 }

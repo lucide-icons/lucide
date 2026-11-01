@@ -1,73 +1,45 @@
 <script setup lang="ts">
-import { shallowRef, type Ref, watch, computed } from 'vue';
-import { useCssVar, syncRef } from '@vueuse/core';
-import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle';
+import { computed, onMounted } from 'vue';
+import { useMounted } from '@vueuse/core';
+import { useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
 import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
+import Card from '../base/Card.vue';
+import useTrackStyleChanges from '../../composables/useTrackStyleChanges';
+import { track } from '../../utils/openpanel';
 
-const props = defineProps<{
-  rootEl?: Ref<HTMLElement>;
-}>();
+const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
+  useIconStyleContext();
 
-const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
-const documentRef = shallowRef<HTMLElement | undefined>(
-  typeof document !== 'undefined' ? document?.documentElement : undefined,
-);
+// The server always renders the default style. Keep the first client render identical,
+// otherwise the hydrated DOM keeps the stale `disabled` attribute on the reset button.
+const isMounted = useMounted();
+const showCustomized = computed(() => isMounted.value && isCustomized.value);
 
-const colorCssVar = useCssVar('--customize-color', props.rootEl?.value ?? documentRef.value, {
-  initialValue: `${STYLE_DEFAULTS.color}`,
+onMounted(() => {
+  useTrackStyleChanges('icons_customizer_change', { color, strokeWidth, size, nonScalingStroke });
 });
 
-const strokeWidthCssVar = useCssVar(
-  '--customize-strokeWidth',
-  props.rootEl?.value ?? documentRef.value,
-  {
-    initialValue: `${STYLE_DEFAULTS.strokeWidth}`,
-  },
-);
-
-const sizeCssVar = useCssVar('--customize-size', props.rootEl?.value ?? documentRef.value, {
-  initialValue: `${STYLE_DEFAULTS.size}`,
-});
-
-syncRef(color, colorCssVar, { direction: 'ltr' });
-syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr', transform: { ltr: String } });
-syncRef(size, sizeCssVar, { direction: 'ltr', transform: { ltr: String } });
-
-function resetStyle() {
-  color.value = STYLE_DEFAULTS.color;
-  strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
-  size.value = STYLE_DEFAULTS.size;
-  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
+function onReset() {
+  track('icons_customizer_reset');
+  resetStyle();
 }
-
-watch(absoluteStrokeWidth, (enabled) => {
-  const htmlEl = document.documentElement;
-
-  htmlEl.classList.toggle('absolute-stroke-width', enabled);
-});
-
-const customizingActive = computed(() => {
-  return (
-    color.value !== STYLE_DEFAULTS.color ||
-    strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
-    size.value !== STYLE_DEFAULTS.size ||
-    absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
-  );
-});
 </script>
 
 <template>
-  <div
+  <Card
     class="customizer-card"
-    :class="{ customized: customizingActive }"
+    :class="{ customized: showCustomized }"
   >
     <div class="card-header">
       <h2 class="card-title">Customizer</h2>
-      <ResetButton @click="resetStyle"></ResetButton>
+      <ResetButton
+        :disabled="!showCustomized"
+        @click="onReset"
+      />
     </div>
     <InputField
       id="icon-color"
@@ -75,7 +47,7 @@ const customizingActive = computed(() => {
     >
       <ColorPicker
         v-model="color"
-        id="icon-color"
+        id="icon-color-picker"
         class="color-picker"
       />
     </InputField>
@@ -88,7 +60,7 @@ const customizingActive = computed(() => {
         <span class="customize-label">{{ strokeWidth }}px</span>
       </template>
       <RangeSlider
-        id="stroke-width"
+        id="stroke-width-slider"
         name="stroke-width"
         v-model="strokeWidth"
         :min="0.5"
@@ -105,7 +77,7 @@ const customizingActive = computed(() => {
         <span class="customize-label">{{ size }}px</span>
       </template>
       <RangeSlider
-        id="size"
+        id="size-slider"
         name="size"
         v-model="size"
         :min="16"
@@ -115,16 +87,16 @@ const customizingActive = computed(() => {
     </InputField>
 
     <InputField
-      id="absolute-stroke-width"
-      label="Absolute stroke width"
+      id="non-scaling-stroke"
+      label="Non-scaling stroke"
     >
       <Switch
-        id="absolute-stroke-width"
-        name="absolute-stroke-width"
-        v-model="absoluteStrokeWidth"
+        id="non-scaling-stroke-switch"
+        name="non-scaling-stroke"
+        v-model="nonScalingStroke"
       />
     </InputField>
-  </div>
+  </Card>
 </template>
 
 <style scoped>
@@ -140,18 +112,15 @@ const customizingActive = computed(() => {
   color: var(--vp-c-text-1);
   line-height: 32px;
   font-size: 16px;
-  /* margin-bottom: 12px; */
 }
 
-.customizer-card {
-  background: var(--vp-c-bg);
+.card.customizer-card {
   padding: 12px 24px 24px;
-  border-radius: 12px;
   margin-bottom: 24px;
   position: relative;
   z-index: 0;
-  border: 1px solid transparent;
   transition: border-color 0.4s ease-in-out;
+  background: var(--vp-c-bg);
 }
 
 .customizer-card.customized {

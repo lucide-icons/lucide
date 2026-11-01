@@ -6,12 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:graph",
     "action",
     "continuous integration",
     "ci",
     "automation",
     "devops",
-    "network",
     "node",
     "connection"
   ],

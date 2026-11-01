@@ -7,8 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "primary",
-    "drawer",
+    "$extends:panel-left",
+    "$group:direction-right",
     "show",
     "reveal",
     "chevron",
@@ -16,8 +16,7 @@
     ">"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "$extends:panel-left"
   ],
   "aliases": [
     {

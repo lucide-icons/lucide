@@ -90,18 +90,24 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Hero backers 🦸
+[//]: <> (Sponsor tiers start)
 
-<a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+### Hero Backer 🦸
+
+<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="64" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
+<a href="https://opencollective.com/zephyr-cloud"><img src="docs/public/sponsors/zephyr-cloud.svg" height="64" alt="Zephyr Cloud" /></a>
 
 ### Awesome backers 🍺
 
-<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
-<a href="https://www.paxhistoria.co/"><img src="docs/public/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="64" alt="Pax Historia" /></a>
+<a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="64" alt="pdfme – Free and Open source PDF generation library!" /></a>
 
-### Backers ☕
+### Backer ☕️
 
-<a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+<a href="https://www.fina.money"><img src="docs/public/sponsors/fina-money.png" height="64" alt="Fina Money – Build the most flexible finance tracker" /></a>
+<a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="64" alt="Ruud" /></a>
+
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 
