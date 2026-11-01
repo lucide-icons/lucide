@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@lucide/svelte": "workspace:*",
-    "svelte": "5.57.2"
+    "svelte": "5.57.3"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^8.0.0",
