@@ -7,16 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "confirm",
-    "verified",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task",
+    "$extends:package",
+    "$group:check",
     "delivered"
   ],
   "categories": [
-    "development"
+    "$extends:package"
   ]
 }

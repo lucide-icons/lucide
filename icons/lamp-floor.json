@@ -7,13 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "lighting",
-    "household",
-    "floor",
-    "home",
-    "furniture"
+    "$extends:lamp",
+    "floor"
   ],
   "categories": [
-    "home"
+    "$extends:lamp"
   ]
 }

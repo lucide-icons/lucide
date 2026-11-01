@@ -6,27 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "table",
-    "rows",
-    "columns",
-    "data",
-    "blocks",
-    "plot",
-    "land",
-    "geometry",
-    "measure",
-    "size",
-    "width",
-    "height",
-    "distance",
-    "surface area",
-    "square meter",
-    "acre"
+    "$extends:grid-2x2",
+    "$group:x",
+    "data"
   ],
   "categories": [
     "text",
-    "layout",
-    "math"
+    "layout"
   ],
   "aliases": [
     {

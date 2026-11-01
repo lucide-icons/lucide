@@ -7,9 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "currency",
+    "$group:currency",
     "peso",
-    "money",
     "php"
   ],
   "categories": [

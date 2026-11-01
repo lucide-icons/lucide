@@ -6,16 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "previous",
-    "back",
-    "direction",
-    "west",
+    "$extends:arrow-left",
+    "$group:direction-left",
     "expand",
     "fold",
-    "horizontal",
     "<-|"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-left"
   ]
 }
