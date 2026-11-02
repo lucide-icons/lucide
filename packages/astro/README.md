@@ -68,24 +68,11 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
   <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
-
-
 [//]: <> (Sponsor tiers start)
 
-### Hero Backer 🦸
+### Bronze 🥉
 
-<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="64" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
-<a href="https://opencollective.com/zephyr-cloud"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" height="64" alt="Zephyr Cloud" /></a>
-
-### Awesome backers 🍺
-
-<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="64" alt="Pax Historia" /></a>
-<a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="64" alt="pdfme – Free and Open source PDF generation library!" /></a>
-
-### Backer ☕️
-
-<a href="https://www.fina.money"><img src="https://lucide.dev/sponsors/fina-money.png" height="64" alt="Fina Money – Build the most flexible finance tracker" /></a>
-<a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="64" alt="Ruud" /></a>
+<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
 
 [//]: <> (Sponsor tiers end)
 
