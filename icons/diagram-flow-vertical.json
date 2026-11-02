@@ -15,7 +15,10 @@
     "branches",
     "tree",
     "parent",
-    "child"
+    "child",
+    "process",
+    "sequence",
+    "decision tree"
   ],
   "categories": [
     "design",
