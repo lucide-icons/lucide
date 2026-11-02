@@ -83,9 +83,11 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
 </script>
 
 <template>
+<div
+  class="sponsor-hero-animation-container"
+>
   <div
-    class="sponsor-hero-animation-container"
-  >
+    class="sponsor-hero-animation"
     aria-hidden="true"
   >
     <svg
