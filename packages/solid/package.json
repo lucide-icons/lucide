@@ -82,11 +82,11 @@
     "babel-preset-solid": "next",
     "esbuild": "^0.28.2",
     "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.65.1",
     "rollup-plugin-dts": "^6.5.1",
-    "rollup": "^4.65.0",
     "solid-js": "next",
     "typescript": "^6.0.3",
-    "vite": "^8.3.3"
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
     "solid-js": "^2.0.0-rc.0"

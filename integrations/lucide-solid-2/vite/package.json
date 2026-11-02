@@ -23,7 +23,7 @@
     "filesystem-routing": "0.4.0",
     "playwright": "1.64.1",
     "typescript": "^6.0.3",
-    "vite": "^8.3.3",
+    "vite": "^8.3.5",
     "vitest": "5.0.5"
   }
 }
