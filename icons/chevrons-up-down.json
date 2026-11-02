@@ -6,9 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:direction-down",
     "expand",
-    "unfold",
-    "vertical"
+    "unfold"
   ],
   "categories": [
     "arrows"

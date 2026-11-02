@@ -1,16 +1,22 @@
 <script setup lang="tsx">
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
-import sidebar, { guideSidebarTop } from '../../../sidebar';
+import sidebar from '../../../sidebar';
 import { useData, useRouter } from 'vitepress';
 import Select from '../base/Select.vue';
-import { computed, ref, watch, watchEffect } from 'vue';
-import { link, route } from '~/.vitepress/data/iconNodes';
+import { computed } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
 
 const { page } = useData();
 const router = useRouter();
 
-const frameworks = [
+interface Framework {
+  name: string;
+  icon: string;
+  iconDark?: string;
+  value: string;
+}
+
+const frameworks: Framework[] = [
   { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/lucide/' },
   { name: 'React', icon: '/framework-logos/react.svg', value: '/guide/react/' },
   { name: 'Vue', icon: '/framework-logos/vue.svg', value: '/guide/vue/' },
@@ -48,7 +54,7 @@ const selected = computed(() => {
   return current || (fallbackFramework.value?.value ? fallbackFramework.value : frameworks[0]);
 });
 
-function onSelectFramework(item: { name: string; icon: string; iconDark?: string; value: string }) {
+function onSelectFramework(item: Framework) {
   fallbackFramework.value = item;
   if (item.value !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.value, item.value);
@@ -68,14 +74,7 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
 </script>
 
 <template>
-  <VPSidebarGroup
-    :items="guideSidebarTop"
-    v-if="page?.relativePath?.startsWith?.('guide')"
-  />
-  <div
-    class="framework-select"
-    v-if="page?.relativePath?.startsWith?.('guide')"
-  >
+  <div class="framework-select">
     <label for="framework-select">Framework</label>
     <Select
       id="framework-select"
@@ -86,10 +85,7 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
   </div>
   <VPSidebarGroup
     :key="selected.value"
-    v-if="
-      page?.relativePath?.startsWith?.('guide') &&
-      !page?.relativePath?.startsWith?.(selected.value.substring(1))
-    "
+    v-if="!page?.relativePath?.startsWith?.(selected.value.substring(1))"
     :items="sidebar[selected.value]"
   />
 </template>

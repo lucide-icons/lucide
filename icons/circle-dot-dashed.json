@@ -6,7 +6,6 @@
   "use-cases": [],
   "tags": [
     "pending",
-    "dot",
     "progress",
     "issue",
     "draft",
@@ -15,7 +14,6 @@
     "version control"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "$extends:circle-dot"
   ]
 }

@@ -6,19 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "tube",
-    "vial",
-    "phial",
-    "flask",
-    "ampoule",
-    "ampule",
-    "lab",
-    "chemistry",
-    "experiment",
-    "test"
+    "$extends:test-tube"
   ],
   "categories": [
-    "science"
+    "$extends:test-tube"
   ],
   "aliases": [
     {

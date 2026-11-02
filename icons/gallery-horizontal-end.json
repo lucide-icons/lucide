@@ -5,24 +5,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "carousel",
-    "pictures",
-    "images",
-    "scroll",
-    "swipe",
-    "album",
-    "portfolio",
+    "$extends:gallery-horizontal",
+    "$group:position-right",
     "history",
     "versions",
     "backup",
     "time machine"
   ],
   "categories": [
-    "layout",
-    "design",
-    "development",
-    "photography",
-    "multimedia",
+    "$extends:gallery-horizontal",
     "files"
   ]
 }

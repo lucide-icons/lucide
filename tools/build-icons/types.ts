@@ -1,5 +1,3 @@
-import { type INode } from 'svgson';
-
 export type SVGProps = Record<string, string | number>;
 
 export type IconNode = [tag: string, attrs: SVGProps][];
@@ -34,14 +32,16 @@ export type AliasDeprecation = {
   deprecationReason: AliasDeprecationReason;
 };
 
-export type IconDeprecationReason = 'icon.renamed' | '';
+export type IconDeprecationReason = 'icon.design' | 'icon.use-case' | '';
 
 export type IconMetadataBase = {
   categories: string[];
+  contributors?: string[];
   aliases?: AliasDeprecation[];
   tags: string[];
   deprecationReason?: IconDeprecationReason;
   deprecated?: boolean;
+  toBeRemovedInVersion?: string;
 };
 
 export type IconMetadataWithDeprecation = IconMetadataBase & {

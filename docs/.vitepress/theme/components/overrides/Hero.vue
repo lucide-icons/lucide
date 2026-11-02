@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VPHero from 'vitepress/dist/client/theme-default/components/VPHero.vue'
-import { useData } from 'vitepress/dist/client/theme-default/composables/data'
+import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
 import FakeInput from '../base/FakeInput.vue';
 import { useRouter } from 'vitepress';
 import { data } from '../home/HomeHeroIconsCard.data'

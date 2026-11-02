@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PrimeTestLab"
+  ],
+  "use-cases": [
+    "Representing SQL or database files in file managers",
+    "Exporting or downloading a database dump in admin panels",
+    "Importing a .sql or .db file into an application",
+    "Listing database backups or snapshots on storage screens",
+    "Marking SQL scripts or migration files in code repositories"
+  ],
+  "tags": [
+    "$extends:file",
+    "$extends:database"
+  ],
+  "categories": [
+    "$extends:file",
+    "development"
+  ]
+}

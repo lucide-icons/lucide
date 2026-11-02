@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:graph",
     "code",
     "version control",
     "commit graph",

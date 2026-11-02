@@ -6,13 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "electricity",
-    "energy",
-    "socket",
-    "outlet"
+    "$extends:plug"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:plug"
   ]
 }

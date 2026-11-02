@@ -8,15 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark",
+    "$group:exclamation-mark",
     "linter"
   ],
   "categories": [
+    "$extends:triangle",
     "notifications",
-    "shapes",
     "development"
   ],
   "aliases": [

@@ -3,6 +3,11 @@ import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
 import getIconEntryNamesAndAliases from './scripts/getIconEntryNamesAndAliases.mts';
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
@@ -60,7 +65,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: 'src/icons/index.ts',
@@ -70,7 +75,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: iconAndAliasEntries,
@@ -95,7 +100,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -105,7 +110,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   ...configs,
 ];
