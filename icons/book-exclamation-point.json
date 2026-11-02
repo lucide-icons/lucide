@@ -18,9 +18,7 @@
   ],
   "aliases": [
     {
-      "name": "book-alert",
-      "deprecated": true,
-      "deprecationReason": "alias.name"
+      "name": "book-alert"
     }
   ]
 }

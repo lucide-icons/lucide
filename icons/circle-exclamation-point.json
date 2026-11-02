@@ -18,9 +18,7 @@
       "deprecated": true
     },
     {
-      "name": "circle-alert",
-      "deprecated": true,
-      "deprecationReason": "alias.name"
+      "name": "circle-alert"
     }
   ]
 }

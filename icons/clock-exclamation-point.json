@@ -16,9 +16,7 @@
   ],
   "aliases": [
     {
-      "name": "clock-alert",
-      "deprecated": true,
-      "deprecationReason": "alias.name"
+      "name": "clock-alert"
     }
   ]
 }

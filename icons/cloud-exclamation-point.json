@@ -22,9 +22,7 @@
   ],
   "aliases": [
     {
-      "name": "cloud-alert",
-      "deprecated": true,
-      "deprecationReason": "alias.name"
+      "name": "cloud-alert"
     }
   ]
 }
