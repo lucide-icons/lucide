@@ -126,7 +126,7 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
       { icon: 'x', link: 'https://x.com/lucide_icons' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/company/lucide-icons/' },
-      { icon: 'bluesky', link: 'https://bsky.app/profile/lucide-icons.bsky.social' }
+      { icon: 'bluesky', link: 'https://bsky.app/profile/lucide-icons.bsky.social' },
     ],
     footer: {
       message: 'Released under the ISC License.',
