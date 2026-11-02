@@ -3,7 +3,13 @@
   "contributors": [
     "synthetic-blood"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "labeling resistors in circuit diagrams",
+    "decorating electronics tutorials and articles",
+    "representing passive components in schematic editors",
+    "identifying resistor entries in bills of materials",
+    "indicating resistance or ohm-related settings in a UI"
+  ],
   "tags": [
     "component"
   ],
