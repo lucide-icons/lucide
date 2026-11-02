@@ -29,3 +29,7 @@ allowBuilds:
   ttf2woff2: false
   unrs-resolver: false
   vue-demi: false
+
+minimumReleaseAgeExclude:
+  - decode-uri-component@0.4.3
+  - deepmerge@4.3.2
