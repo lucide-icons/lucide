@@ -5,11 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "tree",
     "browser"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

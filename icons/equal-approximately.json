@@ -5,10 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "about",
-    "calculate",
-    "math",
-    "operator"
+    "$extends:equal",
+    "about"
   ],
   "categories": [
     "math"

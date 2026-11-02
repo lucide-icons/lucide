@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-padding"
+  ],
+  "use-cases": [
+    "Adjusting inner spacing right of content in layout editors",
+    "Setting right cell padding in table editors"
+  ],
+  "tags": [
+    "$extends:square-padding",
+    "$group:position-right"
+  ],
+  "categories": [
+    "$extends:square-padding"
+  ]
+}
