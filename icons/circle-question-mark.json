@@ -9,7 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "question mark"
+    "$group:question-mark"
   ],
   "categories": [
     "accessibility",

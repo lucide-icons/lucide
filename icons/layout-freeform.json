@@ -4,11 +4,11 @@
     "samuelalake"
   ],
   "use-cases": [
-    "turning off auto layout in a design inspector",
-    "switching a dashboard section to free drag-and-drop placement",
-    "selecting freeform arrangement in a page builder",
-    "indicating unstructured layout mode in a whiteboard or canvas app",
-    "representing elements not aligned to a grid"
+    "Turning off auto layout in a design inspector",
+    "Switching a dashboard section to free drag-and-drop placement",
+    "Selecting freeform arrangement in a page builder",
+    "Indicating unstructured layout mode in a whiteboard or canvas app",
+    "Representing elements not aligned to a grid"
   ],
   "tags": [
     "layout",

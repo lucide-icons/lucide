@@ -6,15 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "unkeys",
-    "layout",
-    "spell",
-    "settings",
-    "mouse"
+    "$extends:keyboard",
+    "$group:off",
+    "unkeys"
   ],
   "categories": [
-    "devices",
-    "text",
-    "development"
+    "$extends:keyboard"
   ]
 }

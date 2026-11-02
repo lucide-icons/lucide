@@ -1,0 +1,17 @@
+{
+  "name": "@lucide/suggest-metadata-action",
+  "private": true,
+  "type": "module",
+  "description": "GitHub action that suggests tags, categories and use-cases for changed icons in a pull request",
+  "scripts": {
+    "start": "node ./suggestMetaData.mts",
+    "debug": "node --env-file .env ./suggestMetaData.mts --debug",
+    "watch": "node --env-file .env --watch ./suggestMetaData.mts"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "dotenv": "^17.4.2",
+    "openai": "^7.9.0",
+    "zod": "^4.5.4"
+  }
+}

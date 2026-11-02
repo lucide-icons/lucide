@@ -25,7 +25,7 @@ This is useful if you want all icons to share the same size, color, or stroke wi
 You can call `setLucideProps` in your main entry file or in a top-level component to set the default properties for all icons.
 
 ```js
-import { setLucideProps } from '@lucide/svelte';
+import { setLucideProps } from '@lucide/svelte/context';
 
 setLucideProps({
   size: 32,

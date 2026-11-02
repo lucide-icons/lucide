@@ -5,17 +5,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:table",
     "property list",
     "plist",
-    "spreadsheet",
-    "grid",
     "dictionary",
     "object",
     "hash"
   ],
   "categories": [
-    "text",
-    "development",
-    "files"
+    "$extends:table",
+    "development"
   ]
 }

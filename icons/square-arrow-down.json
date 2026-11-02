@@ -4,19 +4,22 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a downward direction",
+    "Representing a download action",
+    "Represent keyboard down arrow"
+  ],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-next",
     "backwards",
     "reverse",
-    "direction",
-    "south",
     "sign",
     "keyboard",
     "button"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {

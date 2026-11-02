@@ -19,7 +19,6 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "outDir": "./dist",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "types": ["@testing-library/jest-dom/vitest"]

@@ -4,14 +4,17 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a document from a file manager",
+    "Canceling a file operation or selection",
+    "Marking a document as deleted or unavailable"
+  ],
   "tags": [
-    "lost",
-    "delete",
-    "remove",
-    "document"
+    "$extends:file",
+    "$group:x",
+    "lost"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

@@ -8,13 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:search",
     "lost",
-    "document",
-    "find",
-    "browser",
-    "lens"
+    "browser"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

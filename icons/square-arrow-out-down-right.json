@@ -5,10 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "outwards",
-    "direction",
-    "south-east",
-    "diagonal"
+    "$group:direction-down-right",
+    "outwards"
   ],
   "categories": [
     "arrows"
