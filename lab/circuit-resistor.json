@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "synthetic-blood"
+    "synthetic-blood",
+    "ericfennis"
   ],
   "use-cases": [
     "labeling resistors in circuit diagrams",
@@ -11,7 +12,17 @@
     "indicating resistance or ohm-related settings in a UI"
   ],
   "tags": [
-    "component"
+    "circuit",
+    "component",
+    "resistor",
+    "electronics",
+    "electrical",
+    "ohm",
+    "schematic",
+    "symbol",
+    "passive",
+    "engineering",
+    "iec"
   ],
   "categories": [
     "devices"
