@@ -42,7 +42,7 @@
     "h3": "^1.15.11",
     "markdown-it": "^15.0.3",
     "markdown-it-container": "^4.0.0",
-    "nitropack": "^2.13.4",
+    "nitropack": "^2.13.5",
     "rollup-plugin-copy": "^3.5.0",
     "semver": "^7.8.5",
     "sharp": "^0.35.5",
