@@ -1,24 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "$extends:user-round"
   ],
   "use-cases": [
-    "The account is suspicious.",
-    "There's a problem with the account.",
-    "User have been warned.",
-    "Give the user a warning.",
-    "The user has been flagged."
+    "Flagging an account as suspicious in moderation tools",
+    "Indicating a problem with a user's account or profile",
+    "Showing that a user has received a warning",
+    "Issuing a warning to a member in community management"
   ],
   "tags": [
-    "person",
-    "account",
-    "contact"
+    "$extends:user-round",
+    "$group:exclamation-mark",
+    "flagged",
+    "suspicious",
+    "reported",
+    "violation"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ]
 }
