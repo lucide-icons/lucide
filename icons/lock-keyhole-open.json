@@ -10,17 +10,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "security"
+    "$extends:lock-keyhole"
   ],
   "categories": [
-    "security"
+    "$extends:lock-keyhole"
   ],
   "aliases": [
     {
       "name": "unlock-keyhole",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "music",
-    "start",
-    "run"
+    "$group:play",
+    "music"
   ],
   "categories": [
     "multimedia"
@@ -17,8 +16,7 @@
     {
       "name": "play-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

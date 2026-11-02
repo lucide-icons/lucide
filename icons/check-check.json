@@ -5,15 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
+    "$extends:check",
     "received",
-    "double",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "double"
   ],
   "categories": [
-    "notifications"
+    "$extends:check"
   ]
 }

@@ -6,15 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
-    "add",
-    "multiple",
-    "expand",
-    "+"
+    "$extends:copy",
+    "$group:plus",
+    "expand"
   ],
   "categories": [
-    "text",
-    "math"
+    "$extends:copy"
   ]
 }

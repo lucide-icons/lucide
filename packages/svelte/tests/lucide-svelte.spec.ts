@@ -1,6 +1,7 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
 import { Smile, Pen, Edit2 } from '../src/lucide-svelte.js';
+import { __iconData, __iconNode } from '../src/icons/face-slightly-smiling.svelte';
 import TestSlots from './TestSlots.svelte';
 import ContextWrapper from './ContextWrapper.svelte';
 
@@ -33,7 +34,7 @@ describe('Using lucide icon components', () => {
     expect(IconComponent).toMatchSnapshot();
     expect(IconComponent).toHaveClass(testClass);
     expect(IconComponent).toHaveClass('lucide');
-    expect(IconComponent).toHaveClass('lucide-smile');
+    expect(IconComponent).toHaveClass('lucide-face-slightly-smiling');
   });
 
   it('should add a style attribute to the element', () => {
@@ -66,7 +67,7 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const { container } = render(Smile, {
       color: 'red',
       size: 48,
@@ -79,6 +80,24 @@ describe('Using lucide icon components', () => {
     expect(IconComponent).toHaveAttribute('height', '48');
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should apply vector-effect when nonScalingStroke is set', () => {
+    const { container } = render(Smile, {
+      color: 'red',
+      size: 48,
+      nonScalingStroke: true,
+    });
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '48');
+    expect(IconComponent).toHaveAttribute('height', '48');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+    expect(IconComponent).toHaveAttribute('stroke-width', '2');
+    expect(IconComponent?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
 
     expect(container.innerHTML).toMatchSnapshot();
   });
@@ -112,5 +131,16 @@ describe('Icon Component Accessibility', () => {
     const { container } = render(TestSlots);
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+});
+
+describe('Per-icon data export', () => {
+  it('should export __iconData and __iconNode from the svelte component module', () => {
+    expect(__iconData).toBeDefined();
+    expect(__iconData.name).toBe('face-slightly-smiling');
+    expect(__iconData.size).toBe(24);
+    expect(Array.isArray(__iconData.node)).toBe(true);
+    expect(__iconData.node.length).toBeGreaterThan(0);
+    expect(__iconNode).toEqual(__iconData.node);
   });
 });

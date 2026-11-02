@@ -2,6 +2,7 @@
 title: Global Styling - Preact
 description: Learn how to style all Lucide icons globally in your Preact application using CSS or the Lucide context provider.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
@@ -34,8 +35,8 @@ const App = () => (
 
 This will apply the `color`, `size` and `strokeWidth` props to all icons that are children of the `LucideProvider`.
 
-
 ## Style by using CSS
+
 Styling icons is easy to accomplish using CSS.
 
 Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
@@ -74,9 +75,9 @@ import {
   Sandwich,
   Wine,
   Dessert,
-} from "lucide-preact";
-import { h } from "preact";
-import "./icon.css";
+} from 'lucide-preact';
+import { h } from 'preact';
+import './icon.css';
 
 function App() {
   return (
@@ -99,10 +100,9 @@ export default App;
 
 :::
 
+### Non-scaling strokes
 
-### Absolute stroke width
-
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+For global non-scaling stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [non-scaling strokes](../basics/stroke-width.md#non-scaling-strokes) for more info.
 
 ::: sandpack {editorHeight=480 editorWidthPercentage=60 dependencies="lucide-preact"}
 
@@ -136,9 +136,9 @@ import {
   Map,
   CloudMoon,
   Sparkles,
-} from "lucide-preact";
-import { h } from "preact";
-import "./icon.css";
+} from 'lucide-preact';
+import { h } from 'preact';
+import './icon.css';
 
 function App() {
   return (

@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark"
+    "$group:exclamation-mark"
   ],
   "categories": [
     "notifications"
@@ -18,8 +15,7 @@
     {
       "name": "alert-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
+    "$extends:mail",
     "read"
   ],
   "categories": [

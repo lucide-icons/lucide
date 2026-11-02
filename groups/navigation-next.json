@@ -1,0 +1,12 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Position: the following item in a sequence",
+  "tags": [
+    "navigation",
+    "following",
+    "forward",
+    "forwards",
+    "subsequent",
+    "next page"
+  ]
+}

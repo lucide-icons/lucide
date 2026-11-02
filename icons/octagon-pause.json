@@ -6,20 +6,19 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:pause",
     "music",
-    "audio",
-    "stop"
+    "audio"
   ],
   "categories": [
-    "multimedia",
-    "shapes"
+    "$extends:octagon",
+    "multimedia"
   ],
   "aliases": [
     {
       "name": "pause-octagon",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

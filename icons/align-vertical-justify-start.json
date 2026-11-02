@@ -5,7 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "top",
+    "$group:position-top",
     "items",
     "flex",
     "justify",
