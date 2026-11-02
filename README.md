@@ -92,13 +92,14 @@ Thank you to all the people who contributed to Lucide!
 
 ### Bronze 🥉
 
-<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
+<a href="https://about.sourcegraph.com"><img src="docs/public/sponsors/source-graph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" style="background-color:#fff" /></a>
+<a href="https://opencollective.com/zephyr-cloud"><img src="docs/public/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" style="background-color:#fff" /></a>
 
 [//]: <> (Main README only start)
 
 ### Backers 🍺
 
-<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="32" alt="Pax Historia" /></a>
+<a href="https://www.paxhistoria.co" ><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="32" alt="Pax Historia" style="background-color:#fff"/></a>
 <a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="32" alt="pdfme – Free and Open source PDF generation library!" /></a>
 
 ### Supporters ☕️

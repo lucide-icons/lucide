@@ -85,7 +85,8 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 ### Bronze 🥉
 
-<a href="https://about.sourcegraph.com"><img src="https://images.opencollective.com/sourcegraph/f67b621/logo.png" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
+<a href="https://about.sourcegraph.com"><img src="https://lucide.dev/sponsors/sourcegraph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></a>
+<a href="https://opencollective.com/zephyr-cloud"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" /></a>
 
 [//]: <> (Sponsor tiers end)
 

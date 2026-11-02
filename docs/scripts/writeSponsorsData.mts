@@ -10,6 +10,9 @@ const dataDirectory = path.resolve(currentDir, '.vitepress/data');
 const sponsorLogosPath = path.resolve(currentDir, 'public/sponsors');
 const outputPath = path.resolve(dataDirectory, 'sponsorsData.json');
 
+const GRACE_PERIOD_DAYS = 31;
+const DAY_IN_MS = 24 * 60 * 60 * 1000;
+
 try {
   // Load environment variables from .env file, if it exists.
   loadEnvFile(`${currentDir}/.env`);
@@ -25,8 +28,10 @@ interface Account {
 }
 
 interface Order {
+  status: 'ACTIVE' | 'CANCELLED' | 'ERROR' | 'PAUSED';
   amount: { valueInCents: number | null } | null;
   frequency: 'MONTHLY' | 'YEARLY' | 'ONETIME' | null;
+  nextChargeDate: string | null;
   fromAccount: Account;
 }
 
@@ -58,12 +63,14 @@ const query = /* GraphQL */ `
       stats {
         contributorsCount
       }
-      orders(filter: INCOMING, status: [ACTIVE], limit: 1000) {
+      orders(filter: INCOMING, status: [ACTIVE, CANCELLED, ERROR, PAUSED], limit: 1000) {
         nodes {
+          status
           amount {
             valueInCents
           }
           frequency
+          nextChargeDate
           fromAccount {
             slug
             name
@@ -114,6 +121,17 @@ function getLogo({ slug, imageUrl }: Account) {
   return imageUrl ?? `https://images.opencollective.com/${slug}/logo/256.png`;
 }
 
+/**
+ * Active contributions, plus recurring ones that stopped (cancelled, failed or paused) less than
+ * a month after their next payment was due. A failed payment doesn't drop a sponsor right away.
+ */
+function isCurrentSponsor({ status, nextChargeDate }: Order) {
+  if (status === 'ACTIVE') return true;
+  if (!nextChargeDate) return false;
+
+  return Date.now() < new Date(nextChargeDate).getTime() + GRACE_PERIOD_DAYS * DAY_IN_MS;
+}
+
 function getMonthlyAmount({ amount, frequency }: Order) {
   const value = (amount?.valueInCents ?? 0) / 100;
 
@@ -158,7 +176,7 @@ let allTimeCount: number | null = null;
 
 try {
   const collective = await fetchCollective();
-  sponsors = toSponsors(collective.orders.nodes);
+  sponsors = toSponsors(collective.orders.nodes.filter(isCurrentSponsor));
   allTimeCount = collective.stats?.contributorsCount ?? null;
 } catch (error) {
   console.warn(`Could not fetch sponsors, writing an empty list. ${error}`);

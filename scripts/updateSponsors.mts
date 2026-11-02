@@ -14,6 +14,9 @@ const tiersEndMarker = '[//]: <> (Sponsor tiers end)';
 const mainReadmeOnlyStartMarker = '[//]: <> (Main README only start)';
 const mainReadmeOnlyEndMarker = '[//]: <> (Main README only end)';
 
+const GRACE_PERIOD_DAYS = 31;
+const DAY_IN_MS = 24 * 60 * 60 * 1000;
+
 /**
  * How each sponsor tier shows up in the READMEs, following the tier perks in tiers.ts.
  * Tiers that are not in the npm package READMEs are wrapped in the "Main README only" markers.
@@ -35,8 +38,10 @@ interface Account {
 }
 
 interface Order {
+  status: 'ACTIVE' | 'CANCELLED' | 'ERROR' | 'PAUSED';
   amount: { valueInCents: number | null } | null;
   frequency: 'MONTHLY' | 'YEARLY' | 'ONETIME' | null;
+  nextChargeDate: string | null;
   fromAccount: Account;
 }
 
@@ -52,12 +57,14 @@ interface CollectiveResponse {
 const query = /* GraphQL */ `
   query Sponsors($slug: String!) {
     account(slug: $slug) {
-      orders(filter: INCOMING, status: [ACTIVE], limit: 1000) {
+      orders(filter: INCOMING, status: [ACTIVE, CANCELLED, ERROR, PAUSED], limit: 1000) {
         nodes {
+          status
           amount {
             valueInCents
           }
           frequency
+          nextChargeDate
           fromAccount {
             slug
             name
@@ -111,9 +118,23 @@ function getLogo({ slug, imageUrl }: Account) {
   const localLogo = ['svg', 'png'].find((extension) =>
     existsSync(join(sponsorLogosPath, `${slug}.${extension}`)),
   );
+
+  console.log(slug);
+
   if (localLogo) return `docs/public/sponsors/${slug}.${localLogo}`;
 
   return imageUrl ?? `https://images.opencollective.com/${slug}/logo/256.png`;
+}
+
+/**
+ * Active contributions, plus recurring ones that stopped (cancelled, failed or paused) less than
+ * a month after their next payment was due. A failed payment doesn't drop a sponsor right away.
+ */
+function isCurrentSponsor({ status, nextChargeDate }: Order) {
+  if (status === 'ACTIVE') return true;
+  if (!nextChargeDate) return false;
+
+  return Date.now() < new Date(nextChargeDate).getTime() + GRACE_PERIOD_DAYS * DAY_IN_MS;
 }
 
 function getYearlyAmount({ amount, frequency }: Order) {
@@ -161,7 +182,7 @@ function renderSponsor(account: Account, height: number) {
 }
 
 function renderTiers({ orders }: Awaited<ReturnType<typeof fetchCollective>>) {
-  const sponsorsByTier = getSponsorsByTier(orders.nodes);
+  const sponsorsByTier = getSponsorsByTier(orders.nodes.filter(isCurrentSponsor));
 
   // Highest tier first, so Platinum sponsors are at the top.
   const renderTierGroup = (inPackages: boolean) =>
