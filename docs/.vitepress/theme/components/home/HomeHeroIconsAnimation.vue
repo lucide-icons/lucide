@@ -2,8 +2,11 @@
 import { ref, shallowRef } from 'vue';
 import { data } from './HomeHeroIconsCard.data';
 import { useRouter } from 'vitepress';
-import { motion, Variants, useScroll, useTransform } from 'motion-v';
+import { motion, useScroll, useTransform, type Options as MotionOptions } from 'motion-v';
 import LucideIcon from '../base/LucideIcon.vue';
+
+// motion-v re-exports framer-motion's `Variants`, which doesn't match the `variants` prop of its components
+type Variants = MotionOptions['variants'];
 
 const emit = defineEmits(['animation-complete']);
 
@@ -53,7 +56,6 @@ const scaleDownVariants: Variants = {
   riseUp: {
     x: 0.5,
     y: -0.5,
-    animationName: 'riseUp',
     scale: 1,
     transition: {
       delay: 0.5,
@@ -65,7 +67,6 @@ const scaleDownVariants: Variants = {
     x: -10.5,
     y: -10.5,
     scale: 0.1,
-    animationName: 'small',
     transition: {
       delay: 1,
       duration: 1,
@@ -81,7 +82,6 @@ const drawAnimation = ref('visible');
 const draw: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
   visible: {
-    animationName: 'visible',
     pathLength: 1.02,
     opacity: 1,
     transition: {
@@ -90,7 +90,6 @@ const draw: Variants = {
     },
   },
   exit: (path) => ({
-    animationName: 'exit',
     stroke: path ? 'var(--vp-c-text-1)' : 'var(--vp-c-brand)',
     pathLength: 1.02,
     opacity: 1,
@@ -100,25 +99,26 @@ const draw: Variants = {
   }),
 };
 
-const onAnimationComplete = (item) => {
-  if (item.animationName === 'visible') {
+// motion-v passes the variant label that finished, not the resolved variant
+const onAnimationComplete = (variant: unknown) => {
+  if (variant === 'visible') {
     drawAnimation.value = 'exit';
     return;
   }
-  if (item.animationName === 'exit') {
+  if (variant === 'exit') {
     showHandles.value = false;
     scaleDownAnimation.value = 'small';
   }
-  if (item.animationName === 'small') {
+  if (variant === 'small') {
     iconGridAnimation.value = 'showIcons';
   }
-  if (item.animationName === 'riseUp') {
+  if (variant === 'riseUp') {
     scaleDownAnimation.value = 'small';
   }
-  if (item.animationName === 'showIcons') {
+  if (variant === 'showIcons') {
     shrinkIconAnimation.value = 'shrinkIcons';
   }
-  if (item.animationName === 'shrinkIcons') {
+  if (variant === 'shrinkIcons') {
     iconGridAnimation.value = 'initial';
 
     setTimeout(() => {
@@ -129,16 +129,14 @@ const onAnimationComplete = (item) => {
 
 const randomIndex = ref(Math.floor(Math.random() * 64));
 
-const iconAnimationVariants = {
+const iconAnimationVariants: Variants = {
   initial: {
-    animationName: 'end',
     opacity: 0,
     x: 0,
     y: 0,
     transition: { duration: 1, delay: 1, ease: 'easeInOut' },
   },
   showIcons: (index) => ({
-    animationName: 'showIcons',
     opacity: [0, 1, 1],
     x: [0.5, 0, 0],
     y: [-0.5, 0, 0],
@@ -149,10 +147,9 @@ const iconAnimationVariants = {
 
 const shrinkIconAnimation = ref('initial');
 
-const shrinkIconVariants = {
+const shrinkIconVariants: Variants = {
   initial: { strokeWidth: 2 },
   shrinkIcons: (index) => ({
-    animationName: 'shrinkIcons',
     opacity: 1,
     strokeWidth: 0,
     transition: { delay: 1.8, duration: 1.5, ease: 'easeInOut' },
@@ -254,7 +251,7 @@ const shrinkIconVariants = {
         </motion.g>
         <motion.g
           class="svg-preview-control-path-marker-group"
-          stroke="#fff"
+          :style="{ stroke: 'var(--vp-c-text-1)' }"
           stroke-width="0.125"
           :initial="{ opacity: 1 }"
           :animate="showHandles ? { opacity: 1 } : { opacity: 0 }"

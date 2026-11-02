@@ -64,13 +64,14 @@ if (carbonOptions) {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 16px 20px 20px;
   border-radius: 12px;
   min-height: 256px;
   text-align: center;
   line-height: 18px;
   font-size: 12px;
   font-weight: 500;
+  border: 1px solid var(--vp-c-divider);
   background-color: var(--vp-carbon-ads-bg-color);
 }
 

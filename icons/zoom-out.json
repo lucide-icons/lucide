@@ -6,14 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "magnifying glass",
-    "plus"
+    "$group:minus",
+    "magnifying glass"
   ],
   "categories": [
     "accessibility",
     "layout",
     "design",
-    "text",
     "photography"
   ]
 }

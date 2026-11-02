@@ -14,7 +14,9 @@ export async function outlineSVG({ iconsDir, outlinedDir, iconsWithAliases }: Ou
   try {
     try {
       await fs.mkdir(outlinedDir);
-    } catch (error) {} // eslint-disable-line no-empty
+    } catch (err) {
+      console.warn(`Directory ${outlinedDir} already exists. Skipping creation.`, err);
+    }
 
     await SVGFixer(iconsDir, outlinedDir, {
       showProgressBar: true,

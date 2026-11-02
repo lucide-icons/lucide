@@ -5,15 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:minus",
     "code",
     "coding",
     "version control",
     "git",
     "repository",
-    "remove",
-    "delete",
     "censor",
-    "cancel",
     "forbid",
     "prohibit",
     "ban",
@@ -23,8 +22,6 @@
     "downgrade"
   ],
   "categories": [
-    "development",
-    "text",
-    "gaming"
+    "$extends:book"
   ]
 }

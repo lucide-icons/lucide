@@ -14,7 +14,7 @@ export interface InputProps {
 import { ref, onMounted, nextTick, watch } from 'vue';
 import Icon from '@lucide/vue/src/Icon';
 import { x } from '../../../data/iconNodes';
-import IconButton from './IconButton.vue';
+import Button from './Button.vue';
 
 const props = withDefaults(defineProps<InputProps>(), {
   type: 'text',
@@ -68,9 +68,9 @@ defineExpose({
       ref="input"
       :value="modelValue"
       v-bind="$attrs"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
-    <IconButton
+    <Button
       @click="onClear"
       v-if="type === 'search' && modelValue"
       class="clear-button"
@@ -79,9 +79,10 @@ defineExpose({
     >
       <Icon
         :iconNode="x"
+        name="x"
         :size="20"
       />
-    </IconButton>
+    </Button>
     <kbd
       v-if="shortcut"
       class="shortcut"
@@ -98,7 +99,7 @@ defineExpose({
 
 .input {
   justify-content: flex-start;
-  border: 1px solid transparent;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 0 10px 0 12px;
   width: 100%;
@@ -108,16 +109,21 @@ defineExpose({
   transition:
     color 0.25s,
     border-color 0.25s,
-    background-color 0.25s;
+    background-color 0.25s,
+    box-shadow 0.25s;
+  transition-duration: 0.25s;
 }
 
 .input.has-shortcut {
   padding-right: calc(var(--shortcut-width, 40px) + 22px);
 }
 
+/* Same as FakeInput: a quiet border at rest, a brand border with a soft ring on hover and focus */
 .input:hover,
 .input:focus {
+  outline: none;
   border-color: var(--vp-c-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 15%, transparent);
 }
 .input:focus {
   background-color: var(--vp-c-bg);
@@ -189,8 +195,13 @@ defineExpose({
   z-index: 1;
   color: var(--vp-c-text-2);
   pointer-events: none;
+  transition: color 0.25s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-duration: 0.25s, 0.3s;
 }
+
+/* Like the FakeInput search icon, it tilts as if it starts looking */
+.input-wrapper > svg:has(+ .input.has-icon:hover),
 .input-wrapper > svg:has(+ .input.has-icon:focus) {
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-brand-1);
 }
 </style>

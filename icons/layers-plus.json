@@ -6,18 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "stack",
+    "$extends:layers",
+    "$group:plus",
     "layers",
-    "add",
-    "new",
-    "increase",
-    "create",
     "positive",
-    "copy",
     "upgrade"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layers"
   ]
 }
