@@ -119,7 +119,7 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
 }
 
 .tiles.sm {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .tile {
@@ -160,11 +160,11 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
 }
 
 .md .logo {
-  max-height: 56px;
+  max-height: 64px;
 }
 
 .sm .logo {
-  max-height: 48px;
+  max-height: 56px;
 }
 
 html:not(.dark) .logo.dark-only,
