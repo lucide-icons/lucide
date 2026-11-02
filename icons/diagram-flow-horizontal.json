@@ -22,7 +22,11 @@
     "branches",
     "organization",
     "tree",
-    "workflow"
+    "workflow",
+    "flowchart",
+    "process",
+    "process mapping",
+    "sequence"
   ],
   "categories": [
     "design",
