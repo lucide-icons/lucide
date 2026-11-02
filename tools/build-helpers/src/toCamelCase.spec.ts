@@ -24,6 +24,7 @@ describe('toCamelCase', () => {
 
   it('keeps separators that are not followed by a word character', () => {
     expect(toCamelCase('foo-')).toBe('foo-');
+    expect(toCamelCase('foo__')).toBe('foo__');
     expect(toCamelCase('foo\t!')).toBe('foo\t!');
     expect(toCamelCase('')).toBe('');
   });
