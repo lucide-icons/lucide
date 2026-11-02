@@ -72,7 +72,8 @@ function renderTiers({ orders }: Awaited<ReturnType<typeof fetchCollective>>) {
           .map(({ account }) => account)
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((account) => renderSponsor(account, logoHeight, customLogo))
-          .join('\n');
+          // READMEs strip `style`, so non-breaking spaces are used to space out the logos.
+          .join('\n&nbsp;&nbsp;\n');
 
         return `### ${title}\n\n${sponsorLinks}`;
       })

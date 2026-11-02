@@ -93,6 +93,7 @@ Thank you to all the people who contributed to Lucide!
 ### Bronze 🥉
 
 <a href="https://about.sourcegraph.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/sourcegraph.svg" /><img src="docs/public/sponsors/sourcegraph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></picture></a>
+&nbsp;&nbsp;
 <a href="https://opencollective.com/zephyr-cloud"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/zephyr-cloud.svg" /><img src="docs/public/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" /></picture></a>
 
 [//]: <> (Main README only start)
@@ -100,11 +101,13 @@ Thank you to all the people who contributed to Lucide!
 ### Backers 🍺
 
 <a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="32" alt="Pax Historia" /></a>
+&nbsp;&nbsp;
 <a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="32" alt="pdfme – Free and Open source PDF generation library!" /></a>
 
 ### Supporters ☕️
 
 <a href="https://www.fina.money"><img src="https://images.opencollective.com/fina-money/7c1f196/logo.png" height="32" alt="Fina Money – Build the most flexible finance tracker" /></a>
+&nbsp;&nbsp;
 <a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="32" alt="Ruud" /></a>
 
 [//]: <> (Main README only end)
