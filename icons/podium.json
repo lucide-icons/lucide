@@ -8,6 +8,7 @@
     "Displaying top winners after a game or competition"
   ],
   "tags": [
+    "$group:digit",
     "award",
     "stage",
     "winner",

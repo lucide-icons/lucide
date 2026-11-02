@@ -12,9 +12,9 @@
     "Representing data as 2D areas in a circular format"
   ],
   "tags": [
+    "$group:chart",
     "radar",
     "chart",
-    "diagram",
     "shape",
     "gem",
     "mineral",
@@ -24,8 +24,6 @@
     "performance",
     "comparison",
     "profile",
-    "analytics",
-    "visualization",
     "attributes"
   ],
   "categories": [

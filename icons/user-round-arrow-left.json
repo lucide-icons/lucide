@@ -12,7 +12,8 @@
     "Indicating an inbound user request"
   ],
   "tags": [
-    "person",
+    "$extends:user-round",
+    "$group:direction-left",
     "assign",
     "move",
     "give",
@@ -20,7 +21,6 @@
     "self",
     "me",
     "myself",
-    "profile",
     "avatar",
     "incoming",
     "recipient",
@@ -28,8 +28,7 @@
     "inbound"
   ],
   "categories": [
-    "account",
-    "people",
-    "arrows"
+    "$extends:user-round",
+    "people"
   ]
 }

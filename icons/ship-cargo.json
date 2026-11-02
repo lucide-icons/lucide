@@ -15,16 +15,7 @@
     "Denoting bulk or container shipping routes"
   ],
   "tags": [
-    "boat",
-    "knots",
-    "nautical mile",
-    "maritime",
-    "sailing",
-    "cruise",
-    "ocean liner",
-    "tanker",
-    "vessel",
-    "navy",
+    "$extends:ship",
     "cargo",
     "container",
     "freighter",
@@ -38,8 +29,6 @@
     "export"
   ],
   "categories": [
-    "transportation",
-    "navigation",
-    "travel"
+    "$extends:ship"
   ]
 }

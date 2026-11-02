@@ -6,15 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation",
+    "$extends:file-chart-column",
     "trending up"
   ],
   "categories": [
-    "files"
+    "$extends:file-chart-column"
   ],
   "aliases": [
     {

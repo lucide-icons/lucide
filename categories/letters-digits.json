@@ -1,0 +1,6 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Letters & digits",
+  "description": "Icons visibly featuring various alphanumerical characters, including Latin and Greek letters, and digits.",
+  "icon": "letters"
+}

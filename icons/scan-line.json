@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "checkout",
+    "$extends:scan",
     "till",
     "cart",
     "transaction",
@@ -15,9 +15,7 @@
     "product",
     "packaging",
     "retail",
-    "consumer",
-    "qr-code",
-    "dashed"
+    "consumer"
   ],
   "categories": [
     "devices",

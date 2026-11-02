@@ -1,0 +1,17 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Visualization: a chart or diagram",
+  "tags": [
+    "diagram",
+    "graph",
+    "visualization",
+    "data",
+    "analytics",
+    "analysis",
+    "statistics",
+    "presentation",
+    "reporting",
+    "data visualisation",
+    "visualisation"
+  ]
+}

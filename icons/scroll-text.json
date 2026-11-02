@@ -6,22 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "paper",
-    "log",
-    "scripture",
-    "document",
-    "notes",
-    "parchment",
-    "list",
-    "long",
-    "script",
-    "story",
-    "code",
-    "coding"
+    "$extends:scroll"
   ],
   "categories": [
-    "gaming",
-    "development",
-    "text"
+    "$extends:scroll"
   ]
 }

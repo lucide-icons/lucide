@@ -15,11 +15,11 @@
   },
   "devDependencies": {
     "@vitest/browser-playwright": "5.0.3",
-    "playwright": "1.58.2",
+    "playwright": "1.64.1",
     "typescript": "^6.0.3",
     "vite": "^8.3.3",
     "vite-plugin-solid": "^2.11.14",
-    "vitest": "5.0.3",
+    "vitest": "5.0.5",
     "vitest-browser-solid": "1.0.1"
   }
 }

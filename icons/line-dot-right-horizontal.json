@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-right",
     "code",
     "version control",
     "waypoint",
