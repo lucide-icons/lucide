@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "yukosgiti",
+    "csandman",
+    "AntoninKadrmas"
+  ],
+  "tags": [
+    "computer",
+    "screen",
+    "remote",
+    "share"
+  ],
+  "categories": [
+    "devices",
+    "connectivity"
+  ]
+}
