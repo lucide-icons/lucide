@@ -14,10 +14,8 @@
     "Representing signing in or logging into an account"
   ],
   "tags": [
-    "home",
-    "living",
-    "building",
-    "residence",
+    "$extends:house",
+    "$group:direction-left",
     "enter",
     "entry",
     "check-in",

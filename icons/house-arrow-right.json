@@ -17,10 +17,8 @@
     "Logging out of an account or ending a user session"
   ],
   "tags": [
-    "home",
-    "living",
-    "building",
-    "residence",
+    "$extends:house",
+    "$group:direction-right",
     "exit",
     "checkout",
     "departure",
