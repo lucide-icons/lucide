@@ -25,7 +25,10 @@
     "content filter",
     "geoblocking",
     "region lock",
-    "public access"
+    "public access",
+    "access control",
+    "domain blocking",
+    "region restriction"
   ],
   "categories": [
     "navigation",
