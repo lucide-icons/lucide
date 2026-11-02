@@ -18,7 +18,7 @@
     "solid-js": "1.9.15"
   },
   "devDependencies": {
-    "@vitest/browser-playwright": "5.0.3",
+    "@vitest/browser-playwright": "5.0.5",
     "typescript": "^6.0.3",
     "vite": "^8.3.3",
     "vite-plugin-solid": "^2.11.14",
