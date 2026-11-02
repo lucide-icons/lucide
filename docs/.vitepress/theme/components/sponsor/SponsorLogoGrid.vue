@@ -65,6 +65,14 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
           :src="sponsor.image"
           :alt="sponsor.name"
           class="logo"
+          :class="{ 'light-only': sponsor.imageDark }"
+          loading="lazy"
+        />
+        <img
+          v-if="sponsor.imageDark"
+          :src="sponsor.imageDark"
+          :alt="sponsor.name"
+          class="logo dark-only"
           loading="lazy"
         />
       </a>
@@ -157,6 +165,11 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
 
 .sm .logo {
   max-height: 40px;
+}
+
+html:not(.dark) .logo.dark-only,
+html.dark .logo.light-only {
+  display: none;
 }
 
 .placeholder {

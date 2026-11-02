@@ -1,111 +1,38 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { TIERS, type TierId } from '../docs/.vitepress/theme/components/sponsor/tiers.ts';
-
-const COLLECTIVE_SLUG = 'lucide-icons';
-const OPEN_COLLECTIVE_API = 'https://api.opencollective.com/graphql/v2';
+import {
+  type Account,
+  fetchCollective,
+  getCurrentSponsors,
+  getLocalLogos,
+  getOpenCollectiveLogo,
+  getWebsite,
+} from '../docs/scripts/helpers/openCollective.mts';
 
 const rootPath = join(import.meta.dirname, '..');
 const mainReadmePath = join(rootPath, 'README.md');
-const sponsorLogosPath = join(rootPath, 'docs/public/sponsors');
 
 const tiersStartMarker = '[//]: <> (Sponsor tiers start)';
 const tiersEndMarker = '[//]: <> (Sponsor tiers end)';
 const mainReadmeOnlyStartMarker = '[//]: <> (Main README only start)';
 const mainReadmeOnlyEndMarker = '[//]: <> (Main README only end)';
 
-const GRACE_PERIOD_DAYS = 31;
-const DAY_IN_MS = 24 * 60 * 60 * 1000;
-
 /**
  * How each sponsor tier shows up in the READMEs, following the tier perks in tiers.ts.
  * Tiers that are not in the npm package READMEs are wrapped in the "Main README only" markers.
+ * Only tiers with `customLogo` use the logos in docs/public/sponsors, the others use their avatar.
  */
-const README_TIERS: Record<TierId, { title: string; logoHeight: number; inPackages: boolean }> = {
-  platinum: { title: 'Platinum 💎', logoHeight: 96, inPackages: true },
-  gold: { title: 'Gold 🥇', logoHeight: 64, inPackages: true },
-  bronze: { title: 'Bronze 🥉', logoHeight: 48, inPackages: true },
-  backer: { title: 'Backers 🍺', logoHeight: 32, inPackages: false },
-  supporter: { title: 'Supporters ☕️', logoHeight: 32, inPackages: false },
+const README_TIERS: Record<
+  TierId,
+  { title: string; logoHeight: number; inPackages: boolean; customLogo: boolean }
+> = {
+  platinum: { title: 'Platinum 💎', logoHeight: 96, inPackages: true, customLogo: true },
+  gold: { title: 'Gold 🥇', logoHeight: 64, inPackages: true, customLogo: true },
+  bronze: { title: 'Bronze 🥉', logoHeight: 48, inPackages: true, customLogo: true },
+  backer: { title: 'Backers 🍺', logoHeight: 32, inPackages: false, customLogo: false },
+  supporter: { title: 'Supporters ☕️', logoHeight: 32, inPackages: false, customLogo: false },
 };
-
-interface Account {
-  slug: string;
-  name: string;
-  website: string | null;
-  imageUrl: string | null;
-  description: string | null;
-}
-
-interface Order {
-  status: 'ACTIVE' | 'CANCELLED' | 'ERROR' | 'PAUSED';
-  amount: { valueInCents: number | null } | null;
-  frequency: 'MONTHLY' | 'YEARLY' | 'ONETIME' | null;
-  nextChargeDate: string | null;
-  fromAccount: Account;
-}
-
-interface CollectiveResponse {
-  data?: {
-    account: {
-      orders: { nodes: Order[] };
-    } | null;
-  };
-  errors?: { message: string }[];
-}
-
-const query = /* GraphQL */ `
-  query Sponsors($slug: String!) {
-    account(slug: $slug) {
-      orders(filter: INCOMING, status: [ACTIVE, CANCELLED, ERROR, PAUSED], limit: 1000) {
-        nodes {
-          status
-          amount {
-            valueInCents
-          }
-          frequency
-          nextChargeDate
-          fromAccount {
-            slug
-            name
-            website
-            imageUrl
-            description
-          }
-        }
-      }
-    }
-  }
-`;
-
-async function fetchCollective() {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (process.env.OPENCOLLECTIVE_TOKEN) {
-    headers['Personal-Token'] = process.env.OPENCOLLECTIVE_TOKEN;
-  }
-
-  const response = await fetch(OPEN_COLLECTIVE_API, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query, variables: { slug: COLLECTIVE_SLUG } }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Open Collective API responded with ${response.status} ${response.statusText}`);
-  }
-
-  const { data, errors } = (await response.json()) as CollectiveResponse;
-  if (errors?.length) {
-    throw new Error(
-      `Open Collective API errors: ${errors.map(({ message }) => message).join(', ')}`,
-    );
-  }
-  if (!data?.account) {
-    throw new Error(`Could not find Open Collective account "${COLLECTIVE_SLUG}"`);
-  }
-
-  return data.account;
-}
 
 const escapeHtml = (value: string) =>
   value
@@ -114,75 +41,22 @@ const escapeHtml = (value: string) =>
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;');
 
-function getLogo({ slug, imageUrl }: Account) {
-  const localLogo = ['svg', 'png'].find((extension) =>
-    existsSync(join(sponsorLogosPath, `${slug}.${extension}`)),
-  );
-
-  console.log(slug);
-
-  if (localLogo) return `docs/public/sponsors/${slug}.${localLogo}`;
-
-  return imageUrl ?? `https://images.opencollective.com/${slug}/logo/256.png`;
-}
-
-/**
- * Active contributions, plus recurring ones that stopped (cancelled, failed or paused) less than
- * a month after their next payment was due. A failed payment doesn't drop a sponsor right away.
- */
-function isCurrentSponsor({ status, nextChargeDate }: Order) {
-  if (status === 'ACTIVE') return true;
-  if (!nextChargeDate) return false;
-
-  return Date.now() < new Date(nextChargeDate).getTime() + GRACE_PERIOD_DAYS * DAY_IN_MS;
-}
-
-function getYearlyAmount({ amount, frequency }: Order) {
-  const value = (amount?.valueInCents ?? 0) / 100;
-
-  return frequency === 'YEARLY' ? value : value * 12;
-}
-
-/**
- * The highest tier a yearly total qualifies for. Tiers with a yearly price (two months free)
- * count that price, so a yearly Gold sponsor isn't listed as Bronze.
- */
-function getTierForYearlyAmount(yearlyAmount: number) {
-  return [...TIERS].reverse().find((tier) => yearlyAmount >= (tier.yearly ?? tier.monthly * 12));
-}
-
-/** Groups the active sponsors by tier, based on everything they contribute in a year. */
-function getSponsorsByTier(orders: Order[]) {
-  const sponsors = new Map<string, { account: Account; yearlyAmount: number }>();
-
-  orders.forEach((order) => {
-    const sponsor = sponsors.get(order.fromAccount.slug);
-
-    if (sponsor) {
-      sponsor.yearlyAmount += getYearlyAmount(order);
-    } else {
-      sponsors.set(order.fromAccount.slug, {
-        account: order.fromAccount,
-        yearlyAmount: getYearlyAmount(order),
-      });
-    }
-  });
-
-  return Map.groupBy(
-    [...sponsors.values()],
-    ({ yearlyAmount }) => getTierForYearlyAmount(Math.round(yearlyAmount * 100) / 100)?.id,
-  );
-}
-
-function renderSponsor(account: Account, height: number) {
-  const href = account.website || `https://opencollective.com/${account.slug}`;
+/** Uses a `<picture>` to switch to the dark logo in dark mode, when there is one. */
+function renderSponsor(account: Account, height: number, customLogo: boolean) {
+  const logos: { light?: string; dark?: string } = customLogo ? getLocalLogos(account.slug) : {};
+  const src = logos.light ? `docs/public/sponsors/${logos.light}` : getOpenCollectiveLogo(account);
   const alt = account.description ? `${account.name} – ${account.description}` : account.name;
 
-  return `<a href="${escapeHtml(href)}"><img src="${escapeHtml(getLogo(account))}" height="${height}" alt="${escapeHtml(alt)}" /></a>`;
+  const image = `<img src="${escapeHtml(src)}" height="${height}" alt="${escapeHtml(alt)}" />`;
+  const logo = logos.dark
+    ? `<picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/${escapeHtml(logos.dark)}" />${image}</picture>`
+    : image;
+
+  return `<a href="${escapeHtml(getWebsite(account))}">${logo}</a>`;
 }
 
 function renderTiers({ orders }: Awaited<ReturnType<typeof fetchCollective>>) {
-  const sponsorsByTier = getSponsorsByTier(orders.nodes.filter(isCurrentSponsor));
+  const sponsorsByTier = Map.groupBy(getCurrentSponsors(orders.nodes), ({ tier }) => tier);
 
   // Highest tier first, so Platinum sponsors are at the top.
   const renderTierGroup = (inPackages: boolean) =>
@@ -193,11 +67,11 @@ function renderTiers({ orders }: Awaited<ReturnType<typeof fetchCollective>>) {
         const sponsors = sponsorsByTier.get(id) ?? [];
         if (!sponsors.length) return [];
 
-        const { title, logoHeight } = README_TIERS[id];
+        const { title, logoHeight, customLogo } = README_TIERS[id];
         const sponsorLinks = sponsors
           .map(({ account }) => account)
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map((account) => renderSponsor(account, logoHeight))
+          .map((account) => renderSponsor(account, logoHeight, customLogo))
           .join('\n');
 
         return `### ${title}\n\n${sponsorLinks}`;
@@ -250,7 +124,7 @@ function updatePackageSponsors() {
   if (sponsorsBlock?.[1]) {
     const packageSponsorsBlock = sponsorsBlock[1]
       .replace(mainReadmeOnlyRegex, '')
-      .replaceAll('src="docs/public', 'src="https://lucide.dev');
+      .replaceAll('="docs/public/', '="https://lucide.dev/');
     readdirSync(packagesPath).forEach((packagePath) => {
       if (['lucide-figma', 'shared'].includes(packagePath) || packagePath.startsWith('.')) {
         return;

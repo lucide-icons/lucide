@@ -122,6 +122,14 @@ export function getTierForAmount(monthly: number) {
   return [...TIERS].reverse().find((tier) => monthly >= tier.monthly) ?? null;
 }
 
+/**
+ * The highest tier a yearly total qualifies for, or `null` below the lowest tier. Tiers with a
+ * yearly price (two months free) count that price, so a yearly Gold sponsor isn't listed as Bronze.
+ */
+export function getTierForYearlyAmount(yearly: number) {
+  return [...TIERS].reverse().find((tier) => yearly >= (tier.yearly ?? tier.monthly * 12)) ?? null;
+}
+
 export type Frequency = 'monthly' | 'once';
 
 const getOpenCollectiveParams = (amount: number, frequency: Frequency) =>

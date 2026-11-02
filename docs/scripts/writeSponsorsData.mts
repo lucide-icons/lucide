@@ -1,17 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import { loadEnvFile } from 'node:process';
-
-const COLLECTIVE_SLUG = 'lucide-icons';
-const OPEN_COLLECTIVE_API = 'https://api.opencollective.com/graphql/v2';
+import type { TierId } from '../.vitepress/theme/components/sponsor/tiers.ts';
+import {
+  fetchCollective,
+  getCurrentSponsors,
+  getLocalLogos,
+  getOpenCollectiveLogo,
+  getWebsite,
+} from './helpers/openCollective.mts';
 
 const currentDir = process.cwd();
 const dataDirectory = path.resolve(currentDir, '.vitepress/data');
-const sponsorLogosPath = path.resolve(currentDir, 'public/sponsors');
 const outputPath = path.resolve(dataDirectory, 'sponsorsData.json');
-
-const GRACE_PERIOD_DAYS = 31;
-const DAY_IN_MS = 24 * 60 * 60 * 1000;
 
 try {
   // Load environment variables from .env file, if it exists.
@@ -20,154 +21,20 @@ try {
   // No .env file, so rely on the environment as-is.
 }
 
-interface Account {
-  slug: string;
-  name: string;
-  website: string | null;
-  imageUrl: string | null;
-}
-
-interface Order {
-  status: 'ACTIVE' | 'CANCELLED' | 'ERROR' | 'PAUSED';
-  amount: { valueInCents: number | null } | null;
-  frequency: 'MONTHLY' | 'YEARLY' | 'ONETIME' | null;
-  nextChargeDate: string | null;
-  fromAccount: Account;
-}
-
-interface CollectiveResponse {
-  data?: {
-    account: {
-      stats: { contributorsCount: number | null } | null;
-      orders: { nodes: Order[] };
-    } | null;
-  };
-  errors?: { message: string }[];
-}
-
 export interface Sponsor {
   slug: string;
   name: string;
   website: string;
   /** Logo for the logo tiers, preferring a local file in `public/sponsors`. */
   image: string;
+  /** Logo for dark mode, from `public/sponsors/dark`. */
+  imageDark?: string;
   /** Square avatar for the backer and supporter tiers. */
   avatar: string;
   /** Recurring contribution normalised to a monthly amount, in the collective's currency. */
   monthlyAmount: number;
-}
-
-const query = /* GraphQL */ `
-  query Sponsors($slug: String!) {
-    account(slug: $slug) {
-      stats {
-        contributorsCount
-      }
-      orders(filter: INCOMING, status: [ACTIVE, CANCELLED, ERROR, PAUSED], limit: 1000) {
-        nodes {
-          status
-          amount {
-            valueInCents
-          }
-          frequency
-          nextChargeDate
-          fromAccount {
-            slug
-            name
-            website
-            imageUrl
-          }
-        }
-      }
-    }
-  }
-`;
-
-async function fetchCollective() {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (process.env.OPENCOLLECTIVE_TOKEN) {
-    headers['Personal-Token'] = process.env.OPENCOLLECTIVE_TOKEN;
-  }
-
-  const response = await fetch(OPEN_COLLECTIVE_API, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query, variables: { slug: COLLECTIVE_SLUG } }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Open Collective API responded with ${response.status} ${response.statusText}`);
-  }
-
-  const { data, errors } = (await response.json()) as CollectiveResponse;
-  if (errors?.length) {
-    throw new Error(
-      `Open Collective API errors: ${errors.map(({ message }) => message).join(', ')}`,
-    );
-  }
-  if (!data?.account) {
-    throw new Error(`Could not find Open Collective account "${COLLECTIVE_SLUG}"`);
-  }
-
-  return data.account;
-}
-
-function getLogo({ slug, imageUrl }: Account) {
-  const localLogo = ['svg', 'png'].find((extension) =>
-    fs.existsSync(path.join(sponsorLogosPath, `${slug}.${extension}`)),
-  );
-  if (localLogo) return `/sponsors/${slug}.${localLogo}`;
-
-  return imageUrl ?? `https://images.opencollective.com/${slug}/logo/256.png`;
-}
-
-/**
- * Active contributions, plus recurring ones that stopped (cancelled, failed or paused) less than
- * a month after their next payment was due. A failed payment doesn't drop a sponsor right away.
- */
-function isCurrentSponsor({ status, nextChargeDate }: Order) {
-  if (status === 'ACTIVE') return true;
-  if (!nextChargeDate) return false;
-
-  return Date.now() < new Date(nextChargeDate).getTime() + GRACE_PERIOD_DAYS * DAY_IN_MS;
-}
-
-function getMonthlyAmount({ amount, frequency }: Order) {
-  const value = (amount?.valueInCents ?? 0) / 100;
-
-  return frequency === 'YEARLY' ? value / 12 : value;
-}
-
-function toSponsors(orders: Order[]) {
-  const sponsors = new Map<string, Sponsor>();
-
-  orders.forEach((order) => {
-    const { fromAccount } = order;
-    const existing = sponsors.get(fromAccount.slug);
-
-    if (existing) {
-      existing.monthlyAmount += getMonthlyAmount(order);
-      return;
-    }
-
-    sponsors.set(fromAccount.slug, {
-      slug: fromAccount.slug,
-      name: fromAccount.name,
-      website: fromAccount.website || `https://opencollective.com/${fromAccount.slug}`,
-      image: getLogo(fromAccount),
-      avatar:
-        fromAccount.imageUrl ??
-        `https://images.opencollective.com/${fromAccount.slug}/avatar/128.png`,
-      monthlyAmount: getMonthlyAmount(order),
-    });
-  });
-
-  return [...sponsors.values()]
-    .map((sponsor) => ({
-      ...sponsor,
-      monthlyAmount: Math.round(sponsor.monthlyAmount * 100) / 100,
-    }))
-    .sort((a, b) => b.monthlyAmount - a.monthlyAmount || a.name.localeCompare(b.name));
+  /** The tier their yearly contribution qualifies for, `null` below the lowest tier. */
+  tier: TierId | null;
 }
 
 let sponsors: Sponsor[] = [];
@@ -176,7 +43,22 @@ let allTimeCount: number | null = null;
 
 try {
   const collective = await fetchCollective();
-  sponsors = toSponsors(collective.orders.nodes.filter(isCurrentSponsor));
+
+  sponsors = getCurrentSponsors(collective.orders.nodes).map(({ account, yearlyAmount, tier }) => {
+    const logos = getLocalLogos(account.slug);
+
+    return {
+      slug: account.slug,
+      name: account.name,
+      website: getWebsite(account),
+      image: logos.light ? `/sponsors/${logos.light}` : getOpenCollectiveLogo(account),
+      imageDark: logos.dark && `/sponsors/${logos.dark}`,
+      avatar:
+        account.imageUrl ?? `https://images.opencollective.com/${account.slug}/avatar/128.png`,
+      monthlyAmount: Math.round((yearlyAmount / 12) * 100) / 100,
+      tier,
+    };
+  });
   allTimeCount = collective.stats?.contributorsCount ?? null;
 } catch (error) {
   console.warn(`Could not fetch sponsors, writing an empty list. ${error}`);
