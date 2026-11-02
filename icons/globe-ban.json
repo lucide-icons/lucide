@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:globe",
     "PrimeTestLab"
   ],
   "use-cases": [
@@ -10,20 +11,17 @@
     "Applying parental controls or content filters to website access"
   ],
   "tags": [
+    "$extends:globe",
+    "$group:off",
     "globe",
-    "world",
     "internet",
     "web",
     "website",
-    "blocked",
     "banned",
-    "restricted",
-    "forbidden",
     "geo blocking",
     "offline",
     "parental controls",
     "content filter",
-    "geoblocking",
     "region lock",
     "public access",
     "access control",
@@ -31,8 +29,7 @@
     "region restriction"
   ],
   "categories": [
-    "navigation",
-    "connectivity",
+    "$extends:globe",
     "security"
   ]
 }
