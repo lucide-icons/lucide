@@ -151,7 +151,7 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
 }
 
 .logo {
-  max-width: 70%;
+  /* max-width: 70%; */
   object-fit: contain;
 }
 
@@ -164,7 +164,7 @@ const sizeClass = computed(() => props.size ?? defaultSizes[props.tier]);
 }
 
 .sm .logo {
-  max-height: 40px;
+  max-height: 48px;
 }
 
 html:not(.dark) .logo.dark-only,
