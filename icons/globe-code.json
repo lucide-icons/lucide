@@ -14,13 +14,8 @@
     "$extends:globe",
     "$group:code",
     "website",
-    "internet",
-    "globe",
-    "connection",
-    "network",
     "digital",
     "access",
-    "global",
     "link"
   ],
   "categories": [

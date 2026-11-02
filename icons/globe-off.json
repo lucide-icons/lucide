@@ -11,16 +11,10 @@
   "tags": [
     "$extends:globe",
     "$group:off",
-    "globe",
-    "earth",
-    "planet",
     "mute",
     "avoid",
-    "internet",
     "offline",
     "disconnected",
-    "network",
-    "connection",
     "no connection",
     "network failure",
     "signal off"
