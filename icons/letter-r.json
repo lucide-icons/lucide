@@ -12,8 +12,7 @@
     "Indicating ratings or reviews"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "registered trademark",
     "trademark",
@@ -25,10 +24,7 @@
     "radius",
     "geometry",
     "rating",
-    "review",
-    "text",
-    "font",
-    "typography"
+    "review"
   ],
   "categories": [
     "letters-digits"

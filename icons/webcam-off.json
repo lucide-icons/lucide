@@ -11,12 +11,10 @@
     "Showing a camera feed is unavailable or blocked for privacy"
   ],
   "tags": [
-    "camera",
-    "security"
+    "$extends:webcam",
+    "$group:off"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "communication"
+    "$extends:webcam"
   ]
 }

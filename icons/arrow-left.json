@@ -6,10 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:navigation-previous",
     "previous",
-    "back",
-    "direction",
-    "west",
     "<-"
   ],
   "categories": [

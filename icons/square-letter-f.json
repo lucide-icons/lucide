@@ -11,8 +11,7 @@
     "Labeling aperture or f-stop settings"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "fahrenheit",
     "temperature",
@@ -23,10 +22,7 @@
     "force",
     "aperture",
     "f-stop",
-    "camera",
-    "text",
-    "font",
-    "typography"
+    "camera"
   ],
   "categories": [
     "letters-digits"

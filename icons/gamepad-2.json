@@ -7,10 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "console"
+    "$extends:gamepad"
   ],
   "categories": [
-    "gaming",
-    "devices"
+    "$extends:gamepad"
   ]
 }

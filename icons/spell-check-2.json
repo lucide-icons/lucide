@@ -6,19 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "spelling",
-    "error",
-    "mistake",
-    "oversight",
-    "typo",
-    "correction",
-    "code",
-    "linter",
-    "a"
+    "$extends:spell-check"
   ],
   "categories": [
-    "letters-digits",
-    "text",
-    "development"
+    "$extends:spell-check"
   ]
 }

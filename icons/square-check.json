@@ -5,11 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$group:check"
   ],
   "categories": [
     "notifications"

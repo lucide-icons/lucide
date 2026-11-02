@@ -15,13 +15,12 @@
     "Advancing to the final chapter or track in playlists and audiobooks"
   ],
   "tags": [
+    "$group:direction-right",
+    "$group:navigation-last",
     "next",
-    "forward",
     "skip",
     "fast forward",
     "last",
-    "end",
-    "east",
     "music",
     "caret",
     "button",
@@ -37,7 +36,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "multimedia"
   ]
 }

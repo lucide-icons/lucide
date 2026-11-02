@@ -9,17 +9,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:off",
     "music",
     "audio",
     "sound",
-    "mute",
-    "off"
+    "mute"
   ],
   "categories": [
     "multimedia",
-    "connectivity",
-    "communication",
-    "devices",
-    "gaming"
+    "devices"
   ]
 }

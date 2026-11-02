@@ -8,21 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "servers",
-    "backup",
+    "$extends:database",
     "time machine",
     "rotate",
     "arrow",
     "left"
   ],
   "categories": [
-    "devices",
-    "arrows",
-    "design",
-    "development",
-    "photography"
+    "$extends:database"
   ]
 }

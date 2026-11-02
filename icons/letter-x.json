@@ -12,8 +12,7 @@
     "Representing X chromosomes"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "close",
     "dismiss",
@@ -25,10 +24,7 @@
     "axis",
     "intersection",
     "cross",
-    "chromosome",
-    "text",
-    "font",
-    "typography"
+    "chromosome"
   ],
   "categories": [
     "letters-digits"

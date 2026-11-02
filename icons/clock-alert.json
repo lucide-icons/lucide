@@ -7,13 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "time",
-    "watch",
-    "alarm",
-    "warning",
+    "$extends:clock",
+    "$group:exclamation-mark",
     "wrong"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

@@ -22,6 +22,10 @@ const links = computed(() => [
     href: '/contribute/',
   },
   {
+    text: 'Sponsor',
+    href: '/sponsor',
+  },
+  {
     text: 'Changelog',
     href: `${githubLink.value}/releases`,
   },

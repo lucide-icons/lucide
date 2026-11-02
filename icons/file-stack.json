@@ -6,16 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:files",
     "versions",
-    "multiple",
-    "copy",
-    "documents",
     "revisions",
     "version control",
     "history"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

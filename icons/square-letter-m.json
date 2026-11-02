@@ -17,8 +17,7 @@
     "underground",
     "track",
     "line",
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "million",
     "mega",
@@ -26,10 +25,7 @@
     "measurement",
     "male",
     "medium",
-    "size",
-    "text",
-    "font",
-    "typography"
+    "size"
   ],
   "categories": [
     "letters-digits",

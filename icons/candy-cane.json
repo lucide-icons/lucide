@@ -7,13 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "sugar",
-    "food",
-    "sweet",
+    "$extends:candy",
     "christmas",
     "xmas"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:candy"
   ]
 }

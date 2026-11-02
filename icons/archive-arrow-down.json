@@ -11,17 +11,13 @@
     "Saving files and records to an archive"
   ],
   "tags": [
-    "index",
-    "backup",
-    "box",
-    "storage",
-    "records",
+    "$extends:archive",
+    "unarchive",
     "email",
     "download",
     "save"
   ],
   "categories": [
-    "files",
-    "mail"
+    "$extends:archive"
   ]
 }
