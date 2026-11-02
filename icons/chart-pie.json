@@ -7,10 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "presentation"
+    "$group:chart"
   ],
   "categories": [
     "charts"

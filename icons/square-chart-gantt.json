@@ -5,29 +5,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "projects",
-    "manage",
-    "overview",
-    "roadmap",
-    "plan",
+    "$extends:chart-gantt",
     "intentions",
-    "timeline",
-    "deadline",
-    "date",
-    "event",
-    "range",
-    "period",
-    "productivity",
-    "work",
-    "agile",
     "code",
     "coding",
     "toolbar",
     "button"
   ],
   "categories": [
-    "charts",
-    "time",
+    "$extends:chart-gantt",
     "development"
   ],
   "aliases": [

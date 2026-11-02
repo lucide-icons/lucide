@@ -7,6 +7,7 @@ import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
+import Card from '../base/Card.vue';
 import useTrackStyleChanges from '../../composables/useTrackStyleChanges';
 import { track } from '../../utils/openpanel';
 
@@ -29,7 +30,7 @@ function onReset() {
 </script>
 
 <template>
-  <div
+  <Card
     class="customizer-card"
     :class="{ customized: showCustomized }"
   >
@@ -95,7 +96,7 @@ function onReset() {
         v-model="nonScalingStroke"
       />
     </InputField>
-  </div>
+  </Card>
 </template>
 
 <style scoped>
@@ -113,15 +114,13 @@ function onReset() {
   font-size: 16px;
 }
 
-.customizer-card {
-  background: var(--vp-c-bg);
+.card.customizer-card {
   padding: 12px 24px 24px;
-  border-radius: 12px;
   margin-bottom: 24px;
   position: relative;
   z-index: 0;
-  border: 1px solid transparent;
   transition: border-color 0.4s ease-in-out;
+  background: var(--vp-c-bg);
 }
 
 .customizer-card.customized {

@@ -13,8 +13,7 @@
   ],
   "tags": [
     "$extends:database",
-    "$group:check",
-    "server"
+    "$group:check"
   ],
   "categories": [
     "$extends:database"

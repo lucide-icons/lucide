@@ -6,11 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:graph",
     "indirection",
     "vpn",
     "virtual private network",
     "proxy",
-    "connections",
     "bounce",
     "reroute",
     "path",

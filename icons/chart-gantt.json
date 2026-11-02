@@ -7,10 +7,22 @@
   ],
   "use-cases": [],
   "tags": [
-    "diagram",
-    "graph",
+    "$group:chart",
     "timeline",
-    "planning"
+    "planning",
+    "projects",
+    "manage",
+    "overview",
+    "roadmap",
+    "plan",
+    "deadline",
+    "date",
+    "event",
+    "range",
+    "period",
+    "productivity",
+    "work",
+    "agile"
   ],
   "categories": [
     "charts",
