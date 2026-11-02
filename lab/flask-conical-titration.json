@@ -5,15 +5,15 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "labeling titration procedures in lab information management systems",
-    "marking assay workflows like Karl Fischer or potentiometric titration in pharmaceutical QC dashboards",
-    "marking acid-base or redox titration lessons on chemistry e-learning platforms",
-    "indicating chlorine residual, alkalinity, or hardness titration tests in water treatment monitoring tools",
-    "denoting titratable acidity or free-SO₂ titration tools in brewing and winemaking apps",
-    "marking the water-testing section for drop-count titration kit results in pool, spa, and aquarium care apps",
-    "flagging TAN/TBN titration steps in oil analysis reports",
-    "logging fat or acidity titration entries in food and dairy QA systems",
-    "representing dissolved oxygen or soil pH titration workflows in environmental field-study apps"
+    "Labeling titration procedures in lab information management systems",
+    "Marking assay workflows like Karl Fischer or potentiometric titration in pharmaceutical QC dashboards",
+    "Marking acid-base or redox titration lessons on chemistry e-learning platforms",
+    "Indicating chlorine residual, alkalinity, or hardness titration tests in water treatment monitoring tools",
+    "Denoting titratable acidity or free-SO₂ titration tools in brewing and winemaking apps",
+    "Marking the water-testing section for drop-count titration kit results in pool, spa, and aquarium care apps",
+    "Flagging TAN/TBN titration steps in oil analysis reports",
+    "Logging fat or acidity titration entries in food and dairy QA systems",
+    "Representing dissolved oxygen or soil pH titration workflows in environmental field-study apps"
   ],
   "tags": [
     "chemical",
