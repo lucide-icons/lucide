@@ -19,6 +19,7 @@ overrides:
   decode-uri-component@<=0.5.0: ^0.5.1
   deepmerge@>=4.2.0 <=4.3.1: ^4.3.1
   file-type@>=13.0.0 <21.3.1: ^21.3.1
+  '@jimp/core>file-type': ^16.5.4
   glob@>=9.0.0 <=14.0.1: ^14.0.2
   hono@>=4.12.4 <4.13.11: ^4.13.11
 
