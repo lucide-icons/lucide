@@ -75,7 +75,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^7.1.0",
-    "@solidjs/testing-library": "^1.0.0-rc.2",
+    "@solidjs/testing-library": "^0.8.10",
     "@testing-library/jest-dom": "^7.0.1",
     "babel-preset-solid": "^1.9.15",
     "esbuild": "^0.28.2",
