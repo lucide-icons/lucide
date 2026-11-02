@@ -15,5 +15,10 @@
   ],
   "categories": [
     "$extends:search"
+  ],
+  "aliases": [
+    {
+      "name": "search-alert"
+    }
   ]
 }

@@ -13,5 +13,12 @@
   ],
   "categories": [
     "$extends:clock"
+  ],
+  "aliases": [
+    {
+      "name": "clock-alert",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }

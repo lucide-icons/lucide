@@ -2,25 +2,25 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
     "ericfennis",
-    "karsa-mistmere"
+    "jguddas"
   ],
   "use-cases": [],
   "tags": [
-    "$group:exclamation-mark",
-    "linter"
+    "$group:exclamation-mark"
   ],
   "categories": [
-    "$extends:triangle",
-    "notifications",
-    "development"
+    "$extends:octagon",
+    "notifications"
   ],
   "aliases": [
     {
-      "name": "alert-triangle",
+      "name": "alert-octagon",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "octagon-alert"
     }
   ]
 }

@@ -19,5 +19,12 @@
     "development",
     "notifications",
     "weather"
+  ],
+  "aliases": [
+    {
+      "name": "cloud-alert",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
