@@ -5,21 +5,19 @@
     "karsa-mistmerea"
   ],
   "use-cases": [
-    "Organizing ideas into branches in brainstorming tools",
     "Showing relationships between concepts in visual planning tools",
     "Structuring topics and subtopics in study notes",
     "Planning branching workflows in diagram editors"
   ],
   "tags": [
     "$group:graph",
-    "diagram",
+    "mind map",
     "visualization",
     "brainstorm",
     "brainstorming",
     "ideas",
     "concepts",
     "planning",
-    "flow",
     "hierarchy",
     "branches",
     "organization",

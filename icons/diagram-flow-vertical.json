@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:diagram-flow-horizontal"
+  ],
+  "use-cases": [
+    "Showing top-to-bottom branching workflows in diagram editors",
+    "Organizing parent and child concepts in visual planning tools"
+  ],
+  "tags": [
+    "$group:graph",
+    "flowchart",
+    "workflow",
+    "hierarchy",
+    "branches",
+    "tree",
+    "parent",
+    "child"
+  ],
+  "categories": [
+    "design",
+    "charts"
+  ]
+}
