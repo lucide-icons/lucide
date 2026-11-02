@@ -58,9 +58,12 @@ const draw: Variants = {
 const drawAnimation = ref('visible');
 const showHandles = ref(true);
 
-// motion-v passes the variant label that finished, not the resolved variant
 const onAnimationComplete = (variant: unknown) => {
-  if (variant === 'visible') drawAnimation.value = 'exit';
+  if (variant === 'visible') {
+    drawAnimation.value = 'exit';
+  } else if (variant === 'exit') {
+    showHandles.value = false;
+  }
 };
 
 // Only rendered on the client, so reduced motion is known before the first frame
@@ -81,10 +84,8 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
 
 <template>
   <div
-    class="home-hero-animation-container"
+    class="sponsor-hero-animation-container"
   >
-  <div
-    class="sponsor-hero-animation"
     aria-hidden="true"
   >
     <svg

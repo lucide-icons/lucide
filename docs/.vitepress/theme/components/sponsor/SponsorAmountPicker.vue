@@ -30,7 +30,7 @@ const isMonthly = computed(() => frequency.value === 'monthly');
 const total = computed(() => {
   const value = customAmount.value === '' ? amount.value : Number(customAmount.value);
 
-  return value > 0 ? value : 0;
+  return value > 0 ? Math.round(value) : 0;
 });
 
 const tier = computed(() => (isMonthly.value ? getTierForAmount(total.value) : null));
