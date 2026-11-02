@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "The account is suspicious.",
+    "There's a problem with the account.",
+    "User have been warned.",
+    "Give the user a warning.",
+    "The user has been flagged."
+  ],
+  "tags": [
+    "person",
+    "account",
+    "contact"
+  ],
+  "categories": [
+    "account"
+  ]
+}
