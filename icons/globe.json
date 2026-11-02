@@ -10,7 +10,18 @@
     "world",
     "browser",
     "language",
-    "translate"
+    "translate",
+    "location",
+    "country",
+    "coverage",
+    "publish",
+    "connection",
+    "global",
+    "earth",
+    "globe",
+    "internet",
+    "planet",
+    "network"
   ],
   "categories": [
     "navigation",
