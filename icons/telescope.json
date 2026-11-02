@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "astronomy",
     "space",
@@ -18,7 +19,6 @@
   ],
   "categories": [
     "science",
-    "development",
     "tools"
   ]
 }

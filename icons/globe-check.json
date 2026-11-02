@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "Barakudum"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:globe",
+    "$group:check",
+    "internet",
+    "web",
+    "available",
+    "online",
+    "status"
+  ],
+  "categories": [
+    "$extends:globe"
+  ]
+}

@@ -4,6 +4,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Representing workouts, weight training, or a fitness library",
+    "Represent a gym or fitness facility"
+  ],
   "tags": [
     "barbell",
     "weight",

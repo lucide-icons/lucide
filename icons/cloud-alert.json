@@ -5,19 +5,19 @@
     "csandman",
     "ericfennis",
     "karsa-mistmere",
-    "lscheibel"
+    "lscheibel",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "weather",
-    "danger",
-    "warning",
-    "alert",
-    "error",
+    "$extends:cloud",
+    "$group:exclamation-mark",
     "sync",
-    "network",
-    "exclamation"
+    "network"
   ],
   "categories": [
-    "development"
+    "development",
+    "notifications",
+    "weather"
   ]
 }

@@ -5,10 +5,11 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-right",
     "text",
-    "alignment",
-    "right"
+    "alignment"
   ],
   "categories": [
     "text"
@@ -17,8 +18,7 @@
     {
       "name": "align-right",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

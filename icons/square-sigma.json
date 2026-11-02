@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "sum",
     "calculate",
     "formula",
@@ -12,6 +14,7 @@
     "enumerate"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "math"
   ],
@@ -19,8 +22,7 @@
     {
       "name": "sigma-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

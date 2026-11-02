@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "on",
     "off",
@@ -20,6 +21,6 @@
     "troubleshoot"
   ],
   "categories": [
-    "connectivity"
+    "devices"
   ]
 }

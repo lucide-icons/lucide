@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import HomeContainer from './HomeContainer.vue'
-import HomeSectionTitle from './HomeSectionTitle.vue'
+import HomeContainer from './HomeContainer.vue';
+import HomeSectionTitle from './HomeSectionTitle.vue';
 import { useRouter } from 'vitepress';
-import { data } from './HomePackagesSection.data'
+import { data } from './HomePackagesSection.data';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
+import { track } from '../../utils/openpanel';
 
-const { go } = useRouter()
+const { go } = useRouter();
+
+function onPackageClick(name: string, path: string) {
+  track('home_package_click', { package: name });
+  go(path);
+}
 </script>
 
 <template>
@@ -13,36 +19,39 @@ const { go } = useRouter()
     <HomeSectionTitle>Available For:</HomeSectionTitle>
     <div class="packages-list">
       <a
-        v-for="{ name, logo, logoDark } in data.packages"
-        :href="`/guide/packages/${name}`"
+        v-for="{ name, label, path, logo, logoDark } in data.packages"
+        :href="path"
         class="package-logo"
-        :aria-label="`Read more about: ${name} package`"
-        @click.prevent="go(`/guide/packages/${name}`)"
+        @click.prevent="onPackageClick(name, path)"
       >
         <img
           :src="logo"
           :class="{ light: logoDark, 'image-logo': true }"
-          :alt="`${name} logo`"
+          :alt="label"
           loading="lazy"
         />
-
         <img
           v-if="logoDark"
           :src="logoDark"
-          :alt="`${name} logo`"
+          :alt="label"
           class="image-logo dark"
           loading="lazy"
         />
       </a>
     </div>
     <div class="more-button-wrapper">
-      <VPButton text="And more" href="/packages" theme="alt" class="more-button"/>
+      <VPButton
+        text="And more"
+        href="/packages"
+        theme="alt"
+        class="more-button"
+        @click="track('home_packages_more_click')"
+      />
     </div>
   </HomeContainer>
 </template>
 
 <style scoped>
-
 .image-logo {
   object-fit: contain;
   width: 36px;
@@ -65,11 +74,11 @@ const { go } = useRouter()
 }
 
 .package-logo {
-  transition: opacity ease-in .15s;
+  transition: opacity ease-in 0.15s;
 }
 
 .package-logo:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 html.dark .image-logo.light {

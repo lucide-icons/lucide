@@ -3,17 +3,14 @@
   "contributors": [
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:mic",
     "lyrics",
     "voice",
-    "listen",
-    "sound",
     "music",
-    "radio",
-    "podcast",
     "karaoke",
-    "singing",
-    "microphone"
+    "singing"
   ],
   "categories": [
     "devices",
@@ -23,8 +20,7 @@
     {
       "name": "mic-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

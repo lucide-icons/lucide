@@ -6,15 +6,10 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
-    "bill",
-    "currency",
-    "money",
-    "payment",
-    "funds",
-    "transaction",
-    "cash",
-    "finance",
+    "$extends:banknote",
+    "$group:direction-down",
     "withdraw",
     "expense",
     "out",
@@ -25,6 +20,6 @@
     "decrease"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

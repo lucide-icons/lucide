@@ -7,14 +7,12 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "filter",
-    "hopper",
-    "add",
-    "create",
-    "new"
+    "$extends:funnel",
+    "$group:plus"
   ],
   "categories": [
-    "layout"
+    "$extends:funnel"
   ]
 }

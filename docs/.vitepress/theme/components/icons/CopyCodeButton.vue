@@ -4,12 +4,19 @@ import { toPascalCase } from '@lucide/shared';
 import ButtonMenu from '../base/ButtonMenu.vue';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import useConfetti from '../../composables/useConfetti';
+import { track } from '../../utils/openpanel';
 
 const props = defineProps<{
   name: string;
   popoverPosition?: 'top' | 'bottom';
+  trackingSource?: 'drawer' | 'page';
 }>();
-const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext();
+
+function trackCopy(action: string) {
+  track('icon_copy', { icon: props.name, action, source: props.trackingSource });
+}
+
+const { size, color, strokeWidth, nonScalingStroke } = useIconStyleContext();
 const { animate, confetti } = useConfetti();
 const componentName = computed(() => {
   return (toPascalCase(props.name) as string).replace(/\s/g, '');
@@ -30,8 +37,8 @@ function copyJSX() {
     attrs.push(`strokeWidth={${strokeWidth.value}}`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`);
+  if (nonScalingStroke.value) {
+    attrs.push(`nonScalingStroke`);
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
@@ -40,12 +47,14 @@ function copyJSX() {
 }
 
 function copyComponentName() {
+  trackCopy('copy_component_name');
   const code = componentName.value;
 
   navigator.clipboard.writeText(code);
 }
 
 function copyVue() {
+  trackCopy('copy_vue');
   let attrs = [''];
 
   if (size.value && size.value !== 24) {
@@ -60,8 +69,8 @@ function copyVue() {
     attrs.push(`:stroke-width="${strokeWidth.value}"`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`);
+  if (nonScalingStroke.value) {
+    attrs.push(`nonScalingStroke`);
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`;
@@ -70,6 +79,7 @@ function copyVue() {
 }
 
 function copyAngular() {
+  trackCopy('copy_angular');
   let attrs = [''];
 
   attrs.push(`name="${props.name}"`);
@@ -86,8 +96,8 @@ function copyAngular() {
     attrs.push(`[strokeWidth]="${strokeWidth.value}"`);
   }
 
-  if (absoluteStrokeWidth.value) {
-    attrs.push(`[absoluteStrokeWidth]="true"`);
+  if (nonScalingStroke.value) {
+    attrs.push(`[nonScalingStroke]="true"`);
   }
 
   const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`;
@@ -106,10 +116,10 @@ function copyAngular() {
     data-confetti-text="Copied!"
     :popoverPosition="popoverPosition"
     :options="[
-      { text: 'Copy JSX', onClick: copyJSX },
+      { text: 'Copy JSX', onClick: () => (trackCopy('copy_jsx'), copyJSX()) },
       { text: 'Copy Component Name', onClick: copyComponentName },
       { text: 'Copy Vue', onClick: copyVue },
-      { text: 'Copy Svelte', onClick: copyJSX },
+      { text: 'Copy Svelte', onClick: () => (trackCopy('copy_svelte'), copyJSX()) },
       { text: 'Copy Angular', onClick: copyAngular },
     ]"
   />

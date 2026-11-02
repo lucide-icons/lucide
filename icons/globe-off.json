@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "TimNekk",
+    "karsa-mistmere",
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:globe",
+    "$group:off",
+    "globe",
+    "earth",
+    "planet",
+    "mute",
+    "avoid",
+    "internet",
+    "offline",
+    "disconnected",
+    "network",
+    "connection",
+    "no connection",
+    "network failure",
+    "signal off"
+  ],
+  "categories": [
+    "$extends:globe"
+  ]
+}

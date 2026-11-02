@@ -5,10 +5,11 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:pause",
     "music",
-    "audio",
-    "stop"
+    "audio"
   ],
   "categories": [
     "multimedia"

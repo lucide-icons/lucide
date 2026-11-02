@@ -4,10 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "check",
-    "verified",
-    "unverified",
+    "$extends:badge",
+    "$group:exclamation-mark",
     "security",
     "safety",
     "issue"

@@ -1,0 +1,133 @@
+---
+applyTo: "icons/*.json"
+---
+# JSON Metadata Descriptor
+
+The schema for the JSON metadata descriptor can be found in `icon.schema.json`. It defines the required and optional properties for the JSON files that accompany each icon. The JSON metadata descriptor should be placed in the same directory as the SVG file of the icon and should have the same name as the SVG file, but with a `.json` extension. For example, if the SVG file is named `home.svg`, the JSON metadata descriptor should be named `home.json`.
+
+## Contributors
+
+The `contributors` property is a required array of GitHub usernames for the people who created or contributed to the icon. It is used to give credit to contributors and to track the icon's history. Add the PR author to the `contributors` array if they are not already listed and they have made a significant contribution to the icon's SVG.
+
+## Tags
+
+The `tags` property is an array of strings that describe the icon and can be used for searching.
+Validate the tags against the `icon.schema.json` to ensure they are correctly formatted and adhere to the defined structure.
+Provide tag suggestions based on the name of the icon and the use cases provided in the PR description. Use the existing tags in the repository as a reference for consistency and to avoid duplicates. Don't suggest words like: 'icon' and preferably use single words. Tags should always be in lowercase, and may also contain spaces (e.g. `magnifying glass`). Don't include the full icon name, its space-separated form, or any individual part of its kebab-case name because those terms are already searchable. For example, don't suggest `mail-search`, `mail search`, `mail`, or `search` for the `mail-search` icon.
+
+## Categories
+
+The `categories` property is an array of strings that specify the categories to which the icon belongs, such as "devices", "interface", "media", etc. See the `categories` property in the `icon.schema.json` for more details on the allowed values. The categories should be chosen based on the use cases provided in the PR description and the existing categories in the repository. The categories should be relevant to the icon and should help users find the icon when searching for specific types of icons. The name of icon should not be included in the categories, as it is already specified. Suggest categories based on the name of the icon and the use cases provided in the PR description. Use the existing categories in the repository as a reference for consistency and to avoid duplicates. Categories should always be in lowercase and should not contain spaces.
+
+## Extending metadata from other icons
+
+Some icons are variants of another icon (for example `alarm-clock-minus` is an `alarm-clock`). Instead of repeating the same values, an icon can inherit `tags`, `categories`, or `contributors` from its **base icon** using an inline `"$extends:<icon-name>"` marker placed directly inside the relevant array. At build time each marker is replaced, in place, with the referenced icon's fully resolved values for that same field.
+
+```jsonc
+{
+  "tags": ["$extends:alarm-clock", "$group:minus"],
+  "categories": ["$extends:alarm-clock"],
+  "contributors": ["$extends:alarm-clock", "some-user"]
+}
+```
+
+When checking or adding a `$extends:` marker:
+
+- A marker must be exactly `"$extends:"` followed by the name of an **existing** icon — one that has its own `icons/<icon-name>.json` and `icons/<icon-name>.svg`. The icon name is the file name without the `.json` extension, written in lowercase kebab-case. Referencing a non-existent icon is invalid.
+- Markers are only supported inside the `tags`, `categories`, and `contributors` arrays. They are not a separate property.
+- Only use `$extends:` for the icon's **base icon** — the thing the icon _is_ (`file-plus` is a `file`, `alarm-clock-minus` is an `alarm-clock`). Never extend a **modifier** icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`, `separator`…), which makes no sense on an alarm clock. Use a group for the modifier's meaning instead.
+- An icon may not extend itself, and circular chains (A extends B, B extends A) are not allowed.
+- Ordering is preserved: inherited values are inserted at the marker's position, so place `$extends:` markers where the inherited values should appear (conventionally first, before the icon's own literal values).
+- Run `pnpm checkIcons` to validate all references. It fails on missing icons, self-references, and circular dependencies. Do not assume a marker is valid without confirming the target icon exists.
+
+## Groups
+
+`$extends:` says what an icon **is**; `$group:` says what its variant suffix (`-plus`, `-check`, `-off`…) **means**. A `"$group:<group-name>"` marker inside `tags` is replaced, in place, with the tags of `groups/<group-name>.json`.
+
+```jsonc
+{
+  // `file-minus` is a file, and its `-minus` variant means "remove"
+  "tags": ["$extends:file", "$group:minus", "erase"],
+  "categories": ["$extends:file"]
+}
+```
+
+When checking or adding a `$group:` marker:
+
+- A marker must be exactly `"$group:"` followed by the name of an existing file in `groups/`, without the `.json` extension, in lowercase kebab-case.
+- `$group:` is allowed **only** inside `tags`. It is not valid in `categories` or `contributors`.
+- Groups are named after the variant suffix: `file-plus` uses `$group:plus`, `file-question-mark` uses `$group:question-mark`. Suffixes with the same meaning share a group: `mail-warning` uses `$group:exclamation-mark`, and every currency suffix uses `$group:currency`.
+- The same suffix can mean different things in different contexts — `-off` means "disabled" on `wifi-off` but "allergy free" on `wheat-off` — so only use the group when the icon carries the group's meaning, and keep context-specific tags as literals.
+- Do not repeat a tag a group already provides, and do not use the same group twice in one array.
+- Conventional order: the `$extends:` base icon first, then `$group:` markers, then the icon's own literal tags.
+- Run `pnpm checkIcons` to validate the markers. It fails on unknown groups, on `$group:` outside `tags`, and on literals that a marker already provides.
+
+## There should not be duplicates
+
+Never list a value that a `$extends:` or `$group:` marker already provides. Before adding a literal `tag`, `category`, or `contributor`, look at the referenced icon's metadata: if that icon already contains the value, do not also add it as a literal entry in the same array — the inherited value already covers it. For example, if `alarm-clock` already has the tag `morning`, an icon that uses `"$extends:alarm-clock"` in its `tags` must **not** also list `"morning"`.
+
+Likewise, do not reference the same icon more than once in a single field (no duplicate `$extends:` markers), and do not repeat literal values. The `tags`, `categories`, and `contributors` arrays must contain only unique entries (`uniqueItems` in `icon.schema.json`), and after extends resolution the final arrays must not contain any duplicates.
+
+## Use Cases
+
+The `use-cases` property is an array of strings that describe the specific scenarios in which the icon would be used. Each use case should be concise and clearly convey the context in which the icon is applicable. Use the existing use cases in the repository as a reference for consistency and to avoid duplicates.
+
+### Writing icon use-cases
+
+A use-case tells a reader **where and why an icon would be used in a real interface**. Each entry should let someone who has never seen the icon understand what it's for.
+
+### Format
+
+- Write each use-case as a short phrase, not a sentence. Start with a present participle verb: *Representing…*, *Indicating…*, *Marking…*, *Showing…*, *Confirming…*, *Toggling…*, *Categorizing…*, *Searching…*.
+- Keep it to roughly 4–12 words. One clear idea per entry.
+- No trailing period. No leading bullet, number, or dash (the surrounding format supplies that).
+- Give each icon 1 or more use-cases, ordered most-common first. More than 4 use-cases are allowed when they are distinct and useful. Prefer fewer strong entries over many weak or repetitive ones.
+
+### Voice
+
+- Write from the interface's perspective, describing the function: "Indicating a low battery charge level" — not the requester's story ("I need an icon that shows…").
+- Name the concrete context where useful: *in smart home apps*, *in navigation apps*, *in text editors*, *on maps*. Context is what makes a use-case self-explanatory.
+- Be neutral and factual. No first person, no marketing adjectives ("perfect for", "ideal", "beautiful"), no emoji.
+
+### What to exclude
+
+- **The requester's personal narrative.** "I'm building a SvelteKit UI and need…" → drop the framing, keep the function.
+- **References to other issues, PRs, or icons by ID.** No "As provided in #1865", "complementary to git-branch-plus", "same as above", "see #2055".
+- **Design/implementation chatter.** Bezier offsets, grid alignment, path cuts, "the icon works perfectly" — none of that is a use-case.
+- **Restating the icon's name.** For `microchip`, "microchip" is not a use-case; describe what it represents ("Representing processors, chips, or embedded hardware").
+- **Links, image tags, emoji, and markdown artifacts.**
+- **Meta-commentary.** "Self-explanatory", "lots and lots of use cases", "obvious :)".
+
+### Cross-contamination
+
+When a request covers several icons at once, assign each use-case only to the icon it actually describes. A bullet prefixed with another icon's name belongs to that icon, not this one. Don't let `briefcase-medical`'s meanings leak into `briefcase-business`.
+
+### Variants
+
+Related icons should get **variant-specific** wording, not one shared blurb. `battery-low` → "Indicating a low battery charge level"; `battery-full` → "…full…". `square-arrow-right-enter` → sign in / join; `-exit` → sign out / export. Resist copying the same line across a family.
+
+### Deriving from source material
+
+When mining descriptions, comments, or linked issues:
+
+- Prefer the **stated purpose** over the backstory. Extract the function, discard the anecdote.
+- If a source lists genuinely distinct uses, keep them as separate entries; if it repeats one idea five ways, collapse to one.
+- Merge an intro line with its bullets ("To represent:" + "pottery" → "Representing pottery").
+- If the only signal is noise (a name restatement, a link, "thanks!"), leave the icon without a use-case rather than inventing one.
+- Never fabricate a use-case that isn't supported by the icon's meaning or the source.
+
+## Examples
+
+Good:
+
+- `ambulance` → "Directing users to nearby emergency services in navigation apps"
+- `calendar-sync` → "Representing recurring events, promotions, or limited-time offers"
+- `globe-x` → "Indicating a device or application is offline or unreachable"
+- `heading-2` → "Applying a level-2 heading in text editors"
+
+Poor → fixed:
+
+- ~~"I need a firewall icon :-)"~~ → "Representing firewalls and firewall rules on cybersecurity platforms"
+- ~~"As above"~~ → "Signifying a deal, agreement, or partnership"
+- ~~"microchip"~~ → "Representing processors, chips, or embedded hardware"
+- ~~"Same use cases as the other currency symbols, except Turkish lira"~~ → "Displaying prices or amounts in Turkish lira"

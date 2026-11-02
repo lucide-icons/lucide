@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-first",
     "forward",
     "ahead",
     "faster",
@@ -11,8 +14,6 @@
     "boost"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming"
+    "arrows"
   ]
 }

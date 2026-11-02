@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bars",
     "navigation",
@@ -12,7 +13,6 @@
     "options"
   ],
   "categories": [
-    "layout",
-    "account"
+    "layout"
   ]
 }

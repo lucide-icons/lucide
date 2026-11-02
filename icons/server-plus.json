@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Turboman3000"
+  ],
+  "use-cases": [
+    "Creating a new server in a dashboard"
+  ],
+  "tags": [
+    "$extends:server",
+    "$group:plus",
+    "computing"
+  ],
+  "categories": [
+    "$extends:server"
+  ]
+}

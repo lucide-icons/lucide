@@ -5,16 +5,12 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge",
-    "exclamation mark"
+    "$extends:battery",
+    "$group:exclamation-mark"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:battery"
   ]
 }

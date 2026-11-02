@@ -7,17 +7,13 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "secure",
-    "encrypted"
+    "$extends:message-square",
+    "$group:lock"
   ],
   "categories": [
-    "social"
+    "$extends:message-square",
+    "security"
   ]
 }

@@ -6,6 +6,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "toilet",
     "potty",
@@ -13,7 +14,7 @@
     "washroom"
   ],
   "categories": [
-    "devices",
-    "home"
+    "home",
+    "travel"
   ]
 }

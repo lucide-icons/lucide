@@ -6,24 +6,21 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark",
+    "$group:exclamation-mark",
     "linter"
   ],
   "categories": [
+    "$extends:triangle",
     "notifications",
-    "shapes",
     "development"
   ],
   "aliases": [
     {
       "name": "alert-triangle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

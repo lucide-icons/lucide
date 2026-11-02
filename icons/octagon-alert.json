@@ -5,22 +5,19 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "warning",
-    "alert",
-    "danger",
-    "exclamation mark"
+    "$group:exclamation-mark"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "$extends:octagon",
+    "notifications"
   ],
   "aliases": [
     {
       "name": "alert-octagon",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

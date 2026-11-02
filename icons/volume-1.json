@@ -5,14 +5,11 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "music",
-    "sound",
-    "speaker"
+    "$extends:volume"
   ],
   "categories": [
-    "connectivity",
-    "communication",
-    "multimedia"
+    "$extends:volume"
   ]
 }
