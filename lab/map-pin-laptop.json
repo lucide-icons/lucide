@@ -1,9 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
     "k8adev"
   ],
+  "use-cases": [],
   "tags": [
+    "technology",
+    "device",
+    "portable",
+    "connection",
+    "digital",
+    "navigation",
+    "office",
+    "communication",
+    "travel",
     "computer",
     "screen",
     "remote",
