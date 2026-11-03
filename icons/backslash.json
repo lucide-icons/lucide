@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando"
+  ],
+  "use-cases": [
+    "Represent a backslash character",
+    "Represent path separators in developer and file-system interfaces",
+    "indicate escaping in code editors and regex tools",
+    "display Windows-style path separators in file manager UIs",
+    "denote path or escape sequences in terminal and CLI tools"
+  ],
+  "tags": [
+    "separator",
+    "path",
+    "\\",
+    "escape",
+    "windows",
+    "regex",
+    "filesystem"
+  ],
+  "categories": [
+    "development",
+    "files",
+    "text"
+  ]
+}
