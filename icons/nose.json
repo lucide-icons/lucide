@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing smell or scent detection",
+    "Indicating breathing or nasal health",
+    "Marking fragrance settings in product filters",
+    "Identifying allergies or scent sensitivities"
+  ],
+  "tags": [
+    "smell",
+    "scent",
+    "odor",
+    "aroma",
+    "fragrance",
+    "breathing",
+    "allergy",
+    "olfactory",
+    "accessibility"
+  ],
+  "categories": [
+    "medical",
+    "accessibility"
+  ]
+}
