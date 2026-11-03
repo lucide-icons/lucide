@@ -10,8 +10,7 @@
     "Indicating atomic number in scientific contexts"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "z-axis",
     "axis",
@@ -20,10 +19,7 @@
     "impedance",
     "electricity",
     "atomic number",
-    "chemistry",
-    "text",
-    "font",
-    "typography"
+    "chemistry"
   ],
   "categories": [
     "letters-digits"

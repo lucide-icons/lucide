@@ -7,14 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "parking lot",
-    "car park",
+    "$extends:square-letter-p",
+    "$group:off",
     "no parking"
   ],
   "categories": [
-    "letters-digits",
-    "transportation",
-    "navigation"
+    "$extends:square-letter-p"
   ],
   "aliases": [
     {

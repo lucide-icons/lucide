@@ -6,9 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
-    "font",
-    "typography"
+    "$group:letter"
   ],
   "categories": [
     "letters-digits",

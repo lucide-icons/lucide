@@ -5,14 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "root",
     "project",
     "git",
     "repo"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "development"
   ]
 }

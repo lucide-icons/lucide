@@ -7,12 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "number",
-    "document"
+    "$extends:file",
+    "$group:digit"
   ],
   "categories": [
-    "letters-digits",
-    "files",
+    "$extends:file",
     "development"
   ]
 }

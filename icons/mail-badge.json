@@ -15,9 +15,7 @@
     "Labeling official or legal correspondence"
   ],
   "tags": [
-    "email",
-    "message",
-    "letter",
+    "$extends:mail",
     "certified",
     "registered",
     "seal",

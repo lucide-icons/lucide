@@ -53,12 +53,12 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@testing-library/jest-dom": "^7.0.1",
-    "hono": "^4.13.8",
+    "hono": "^4.13.11",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.65.0",
+    "rollup": "^4.65.1",
     "rollup-plugin-dts": "^6.5.1",
     "typescript": "^6.0.3",
-    "vite": "^8.3.3"
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
     "hono": "^4.0.0"

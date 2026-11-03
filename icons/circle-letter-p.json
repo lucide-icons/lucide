@@ -12,8 +12,7 @@
     "Representing probability in math contexts"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "parking",
     "phosphorus",
@@ -25,13 +24,12 @@
     "music",
     "page",
     "probability",
-    "math",
-    "text",
-    "font",
-    "typography"
+    "math"
   ],
   "categories": [
-    "letters-digits"
+    "letters-digits",
+    "navigation",
+    "transportation"
   ],
   "aliases": [
     {

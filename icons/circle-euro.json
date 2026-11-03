@@ -10,22 +10,14 @@
     "Displaying prices in euros on pricing badges"
   ],
   "tags": [
+    "$group:currency",
     "symbol",
-    "economy",
-    "banking",
     "europe",
     "€",
     "euro",
-    "currency",
-    "money",
-    "payment",
-    "coin",
-    "finance",
-    "financial",
-    "exchange"
+    "coin"
   ],
   "categories": [
-    "shopping",
     "finance"
   ]
 }

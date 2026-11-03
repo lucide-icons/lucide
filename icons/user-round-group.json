@@ -10,15 +10,13 @@
     "Managing multiple users in admin interfaces"
   ],
   "tags": [
+    "$extends:user-round",
     "group",
-    "people",
     "team",
-    "members",
     "community",
     "membership",
     "collaboration",
     "organization",
-    "contacts",
     "directory",
     "staff",
     "family",
@@ -28,7 +26,7 @@
     "parents"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "people",
     "social"
   ]

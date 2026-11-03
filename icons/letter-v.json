@@ -11,8 +11,7 @@
     "Representing video content"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "voltage",
     "volt",
@@ -22,10 +21,7 @@
     "success",
     "vegan",
     "vegetarian",
-    "video",
-    "text",
-    "font",
-    "typography"
+    "video"
   ],
   "categories": [
     "letters-digits"

@@ -9,21 +9,14 @@
     "Indicating a protected user account"
   ],
   "tags": [
-    "user",
-    "shield",
-    "admin",
-    "protected",
-    "guard",
-    "profile",
-    "security",
-    "privacy",
+    "$extends:user",
+    "$group:shield",
     "permissions",
     "role"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "security",
-    "development",
     "people"
   ]
 }

@@ -18,8 +18,7 @@
     "strong",
     "emphasis",
     "format",
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "bold",
     "blood type",
@@ -27,10 +26,7 @@
     "computing",
     "b-side",
     "bus",
-    "transit",
-    "text",
-    "font",
-    "typography"
+    "transit"
   ],
   "categories": [
     "letters-digits"

@@ -11,7 +11,7 @@
     "Identifying files containing digital product models"
   ],
   "tags": [
-    "document",
+    "$extends:file",
     "page",
     "sheet",
     "cube",
@@ -32,7 +32,7 @@
     "scene"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "design",
     "development"
   ]

@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "lost",
-    "document",
-    "find",
-    "browser",
-    "lens"
+    "$extends:file-search",
+    "$group:search"
   ],
   "categories": [
-    "files"
+    "$extends:file-search"
   ],
   "aliases": [
     {

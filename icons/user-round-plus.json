@@ -5,14 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "new",
-    "add",
-    "create",
+    "$extends:user-round",
+    "$group:plus",
     "follow",
     "subscribe"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

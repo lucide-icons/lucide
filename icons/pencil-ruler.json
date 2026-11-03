@@ -6,15 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "edit",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
-    "stationery",
-    "artist",
+    "$extends:pencil",
     "measurements",
     "centimeters",
     "cm",
@@ -37,7 +29,6 @@
   "categories": [
     "tools",
     "design",
-    "layout",
-    "text"
+    "layout"
   ]
 }

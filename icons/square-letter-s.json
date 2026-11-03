@@ -15,8 +15,7 @@
     "Representing siemens units in electrical contexts"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "south",
     "small",
@@ -27,10 +26,7 @@
     "chemistry",
     "save",
     "siemens",
-    "electricity",
-    "text",
-    "font",
-    "typography"
+    "electricity"
   ],
   "categories": [
     "letters-digits"
