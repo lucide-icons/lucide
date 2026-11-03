@@ -12,5 +12,10 @@
   ],
   "categories": [
     "$extends:battery"
+  ],
+  "aliases": [
+    {
+      "name": "battery-warning"
+    }
   ]
 }
