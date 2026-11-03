@@ -21,6 +21,6 @@
     "document"
   ],
   "categories": [
-    "text"
+    "$extends:text-align-justify"
   ]
 }

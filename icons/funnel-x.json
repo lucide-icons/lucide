@@ -9,13 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "filter",
-    "hopper",
-    "remove",
-    "delete"
+    "$extends:funnel",
+    "$group:x"
   ],
   "categories": [
-    "layout"
+    "$extends:funnel"
   ],
   "aliases": [
     {

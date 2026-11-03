@@ -6,23 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-square",
+    "$group:exclamation-mark",
     "report",
     "abuse",
     "offense",
-    "alert",
-    "danger",
-    "caution",
-    "protected",
-    "exclamation mark"
+    "protected"
   ],
   "categories": [
-    "social",
+    "$extends:message-square",
     "notifications"
   ]
 }

@@ -6,15 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "forward",
-    "direction",
-    "north",
     "sign",
     "button"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {

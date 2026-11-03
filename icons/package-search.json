@@ -7,12 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "product process",
-    "lens"
+    "$extends:package",
+    "$group:search",
+    "product process"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:package"
   ]
 }

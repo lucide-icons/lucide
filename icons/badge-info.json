@@ -6,11 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
+    "$extends:badge",
+    "$group:letter",
     "help"
   ],
   "categories": [
+    "letters-digits",
     "account",
     "accessibility",
     "social"
