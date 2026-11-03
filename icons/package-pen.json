@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "editing a package",
+    "adding notes to a shipment",
+    "modifying an order",
+    "indicating an edit feature of a product",
+    "editing package details in package management"
+  ],
+  "tags": [
+    "$extends:package",
+    "$group:pen",
+    "order",
+    "product"
+  ],
+  "categories": [
+    "$extends:package"
+  ]
+}
