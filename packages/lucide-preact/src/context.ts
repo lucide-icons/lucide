@@ -2,9 +2,9 @@ import { createContext, h, type ComponentChildren } from 'preact';
 import { useContext, useMemo } from 'preact/hooks';
 
 const LucideContext = createContext<{
-  size?: number;
+  size?: number | string;
   color?: string;
-  strokeWidth?: number;
+  strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */
@@ -22,9 +22,9 @@ const LucideContext = createContext<{
 
 interface LucideProviderProps {
   children: ComponentChildren;
-  size?: number;
+  size?: number | string;
   color?: string;
-  strokeWidth?: number;
+  strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */
