@@ -5,10 +5,9 @@
     "ericfennis",
     "irvineacosta"
   ],
+  "use-cases": [],
   "tags": [
-    "sidebar",
-    "secondary",
-    "drawer",
+    "$extends:panel-right",
     "show",
     "reveal",
     "padding",
@@ -18,14 +17,13 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-right"
   ],
   "aliases": [
     {
       "name": "panel-right-inactive",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

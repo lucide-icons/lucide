@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
-    "north-east",
-    "diagonal",
+    "$group:direction-up-right",
     "sign",
     "keyboard",
     "button",
@@ -20,8 +20,7 @@
     {
       "name": "arrow-up-right-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -6,14 +6,12 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "work",
-    "bag",
-    "baggage",
-    "folder",
+    "$extends:briefcase",
     "portfolio"
   ],
   "categories": [
-    "transportation"
+    "$extends:briefcase"
   ]
 }

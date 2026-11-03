@@ -6,11 +6,11 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "document"
+    "$extends:file"
   ],
   "categories": [
-    "files",
-    "arrows"
+    "$extends:file"
   ]
 }

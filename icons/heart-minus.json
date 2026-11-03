@@ -8,18 +8,14 @@
     "Ayberkyvs",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:minus",
     "unlike",
     "unfavorite",
-    "remove",
-    "damage",
-    "ui & ux"
+    "damage"
   ],
   "categories": [
-    "medical",
-    "account",
-    "multimedia",
-    "gaming",
     "social"
   ]
 }

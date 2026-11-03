@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:repeat",
+    "$group:off",
+    "recurring",
+    "again"
+  ],
+  "categories": [
+    "$extends:repeat"
+  ]
+}

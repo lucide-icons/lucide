@@ -2,22 +2,20 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "issue",
+    "$extends:bug",
+    "$group:off",
     "fixed",
     "resolved",
-    "testing",
-    "debug",
-    "code",
-    "insect",
     "kill",
     "exterminate",
     "pest control"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

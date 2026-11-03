@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "smartphone",
     "notification",
@@ -12,8 +13,6 @@
   ],
   "categories": [
     "devices",
-    "connectivity",
-    "account",
     "notifications"
   ]
 }

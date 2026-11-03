@@ -1,4 +1,5 @@
 # Custom words
+checkmark
 fullscreen
 gamepad
 gantt
@@ -9,9 +10,47 @@ strikethrough
 touchpad
 ungroup
 toc
+sunlounger
+monstera
 
-# Brands
-codepen
-codesandbox
-dribbble
-x.com
+# Search tags and terms used in icon and category metadata
+checkmark
+ageusia
+artboard
+barbeque
+choy
+ecommerce
+enby
+flexbox
+futbol
+gddr
+glassmorphism
+gltf
+interpoint
+interpunct
+middot
+mistwarp
+mlops
+moleskine
+nonbinary
+pantone
+parfum
+phonendoscope
+quadcopter
+reapproval
+rubygems
+showreel
+solera
+timesheets
+turbowarp
+unbook
+unguard
+unkeys
+unlabel
+unprevented
+unqueue
+unsalvageable
+unshield
+unstar
+vitamizer
+wayfinding

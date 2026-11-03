@@ -5,9 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "remove",
-    "delete"
+    "$extends:image",
+    "$group:minus"
   ],
   "categories": [
     "photography",

@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "boxers",
+    "briefs",
+    "underpants",
+    "trunks",
+    "underwear",
+    "mens",
+    "boys",
+    "bottoms",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "fashion",
+    "thread",
+    "cotton",
+    "casual",
+    "slim fit",
+    "regular"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}

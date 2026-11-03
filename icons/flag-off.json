@@ -6,22 +6,14 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:flag",
+    "$group:off",
     "unflag",
-    "unmark",
-    "report",
-    "marker",
-    "notification",
-    "warning",
-    "milestone",
-    "goal",
-    "notice",
-    "signal",
-    "attention",
-    "banner"
+    "unmark"
   ],
   "categories": [
-    "account",
-    "social"
+    "$extends:flag"
   ]
 }

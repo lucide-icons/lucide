@@ -6,11 +6,14 @@
     "Andreto",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bus",
     "vehicle",
     "transport",
-    "trip"
+    "trip",
+    "coach",
+    "road"
   ],
   "categories": [
     "transportation"

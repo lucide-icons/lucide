@@ -5,7 +5,9 @@
     "mittalyashu",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "translate"
   ],
   "categories": [

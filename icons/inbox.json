@@ -5,11 +5,11 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "email"
   ],
   "categories": [
-    "account",
     "mail"
   ]
 }

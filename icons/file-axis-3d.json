@@ -4,22 +4,22 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "model",
+    "$extends:file",
+    "$extends:axis-3d",
     "3d",
-    "axis",
-    "coordinates"
+    "axis"
   ],
   "categories": [
-    "design",
-    "files"
+    "$extends:file",
+    "design"
   ],
   "aliases": [
     {
       "name": "file-axis-3-d",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

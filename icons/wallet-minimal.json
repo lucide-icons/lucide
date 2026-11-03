@@ -3,20 +3,18 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "finance",
-    "pocket"
+    "$extends:wallet"
   ],
   "categories": [
-    "account",
-    "finance"
+    "$extends:wallet"
   ],
   "aliases": [
     {
       "name": "wallet-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

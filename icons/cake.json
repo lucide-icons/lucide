@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "birthday",
     "birthdate",
@@ -15,11 +16,12 @@
     "fondant",
     "icing sugar",
     "sweet",
-    "baking"
+    "baking",
+    "candles",
+    "wish"
   ],
   "categories": [
     "food-beverage",
-    "social",
-    "account"
+    "social"
   ]
 }

@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Displaying vertical spacing between stacked elements in a design inspector",
+    "Representing the row-gap control in CSS grid or flex panels",
+    "Adjusting vertical gutter in a page builder or layout editor",
+    "Visualizing space between rows in an auto-layout stack",
+    "Indicating configurable vertical spacing in a UI component library"
+  ],
+  "tags": [
+    "gap",
+    "spacing",
+    "space",
+    "between",
+    "padding",
+    "margin",
+    "vertical",
+    "auto layout",
+    "layout",
+    "distance",
+    "frame",
+    "distribute"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

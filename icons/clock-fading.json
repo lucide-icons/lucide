@@ -4,12 +4,11 @@
     "colebemis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "time",
-    "watch",
-    "alarm"
+    "$extends:clock"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-up",
     "water",
     "sea",
     "level",

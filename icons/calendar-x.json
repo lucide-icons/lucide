@@ -4,16 +4,13 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
-    "remove",
+    "$extends:calendar",
+    "$group:x",
     "busy"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -79,12 +79,25 @@ const model = computed({
   border: 1px solid var(--vp-input-border-color);
   background-color: var(--vp-input-switch-bg-color);
   border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  transition-duration: 0.2s;
+}
+
+.checkbox:hover,
+.checkbox:focus-visible {
+  outline: none;
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 20%, transparent);
 }
 
 .checkbox:checked {
   border-color: transparent;
     background: url("data:image/svg+xml,%3Csvg width='12px' height='12px' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")
       center no-repeat var(--vp-c-brand);;
+}
+
+.checkbox-wrapper:hover .checkbox-label {
+  color: var(--vp-c-text-1);
 }
 
 </style>

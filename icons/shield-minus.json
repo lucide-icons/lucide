@@ -4,25 +4,20 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:shield",
+    "$group:minus",
     "unshield",
-    "cybersecurity",
     "unsecure",
     "unguard",
     "unblock",
-    "antivirus",
     "clean",
-    "clear",
     "disinfect",
     "patch",
     "fix",
     "stop",
-    "cancel",
-    "remove",
     "relax",
-    "admin",
-    "crest",
-    "bravery",
     "weakened",
     "damaged",
     "hit",
@@ -31,8 +26,7 @@
     "deactivate",
     "decommission",
     "downgraded",
-    "minimum",
-    "-"
+    "minimum"
   ],
   "categories": [
     "account",

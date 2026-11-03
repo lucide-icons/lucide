@@ -3,16 +3,12 @@
   "contributors": [
     "joris-gallot"
   ],
+  "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "vcs",
-    "repository",
-    "delete",
-    "remove",
-    "-"
+    "$extends:git-branch",
+    "$group:minus"
   ],
   "categories": [
-    "development"
+    "$extends:git-branch"
   ]
 }

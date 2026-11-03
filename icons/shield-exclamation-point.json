@@ -1,0 +1,68 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:shield",
+    "$group:exclamation-mark",
+    "unshielded",
+    "insecure",
+    "unsecured",
+    "unsafe",
+    "unprotected",
+    "unguarded",
+    "unarmored",
+    "unarmoured",
+    "defenseless",
+    "defenceless",
+    "undefended",
+    "blocked",
+    "stopped",
+    "intercepted",
+    "interception",
+    "saved",
+    "thwarted",
+    "unprevented",
+    "detected",
+    "scanned",
+    "found",
+    "exploit",
+    "vulnerability",
+    "vulnerable",
+    "weakness",
+    "infection",
+    "infected",
+    "compromised",
+    "data leak",
+    "audited",
+    "unverified",
+    "uncertified",
+    "emergency",
+    "attention",
+    "urgent",
+    "alarm",
+    "attacked",
+    "damaged",
+    "injured",
+    "hit",
+    "expired",
+    "disabled",
+    "inactive"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "notifications",
+    "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "shield-alert"
+    }
+  ]
+}

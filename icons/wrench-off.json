@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere",
+    "nilsjonsson"
+  ],
+  "use-cases": [
+    "Indicating that service or maintenance mode is disabled",
+    "Turning off service or maintenance mode with a button or toggle"
+  ],
+  "tags": [
+    "$extends:wrench",
+    "$group:off",
+    "service",
+    "maintenance"
+  ],
+  "categories": [
+    "$extends:wrench"
+  ]
+}

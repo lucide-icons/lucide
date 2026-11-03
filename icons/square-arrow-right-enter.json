@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ethanhazel",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:direction-right",
+    "left",
+    "in",
+    "inside",
+    "input",
+    "insert",
+    "source",
+    "import",
+    "place",
+    "->"
+  ],
+  "categories": [
+    "$extends:square-arrow-right",
+    "account"
+  ]
+}
