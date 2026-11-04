@@ -6,13 +6,16 @@
   "use-cases": [
     "Representing a vehicle registration plate",
     "Labeling a field for a plate or registration number",
-    "Identifying a vehicle in parking, toll, or fleet views"
+    "Identifying a vehicle in parking, toll, or fleet views",
+    "Supporting license-plate recognition or vehicle lookup features"
   ],
   "tags": [
     "number plate",
     "registration",
     "vehicle",
-    "car"
+    "car",
+    "recognition",
+    "lookup"
   ],
   "categories": [
     "transportation"
