@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karthikeyan"
+  ],
+  "use-cases": [
+    "Representing a vehicle registration plate",
+    "Labeling a field for a plate or registration number",
+    "Identifying a vehicle in parking, toll, or fleet views"
+  ],
+  "tags": [
+    "number plate",
+    "registration",
+    "vehicle",
+    "car"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
