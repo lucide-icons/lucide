@@ -4,11 +4,10 @@
     "ericfennis"
   ],
   "use-cases": [
-    "editing a package",
-    "adding notes to a shipment",
-    "modifying an order",
-    "indicating an edit feature of a product",
-    "editing package details in package management"
+  "Editing recipient addresses or package contents in shipping systems",
+  "Modifying customer orders before shipment",
+  "Updating product listings in inventory or e-commerce platforms",
+  "Editing software package manifests or metadata"
   ],
   "tags": [
     "$extends:package",
