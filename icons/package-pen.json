@@ -4,10 +4,10 @@
     "$extends:package"
   ],
   "use-cases": [
-    "Editing package or shipment details in logistics apps",
-    "Modifying an existing order in e-commerce dashboards",
-    "Adding notes to a shipment before dispatch",
-    "Editing product information in inventory or catalog tools"
+    "Editing recipient addresses or package contents in shipping systems",
+    "Modifying customer orders before shipment",
+    "Updating product listings in inventory or e-commerce platforms",
+    "Editing software package manifests or metadata"
   ],
   "tags": [
     "$extends:package",
