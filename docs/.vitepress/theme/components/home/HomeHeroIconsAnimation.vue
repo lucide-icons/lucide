@@ -115,6 +115,35 @@ const HANDLE_GROUPS = [
   },
 ];
 
+/** Radius of the circle at the tip of each handle. */
+const HANDLE_TIP_RADIUS = 0.25;
+
+/**
+ * Scales a handle group out of its vertex (the shared start point of its segments)
+ * instead of the centre of its bounding box. motion-v scales SVG elements within their
+ * fill-box and owns transform-origin, so the vertex is given as a fraction of that box.
+ */
+const handleOrigin = (segments: number[][]) => {
+  const [x, y] = segments[0];
+  const xs = segments.flatMap(([x1, , x2]) => [x1, x2 - HANDLE_TIP_RADIUS, x2 + HANDLE_TIP_RADIUS]);
+  const ys = segments.flatMap(([, y1, , y2]) => [
+    y1,
+    y2 - HANDLE_TIP_RADIUS,
+    y2 + HANDLE_TIP_RADIUS,
+  ]);
+  const [minX, maxX, minY, maxY] = [
+    Math.min(...xs),
+    Math.max(...xs),
+    Math.min(...ys),
+    Math.max(...ys),
+  ];
+
+  return {
+    originX: (x - minX) / (maxX - minX),
+    originY: (y - minY) / (maxY - minY),
+  };
+};
+
 const COLUMNS = 8;
 const SIZE = 2;
 const GAP = 1;
@@ -387,6 +416,7 @@ const logoStroke = (isOuter: boolean) =>
           <motion.g
             v-for="(group, index) in HANDLE_GROUPS"
             :key="index"
+            :style="handleOrigin(group.segments)"
             :initial="initial({ opacity: 0, scale: 0.2 })"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: group.delay, duration: 0.3 }"
@@ -399,7 +429,7 @@ const logoStroke = (isOuter: boolean) =>
               <circle
                 :cx="x2"
                 :cy="y2"
-                r="0.25"
+                :r="HANDLE_TIP_RADIUS"
               />
             </template>
           </motion.g>
