@@ -21,7 +21,9 @@
     "packed",
     "archive",
     "zip",
-    "module"
+    "module",
+    "order",
+    "product"
   ],
   "categories": [
     "files",
