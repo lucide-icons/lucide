@@ -1,20 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "$extends:package"
   ],
   "use-cases": [
-    "editing a package",
-    "adding notes to a shipment",
-    "modifying an order",
-    "indicating an edit feature of a product",
-    "editing package details in package management"
+    "Editing package or shipment details in logistics apps",
+    "Modifying an existing order in e-commerce dashboards",
+    "Adding notes to a shipment before dispatch",
+    "Editing product information in inventory or catalog tools"
   ],
   "tags": [
     "$extends:package",
-    "$group:pen",
-    "order",
-    "product"
+    "$group:pen"
   ],
   "categories": [
     "$extends:package"
