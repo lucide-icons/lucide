@@ -15,5 +15,10 @@
   "categories": [
     "account",
     "social"
+  ],
+  "aliases": [
+    {
+      "name": "badge-alert"
+    }
   ]
 }

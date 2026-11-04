@@ -13,8 +13,6 @@
   "tags": [
     "$extends:globe",
     "$group:off",
-    "globe",
-    "internet",
     "web",
     "website",
     "banned",
