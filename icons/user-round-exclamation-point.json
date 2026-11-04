@@ -4,18 +4,11 @@
     "$extends:user-round"
   ],
   "use-cases": [
-    "Flagging an account as suspicious in moderation tools",
-    "Indicating a problem with a user's account or profile",
-    "Showing that a user has received a warning",
-    "Issuing a warning to a member in community management"
+    "$extends:user-exclamation-point"
   ],
   "tags": [
     "$extends:user-round",
-    "$group:exclamation-mark",
-    "flagged",
-    "suspicious",
-    "reported",
-    "violation"
+    "$extends:user-exclamation-point"
   ],
   "categories": [
     "$extends:user-round"
