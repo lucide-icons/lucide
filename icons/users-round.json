@@ -5,11 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "group",
-    "people"
+    "$extends:users"
   ],
   "categories": [
-    "account"
+    "$extends:users"
   ],
   "aliases": [
     {

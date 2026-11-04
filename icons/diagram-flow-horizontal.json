@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "linus-sch",
+    "karsa-mistmerea"
+  ],
+  "use-cases": [
+    "Showing relationships between concepts in visual planning tools",
+    "Structuring topics and subtopics in study notes",
+    "Planning branching workflows in diagram editors"
+  ],
+  "tags": [
+    "$group:graph",
+    "mind map",
+    "visualization",
+    "brainstorm",
+    "brainstorming",
+    "ideas",
+    "concepts",
+    "planning",
+    "hierarchy",
+    "branches",
+    "organization",
+    "tree",
+    "workflow",
+    "flowchart",
+    "process",
+    "process mapping",
+    "sequence"
+  ],
+  "categories": [
+    "design",
+    "charts"
+  ]
+}

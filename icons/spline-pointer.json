@@ -9,9 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "path",
-    "tool",
-    "curve",
+    "$extends:spline",
     "node",
     "click",
     "pointer",
@@ -19,9 +17,7 @@
     "vector"
   ],
   "categories": [
-    "arrows",
-    "cursors",
-    "design",
-    "tools"
+    "$extends:spline",
+    "cursors"
   ]
 }

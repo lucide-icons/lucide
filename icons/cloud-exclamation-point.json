@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "lscheibel",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:cloud",
+    "$group:exclamation-mark",
+    "sync",
+    "network"
+  ],
+  "categories": [
+    "development",
+    "notifications",
+    "weather"
+  ],
+  "aliases": [
+    {
+      "name": "cloud-alert"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Direction: pointing or moving rightward",
+  "tags": [
+    "direction",
+    "movement",
+    "horizontal",
+    "rightward",
+    "rightwards",
+    "east"
+  ]
+}

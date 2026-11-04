@@ -11,8 +11,9 @@ import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
 import type { IconDeprecationReason } from '../../../../../tools/build-icons/types.ts';
-import IconTags from "./IconTags.vue"
+import IconTags from './IconTags.vue';
 import getStudioLink from '../../utils/getStudioLink';
+import { track } from '../../utils/openpanel';
 
 const props = defineProps<{
   icon: IconEntity;
@@ -40,6 +41,14 @@ const iconPath = computed(() => {
 
   return `icons/${props.icon.name}`;
 });
+
+const isDetailPage = computed(() => !!page.value?.relativePath?.startsWith?.(iconPath.value));
+const trackingSource = computed(() => (isDetailPage.value ? 'page' : 'drawer'));
+
+function onSeeInAction() {
+  track('icon_see_in_action_click', { icon: props.icon.name });
+  go(iconPath.value);
+}
 </script>
 
 <template>
@@ -79,18 +88,20 @@ const iconPath = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="!page?.relativePath?.startsWith?.(iconPath)"
+        v-if="!isDetailPage"
         :href="iconPath"
         text="See in action"
-        @click="go(iconPath)"
+        @click="onSeeInAction"
       />
       <CopySVGButton
         :name="icon.name"
         :popoverPosition="popoverPosition"
+        :trackingSource="trackingSource"
       />
       <CopyCodeButton
         :name="icon.name"
         :popoverPosition="popoverPosition"
+        :trackingSource="trackingSource"
       />
     </div>
     <slot name="footer" />

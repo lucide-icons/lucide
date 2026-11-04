@@ -7,11 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:sun",
     "dark",
-    "light",
     "moon",
     "sun",
-    "brightness",
     "theme",
     "auto theme",
     "system theme",

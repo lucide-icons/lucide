@@ -5,15 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "magic",
-    "wizard",
-    "magician"
+    "$extends:wand"
   ],
   "categories": [
-    "design",
-    "gaming",
-    "cursors",
-    "photography"
+    "$extends:wand"
   ],
   "aliases": [
     {
