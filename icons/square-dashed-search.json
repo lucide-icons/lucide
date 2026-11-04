@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-dashed",
     "domarku"
   ],
   "use-cases": [
@@ -10,25 +11,11 @@
     "zoom selection"
   ],
   "tags": [
-    "find",
-    "magnifier",
-    "magnifying glass",
-    "scan",
-    "selection",
-    "marquee",
-    "locate",
-    "lens",
-    "zoom",
-    "region",
-    "area",
-    "box",
-    "inspection",
-    "visual search",
-    "region of interest"
+    "$extends:square-dashed",
+    "$group:search"
   ],
   "categories": [
-    "design",
-    "text",
-    "cursors"
+    "$extends:square-dashed",
+    "text"
   ]
 }
