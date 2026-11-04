@@ -8,7 +8,7 @@
     "Searching within a selected region",
     "Finding content inside a placeholder area",
     "Scanning a marquee selection",
-    "zoom selection"
+    "Zooming a selected region"
   ],
   "tags": [
     "$extends:square-dashed",
