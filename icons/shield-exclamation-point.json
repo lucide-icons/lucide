@@ -59,5 +59,10 @@
     "development",
     "notifications",
     "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "shield-alert"
+    }
   ]
 }
