@@ -34,22 +34,21 @@ const MARKERS = [
   [6.06253, 21],
 ];
 
-/** Bezier handles as [x1, y1, x2, y2] segments, grouped by when they appear. */
+/**
+ * Bezier handles as [x1, y1, x2, y2] segments, grouped by when they appear.
+ * Each group scales in around its own centre, so groups stay per stroke.
+ */
 const HANDLE_GROUPS = [
+  // Outer stroke
   {
     delay: 0.2,
-    segments: [
-      [14, 12, 14, 9.79086],
-      [10, 12, 10, 14.2091],
-    ],
+    segments: [[14, 12, 14, 9.79086]],
   },
   {
     delay: 0.4,
     segments: [
       [10, 8, 12.2091, 8],
       [10, 8, 7.79086, 8],
-      [14, 16, 11.7909, 16],
-      [14, 16, 16.2091, 16],
     ],
   },
   {
@@ -57,8 +56,6 @@ const HANDLE_GROUPS = [
     segments: [
       [6, 12, 6, 9.79086],
       [6, 12, 6, 16.4183],
-      [18, 12, 18, 14.2091],
-      [18, 12, 18, 7.58172],
     ],
   },
   {
@@ -66,8 +63,6 @@ const HANDLE_GROUPS = [
     segments: [
       [14, 20, 9.58172, 20],
       [14, 20, 18.4183, 20],
-      [10, 4, 14.4183, 4],
-      [10, 4, 5.58172, 4],
     ],
   },
   {
@@ -75,16 +70,48 @@ const HANDLE_GROUPS = [
     segments: [
       [22, 12, 22, 16.4183],
       [22, 12, 22, 8.446],
+    ],
+  },
+  {
+    delay: 1.2,
+    segments: [[18, 3.05557, 20.455, 5.25285]],
+  },
+  // Inner stroke
+  {
+    delay: 0.2,
+    segments: [[10, 12, 10, 14.2091]],
+  },
+  {
+    delay: 0.4,
+    segments: [
+      [14, 16, 11.7909, 16],
+      [14, 16, 16.2091, 16],
+    ],
+  },
+  {
+    delay: 0.6,
+    segments: [
+      [18, 12, 18, 14.2091],
+      [18, 12, 18, 7.58172],
+    ],
+  },
+  {
+    delay: 0.8,
+    segments: [
+      [10, 4, 14.4183, 4],
+      [10, 4, 5.58172, 4],
+    ],
+  },
+  {
+    delay: 1,
+    segments: [
       [2, 12, 2, 7.58172],
       [2, 12, 2, 15.5841],
     ],
   },
   {
     delay: 1.2,
-    segments: [
-      [18, 3.05557, 20.455, 5.25285],
-      [6.06253, 21, 3.57127, 18.8012],
-    ],
+    segments: [[6.06253, 21, 3.57127, 18.8012]],
   },
 ];
 
@@ -357,31 +384,25 @@ const logoStroke = (isOuter: boolean) =>
           :animate="{ opacity: showHandles ? 1 : 0 }"
           :transition="{ duration: 0.6 }"
         >
-          <!-- Each handle draws out of its vertex, then its tip pops in -->
-          <g
-            v-for="group in HANDLE_GROUPS"
-            :key="group.delay"
+          <motion.g
+            v-for="(group, index) in HANDLE_GROUPS"
+            :key="index"
+            :initial="initial({ opacity: 0, scale: 0.2 })"
+            :animate="{ opacity: 1, scale: 1 }"
+            :transition="{ delay: group.delay, duration: 0.3 }"
           >
             <template
               v-for="[x1, y1, x2, y2] in group.segments"
               :key="`${x2},${y2}`"
             >
-              <motion.path
-                :d="`M${x1} ${y1} ${x2} ${y2}`"
-                :initial="initial({ pathLength: 0, opacity: 0 })"
-                :animate="{ pathLength: 1, opacity: 1 }"
-                :transition="{ delay: group.delay, duration: 0.3 }"
-              />
-              <motion.circle
+              <path :d="`M${x1} ${y1} ${x2} ${y2}`" />
+              <circle
                 :cx="x2"
                 :cy="y2"
                 r="0.25"
-                :initial="initial({ opacity: 0, scale: 0 })"
-                :animate="{ opacity: 1, scale: 1 }"
-                :transition="{ delay: group.delay + 0.2, duration: 0.2 }"
               />
             </template>
-          </g>
+          </motion.g>
         </motion.g>
       </motion.svg>
     </div>
