@@ -35,8 +35,8 @@ const MARKERS = [
 ];
 
 /**
- * Bezier handles as [x1, y1, x2, y2] segments, grouped by when they appear.
- * Each group scales in around its own centre, so groups stay per stroke.
+ * Bezier handles as [x1, y1, x2, y2] segments (vertex to tip), grouped by when they appear.
+ * Each handle draws in from its tip towards its vertex.
  */
 const HANDLE_GROUPS = [
   // Outer stroke
@@ -117,32 +117,6 @@ const HANDLE_GROUPS = [
 
 /** Radius of the circle at the tip of each handle. */
 const HANDLE_TIP_RADIUS = 0.25;
-
-/**
- * Scales a handle group out of its vertex (the shared start point of its segments)
- * instead of the centre of its bounding box. motion-v scales SVG elements within their
- * fill-box and owns transform-origin, so the vertex is given as a fraction of that box.
- */
-const handleOrigin = (segments: number[][]) => {
-  const [x, y] = segments[0];
-  const xs = segments.flatMap(([x1, , x2]) => [x1, x2 - HANDLE_TIP_RADIUS, x2 + HANDLE_TIP_RADIUS]);
-  const ys = segments.flatMap(([, y1, , y2]) => [
-    y1,
-    y2 - HANDLE_TIP_RADIUS,
-    y2 + HANDLE_TIP_RADIUS,
-  ]);
-  const [minX, maxX, minY, maxY] = [
-    Math.min(...xs),
-    Math.max(...xs),
-    Math.min(...ys),
-    Math.max(...ys),
-  ];
-
-  return {
-    originX: (x - minX) / (maxX - minX),
-    originY: (y - minY) / (maxY - minY),
-  };
-};
 
 const COLUMNS = 8;
 const SIZE = 2;
@@ -413,26 +387,31 @@ const logoStroke = (isOuter: boolean) =>
           :animate="{ opacity: showHandles ? 1 : 0 }"
           :transition="{ duration: 0.6 }"
         >
-          <motion.g
+          <g
             v-for="(group, index) in HANDLE_GROUPS"
             :key="index"
-            :style="handleOrigin(group.segments)"
-            :initial="initial({ opacity: 0, scale: 0.2 })"
-            :animate="{ opacity: 1, scale: 1 }"
-            :transition="{ delay: group.delay, duration: 0.3 }"
           >
             <template
               v-for="[x1, y1, x2, y2] in group.segments"
               :key="`${x2},${y2}`"
             >
-              <path :d="`M${x1} ${y1} ${x2} ${y2}`" />
-              <circle
+              <motion.circle
                 :cx="x2"
                 :cy="y2"
                 :r="HANDLE_TIP_RADIUS"
+                :initial="initial({ opacity: 0, scale: 0 })"
+                :animate="{ opacity: 1, scale: 1 }"
+                :transition="{ delay: group.delay, duration: 0.2 }"
+              />
+              <!-- Reversed so the line draws from the tip into the vertex -->
+              <motion.path
+                :d="`M${x2} ${y2} ${x1} ${y1}`"
+                :initial="initial({ pathLength: 0, opacity: 0 })"
+                :animate="{ pathLength: 1, opacity: 1 }"
+                :transition="{ delay: group.delay + 0.1, duration: 0.3 }"
               />
             </template>
-          </motion.g>
+          </g>
         </motion.g>
       </motion.svg>
     </div>
