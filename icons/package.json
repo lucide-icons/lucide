@@ -22,6 +22,11 @@
     "archive",
     "zip",
     "module",
+    "shipping",
+    "recipient",
+    "inventory",
+    "logistics",
+    "tracking",
     "order",
     "product"
   ],
