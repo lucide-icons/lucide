@@ -15,7 +15,10 @@
     "flagged",
     "suspicious",
     "reported",
-    "violation"
+    "violation",
+    "moderation",
+    "account issue",
+    "review"
   ],
   "categories": [
     "$extends:user"
