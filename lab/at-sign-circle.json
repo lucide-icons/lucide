@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "mention",
+    "at",
+    "email address",
+    "message",
+    "contact",
+    "networking",
+    "ping",
+    "@"
+  ],
+  "categories": [
+    "text",
+    "account",
+    "communication",
+    "social",
+    "notifications",
+    "shapes"
+  ]
+}

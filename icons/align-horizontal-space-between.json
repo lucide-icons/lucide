@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-left",
+    "$group:position-right",
     "around",
     "items",
     "bottom",

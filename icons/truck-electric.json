@@ -15,14 +15,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "delivery",
-    "van",
-    "shipping",
-    "haulage",
-    "lorry",
+    "$extends:truck",
     "electric"
   ],
   "categories": [
-    "transportation"
+    "$extends:truck"
   ]
 }

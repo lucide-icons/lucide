@@ -5,18 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "stop",
-    "clear",
-    "cancel",
-    "abort",
-    "lens"
+    "$extends:search",
+    "$group:x",
+    "stop"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:search"
   ]
 }

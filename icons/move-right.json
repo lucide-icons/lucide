@@ -5,10 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "arrow",
-    "direction",
-    "trend flat",
-    "east"
+    "$extends:move",
+    "$group:direction-right",
+    "trend flat"
   ],
   "categories": [
     "arrows"

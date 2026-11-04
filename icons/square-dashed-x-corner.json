@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas",
+    "chessurisme",
+    "ethanhazel"
+  ],
+  "use-cases": [
+    "Deselecting a selection in an image editor",
+    "Removing selected files from a file manager selection",
+    "Toggling off marquee or selection mode in a design application"
+  ],
+  "tags": [
+    "$extends:square-dashed-x"
+  ],
+  "categories": [
+    "$extends:square-dashed-x"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "Turning off auto layout in a design inspector",
+    "Switching a dashboard section to free drag-and-drop placement",
+    "Selecting freeform arrangement in a page builder",
+    "Indicating unstructured layout mode in a whiteboard or canvas app",
+    "Representing elements not aligned to a grid"
+  ],
+  "tags": [
+    "layout",
+    "freeform",
+    "free",
+    "absolute",
+    "position",
+    "auto layout",
+    "unaligned",
+    "scattered",
+    "arrange",
+    "blocks",
+    "canvas",
+    "frame"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

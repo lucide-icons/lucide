@@ -16,7 +16,7 @@
     "version control"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "$extends:circle",
+    "development"
   ]
 }

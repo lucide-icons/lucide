@@ -1,0 +1,17 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: synchronizing something",
+  "tags": [
+    "synchronize",
+    "synchronise",
+    "refresh",
+    "reload",
+    "update",
+    "reconnect",
+    "retry",
+    "renew",
+    "rerun",
+    "repeat",
+    "cycle"
+  ]
+}

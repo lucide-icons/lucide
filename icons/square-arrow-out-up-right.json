@@ -5,10 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up-right",
     "outwards",
-    "direction",
-    "north-east",
-    "diagonal",
     "share",
     "open",
     "external",
@@ -22,8 +20,7 @@
     {
       "name": "arrow-up-right-from-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

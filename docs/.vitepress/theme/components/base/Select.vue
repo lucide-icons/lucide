@@ -6,10 +6,10 @@ import SelectIcon from './SelectIcon.vue';
 
 defineProps<{
   id?: string;
-  items?: { name: string; route: string; icon: string; iconDark?: string }[];
+  items?: { name: string; value: string; icon?: string; iconDark?: string }[];
 }>();
 
-const selected = defineModel<{ name: string; icon: string; iconDark?: string }>();
+const selected = defineModel<{ name: string; value: string; icon?: string; iconDark?: string }>();
 </script>
 
 <template>
@@ -19,18 +19,25 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
         class="select-button"
         :id="id"
       >
-        <SelectIcon :item="selected" />
+        <slot name="start-icon">
+          <SelectIcon  v-if="selected.icon" :item="selected" />
+        </slot>
         <span class="select-text">{{ selected.name }}</span>
         <span class="select-icon">
-          <Icon
-            :iconNode="chevronsUpDown"
-            class="chevron-icon"
-            aria-hidden="true"
-          />
+          <slot name="end-icon">
+            <Icon
+              :iconNode="chevronsUpDown"
+              name="chevrons-up-down"
+              class="chevron-icon"
+              aria-hidden="true"
+            />
+          </slot>
         </span>
       </ListboxButton>
 
       <transition
+        enter-active-class="transition-enter"
+        enter-from-class="transition-enter-from"
         leave-active-class="transition-leave"
         leave-from-class="transition-leave-from"
         leave-to-class="transition-leave-to"
@@ -43,8 +50,9 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
             :value="item"
             as="template"
           >
+
             <li :class="['select-option', { active, selected }]">
-              <SelectIcon :item="item" />
+              <SelectIcon v-if="item.icon" :item="item" />
               <span :class="['option-text', { selected }]">{{ item.name }}</span>
               <span
                 v-if="selected"
@@ -52,6 +60,7 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
               >
                 <Icon
                   :iconNode="check"
+                  name="check"
                   class="check"
                   aria-hidden="true"
                 />
@@ -76,20 +85,33 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
   padding: 7px 14px;
   height: auto;
   font-size: 14px;
-  border: 1px solid transparent;
-  cursor: text;
+  border: 1px solid var(--vp-c-divider);
+  cursor: pointer;
   display: flex;
   gap: 12px;
   transition:
     color 0.25s,
     border-color 0.25s,
-    background-color 0.25s;
+    background-color 0.25s,
+    box-shadow 0.25s;
+  transition-duration: 0.25s;
   width: 100%;
   align-items: center;
 }
 
-.select-button:focus {
+/* Same as FakeInput: a quiet border at rest, a brand border with a soft ring on hover, focus
+   and while open, and the chevrons take the text colour */
+.select-button:hover,
+.select-button:focus,
+.select-button[aria-expanded='true'] {
+  outline: none;
   border-color: var(--vp-c-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 15%, transparent);
+}
+
+.select-button:hover .chevron-icon,
+.select-button[aria-expanded='true'] .chevron-icon {
+  color: var(--vp-c-text-1);
 }
 
 .select-text {
@@ -114,10 +136,26 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
   height: 1.25rem;
   width: 1.25rem;
   color: #9ca3af;
+  transition: color 0.25s;
+  transition-duration: 0.25s;
+}
+
+/* The list fades in and slides down a little from the button */
+.transition-enter {
+  transition:
+    opacity 150ms ease-out,
+    transform 200ms cubic-bezier(0.34, 1.4, 0.64, 1);
+  transition-duration: 150ms, 200ms;
+}
+
+.transition-enter-from {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
 }
 
 .transition-leave {
   transition: opacity 100ms ease-in;
+  transition-duration: 100ms;
 }
 
 .transition-leave-from {
@@ -165,6 +203,7 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
   transition:
     background-color 0.25s,
     color 0.25s;
+  transition-duration: 0.25s;
   list-style: none;
 }
 
