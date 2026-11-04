@@ -357,25 +357,31 @@ const logoStroke = (isOuter: boolean) =>
           :animate="{ opacity: showHandles ? 1 : 0 }"
           :transition="{ duration: 0.6 }"
         >
-          <motion.g
+          <!-- Each handle draws out of its vertex, then its tip pops in -->
+          <g
             v-for="group in HANDLE_GROUPS"
             :key="group.delay"
-            :initial="initial({ opacity: 0, scale: 0.2 })"
-            :animate="{ opacity: 1, scale: 1 }"
-            :transition="{ delay: group.delay, duration: 0.3 }"
           >
             <template
               v-for="[x1, y1, x2, y2] in group.segments"
               :key="`${x2},${y2}`"
             >
-              <path :d="`M${x1} ${y1} ${x2} ${y2}`" />
-              <circle
+              <motion.path
+                :d="`M${x1} ${y1} ${x2} ${y2}`"
+                :initial="initial({ pathLength: 0, opacity: 0 })"
+                :animate="{ pathLength: 1, opacity: 1 }"
+                :transition="{ delay: group.delay, duration: 0.3 }"
+              />
+              <motion.circle
                 :cx="x2"
                 :cy="y2"
                 r="0.25"
+                :initial="initial({ opacity: 0, scale: 0 })"
+                :animate="{ opacity: 1, scale: 1 }"
+                :transition="{ delay: group.delay + 0.2, duration: 0.2 }"
               />
             </template>
-          </motion.g>
+          </g>
         </motion.g>
       </motion.svg>
     </div>
