@@ -13,15 +13,11 @@
     "Restoring an earlier version of a file"
   ],
   "tags": [
-    "history",
-    "time",
-    "redo",
-    "undo",
-    "rewind",
+    "$extends:rotate-ccw",
+    "$group:clock",
     "timeline",
     "version",
     "time machine",
-    "backup",
     "ccw"
   ],
   "categories": [

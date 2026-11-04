@@ -12,14 +12,13 @@
     "Choosing vertical orientation in responsive layout controls"
   ],
   "tags": [
+    "$group:direction-down",
     "layout",
-    "direction",
     "flex",
     "flexbox",
     "flex-direction",
     "column",
     "auto layout",
-    "vertical",
     "arrange",
     "order",
     "flow",

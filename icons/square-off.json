@@ -6,17 +6,9 @@
     "october-learns"
   ],
   "tags": [
-    "/",
+    "$group:off",
     "not",
-    "slash",
-    "off",
-    "disabled",
-    "inactive",
-    "cancel",
     "none",
-    "block",
-    "forbidden",
-    "unavailable",
     "stopped",
     "checkbox",
     "unchecked",

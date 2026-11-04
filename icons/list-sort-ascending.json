@@ -8,25 +8,14 @@
     "Reordering a list from lowest to highest or A to Z"
   ],
   "tags": [
+    "$group:sort",
     "list",
-    "order",
-    "arrangement",
     "organization",
-    "sequence",
-    "ranking",
     "categories",
-    "presentation",
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "presentation"
   ],
   "categories": [
-    "text",
+    "$extends:list",
     "layout"
   ]
 }

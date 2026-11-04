@@ -7,15 +7,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "drop cap",
-    "text",
     "format",
-    "typography",
     "letter",
     "font size"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ],
   "aliases": [

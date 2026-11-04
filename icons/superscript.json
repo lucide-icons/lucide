@@ -6,11 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
+    "$group:digit",
     "exponent"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "paste"
+    "$extends:clipboard-pen"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard-pen"
   ],
   "aliases": [
     {

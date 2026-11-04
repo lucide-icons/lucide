@@ -13,27 +13,13 @@
     "Representing automated writing or content generation tools"
   ],
   "tags": [
-    "edit",
-    "ai",
+    "$extends:pencil",
+    "$group:sparkles",
     "tools",
-    "smart",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
-    "stationery",
-    "artist",
-    "magic",
     "wizard",
     "magician"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
-    "text",
-    "photography"
+    "$extends:pencil"
   ]
 }

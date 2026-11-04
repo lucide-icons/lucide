@@ -7,11 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:scan",
     "scan",
-    "code",
-    "qr-code"
+    "code"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

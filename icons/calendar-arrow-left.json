@@ -15,17 +15,11 @@
     "Moving back through dates in date pickers"
   ],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
+    "$group:direction-left",
+    "$group:navigation-previous",
     "arrow",
-    "direction",
-    "navigation",
     "previous",
-    "back",
-    "backward",
     "past",
     "earlier",
     "reschedule",
@@ -35,8 +29,6 @@
     "date picker"
   ],
   "categories": [
-    "time",
-    "arrows",
-    "navigation"
+    "$extends:calendar"
   ]
 }

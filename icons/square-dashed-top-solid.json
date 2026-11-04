@@ -12,16 +12,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "square",
+    "$extends:square-dashed",
     "border",
     "width",
     "layout",
     "style",
     "design",
-    "rectangular",
-    "marquee",
-    "dashed",
-    "box",
     "rectangle",
     "aspect ratio",
     "1:1"

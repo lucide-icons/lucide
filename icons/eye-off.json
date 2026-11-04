@@ -8,20 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "view",
-    "watch",
-    "see",
-    "hide",
+    "$extends:eye",
+    "$group:off",
     "conceal",
-    "mask",
-    "hidden",
-    "visibility",
-    "vision"
+    "mask"
   ],
   "categories": [
-    "accessibility",
-    "photography",
-    "design",
-    "security"
+    "$extends:eye"
   ]
 }

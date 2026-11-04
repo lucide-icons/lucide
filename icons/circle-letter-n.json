@@ -12,8 +12,7 @@
     "Representing sample size in statistics"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "north",
     "neutral",
@@ -24,10 +23,7 @@
     "newton",
     "force",
     "sample size",
-    "statistics",
-    "text",
-    "font",
-    "typography"
+    "statistics"
   ],
   "categories": [
     "letters-digits"

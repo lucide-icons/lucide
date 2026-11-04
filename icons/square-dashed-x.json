@@ -15,19 +15,16 @@
     "Removing a placeholder block from a layout"
   ],
   "tags": [
+    "$extends:square-dashed",
+    "$group:x",
     "deselect",
     "unselect",
-    "delete",
     "select",
-    "selection",
     "border",
     "width",
     "layout",
     "style",
     "design",
-    "rectangular",
-    "marquee",
-    "box",
     "rectangle",
     "aspect ratio",
     "1:1"

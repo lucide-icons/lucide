@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "text"
+    "$group:letter",
+    "$group:digit"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

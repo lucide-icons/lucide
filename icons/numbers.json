@@ -10,10 +10,9 @@
     "Representing numeric input fields or numerical data"
   ],
   "tags": [
+    "$group:digit",
     "123",
     "digits",
-    "numeric",
-    "numerical",
     "counting",
     "quantity",
     "math",

@@ -11,10 +11,8 @@
     "Scheduling team meetings and gatherings"
   ],
   "tags": [
-    "group",
-    "people",
+    "$extends:users-round",
     "collaboration",
-    "users",
     "team",
     "communication",
     "cooperative",
@@ -24,12 +22,10 @@
     "shared",
     "delegation",
     "handoff",
-    "coauthor",
-    "profiles"
+    "coauthor"
   ],
   "categories": [
-    "account",
-    "people",
-    "communication"
+    "$extends:users-round",
+    "social"
   ]
 }

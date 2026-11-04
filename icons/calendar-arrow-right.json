@@ -15,16 +15,11 @@
     "Moving forward through dates in date pickers"
   ],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
+    "$group:direction-right",
+    "$group:navigation-next",
     "arrow",
-    "direction",
-    "navigation",
     "next",
-    "forward",
     "future",
     "upcoming",
     "later",
@@ -36,8 +31,6 @@
     "appointment"
   ],
   "categories": [
-    "time",
-    "arrows",
-    "navigation"
+    "$extends:calendar"
   ]
 }

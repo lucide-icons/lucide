@@ -9,12 +9,12 @@
     "Labeling scientific variables in equations"
   ],
   "tags": [
+    "$group:letter",
     "math",
     "golden-ratio",
     "symbol",
     "greek",
     "letter",
-    "typography",
     "constant",
     "flux",
     "magnetic-flux"

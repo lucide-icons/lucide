@@ -8,12 +8,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:digit",
     "money",
     "cash",
     "finance",
     "gamble"
   ],
   "categories": [
-    "gaming"
+    "gaming",
+    "finance"
   ]
 }
