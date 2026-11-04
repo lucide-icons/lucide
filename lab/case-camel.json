@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "text",
+    "letters",
+    "characters",
+    "font",
+    "typography",
+    "ab",
+    "string",
+    "code"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}

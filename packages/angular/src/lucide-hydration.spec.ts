@@ -3,20 +3,20 @@ import { bootstrapApplication, provideClientHydration } from '@angular/platform-
 import { provideServerRendering, renderApplication } from '@angular/platform-server';
 import { LucideDynamicIcon } from './lucide-dynamic-icon';
 import { provideLucideIcons } from './lucide-icons';
-import { LucideBadgeAlert } from './icons/badge-alert';
+import { LucideBadgeExclamationPoint } from './icons/badge-exclamation-point';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'lucide-static-hydration-root',
-  template: `<svg lucideBadgeAlert [absoluteStrokeWidth]="true"></svg>`,
-  imports: [LucideBadgeAlert],
+  template: `<svg lucideBadgeExclamationPoint [nonScalingStroke]="true"></svg>`,
+  imports: [LucideBadgeExclamationPoint],
 })
 class StaticHydrationRootComponent {}
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'lucide-dynamic-hydration-root',
-  template: `<svg [lucideIcon]="'badge-alert'"></svg>`,
+  template: `<svg [lucideIcon]="'badge-exclamation-point'"></svg>`,
   imports: [LucideDynamicIcon],
 })
 class DynamicHydrationRootComponent {}
@@ -60,7 +60,7 @@ describe('Lucide hydration', () => {
     );
     (globalThis as { ngServerMode?: boolean }).ngServerMode = false;
     const serverDocument = new DOMParser().parseFromString(html, 'text/html');
-    expectBadgeAlertShapeNodes(serverDocument.querySelector('svg') as SVGSVGElement);
+    expectBadgeExclamationPointShapeNodes(serverDocument.querySelector('svg') as SVGSVGElement);
     document.head.innerHTML = serverDocument.head.innerHTML;
     document.body.innerHTML = serverDocument.body.innerHTML;
 
@@ -75,7 +75,7 @@ describe('Lucide hydration', () => {
     return document.querySelector('svg') as SVGSVGElement;
   }
 
-  function expectBadgeAlertShapeNodes(svg: SVGSVGElement) {
+  function expectBadgeExclamationPointShapeNodes(svg: SVGSVGElement) {
     expect(Array.from(svg.children).map((child) => child.tagName.toLowerCase())).toEqual([
       'path',
       'line',
@@ -89,7 +89,7 @@ describe('Lucide hydration', () => {
       'lucide-static-hydration-root',
     );
 
-    expectBadgeAlertShapeNodes(svg);
+    expectBadgeExclamationPointShapeNodes(svg);
     for (const child of Array.from(svg.children)) {
       expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
     }
@@ -99,9 +99,9 @@ describe('Lucide hydration', () => {
     const svg = await renderAndHydrate(
       DynamicHydrationRootComponent,
       'lucide-dynamic-hydration-root',
-      [provideLucideIcons(LucideBadgeAlert)],
+      [provideLucideIcons(LucideBadgeExclamationPoint)],
     );
 
-    expectBadgeAlertShapeNodes(svg);
+    expectBadgeExclamationPointShapeNodes(svg);
   });
 });

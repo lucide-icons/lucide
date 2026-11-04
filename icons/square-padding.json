@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta"
+  ],
+  "use-cases": [
+    "Adjusting inner spacing on all sides in layout editors",
+    "Setting cell padding on all sides in table editors"
+  ],
+  "tags": [
+    "padding",
+    "design",
+    "style",
+    "margin",
+    "spacing",
+    "gap",
+    "inner spacing",
+    "box model",
+    "whitespace",
+    "space",
+    "offset",
+    "alignment",
+    "position",
+    "layout",
+    "css",
+    "ui"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ]
+}

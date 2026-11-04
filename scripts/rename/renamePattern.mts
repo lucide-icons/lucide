@@ -11,7 +11,7 @@ async function main() {
   const svgFiles = await readSvgDirectory(ICONS_DIR);
   const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
   const argv = (yargs(hideBin(process.argv))
-  // @ts-ignore
+  // @ts-expect-error the builder callback overload is not picked up for a default command
     .usage('$0 <pattern> <replacement>', 'Renames all icons matching a pattern', (yargs) => {
       yargs
         .positional('pattern', {

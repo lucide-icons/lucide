@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "aliyasirnac"
+  ],
+  "use-cases": [
+    "Confirming a draft message is ready",
+    "Marking pending feedback as resolved",
+    "Indicating provisional approval in conversation threads",
+    "Showing completed review status for comments"
+  ],
+  "tags": [
+    "$extends:message-circle-dashed",
+    "$group:check",
+    "pending",
+    "provisional",
+    "verification",
+    "confirmation",
+    "status",
+    "approval",
+    "moderate",
+    "resolved"
+  ],
+  "categories": [
+    "$extends:message-circle-dashed"
+  ]
+}

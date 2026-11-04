@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking parking locations",
+    "Representing phosphorus in scientific contexts",
+    "Indicating p-values in statistics",
+    "Marking soft dynamics in music notation",
+    "Representing pages or pagination",
+    "Representing probability in math contexts"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "parking",
+    "phosphorus",
+    "chemistry",
+    "p-value",
+    "statistics",
+    "piano",
+    "soft",
+    "music",
+    "page",
+    "probability",
+    "math"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

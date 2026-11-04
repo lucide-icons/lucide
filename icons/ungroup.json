@@ -4,7 +4,11 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Ungrouping or separating combined elements",
+    "Managing collections of items",
+    "Managing notifications"
+  ],
   "tags": [
     "cubes",
     "packages",
@@ -15,7 +19,7 @@
     "separate"
   ],
   "categories": [
-    "shapes",
-    "files"
+    "files",
+    "layout"
   ]
 }

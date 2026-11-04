@@ -16,6 +16,6 @@
     "pending"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

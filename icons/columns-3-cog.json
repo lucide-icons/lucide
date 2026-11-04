@@ -3,17 +3,18 @@
   "contributors": [
     "irvineacosta",
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "kamilasw"
   ],
   "use-cases": [],
   "tags": [
+    "$extends:columns-3",
+    "$group:cog",
     "columns",
-    "settings",
     "customize",
     "table",
     "grid",
     "adjust",
-    "configuration",
     "panel",
     "layout"
   ],

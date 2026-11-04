@@ -5,16 +5,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user-round",
+    "$group:check",
     "followed",
-    "subscribed",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "subscribed"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

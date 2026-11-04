@@ -5,12 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "diff"
+    "$extends:git-compare"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "$extends:git-compare"
   ]
 }

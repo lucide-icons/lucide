@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "edik17",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing DIY and home improvement sections",
+    "Accessing assembly instructions on furniture product pages",
+    "Adding threaded fasteners to assemblies in CAD software"
+  ],
+  "tags": [
+    "fastener",
+    "hardware",
+    "bolt",
+    "screwdriver",
+    "repair",
+    "assembly",
+    "diy",
+    "flathead"
+  ],
+  "categories": [
+    "tools"
+  ]
+}

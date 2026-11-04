@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating Fahrenheit temperature units",
+    "Representing female markers or labels",
+    "Indicating a failing grade or rating",
+    "Representing force in physics contexts",
+    "Labeling aperture or f-stop settings"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "fahrenheit",
+    "temperature",
+    "female",
+    "fail",
+    "grade",
+    "rating",
+    "force",
+    "aperture",
+    "f-stop",
+    "camera"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

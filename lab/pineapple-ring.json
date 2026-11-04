@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "segments",
+    "chunks",
+    "canned fruit",
+    "tinned fruit",
+    "juice",
+    "smoothie",
+    "cocktail",
+    "piña colada",
+    "tropical",
+    "sweet",
+    "snack",
+    "meal",
+    "lunch",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

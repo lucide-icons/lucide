@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "score",
+    "football",
+    "futbol",
+    "soccer",
+    "ice hockey",
+    "posts",
+    "crossbar",
+    "kick",
+    "pitch",
+    "penalty"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
