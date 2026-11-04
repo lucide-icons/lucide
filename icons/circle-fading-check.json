@@ -3,14 +3,21 @@
   "contributors": [
     "n2duc"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a submission or payment that is still being verified",
+    "Showing a deployment, upload, or backup that is finishing up",
+    "Marking a task as partially completed or awaiting final approval",
+    "Displaying a step in a progress tracker that is in progress"
+  ],
   "tags": [
-    "check",
-    "circle",
+    "$group:check",
     "pending",
-    "progress"
+    "progress",
+    "processing",
+    "verifying",
+    "loading"
   ],
   "categories": [
-    "shapes"
+    "notifications"
   ]
 }
