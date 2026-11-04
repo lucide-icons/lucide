@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, shallowRef } from 'vue';
+import { onMounted, ref, shallowRef } from 'vue';
 import { data } from './HomeHeroIconsCard.data';
 import { useRouter } from 'vitepress';
 import { motion, useScroll, useTransform, type Options as MotionOptions } from 'motion-v';
+import { useMediaQuery } from '@vueuse/core';
 import LucideIcon from '../base/LucideIcon.vue';
 
 // motion-v re-exports framer-motion's `Variants`, which doesn't match the `variants` prop of its components
@@ -184,6 +185,9 @@ const draw: Variants = {
 
 // motion-v passes the variant label that finished, not the resolved variant
 const onAnimationComplete = (variant: unknown) => {
+  // Reduced motion stops at the icon grid, so don't shrink the icons or loop
+  if (reducedMotion.value) return;
+
   if (variant === 'visible') {
     drawAnimation.value = 'exit';
     return;
@@ -238,6 +242,24 @@ const shrinkIconVariants: Variants = {
     transition: { delay: 1.8, duration: 1.5, ease: 'easeInOut' },
   }),
 };
+
+// Only rendered on the client, so reduced motion is known before the first frame
+const mounted = ref(false);
+const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+
+onMounted(() => {
+  if (reducedMotion.value) {
+    drawAnimation.value = 'exit';
+    showHandles.value = false;
+    scaleDownAnimation.value = 'small';
+    iconGridAnimation.value = 'showIcons';
+  }
+
+  mounted.value = true;
+});
+
+/** Skips straight to the end state when the user prefers reduced motion. */
+const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
 </script>
 
 <template>
@@ -250,6 +272,7 @@ const shrinkIconVariants: Variants = {
       v-bind="preventFocusProps"
     >
       <motion.svg
+        v-if="mounted"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="-12 -12 48 48"
         fill="none"
@@ -292,7 +315,7 @@ const shrinkIconVariants: Variants = {
           <MotionLucideIcon
             v-for="(icon, index) in icons"
             size="2"
-            initial="initial"
+            :initial="initial('initial')"
             :key="icon.name"
             :variants="iconAnimationVariants"
             :animate="iconGridAnimation"
@@ -306,15 +329,15 @@ const shrinkIconVariants: Variants = {
           <motion.g
             :variants="scaleDownVariants"
             :animate="scaleDownAnimation"
-            initial="hidden"
+            :initial="initial('hidden')"
             @animation-complete="onAnimationComplete"
             v-bind="preventFocusProps"
           >
             <motion.path
               :d="LOGO_PATH_OUTER"
-              :style="{ stroke: 'var(--vp-c-gray-1)' }"
+              :style="{ stroke: reducedMotion ? 'var(--vp-c-text-1)' : 'var(--vp-c-gray-1)' }"
               :animate="drawAnimation"
-              initial="hidden"
+              :initial="initial('hidden')"
               :variants="draw"
               :custom="1"
               @animation-complete="onAnimationComplete"
@@ -323,9 +346,9 @@ const shrinkIconVariants: Variants = {
 
             <motion.path
               :d="LOGO_PATH_INNER"
-              :style="{ stroke: 'var(--vp-c-gray-1)' }"
+              :style="{ stroke: reducedMotion ? 'var(--vp-c-brand)' : 'var(--vp-c-gray-1)' }"
               :animate="drawAnimation"
-              initial="hidden"
+              :initial="initial('hidden')"
               :variants="draw"
               :custom="0"
               v-bind="preventFocusProps"
@@ -336,7 +359,7 @@ const shrinkIconVariants: Variants = {
           class="svg-preview-control-path-marker-group"
           :style="{ stroke: 'var(--vp-c-text-1)' }"
           stroke-width="0.125"
-          :initial="{ opacity: 1 }"
+          :initial="initial({ opacity: 1 })"
           :animate="{ opacity: showHandles ? 1 : 0 }"
           :transition="{ duration: 0.2 }"
           v-bind="preventFocusProps"
@@ -345,14 +368,14 @@ const shrinkIconVariants: Variants = {
             v-for="d in [LOGO_PATH_OUTER, LOGO_PATH_INNER]"
             :key="d"
             :d="d"
-            :initial="{ opacity: 0 }"
+            :initial="initial({ opacity: 0 })"
             :animate="{ opacity: 1 }"
             :transition="{ delay: 1.6, duration: 1.5 }"
             v-bind="preventFocusProps"
           />
           <motion.path
             :d="VERTICES"
-            :initial="{ opacity: 0 }"
+            :initial="initial({ opacity: 0 })"
             :animate="{ opacity: 1 }"
             :transition="{ delay: 0.2, duration: 0.3 }"
             v-bind="preventFocusProps"
@@ -363,7 +386,7 @@ const shrinkIconVariants: Variants = {
             :cx="cx"
             :cy="cy"
             r="0.5"
-            :initial="{ opacity: 0, scale: 0.2 }"
+            :initial="initial({ opacity: 0, scale: 0.2 })"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ duration: 0.8 }"
             v-bind="preventFocusProps"
@@ -374,7 +397,7 @@ const shrinkIconVariants: Variants = {
           stroke-width="0.12"
           stroke="#FFF"
           stroke-opacity="0.3"
-          :initial="{ opacity: 1 }"
+          :initial="initial({ opacity: 1 })"
           :animate="{ opacity: showHandles ? 1 : 0 }"
           :transition="{ duration: 0.6 }"
           v-bind="preventFocusProps"
@@ -382,7 +405,7 @@ const shrinkIconVariants: Variants = {
           <motion.g
             v-for="(group, index) in HANDLE_GROUPS"
             :key="index"
-            :initial="{ opacity: 0, scale: 0.2 }"
+            :initial="initial({ opacity: 0, scale: 0.2 })"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: group.delay, duration: 0.3 }"
             v-bind="preventFocusProps"
