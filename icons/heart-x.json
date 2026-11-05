@@ -12,18 +12,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:x",
     "unlike",
-    "unfavorite",
-    "remove",
-    "reject",
-    "dismiss",
-    "delete",
-    "clear"
+    "unfavorite"
   ],
   "categories": [
     "social",
-    "multimedia",
-    "design",
-    "shapes"
+    "gaming"
   ]
 }

@@ -8,17 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "food",
-    "dish",
-    "restaurant",
-    "course",
-    "meal",
-    "meat",
-    "bbq",
-    "steak",
+    "$extends:beef",
+    "$group:off",
     "vegetarian"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:beef"
   ]
 }

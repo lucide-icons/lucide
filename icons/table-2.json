@@ -8,11 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "spreadsheet",
-    "grid"
+    "$extends:table"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:table"
   ]
 }

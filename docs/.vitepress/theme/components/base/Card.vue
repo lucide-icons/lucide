@@ -31,7 +31,7 @@ const rel = computed(() => {
 
 <style scoped>
 .card {
-  border: 1px solid var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   background-color: var(--vp-c-bg-soft);
   display: flex;
@@ -52,5 +52,4 @@ const rel = computed(() => {
 .card[href]:hover {
   border-color: var(--vp-c-brand-1);
 }
-
 </style>

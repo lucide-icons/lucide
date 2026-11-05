@@ -8,31 +8,24 @@
     "jguddas"
   ],
   "use-cases": [
-    "Indicating you're adding luggage",
-    "adding a new business or company profile",
-    "creating or saving a professional portfolio",
-    "adding a job or role to a user's profile",
-    "indicating add to briefcase or save for later in a product/service listing"
+    "Adding luggage to a booking in travel apps",
+    "Adding a new business or company profile",
+    "Creating or saving a professional portfolio",
+    "Adding a job or role to a user profile",
+    "Saving a product or service listing for later"
   ],
   "tags": [
-    "work",
-    "bag",
-    "baggage",
-    "folder",
-    "new",
-    "add",
-    "create",
-    "increase",
+    "$extends:briefcase",
+    "$group:plus",
     "briefcase",
     "portfolio",
     "business",
     "career",
     "employment",
-    "professional",
-    "plus"
+    "professional"
   ],
   "categories": [
-    "transportation",
+    "$extends:briefcase",
     "files",
     "account"
   ]

@@ -5,6 +5,9 @@
   "description": "A internal used package with helpers.",
   "main": "helpers.ts",
   "types": "helpers.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
   "author": "",
   "license": "ISC",
   "type": "module",
