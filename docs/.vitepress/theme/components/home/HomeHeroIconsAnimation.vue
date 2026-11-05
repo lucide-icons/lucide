@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { onMounted, ref, shallowRef } from 'vue';
+import { onMounted, ref, shallowRef, type DefineComponent } from 'vue';
 import { data } from './HomeHeroIconsCard.data';
 import { useRouter } from 'vitepress';
 import { motion, useScroll, useTransform, type Options as MotionOptions } from 'motion-v';
 import { useMediaQuery } from '@vueuse/core';
-import LucideIcon from '../base/LucideIcon.vue';
+import Icon from '@lucide/vue/src/Icon.ts';
 
 // motion-v re-exports framer-motion's `Variants`, which doesn't match the `variants` prop of its components
 type Variants = MotionOptions['variants'];
 
 const emit = defineEmits(['animation-complete']);
 
-const MotionLucideIcon = motion.create(LucideIcon);
+const MotionLucideIcon = motion.create(Icon as unknown as  DefineComponent);
 
 const preventFocusProps = {
   tabindex: '-1',
