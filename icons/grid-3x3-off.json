@@ -1,13 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu",
-    "karsa-mistmere",
-    "jamiemlaw",
+    "$extends:grid-3x3",
     "gridalchemy"
   ],
   "use-cases": [
@@ -16,14 +10,11 @@
     "Hiding the cell grid in spreadsheets"
   ],
   "tags": [
-    "table",
-    "rows",
-    "columns",
+    "$extends:grid-3x3",
+    "$group:off",
     "guides",
     "snap",
     "canvas",
-    "hide",
-    "disabled",
     "spreadsheet",
     "cells",
     "data table",
@@ -31,8 +22,6 @@
     "overlay"
   ],
   "categories": [
-    "text",
-    "layout",
-    "design"
+    "$extends:grid-3x3"
   ]
 }
