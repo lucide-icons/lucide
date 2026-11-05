@@ -26,7 +26,11 @@
     "racing",
     "trip",
     "journey",
-    "delivery"
+    "delivery",
+    "off-road",
+    "dirt bike",
+    "trail",
+    "enduro"
   ],
   "categories": [
     "transportation"
