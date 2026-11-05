@@ -15,7 +15,10 @@
     "marquee",
     "tool",
     "dashed",
-    "box"
+    "box",
+    "region",
+    "area",
+    "region of interest"
   ],
   "categories": [
     "design",

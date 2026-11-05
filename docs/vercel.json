@@ -12,8 +12,68 @@
       "permanent": true
     },
     {
-      "source": "/docs/:slug(lucide-?.*)",
-      "destination": "/guide/:slug",
+      "source": "/docs/lucide-vue-next",
+      "destination": "/guide/vue",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-vue-next",
+      "destination": "/guide/vue",
+      "permanent": true
+    },
+    {
+      "source": "/guide/vue-next",
+      "destination": "/guide/vue",
+      "permanent": true
+    },
+    {
+      "source": "/docs/lucide",
+      "destination": "/guide/lucide",
+      "permanent": true
+    },
+    {
+      "source": "/docs/lucide-:pkg",
+      "destination": "/guide/:pkg",
+      "permanent": true
+    },
+    {
+      "source": "/guide/lucide-:pkg",
+      "destination": "/guide/:pkg",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-:pkg/",
+      "destination": "/guide/:pkg",
+      "permanent": true
+    },
+    {
+      "source": "/guide/advanced/accessibility",
+      "destination": "/how-to/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/guide/basics/:slug",
+      "destination": "/guide/react/basics/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/guide/advanced/:slug",
+      "destination": "/guide/react/advanced/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/guide/design/figma-guide",
+      "destination": "/contribute/icons/figma-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guide/design/:slug(icon-design-guide|icon-properties)",
+      "destination": "/contribute/icons/design-principles",
+      "permanent": true
+    },
+    {
+      "source": "/icons/lab/:name(carton-off|briefcase-plus)",
+      "destination": "/icons/:name",
       "permanent": true
     },
     {
@@ -44,11 +104,6 @@
     },
     {
       "source": "/guide/accessibility",
-      "destination": "/how-to/accessibility",
-      "permanent": true
-    },
-    {
-      "source": "/guide/advanced/accessibility",
       "destination": "/how-to/accessibility",
       "permanent": true
     },
