@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "vhs",
     "movie",
@@ -14,9 +15,8 @@
   ],
   "categories": [
     "devices",
-    "communication",
-    "connectivity",
     "photography",
-    "files"
+    "files",
+    "multimedia"
   ]
 }

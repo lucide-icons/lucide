@@ -1,21 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "help"
+    "$extends:message-circle",
+    "$group:question-mark"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ],
   "aliases": [
-    "message-circle-question"
+    {
+      "name": "message-circle-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

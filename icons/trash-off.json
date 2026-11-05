@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "drewcobleRH"
+  ],
+  "use-cases": [
+    "Indicating a disabled delete action",
+    "Showing removal is unavailable or restricted",
+    "Preventing item deletion in locked states",
+    "Marking trash bins as full or out of service"
+  ],
+  "tags": [
+    "$extends:trash",
+    "$group:minus",
+    "$group:off",
+    "trash",
+    "prevent",
+    "locked",
+    "protected"
+  ],
+  "categories": [
+    "$extends:trash"
+  ]
+}

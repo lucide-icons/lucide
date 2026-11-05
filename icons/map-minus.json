@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "MarianoFranzese",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:map",
+    "$group:minus",
+    "drop"
+  ],
+  "categories": [
+    "navigation",
+    "travel"
+  ]
+}

@@ -5,10 +5,9 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "security",
-    "password",
-    "secure",
+    "$group:lock",
     "admin"
   ],
   "categories": [

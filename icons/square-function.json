@@ -4,17 +4,24 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "programming",
     "code",
     "automation",
     "math"
   ],
   "categories": [
+    "letters-digits",
     "development",
     "math"
   ],
   "aliases": [
-    "function-square"
+    {
+      "name": "function-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

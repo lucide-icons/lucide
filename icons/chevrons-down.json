@@ -3,14 +3,15 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-last",
     "backwards",
     "reverse",
     "slower"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming"
+    "arrows"
   ]
 }

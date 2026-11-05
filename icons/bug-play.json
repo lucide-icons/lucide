@@ -2,15 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "debug",
-    "code",
-    "insect"
+    "$extends:bug",
+    "$group:play",
+    "reproduce"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

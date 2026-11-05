@@ -4,10 +4,16 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
     "currency",
     "money",
-    "payment"
+    "payment",
+    "bill",
+    "cash",
+    "funds",
+    "transaction",
+    "finance"
   ],
   "categories": [
     "finance"

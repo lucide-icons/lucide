@@ -5,7 +5,9 @@
     "johnletey",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "licence"
   ],
   "categories": [

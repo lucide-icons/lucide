@@ -5,13 +5,19 @@
     "jguddas",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "edit"
+    "$extends:file-pen",
+    "$group:pen"
   ],
   "categories": [
-    "files"
+    "$extends:file-pen"
   ],
   "aliases": [
-    "file-signature"
+    {
+      "name": "file-signature",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

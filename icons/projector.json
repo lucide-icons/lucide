@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "cinema",
     "film",
@@ -17,7 +18,6 @@
   ],
   "categories": [
     "multimedia",
-    "photography",
     "devices",
     "communication"
   ]

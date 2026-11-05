@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
+  "tags": [
+    "$extends:receipt",
+    "try",
+    "₺"
+  ],
+  "categories": [
+    "$extends:receipt"
+  ]
+}

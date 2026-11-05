@@ -5,13 +5,20 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "lock",
-    "password",
-    "security"
+    "$extends:file",
+    "$group:lock"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "security"
+  ],
+  "aliases": [
+    {
+      "name": "file-lock-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }

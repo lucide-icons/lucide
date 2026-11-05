@@ -3,19 +3,17 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:scan",
     "preview",
     "zoom",
     "expand",
     "fullscreen",
     "gallery",
     "image",
-    "camera",
     "watch",
-    "surveillance",
     "retina",
-    "focus",
-    "lens",
     "biometric",
     "identification",
     "authentication",
@@ -24,10 +22,7 @@
   ],
   "categories": [
     "photography",
-    "multimedia",
-    "accessibility",
     "security",
-    "devices",
     "account"
   ]
 }

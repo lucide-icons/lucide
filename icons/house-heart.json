@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:house",
+    "$group:heart",
+    "home sweet home",
+    "abode",
+    "healthy living",
+    "lifestyle"
+  ],
+  "categories": [
+    "home",
+    "buildings"
+  ]
+}

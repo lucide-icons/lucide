@@ -1,24 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
+    "$extends:message-circle",
+    "$group:heart",
     "positive",
-    "like",
-    "love",
     "interest",
     "valentine",
     "dating",
-    "date",
-    "speech bubble"
+    "date"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ]
 }

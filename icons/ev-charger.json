@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "UsamaKhan",
+    "karsa-mistmere",
+    "ericfennis",
+    "colebemis",
+    "csandman",
+    "johnletey"
+  ],
+  "use-cases": [],
+  "tags": [
+    "electric",
+    "charger",
+    "station",
+    "vehicle",
+    "fast",
+    "plug",
+    "ev",
+    "power",
+    "electricity",
+    "energy",
+    "accumulator",
+    "charge"
+  ],
+  "categories": [
+    "transportation",
+    "navigation"
+  ]
+}

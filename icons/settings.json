@@ -4,13 +4,12 @@
     "colebemis",
     "csandman",
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences"
+    "$group:cog"
   ],
   "categories": [
     "account"

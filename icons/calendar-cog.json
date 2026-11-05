@@ -4,19 +4,16 @@
     "karsa-mistmere",
     "ericfennis",
     "AlexandrePhilibert",
-    "UsamaKhan"
+    "UsamaKhan",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "events",
-    "settings",
-    "gear",
-    "cog"
+    "$extends:calendar",
+    "$group:cog",
+    "events"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

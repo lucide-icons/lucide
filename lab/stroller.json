@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "baby",
+    "newborn",
+    "children",
+    "infant",
+    "kids",
+    "toddler",
+    "mother",
+    "mum",
+    "family",
+    "buggy",
+    "pram",
+    "pushchair",
+    "wheels"
+  ],
+  "categories": [
+    "transportation",
+    "people"
+  ]
+}

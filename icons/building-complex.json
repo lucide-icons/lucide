@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxim-s-barabash",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:building",
+    "business",
+    "company",
+    "enterprise",
+    "skyscraper",
+    "city"
+  ],
+  "categories": [
+    "$extends:building"
+  ],
+  "aliases": [
+    {
+      "name": "building-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

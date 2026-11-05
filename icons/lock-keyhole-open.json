@@ -8,13 +8,18 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "security"
+    "$extends:lock-keyhole"
   ],
   "categories": [
-    "security"
+    "$extends:lock-keyhole"
   ],
   "aliases": [
-    "unlock-keyhole"
+    {
+      "name": "unlock-keyhole",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

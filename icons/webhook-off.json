@@ -4,14 +4,12 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "push api",
-    "interface",
-    "callback"
+    "$extends:webhook",
+    "$group:off"
   ],
   "categories": [
-    "development",
-    "social",
-    "account"
+    "$extends:webhook"
   ]
 }

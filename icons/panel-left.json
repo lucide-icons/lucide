@@ -5,7 +5,9 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-left",
     "primary",
     "drawer"
   ],
@@ -13,6 +15,10 @@
     "layout"
   ],
   "aliases": [
-    "sidebar"
+    {
+      "name": "sidebar",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

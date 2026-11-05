@@ -3,17 +3,20 @@
   "contributors": [
     "Andreto",
     "mittalyashu",
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-next",
     "backwards",
-    "reverse",
-    "direction",
-    "south"
+    "reverse"
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }

@@ -2,19 +2,29 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "ericfennis"
+    "ericfennis",
+    "irvineacosta"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:panel-left",
     "sidebar",
-    "primary",
-    "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "padding",
+    "margin",
+    "guide",
+    "layout",
+    "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-left"
   ],
   "aliases": [
-    "panel-left-inactive"
+    {
+      "name": "panel-left-inactive",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

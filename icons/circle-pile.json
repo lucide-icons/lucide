@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "nathan-de-pachtere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:circle",
+    "circle-pile",
+    "circle",
+    "pile",
+    "stack",
+    "layer",
+    "structure",
+    "form",
+    "group",
+    "collection",
+    "stock",
+    "inventory",
+    "materials",
+    "warehouse"
+  ],
+  "categories": [
+    "$extends:circle"
+  ]
+}

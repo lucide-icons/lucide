@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "music"
   ],

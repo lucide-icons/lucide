@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "bduffany",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "wrap-text",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

@@ -6,14 +6,14 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "new",
-    "add",
-    "create",
+    "$extends:user",
+    "$group:plus",
     "follow",
     "subscribe"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

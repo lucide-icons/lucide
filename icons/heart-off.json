@@ -3,16 +3,18 @@
   "contributors": [
     "karsa-mistmere",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:off",
     "unlike",
     "dislike",
     "hate",
     "emotion"
   ],
   "categories": [
-    "social",
-    "multimedia"
+    "social"
   ]
 }

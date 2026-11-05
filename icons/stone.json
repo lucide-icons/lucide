@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alportan",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "mineral",
+    "geology",
+    "nature",
+    "solid",
+    "pebble",
+    "crystal",
+    "ore",
+    "hard",
+    "coal",
+    "stone",
+    "rock",
+    "boulder"
+  ],
+  "categories": [
+    "nature"
+  ]
+}

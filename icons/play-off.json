@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "Ahmed-Dghaies"
+  ],
+  "use-cases": [
+    "Indicating playback is disabled for video, audio, or live streams",
+    "Showing that a media file cannot be played"
+  ],
+  "tags": [
+    "$extends:play",
+    "$group:off"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

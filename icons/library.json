@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "books",
     "reading",
@@ -32,9 +33,6 @@
   ],
   "categories": [
     "text",
-    "photography",
-    "multimedia",
-    "navigation",
-    "development"
+    "multimedia"
   ]
 }

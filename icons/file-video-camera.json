@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:file",
+    "$extends:video",
+    "video"
+  ],
+  "categories": [
+    "$extends:file",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "file-video-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

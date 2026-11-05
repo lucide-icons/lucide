@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
     "award",
     "achievement",
     "badge",
@@ -13,6 +15,13 @@
     "winner"
   ],
   "categories": [
-    "files"
+    "$extends:file"
+  ],
+  "aliases": [
+    {
+      "name": "file-badge-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }

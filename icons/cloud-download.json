@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "import"
   ],
@@ -14,6 +15,10 @@
     "files"
   ],
   "aliases": [
-    "download-cloud"
+    {
+      "name": "download-cloud",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

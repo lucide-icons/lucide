@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:star",
+    "badge",
+    "medal",
+    "honour",
+    "decoration",
+    "order",
+    "pin",
+    "laurel",
+    "trophy",
+    "medallion",
+    "insignia",
+    "bronze",
+    "silver",
+    "gold"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
