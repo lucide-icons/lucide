@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "anindosarker",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "Toggling column borders in a table",
+    "Showing dividers between table columns",
+    "Representing a table border style with column lines only"
+  ],
+  "tags": [
+    "table",
+    "columns",
+    "borders",
+    "dividers",
+    "separators",
+    "spreadsheet",
+    "gutters"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ]
+}

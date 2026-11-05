@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "anindosarker",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "Toggling row borders in a table",
+    "Showing dividers between table rows",
+    "Representing a table border style with row lines only"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "borders",
+    "dividers",
+    "separators",
+    "spreadsheet",
+    "stripes",
+    "ruled"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ]
+}
