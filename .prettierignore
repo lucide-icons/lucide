@@ -1,4 +1,5 @@
 pnpm-lock.yaml
+.github/conventional-commit-types.json
 
 # docs examples
 docs/**/examples/
@@ -29,6 +30,7 @@ integrations/**/__screenshots__
 integrations/**/.output
 integrations/**/.nitro
 integrations/**/.nuxt
+integrations/**/.svelte-kit
 
 # lucide-svelte
 packages/svelte/src/icons/*.svelte

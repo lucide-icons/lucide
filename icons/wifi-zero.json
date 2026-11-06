@@ -8,12 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "signal",
-    "wireless"
+    "$extends:wifi"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:wifi"
   ]
 }

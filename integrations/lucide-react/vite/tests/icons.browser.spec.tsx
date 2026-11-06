@@ -1,8 +1,14 @@
-import { expect, test } from 'vitest';
+import Edit2 from 'lucide-react/dist/esm/icons/edit-2.mjs';
+import Droplet from 'lucide-react/icons/droplet';
+import type { LucideIcon } from 'lucide-react/types';
+import { expect, expectTypeOf, test } from 'vitest';
 import { render } from 'vitest-browser-react';
 import App from '../src/App';
 
 test('renders Lucide public APIs in a real browser', async () => {
+  expectTypeOf(Droplet).toEqualTypeOf<LucideIcon>();
+  expectTypeOf(Edit2).toEqualTypeOf<LucideIcon>();
+
   const screen = await render(<App />);
 
   const staticIcon = screen.getByTestId('static-icon');

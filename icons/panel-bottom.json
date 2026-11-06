@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-bottom",
     "drawer",
     "dock"
   ],

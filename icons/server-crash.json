@@ -6,13 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "cloud",
-    "storage",
+    "$extends:server",
     "problem",
     "error"
   ],
   "categories": [
-    "development",
-    "devices"
+    "$extends:server"
   ]
 }

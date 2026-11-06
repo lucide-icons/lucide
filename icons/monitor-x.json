@@ -7,26 +7,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
-    "screen sharing",
-    "virtual machine",
-    "vm",
-    "close",
+    "$extends:monitor",
+    "$group:x",
     "error",
     "failed",
     "disconnected",
     "stop",
-    "suspend",
-    "remove",
-    "delete"
+    "suspend"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

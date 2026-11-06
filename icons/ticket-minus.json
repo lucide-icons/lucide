@@ -5,18 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
-    "remove",
-    "cancel",
+    "$extends:ticket",
+    "$group:minus",
     "unbook",
-    "subtract",
-    "decrease",
-    "-"
+    "decrease"
   ],
   "categories": [
     "transportation"

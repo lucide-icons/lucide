@@ -8,19 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "loading",
-    "wait",
-    "busy",
-    "progress",
-    "spinner",
-    "spinning",
-    "throbber",
+    "$extends:loader",
     "circle"
   ],
   "categories": [
-    "cursors",
-    "multimedia",
-    "layout"
+    "cursors"
   ],
   "aliases": [
     {

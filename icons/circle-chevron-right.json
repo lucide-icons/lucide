@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-right",
+    "$group:navigation-next",
     "back",
     "more than",
     "greater",
