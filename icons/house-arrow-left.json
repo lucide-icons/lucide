@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating check-in at a property or space rental",
+    "Indicating someone arriving home",
+    "Triggering an arriving-home routine in home automation",
+    "Logging into an account",
+    "Indicating someone arriving home in smart home apps",
+    "Representing signing in or logging into an account"
+  ],
+  "tags": [
+    "$extends:house",
+    "$group:direction-left",
+    "enter",
+    "entry",
+    "check-in",
+    "arrival",
+    "ingress",
+    "sign in",
+    "automation",
+    "check in",
+    "arriving",
+    "sign-in",
+    "signin",
+    "login",
+    "presence",
+    "presence detection",
+    "smart home",
+    "iot",
+    "geofencing",
+    "access",
+    "welcome"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "arrows",
+    "account"
+  ]
+}
