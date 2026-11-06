@@ -11,7 +11,11 @@
     "$extends:table",
     "column",
     "delete",
-    "remove"
+    "remove",
+    "exclude",
+    "hide",
+    "drop",
+    "dataset"
   ],
   "categories": [
     "$extends:table"
