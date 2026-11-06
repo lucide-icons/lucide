@@ -6,14 +6,23 @@
     "ericfennis",
     "karsa-mistmere",
     "lscheibel",
-    "domasmark"
+    "jguddas"
   ],
   "use-cases": [],
   "tags": [
-    "$extends:book",
-    "$group:exclamation-mark"
+    "$extends:cloud",
+    "$group:exclamation-mark",
+    "sync",
+    "network"
   ],
   "categories": [
-    "$extends:book"
+    "development",
+    "notifications",
+    "weather"
+  ],
+  "aliases": [
+    {
+      "name": "cloud-alert"
+    }
   ]
 }

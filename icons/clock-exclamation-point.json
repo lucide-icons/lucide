@@ -2,18 +2,21 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis",
     "jguddas",
-    "Veatec22"
+    "jamiemlaw"
   ],
   "use-cases": [],
   "tags": [
-    "$extends:search",
+    "$extends:clock",
     "$group:exclamation-mark",
-    "stop",
-    "anomaly"
+    "wrong"
   ],
   "categories": [
-    "$extends:search"
+    "$extends:clock"
+  ],
+  "aliases": [
+    {
+      "name": "clock-alert"
+    }
   ]
 }

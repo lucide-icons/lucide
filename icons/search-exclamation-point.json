@@ -2,22 +2,23 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
     "ericfennis",
-    "karsa-mistmere",
-    "lscheibel",
-    "jguddas"
+    "jguddas",
+    "Veatec22"
   ],
   "use-cases": [],
   "tags": [
-    "$extends:cloud",
+    "$extends:search",
     "$group:exclamation-mark",
-    "sync",
-    "network"
+    "stop",
+    "anomaly"
   ],
   "categories": [
-    "development",
-    "notifications",
-    "weather"
+    "$extends:search"
+  ],
+  "aliases": [
+    {
+      "name": "search-alert"
+    }
   ]
 }

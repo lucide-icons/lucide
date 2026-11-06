@@ -16,5 +16,13 @@
   "categories": [
     "$extends:message-square",
     "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "message-square-warning"
+    },
+    {
+      "name": "message-square-alert"
+    }
   ]
 }

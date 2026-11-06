@@ -17,5 +17,13 @@
   "categories": [
     "$extends:message-circle",
     "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "message-circle-warning"
+    },
+    {
+      "name": "message-circle-alert"
+    }
   ]
 }

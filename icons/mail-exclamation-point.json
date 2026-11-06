@@ -1,23 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis",
+    "karsa-mistmere",
     "jguddas"
   ],
   "use-cases": [],
   "tags": [
-    "$group:exclamation-mark"
+    "$extends:mail",
+    "$group:exclamation-mark",
+    "delivery error"
   ],
   "categories": [
-    "$extends:octagon",
+    "mail",
     "notifications"
   ],
   "aliases": [
     {
-      "name": "alert-octagon",
-      "deprecationReason": "alias.name",
-      "deprecated": true
+      "name": "mail-warning"
+    },
+    {
+      "name": "mail-alert"
     }
   ]
 }
