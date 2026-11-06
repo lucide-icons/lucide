@@ -1,20 +1,8 @@
-import { defineNitroConfig } from 'nitropack/config';
+import { defineConfig } from 'nitro';
 
-export default defineNitroConfig({
+export default defineConfig({
   compatibilityDate: '2026-02-26',
   preset: 'vercel',
-  // srcDir: '.',
-  apiDir: 'api',
-  // noPublicDir: true,
-  srcDir: '.',
+  serverDir: './',
   ignore: ['.vitepress/plugins'],
-  routeRules: {
-    '/api/**': { cors: false },
-  },
-  esbuild: {
-    options: {
-      jsxFactory: 'React.createElement',
-      jsxFragment: 'React.Fragment',
-    },
-  },
 });

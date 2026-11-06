@@ -1,4 +1,4 @@
-import { eventHandler, setResponseHeader } from 'h3';
+import { defineHandler } from 'nitro/h3';
 import iconNodes from '~/.vitepress/data/iconNodes/index.ts';
 import iconMetaData from '~/.vitepress/data/iconMetaData';
 import releaseMeta from '~/.vitepress/data/releaseMetaData.json';
@@ -32,9 +32,9 @@ const dataResponse = {
   categories,
 };
 
-export default eventHandler((event) => {
-  setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
-  setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
+export default defineHandler((event) => {
+  event.res.headers.set('Cache-Control', 'public, max-age=86400');
+  event.res.headers.set('Access-Control-Allow-Origin', '*');
 
   return dataResponse;
 });

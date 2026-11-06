@@ -1,9 +1,9 @@
 import { fileURLToPath, URL } from 'node:url';
+import type { Plugin } from 'vite';
 import { defineConfig, UserConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import sidebar from './sidebar/index.ts';
-import nitro from '@analogjs/vite-plugin-nitro';
-import nitroConfig from '../nitro.config.ts';
+import { nitro } from 'nitro/vite';
 import snackPlayer from './markdown/snackPlayer.ts';
 import sandpackPlugin from './markdown/sandpack.ts';
 import examplePlugin from './markdown/example.ts';
@@ -27,6 +27,24 @@ const socialTitle = 'Lucide Icons';
 const description = 'Beautiful & consistent icon toolkit made by the community.';
 
 const isDev = process.env.NODE_ENV !== 'production';
+
+/**
+ * Nitro's dev middleware assumes it owns the app: it answers every extensionless request and
+ * never falls through, so VitePress pages would 404. `_nitroHandled` is the flag it checks to
+ * skip a request. It is private, so re-check this when upgrading Nitro.
+ */
+const nitroApiOnly: Plugin = {
+  name: 'lucide:nitro-api-only',
+  apply: 'serve',
+  configureServer(server) {
+    server.middlewares.use((req, _res, next) => {
+      if (!req.url?.startsWith('/api/')) {
+        (req as typeof req & { _nitroHandled?: boolean })._nitroHandled = true;
+      }
+      next();
+    });
+  },
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -52,6 +70,8 @@ export default defineConfig({
     },
   },
   vite: {
+    // Nitro defaults this to 'custom', which drops the HTML fallback VitePress relies on in dev.
+    appType: 'spa',
     resolve: {
       alias: [
         {
@@ -85,19 +105,8 @@ export default defineConfig({
       ],
     },
     plugins: [
-      isDev &&
-        nitro(
-          {
-            ssr: false,
-            sourceRoot: '.',
-          },
-          {
-            ...nitroConfig,
-            srcDir: '.',
-            routesDir: 'api',
-            scanDirs: ['.'],
-          },
-        ),
+      isDev && nitroApiOnly,
+      isDev && nitro(),
       groupIconVitePlugin(),
       llmstxt({
         ignoreFiles: [

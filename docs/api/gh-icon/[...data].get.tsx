@@ -1,4 +1,4 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+import { defineHandler } from 'nitro/h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 import SvgPreview from '~/.vitepress/lib/SvgPreview/index.tsx';
@@ -6,7 +6,7 @@ import iconNodes from '~/.vitepress/data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
 import Backdrop from '~/.vitepress/lib/SvgPreview/Backdrop.tsx';
 
-export default eventHandler((event) => {
+export default defineHandler((event) => {
   const { params } = event.context;
 
   const pathData = params.data.split('/');
@@ -46,8 +46,8 @@ export default eventHandler((event) => {
     );
   }
 
-  defaultContentType(event, 'image/svg+xml');
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
+  event.res.headers.set('Content-Type', 'image/svg+xml');
+  event.res.headers.set('Cache-Control', 'public,max-age=31536000');
 
   return renderToString(
     <SvgPreview

@@ -1,11 +1,11 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+import { defineHandler } from 'nitro/h3';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
 import Icon from 'lucide-react/src/Icon';
 import type { IconNode } from 'lucide-react/src/types';
 import { parseSync } from 'svgson';
 
-export default eventHandler((event) => {
+export default defineHandler((event) => {
   const { params } = event.context;
 
   const [strokeWidth, svgData] = params.data.split('/');
@@ -16,8 +16,8 @@ export default eventHandler((event) => {
     ({ name, attributes }) => [name, attributes],
   ) as IconNode;
 
-  defaultContentType(event, 'image/svg+xml');
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
+  event.res.headers.set('Content-Type', 'image/svg+xml');
+  event.res.headers.set('Cache-Control', 'public,max-age=31536000');
 
   return renderToString(
     <Icon

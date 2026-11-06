@@ -21,9 +21,8 @@
     "prebuild:writeLabIconNodes": "node ./scripts/writeLabIconNodes.mts",
     "prebuild:writeLabIconMetaIndex": "node ./scripts/writeLabIconMetaIndex.mts",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mts",
-    "dev:api": "nitropack dev",
-    "prebuild:api": "nitropack prepare",
-    "build:api": "NODE_OPTIONS=--max-old-space-size=8192 nitropack build",
+    "dev:api": "nitro dev",
+    "build:api": "NODE_OPTIONS=--max-old-space-size=8192 nitro build",
     "build": "pnpm run /^prebuild:.*/ && pnpm run build:api && pnpm run build:docs && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs",
     "typecheck": "vue-tsc --noEmit"
@@ -38,10 +37,9 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/semver": "^7.8.0",
-    "h3": "^1.15.11",
     "markdown-it": "^15.0.3",
     "markdown-it-container": "^4.0.0",
-    "nitropack": "^2.13.5",
+    "nitro": "3.0.261103-rc",
     "rollup-plugin-copy": "^3.5.0",
     "semver": "^7.8.5",
     "sharp": "^0.35.5",
@@ -58,7 +56,6 @@
     "vue-tsc": "^3.3.11"
   },
   "dependencies": {
-    "@analogjs/vite-plugin-nitro": "^2.6.3",
     "@floating-ui/vue": "^2.0.1",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",

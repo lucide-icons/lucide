@@ -1,9 +1,9 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+import { defineHandler } from 'nitro/h3';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
 import Diff from '~/.vitepress/lib/SvgPreview/Diff.tsx';
 
-export default eventHandler((event) => {
+export default defineHandler((event) => {
   const { params } = event.context;
 
   const pathData = params.data.split('/');
@@ -41,8 +41,8 @@ export default eventHandler((event) => {
     return '';
   }
 
-  defaultContentType(event, 'image/svg+xml');
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
+  event.res.headers.set('Content-Type', 'image/svg+xml');
+  event.res.headers.set('Cache-Control', 'public,max-age=31536000');
 
   return renderToString(
     <Diff

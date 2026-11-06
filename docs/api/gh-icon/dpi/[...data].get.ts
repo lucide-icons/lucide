@@ -1,11 +1,11 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+import { defineHandler } from 'nitro/h3';
 import iconNodes from '~/.vitepress/data/iconNodes';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
 import sharp from 'sharp';
 
-export default eventHandler(async (event) => {
+export default defineHandler(async (event) => {
   const { params = {} } = event.context;
   const imageSize = 96;
   const name = params.data.split('/').at(-3);
@@ -42,8 +42,8 @@ export default eventHandler(async (event) => {
 
   const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 
-  defaultContentType(event, 'image/svg+xml');
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
+  event.res.headers.set('Content-Type', 'image/svg+xml');
+  event.res.headers.set('Cache-Control', 'public,max-age=31536000');
 
   return `
 <svg xmlns="http://www.w3.org/2000/svg" width="${imageSize}" height="${prevSvg ? imageSize * 2 : imageSize}" viewBox="0 0 ${imageSize} ${prevSvg ? imageSize * 2 : imageSize}">

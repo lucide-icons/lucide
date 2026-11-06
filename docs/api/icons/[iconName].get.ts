@@ -1,21 +1,19 @@
-import { eventHandler, getQuery, setResponseHeader, createError } from 'h3';
+import { defineHandler, getQuery, HTTPError } from 'nitro/h3';
 import iconNodes from '~/.vitepress/data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
 import { renderToString } from 'react-dom/server';
 import { createElement } from 'react';
 
-export default eventHandler((event) => {
+export default defineHandler((event) => {
   const { params } = event.context;
 
   const iconNode = iconNodes[params.iconName];
 
   if (iconNode == null) {
-    const error = createError({
-      statusCode: 404,
+    throw new HTTPError({
+      status: 404,
       message: `Icon "${params.iconName}" not found`,
     });
-
-    return sendError(event, error);
   }
 
   const query = getQuery<Record<string, string | undefined>>(event);
@@ -39,9 +37,9 @@ export default eventHandler((event) => {
     ),
   ).toString('utf8');
 
-  defaultContentType(event, 'image/svg+xml');
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
-  setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
+  event.res.headers.set('Content-Type', 'image/svg+xml');
+  event.res.headers.set('Cache-Control', 'public,max-age=31536000');
+  event.res.headers.set('Access-Control-Allow-Origin', '*');
 
   return svg;
 });

@@ -1,13 +1,13 @@
-import { eventHandler, getQuery, setResponseHeader } from 'h3';
+import { defineHandler, getQuery } from 'nitro/h3';
 import iconNodes from '~/.vitepress/data/iconNodes';
 
-export default eventHandler((event) => {
+export default defineHandler((event) => {
   const query = getQuery(event);
 
   const withUniqueKeys = query.withUniqueKeys === 'true';
 
-  setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
-  setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
+  event.res.headers.set('Cache-Control', 'public, max-age=86400');
+  event.res.headers.set('Access-Control-Allow-Origin', '*');
 
   if (withUniqueKeys) {
     return iconNodes;
