@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Carl-Lambert"
+  ],
+  "use-cases": [
+    "Representing a data lakehouse, combining a data lake and a data warehouse, in architecture diagrams or product navigation",
+    "Indicating an analytics storage layer holding raw and structured data for BI",
+    "Marking tables or datasets stored in a lakehouse in a data catalog"
+  ],
+  "tags": [
+    "lakehouse",
+    "data lake",
+    "data warehouse",
+    "analytics",
+    "big data",
+    "storage",
+    "water",
+    "lake",
+    "waves",
+    "repository",
+    "building"
+  ],
+  "categories": [
+    "development",
+    "buildings"
+  ]
+}
