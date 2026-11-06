@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Carl-Lambert"
+  ],
+  "use-cases": [
+    "Representing an AI agent that performs tasks on behalf of the user",
+    "Indicating AI-powered automation or workflows run by an AI model",
+    "Opening or adding an AI assistant from a button or menu"
+  ],
+  "tags": [
+    "$extends:bot",
+    "$group:sparkles",
+    "agent",
+    "ai agent",
+    "autonomous",
+    "copilot",
+    "llm"
+  ],
+  "categories": [
+    "$extends:bot"
+  ]
+}
