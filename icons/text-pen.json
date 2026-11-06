@@ -1,10 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
     "ericfennis",
-    "wojtekmaj",
-    "mittalyashu",
-    "danielbayley",
     "karsa-mistmere",
     "rrod497"
   ],
@@ -15,23 +13,19 @@
     "representing auto-complete, snippet expansion or other forms of quick automated text insertion / substitution"
   ],
   "tags": [
-    "rubber",
+    "draft",
     "edit",
     "create",
+    "write",
     "draw",
     "sketch",
-    "writer",
-    "writing",
-    "stationery",
-    "artist",
-    "fast",
     "quick",
     "doodle",
-    "speed",
-    "swift",
-    "rapid",
-    "velocity",
-    "dynamic"
+    "autosave",
+    "prompt",
+    "pencil",
+    "scratch",
+    "authoring"
   ],
   "categories": [
     "design",
