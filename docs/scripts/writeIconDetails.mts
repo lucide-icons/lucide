@@ -61,7 +61,7 @@ export default iconDetails;
   await fs.promises.writeFile(location, contents, 'utf-8');
   await fs.promises.appendFile(
     indexFile,
-    `export { default as ${toCamelCase(iconName)} } from './${iconName}';\n`,
+    `export { default as ${toCamelCase(iconName)} } from './${iconName}.ts';\n`,
     'utf-8',
   );
 });

@@ -1,5 +1,5 @@
-import { getAllCategoryFiles, mapCategoryIconCount } from '../../../lib/categories';
-import iconsMetaData from '../../../data/iconMetaData';
+import { getAllCategoryFiles, mapCategoryIconCount } from '../../../lib/categories.ts';
+import iconsMetaData from '../../../data/iconMetaData.ts';
 
 const loader = {
   async load() {

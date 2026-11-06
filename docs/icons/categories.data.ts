@@ -1,5 +1,5 @@
-import { getAllCategoryFiles } from '../.vitepress/lib/categories';
-import iconMetaData from '../.vitepress/data/iconMetaData';
+import { getAllCategoryFiles } from '../.vitepress/lib/categories.ts';
+import iconMetaData from '../.vitepress/data/iconMetaData.ts';
 
 export default {
   async load() {
