@@ -3,7 +3,10 @@
   "contributors": [
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a column from a table or spreadsheet",
+    "Excluding a field from a tabular dataset"
+  ],
   "tags": [
     "$extends:table",
     "column",
