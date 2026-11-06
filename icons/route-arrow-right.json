@@ -5,12 +5,11 @@
     "samuelalake"
   ],
   "use-cases": [
-    "extends:route",
-    "indicate a directed route on a map",
-    "show a recommended right turn in navigation instructions",
-    "mark progress toward the next waypoint",
-    "represent rerouting or an alternate path to the right",
-    "signal forward movement in travel or transit apps"
+    "Indicating a directed route on a map",
+    "Showing a recommended right turn in navigation instructions",
+    "Marking progress toward the next waypoint",
+    "Representing rerouting or an alternate path to the right",
+    "Signaling forward movement in travel or transit apps"
   ],
   "tags": [
     "$extends:route",
