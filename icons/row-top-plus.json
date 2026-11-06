@@ -9,7 +9,9 @@
   "tags": [
     "$extends:table",
     "row",
-    "add"
+    "add",
+    "insert",
+    "prepend"
   ],
   "categories": [
     "$extends:table"
