@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "barcode",
+    "$extends:scan",
     "scan",
-    "qrcode",
+    "qr code",
     "url",
     "information",
     "digital",

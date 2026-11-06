@@ -6,20 +6,19 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing synchronization between desktop and mobile devices",
+    "Representing responsive previews across screen sizes",
+    "Indicating casting or screen sharing to a display"
+  ],
   "tags": [
-    "smartphone",
-    "phone",
-    "cellphone",
-    "device",
-    "mobile",
-    "desktop",
-    "monitor",
-    "responsive",
-    "screens"
+    "$extends:monitor",
+    "$extends:smartphone",
+    "screens",
+    "sync",
+    "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

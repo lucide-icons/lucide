@@ -6,12 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:plus",
     "stories",
     "social media",
-    "instagram",
-    "facebook",
-    "meta",
-    "snapchat",
     "sharing",
     "content"
   ],

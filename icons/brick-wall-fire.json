@@ -6,18 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:brick-wall",
     "firewall",
     "security",
-    "bricks",
-    "mortar",
-    "cement",
-    "materials",
-    "construction",
-    "builder",
-    "labourer",
-    "quantity surveyor",
-    "blocks",
-    "stone",
     "campfire",
     "camping",
     "wilderness",
@@ -30,7 +21,6 @@
   ],
   "categories": [
     "security",
-    "home",
     "connectivity"
   ]
 }

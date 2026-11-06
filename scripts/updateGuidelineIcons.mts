@@ -14,7 +14,7 @@ for (const file of readdirSync(path.join(import.meta.dirname, '../docs/images'))
           [
             groupOpeningTag,
             ...readFileSync(path.join(import.meta.dirname, `../icons/${iconName}.svg`), 'utf8')
-              .replace(/(<svg)([^>]|\n)*>|<\/svg>/g, '')
+              .replace(/(<svg)[^>]*>|<\/svg>/g, '')
               .split('\n'),
           ]
             .map((val) => val.trimEnd())

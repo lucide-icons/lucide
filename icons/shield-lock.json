@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "caisere",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing encryption settings in security apps",
+    "Indicating secure login or authentication",
+    "Opening privacy controls in account settings",
+    "Representing security software or antivirus tools",
+    "Marking secure or encrypted file storage"
+  ],
+  "tags": [
+    "$extends:shield",
+    "$group:lock",
+    "authentication",
+    "credentials",
+    "data protection",
+    "encryption",
+    "login",
+    "ssl",
+    "tls",
+    "two-factor authentication",
+    "vpn"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}

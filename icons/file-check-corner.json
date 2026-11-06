@@ -7,15 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
-    "document",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:file-check"
   ],
   "categories": [
-    "files"
+    "$extends:file-check"
   ],
   "aliases": [
     {

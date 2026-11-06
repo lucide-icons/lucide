@@ -1,13 +1,12 @@
 import { eventHandler, setResponseHeader } from 'h3';
 import iconNodes from '~/.vitepress/data/iconNodes/index.ts';
-import { IconNodeWithKeys } from '~/.vitepress/theme/types';
 import iconMetaData from '~/.vitepress/data/iconMetaData';
 import releaseMeta from '~/.vitepress/data/releaseMetaData.json';
 import categories from '~/.vitepress/data/categoriesData.json';
 
 const dataResponse = {
   icons: Object.entries(iconNodes).reduce((acc, [name, iconNode]) => {
-    const newIconNode = (iconNode as IconNodeWithKeys).map(([name, { key, ...attrs }]) => {
+    const newIconNode = iconNode.map(([name, { key, ...attrs }]) => {
       return [name, attrs];
     });
 

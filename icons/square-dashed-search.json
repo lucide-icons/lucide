@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-dashed",
+    "domarku"
+  ],
+  "use-cases": [
+    "Searching within a selected region",
+    "Finding content inside a placeholder area",
+    "Scanning a marquee selection",
+    "Zooming a selected region"
+  ],
+  "tags": [
+    "$extends:square-dashed",
+    "$group:search"
+  ],
+  "categories": [
+    "$extends:square-dashed"
+  ]
+}

@@ -8,9 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:panel-top",
+    "$group:position-bottom",
     "sidebar",
     "primary",
-    "drawer",
     "show",
     "reveal",
     "padding",

@@ -5,11 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "double",
-    "arrow"
+    "$extends:move-diagonal"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:move-diagonal"
   ]
 }

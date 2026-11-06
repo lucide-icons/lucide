@@ -7,22 +7,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "screen",
-    "display",
-    "desktop",
+    "$extends:monitor",
+    "$group:pause",
     "video",
     "movie",
     "film",
-    "suspend",
     "hibernate",
-    "boot",
-    "virtual machine",
-    "vm"
+    "boot"
   ],
   "categories": [
-    "connectivity",
-    "devices",
+    "$extends:monitor",
     "multimedia"
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Picking a transport type in journey planning or racing apps",
+    "Highlighting a delivery driver on a map when they ride a motorbike"
+  ],
+  "tags": [
+    "scooter",
+    "two-wheeler",
+    "commute",
+    "urban",
+    "city",
+    "courier",
+    "motorbike",
+    "moto",
+    "motorcycle",
+    "transport",
+    "vehicle",
+    "drive",
+    "ride",
+    "race",
+    "racing",
+    "trip",
+    "journey",
+    "delivery",
+    "off-road",
+    "dirt bike",
+    "trail",
+    "enduro"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:gamepad",
     "direction",
     "arrow",
     "controller",
@@ -14,12 +15,10 @@
     "move",
     "pointer",
     "arrowhead",
-    "console",
     "game",
     "gaming"
   ],
   "categories": [
-    "gaming",
-    "devices"
+    "$extends:gamepad"
   ]
 }

@@ -16,21 +16,20 @@ export function getAllCategoryFiles(): Omit<Category, 'iconCount'>[] {
     return {
       name,
       title: parsedFileContent.title,
+      description: parsedFileContent.description,
     };
   });
 }
 
 export function mapCategoryIconCount(
-  categories: Category[],
+  categories: Omit<Category, 'iconCount'>[],
   icons: { categories: IconEntity['categories'] }[],
-) {
-  return categories.map(
-    (category): Category => ({
-      ...category,
-      iconCount: icons.reduce(
-        (acc, curr) => (curr.categories.includes(category.name) ? ++acc : acc),
-        0,
-      ),
-    }),
-  );
+): Category[] {
+  return categories.map((category) => ({
+    ...category,
+    iconCount: icons.reduce(
+      (acc, curr) => (curr.categories.includes(category.name) ? ++acc : acc),
+      0,
+    ),
+  }));
 }

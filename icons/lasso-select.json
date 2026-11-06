@@ -7,12 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "select",
-    "cursor"
+    "$extends:lasso"
   ],
   "categories": [
-    "arrows",
-    "design",
-    "cursors"
+    "$extends:lasso"
   ]
 }

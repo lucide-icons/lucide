@@ -8,14 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge"
+    "$extends:battery"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:battery"
   ]
 }
