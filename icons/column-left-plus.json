@@ -12,6 +12,7 @@
     "add"
   ],
   "categories": [
-    "$extends:table"
+    "$extends:table",
+    "layout"
   ]
 }
