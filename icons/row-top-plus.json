@@ -3,7 +3,9 @@
   "contributors": [
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting a new row at the top of a table"
+  ],
   "tags": [
     "$extends:table",
     "row",
