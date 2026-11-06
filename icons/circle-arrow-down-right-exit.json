@@ -16,6 +16,11 @@
       "name": "arrow-down-right-from-circle",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "circle-arrow-out-down-right",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }
