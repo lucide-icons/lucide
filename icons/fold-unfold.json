@@ -2,7 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "Carlito-la-banane"
+    "Carl-Lambert"
   ],
   "use-cases": [
     "Representing a network router in infrastructure diagrams",
