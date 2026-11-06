@@ -11,7 +11,10 @@
     "$extends:table",
     "row",
     "delete",
-    "remove"
+    "remove",
+    "record",
+    "entry",
+    "database"
   ],
   "categories": [
     "$extends:table"
