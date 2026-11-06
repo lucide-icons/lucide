@@ -3,14 +3,36 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a route or journey with stops",
+    "Indicating direction or waypoints along a path",
+    "Visualizing travel routes on a map",
+    "Planning trips or itineraries",
+    "Showing progress along a route",
+    "Marking key locations along a route",
+    "Tracking movement along a predefined path"
+  ],
   "tags": [
     "path",
     "journey",
     "planner",
     "points",
     "stops",
-    "stations"
+    "stations",
+    "direction",
+    "right",
+    "flow",
+    "reroute",
+    "detour",
+    "navigate",
+    "forward",
+    "auto",
+    "map",
+    "waypoint",
+    "gps",
+    "turn",
+    "location",
+    "directional"
   ],
   "categories": [
     "navigation"
