@@ -3,12 +3,13 @@
   "contributors": [
     "6teloiv"
   ],
+  "use-cases": [],
   "tags": [
     "outwards",
     "direction",
-    "south",
-    "pour",
-    "empty"
+    "north",
+    "upload",
+    "share"
   ],
   "categories": [
     "arrows",

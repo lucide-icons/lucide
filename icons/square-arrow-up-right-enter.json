@@ -3,13 +3,11 @@
   "contributors": [
     "6teloiv"
   ],
+  "use-cases": [],
   "tags": [
     "inwards",
     "direction",
-    "south",
-    "input",
-    "download",
-    "press"
+    "north-east"
   ],
   "categories": [
     "arrows",

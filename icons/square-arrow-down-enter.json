@@ -3,12 +3,14 @@
   "contributors": [
     "6teloiv"
   ],
+  "use-cases": [],
   "tags": [
-    "outwards",
+    "inwards",
     "direction",
-    "east",
-    "output",
-    "exit"
+    "south",
+    "input",
+    "download",
+    "press"
   ],
   "categories": [
     "arrows",

@@ -3,14 +3,11 @@
   "contributors": [
     "6teloiv"
   ],
+  "use-cases": [],
   "tags": [
     "inwards",
     "direction",
-    "south-west",
-    "collapse",
-    "exit",
-    "close",
-    "return"
+    "south-east"
   ],
   "categories": [
     "arrows",

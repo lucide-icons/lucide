@@ -3,12 +3,11 @@
   "contributors": [
     "6teloiv"
   ],
+  "use-cases": [],
   "tags": [
-    "outwards",
+    "inwards",
     "direction",
-    "west",
-    "back",
-    "reverse"
+    "north-west"
   ],
   "categories": [
     "arrows",
