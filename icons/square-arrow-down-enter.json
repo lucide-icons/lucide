@@ -6,13 +6,20 @@
   ],
   "use-cases": [
     "Downloading content to a device",
-    "Contracting a pane or grid cell from its top edge"
+    "Contracting a pane or grid cell from its top edge",
+    "Expanding a pane into a neighboring cell in a dashboard"
   ],
   "tags": [
     "$group:direction-down",
     "$group:enter",
     "download",
-    "press"
+    "press",
+    "resize",
+    "pane",
+    "grid",
+    "cell",
+    "merge",
+    "split"
   ],
   "categories": [
     "$extends:square-arrow-down",

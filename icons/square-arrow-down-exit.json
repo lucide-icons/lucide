@@ -5,13 +5,21 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Expanding a pane or grid cell past its bottom edge"
+    "Expanding a pane or grid cell past its bottom edge",
+    "Resizing neighboring panes in code editors or dashboards"
   ],
   "tags": [
     "$group:direction-down",
     "$group:exit",
     "pour",
-    "empty"
+    "empty",
+    "resize",
+    "resizing",
+    "pane",
+    "grid",
+    "cell",
+    "window",
+    "expand"
   ],
   "categories": [
     "$extends:square-arrow-down"
