@@ -11,10 +11,7 @@
   "tags": [
     "$group:direction-up-right",
     "$group:enter",
-    "resize",
-    "pane",
-    "window",
-    "grid",
+    "$group:layout-resize",
     "expand",
     "contract"
   ],

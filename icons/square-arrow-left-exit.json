@@ -11,15 +11,11 @@
   "tags": [
     "$group:direction-left",
     "$group:exit",
+    "$group:layout-resize",
     "back",
     "reverse",
     "<-",
-    "collapse",
-    "pane",
-    "window",
-    "grid",
-    "resize",
-    "merge"
+    "collapse"
   ],
   "categories": [
     "$extends:square-arrow-left"

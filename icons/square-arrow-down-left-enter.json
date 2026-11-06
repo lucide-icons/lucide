@@ -12,16 +12,12 @@
   "tags": [
     "$group:direction-down-left",
     "$group:enter",
+    "$group:layout-resize",
     "collapse",
     "exit",
     "close",
     "return",
-    "dock",
-    "merge",
-    "pane",
-    "window",
-    "grid",
-    "resize"
+    "dock"
   ],
   "categories": [
     "$extends:square-arrow-out-down-left"

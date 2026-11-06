@@ -12,17 +12,13 @@
   "tags": [
     "$group:direction-up",
     "$group:enter",
+    "$group:layout-resize",
     "project",
     "cast",
     "screen",
     "projection",
     "presentation",
-    "pane",
-    "window",
-    "resize",
     "expand",
-    "merge",
-    "grid",
     "cell"
   ],
   "categories": [

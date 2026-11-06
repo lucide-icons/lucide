@@ -11,17 +11,14 @@
   "tags": [
     "$group:direction-left",
     "$group:enter",
+    "$group:layout-resize",
     "reverse",
     "back",
     "<-",
-    "resize",
-    "pane",
     "cell",
-    "grid",
     "expand",
     "collapse",
-    "split",
-    "merge"
+    "split"
   ],
   "categories": [
     "$extends:square-arrow-left"

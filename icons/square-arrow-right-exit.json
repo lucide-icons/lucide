@@ -16,6 +16,7 @@
   "tags": [
     "$group:direction-right",
     "$group:exit",
+    "$group:layout-resize",
     "->",
     "sign out",
     "log out",
@@ -24,10 +25,7 @@
     "data flow",
     "node editor",
     "expand",
-    "pane",
     "panel",
-    "resize",
-    "grid",
     "cell",
     "outbound"
   ],

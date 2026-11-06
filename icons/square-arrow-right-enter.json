@@ -16,6 +16,7 @@
   "tags": [
     "$group:direction-right",
     "$group:enter",
+    "$group:layout-resize",
     "left",
     "source",
     "place",
@@ -27,12 +28,7 @@
     "auth",
     "data flow",
     "node editor",
-    "resize",
-    "pane",
     "panel",
-    "grid",
-    "window",
-    "merge",
     "expand"
   ],
   "categories": [

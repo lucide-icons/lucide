@@ -11,11 +11,8 @@
   "tags": [
     "$group:direction-down-right",
     "$group:enter",
-    "resize",
-    "resizing",
-    "pane",
-    "grid",
-    "window"
+    "$group:layout-resize",
+    "resizing"
   ],
   "categories": [
     "$extends:square-arrow-out-down-right"

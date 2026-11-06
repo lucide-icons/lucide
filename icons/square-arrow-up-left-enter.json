@@ -11,13 +11,9 @@
   "tags": [
     "$group:direction-up-left",
     "$group:enter",
-    "resize",
+    "$group:layout-resize",
     "resizing",
-    "merge",
-    "merging",
-    "pane",
-    "grid",
-    "window"
+    "merging"
   ],
   "categories": [
     "$extends:square-arrow-out-up-left"
