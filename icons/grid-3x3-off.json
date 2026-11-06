@@ -23,5 +23,12 @@
   ],
   "categories": [
     "$extends:grid-3x3"
+  ],
+  "aliases": [
+    {
+      "name": "grid-3-x-3-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }
