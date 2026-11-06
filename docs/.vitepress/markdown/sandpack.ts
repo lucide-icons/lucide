@@ -1,6 +1,6 @@
-import type { MarkdownIt, RenderRule, Token } from './types';
+import type { MarkdownIt, RenderRule, Token } from './types.ts';
 import container from 'markdown-it-container';
-import sandpackTheme from '../theme/sandpackTheme.json';
+import sandpackTheme from '../theme/sandpackTheme.json' with { type: 'json' };
 
 type SnackParams = {
   defaultFiles?: Record<

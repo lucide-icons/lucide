@@ -1,6 +1,6 @@
 import { promises as fs, constants } from 'fs';
 import path from 'path';
-import { PackageItem } from '../theme/types';
+import { type PackageItem } from '../theme/types.ts';
 
 const fileExist = (filePath) =>
   fs
