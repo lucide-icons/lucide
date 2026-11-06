@@ -18,8 +18,6 @@
     "dock"
   ],
   "categories": [
-    "$extends:square-arrow-out-down-left",
-    "navigation",
-    "layout"
+    "$extends:square-arrow-out-down-left"
   ]
 }

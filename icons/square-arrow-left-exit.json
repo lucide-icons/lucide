@@ -15,8 +15,6 @@
     "<-"
   ],
   "categories": [
-    "$extends:square-arrow-left",
-    "navigation",
-    "layout"
+    "$extends:square-arrow-left"
   ]
 }

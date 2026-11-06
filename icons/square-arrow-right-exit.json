@@ -27,8 +27,6 @@
   "categories": [
     "$extends:square-arrow-right",
     "account",
-    "navigation",
-    "layout",
     "development"
   ]
 }

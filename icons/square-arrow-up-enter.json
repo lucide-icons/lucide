@@ -15,8 +15,6 @@
     "cast"
   ],
   "categories": [
-    "$extends:square-arrow-up",
-    "navigation",
-    "layout"
+    "$extends:square-arrow-up"
   ]
 }

@@ -14,8 +14,6 @@
     "empty"
   ],
   "categories": [
-    "$extends:square-arrow-down",
-    "navigation",
-    "layout"
+    "$extends:square-arrow-down"
   ]
 }

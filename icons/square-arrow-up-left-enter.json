@@ -12,8 +12,6 @@
     "$group:enter"
   ],
   "categories": [
-    "$extends:square-arrow-out-up-left",
-    "navigation",
-    "layout"
+    "$extends:square-arrow-out-up-left"
   ]
 }

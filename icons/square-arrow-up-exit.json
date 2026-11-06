@@ -17,8 +17,6 @@
   ],
   "categories": [
     "$extends:square-arrow-up",
-    "navigation",
-    "layout",
     "files",
     "social"
   ]
