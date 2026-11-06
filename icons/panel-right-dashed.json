@@ -7,9 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "sidebar",
-    "secondary",
-    "drawer",
+    "$extends:panel-right",
     "show",
     "reveal",
     "padding",
@@ -19,7 +17,7 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-right"
   ],
   "aliases": [
     {

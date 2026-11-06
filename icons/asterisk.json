@@ -2,10 +2,20 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "use-cases": [],
   "tags": [
+    "symbol",
+    "mark",
+    "pointer",
+    "pencil",
+    "sign",
+    "alert",
+    "notification",
+    "indicator",
+    "symbolic",
     "reference",
     "times",
     "multiply",

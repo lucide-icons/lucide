@@ -1,0 +1,18 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Placement: at the bottom or lower edge",
+  "tags": [
+    "position",
+    "placement",
+    "bottom",
+    "bottommost",
+    "bottom edge",
+    "lower edge",
+    "lower",
+    "below",
+    "vertical",
+    "block",
+    "y",
+    "y-axis"
+  ]
+}

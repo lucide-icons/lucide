@@ -3,10 +3,22 @@ import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
 import getIconEntryNamesAndAliases from './scripts/getIconEntryNamesAndAliases.mts';
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
+const iconAndAliasEntries = await getIconEntryNamesAndAliases();
+// Alias modules (e.g. `icons/trash-2`) aren't imported by the index, so list them as entries
+// to emit the runtime files the `./icons/*` export map points at.
+const inputs = [
+  'src/lucide-react-native.ts',
+  'src/icons/index.ts',
+  ...Object.values(iconAndAliasEntries),
+];
 const bundles = [
   {
     format: 'cjs',
@@ -23,7 +35,6 @@ const bundles = [
   },
 ];
 
-const iconAndAliasEntries = await getIconEntryNamesAndAliases();
 const typesModuleMatcher = /[/\\]src[/\\]types\.(d\.)?ts$/;
 
 const configs = bundles.map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) => ({
@@ -60,7 +71,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: 'src/icons/index.ts',
@@ -70,7 +81,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: iconAndAliasEntries,
@@ -95,7 +106,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -105,7 +116,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   ...configs,
 ];

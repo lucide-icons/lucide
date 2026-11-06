@@ -5,16 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
+    "$group:plus",
     "book",
-    "purchase",
-    "add",
-    "+"
+    "purchase"
   ],
   "categories": [
     "transportation"

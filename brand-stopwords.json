@@ -56,7 +56,6 @@
   "kubernetes": "Kubernetes",
   "leetcode": "LeetCode",
   "leet-code": "LeetCode",
-  "line": "LINE",
   "linkedin": "LinkedIn",
   "lua": "Lua",
   "mariadb": "MariaDB",
@@ -69,7 +68,7 @@
   "nestjs": "NestJS",
   "netflix": "Netflix",
   "netlify": "Netlify",
-  "next": "Next.js",
+  "nextjs": "Next.js",
   "nodejs": "Node.js",
   "notion": "Notion",
   "nostr": "Nostr",
@@ -105,7 +104,8 @@
   "shopify": "Shopify",
   "skype": "Skype",
   "slack": "Slack",
-  "solid": "SolidJS",
+  "snapchat": "Snapchat",
+  "solidjs": "SolidJS",
   "soundcloud": "SoundCloud",
   "spotify": "Spotify",
   "sqlite": "SQLite",
@@ -144,6 +144,5 @@
   "xbox": "Xbox",
   "yarn": "Yarn",
   "youtube": "YouTube",
-  "zig": "Zig",
-  "zoom": "Zoom"
+  "zig": "Zig"
 }

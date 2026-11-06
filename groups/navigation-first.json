@@ -1,0 +1,17 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Position: the first item in a sequence",
+  "tags": [
+    "navigation",
+    "initial",
+    "beginning",
+    "home",
+    "first page",
+    "earliest",
+    "preceding",
+    "back",
+    "backward",
+    "backwards",
+    "prior"
+  ]
+}

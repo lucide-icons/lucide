@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "table",
+    "guides",
+    "number",
+    "pound",
+    "tic-tac-toe",
+    "noughts and crosses"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "tools",
+    "maths",
+    "gaming"
+  ]
+}
