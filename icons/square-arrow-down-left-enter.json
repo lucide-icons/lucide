@@ -1,20 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-out-down-left",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Docking a floating pane back into the main window",
+    "Contracting a pane or grid cell from its top-right corner"
+  ],
   "tags": [
-    "inwards",
-    "direction",
-    "south-west",
+    "$group:direction-down-left",
+    "$group:enter",
     "collapse",
     "exit",
     "close",
-    "return"
+    "return",
+    "dock"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-out-down-left",
+    "navigation",
+    "layout"
   ]
 }

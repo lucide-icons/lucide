@@ -4,19 +4,31 @@
     "ethanhazel",
     "karsa-mistmere",
     "ericfennis",
-    "6teloiv"
+    "6teloiv",
+    "lukedukeus"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing out of an account",
+    "Exporting data to a file or another app",
+    "Marking outputs on nodes in a node-based editor",
+    "Expanding a pane or grid cell past its right edge"
+  ],
   "tags": [
     "$group:direction-right",
-    "out",
-    "outside",
-    "output",
-    "export",
-    "->"
+    "$group:exit",
+    "->",
+    "sign out",
+    "log out",
+    "logout",
+    "auth",
+    "data flow",
+    "node editor"
   ],
   "categories": [
     "$extends:square-arrow-right",
-    "account"
+    "account",
+    "navigation",
+    "layout",
+    "development"
   ]
 }

@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-down",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding a pane or grid cell past its bottom edge"
+  ],
   "tags": [
-    "outwards",
-    "direction",
-    "south",
+    "$group:direction-down",
+    "$group:exit",
     "pour",
     "empty"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-down",
+    "navigation",
+    "layout"
   ]
 }

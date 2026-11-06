@@ -1,19 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-down",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading content to a device",
+    "Contracting a pane or grid cell from its top edge"
+  ],
   "tags": [
-    "inwards",
-    "direction",
-    "south",
-    "input",
+    "$group:direction-down",
+    "$group:enter",
     "download",
     "press"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-down",
+    "navigation",
+    "layout",
+    "files"
   ]
 }

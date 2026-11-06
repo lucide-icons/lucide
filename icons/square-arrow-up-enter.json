@@ -1,17 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-up",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Projecting content onto a screen",
+    "Contracting a pane or grid cell from its bottom edge"
+  ],
   "tags": [
-    "inwards",
-    "direction",
-    "north",
-    "project"
+    "$group:direction-up",
+    "$group:enter",
+    "project",
+    "cast"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-up",
+    "navigation",
+    "layout"
   ]
 }

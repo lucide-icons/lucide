@@ -1,18 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-left",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Contracting a pane or grid cell from its right edge"
+  ],
   "tags": [
-    "inwards",
-    "direction",
-    "west",
+    "$group:direction-left",
+    "$group:enter",
     "reverse",
-    "back"
+    "back",
+    "<-"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-left",
+    "navigation",
+    "layout"
   ]
 }

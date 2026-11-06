@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:square-arrow-out-up-left",
     "6teloiv"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Contracting a pane or grid cell from its bottom-right corner"
+  ],
   "tags": [
-    "inwards",
-    "direction",
-    "north-west"
+    "$group:direction-up-left",
+    "$group:enter"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:square-arrow-out-up-left",
+    "navigation",
+    "layout"
   ]
 }
