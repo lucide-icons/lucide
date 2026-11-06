@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <TabGroup>
+  <TabGroup as="div">
     <TabList class="tab-list">
       <template v-for="(tab, index) in props.tabs" :key="index">
         <Tab :id="`tab-${index}`" class="tab">{{ tab }}</Tab>
