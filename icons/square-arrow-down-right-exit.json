@@ -5,7 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "$group:direction-down-left",
+    "$group:direction-down-right",
     "outwards"
   ],
   "categories": [
@@ -13,9 +13,14 @@
   ],
   "aliases": [
     {
-      "name": "arrow-down-left-from-square",
+      "name": "arrow-down-right-from-square",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "square-arrow-out-down-right",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }
