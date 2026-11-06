@@ -11,14 +11,10 @@
   "tags": [
     "$group:direction-down",
     "$group:exit",
+    "$group:layout-resize",
     "pour",
     "empty",
-    "resize",
-    "resizing",
-    "pane",
-    "grid",
     "cell",
-    "window",
     "expand"
   ],
   "categories": [

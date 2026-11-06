@@ -6,6 +6,7 @@
     "grid",
     "resize",
     "window",
-    "merge"
+    "merge",
+    "resizing"
   ]
 }

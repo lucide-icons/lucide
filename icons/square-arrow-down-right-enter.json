@@ -11,8 +11,7 @@
   "tags": [
     "$group:direction-down-right",
     "$group:enter",
-    "$group:layout-resize",
-    "resizing"
+    "$group:layout-resize"
   ],
   "categories": [
     "$extends:square-arrow-out-down-right"

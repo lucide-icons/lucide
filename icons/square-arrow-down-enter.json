@@ -12,13 +12,10 @@
   "tags": [
     "$group:direction-down",
     "$group:enter",
+    "$group:layout-resize",
     "download",
     "press",
-    "resize",
-    "pane",
-    "grid",
     "cell",
-    "merge",
     "split"
   ],
   "categories": [
