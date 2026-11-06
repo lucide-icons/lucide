@@ -5,14 +5,21 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Expanding a pane or grid cell past its left edge"
+    "Expanding a pane or grid cell past its left edge",
+    "Contracting a pane into its left neighbor in window layouts"
   ],
   "tags": [
     "$group:direction-left",
     "$group:exit",
     "back",
     "reverse",
-    "<-"
+    "<-",
+    "collapse",
+    "pane",
+    "window",
+    "grid",
+    "resize",
+    "merge"
   ],
   "categories": [
     "$extends:square-arrow-left"

@@ -5,11 +5,17 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Contracting a pane or grid cell from its top-left corner"
+    "Contracting a pane or grid cell from its top-left corner",
+    "Expanding a pane into the lower-right neighboring cell"
   ],
   "tags": [
     "$group:direction-down-right",
-    "$group:enter"
+    "$group:enter",
+    "resize",
+    "resizing",
+    "pane",
+    "grid",
+    "window"
   ],
   "categories": [
     "$extends:square-arrow-out-down-right"

@@ -22,7 +22,14 @@
     "logout",
     "auth",
     "data flow",
-    "node editor"
+    "node editor",
+    "expand",
+    "pane",
+    "panel",
+    "resize",
+    "grid",
+    "cell",
+    "outbound"
   ],
   "categories": [
     "$extends:square-arrow-right",

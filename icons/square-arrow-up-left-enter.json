@@ -5,11 +5,19 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Contracting a pane or grid cell from its bottom-right corner"
+    "Contracting a pane or grid cell from its bottom-right corner",
+    "Merging adjacent panes in code editors"
   ],
   "tags": [
     "$group:direction-up-left",
-    "$group:enter"
+    "$group:enter",
+    "resize",
+    "resizing",
+    "merge",
+    "merging",
+    "pane",
+    "grid",
+    "window"
   ],
   "categories": [
     "$extends:square-arrow-out-up-left"

@@ -5,14 +5,23 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Contracting a pane or grid cell from its right edge"
+    "Contracting a pane or grid cell from its right edge",
+    "Expanding a pane into an adjacent cell in grid layouts"
   ],
   "tags": [
     "$group:direction-left",
     "$group:enter",
     "reverse",
     "back",
-    "<-"
+    "<-",
+    "resize",
+    "pane",
+    "cell",
+    "grid",
+    "expand",
+    "collapse",
+    "split",
+    "merge"
   ],
   "categories": [
     "$extends:square-arrow-left"

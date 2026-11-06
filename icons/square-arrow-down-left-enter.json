@@ -6,7 +6,8 @@
   ],
   "use-cases": [
     "Docking a floating pane back into the main window",
-    "Contracting a pane or grid cell from its top-right corner"
+    "Contracting a pane or grid cell from its top-right corner",
+    "Merging neighboring panes in a code editor layout"
   ],
   "tags": [
     "$group:direction-down-left",
@@ -15,7 +16,12 @@
     "exit",
     "close",
     "return",
-    "dock"
+    "dock",
+    "merge",
+    "pane",
+    "window",
+    "grid",
+    "resize"
   ],
   "categories": [
     "$extends:square-arrow-out-down-left"

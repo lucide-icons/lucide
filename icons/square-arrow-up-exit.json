@@ -13,7 +13,10 @@
     "$group:direction-up",
     "$group:exit",
     "upload",
-    "share"
+    "share",
+    "external link",
+    "pop out",
+    "open in new window"
   ],
   "categories": [
     "$extends:square-arrow-up",

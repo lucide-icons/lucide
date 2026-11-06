@@ -6,13 +6,24 @@
   ],
   "use-cases": [
     "Projecting content onto a screen",
-    "Contracting a pane or grid cell from its bottom edge"
+    "Contracting a pane or grid cell from its bottom edge",
+    "Expanding a pane into an adjacent cell in a window grid"
   ],
   "tags": [
     "$group:direction-up",
     "$group:enter",
     "project",
-    "cast"
+    "cast",
+    "screen",
+    "projection",
+    "presentation",
+    "pane",
+    "window",
+    "resize",
+    "expand",
+    "merge",
+    "grid",
+    "cell"
   ],
   "categories": [
     "$extends:square-arrow-up"

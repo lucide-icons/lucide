@@ -5,11 +5,18 @@
     "6teloiv"
   ],
   "use-cases": [
-    "Contracting a pane or grid cell from its bottom-left corner"
+    "Contracting a pane or grid cell from its bottom-left corner",
+    "Expanding a pane or grid cell toward its upper-right corner"
   ],
   "tags": [
     "$group:direction-up-right",
-    "$group:enter"
+    "$group:enter",
+    "resize",
+    "pane",
+    "window",
+    "grid",
+    "expand",
+    "contract"
   ],
   "categories": [
     "arrows"

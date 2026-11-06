@@ -26,7 +26,14 @@
     "join",
     "auth",
     "data flow",
-    "node editor"
+    "node editor",
+    "resize",
+    "pane",
+    "panel",
+    "grid",
+    "window",
+    "merge",
+    "expand"
   ],
   "categories": [
     "$extends:square-arrow-right",
