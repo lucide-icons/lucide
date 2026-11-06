@@ -5,9 +5,10 @@
     "ericfennis",
     "irvineacosta"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:panel-top",
     "menu bar",
-    "drawer",
     "show",
     "reveal",
     "padding",
@@ -23,8 +24,7 @@
     {
       "name": "panel-top-inactive",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

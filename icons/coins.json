@@ -3,15 +3,19 @@
   "contributors": [
     "lscheibel",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:digit",
     "money",
     "cash",
     "finance",
     "gamble"
   ],
   "categories": [
-    "gaming"
+    "gaming",
+    "finance"
   ]
 }

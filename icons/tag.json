@@ -7,6 +7,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "label",
     "badge",
@@ -14,6 +15,7 @@
     "mark"
   ],
   "categories": [
-    "account"
+    "account",
+    "shopping"
   ]
 }

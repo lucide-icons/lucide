@@ -8,15 +8,12 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:sync",
     "rotate",
-    "reload",
-    "rerun",
-    "synchronise",
-    "synchronize",
     "arrows",
-    "circular",
-    "cycle"
+    "circular"
   ],
   "categories": [
     "arrows"

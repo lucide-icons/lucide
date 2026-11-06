@@ -5,22 +5,18 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "presentation"
+    "$group:chart"
   ],
   "categories": [
-    "charts",
-    "files"
+    "charts"
   ],
   "aliases": [
     {
       "name": "pie-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

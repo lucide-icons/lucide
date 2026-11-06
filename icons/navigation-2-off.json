@@ -4,11 +4,12 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "location",
-    "travel"
+    "$extends:navigation-2",
+    "$group:off"
   ],
   "categories": [
-    "navigation"
+    "$extends:navigation-2"
   ]
 }

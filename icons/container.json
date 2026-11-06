@@ -3,12 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "storage",
     "shipping",
     "freight",
     "supply chain",
-    "docker",
     "environment",
     "devops",
     "code",
@@ -16,7 +16,6 @@
   ],
   "categories": [
     "development",
-    "transportation",
-    "mail"
+    "transportation"
   ]
 }

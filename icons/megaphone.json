@@ -3,6 +3,7 @@
   "contributors": [
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "advertisement",
     "announcement",
@@ -14,6 +15,7 @@
   ],
   "categories": [
     "multimedia",
-    "notifications"
+    "notifications",
+    "communication"
   ]
 }

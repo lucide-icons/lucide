@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-  headingLevel: 1 | 2 | 3 | 4 | 5 | 6,
+  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6,
 }>()
 
 const headingElement = computed(() => `h${props.headingLevel ?? 2}`)

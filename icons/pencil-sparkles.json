@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "wojtekmaj",
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere",
+    "jennieboops"
+  ],
+  "use-cases": [
+    "Indicating AI-assisted writing or editing features",
+    "Representing automated writing or content generation tools"
+  ],
+  "tags": [
+    "$extends:pencil",
+    "$group:sparkles",
+    "tools",
+    "wizard",
+    "magician"
+  ],
+  "categories": [
+    "$extends:pencil"
+  ]
+}

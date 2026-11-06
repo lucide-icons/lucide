@@ -5,11 +5,15 @@
     "ericfennis",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
-    "share"
+    "$extends:monitor",
+    "$group:off",
+    "offline",
+    "disconnected",
+    "power"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

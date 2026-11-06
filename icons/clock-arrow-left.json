@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Indicating the start of a time range",
+    "Assigning timing information to an item",
+    "Opening time settings for an item"
+  ],
+  "tags": [
+    "$extends:clock",
+    "$group:direction-left",
+    "assign",
+    "range"
+  ],
+  "categories": [
+    "$extends:clock"
+  ]
+}

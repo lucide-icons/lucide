@@ -3,26 +3,20 @@
   "contributors": [
     "danielbayley",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:arrow-big-up",
+    "$group:direction-up",
     "caps lock",
     "capitals",
-    "keyboard",
-    "button",
-    "mac",
-    "forward",
-    "direction",
-    "north",
     "faster",
     "speed",
     "boost"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "text",
-    "development",
-    "gaming"
+    "$extends:arrow-big-up"
   ]
 }

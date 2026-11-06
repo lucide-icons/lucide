@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "it-is-not",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
-    "currency",
+    "$extends:receipt",
     "jpy",
     "¥"
   ],
   "categories": [
-    "finance",
-    "travel"
+    "$extends:receipt"
   ]
 }

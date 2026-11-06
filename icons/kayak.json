@@ -4,6 +4,7 @@
     "jguddas",
     "jpjacobpadilla"
   ],
+  "use-cases": [],
   "tags": [
     "kayak",
     "boat",
@@ -18,6 +19,7 @@
     "ocean"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "sports"
   ]
 }

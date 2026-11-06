@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:monitor",
+    "virtual desktop",
+    "vdi",
+    "computing",
+    "remote work",
+    "monitoring",
+    "infrastructure",
+    "software as a service",
+    "saas",
+    "workstation",
+    "environment"
+  ],
+  "categories": [
+    "$extends:monitor",
+    "development"
+  ]
+}

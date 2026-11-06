@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Konixy",
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating that autosave is active",
+    "Indicating a file or document was saved automatically"
+  ],
+  "tags": [
+    "$extends:save",
+    "$group:check",
+    "save",
+    "save-check",
+    "floppy-disk",
+    "saved",
+    "save-success"
+  ],
+  "categories": [
+    "$extends:save"
+  ]
+}

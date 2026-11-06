@@ -4,6 +4,7 @@
     "jguddas",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "gender",
     "sex",
@@ -13,6 +14,7 @@
     "boy"
   ],
   "categories": [
-    "medical"
+    "medical",
+    "people"
   ]
 }
