@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:table",
+    "column",
+    "add"
+  ],
+  "categories": [
+    "$extends:table"
+  ]
+}
