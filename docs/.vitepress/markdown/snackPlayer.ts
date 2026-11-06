@@ -16,7 +16,7 @@
  * />
  */
 
-import type { MarkdownIt } from './types';
+import type { MarkdownIt } from './types.ts';
 
 type SnackParams = Record<string, string>;
 

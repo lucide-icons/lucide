@@ -35,7 +35,7 @@ const writeIconFiles = Object.entries(iconMetaData).map(async ([iconName, metaDa
 import iconNode from '../iconNodes/${iconName}.node.json' with { type: 'json' };
 import releaseData from '../releaseMetadata/${iconName}.json' with { type: 'json' };
 import popularity from '../iconPopularity/${iconName}.json' with { type: 'json' };
-import { IconMetaData, IconNode } from '~/.vitepress/theme/types';
+import type { IconMetaData, IconNode } from '~/.vitepress/theme/types.ts';
 
 const metaData: IconMetaData = ${JSON.stringify({ tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion })};
 
@@ -61,7 +61,7 @@ export default iconDetails;
   await fs.promises.writeFile(location, contents, 'utf-8');
   await fs.promises.appendFile(
     indexFile,
-    `export { default as ${toCamelCase(iconName)} } from './${iconName}';\n`,
+    `export { default as ${toCamelCase(iconName)} } from './${iconName}.ts';\n`,
     'utf-8',
   );
 });

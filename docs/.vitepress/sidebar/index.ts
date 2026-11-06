@@ -1,15 +1,15 @@
 import { DefaultTheme, UserConfig } from 'vitepress';
-import { reactSidebar } from './react';
-import { vueSidebar } from './vue';
-import { svelteSidebar } from './svelte';
-import { lucideSidebar } from './lucide';
-import { solidSidebar } from './solid';
-import { preactSidebar } from './preact';
-import { reactNativeSidebar } from './react-native';
-import { astroSidebar } from './astro';
-import { resourcesSidebar } from './resources';
-import { angularSidebar } from './angular';
-import { lucideStaticSidebar } from './static';
+import { reactSidebar } from './react.ts';
+import { vueSidebar } from './vue.ts';
+import { svelteSidebar } from './svelte.ts';
+import { lucideSidebar } from './lucide.ts';
+import { solidSidebar } from './solid.ts';
+import { preactSidebar } from './preact.ts';
+import { reactNativeSidebar } from './react-native.ts';
+import { astroSidebar } from './astro.ts';
+import { resourcesSidebar } from './resources.ts';
+import { angularSidebar } from './angular.ts';
+import { lucideStaticSidebar } from './static.ts';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'];
 

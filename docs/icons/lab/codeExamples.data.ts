@@ -1,4 +1,4 @@
-import createCodeExamples from '../../.vitepress/lib/codeExamples/createLabCodeExamples';
+import createCodeExamples from '../../.vitepress/lib/codeExamples/createLabCodeExamples.ts';
 
 export default {
   async load() {

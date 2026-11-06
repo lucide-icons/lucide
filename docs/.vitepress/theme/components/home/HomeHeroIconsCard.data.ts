@@ -1,4 +1,4 @@
-import iconNodes from '../../../data/iconNodes';
+import iconNodes from '../../../data/iconNodes/index.ts';
 
 const pickIcons = [
   'bot',
