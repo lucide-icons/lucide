@@ -1,18 +1,17 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig, UserConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
-import sidebar from './sidebar';
-import getStructuredData from './getStructuredData';
+import sidebar from './sidebar/index.ts';
 import nitro from '@analogjs/vite-plugin-nitro';
-import nitroConfig from '../nitro.config';
-import snackPlayer from './markdown/snackPlayer';
-import sandpackPlugin from './markdown/sandpack';
-import examplePlugin from './markdown/example';
+import nitroConfig from '../nitro.config.ts';
+import snackPlayer from './markdown/snackPlayer.ts';
+import sandpackPlugin from './markdown/sandpack.ts';
+import examplePlugin from './markdown/example.ts';
 import { readFile } from 'node:fs/promises';
-import { resourcesSidebar } from './sidebar/resources';
+import { resourcesSidebar } from './sidebar/resources.ts';
 import llmstxt from 'vitepress-plugin-llms';
-import { transformPageData } from './transformPageData';
-import getHeadConfig from './getHeadConfig';
+import { transformPageData } from './transformPageData.ts';
+import getHeadConfig from './getHeadConfig.ts';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),

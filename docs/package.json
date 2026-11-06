@@ -31,7 +31,6 @@
   "author": "Eric Fennis",
   "license": "ISC",
   "devDependencies": {
-    "@docsearch/js": "3.8.2",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/shared": "workspace:*",
@@ -53,14 +52,13 @@
     "svg-pathdata": "^9.0.0",
     "svgson": "^5.3.1",
     "typescript": "^6.0.3",
-    "vitepress": "^1.6.4",
+    "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-group-icons": "^1.7.6",
     "vitepress-plugin-llms": "^1.13.5",
     "vue-tsc": "^3.3.11"
   },
   "dependencies": {
     "@analogjs/vite-plugin-nitro": "^2.6.3",
-    "@docsearch/css": "3.8.2",
     "@floating-ui/vue": "^2.0.1",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",

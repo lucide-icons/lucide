@@ -47,7 +47,7 @@ try {
   await fs.promises.writeFile(
     iconIndexFile,
     `\
-import type { IconNode } from '../../theme/types';
+import type { IconNode } from '../../theme/types.ts';
 ${iconIndexFileImports.join('\n')}
 
 ${iconIndexFileNodes.join('\n')}

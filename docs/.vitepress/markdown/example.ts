@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { dirname, isAbsolute, resolve } from 'node:path';
-import type { MarkdownIt, RenderRule } from './types';
+import type { MarkdownIt, RenderRule } from './types.ts';
 import container from 'markdown-it-container';
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
