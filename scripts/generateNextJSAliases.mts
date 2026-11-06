@@ -36,9 +36,18 @@ Promise.all(
       const metaJson = await fs.readFile(path.resolve(ICONS_DIR, `${iconName}.json`), 'utf-8');
       const iconMetaData = JSON.parse(metaJson);
 
-      const aliases = iconMetaData.aliases ?? [];
-      if (!aliases.includes(iconNameKebabCaseNextjsFlavour)) {
-        aliases.push(iconNameKebabCaseNextjsFlavour);
+      const aliases: (string | { name: string })[] = iconMetaData.aliases ?? [];
+      const hasAlias = aliases.some(
+        (alias) =>
+          (typeof alias === 'string' ? alias : alias.name) === iconNameKebabCaseNextjsFlavour,
+      );
+
+      if (!hasAlias) {
+        aliases.push({
+          name: iconNameKebabCaseNextjsFlavour,
+          deprecationReason: 'alias.name',
+          deprecated: true,
+        });
       }
 
       let output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
