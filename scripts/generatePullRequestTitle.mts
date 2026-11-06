@@ -75,6 +75,7 @@ const RULES: Rule[] = [
   { pattern: /^packages\/svelte\//, scope: '@lucide/svelte', kind: 'package' },
   { pattern: /^packages\/solid\//, scope: '@lucide/solid', kind: 'package' },
   { pattern: /^packages\/astro\//, scope: '@lucide/astro', kind: 'package' },
+  { pattern: /^packages\/hono\//, scope: '@lucide/hono', kind: 'package' },
   { pattern: /^packages\/lab\//, scope: '@lucide/lab', kind: 'package' },
   { pattern: /^packages\/shared\//, scope: '@lucide/shared', kind: 'package' },
   { pattern: /^packages\/lucide\//, scope: 'lucide', kind: 'package' },

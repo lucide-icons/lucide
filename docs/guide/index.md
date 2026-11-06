@@ -30,7 +30,7 @@ However, not everyone can understand them easily. Read more about [how to use Lu
 
 ## Official Packages
 
-Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](./lucide/index.md), [React](./react/index.md), [React Native](./react-native/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Preact](./preact/index.md), [Solid](./solid/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), and [Static](./static/index.md).
+Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](./lucide/index.md), [React](./react/index.md), [React Native](./react-native/index.md), [Vue](./vue/index.md), [Svelte](./svelte/index.md), [Preact](./preact/index.md), [Solid](./solid/index.md), [Angular](./angular/index.md), [Astro](./astro/index.md), [Hono](./hono/index.md), and [Static](./static/index.md).
 
 ## Community
 

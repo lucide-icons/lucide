@@ -52,6 +52,7 @@ jobs:
             'lucide-solid',
             '@lucide/angular',
             '@lucide/astro',
+            '@lucide/hono',
             '@lucide/icons',
             '@lucide/solid',
             '@lucide/svelte',
