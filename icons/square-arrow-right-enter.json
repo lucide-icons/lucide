@@ -3,23 +3,37 @@
   "contributors": [
     "ethanhazel",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "6teloiv",
+    "lukedukeus"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing in to an account",
+    "Joining a room or shared session",
+    "Marking inputs on nodes in a node-based editor",
+    "Contracting a pane or grid cell from its left edge"
+  ],
   "tags": [
     "$group:direction-right",
+    "$group:enter",
+    "$group:layout-resize",
     "left",
-    "in",
-    "inside",
-    "input",
-    "insert",
     "source",
-    "import",
     "place",
-    "->"
+    "->",
+    "sign in",
+    "log in",
+    "login",
+    "join",
+    "auth",
+    "data flow",
+    "node editor",
+    "panel",
+    "expand"
   ],
   "categories": [
     "$extends:square-arrow-right",
-    "account"
+    "account",
+    "development"
   ]
 }
