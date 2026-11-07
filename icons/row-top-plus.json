@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [
+    "Inserting a new row at the top of a table"
+  ],
+  "tags": [
+    "$extends:table",
+    "row",
+    "add",
+    "insert",
+    "prepend"
+  ],
+  "categories": [
+    "$extends:table"
+  ]
+}

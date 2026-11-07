@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [
+    "Removing a selected row from a spreadsheet",
+    "Deleting a record from a table-based interface"
+  ],
+  "tags": [
+    "$extends:table",
+    "row",
+    "delete",
+    "remove",
+    "record",
+    "entry",
+    "database"
+  ],
+  "categories": [
+    "$extends:table"
+  ]
+}

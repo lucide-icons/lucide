@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [
+    "Adding a column to a table or spreadsheet"
+  ],
+  "tags": [
+    "$extends:table",
+    "column",
+    "add",
+    "insert",
+    "cells"
+  ],
+  "categories": [
+    "$extends:table",
+    "layout"
+  ]
+}

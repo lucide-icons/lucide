@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [
+    "Removing a column from a table or spreadsheet",
+    "Excluding a field from a tabular dataset"
+  ],
+  "tags": [
+    "$extends:table",
+    "column",
+    "delete",
+    "remove",
+    "exclude",
+    "hide",
+    "drop",
+    "dataset"
+  ],
+  "categories": [
+    "$extends:table"
+  ]
+}
