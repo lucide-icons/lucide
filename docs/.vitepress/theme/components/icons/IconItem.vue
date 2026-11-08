@@ -7,6 +7,7 @@ import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
 import { diamond } from '../../../data/iconNodes';
+import { setLibraryParams } from '../../composables/useExternalLibs';
 
 const downloadText = 'Download!';
 const copiedText = 'Copied!';
@@ -55,13 +56,17 @@ async function navigateToIcon(event) {
   if (props.overlayMode && showOverlay.value) {
     event.preventDefault();
 
-    window.history.pushState(
-      {},
-      '',
-      props.externalLibrary
-        ? `/icons/${props.externalLibrary}/${props.name}`
-        : `/icons/${props.name}`,
+    // Keep ?library= so the selection survives opening and closing the drawer.
+    const url = setLibraryParams(
+      new URL(
+        props.externalLibrary
+          ? `/icons/${props.externalLibrary}/${props.name}`
+          : `/icons/${props.name}`,
+        window.location.origin,
+      ),
     );
+
+    window.history.pushState({}, '', url);
     emit(
       'setActiveIcon',
       props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,

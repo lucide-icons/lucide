@@ -18,6 +18,7 @@ import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
 import { track, trackDebounced } from '../../utils/openpanel';
+import { setLibraryParams } from '../../composables/useExternalLibs';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -205,6 +206,8 @@ function handleCloseDrawer() {
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
+
+  setLibraryParams(url);
 
   window.history.pushState({}, '', url);
 }
