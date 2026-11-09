@@ -205,6 +205,7 @@
         "$group:heart",
         "$group:key",
         "$group:letter",
+        "$group:line",
         "$group:lock",
         "$group:minus",
         "$group:navigation-first",
