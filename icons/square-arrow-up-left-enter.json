@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "$extends:square-arrow-out-up-left",
+    "$extends:square-arrow-up-left-exit",
     "6teloiv"
   ],
   "use-cases": [
@@ -15,6 +15,6 @@
     "merging"
   ],
   "categories": [
-    "$extends:square-arrow-out-up-left"
+    "$extends:square-arrow-up-left-exit"
   ]
 }

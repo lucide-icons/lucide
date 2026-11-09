@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "$extends:square-arrow-out-up-right",
+    "$extends:square-arrow-up-right-exit",
     "6teloiv"
   ],
   "use-cases": [
