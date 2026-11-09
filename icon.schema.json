@@ -208,6 +208,7 @@
         "$group:key",
         "$group:layout-resize",
         "$group:letter",
+        "$group:line",
         "$group:lock",
         "$group:minus",
         "$group:navigation-first",
