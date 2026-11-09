@@ -7,29 +7,21 @@
     "rrod497"
   ],
   "use-cases": [
-    "indicating user's saved drafts or draft-mode toggle in apps like mail, notes, messaging and AI chats",
-    "representing live collaborative editing, in which rapid auto-saving is implied",
-    "symbolizing instant sketch-to-wireframe generation, fast feedback canvases",
-    "representing auto-complete, snippet expansion or other forms of quick automated text insertion / substitution"
+    "Indicating saved drafts in mail, notes, and messaging apps",
+    "Toggling draft mode in mail, notes, and AI chat apps",
+    "Representing live collaborative editing with automatic saving",
+    "Representing auto-complete, snippet expansion, or automated text insertion",
+    "Representing instant sketch-to-wireframe generation on feedback canvases"
   ],
   "tags": [
-    "draft",
-    "edit",
-    "create",
-    "write",
-    "draw",
-    "sketch",
+    "$group:pen",
     "quick",
-    "doodle",
     "autosave",
     "prompt",
-    "pencil",
     "scratch",
     "authoring"
   ],
   "categories": [
-    "design",
-    "tools",
     "text",
     "development"
   ]
