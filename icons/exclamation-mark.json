@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Highlighting warnings or errors in user interfaces",
+    "Marking important notices that need attention"
+  ],
+  "tags": [
+    "$group:exclamation-mark"
+  ],
+  "categories": [
+    "letters-digits",
+    "text",
+    "notifications"
+  ]
+}

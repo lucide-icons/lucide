@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Opening contextual help in user interfaces",
+    "Indicating unknown or uncertain values"
+  ],
+  "tags": [
+    "$group:question-mark"
+  ],
+  "categories": [
+    "letters-digits",
+    "text",
+    "notifications"
+  ]
+}
