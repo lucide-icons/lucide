@@ -9,7 +9,11 @@
     "$extends:file",
     "spreadsheet",
     "sheet",
-    "table"
+    "table",
+    "csv",
+    "xls",
+    "xlsx",
+    "excel"
   ],
   "categories": [
     "$extends:file"

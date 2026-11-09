@@ -6,7 +6,7 @@
   "use-cases": [],
   "tags": [
     "$group:direction-down-right",
-    "outwards"
+    "$group:exit"
   ],
   "categories": [
     "arrows"

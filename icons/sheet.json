@@ -10,7 +10,10 @@
   "tags": [
     "spreadsheets",
     "table",
-    "excel"
+    "excel",
+    "csv",
+    "xls",
+    "xlsx"
   ],
   "categories": [
     "text",

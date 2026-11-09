@@ -14,7 +14,6 @@
     "$extends:globe",
     "$group:off",
     "web",
-    "website",
     "banned",
     "geo blocking",
     "offline",

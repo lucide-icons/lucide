@@ -8,7 +8,9 @@
     "$extends:user-round",
     "$group:plus",
     "follow",
-    "subscribe"
+    "subscribe",
+    "invite",
+    "invitation"
   ],
   "categories": [
     "$extends:user-round"

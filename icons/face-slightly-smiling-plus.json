@@ -9,8 +9,7 @@
     "$extends:face-slightly-smiling",
     "$extends:group",
     "$group:plus",
-    "react",
-    "reaction"
+    "react"
   ],
   "categories": [
     "emoji",

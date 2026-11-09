@@ -5,12 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:face",
     "nuisance",
     "annoyed",
     "annoyance",
-    "frustration",
-    "emoji",
-    "emotion"
+    "frustration"
   ],
   "categories": [
     "emoji"

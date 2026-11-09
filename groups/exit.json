@@ -9,6 +9,7 @@
     "outgoing",
     "export",
     "leave",
-    "egress"
+    "egress",
+    "exit"
   ]
 }

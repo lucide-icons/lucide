@@ -9,7 +9,8 @@
     "$extends:calendar",
     "$group:check",
     "subscribe",
-    "schedule"
+    "schedule",
+    "today"
   ],
   "categories": [
     "$extends:calendar"

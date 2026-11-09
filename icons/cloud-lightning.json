@@ -9,7 +9,10 @@
   "use-cases": [],
   "tags": [
     "$extends:cloud",
-    "bolt"
+    "bolt",
+    "thunder",
+    "thunderstorm",
+    "thunderbolt"
   ],
   "categories": [
     "$extends:cloud"

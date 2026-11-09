@@ -16,7 +16,9 @@
     "ward",
     "building",
     "medical",
-    "vet"
+    "vet",
+    "sick",
+    "patient"
   ],
   "categories": [
     "medical",

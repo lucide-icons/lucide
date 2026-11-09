@@ -11,7 +11,12 @@
     "id-card",
     "id-card-lanyard",
     "employee",
-    "gate-pass"
+    "gate-pass",
+    "job",
+    "career",
+    "employment",
+    "hiring",
+    "experience"
   ],
   "categories": [
     "$extends:id-card"

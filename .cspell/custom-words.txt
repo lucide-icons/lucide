@@ -19,6 +19,7 @@ ageusia
 artboard
 barbeque
 choy
+cicd
 ecommerce
 enby
 flexbox
@@ -27,6 +28,7 @@ gddr
 glassmorphism
 gltf
 halloumi
+helpdesk
 interpoint
 interpunct
 middot
