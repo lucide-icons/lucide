@@ -1,25 +1,27 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "$extends:warehouse",
+    "$extends:waves-horizontal",
     "Carl-Lambert"
   ],
   "use-cases": [
-    "Representing a data lakehouse, combining a data lake and a data warehouse, in architecture diagrams or product navigation",
-    "Indicating an analytics storage layer holding raw and structured data for BI",
-    "Marking tables or datasets stored in a lakehouse in a data catalog"
+    "Representing a data lakehouse or lake warehouse",
+    "Indicating combined data lake and warehouse storage",
+    "Marking datasets or tables stored in a lakehouse",
+    "Connecting a lakehouse as a data source"
   ],
   "tags": [
+    "$extends:warehouse",
     "lakehouse",
+    "lake warehouse",
     "data lake",
     "data warehouse",
+    "data platform",
     "analytics",
     "big data",
-    "storage",
     "water",
-    "lake",
-    "waves",
-    "repository",
-    "building"
+    "lake"
   ],
   "categories": [
     "development",
