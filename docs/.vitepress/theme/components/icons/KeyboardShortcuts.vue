@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import Icon from '@lucide/vue/src/Icon';
 import Kbd from '../base/Kbd.vue';
-import { keyboard, x } from '~/.vitepress/data/iconNodes';
+import { x } from '~/.vitepress/data/iconNodes';
 
 const dialog = ref<HTMLDialogElement | null>(null);
+const isClosing = ref(false);
 const modifierKey = ref('Ctrl');
 
 const shortcuts = [
@@ -28,8 +29,17 @@ function open() {
   dialog.value?.focus();
 }
 
-function close() {
-  dialog.value?.close();
+// The dialog leaves the top layer as soon as it closes, so play the exit transition first
+async function close() {
+  const element = dialog.value;
+
+  if (!element?.open || isClosing.value) return;
+
+  isClosing.value = true;
+  await nextTick();
+  await Promise.allSettled(element.getAnimations().map((animation) => animation.finished));
+  element.close();
+  isClosing.value = false;
 }
 
 function handleDialogClick(event: MouseEvent) {
@@ -71,25 +81,26 @@ onBeforeUnmount(() => {
 <template>
   <button
     type="button"
-    class="shortcuts-button"
+    class="keyboard-shortcuts-hint"
     aria-haspopup="dialog"
-    aria-label="Keyboard shortcuts"
-    title="Keyboard shortcuts"
     @click="open"
   >
-    <Icon
-      :iconNode="keyboard"
-      name="keyboard"
-      aria-hidden="true"
-    />
+    <span class="hint-label">Keyboard shortcuts</span>
+    <span class="hint-keys">
+      <Kbd>Shift</Kbd>
+      <span>+</span>
+      <Kbd>?</Kbd>
+    </span>
   </button>
 
   <dialog
     ref="dialog"
     class="shortcuts-dialog"
+    :class="{ closing: isClosing }"
     tabindex="-1"
     aria-labelledby="shortcuts-title"
     @click="handleDialogClick"
+    @cancel.prevent="close"
   >
     <div class="shortcuts-header">
       <h2 id="shortcuts-title">Keyboard shortcuts</h2>
@@ -141,31 +152,28 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.shortcuts-button {
+.keyboard-shortcuts-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 24px 0px;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 12px;
+  color: var(--vp-c-text-1);
+  position: sticky;
+  bottom: -96px;
+  background-color: var(--vp-sidebar-bg-color);
+  width: 100%;
+  cursor: pointer;
+}
+
+.hint-keys {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: center;
-  padding: 11px 14px;
-  color: var(--vp-c-text-2);
-  background: var(--vp-c-bg-alt);
-  border: 1px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition:
-    color 0.25s,
-    border-color 0.25s;
-}
-
-.shortcuts-button:hover,
-.shortcuts-button:focus-visible {
-  color: var(--vp-c-text-1);
-  border-color: var(--vp-c-brand);
-}
-
-.shortcuts-button svg {
-  width: 20px;
-  height: 20px;
+  gap: 4px;
 }
 
 .shortcuts-dialog {
@@ -180,7 +188,41 @@ onBeforeUnmount(() => {
 }
 
 .shortcuts-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.shortcuts-dialog[open] {
+  transition:
+    opacity 150ms ease-out,
+    transform 200ms cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.shortcuts-dialog[open]::backdrop {
+  transition: background-color 150ms ease-out;
+}
+
+@starting-style {
+  .shortcuts-dialog[open] {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+
+  .shortcuts-dialog[open]::backdrop {
+    background-color: transparent;
+  }
+}
+
+.shortcuts-dialog.closing {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  transition:
+    opacity 150ms ease-in,
+    transform 150ms ease-in;
+}
+
+.shortcuts-dialog.closing::backdrop {
+  background-color: transparent;
+  transition: background-color 150ms ease-in;
 }
 
 .shortcuts-header {

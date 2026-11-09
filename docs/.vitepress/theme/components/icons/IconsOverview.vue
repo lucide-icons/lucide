@@ -10,7 +10,6 @@ import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
-import KeyboardShortcuts from './KeyboardShortcuts.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
@@ -278,8 +277,6 @@ function handleArrowKeys(event: KeyboardEvent) {
           />
         </template>
       </Select>
-
-      <KeyboardShortcuts />
     </StickyBar>
     <NoResults
       v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"

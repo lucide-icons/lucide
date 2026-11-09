@@ -131,8 +131,4 @@ function onReset() {
 .color-picker {
   width: 100%;
 }
-
-.non-scaling-stroke-switch {
-  display: flex;
-}
 </style>
