@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-up-right-exit",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Contracting a pane or grid cell from its bottom-left corner",
+    "Expanding a pane or grid cell toward its upper-right corner"
+  ],
+  "tags": [
+    "$group:direction-up-right",
+    "$group:enter",
+    "$group:layout-resize",
+    "expand",
+    "contract"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}

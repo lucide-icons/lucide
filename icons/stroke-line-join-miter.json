@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Applying sharp corners to strokes in vector editors"
+  ],
+  "tags": [
+    "$group:line",
+    "edge",
+    "intersection",
+    "angle",
+    "sharp",
+    "rect"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}

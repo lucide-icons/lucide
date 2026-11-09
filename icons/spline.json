@@ -6,11 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "path",
+    "$group:line",
     "pen",
     "tool",
-    "shape",
-    "curve",
     "draw"
   ],
   "categories": [
