@@ -89,6 +89,7 @@ function onReset() {
     <InputField
       id="non-scaling-stroke"
       label="Non-scaling stroke"
+      class="non-scaling-stroke-switch"
     >
       <Switch
         id="non-scaling-stroke-switch"
@@ -129,5 +130,9 @@ function onReset() {
 
 .color-picker {
   width: 100%;
+}
+
+.non-scaling-stroke-switch {
+  display: flex;
 }
 </style>

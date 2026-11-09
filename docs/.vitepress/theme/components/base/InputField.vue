@@ -2,11 +2,12 @@
 defineProps<{
   label: string
   id: string
+  class?: string
 }>()
 </script>
 
 <template>
-  <div class="input-field">
+  <div class="input-field" :class="class">
     <div class="input-label" v-if="label">
       <label :for="id" class="customize-label">
         {{ label }}
@@ -43,6 +44,6 @@ defineProps<{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
-  gap: 12px;
+  gap: 6px;
 }
 </style>

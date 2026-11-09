@@ -32,6 +32,7 @@
   --vp-a11y-warning: #da9200;
 
   --vp-sidebar-input: var(--vp-c-gray-3);
+  --vp-sidebar-width: 280px;
 }
 
 .dark {
@@ -383,6 +384,12 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 
 .VPSidebar .VPSidebarItem .caret-icon {
   transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@media (min-width: 960px) {
+  .VPSidebar {
+    padding-right: 24px !important;
+  }
 }
 
 /* Links in the page text: a faint underline shows they are links, and on hover a solid

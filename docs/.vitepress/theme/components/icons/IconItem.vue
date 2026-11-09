@@ -40,16 +40,16 @@ const href = computed(() =>
 );
 
 // The toast says what was copied, since the name and the SVG are copied the same way
-async function copyToClipboard(text: string, message: string) {
+async function copyToClipboard(text: string, confettiMessage: string, toastMessage: string) {
   await navigator.clipboard.writeText(text);
 
-  confettiText.value = copiedText;
+  confettiText.value = confettiMessage;
   confetti();
-  toast.success(message);
+  toast.success(toastMessage);
 }
 
 function copyName() {
-  return copyToClipboard(props.name, `Copied the name of ${props.name}`);
+  return copyToClipboard(props.name, `Copied name`, `Copied the name of ${props.name}`);
 }
 
 function copySVG(iconButton: HTMLElement) {
@@ -57,7 +57,7 @@ function copySVG(iconButton: HTMLElement) {
     class: `lucide lucide-${props.name}`,
   });
 
-  return copyToClipboard(svgString, `Copied the SVG of ${props.name}`);
+  return copyToClipboard(svgString, `Copied svg`, `Copied the SVG of ${props.name}`);
 }
 
 async function navigateToIcon(event) {
