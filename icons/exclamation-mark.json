@@ -1,14 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley",
+    "lt25106"
   ],
   "use-cases": [
     "Highlighting warnings or errors in user interfaces",
     "Marking important notices that need attention"
   ],
   "tags": [
-    "$group:exclamation-mark"
+    "$group:exclamation-mark",
+    "bang",
+    "surprise",
+    "emphasis",
+    "interjection",
+    "factorial",
+    "negation"
   ],
   "categories": [
     "letters-digits",

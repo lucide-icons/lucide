@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
   "use-cases": [
     "Opening contextual help in user interfaces",
@@ -11,7 +12,6 @@
     "$group:question-mark"
   ],
   "categories": [
-    "letters-digits",
     "text",
     "notifications"
   ]
