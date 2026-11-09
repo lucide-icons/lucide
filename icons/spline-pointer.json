@@ -13,8 +13,7 @@
     "node",
     "click",
     "pointer",
-    "target",
-    "vector"
+    "target"
   ],
   "categories": [
     "$extends:spline",

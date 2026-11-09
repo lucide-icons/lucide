@@ -1,17 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "rrod497"
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Applying rounded corners to strokes in vector editors"
   ],
   "tags": [
-    "stroke",
-    "line",
-    "vector",
-    "graphics",
-    "design",
-    "shape",
-    "path",
-    "segment",
+    "$group:line",
     "edge",
     "intersection",
     "angle",

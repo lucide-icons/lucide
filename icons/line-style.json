@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "line",
-    "stroke",
+    "$group:line",
     "style",
     "dashed",
     "border"
