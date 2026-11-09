@@ -3,6 +3,10 @@ title: Comparison
 description: A comparison between Lucide and Feather Icons, highlighting the differences and benefits of each.
 ---
 
+<script setup>
+import { data } from './comparison.data'
+</script>
+
 # Comparison
 
 ## Lucide vs Feather Icons
@@ -15,7 +19,7 @@ In an effort to expand the icon set while remaining true to the original minimal
 
 ### Why should I choose Lucide over Feather Icons?
 
-- Lucide has expanded its icon set by 1600+ in the last few years. Lucide now has over 1800 icons, while Feather has around 287 icons.
+- Lucide has expanded its icon set by {{ data.addedCount }}+ in the last few years. Lucide now has over {{ data.iconCount }} icons, while Feather has around 287 icons.
 - Well maintained code base.
 - Active community.
 
