@@ -150,21 +150,21 @@ defineExpose({
   pointer-events: none;
 }
 
-.input[type="search"]::-webkit-search-cancel-button {
+.input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-.input[type="search"]::-ms-clear {
+.input[type='search']::-ms-clear {
   display: none;
 }
 
-.input[type="search"]::-o-clear {
+.input[type='search']::-o-clear {
   display: none;
 }
 
-.input[type="search"]::-moz-clear {
+.input[type='search']::-moz-clear {
   display: none;
 }
 
@@ -187,7 +187,9 @@ defineExpose({
   z-index: 1;
   color: var(--vp-c-text-2);
   pointer-events: none;
-  transition: color 0.25s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    color 0.25s,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-duration: 0.25s, 0.3s;
 }
 

@@ -220,7 +220,8 @@ const ARROW_STEPS = {
 // between the icons. The grid shows `columnSize` icons per row, so up and down skip a whole row.
 function handleArrowKeys(event: KeyboardEvent) {
   const step = ARROW_STEPS[event.key]?.();
-  if (step === undefined || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  if (step === undefined || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+    return;
 
   const iconButtons = Array.from(
     overviewEl.value?.querySelectorAll<HTMLElement>('.icons .icon-button') ?? [],

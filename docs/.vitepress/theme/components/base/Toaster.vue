@@ -13,7 +13,6 @@ const { isDark } = useData();
     <Toaster
       position="bottom-center"
       :theme="isDark ? 'dark' : 'light'"
-
     >
       <template #success-icon>
         <Icon

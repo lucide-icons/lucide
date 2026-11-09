@@ -1,19 +1,28 @@
 <script setup lang="ts">
 defineProps<{
-  label: string
-  id: string
-  class?: string
-}>()
+  label: string;
+  id: string;
+  class?: string;
+}>();
 </script>
 
 <template>
-  <div class="input-field" :class="class">
-    <div class="input-label" v-if="label">
-      <label :for="id" class="customize-label">
+  <div
+    class="input-field"
+    :class="class"
+  >
+    <div
+      class="input-label"
+      v-if="label"
+    >
+      <label
+        :for="id"
+        class="customize-label"
+      >
         {{ label }}
       </label>
-      <div class="display-value" >
-        <slot name="display"/>
+      <div class="display-value">
+        <slot name="display" />
       </div>
     </div>
     <slot />
@@ -26,7 +35,7 @@ defineProps<{
   font-size: 13px;
   font-weight: 600;
   color: var(--vt-c-text-1);
-  transition: color .5s;
+  transition: color 0.5s;
   display: block;
 }
 
