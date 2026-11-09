@@ -1,7 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Categorizing cheeses in grocery shopping apps",
+    "Marking cheese-based dishes on restaurant menus"
   ],
   "tags": [
     "swiss",

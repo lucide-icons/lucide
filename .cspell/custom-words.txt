@@ -26,6 +26,7 @@ futbol
 gddr
 glassmorphism
 gltf
+halloumi
 interpoint
 interpunct
 middot
