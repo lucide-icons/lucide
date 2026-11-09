@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "$extends:square-arrow-out-down-right",
+    "$extends:square-arrow-down-right-exit",
     "6teloiv"
   ],
   "use-cases": [
@@ -14,6 +14,6 @@
     "$group:layout-resize"
   ],
   "categories": [
-    "$extends:square-arrow-out-down-right"
+    "$extends:square-arrow-down-right-exit"
   ]
 }
