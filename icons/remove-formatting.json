@@ -5,15 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
-    "font",
-    "typography",
+    "$group:letter",
+    "$group:minus",
     "format",
     "x",
-    "remove",
-    "delete",
-    "times",
-    "clear"
+    "times"
   ],
   "categories": [
     "text"

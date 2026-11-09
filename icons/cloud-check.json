@@ -10,11 +10,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:check",
     "sync",
     "network",
-    "success",
-    "done",
-    "completed",
     "saved",
     "persisted"
   ],

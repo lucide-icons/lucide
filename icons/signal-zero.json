@@ -6,17 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "wireless",
-    "gsm",
-    "phone",
-    "2g",
-    "3g",
-    "4g",
-    "5g",
+    "$extends:signal",
     "lost"
   ],
   "categories": [
-    "connectivity"
+    "$extends:signal"
   ]
 }

@@ -6,9 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:heart",
     "diary",
     "romance",
-    "novel",
     "journal",
     "entry",
     "entries",
@@ -16,8 +17,6 @@
     "private",
     "secret",
     "crush",
-    "like",
-    "love",
     "emotion",
     "feminine",
     "girls",
@@ -32,13 +31,7 @@
     "notes",
     "notepad",
     "stationery",
-    "sketchbook",
-    "writing",
-    "written",
-    "reading",
-    "favorite",
-    "favourite",
-    "high school"
+    "sketchbook"
   ],
   "categories": [
     "social",

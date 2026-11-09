@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Set the line cap to round in a vector graphics editor"
+  ],
+  "tags": [
+    "$group:line",
+    "endpoint",
+    "arc",
+    "circular",
+    "smooth"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}

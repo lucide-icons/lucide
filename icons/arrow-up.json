@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "forward",
-    "direction",
-    "north"
+    "$group:direction-up",
+    "$group:navigation-previous",
+    "forward"
   ],
   "categories": [
     "arrows"

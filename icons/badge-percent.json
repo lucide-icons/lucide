@@ -6,17 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
-    "sale",
-    "discount",
-    "offer",
-    "marketing",
-    "sticker",
-    "price tag"
+    "$extends:badge",
+    "$group:percent"
   ],
   "categories": [
-    "social",
     "finance",
     "shopping",
     "math"

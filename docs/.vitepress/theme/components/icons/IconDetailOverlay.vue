@@ -157,6 +157,8 @@ const Expand = createLucideIcon('Expand', expand);
   margin: 0 auto;
   padding: 1rem;
   background-color: var(--vp-c-bg-elv);
+  border-top: 1px solid var(--vp-c-divider);
+  border-right: 1px solid var(--vp-c-divider);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   will-change: transform;
   pointer-events: all;
