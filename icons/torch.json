@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "shukaiz",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Representing light sources in gaming inventories, crafting menus, and dungeon maps",
+    "Showing Olympic torch relays and ceremonial events on schedules and maps",
+    "Symbolizing knowledge, education, and learning on academic seals"
+  ],
+  "tags": [
+    "fire",
+    "flame",
+    "light",
+    "heat",
+    "burn",
+    "olympic",
+    "ceremony",
+    "torchlight",
+    "dungeon",
+    "stick",
+    "wood",
+    "medieval",
+    "enlightenment"
+  ],
+  "categories": [
+    "gaming",
+    "sports",
+    "tools"
+  ]
+}
