@@ -1,6 +1,7 @@
 import { readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
+const featherIconCount = 287;
 const iconsDir = resolve(__dirname, '../../icons');
 
 const loader = {
@@ -10,6 +11,7 @@ const loader = {
 
     return {
       iconCount: Math.floor(count / 10) * 10,
+      addedCount: Math.floor((count - featherIconCount) / 10) * 10,
     };
   },
 };
