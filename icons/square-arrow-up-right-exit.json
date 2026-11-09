@@ -6,16 +6,26 @@
   "use-cases": [],
   "tags": [
     "$group:direction-up-right",
-    "outwards"
+    "outwards",
+    "share",
+    "open",
+    "external",
+    "link"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "social"
   ],
   "aliases": [
     {
-      "name": "arrow-up-right-from-circle",
+      "name": "arrow-up-right-from-square",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "square-arrow-out-up-right",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }
