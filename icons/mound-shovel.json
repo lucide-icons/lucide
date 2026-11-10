@@ -3,6 +3,11 @@
   "contributors": [
     "jwlinqx"
   ],
+  "use-cases": [
+    "Marking sand sites or sand mines on logistics route maps",
+    "Labeling navigation items for browsing sand and aggregate types",
+    "Showing material stockpiles in construction or mining software"
+  ],
   "tags": [
     "sand",
     "pile",
@@ -11,16 +16,33 @@
     "minimal",
     "nature",
     "eco",
-    "shovel",
     "dirt pile",
     "sand pile",
     "sand with shovel",
-    "pile with shovel"
+    "pile with shovel",
+    "dirt",
+    "soil",
+    "earth",
+    "gravel",
+    "heap",
+    "stockpile",
+    "aggregate",
+    "dig",
+    "spade",
+    "excavation",
+    "earthworks",
+    "mine",
+    "mining",
+    "quarry",
+    "sand mine",
+    "frac sand",
+    "construction",
+    "construction site",
+    "landscaping",
+    "beach"
   ],
   "categories": [
-    "construction",
-    "sand",
-    "beach",
-    "environment"
+    "tools",
+    "nature"
   ]
 }
