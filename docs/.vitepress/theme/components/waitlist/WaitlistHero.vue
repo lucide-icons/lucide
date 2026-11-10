@@ -35,6 +35,7 @@ const config = computed(() => waitlistProducts[props.product]);
   display: flex;
   align-items: center;
   padding: 48px 24px 64px;
+  background: var(--vp-sidebar-bg-color);
 }
 
 .inner {
