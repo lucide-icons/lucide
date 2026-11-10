@@ -3,15 +3,14 @@
   "contributors": [
     "dg-ac"
   ],
+  "use-cases": [],
   "tags": [
-    "line",
-    "stroke",
+    "$group:line",
     "style",
     "dashed",
     "border"
   ],
   "categories": [
-    "design",
-    "tools"
+    "design"
   ]
 }

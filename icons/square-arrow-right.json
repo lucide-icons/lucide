@@ -4,10 +4,11 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
-    "forward",
-    "direction",
     "west",
     "sign",
     "keyboard",
@@ -21,8 +22,7 @@
     {
       "name": "arrow-right-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

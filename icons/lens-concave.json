@@ -5,6 +5,7 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "concave",
     "lens",
@@ -22,7 +23,6 @@
   ],
   "categories": [
     "science",
-    "tools",
-    "shapes"
+    "tools"
   ]
 }

@@ -6,14 +6,14 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "loop",
-    "arrows",
+    "$extends:repeat",
+    "$group:off",
     "recurring",
     "again"
   ],
   "categories": [
-    "arrows",
-    "multimedia"
+    "$extends:repeat"
   ]
 }

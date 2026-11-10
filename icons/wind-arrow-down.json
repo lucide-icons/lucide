@@ -6,14 +6,13 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "weather",
-    "air",
-    "pressure",
-    "blow"
+    "$extends:wind",
+    "$group:direction-down",
+    "pressure"
   ],
   "categories": [
-    "weather",
-    "sustainability"
+    "$extends:wind"
   ]
 }

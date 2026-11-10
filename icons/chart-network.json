@@ -3,17 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "topology",
+    "$group:chart",
+    "$group:graph",
     "cluster",
-    "web",
-    "nodes",
-    "connections",
-    "edges"
+    "web"
   ],
   "categories": [
     "charts"

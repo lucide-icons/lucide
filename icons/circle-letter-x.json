@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating close or dismiss actions",
+    "Representing multiplication in math contexts",
+    "Marking an unknown variable",
+    "Representing the X-axis in charts or geometry",
+    "Indicating intersections or crosses",
+    "Representing X chromosomes"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "close",
+    "dismiss",
+    "multiply",
+    "math",
+    "unknown",
+    "variable",
+    "x-axis",
+    "axis",
+    "intersection",
+    "cross",
+    "chromosome"
+  ],
+  "categories": [
+    "letters-digits"
+  ]
+}

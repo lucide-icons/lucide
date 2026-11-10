@@ -5,19 +5,20 @@
     "ericfennis",
     "Spleefies"
   ],
+  "use-cases": [],
   "tags": [
-    "paste",
+    "$extends:clipboard",
+    "$group:pen",
     "signature"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ],
   "aliases": [
     {
       "name": "clipboard-edit",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

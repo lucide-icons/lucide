@@ -3,12 +3,14 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "phonendoscope",
     "medical",
     "heart",
     "lungs",
-    "sound"
+    "sound",
+    "patient"
   ],
   "categories": [
     "science",

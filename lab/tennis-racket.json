@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "court",
+    "racquet",
+    "net",
+    "deuce",
+    "love",
+    "bounce"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

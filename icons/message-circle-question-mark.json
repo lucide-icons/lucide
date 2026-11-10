@@ -5,24 +5,19 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "help"
+    "$extends:message-circle",
+    "$group:question-mark"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ],
   "aliases": [
     {
       "name": "message-circle-question",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

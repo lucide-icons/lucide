@@ -4,22 +4,20 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
-    "help"
+    "$extends:badge",
+    "$group:question-mark"
   ],
   "categories": [
     "accessibility",
-    "social",
-    "shapes"
+    "social"
   ],
   "aliases": [
     {
       "name": "badge-help",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

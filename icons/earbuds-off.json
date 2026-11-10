@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Disconnecting the audio output from wireless earphones in music apps",
+    "Representing disconnected or disabled status in the bluetooth pairing process in user manuals",
+    "Indicating that the usage of in-ear audio devices is prohibited, for example in workspaces that require attention to ambient sounds"
+  ],
+  "tags": [
+    "earphones",
+    "audio",
+    "sound",
+    "bluetooth",
+    "wireless",
+    "music",
+    "noise cancelling",
+    "acoustics",
+    "stereo",
+    "media",
+    "listen",
+    "pairing",
+    "hands-free",
+    "speaker",
+    "volume",
+    "disconnected",
+    "disabled",
+    "inactive"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

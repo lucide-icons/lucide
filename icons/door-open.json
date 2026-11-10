@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "entrance",
     "entry",
@@ -11,7 +12,8 @@
     "egress",
     "gate",
     "gateway",
-    "emergency exit"
+    "emergency exit",
+    "quit"
   ],
   "categories": [
     "home",

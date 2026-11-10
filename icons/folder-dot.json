@@ -3,13 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
+    "$group:dot",
     "root",
     "project",
     "pinned",
-    "active",
-    "current",
     "cogged",
     "gear",
     "mechanical",
@@ -23,7 +23,7 @@
     "edit"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "development"
   ]
 }

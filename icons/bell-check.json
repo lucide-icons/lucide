@@ -7,14 +7,12 @@
     "danielbayley",
     "pettelau"
   ],
+  "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "sound",
-    "reminder"
+    "$extends:bell",
+    "$group:check"
   ],
   "categories": [
-    "account",
-    "notifications"
+    "$extends:bell"
   ]
 }

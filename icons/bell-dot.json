@@ -4,15 +4,12 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "sound",
-    "reminder",
-    "unread"
+    "$extends:bell",
+    "$group:dot"
   ],
   "categories": [
-    "account",
-    "notifications"
+    "$extends:bell"
   ]
 }

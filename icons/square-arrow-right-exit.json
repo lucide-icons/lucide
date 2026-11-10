@@ -3,19 +3,35 @@
   "contributors": [
     "ethanhazel",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "6teloiv",
+    "lukedukeus"
+  ],
+  "use-cases": [
+    "Signing out of an account",
+    "Exporting data to a file or another app",
+    "Marking outputs on nodes in a node-based editor",
+    "Expanding a pane or grid cell past its right edge"
   ],
   "tags": [
-    "out",
-    "outside",
-    "output",
-    "export",
-    "->"
+    "$group:direction-right",
+    "$group:exit",
+    "$group:layout-resize",
+    "->",
+    "sign out",
+    "log out",
+    "logout",
+    "auth",
+    "data flow",
+    "node editor",
+    "expand",
+    "panel",
+    "cell",
+    "outbound"
   ],
   "categories": [
-    "arrows",
-    "shapes",
-    "layout",
-    "multimedia"
+    "$extends:square-arrow-right",
+    "account",
+    "development"
   ]
 }

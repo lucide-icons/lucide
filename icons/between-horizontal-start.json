@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-left",
     "insert",
     "add",
     "right",
@@ -28,15 +30,13 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "tools"
+    "design"
   ],
   "aliases": [
     {
       "name": "between-horizonal-start",
       "deprecated": true,
-      "deprecationReason": "alias.typo",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.typo"
     }
   ]
 }

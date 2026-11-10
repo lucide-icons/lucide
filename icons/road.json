@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "road",
     "street",
@@ -17,6 +18,7 @@
     "map"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "navigation"
   ]
 }

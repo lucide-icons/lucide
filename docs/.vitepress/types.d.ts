@@ -1,3 +1,4 @@
+/// <reference types="vitepress/client" />
 import { type IconNode } from '@lucide/vue/src/types';
 import Vue from 'vue';
 
@@ -6,13 +7,13 @@ declare module '*.vue' {
 }
 
 declare module '*.data.ts' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }
 
 declare module '*.data' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }
@@ -31,7 +32,11 @@ declare module '*.node.json' {
 }
 
 declare global {
+  // Defined by VitePress at build time, used by its VPDocAsideCarbonAds component
+  const __CARBON__: boolean;
+
   interface Window {
+    _carbonads?: unknown;
     ExpoSnack?: {
       /**
        * Initialize all snack players on the page
@@ -75,7 +80,7 @@ declare global {
           doNotShowAfterSubmit?: boolean;
           customFormUrl?: string; // when you want to load the form via it's custom domain URL
           hiddenFields?: {
-            [key: string]: any;
+            [key: string]: unknown;
           };
           onOpen?: () => void;
           onClose?: () => void;

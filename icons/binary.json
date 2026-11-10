@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:digit",
     "code",
     "digits",
     "computer",

@@ -4,11 +4,11 @@
     "ericfennis",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
-    "url",
-    "unchain"
+    "$extends:unlink"
   ],
   "categories": [
-    "text"
+    "$extends:unlink"
   ]
 }

@@ -5,13 +5,13 @@
     "jguddas",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "history",
-    "directory",
-    "clock"
+    "$extends:folder",
+    "$group:clock"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "time"
   ]
 }

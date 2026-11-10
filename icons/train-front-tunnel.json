@@ -3,19 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "railway",
-    "metro",
-    "subway",
-    "underground",
-    "speed",
-    "bullet",
-    "fast",
-    "track",
-    "line"
+    "$extends:train-front",
+    "speed"
   ],
   "categories": [
-    "transportation",
+    "$extends:train-front",
     "navigation"
   ]
 }

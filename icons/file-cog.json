@@ -6,22 +6,20 @@
     "jguddas",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
-    "executable",
-    "settings",
-    "cog",
-    "edit",
-    "gear"
+    "$extends:file",
+    "$group:cog",
+    "executable"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {
       "name": "file-cog-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

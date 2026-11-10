@@ -4,15 +4,20 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:graph",
     "action",
     "continuous integration",
     "ci",
     "automation",
     "devops",
-    "network",
     "node",
-    "connection"
+    "connection",
+    "ci/cd",
+    "cicd",
+    "pipeline",
+    "deploy"
   ],
   "categories": [
     "development"

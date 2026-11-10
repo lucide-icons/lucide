@@ -4,13 +4,14 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "tree",
     "browser"
   ],
   "categories": [
+    "$extends:list",
     "files",
-    "text",
     "layout"
   ]
 }

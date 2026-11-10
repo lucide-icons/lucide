@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "arm",
     "muscle",
@@ -15,6 +16,7 @@
     "curled"
   ],
   "categories": [
-    "emoji"
+    "emoji",
+    "sports"
   ]
 }

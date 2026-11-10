@@ -4,15 +4,13 @@
     "anthony-mariotti",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "person",
-    "lock",
-    "locked",
-    "account",
-    "secure"
+    "$extends:user",
+    "$group:lock"
   ],
   "categories": [
-    "account",
+    "$extends:user",
     "security"
   ]
 }

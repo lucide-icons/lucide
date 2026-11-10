@@ -4,13 +4,15 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:direction-up",
     "upload",
     "import",
     "export"
   ],
   "categories": [
-    "files",
-    "arrows"
+    "$extends:file"
   ]
 }

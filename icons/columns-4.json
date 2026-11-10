@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lines",
     "list",
@@ -44,7 +45,6 @@
   "categories": [
     "layout",
     "design",
-    "text",
-    "security"
+    "text"
   ]
 }

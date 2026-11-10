@@ -9,11 +9,11 @@
     "jamiemlaw",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
-    "forward",
-    "direction",
-    "east",
     "indicate turn"
   ],
   "categories": [

@@ -4,22 +4,20 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "presentation"
+    "$extends:file",
+    "$extends:chart-line"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "$extends:chart-line"
   ],
   "aliases": [
     {
       "name": "file-line-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

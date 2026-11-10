@@ -4,11 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$group:chart",
     "trending up"
   ],
   "categories": [

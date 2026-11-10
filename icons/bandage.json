@@ -5,6 +5,7 @@
     "jamiemlaw",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "plaster",
     "band-aid",
@@ -20,7 +21,8 @@
     "emergency",
     "aid",
     "safety",
-    "patch"
+    "patch",
+    "patient"
   ],
   "categories": [
     "medical"

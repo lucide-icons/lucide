@@ -4,8 +4,10 @@
     "AnnaSasDev",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "numerical",
+    "$group:digit",
+    "$group:direction-left",
     "decimal",
     "decrease",
     "less",
@@ -14,8 +16,7 @@
     "rounding",
     "digits",
     "fraction",
-    "float",
-    "number"
+    "float"
   ],
   "categories": [
     "design",

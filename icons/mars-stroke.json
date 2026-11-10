@@ -3,12 +3,13 @@
   "contributors": [
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "gender",
     "androgyne",
     "transgender"
   ],
   "categories": [
-    "medical"
+    "$extends:mars"
   ]
 }

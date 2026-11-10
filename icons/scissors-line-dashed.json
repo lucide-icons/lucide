@@ -3,13 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:scissors",
+    "$group:dashed",
     "cut here",
     "along",
-    "snip",
-    "chop",
-    "stationery",
-    "crafts",
     "instructions",
     "diagram"
   ],

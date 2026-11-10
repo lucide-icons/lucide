@@ -4,14 +4,12 @@
     "taichimaeda",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "robot",
-    "ai",
-    "chat",
-    "assistant"
+    "$extends:bot",
+    "$group:off"
   ],
   "categories": [
-    "development",
-    "social"
+    "$extends:bot"
   ]
 }
