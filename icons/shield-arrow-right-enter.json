@@ -23,7 +23,12 @@
     "access",
     "sign in",
     "log in",
-    "login"
+    "login",
+    "network",
+    "networking",
+    "cloud",
+    "routing",
+    "virtual network"
   ],
   "categories": [
     "security",
