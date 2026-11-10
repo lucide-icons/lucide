@@ -208,6 +208,43 @@ function handleCloseDrawer() {
 
   window.history.pushState({}, '', url);
 }
+
+const ARROW_STEPS = {
+  ArrowLeft: () => -1,
+  ArrowRight: () => 1,
+  ArrowUp: () => -columnSize.value,
+  ArrowDown: () => columnSize.value,
+};
+
+// Arrow keys move through the search results: from the search field down into the grid, then
+// between the icons. The grid shows `columnSize` icons per row, so up and down skip a whole row.
+function handleArrowKeys(event: KeyboardEvent) {
+  const step = ARROW_STEPS[event.key]?.();
+  if (step === undefined || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+    return;
+
+  const iconButtons = Array.from(
+    overviewEl.value?.querySelectorAll<HTMLElement>('.icons .icon-button') ?? [],
+  );
+  const target = event.target as HTMLElement;
+  const fromSearch = target.tagName === 'INPUT' && target.closest('.input-wrapper') !== null;
+
+  let next: HTMLElement | undefined;
+  if (fromSearch) {
+    if (event.key !== 'ArrowDown') return;
+    next = iconButtons[0];
+  } else {
+    const index = iconButtons.indexOf(target);
+    if (index === -1) return;
+    next = iconButtons[index + step];
+  }
+
+  if (next) {
+    event.preventDefault();
+    next.focus();
+    next.scrollIntoView({ block: 'nearest' });
+  }
+}
 </script>
 
 <template>
@@ -215,6 +252,7 @@ function handleCloseDrawer() {
     ref="overviewEl"
     class="overview-container"
     :class="{ 'icon-drawer-open': activeIconName }"
+    @keydown="handleArrowKeys"
   >
     <StickyBar>
       <InputSearch

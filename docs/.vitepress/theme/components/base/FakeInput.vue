@@ -1,6 +1,7 @@
 <script setup>
 import Icon from '@lucide/vue/src/Icon';
 import { search } from '../../../data/iconNodes';
+import Kbd from './Kbd.vue';
 
 defineProps({
   shortcut: {
@@ -17,10 +18,10 @@ defineProps({
       class="search-icon"
     />
     <slot />
-    <kbd
+    <Kbd
       v-if="shortcut"
       class="shortcut"
-      >{{ shortcut }}</kbd
+      >{{ shortcut }}</Kbd
     >
   </button>
 </template>
@@ -59,7 +60,9 @@ defineProps({
 
 .search-icon {
   flex-shrink: 0;
-  transition: color 0.25s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    color 0.25s,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-duration: 0.25s, 0.3s;
 }
 
@@ -70,15 +73,6 @@ defineProps({
 
 .shortcut {
   margin-left: auto;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--vp-c-text-3);
-  background: var(--vp-c-default-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
 }
 
 @media (hover: none) {
