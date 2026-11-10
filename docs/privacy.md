@@ -33,7 +33,7 @@ OpenPanel doesn't set cookies or store anything in your browser. Along with thes
 
 When you join a waitlist, we store your email address, the product you signed up for, the date, and any answers you give on the form or in the optional follow-up questions. We use this to send you launch updates for that product and to decide what to build. You are only added after you click the link in the confirmation email.
 
-Emails and contacts are handled by [Resend](https://resend.com/legal/privacy-policy), our email provider, which acts as our processor. You can unsubscribe from any email. We keep your details until the waitlist closes or you ask us to delete them, whichever comes first.
+Emails and contacts are handled by [Resend](https://resend.com/legal/privacy-policy), our email provider, which acts as our processor. The optional follow-up questions are handled by [Tally](https://tally.so/help/gdpr), a Belgian form provider that stores responses in the EU and also acts as our processor. You can unsubscribe from any email. We keep your details until the waitlist closes or you ask us to delete them, whichever comes first.
 
 ### Search
 
@@ -60,9 +60,8 @@ lucide.dev does not use tracking or advertising cookies of its own.
 | Appearance | Local storage | Remembers light or dark mode | Until you clear them |
 | Framework choice | Local storage | Remembers which framework you're reading the docs for | Until you clear them |
 | Recent and favourite searches | Local storage | Shows them in the search box | Until you clear them |
-| Waitlist survey | Cookie | Links your optional answers to the waitlist signup you just confirmed | Short-lived, set only after you confirm a signup |
 
-These items are needed for features you use, or they store choices you made yourself. Apart from the waitlist survey cookie, which is sent to lucide.dev to save your answers, they never leave your browser. You can clear them at any time in your browser settings.
+These items are needed for features you use, or they store choices you made yourself. They never leave your browser, and you can clear them at any time in your browser settings.
 
 ## Legal basis
 

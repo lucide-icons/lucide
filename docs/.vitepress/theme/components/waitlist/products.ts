@@ -11,8 +11,8 @@ export interface WaitlistProduct {
   useCaseLabel: string;
   useCasePlaceholder: string;
   survey: {
-    expectationsLabel: string;
-    features: string[];
+    title: string;
+    embedSrc: string;
   };
 }
 
@@ -30,15 +30,9 @@ export const waitlistProducts: Record<string, WaitlistProduct> = {
     useCaseLabel: 'Which AI tool would you use it with?',
     useCasePlaceholder: 'e.g. Claude Code, Cursor, Copilot',
     survey: {
-      expectationsLabel: 'What would you want the MCP to do for you?',
-      features: [
-        'Icon search',
-        'Inserting the right import',
-        'Framework-specific code',
-        'Generating icon sets',
-      ],
+      title: 'Help shape Lucide MCP',
+      embedSrc:
+        'https://tally.so/embed/4aJ4xr?alignLeft=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1',
     },
   },
 };
-
-export const iconFrequencies = ['Daily', 'Weekly', 'Monthly', 'Rarely'];

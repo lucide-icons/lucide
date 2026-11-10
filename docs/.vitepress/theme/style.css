@@ -260,6 +260,13 @@ html::-webkit-scrollbar-thumb:active {
   vertical-align: 1px;
 }
 
+/* No room for the label next to the logo at these widths. */
+@media (min-width: 768px) and (max-width: 879.98px) {
+  .VPNavBarMenu .nav-badge {
+    display: none;
+  }
+}
+
 /* The menu only just fits next to the logo at these widths. */
 @media (min-width: 768px) and (max-width: 829.98px) {
   .VPNav .VPNavBarMenu .VPNavBarMenuLink,

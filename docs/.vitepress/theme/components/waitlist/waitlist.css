@@ -3,7 +3,6 @@ div.waitlist-card.card {
   gap: 20px;
   width: 100%;
   padding: 32px;
-  border-radius: 16px;
   box-shadow: 0 5px 11px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -63,33 +62,6 @@ input.waitlist-input.input {
   border-color: var(--vp-c-border);
   background-color: var(--vp-c-bg);
   font-size: 16px;
-}
-
-/* Input only renders single-line fields, so the survey's textarea mirrors its look. */
-textarea.waitlist-input {
-  width: 100%;
-  min-height: 88px;
-  padding: 10px 12px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  background-color: var(--vp-c-bg);
-  font-size: 16px;
-  line-height: 24px;
-  resize: vertical;
-  transition:
-    border-color 0.25s,
-    box-shadow 0.25s;
-}
-
-textarea.waitlist-input:hover,
-textarea.waitlist-input:focus {
-  outline: none;
-  border-color: var(--vp-c-brand);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 15%, transparent);
-}
-
-.waitlist-input::placeholder {
-  color: var(--vp-c-text-3);
 }
 
 .waitlist-actions {
