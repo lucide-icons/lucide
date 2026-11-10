@@ -37,7 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Card class="waitlist-card">
+  <Card class="waitlist-card survey-card">
     <iframe
       :data-tally-src="product.survey.embedSrc"
       loading="lazy"
@@ -50,3 +50,10 @@ onMounted(() => {
     />
   </Card>
 </template>
+
+<style scoped>
+/* The Tally form has dark text on a transparent background, so it needs a light card in dark mode. */
+html.dark div.waitlist-card.survey-card.card {
+  background-color: #fff;
+}
+</style>

@@ -252,11 +252,11 @@ html::-webkit-scrollbar-thumb:active {
   margin-left: 2px;
   padding: 0 5px;
   border-radius: 4px;
-  background-color: var(--vp-c-bg-alt);
+  background-color: color-mix(in srgb, var(--vp-c-indigo-1) 10%, transparent);
   font-size: 10px;
   line-height: 16px;
   font-weight: 600;
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-indigo-2);
   vertical-align: 1px;
 }
 
