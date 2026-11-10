@@ -10,6 +10,9 @@
   stroke-linejoin="round"
 >
   <rect width="20" height="12" x="2" y="6" rx="2" />
-  <path d="M6 12h4" />
-  <path d="M14 12h4" />
+  <path d="M6 6v12" />
+  <path d="M10 10h2" />
+  <path d="M16 10h2" />
+  <path d="M10 14h2" />
+  <path d="M16 14h2" />
 </svg>
