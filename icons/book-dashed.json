@@ -6,6 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:dashed",
     "code",
     "coding",
     "version control",
@@ -13,17 +15,14 @@
     "repository",
     "template",
     "draft",
-    "script",
     "screenplay",
-    "writing",
-    "writer",
-    "author",
     "unwritten",
     "unpublished",
     "untold"
   ],
   "categories": [
-    "development"
+    "development",
+    "text"
   ],
   "aliases": [
     {

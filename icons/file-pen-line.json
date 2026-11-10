@@ -7,10 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "edit"
+    "$extends:file-pen",
+    "$group:pen"
   ],
   "categories": [
-    "files"
+    "$extends:file-pen"
   ],
   "aliases": [
     {

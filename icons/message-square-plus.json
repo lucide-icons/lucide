@@ -6,15 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "add"
+    "$extends:message-square",
+    "$group:plus",
+    "suggest",
+    "suggestion"
   ],
   "categories": [
-    "social"
+    "$extends:message-square"
   ]
 }

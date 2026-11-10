@@ -1,0 +1,11 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Subject: source code and software development",
+  "tags": [
+    "coding",
+    "programming",
+    "development",
+    "developer",
+    "dev"
+  ]
+}

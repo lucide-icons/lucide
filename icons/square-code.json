@@ -8,12 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:code",
     "gist",
     "source",
-    "programming",
     "html",
-    "xml",
-    "coding"
+    "xml"
   ],
   "categories": [
     "text",

@@ -8,14 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:square-check"
   ],
   "categories": [
-    "notifications"
+    "$extends:square-check"
   ],
   "aliases": [
     {

@@ -12,23 +12,17 @@
     "Rewinding through calendar views"
   ],
   "tags": [
-    "navigation",
+    "$extends:calendar",
+    "$group:direction-left",
+    "$group:navigation-first",
     "arrow",
-    "direction",
     "symbol",
     "pointer",
     "indicator",
-    "next",
     "menu",
-    "date",
-    "day",
-    "month",
-    "year",
     "events"
   ],
   "categories": [
-    "time",
-    "arrows",
-    "navigation"
+    "$extends:calendar"
   ]
 }

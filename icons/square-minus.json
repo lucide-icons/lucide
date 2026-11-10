@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "subtract",
-    "remove",
+    "$group:minus",
     "decrease",
-    "reduce",
     "calculator",
     "button",
     "keyboard",
@@ -32,9 +30,7 @@
   "categories": [
     "math",
     "development",
-    "text",
-    "tools",
-    "devices"
+    "text"
   ],
   "aliases": [
     {

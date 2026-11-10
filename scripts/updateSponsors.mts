@@ -1,113 +1,38 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-
-const COLLECTIVE_SLUG = 'lucide-icons';
-const OPEN_COLLECTIVE_API = 'https://api.opencollective.com/graphql/v2';
+import { TIERS, type TierId } from '../docs/.vitepress/theme/components/sponsor/tiers.ts';
+import {
+  type Account,
+  fetchCollective,
+  getCurrentSponsors,
+  getLocalLogos,
+  getOpenCollectiveLogo,
+  getWebsite,
+} from '../docs/scripts/helpers/openCollective.mts';
 
 const rootPath = join(import.meta.dirname, '..');
 const mainReadmePath = join(rootPath, 'README.md');
-const sponsorLogosPath = join(rootPath, 'docs/public/sponsors');
 
 const tiersStartMarker = '[//]: <> (Sponsor tiers start)';
 const tiersEndMarker = '[//]: <> (Sponsor tiers end)';
+const mainReadmeOnlyStartMarker = '[//]: <> (Main README only start)';
+const mainReadmeOnlyEndMarker = '[//]: <> (Main README only end)';
 
 /**
- * Headings for the Open Collective tiers, keyed by tier slug.
- * Tiers that are not listed here fall back to their Open Collective name.
+ * How each sponsor tier shows up in the READMEs, following the tier perks in tiers.ts.
+ * Tiers that are not in the npm package READMEs are wrapped in the "Main README only" markers.
+ * Only tiers with `customLogo` use the logos in docs/public/sponsors, the others use their avatar.
  */
-const TIER_TITLES: Record<string, string> = {
-'hero-backer': 'Hero Backer 🦸',
-  'awesome-backer': 'Awesome backers 🍺',
-  backer: 'Backer ☕️',
+const README_TIERS: Record<
+  TierId,
+  { title: string; logoHeight: number; inPackages: boolean; customLogo: boolean }
+> = {
+  platinum: { title: 'Platinum 💎', logoHeight: 96, inPackages: true, customLogo: true },
+  gold: { title: 'Gold 🥇', logoHeight: 64, inPackages: true, customLogo: true },
+  bronze: { title: 'Bronze 🥉', logoHeight: 48, inPackages: true, customLogo: true },
+  backer: { title: 'Backers 🍺', logoHeight: 32, inPackages: false, customLogo: false },
+  supporter: { title: 'Supporters ☕️', logoHeight: 32, inPackages: false, customLogo: false },
 };
-
-interface Account {
-  slug: string;
-  name: string;
-  website: string | null;
-  imageUrl: string | null;
-  description: string | null;
-}
-
-interface Tier {
-  slug: string;
-  name: string;
-  amount: { valueInCents: number | null } | null;
-}
-
-interface Order {
-  tier: Pick<Tier, 'slug'> | null;
-  fromAccount: Account;
-}
-
-interface CollectiveResponse {
-  data?: {
-    account: {
-      tiers: { nodes: Tier[] };
-      orders: { nodes: Order[] };
-    } | null;
-  };
-  errors?: { message: string }[];
-}
-
-const query = /* GraphQL */ `
-  query Sponsors($slug: String!) {
-    account(slug: $slug) {
-      ... on AccountWithContributions {
-        tiers(limit: 100) {
-          nodes {
-            slug
-            name
-            amount {
-              valueInCents
-            }
-          }
-        }
-      }
-      orders(filter: INCOMING, status: [ACTIVE], limit: 1000) {
-        nodes {
-          tier {
-            slug
-          }
-          fromAccount {
-            slug
-            name
-            website
-            imageUrl
-            description
-          }
-        }
-      }
-    }
-  }
-`;
-
-async function fetchCollective() {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (process.env.OPENCOLLECTIVE_TOKEN) {
-    headers['Personal-Token'] = process.env.OPENCOLLECTIVE_TOKEN;
-  }
-
-  const response = await fetch(OPEN_COLLECTIVE_API, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query, variables: { slug: COLLECTIVE_SLUG } }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Open Collective API responded with ${response.status} ${response.statusText}`);
-  }
-
-  const { data, errors } = (await response.json()) as CollectiveResponse;
-  if (errors?.length) {
-    throw new Error(`Open Collective API errors: ${errors.map(({ message }) => message).join(', ')}`);
-  }
-  if (!data?.account) {
-    throw new Error(`Could not find Open Collective account "${COLLECTIVE_SLUG}"`);
-  }
-
-  return data.account;
-}
 
 const escapeHtml = (value: string) =>
   value
@@ -116,48 +41,53 @@ const escapeHtml = (value: string) =>
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;');
 
-function getLogo({ slug, imageUrl }: Account) {
-  const localLogo = ['svg', 'png'].find((extension) =>
-    existsSync(join(sponsorLogosPath, `${slug}.${extension}`)),
-  );
-  if (localLogo) return `docs/public/sponsors/${slug}.${localLogo}`;
-
-  return imageUrl ?? `https://images.opencollective.com/${slug}/logo/256.png`;
-}
-
-function renderSponsor(account: Account) {
-  const href = account.website || `https://opencollective.com/${account.slug}`;
+/** Uses a `<picture>` to switch to the dark logo in dark mode, when there is one. */
+function renderSponsor(account: Account, height: number, customLogo: boolean) {
+  const logos: { light?: string; dark?: string } = customLogo ? getLocalLogos(account.slug) : {};
+  const src = logos.light ? `docs/public/sponsors/${logos.light}` : getOpenCollectiveLogo(account);
   const alt = account.description ? `${account.name} – ${account.description}` : account.name;
 
-  return `<a href="${escapeHtml(href)}"><img src="${escapeHtml(getLogo(account))}" height="64" alt="${escapeHtml(alt)}" /></a>`;
+  const image = `<img src="${escapeHtml(src)}" height="${height}" alt="${escapeHtml(alt)}" />`;
+  const logo = logos.dark
+    ? `<picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/${escapeHtml(logos.dark)}" />${image}</picture>`
+    : image;
+
+  return `<a href="${escapeHtml(getWebsite(account))}">${logo}</a>`;
 }
 
-function renderTiers({ tiers, orders }: Awaited<ReturnType<typeof fetchCollective>>) {
-  const sponsorsByTier = new Map<string, Map<string, Account>>();
+function renderTiers({ orders }: Awaited<ReturnType<typeof fetchCollective>>) {
+  const sponsorsByTier = Map.groupBy(getCurrentSponsors(orders.nodes), ({ tier }) => tier);
 
-  orders.nodes.forEach(({ tier, fromAccount }) => {
-    if (!tier) return;
-    if (!sponsorsByTier.has(tier.slug)) sponsorsByTier.set(tier.slug, new Map());
-    sponsorsByTier.get(tier.slug)!.set(fromAccount.slug, fromAccount);
-  });
+  // Highest tier first, so Platinum sponsors are at the top.
+  const renderTierGroup = (inPackages: boolean) =>
+    [...TIERS]
+      .reverse()
+      .filter(({ id }) => README_TIERS[id].inPackages === inPackages)
+      .flatMap(({ id }) => {
+        const sponsors = sponsorsByTier.get(id) ?? [];
+        if (!sponsors.length) return [];
 
-  return [...tiers.nodes]
-    .sort((a, b) => (b.amount?.valueInCents ?? 0) - (a.amount?.valueInCents ?? 0))
-    .flatMap((tier) => {
-      const sponsors = [...(sponsorsByTier.get(tier.slug)?.values() ?? [])];
-      if (!sponsors.length) return [];
+        const { title, logoHeight, customLogo } = README_TIERS[id];
+        const sponsorLinks = sponsors
+          .map(({ account }) => account)
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((account) => renderSponsor(account, logoHeight, customLogo))
+          // READMEs strip `style`, so non-breaking spaces are used to space out the logos.
+          .join('\n&nbsp;&nbsp;\n');
 
-      if (!TIER_TITLES[tier.slug]) {
-        console.warn(`No title configured for tier "${tier.slug}", using "${tier.name}"`);
-      }
+        return `### ${title}\n\n${sponsorLinks}`;
+      })
+      .join('\n\n');
 
-      const sponsorLinks = sponsors
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(renderSponsor)
-        .join('\n');
+  const packageTiers = renderTierGroup(true);
+  const mainReadmeOnlyTiers = renderTierGroup(false);
 
-      return `### ${TIER_TITLES[tier.slug] ?? tier.name}\n\n${sponsorLinks}`;
-    })
+  return [
+    packageTiers,
+    mainReadmeOnlyTiers &&
+      [mainReadmeOnlyStartMarker, mainReadmeOnlyTiers, mainReadmeOnlyEndMarker].join('\n\n'),
+  ]
+    .filter(Boolean)
     .join('\n\n');
 }
 
@@ -189,9 +119,13 @@ function updatePackageSponsors() {
   const packagesPath = join(rootPath, 'packages');
   const mainReadme = readFileSync(mainReadmePath, 'utf8');
   const sponsorsRegex = /(\[\/\/]: <> \(Sponsors\).+)$/s;
+  const mainReadmeOnlyRegex =
+    /\[\/\/]: <> \(Main README only start\).*?\[\/\/]: <> \(Main README only end\)\s*/gs;
   const sponsorsBlock = sponsorsRegex.exec(mainReadme);
   if (sponsorsBlock?.[1]) {
-    const packageSponsorsBlock = sponsorsBlock[1].replaceAll('src="docs/public', 'src="https://lucide.dev')
+    const packageSponsorsBlock = sponsorsBlock[1]
+      .replace(mainReadmeOnlyRegex, '')
+      .replaceAll('="docs/public/', '="https://lucide.dev/');
     readdirSync(packagesPath).forEach((packagePath) => {
       if (['lucide-figma', 'shared'].includes(packagePath) || packagePath.startsWith('.')) {
         return;
@@ -203,14 +137,14 @@ function updatePackageSponsors() {
           writeFileSync(readmePath, readmeContent.replace(sponsorsRegex, packageSponsorsBlock));
           console.log(`Upgraded Sponsors block in ${readmePath}`);
         } else {
-          console.error(`Could not find Sponsors block in ${readmePath}`)
+          console.error(`Could not find Sponsors block in ${readmePath}`);
         }
       } else {
         console.warn(`No readme found at ${readmePath}`);
       }
-    })
+    });
   } else {
-    console.error('Could not identify Sponsors block')
+    console.error('Could not identify Sponsors block');
   }
 }
 

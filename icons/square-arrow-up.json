@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "forward",
-    "direction",
-    "north",
     "sign",
     "keyboard",
     "button"

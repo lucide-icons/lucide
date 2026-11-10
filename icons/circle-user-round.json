@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact"
+    "$extends:circle-user"
   ],
   "categories": [
-    "account"
+    "$extends:circle-user"
   ],
   "aliases": [
     {

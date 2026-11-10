@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Set the line cap to square in a vector graphics editor"
+  ],
+  "tags": [
+    "$group:line",
+    "endpoint",
+    "projecting",
+    "extended",
+    "flat"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}

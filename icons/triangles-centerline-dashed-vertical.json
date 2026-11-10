@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "reflect",
     "mirror",
-    "alignment",
-    "dashed"
+    "alignment"
   ],
   "categories": [
     "design",

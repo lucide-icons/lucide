@@ -15,19 +15,15 @@
     "Jumping to the latest message in chat and activity feeds"
   ],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-last",
     "bottom",
-    "descend",
     "page",
-    "page down",
     "scroll",
     "jump",
-    "south",
     "caret",
     "button",
     "skip",
-    "end",
-    "last page",
-    "latest",
     "feed",
     "chat",
     "pagination",
@@ -35,7 +31,6 @@
     "media"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

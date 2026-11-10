@@ -7,8 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:panel-top",
+    "$group:dashed",
     "menu bar",
-    "drawer",
     "show",
     "reveal",
     "padding",

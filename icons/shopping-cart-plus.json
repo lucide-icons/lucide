@@ -12,24 +12,16 @@
     "Confirming items were added to an order"
   ],
   "tags": [
-    "trolley",
-    "cart",
-    "basket",
-    "e-commerce",
+    "$extends:shopping-cart",
+    "$group:plus",
     "ecommerce",
-    "store",
-    "purchase",
-    "products",
-    "items",
     "checkout",
     "order",
     "retail",
-    "add",
-    "increase",
     "quantity",
     "buy"
   ],
   "categories": [
-    "shopping"
+    "$extends:shopping-cart"
   ]
 }

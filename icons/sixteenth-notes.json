@@ -6,7 +6,6 @@
     "jamiemlaw"
   ],
   "use-cases": [
-    "Representing music or an audio track",
     "Representing paired sixteenth notes in music notation"
   ],
   "tags": [
@@ -17,8 +16,7 @@
     "semiquavers"
   ],
   "categories": [
-    "multimedia",
-    "files"
+    "multimedia"
   ],
   "aliases": [
     {
