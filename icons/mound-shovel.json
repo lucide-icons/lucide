@@ -7,7 +7,8 @@
   "use-cases": [
     "Marking sand sites or sand mines on logistics route maps",
     "Labeling navigation items for browsing sand and aggregate types",
-    "Showing material stockpiles in construction or mining software"
+    "Showing material stockpiles in construction or mining software",
+    "Marking sandy beach areas in travel or recreation guides"
   ],
   "tags": [
     "$extends:shovel",
