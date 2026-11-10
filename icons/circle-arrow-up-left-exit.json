@@ -6,7 +6,7 @@
   "use-cases": [],
   "tags": [
     "$group:direction-up-left",
-    "outwards",
+    "$group:exit",
     "keyboard",
     "button",
     "escape"
@@ -19,6 +19,11 @@
       "name": "arrow-up-left-from-circle",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "circle-arrow-out-up-left",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }

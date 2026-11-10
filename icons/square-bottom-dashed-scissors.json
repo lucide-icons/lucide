@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "cut",
     "snippet",
     "chop",

@@ -8,7 +8,9 @@
   "tags": [
     "$extends:mail",
     "$group:plus",
-    "compose"
+    "compose",
+    "invite",
+    "invitation"
   ],
   "categories": [
     "mail"

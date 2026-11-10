@@ -8,7 +8,9 @@
   "tags": [
     "$extends:calendar",
     "range",
-    "period"
+    "period",
+    "week",
+    "weekly"
   ],
   "categories": [
     "$extends:calendar"

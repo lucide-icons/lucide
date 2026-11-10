@@ -10,7 +10,6 @@
     "manual",
     "faq",
     "hint",
-    "inquiry",
     "query",
     "unknown",
     "unidentified",
@@ -24,8 +23,12 @@
     "mystery",
     "question",
     "question mark",
+    "?",
+    "quiz",
+    "inquiry",
+    "enquiry",
+    "ask",
     "punctuation",
-    "symbol",
-    "?"
+    "symbol"
   ]
 }

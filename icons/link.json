@@ -8,7 +8,11 @@
   "use-cases": [],
   "tags": [
     "chain",
-    "url"
+    "url",
+    "www",
+    "http",
+    "https",
+    "website"
   ],
   "categories": [
     "text"

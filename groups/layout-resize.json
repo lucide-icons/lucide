@@ -1,0 +1,12 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Layout: resizing, splitting or merging panes and grid cells",
+  "tags": [
+    "pane",
+    "grid",
+    "resize",
+    "window",
+    "merge",
+    "resizing"
+  ]
+}

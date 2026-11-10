@@ -10,7 +10,9 @@
     "bank",
     "purchase",
     "payment",
-    "cc"
+    "cc",
+    "cashier",
+    "merchant"
   ],
   "categories": [
     "account",

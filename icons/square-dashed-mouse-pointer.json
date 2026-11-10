@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "inspector",
     "element",
     "mouse",

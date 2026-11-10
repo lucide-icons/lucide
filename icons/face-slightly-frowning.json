@@ -8,10 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "emoji",
+    "$group:emoticon",
     "bad",
     "sadness",
-    "emotion",
     "concern",
     "disappointment"
   ],

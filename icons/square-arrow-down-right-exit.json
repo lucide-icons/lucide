@@ -6,16 +6,21 @@
   "use-cases": [],
   "tags": [
     "$group:direction-down-right",
-    "outwards"
+    "$group:exit"
   ],
   "categories": [
     "arrows"
   ],
   "aliases": [
     {
-      "name": "arrow-down-right-from-circle",
+      "name": "arrow-down-right-from-square",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "square-arrow-out-down-right",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }

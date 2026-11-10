@@ -13,8 +13,11 @@
     "hazard",
     "exclamation mark",
     "exclamation point",
+    "!",
+    "critical",
+    "urgent",
+    "severity",
     "punctuation",
-    "symbol",
-    "!"
+    "symbol"
   ]
 }

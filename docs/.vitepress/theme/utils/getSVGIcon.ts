@@ -11,7 +11,7 @@ const allowedAttrs = [
   'class',
 ];
 
-export default function getSVGIcon(element?: HTMLElement, attrs?: Record<string, string>) {
+export default function getSVGIcon(element?: Element, attrs?: Record<string, string>) {
   const svg = element ?? document.querySelector('#previewer svg');
   if (!svg) return;
 

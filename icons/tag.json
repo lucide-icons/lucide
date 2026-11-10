@@ -12,7 +12,11 @@
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "sell",
+    "selling",
+    "promotion",
+    "promo"
   ],
   "categories": [
     "account",

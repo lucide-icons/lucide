@@ -21,7 +21,11 @@
     "globe",
     "internet",
     "planet",
-    "network"
+    "network",
+    "www",
+    "http",
+    "https",
+    "website"
   ],
   "categories": [
     "navigation",
