@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jwlinqx"
+    "jwlinqx",
+    "karsa-mistemere"
   ],
   "use-cases": [
     "Marking sand sites or sand mines on logistics route maps",
@@ -9,6 +10,7 @@
     "Showing material stockpiles in construction or mining software"
   ],
   "tags": [
+    "$extends:shovel",
     "sand",
     "pile",
     "grain",
@@ -27,8 +29,6 @@
     "heap",
     "stockpile",
     "aggregate",
-    "dig",
-    "spade",
     "excavation",
     "earthworks",
     "mine",
