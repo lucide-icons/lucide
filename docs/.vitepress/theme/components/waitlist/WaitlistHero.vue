@@ -40,7 +40,7 @@ const config = computed(() => waitlistProducts[props.product]);
 
 .inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 48px;
   width: 100%;
   max-width: calc(var(--vp-layout-max-width) - 64px);
@@ -59,6 +59,7 @@ const config = computed(() => waitlistProducts[props.product]);
 .tag {
   padding: 4px 8px;
   line-height: 24px;
+  display: none;
 }
 
 .title {
@@ -92,6 +93,10 @@ const config = computed(() => waitlistProducts[props.product]);
   .title {
     font-size: 56px;
     line-height: 64px;
+  }
+
+  .tag {
+    display: inline-block;
   }
 }
 

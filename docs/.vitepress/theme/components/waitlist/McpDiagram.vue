@@ -54,10 +54,10 @@ const RESULT_COUNT = 4;
 const SVG_ICONS = [cloud, heart, moon, star, zap];
 const JSX_PACKAGES = ['lucide-react', 'lucide-preact', '@lucide/solid'];
 const PROMPTS = [
-  '"Add a heart icon\n to the like button"',
-  '"Find an icon for\n a settings menu"',
-  '"Swap the navbar emojis\n for matching icons"',
-  '"Suggest icons for\n a pricing table"',
+  '"Add lucide-react and\n swap the navbar icons"',
+  '"Set up @lucide/vue\n in this project"',
+  '"Replace inline SVGs\n with @lucide/svelte"',
+  '"Migrate our icons\n to @lucide/angular"',
 ];
 
 const pick = <T,>(items: T[]) => items[Math.floor(Math.random() * items.length)];
