@@ -18,10 +18,6 @@ interface LucideProps {
   color?: string;
   strokeWidth?: number;
   nonScalingStroke?: boolean;
-  /**
-   * @deprecated
-   */
-  absoluteStrokeWidth?: boolean;
   [key: string]: any; // Any other SVG props, supported by react-native-svg
 }
 ```
