@@ -6,10 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$group:chart",
+    "categorical",
+    "comparison"
   ],
   "categories": [
     "charts"

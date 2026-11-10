@@ -5,10 +5,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Ecommerce (self pick-up options for large items)",
-    "Trailer lending services",
-    "Map markers",
-    "Asset tracking systems in construction"
+    "Offering self pick-up for large items in ecommerce",
+    "Representing trailer rental or lending services",
+    "Marking trailer locations on maps",
+    "Tracking construction assets in asset management systems"
   ],
   "tags": [
     "tow",

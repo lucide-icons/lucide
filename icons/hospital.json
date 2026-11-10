@@ -16,12 +16,13 @@
     "ward",
     "building",
     "medical",
-    "vet"
+    "vet",
+    "sick",
+    "patient"
   ],
   "categories": [
     "medical",
     "buildings",
-    "navigation",
-    "travel"
+    "navigation"
   ]
 }

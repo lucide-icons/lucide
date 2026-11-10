@@ -48,7 +48,7 @@ onMounted(() => {
         :iconNode="x"
         name="x"
         :size="20"
-        absoluteStrokeWidth
+        nonScalingStroke
       />
     </Button>
     <VPDocAsideCarbonAds :carbon-ads="theme.carbonAds" overlay />

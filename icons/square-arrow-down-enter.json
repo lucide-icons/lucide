@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-down",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Downloading content to a device",
+    "Contracting a pane or grid cell from its top edge",
+    "Expanding a pane into a neighboring cell in a dashboard"
+  ],
+  "tags": [
+    "$group:direction-down",
+    "$group:enter",
+    "$group:layout-resize",
+    "download",
+    "press",
+    "cell",
+    "split"
+  ],
+  "categories": [
+    "$extends:square-arrow-down",
+    "files"
+  ]
+}

@@ -4,11 +4,11 @@
     "samuelalake"
   ],
   "use-cases": [
-    "setting or displaying the width and height of a frame or object",
-    "a size or dimensions control in a design or layout editor",
-    "indicating fixed-size mode for an element",
-    "representing artboard or canvas size settings",
-    "labeling size presets or templates in a design system"
+    "Setting or displaying the width and height of an object",
+    "Opening size controls in design or layout editors",
+    "Indicating fixed-size mode for an element",
+    "Representing artboard or canvas size settings",
+    "Labeling size presets or templates in design systems"
   ],
   "tags": [
     "ratio",

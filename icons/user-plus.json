@@ -8,13 +8,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "new",
-    "add",
-    "create",
+    "$extends:user",
+    "$group:plus",
     "follow",
-    "subscribe"
+    "subscribe",
+    "invite",
+    "invitation"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

@@ -9,7 +9,8 @@
     "medical",
     "heart",
     "lungs",
-    "sound"
+    "sound",
+    "patient"
   ],
   "categories": [
     "science",

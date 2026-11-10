@@ -24,13 +24,12 @@
     "handle",
     "plaque",
     "toothpaste",
-    "selfcare",
+    "self care",
     "grooming"
   ],
   "categories": [
     "home",
     "travel",
-    "tools",
     "medical"
   ]
 }

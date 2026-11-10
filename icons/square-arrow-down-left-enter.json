@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-down-left-exit",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Docking a floating pane back into the main window",
+    "Contracting a pane or grid cell from its top-right corner",
+    "Merging neighboring panes in a code editor layout"
+  ],
+  "tags": [
+    "$group:direction-down-left",
+    "$group:enter",
+    "$group:layout-resize",
+    "collapse",
+    "exit",
+    "close",
+    "return",
+    "dock"
+  ],
+  "categories": [
+    "$extends:square-arrow-down-left-exit"
+  ]
+}

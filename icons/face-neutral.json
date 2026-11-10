@@ -8,9 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "emoji",
+    "$group:emoticon",
     "neutral",
-    "emotion",
     "meh",
     "blank stare",
     "social masking",

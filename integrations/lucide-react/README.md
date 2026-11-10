@@ -8,6 +8,8 @@ Every fixture runs three checks:
 - TypeScript with `noEmit`;
 - Vitest Browser Mode in Chromium.
 
+The React Router fixture also resolves the package entry points with Node's own resolver (`node --test`), since the browser suite only sees them through Vite.
+
 From the repository root, install Chromium once and run the complete suite:
 
 ```sh
