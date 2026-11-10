@@ -49,7 +49,7 @@ async function copyToClipboard(text: string, confettiMessage: string, toastMessa
 }
 
 function copyName() {
-  return copyToClipboard(props.name, `Copied name`, `Copied the name of ${props.name}`);
+  return copyToClipboard(props.name, `Copied name!`, `Copied the name of ${props.name}`);
 }
 
 function copySVG(iconButton: HTMLElement) {
@@ -57,7 +57,7 @@ function copySVG(iconButton: HTMLElement) {
     class: `lucide lucide-${props.name}`,
   });
 
-  return copyToClipboard(svgString, `Copied svg`, `Copied the SVG of ${props.name}`);
+  return copyToClipboard(svgString, `Copied SVG!`, `Copied the SVG of ${props.name}`);
 }
 
 async function navigateToIcon(event) {
@@ -202,6 +202,12 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
 
 .confetti-button:before {
   line-height: 80px;
+  /* Center the "Copied ..." text over the icon (it started at the icon's left edge and ran off to the right). */
+  width: 160px;
+  max-width: none;
+  left: calc(50% - 80px);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .icon-button:active {
@@ -238,6 +244,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
 }
 
 .icon-button.active,
+.icon-button.animate,
 .icon-button:focus-visible {
   border-color: var(--vp-c-brand);
 }
