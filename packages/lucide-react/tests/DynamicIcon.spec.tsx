@@ -81,12 +81,43 @@ describe('Using DynamicIcon Component', () => {
     const FallbackComponent = () => <span data-testid="fallback">Loading...</span>;
     const { getByTestId } = render(
       <DynamicIcon
-        name="smile"
+        name="airplay"
         fallback={FallbackComponent}
       />,
     );
 
     expect(getByTestId('fallback')).not.toBeNull();
+  });
+
+  it('should render an icon that was loaded before right away', async () => {
+    const FallbackComponent = () => <span data-testid="fallback">Loading...</span>;
+    const first = render(<DynamicIcon name="anchor" />);
+
+    await waitFor(() => {
+      expect(first.container.firstChild).toHaveClass('lucide-anchor');
+    });
+
+    const second = render(
+      <DynamicIcon
+        name="anchor"
+        fallback={FallbackComponent}
+      />,
+    );
+
+    expect(second.queryByTestId('fallback')).toBeNull();
+    expect(second.container.firstChild).toHaveClass('lucide-anchor');
+  });
+
+  it('should switch to an icon that was loaded before right away', async () => {
+    const { container, rerender } = render(<DynamicIcon name="anchor" />);
+
+    await waitFor(() => {
+      expect(container.firstChild).toHaveClass('lucide-anchor');
+    });
+
+    rerender(<DynamicIcon name="smile" />);
+
+    expect(container.firstChild).toHaveClass('lucide-smile');
   });
 
   it('should forward ref to the rendered svg element', async () => {

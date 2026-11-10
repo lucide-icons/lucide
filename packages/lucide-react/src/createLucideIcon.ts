@@ -35,13 +35,8 @@ function createLucideIcon(
       ? toLucideIconData(iconDataOrName, iconNode, aliases)
       : iconDataOrName;
 
-  const Component = forwardRef<SVGSVGElement, LucideProps>(({ className, ...props }, ref) =>
-    createElement(Icon, {
-      ref,
-      icon: iconData,
-      className,
-      ...props,
-    }),
+  const Component = forwardRef<SVGSVGElement, LucideProps>((props, ref) =>
+    createElement(Icon, { ...props, ref, icon: iconData }),
   );
 
   if (iconData.name) {

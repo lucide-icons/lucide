@@ -13,22 +13,29 @@ function isDefined<T>(value: T | null | undefined): value is T {
  * @param params Additional build parameters.
  */
 function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {}): LucideIconNode {
-  const attributeNames = params.attributeNames ?? {};
+  const attributeNames = params.attributeNames;
   const getAttributeName = (attributeName: string) =>
-    attributeNames[attributeName] ?? attributeName;
+    attributeNames?.[attributeName] ?? attributeName;
 
   const viewBoxWidth = icon.size ?? icon.width ?? defaultAttributes['width'];
   const viewBoxHeight = icon.size ?? icon.height ?? defaultAttributes['height'];
-  const aliasClassNames =
-    icon.aliases
-      ?.filter((alias: string): alias is string => typeof alias === 'string' && alias.trim() !== '')
-      .map((alias: string) => `lucide-${alias}`) ?? [];
-  const iconClassNames = [...(icon.name ? [`lucide-${icon.name}`] : []), ...aliasClassNames];
-  const classNamesFromClassName = params.className?.split(' ').filter(Boolean) ?? [];
-  const className =
-    params.includeDefaultClasses === false
-      ? mergeClasses(...classNamesFromClassName)
-      : mergeClasses('lucide', ...iconClassNames, ...classNamesFromClassName);
+
+  const classNames: string[] = [];
+  if (params.includeDefaultClasses !== false) {
+    classNames.push('lucide');
+    if (icon.name) {
+      classNames.push(`lucide-${icon.name}`);
+    }
+    for (const alias of icon.aliases ?? []) {
+      if (typeof alias === 'string' && alias.trim() !== '') {
+        classNames.push(`lucide-${alias}`);
+      }
+    }
+  }
+  if (params.className) {
+    classNames.push(...params.className.split(' '));
+  }
+  const className = mergeClasses(...classNames);
 
   const calculatedStrokeWidth = params.absoluteStrokeWidth
     ? (Number(params.strokeWidth ?? defaultAttributes['stroke-width']) *
@@ -36,48 +43,48 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
       Number(params.size ?? params.width ?? defaultAttributes['width'])
     : (params.strokeWidth ?? defaultAttributes['stroke-width']);
 
-  const attributes = {
-    ...Object.entries(defaultAttributes).reduce((attrs, [attrName, value]) => {
-      attrs[getAttributeName(attrName)] = value;
-      return attrs;
-    }, {} as SVGProps),
-    ...('color' in params &&
-      params.color && {
-        [getAttributeName('stroke')]: params.color,
-      }),
-    ...('size' in params &&
-      isDefined(params.size) && {
-        [getAttributeName('width')]: params.size,
-        [getAttributeName('height')]: params.size,
-      }),
-    ...('width' in params &&
-      isDefined(params.width) && {
-        [getAttributeName('width')]: params.width,
-      }),
-    ...('height' in params &&
-      isDefined(params.height) && {
-        [getAttributeName('height')]: params.height,
-      }),
-    [getAttributeName('stroke-width')]: calculatedStrokeWidth,
-    ...(className && {
-      [getAttributeName('class')]: className,
-    }),
-    [getAttributeName('viewBox')]: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
-    ...(params.hasA11yProp === false
-      ? {
-          [getAttributeName('aria-hidden')]: 'true',
-        }
-      : {}),
-    ...('attributes' in params && params.attributes),
-  };
+  // Keys are assigned in a fixed order, so the attributes are always emitted in the same order.
+  const attributes: SVGProps = {};
+
+  for (const attributeName in defaultAttributes) {
+    attributes[getAttributeName(attributeName)] =
+      defaultAttributes[attributeName as keyof typeof defaultAttributes];
+  }
+
+  if (params.color) {
+    attributes[getAttributeName('stroke')] = params.color;
+  }
+  if (isDefined(params.size)) {
+    attributes[getAttributeName('width')] = params.size;
+    attributes[getAttributeName('height')] = params.size;
+  }
+  if (isDefined(params.width)) {
+    attributes[getAttributeName('width')] = params.width;
+  }
+  if (isDefined(params.height)) {
+    attributes[getAttributeName('height')] = params.height;
+  }
+  attributes[getAttributeName('stroke-width')] = calculatedStrokeWidth;
+  if (className) {
+    attributes[getAttributeName('class')] = className;
+  }
+  attributes[getAttributeName('viewBox')] = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
+  if (params.hasA11yProp === false) {
+    attributes[getAttributeName('aria-hidden')] = 'true';
+  }
+  Object.assign(attributes, params.attributes);
+
+  const nonScalingStrokeAttributes = params.nonScalingStroke
+    ? { [getAttributeName('vector-effect')]: 'non-scaling-stroke' }
+    : null;
 
   return [
     'svg',
     attributes,
     icon.node.map((child): LucideIconNode => {
       const [name, attrs, children] = child;
-      const nextAttrs = params.nonScalingStroke
-        ? { [getAttributeName('vector-effect')]: 'non-scaling-stroke', ...attrs }
+      const nextAttrs = nonScalingStrokeAttributes
+        ? { ...nonScalingStrokeAttributes, ...attrs }
         : attrs;
 
       return children ? [name, nextAttrs, children] : [name, nextAttrs];

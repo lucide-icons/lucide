@@ -19,6 +19,11 @@ interface DynamicIconComponentProps extends LucideProps {
   fallback?: () => JSX.Element | null;
 }
 
+/**
+ * Icon data that has been loaded before, so an icon that is used again renders right away.
+ */
+const loadedIcons = new Map<IconName, LucideIconData>();
+
 async function getIconData(name: IconName) {
   if (!(name in dynamicIconImports)) {
     throw new Error('[lucide-react]: Name in Lucide DynamicIcon not found');
@@ -28,6 +33,8 @@ async function getIconData(name: IconName) {
   const icon = (await dynamicIconImports[name]()) as DynamicIconModule;
 
   if (icon.__iconData != null) {
+    loadedIcons.set(name, icon.__iconData);
+
     return icon.__iconData;
   }
 
@@ -52,9 +59,18 @@ async function getIconData(name: IconName) {
  */
 const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
   ({ name, fallback: Fallback, ...props }, ref) => {
-    const [iconData, setIconData] = useState<LucideIconData>();
+    const loadedIcon = loadedIcons.get(name);
+    const [lastIconData, setIconData] = useState(loadedIcon);
+    // While another icon is loading, the previous one stays in place.
+    const iconData = loadedIcon ?? lastIconData;
 
     useEffect(() => {
+      if (loadedIcon != null) {
+        setIconData(loadedIcon);
+
+        return;
+      }
+
       let ignore = false;
 
       getIconData(name)
@@ -70,7 +86,7 @@ const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
       return () => {
         ignore = true;
       };
-    }, [name]);
+    }, [name, loadedIcon]);
 
     if (iconData == null) {
       if (Fallback == null) {
