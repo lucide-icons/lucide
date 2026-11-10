@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "fruit",
+    "nectarine",
+    "apricot",
+    "plum",
+    "damson",
+    "cherry",
+    "juice",
+    "smoothie",
+    "jam",
+    "conserve",
+    "preserve",
+    "sweet",
+    "snack",
+    "meal",
+    "lunch",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

@@ -5,23 +5,19 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:user-round",
+    "$group:check",
     "followed",
-    "subscribed",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "subscribed"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {
       "name": "user-check-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

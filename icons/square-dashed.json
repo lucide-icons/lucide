@@ -15,18 +15,20 @@
     "marquee",
     "tool",
     "dashed",
-    "box"
+    "box",
+    "region",
+    "area",
+    "region of interest"
   ],
   "categories": [
-    "text",
-    "design"
+    "design",
+    "cursors"
   ],
   "aliases": [
     {
       "name": "box-select",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

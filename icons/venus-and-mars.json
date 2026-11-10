@@ -12,6 +12,6 @@
     "hermaphrodite"
   ],
   "categories": [
-    "medical"
+    "$extends:venus"
   ]
 }
