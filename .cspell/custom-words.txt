@@ -15,6 +15,7 @@ monstera
 
 # Search tags and terms used in icon and category metadata
 checkmark
+activitypub
 ageusia
 artboard
 barbeque
@@ -22,6 +23,7 @@ choy
 cicd
 ecommerce
 enby
+fediverse
 flexbox
 futbol
 gddr
