@@ -108,12 +108,18 @@ export function setupTracking(router: Router) {
   window.addEventListener('pagehide', trackScrollDepth);
   window.addEventListener('beforeunload', trackScrollDepth);
 
-  // The hero actions are rendered by VitePress from the home page frontmatter,
-  // so clicks on them are picked up with a delegated listener.
+  // The hero actions and nav items are rendered by VitePress from the page frontmatter and
+  // site config, so clicks on them are picked up with a delegated listener.
   document.addEventListener('click', (event) => {
-    const link = (event.target as Element | null)?.closest?.('.VPHero .actions a');
-    if (link) {
-      track('home_hero_click', { text: link.textContent?.trim() });
+    const target = event.target as Element | null;
+
+    const heroLink = target?.closest?.('.VPHero .actions a');
+    if (heroLink) {
+      track('home_hero_click', { text: heroLink.textContent?.trim() });
+    }
+
+    if (target?.closest?.('.VPNav a[href="/mcp"]')) {
+      track('early_access_click', { product: 'mcp' });
     }
   });
 }
