@@ -10,7 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:triangle",
-    "dashed"
+    "$group:dashed"
   ],
   "categories": [
     "$extends:triangle"

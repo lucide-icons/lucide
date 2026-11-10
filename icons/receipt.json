@@ -15,7 +15,8 @@
     "currency",
     "dollar",
     "usd",
-    "$"
+    "$",
+    "cashier"
   ],
   "categories": [
     "finance",

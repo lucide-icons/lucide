@@ -12,7 +12,10 @@
   "tags": [
     "$extends:file",
     "$group:x",
-    "lost"
+    "lost",
+    "404",
+    "not found",
+    "page not found"
   ],
   "categories": [
     "$extends:file"

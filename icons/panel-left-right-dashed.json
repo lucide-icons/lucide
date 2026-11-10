@@ -10,6 +10,7 @@
   "tags": [
     "$extends:panel-left",
     "$group:position-right",
+    "$group:dashed",
     "sidebar",
     "show",
     "reveal",

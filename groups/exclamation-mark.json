@@ -13,6 +13,9 @@
     "hazard",
     "exclamation mark",
     "exclamation point",
-    "!"
+    "!",
+    "critical",
+    "urgent",
+    "severity"
   ]
 }

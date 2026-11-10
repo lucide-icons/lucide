@@ -29,7 +29,10 @@
     "cleaned",
     "disinfected",
     "uninfected",
-    "checked"
+    "checked",
+    "insurance",
+    "guarantee",
+    "warranty"
   ],
   "categories": [
     "account",

@@ -10,7 +10,10 @@
     "badge",
     "rosette",
     "prize",
-    "winner"
+    "winner",
+    "skill",
+    "skills",
+    "expertise"
   ],
   "categories": [
     "account",

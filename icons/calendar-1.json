@@ -13,7 +13,8 @@
     "singular",
     "once",
     "1",
-    "first"
+    "first",
+    "today"
   ],
   "categories": [
     "$extends:calendar"

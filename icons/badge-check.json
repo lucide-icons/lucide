@@ -14,7 +14,13 @@
   "use-cases": [],
   "tags": [
     "$extends:badge",
-    "$group:check"
+    "$group:check",
+    "premium",
+    "vip",
+    "exclusive",
+    "pro",
+    "guarantee",
+    "warranty"
   ],
   "categories": [
     "social"

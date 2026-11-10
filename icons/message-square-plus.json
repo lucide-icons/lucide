@@ -7,7 +7,9 @@
   "use-cases": [],
   "tags": [
     "$extends:message-square",
-    "$group:plus"
+    "$group:plus",
+    "suggest",
+    "suggestion"
   ],
   "categories": [
     "$extends:message-square"

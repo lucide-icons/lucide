@@ -8,7 +8,8 @@
   "tags": [
     "$group:check",
     "list",
-    "bom"
+    "bom",
+    "checklist"
   ],
   "categories": [
     "$extends:list"

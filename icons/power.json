@@ -18,7 +18,8 @@
     "restart",
     "button",
     "keyboard",
-    "troubleshoot"
+    "troubleshoot",
+    "quit"
   ],
   "categories": [
     "devices"

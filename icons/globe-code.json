@@ -13,7 +13,6 @@
   "tags": [
     "$extends:globe",
     "$group:code",
-    "website",
     "digital",
     "access",
     "link"
