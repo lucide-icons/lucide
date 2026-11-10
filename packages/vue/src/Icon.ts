@@ -33,8 +33,6 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       size: 24,
       aliases: [],
     },
-    absoluteStrokeWidth,
-    'absolute-stroke-width': absoluteStrokeWidthKebabCase,
     nonScalingStroke,
     'non-scaling-stroke': nonScalingStrokeKebabCase,
     strokeWidth,
@@ -51,17 +49,9 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     size: contextSize,
     color: contextColor,
     strokeWidth: contextStrokeWidth = 2,
-    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
     nonScalingStroke: contextNonScalingStroke = false,
     class: contextClass = '',
   } = useLucideProps();
-
-  const isAbsoluteStrokeWidth =
-    isEmptyString(absoluteStrokeWidth) ||
-    isEmptyString(absoluteStrokeWidthKebabCase) ||
-    absoluteStrokeWidth === true ||
-    absoluteStrokeWidthKebabCase === true ||
-    contextAbsoluteStrokeWidth === true;
 
   const isNonScalingStroke =
     isEmptyString(nonScalingStroke) ||
@@ -79,7 +69,6 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     width: width ?? size ?? contextSize,
     height: height ?? size ?? contextSize,
     strokeWidth: strokeWidth ?? strokeWidthKebabCase ?? contextStrokeWidth,
-    absoluteStrokeWidth: isAbsoluteStrokeWidth,
     nonScalingStroke: isNonScalingStroke,
     className: contextClass,
     hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(props),

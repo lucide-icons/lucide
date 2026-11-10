@@ -11,10 +11,6 @@ export type LucideProps = SVGAttributes & {
   color?: string;
   size?: number | string;
   'stroke-width'?: number | string;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
   class?: string;
   title?: string;

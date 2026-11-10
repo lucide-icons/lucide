@@ -30,12 +30,6 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
       ? mergeClasses(...classNamesFromClassName)
       : mergeClasses('lucide', ...iconClassNames, ...classNamesFromClassName);
 
-  const calculatedStrokeWidth = params.absoluteStrokeWidth
-    ? (Number(params.strokeWidth ?? defaultAttributes['stroke-width']) *
-        Number(icon.size ?? icon.width ?? defaultAttributes['width'])) /
-      Number(params.size ?? params.width ?? defaultAttributes['width'])
-    : (params.strokeWidth ?? defaultAttributes['stroke-width']);
-
   const attributes = {
     ...Object.entries(defaultAttributes).reduce((attrs, [attrName, value]) => {
       attrs[getAttributeName(attrName)] = value;
@@ -58,7 +52,7 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
       isDefined(params.height) && {
         [getAttributeName('height')]: params.height,
       }),
-    [getAttributeName('stroke-width')]: calculatedStrokeWidth,
+    [getAttributeName('stroke-width')]: params.strokeWidth ?? defaultAttributes['stroke-width'],
     ...(className && {
       [getAttributeName('class')]: className,
     }),

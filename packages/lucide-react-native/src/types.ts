@@ -19,10 +19,6 @@ export interface LucideProps extends SvgProps {
   width?: string | number;
   height?: string | number;
   className?: string;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
   'data-testid'?: string;
 }

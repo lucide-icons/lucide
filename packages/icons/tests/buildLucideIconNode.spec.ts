@@ -52,26 +52,6 @@ describe('buildLucideIconNode', () => {
     expect(HouseSVG[1]['stroke-width']).toBe(12);
   });
 
-  it('should scale the stroke width', () => {
-    const HouseSVG = buildLucideIconNode(House, {
-      size: 12,
-      strokeWidth: 2,
-      absoluteStrokeWidth: true,
-    });
-
-    expect(HouseSVG[1]['stroke-width']).toBe(4);
-  });
-
-  it('should not scale the stroke width', () => {
-    const HouseSVG = buildLucideIconNode(House, {
-      size: 12,
-      strokeWidth: 2,
-      absoluteStrokeWidth: false,
-    });
-
-    expect(HouseSVG[1]['stroke-width']).toBe(2);
-  });
-
   it('should set non-scaling-stroke to child nodes', () => {
     const HouseSVG = buildLucideIconNode(House, { nonScalingStroke: true });
 

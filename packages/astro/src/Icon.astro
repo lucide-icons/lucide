@@ -9,7 +9,6 @@ const {
   width,
   height,
   'stroke-width': strokeWidth = 2,
-  absoluteStrokeWidth = false,
   nonScalingStroke = false,
   iconNode = [],
   icon = {
@@ -26,7 +25,6 @@ const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   width: width ?? size,
   height: height ?? size,
   strokeWidth,
-  absoluteStrokeWidth,
   nonScalingStroke,
   ...(className !== undefined && { className }),
   hasA11yProp: hasA11yProp(rest),
