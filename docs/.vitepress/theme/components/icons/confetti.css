@@ -173,3 +173,12 @@
       0% 0%;
   }
 }
+
+/* Keep the copy confetti even with reduced motion turned on (owner request): the site-wide
+   reduced-motion rule in style.css shrinks every animation to 0.01ms, which hid it at once. */
+@media (prefers-reduced-motion: reduce) {
+  .confetti-button.animate:before,
+  .confetti-button.animate:after {
+    animation-duration: 1s !important;
+  }
+}
