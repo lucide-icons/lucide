@@ -16,6 +16,8 @@
     "!",
     "critical",
     "urgent",
-    "severity"
+    "severity",
+    "punctuation",
+    "symbol"
   ]
 }

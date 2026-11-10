@@ -3,13 +3,20 @@
   "description": "Status: help, or something unknown",
   "tags": [
     "help",
+    "assistance",
+    "support",
     "guide",
     "tutorial",
     "manual",
+    "faq",
+    "hint",
+    "query",
     "unknown",
     "unidentified",
     "unspecified",
     "uncertain",
+    "unsure",
+    "doubt",
     "undetermined",
     "missing",
     "to be determined",
@@ -20,6 +27,8 @@
     "quiz",
     "inquiry",
     "enquiry",
-    "ask"
+    "ask",
+    "punctuation",
+    "symbol"
   ]
 }
