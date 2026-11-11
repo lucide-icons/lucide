@@ -1,7 +1,7 @@
 'use client';
 
-import { createElement, forwardRef, type ReactElement } from 'react';
-import { defaultReactAttributes, hasA11yProp, mergeClasses } from '@lucide/shared';
+import { createElement, forwardRef, useMemo, type ReactElement } from 'react';
+import { buildLucideIconForReact, hasA11yProp, mergeClasses } from '@lucide/shared';
 import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
 
@@ -17,79 +17,10 @@ type IconComponentProps = LucideProps &
       }
   );
 
-/**
- * Everything about an icon that doesn't depend on the props it is rendered with.
- */
-type StaticIcon = {
-  viewBox: string;
-  classNames: string[];
-  className: string;
-  children: ReactElement[];
-  nonScalingChildren?: ReactElement[];
-};
-
-const DEFAULT_SIZE = defaultReactAttributes.width;
 const EMPTY_ICON_NODE: LucideIconNode[] = [];
-const NON_SCALING_STROKE = { vectorEffect: 'non-scaling-stroke' } as const;
 
-const staticIcons = new WeakMap<LucideIconData, StaticIcon>();
-const legacyIcons = new WeakMap<LucideIconNode[], LucideIconData>();
-
-const createNodeElement = (
-  [tag, attrs, children]: LucideIconNode,
-  index: number,
-  extraAttrs?: object,
-): ReactElement =>
-  createElement(
-    tag,
-    // The generated icons carry a key per node, custom icon nodes may not.
-    { key: index, ...extraAttrs, ...attrs },
-    children?.map((child, childIndex) => createNodeElement(child, childIndex)),
-  );
-
-/**
- * Icon data is static, so the class names, the view box and the child elements are created once
- * per icon instead of on every render. Handing React the very same child elements again also lets
- * it skip them when an icon re-renders.
- */
-const getStaticIcon = (icon: LucideIconData): StaticIcon => {
-  let staticIcon = staticIcons.get(icon);
-
-  if (staticIcon == null) {
-    const classNames = ['lucide'];
-
-    if (icon.name) {
-      classNames.push(`lucide-${icon.name}`);
-    }
-
-    for (const alias of icon.aliases ?? []) {
-      if (typeof alias === 'string' && alias.trim() !== '') {
-        classNames.push(`lucide-${alias}`);
-      }
-    }
-
-    staticIcon = {
-      viewBox: `0 0 ${icon.size ?? icon.width ?? DEFAULT_SIZE} ${icon.size ?? icon.height ?? DEFAULT_SIZE}`,
-      classNames,
-      className: mergeClasses(...classNames),
-      children: icon.node.map((node, index) => createNodeElement(node, index)),
-    };
-    staticIcons.set(icon, staticIcon);
-  }
-
-  return staticIcon;
-};
-
-const getLegacyIcon = (iconNode: LucideIconNode[]): LucideIconData => {
-  let icon = legacyIcons.get(iconNode);
-
-  if (icon == null) {
-    icon = { node: iconNode, size: DEFAULT_SIZE };
-    legacyIcons.set(iconNode, icon);
-  }
-
-  return icon;
-};
+const renderNode = ([tag, attrs, children]: LucideIconNode): ReactElement =>
+  createElement(tag, attrs, children?.map(renderNode));
 
 /**
  * Lucide icon component
@@ -117,57 +48,50 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       strokeWidth,
       absoluteStrokeWidth,
       nonScalingStroke,
-      className,
+      className = '',
       children,
       iconNode = EMPTY_ICON_NODE,
-      icon = getLegacyIcon(iconNode),
+      icon = {
+        node: iconNode,
+        aliases: [],
+        size: 24,
+      },
       ...rest
     },
     ref,
   ) => {
-    const context = useLucideContext();
-    const staticIcon = getStaticIcon(icon);
+    const {
+      size: contextSize = 24,
+      strokeWidth: contextStrokeWidth = 2,
+      absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+      nonScalingStroke: contextNonScalingStroke = false,
+      color: contextColor = 'currentColor',
+      className: contextClass = '',
+    } = useLucideContext() ?? {};
 
-    const resolvedWidth = width ?? size ?? context.size ?? DEFAULT_SIZE;
-    const resolvedStrokeWidth =
-      strokeWidth ?? context.strokeWidth ?? defaultReactAttributes.strokeWidth;
-    const contextClassName = context.className;
+    const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
+    const resolvedNonScalingStroke = nonScalingStroke ?? contextNonScalingStroke;
 
-    let iconChildren = staticIcon.children;
+    const [name, svgAttributes, builtIconNode = []] = buildLucideIconForReact(icon, {
+      color: color ?? contextColor,
+      width: width ?? size ?? contextSize,
+      height: height ?? size ?? contextSize,
+      strokeWidth: strokeWidth ?? contextStrokeWidth,
+      absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
+      nonScalingStroke: resolvedNonScalingStroke,
+      className: mergeClasses(contextClass, className),
+      hasA11yProp: hasAccessibleProp,
+      attributes: rest,
+    });
 
-    if (nonScalingStroke ?? context.nonScalingStroke) {
-      iconChildren = staticIcon.nonScalingChildren ??= icon.node.map((node, index) =>
-        createNodeElement(node, index, NON_SCALING_STROKE),
-      );
-    }
-
-    return createElement(
-      'svg',
-      {
-        ref,
-        ...defaultReactAttributes,
-        width: resolvedWidth,
-        height: height ?? size ?? context.size ?? DEFAULT_SIZE,
-        viewBox: staticIcon.viewBox,
-        stroke: (color ?? context.color) || defaultReactAttributes.stroke,
-        strokeWidth:
-          (absoluteStrokeWidth ?? context.absoluteStrokeWidth)
-            ? (Number(resolvedStrokeWidth) * Number(icon.size ?? icon.width ?? DEFAULT_SIZE)) /
-              Number(resolvedWidth)
-            : resolvedStrokeWidth,
-        className:
-          className || contextClassName
-            ? mergeClasses(
-                ...staticIcon.classNames,
-                ...`${contextClassName ?? ''} ${className ?? ''}`.split(' '),
-              )
-            : staticIcon.className,
-        ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
-        ...rest,
-      },
-      iconChildren,
-      children,
+    // The child elements only depend on the icon nodes and the non scaling stroke setting.
+    // Handing React the same elements again lets it skip them when the icon re-renders.
+    const iconChildren = useMemo(
+      () => builtIconNode.map(renderNode),
+      [icon.node, resolvedNonScalingStroke],
     );
+
+    return createElement(name, { ref, ...svgAttributes }, iconChildren, children);
   },
 );
 
