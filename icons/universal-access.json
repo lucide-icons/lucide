@@ -3,7 +3,10 @@
   "contributors": [
     "Junaidm678"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing inclusive design across accessibility needs",
+    "Indicating accessibility settings or support in applications"
+  ],
   "tags": [
     "people",
     "human",
