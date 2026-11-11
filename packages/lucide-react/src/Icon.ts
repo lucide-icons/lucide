@@ -1,6 +1,6 @@
 'use client';
 
-import { createElement, forwardRef, useMemo, type ReactElement } from 'react';
+import { createElement, forwardRef, type ReactElement } from 'react';
 import { buildLucideIconForReact, hasA11yProp, mergeClasses } from '@lucide/shared';
 import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
@@ -16,8 +16,6 @@ type IconComponentProps = LucideProps &
         iconNode?: never;
       }
   );
-
-const EMPTY_ICON_NODE: LucideIconNode[] = [];
 
 const renderNode = ([tag, attrs, children]: LucideIconNode): ReactElement =>
   createElement(tag, attrs, children?.map(renderNode));
@@ -50,7 +48,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       nonScalingStroke,
       className = '',
       children,
-      iconNode = EMPTY_ICON_NODE,
+      iconNode = [],
       icon = {
         node: iconNode,
         aliases: [],
@@ -70,7 +68,6 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     } = useLucideContext() ?? {};
 
     const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
-    const resolvedNonScalingStroke = nonScalingStroke ?? contextNonScalingStroke;
 
     const [name, svgAttributes, builtIconNode = []] = buildLucideIconForReact(icon, {
       color: color ?? contextColor,
@@ -78,20 +75,13 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       height: height ?? size ?? contextSize,
       strokeWidth: strokeWidth ?? contextStrokeWidth,
       absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
-      nonScalingStroke: resolvedNonScalingStroke,
+      nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
       className: mergeClasses(contextClass, className),
       hasA11yProp: hasAccessibleProp,
       attributes: rest,
     });
 
-    // The child elements only depend on the icon nodes and the non scaling stroke setting.
-    // Handing React the same elements again lets it skip them when the icon re-renders.
-    const iconChildren = useMemo(
-      () => builtIconNode.map(renderNode),
-      [icon.node, resolvedNonScalingStroke],
-    );
-
-    return createElement(name, { ref, ...svgAttributes }, iconChildren, children);
+    return createElement(name, { ref, ...svgAttributes }, builtIconNode.map(renderNode), children);
   },
 );
 
