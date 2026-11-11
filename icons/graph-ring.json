@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Carl-Lambert",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing data replication or consensus between equal nodes",
+    "Indicating a cyclic process made of repeating steps",
+    "Marking peer-to-peer connections without a central server"
+  ],
+  "tags": [
+    "$group:graph",
+    "ring",
+    "cycle",
+    "loop",
+    "replication",
+    "consensus",
+    "cluster",
+    "peer-to-peer",
+    "p2p",
+    "mesh",
+    "distributed"
+  ],
+  "categories": [
+    "connectivity",
+    "development"
+  ]
+}
