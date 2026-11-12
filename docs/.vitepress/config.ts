@@ -79,6 +79,15 @@ export default defineConfig({
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
       ],
+      dedupe: ['vue'],
+    },
+    server: {
+      fs: {
+        allow: [
+          fileURLToPath(new URL('../../', import.meta.url)),
+          fileURLToPath(new URL('../../../grid-window', import.meta.url)),
+        ],
+      },
     },
     plugins: [
       groupIconVitePlugin(),

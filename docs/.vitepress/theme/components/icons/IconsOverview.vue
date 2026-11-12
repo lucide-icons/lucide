@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
+import { VirtualGrid, type VirtualGridExposed } from '@grid-window/vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
+import IconItem from './IconItem.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
@@ -124,7 +126,13 @@ const isSearchMetadataLoading = computed(
   () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
+// `?grid=window` swaps the row virtualizer for @grid-window/vue (benchmark flag, client only).
+const useGridWindow = ref(false);
+const isMounted = ref(false);
+const virtualGrid = ref<VirtualGridExposed | null>(null);
+
 const chunkedIcons = computed(() => {
+  if (useGridWindow.value) return [];
   return chunkArray(searchResults.value, columnSize.value);
 });
 
@@ -134,6 +142,8 @@ const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedI
 });
 
 onMounted(() => {
+  useGridWindow.value = new URLSearchParams(window.location.search).get('grid') === 'window';
+  isMounted.value = true;
   containerProps.ref.value = document.documentElement;
   useEventListener(window, 'scroll', containerProps.onScroll);
 
@@ -168,6 +178,11 @@ const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
 
 watch(searchQueryDebounced, () => {
+  if (useGridWindow.value) {
+    // Back to the page top like the default path; the grid's scrollTo(0) stops at its first row.
+    window.scrollTo({ top: 0 });
+    return;
+  }
   scrollTo(0);
 });
 
@@ -212,8 +227,8 @@ function handleCloseDrawer() {
 const ARROW_STEPS = {
   ArrowLeft: () => -1,
   ArrowRight: () => 1,
-  ArrowUp: () => -columnSize.value,
-  ArrowDown: () => columnSize.value,
+  ArrowUp: () => -(useGridWindow.value ? virtualGrid.value?.columns || 1 : columnSize.value),
+  ArrowDown: () => (useGridWindow.value ? virtualGrid.value?.columns || 1 : columnSize.value),
 };
 
 // Arrow keys move through the search results: from the search field down into the grid, then
@@ -285,8 +300,29 @@ function handleArrowKeys(event: KeyboardEvent) {
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
+    <VirtualGrid
+      v-else-if="useGridWindow && isMounted"
+      ref="virtualGrid"
+      class="icons icons-gw"
+      :count="searchResults.length"
+      :overscan="10"
+    >
+      <template #default="{ index }">
+        <div class="icon">
+          <IconItem
+            :iconNode="searchResults[index].iconNode"
+            :name="searchResults[index].name"
+            :externalLibrary="searchResults[index].externalLibrary"
+            @setActiveIcon="setActiveIconName"
+            :active="activeIconName === searchResults[index].name"
+            customizable
+            overlayMode
+          />
+        </div>
+      </template>
+    </VirtualGrid>
     <IconGrid
-      v-else-if="list.length === 0"
+      v-else-if="useGridWindow || list.length === 0"
       overlayMode
       :icons="searchResults.slice(0, initialGridItems)"
       :activeIcon="activeIconName"
@@ -323,6 +359,18 @@ function handleArrowKeys(event: KeyboardEvent) {
 
 .icon {
   aspect-ratio: 1/1;
+}
+
+.icons-gw {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.icons-gw .icon {
+  aspect-ratio: 1/1;
+  position: relative;
 }
 
 .input-wrapper {

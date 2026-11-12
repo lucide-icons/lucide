@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, watch, defineAsyncComponent, onMounted, nextTick } from 'vue';
+import { VirtualGrid, type VirtualGridExposed } from '@grid-window/vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
@@ -7,6 +8,7 @@ import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import IconsCategory, { CategoryRow } from './IconsCategory.vue';
+import IconItem from './IconItem.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
@@ -106,19 +108,37 @@ const categories = computed(() => {
   });
 });
 
+// `?grid=window` swaps the row virtualizer for @grid-window/vue (benchmark flag, client only).
+const useGridWindow = ref(false);
+const isMounted = ref(false);
+const virtualGrid = ref<VirtualGridExposed | null>(null);
+
+const visibleCategories = computed(() => categories.value.filter(({ icons }) => icons.length));
+
+// One flat list of icons with a section (the category title) before each category's first icon.
+const gridIcons = computed(() => visibleCategories.value.flatMap(({ icons }) => icons));
+const gridSections = computed(() => {
+  let index = 0;
+  return visibleCategories.value.map(({ title, name, icons }) => {
+    const section = { index, title, name, class: 'gw-category' };
+    index += icons.length;
+    return section;
+  });
+});
+
 const categoriesList = computed(() => {
-  return categories.value
-    .filter(({ icons }) => icons.length)
-    .reduce<CategoryRow[]>((acc, category) => {
-      acc.push({ type: 'category', title: category.title, name: category.name });
+  return visibleCategories.value.reduce<CategoryRow[]>((acc, category) => {
+    acc.push({ type: 'category', title: category.title, name: category.name });
+    // With grid-window only the title rows are listed, so a row index is a section index.
+    if (useGridWindow.value) return acc;
 
-      const categoryIcons = chunkArray(category.icons, columnSize.value);
-      categoryIcons.forEach((icons) => {
-        acc.push({ type: 'icons', icons });
-      });
+    const categoryIcons = chunkArray(category.icons, columnSize.value);
+    categoryIcons.forEach((icons) => {
+      acc.push({ type: 'icons', icons });
+    });
 
-      return acc;
-    }, []);
+    return acc;
+  }, []);
 });
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
@@ -130,14 +150,38 @@ const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categori
   overscan: 10,
 });
 
+// Scroll so the title lands just below the sticky search bar instead of under it.
+async function scrollGridToSection(section: number) {
+  const grid = virtualGrid.value;
+  if (!grid) return;
+  if (section === 0) {
+    // Back to the page top like the default path; the grid's scrollTo(0) stops at its first row.
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  grid.scrollToSection(section);
+  await nextTick();
+  requestAnimationFrame(() => {
+    const name = gridSections.value[section]?.name;
+    const title = overviewEl.value?.querySelector<HTMLElement>(`[data-category="${name}"]`);
+    const bar = overviewEl.value?.querySelector<HTMLElement>('.search-bar');
+    if (!title || !bar) return;
+    window.scrollBy({
+      top: title.getBoundingClientRect().top - bar.getBoundingClientRect().bottom,
+    });
+  });
+}
+
 useScrollToCategory({
   categories,
   categoriesList,
-  scrollTo,
+  scrollTo: (index) => (useGridWindow.value ? scrollGridToSection(index) : scrollTo(index)),
   searchQueryDebounced,
 });
 
 onMounted(() => {
+  useGridWindow.value = new URLSearchParams(window.location.search).get('grid') === 'window';
+  isMounted.value = true;
   containerProps.ref.value = document.documentElement;
   useEventListener(window, 'scroll', containerProps.onScroll);
 });
@@ -200,7 +244,46 @@ function handleCloseDrawer() {
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
-    <div v-bind="wrapperProps">
+    <VirtualGrid
+      v-if="useGridWindow && isMounted"
+      ref="virtualGrid"
+      class="icons icons-gw"
+      :count="gridIcons.length"
+      :sections="gridSections"
+      :overscan="10"
+    >
+      <template #default="{ index }">
+        <div class="icon">
+          <IconItem
+            :iconNode="gridIcons[index].iconNode"
+            :name="gridIcons[index].name"
+            :externalLibrary="gridIcons[index].externalLibrary"
+            @setActiveIcon="setActiveIconName"
+            :active="activeIconName === gridIcons[index].name"
+            customizable
+            overlayMode
+          />
+        </div>
+      </template>
+      <template #section="{ section }">
+        <h2
+          class="title"
+          :data-category="section.name"
+        >
+          <a
+            class="header-anchor"
+            :href="`#${section.name}`"
+            :aria-label="`Permalink to &quot;${section.title}&quot;`"
+            >&ZeroWidthSpace;</a
+          >
+          {{ section.title }}
+        </h2>
+      </template>
+    </VirtualGrid>
+    <div
+      v-else
+      v-bind="wrapperProps"
+    >
       <IconsCategory
         v-for="{ index, data } in list"
         :categoryRow="data"
@@ -218,6 +301,35 @@ function handleCloseDrawer() {
 
   <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
+
+<style>
+.icons-gw {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.icons-gw .icon {
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+/* A title takes one grid row; sit it on the row's bottom edge like the row-based layout does. */
+.icons-gw .gw-category {
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+}
+
+.icons-gw .gw-category .title {
+  margin: 0;
+  padding: 0 0 8px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 28px;
+}
+</style>
 
 <style scoped>
 .input-wrapper {

@@ -61,6 +61,7 @@
   "dependencies": {
     "@docsearch/css": "3.8.2",
     "@floating-ui/vue": "^2.0.1",
+    "@grid-window/vue": "link:../../grid-window/packages/vue",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",
     "@openpanel/web": "^1.4.2",
