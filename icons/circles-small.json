@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "rrod497"
+  ],
+  "use-cases": [
+    "representing multiple circles or points in graphical interfaces or diagrams",
+    "operating on breakpoints in debugging interfaces",
+    "merging, grouping, combination or consolidation of entities",
+    "illustrating overlapping, intersection or superposition of areas",
+    "indicating a generic collection of items or entities in a visual context",
+    "depicting relationships or connections between multiple entities",
+    "representing tokens in games and AI applications without explicitly denoting monetary value"
+  ],
+  "tags": [
+    "shape",
+    "bullet",
+    "dot",
+    "point",
+    "node",
+    "breakpoint",
+    "collection",
+    "composition",
+    "tokens"
+  ],
+  "categories": [
+    "shapes",
+    "development"
+  ]
+}
