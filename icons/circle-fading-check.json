@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "n2duc"
+  ],
+  "use-cases": [
+    "Indicating a submission or payment that is still being verified",
+    "Showing a deployment, upload, or backup that is finishing up",
+    "Marking a task as partially completed or awaiting final approval",
+    "Displaying a step in a progress tracker that is in progress"
+  ],
+  "tags": [
+    "$group:check",
+    "pending",
+    "progress",
+    "processing",
+    "verifying",
+    "loading"
+  ],
+  "categories": [
+    "notifications"
+  ]
+}

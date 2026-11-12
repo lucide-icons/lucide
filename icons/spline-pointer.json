@@ -7,20 +7,16 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "path",
-    "tool",
-    "curve",
+    "$extends:spline",
     "node",
     "click",
     "pointer",
-    "target",
-    "vector"
+    "target"
   ],
   "categories": [
-    "arrows",
-    "cursors",
-    "design",
-    "tools"
+    "$extends:spline",
+    "cursors"
   ]
 }

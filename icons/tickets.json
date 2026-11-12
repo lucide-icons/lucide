@@ -4,6 +4,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "trip",
     "travel",
@@ -18,7 +19,6 @@
   ],
   "categories": [
     "travel",
-    "account",
     "transportation"
   ]
 }

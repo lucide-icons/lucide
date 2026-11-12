@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nathan-de-pachtere"
+  ],
+  "use-cases": [
+    "Marking the last commit of a branch",
+    "Marking a measurement at the end of a bar"
+  ],
+  "tags": [
+    "arrow",
+    "pointer",
+    "direction",
+    "indicator",
+    "code",
+    "version",
+    "control",
+    "waypoint",
+    "stop",
+    "station",
+    "last",
+    "end"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}

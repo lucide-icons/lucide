@@ -4,27 +4,26 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "music",
-    "audio",
-    "sound",
+    "$extends:file",
+    "$extends:headphones",
     "headphones"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "multimedia"
   ],
   "aliases": [
     {
       "name": "file-audio",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     },
     {
       "name": "file-audio-2",
       "deprecated": true,
-      "deprecationReason": "alias.duplicate",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.duplicate"
     }
   ]
 }

@@ -4,16 +4,12 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "vcs",
-    "repository",
-    "add",
-    "create",
-    "+"
+    "$extends:git-branch",
+    "$group:plus"
   ],
   "categories": [
-    "development"
+    "$extends:git-branch"
   ]
 }

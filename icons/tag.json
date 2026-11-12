@@ -7,13 +7,19 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "sell",
+    "selling",
+    "promotion",
+    "promo"
   ],
   "categories": [
-    "account"
+    "account",
+    "shopping"
   ]
 }

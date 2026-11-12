@@ -6,11 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "synchronize",
-    "synchronise",
-    "refresh",
-    "reconnect",
+    "$group:sync",
     "transfer",
     "backup",
     "storage",

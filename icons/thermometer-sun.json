@@ -5,15 +5,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "temperature",
-    "celsius",
-    "fahrenheit",
-    "weather",
+    "$extends:thermometer",
     "warm",
     "hot"
   ],
   "categories": [
-    "weather"
+    "$extends:thermometer"
   ]
 }

@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Sustainability",
+  "description": "Icons for sustainability, clean energy, recycling, nature, and environmental stewardship.",
   "icon": "recycle"
 }

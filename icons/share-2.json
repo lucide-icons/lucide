@@ -4,12 +4,11 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "network",
-    "connections"
+    "$extends:share"
   ],
   "categories": [
-    "account",
-    "social"
+    "$extends:share"
   ]
 }

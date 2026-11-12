@@ -6,6 +6,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "camera",
     "movie",
@@ -18,7 +19,7 @@
   "categories": [
     "devices",
     "communication",
-    "connectivity",
-    "photography"
+    "photography",
+    "multimedia"
   ]
 }

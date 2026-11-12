@@ -5,10 +5,14 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "import",
     "export",
-    "save"
+    "save",
+    "pull",
+    "install",
+    "installation"
   ],
   "categories": [
     "arrows",

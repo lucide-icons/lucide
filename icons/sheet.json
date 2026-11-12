@@ -6,10 +6,14 @@
     "csandman",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
     "spreadsheets",
     "table",
-    "excel"
+    "excel",
+    "csv",
+    "xls",
+    "xlsx"
   ],
   "categories": [
     "text",

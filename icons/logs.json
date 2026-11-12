@@ -4,6 +4,7 @@
     "AnnaSasDev",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "options",
     "list",
@@ -14,6 +15,7 @@
     "logs"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

@@ -4,23 +4,21 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:play",
     "music",
     "audio",
-    "video",
-    "start",
-    "run"
+    "video"
   ],
   "categories": [
-    "arrows",
     "multimedia"
   ],
   "aliases": [
     {
       "name": "play-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

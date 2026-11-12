@@ -6,11 +6,13 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:off",
     "disconnect"
   ],
   "categories": [
-    "connectivity",
-    "weather"
+    "$extends:cloud",
+    "connectivity"
   ]
 }

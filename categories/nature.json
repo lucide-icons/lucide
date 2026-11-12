@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Nature",
+  "description": "Icons for plants, trees, landscapes, camping, and the natural world.",
   "icon": "sprout"
 }

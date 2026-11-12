@@ -13,16 +13,19 @@ body:
       description: Which Lucide packages are affected? You may select more than one.
       options:
         - label: lucide
-        - label: lucide-angular
-        - label: lucide-flutter
-        - label: lucide-preact
         - label: lucide-react
+        - label: '@lucide/vue'
+        - label: '@lucide/svelte'
+        - label: '@lucide/angular'
+        - label: '@lucide/astro'
         - label: lucide-react-native
+        - label: lucide-preact
         - label: lucide-solid
-        - label: lucide-svelte
-        - label: lucide-vue
-        - label: lucide-vue-next
-        - label: lucide-astro
+        - label: lucide-static
+        - label: '@lucide/icons'
+        - label: lucide-vue-next (deprecated)
+        - label: lucide-svelte (deprecated)
+        - label: lucide-angular (deprecated)
         - label: Figma plugin
         - label: source/main
         - label: other/not relevant
@@ -33,7 +36,7 @@ body:
     attributes:
       label: Version
       description: What version of Lucide are you running?
-      placeholder: e.g. 0.289.1
+      placeholder: e.g. 1.1.0
     validations:
       required: true
   - type: checkboxes

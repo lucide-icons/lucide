@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "shish",
+    "skewer",
+    "meat",
+    "fast food",
+    "junk food",
+    "snack",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled",
+    "barbecue",
+    "barbeque",
+    "bbq"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

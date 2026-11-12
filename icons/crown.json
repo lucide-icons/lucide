@@ -6,6 +6,7 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "diadem",
     "tiara",
@@ -14,7 +15,12 @@
     "king",
     "ruler",
     "winner",
-    "favourite"
+    "favorite",
+    "favourite",
+    "premium",
+    "vip",
+    "exclusive",
+    "pro"
   ],
   "categories": [
     "gaming"
