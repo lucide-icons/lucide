@@ -30,7 +30,7 @@ const RESET_END = RESET_START + RESET_FADE;
 const REST = 0.6;
 
 /** A multiple of the 8-unit dash period, so the dashes stop on the same phase they started on. */
-const DASH_TRAVEL = 64;
+const DASH_TRAVEL = 128;
 
 const ICON_NAMES = [
   'heart',
@@ -243,6 +243,7 @@ watch(inView, (isInView) => {
 <style scoped>
 .diagram {
   width: 230px;
+  transform: scale(0.75);
 }
 
 .node {
@@ -327,12 +328,8 @@ watch(inView, (isInView) => {
   transform: translateX(-50%);
 }
 
-.dot-request {
+.dot-request, .dot-response {
   --dot-color: var(--vp-c-brand-3);
-}
-
-.dot-response {
-  --dot-color: var(--vp-a11y-success);
 }
 
 .dot-response::after {

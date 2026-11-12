@@ -34,8 +34,7 @@ const config = computed(() => waitlistProducts[props.product]);
 .waitlist-hero {
   display: flex;
   align-items: center;
-  padding: 48px 24px 64px;
-  background: var(--vp-sidebar-bg-color);
+  padding-bottom: 64px;
 }
 
 .inner {
@@ -45,6 +44,7 @@ const config = computed(() => waitlistProducts[props.product]);
   width: 100%;
   max-width: calc(var(--vp-layout-max-width) - 64px);
   margin: 0 auto;
+  padding: 0 24px 64px;
 }
 
 .intro {
@@ -54,6 +54,7 @@ const config = computed(() => waitlistProducts[props.product]);
   width: 100%;
   max-width: 576px;
   margin-inline: auto;
+
 }
 
 .tag {
@@ -64,8 +65,9 @@ const config = computed(() => waitlistProducts[props.product]);
 
 .title {
   margin: 16px 0 0;
-  font-size: 40px;
-  line-height: 48px;
+  max-width: 392px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 700;
   letter-spacing: -0.4px;
   color: var(--vp-c-text-1);
@@ -87,23 +89,35 @@ const config = computed(() => waitlistProducts[props.product]);
   display: flex;
   justify-content: center;
   min-width: 0;
+  background: var(--vp-sidebar-bg-color);
+  margin: 0 -24px;
+  border-bottom: 1px solid var(--vp-c-gutter);
+}
+
+@media (min-width: 640px) {
+  .title {
+    max-width: 576px;
+    line-height: 56px;
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 768px) {
-  .title {
-    font-size: 56px;
-    line-height: 64px;
-  }
-
   .tag {
     display: inline-block;
   }
 }
 
 @media (min-width: 960px) {
+  .title {
+    line-height: 64px;
+    font-size: 56px;
+  }
+
   .waitlist-hero {
     min-height: calc(100vh - var(--vp-nav-height) - 113px);
     padding: 80px 32px 64px;
+    background: var(--vp-sidebar-bg-color);
   }
 
   .inner {
@@ -119,6 +133,7 @@ const config = computed(() => waitlistProducts[props.product]);
   .visual {
     flex: 1 1 0;
     align-items: center;
+    border-bottom: none;
   }
 }
 </style>

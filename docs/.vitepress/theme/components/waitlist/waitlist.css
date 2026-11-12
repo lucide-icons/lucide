@@ -3,7 +3,7 @@ div.waitlist-card.card {
   gap: 20px;
   width: 100%;
   padding: 32px;
-  box-shadow: 0 5px 11px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--vp-c-shadow);
 }
 
 .waitlist-card-header {
