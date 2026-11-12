@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
-import { VirtualGrid, type VirtualGridExposed } from '@grid-window/vue';
+import { VirtualGrid, type VirtualGridExposed } from '../../lib/grid-window/vue.js';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';

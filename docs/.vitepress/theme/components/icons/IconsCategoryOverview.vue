@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch, defineAsyncComponent, onMounted, nextTick } from 'vue';
-import { VirtualGrid, type VirtualGridExposed } from '@grid-window/vue';
+import { VirtualGrid, type VirtualGridExposed } from '../../lib/grid-window/vue.js';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';

@@ -161,9 +161,6 @@ importers:
       '@floating-ui/vue':
         specifier: ^2.0.1
         version: 2.0.1(vue@3.5.44(typescript@6.0.3))
-      '@grid-window/vue':
-        specifier: link:../../grid-window/packages/vue
-        version: link:../../grid-window/packages/vue
       '@headlessui/vue':
         specifier: ^1.7.23
         version: 1.7.23(vue@3.5.44(typescript@6.0.3))
