@@ -15,7 +15,16 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "schuko",
+    "austria",
+    "germany",
+    "netherlands",
+    "spain"
   ],
   "categories": [
     "devices",

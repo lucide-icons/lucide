@@ -15,7 +15,14 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "iec 60906-1",
+    "brazil",
+    "south africa"
   ],
   "categories": [
     "devices",

@@ -15,7 +15,13 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "chile",
+    "italy"
   ],
   "categories": [
     "devices",

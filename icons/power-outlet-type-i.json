@@ -15,7 +15,15 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "argentina",
+    "australia",
+    "china",
+    "new zealand"
   ],
   "categories": [
     "devices",

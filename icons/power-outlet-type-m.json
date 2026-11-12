@@ -15,7 +15,15 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "bs 546",
+    "india",
+    "nepal",
+    "south africa"
   ],
   "categories": [
     "devices",

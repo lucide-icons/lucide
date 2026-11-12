@@ -15,7 +15,12 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "israel"
   ],
   "categories": [
     "devices",

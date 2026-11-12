@@ -15,7 +15,14 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "bs 1363",
+    "ireland",
+    "united kingdom"
   ],
   "categories": [
     "devices",

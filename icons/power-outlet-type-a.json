@@ -15,7 +15,16 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "ungrounded",
+    "nema 1-15",
+    "canada",
+    "japan",
+    "mexico",
+    "united states"
   ],
   "categories": [
     "devices",

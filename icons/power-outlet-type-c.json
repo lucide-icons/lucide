@@ -15,7 +15,17 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "ungrounded",
+    "europlug",
+    "brazil",
+    "france",
+    "germany",
+    "italy",
+    "spain"
   ],
   "categories": [
     "devices",

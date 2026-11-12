@@ -15,7 +15,13 @@
     "electronics",
     "voltage",
     "current",
-    "charger"
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "liechtenstein",
+    "switzerland"
   ],
   "categories": [
     "devices",
