@@ -14,9 +14,16 @@
     "arthropod",
     "littleneck",
     "quahog",
-    "cherrystone"
+    "marine",
+    "creature",
+    "fisherman",
+    "ocean",
+    "fresh",
+    "cuisine",
+    "marine-life"
   ],
   "categories": [
-    "animals"
+    "animals",
+    "food-beverage"
   ]
 }

@@ -6,10 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$group:chart",
+    "categorical",
+    "comparison"
   ],
   "categories": [
     "charts"
@@ -18,8 +17,7 @@
     {
       "name": "bar-chart-3",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

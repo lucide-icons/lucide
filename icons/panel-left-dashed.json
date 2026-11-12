@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:panel-left",
+    "$group:dashed",
     "sidebar",
-    "primary",
-    "drawer",
     "show",
     "reveal",
     "padding",
@@ -19,14 +19,13 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-left"
   ],
   "aliases": [
     {
       "name": "panel-left-inactive",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

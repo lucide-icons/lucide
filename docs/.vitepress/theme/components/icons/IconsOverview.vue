@@ -4,6 +4,7 @@ import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
+import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
@@ -14,9 +15,26 @@ import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
+import Icon from '@lucide/vue/src/Icon';
+import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { track, trackDebounced } from '../../utils/openpanel';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
+const SORTING = [
+  {
+    name: 'Popularity',
+    value: 'popularity',
+  },
+  {
+    name: 'Release date',
+    value: 'release-date',
+  },
+  {
+    name: 'Name',
+    value: 'name',
+  },
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -32,9 +50,14 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
+const selectedSort = ref(SORTING[0]);
 
-const { execute: fetchTags, data: tags } = useFetchTags();
-const { execute: fetchCategories, data: categories } = useFetchCategories();
+const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
+const {
+  execute: fetchCategories,
+  data: categories,
+  isFetching: isFetchingCategories,
+} = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -43,14 +66,37 @@ const columnSize = computed(() => {
   return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
 });
 
+const sortedIcons = computed(() => {
+  switch (selectedSort.value.value) {
+    case 'popularity':
+      return [...props.icons].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    case 'release-date':
+      return [...props.icons].sort((a, b) => {
+        if (a.awaitingRelease !== b.awaitingRelease) return a.awaitingRelease ? -1 : 1;
+
+        const aDate = a.createdRelease?.date ? new Date(a.createdRelease.date).getTime() : 0;
+        const bDate = b.createdRelease?.date ? new Date(b.createdRelease.date).getTime() : 0;
+        return bDate - aDate;
+      });
+    case 'name':
+      return [...props.icons].sort((a, b) => a.name.localeCompare(b.name));
+    default:
+      return props.icons;
+  }
+});
+
 const mappedIcons = computed(() => {
   if (tags.value == null) {
-    return props.icons;
+    return sortedIcons.value;
   }
 
-  return props.icons.map((icon) => {
+  if (categories.value == null) {
+    return sortedIcons.value;
+  }
+
+  return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+    const iconCategories = categories.value[icon.name] ?? [];
 
     return {
       ...icon,
@@ -68,11 +114,15 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
 
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
-  { name: 'aliases', weight: 3 },
+  { name: 'aliases', weight: 8 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
+
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
+const isSearchMetadataLoading = computed(
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
+);
 
 const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
@@ -98,14 +148,20 @@ function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
 
-function onFocusSearchInput() {
-  if (tags.value == null) {
-    fetchTags();
+function loadSearchMetadata() {
+  if (tags.value == null && !isFetchingTags.value) {
+    void fetchTags();
   }
-  if (categories.value == null) {
-    fetchCategories();
+  if (categories.value == null && !isFetchingCategories.value) {
+    void fetchCategories();
   }
 }
+
+watch(searchQuery, (searchString) => {
+  if (searchString !== '') {
+    loadSearchMetadata();
+  }
+});
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
@@ -115,17 +171,79 @@ watch(searchQueryDebounced, () => {
   scrollTo(0);
 });
 
+let hasStartedSearching = false;
+
+watch(searchQueryDebounced, (query) => {
+  if (query === '') return;
+
+  if (!hasStartedSearching) {
+    hasStartedSearching = true;
+    track('icons_search_start');
+  }
+
+  trackDebounced('icons_search', 'icons_search', { query, results: searchResults.value.length });
+});
+
+// Debounced so only the query the visitor settles on is tracked, not every keystroke.
+watch(searchPlaceholder, ({ isNoResults, isBrand }) => {
+  const query = searchQueryDebounced.value;
+  if (!isNoResults || isSearchMetadataLoading.value || !query) return;
+
+  trackDebounced('icons_search_no_results', 'icons_search_no_results', { query, isBrand });
+});
+
+watch(selectedSort, (sort) => {
+  track('icons_sort_change', { sort: sort.value });
+});
+
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/';
 
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
-  
+
   window.history.pushState({}, '', url);
+}
+
+const ARROW_STEPS = {
+  ArrowLeft: () => -1,
+  ArrowRight: () => 1,
+  ArrowUp: () => -columnSize.value,
+  ArrowDown: () => columnSize.value,
+};
+
+// Arrow keys move through the search results: from the search field down into the grid, then
+// between the icons. The grid shows `columnSize` icons per row, so up and down skip a whole row.
+function handleArrowKeys(event: KeyboardEvent) {
+  const step = ARROW_STEPS[event.key]?.();
+  if (step === undefined || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+    return;
+
+  const iconButtons = Array.from(
+    overviewEl.value?.querySelectorAll<HTMLElement>('.icons .icon-button') ?? [],
+  );
+  const target = event.target as HTMLElement;
+  const fromSearch = target.tagName === 'INPUT' && target.closest('.input-wrapper') !== null;
+
+  let next: HTMLElement | undefined;
+  if (fromSearch) {
+    if (event.key !== 'ArrowDown') return;
+    next = iconButtons[0];
+  } else {
+    const index = iconButtons.indexOf(target);
+    if (index === -1) return;
+    next = iconButtons[index + step];
+  }
+
+  if (next) {
+    event.preventDefault();
+    next.focus();
+    next.scrollIntoView({ block: 'nearest' });
+  }
 }
 </script>
 
@@ -133,6 +251,8 @@ function handleCloseDrawer() {
   <div
     ref="overviewEl"
     class="overview-container"
+    :class="{ 'icon-drawer-open': activeIconName }"
+    @keydown="handleArrowKeys"
   >
     <StickyBar>
       <InputSearch
@@ -141,11 +261,26 @@ function handleCloseDrawer() {
         ref="searchInput"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
-        @focus="onFocusSearchInput"
+        @focus="loadSearchMetadata"
       />
+
+      <Select
+        id="sort-select"
+        :items="SORTING"
+        v-model="selectedSort"
+      >
+        <template #start-icon>
+          <Icon
+            :iconNode="listSortDescending"
+            name="list-sort-descending"
+            class="chevron-icon"
+            aria-hidden="true"
+          />
+        </template>
+      </Select>
     </StickyBar>
     <NoResults
-      v-if="searchPlaceholder.isNoResults"
+      v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"
       :searchQuery="searchPlaceholder.query"
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"

@@ -21,7 +21,14 @@
     "packed",
     "archive",
     "zip",
-    "module"
+    "module",
+    "shipping",
+    "recipient",
+    "inventory",
+    "logistics",
+    "tracking",
+    "order",
+    "product"
   ],
   "categories": [
     "files",

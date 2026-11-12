@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "Adding an item to favorites or bookmarks",
+    "Starring an item to save it for later",
+    "Adding an item to featured or recommended lists",
+    "Following preferred content or creators",
+    "Raising the priority of an item"
+  ],
+  "tags": [
+    "$extends:star",
+    "$group:plus",
+    "join"
+  ],
+  "categories": [
+    "$extends:star"
+  ]
+}

@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "reflect",
     "mirror",
-    "alignment",
-    "dashed"
+    "alignment"
   ],
   "categories": [
     "design",
@@ -19,8 +19,7 @@
     {
       "name": "flip-vertical",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

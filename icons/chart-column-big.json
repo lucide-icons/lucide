@@ -6,20 +6,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$extends:chart-column"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-column"
   ],
   "aliases": [
     {
       "name": "bar-chart-big",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

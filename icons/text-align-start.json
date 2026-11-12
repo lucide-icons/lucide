@@ -7,9 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-left",
     "text",
     "alignment",
-    "left",
     "list"
   ],
   "categories": [
@@ -19,14 +19,12 @@
     {
       "name": "text",
       "deprecated": true,
-      "deprecationReason": "alias.duplicate",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.duplicate"
     },
     {
       "name": "align-left",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

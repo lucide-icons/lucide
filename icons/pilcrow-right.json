@@ -7,18 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "paragraph",
-    "mark",
-    "paraph",
-    "blind",
-    "typography",
-    "type",
-    "text",
-    "prose",
-    "symbol"
+    "$extends:pilcrow",
+    "$group:direction-right"
   ],
   "categories": [
-    "text"
+    "$extends:pilcrow"
   ]
 }

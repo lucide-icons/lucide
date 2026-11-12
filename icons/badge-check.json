@@ -8,14 +8,19 @@
     {
       "name": "verified",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ],
   "use-cases": [],
   "tags": [
-    "verified",
-    "check"
+    "$extends:badge",
+    "$group:check",
+    "premium",
+    "vip",
+    "exclusive",
+    "pro",
+    "guarantee",
+    "warranty"
   ],
   "categories": [
     "social"

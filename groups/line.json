@@ -1,0 +1,14 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Geometry: drawn strokes, paths and line segments",
+  "tags": [
+    "stroke",
+    "path",
+    "segment",
+    "vector",
+    "graphics",
+    "design",
+    "shape",
+    "curve"
+  ]
+}

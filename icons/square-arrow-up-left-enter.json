@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-up-left-exit",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Contracting a pane or grid cell from its bottom-right corner",
+    "Merging adjacent panes in code editors"
+  ],
+  "tags": [
+    "$group:direction-up-left",
+    "$group:enter",
+    "$group:layout-resize",
+    "merging"
+  ],
+  "categories": [
+    "$extends:square-arrow-up-left-exit"
+  ]
+}

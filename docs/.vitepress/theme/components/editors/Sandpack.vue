@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import { type FunctionalComponent } from 'vue';
-import { type LucideProps } from '@lucide/vue';
-import { Sandpack } from 'sandpack-vue3';
+import { Sandpack, type SandpackProps } from 'sandpack-vue3';
 
-defineProps<FunctionalComponent<LucideProps>>();
+const props = defineProps<SandpackProps>();
 </script>
 
 <template>
-  <Sandpack />
+  <Sandpack v-bind="props" />
 </template>
 
 <style>

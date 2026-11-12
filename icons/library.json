@@ -29,13 +29,12 @@
     "records",
     "albums",
     "music",
-    "package"
+    "package",
+    "wiki",
+    "knowledge base"
   ],
   "categories": [
     "text",
-    "photography",
-    "multimedia",
-    "navigation",
-    "development"
+    "multimedia"
   ]
 }
