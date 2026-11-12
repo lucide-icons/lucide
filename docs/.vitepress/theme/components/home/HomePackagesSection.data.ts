@@ -52,6 +52,12 @@ const loader = {
           path: '/guide/astro/',
         },
         {
+          name: 'lucide-hono',
+          logo: '/framework-logos/hono.svg',
+          label: 'Lucide documentation for Hono',
+          path: '/guide/hono/',
+        },
+        {
           name: 'lucide-react-native',
           logo: '/framework-logos/react-native.svg',
           label: 'Lucide documentation for React Native',

@@ -18,6 +18,7 @@ body:
         - label: '@lucide/svelte'
         - label: '@lucide/angular'
         - label: '@lucide/astro'
+        - label: '@lucide/hono'
         - label: lucide-react-native
         - label: lucide-preact
         - label: lucide-solid
