@@ -16,6 +16,7 @@ import SnackPlayer from './components/editors/SnackPlayer.vue';
 import Toaster from './components/base/Toaster.vue';
 import { setupTracking } from './utils/openpanel';
 import trackUnderlineDirection from './utils/underlineDirection';
+import { initBotId } from 'botid/client/core';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -42,6 +43,8 @@ const theme: Partial<Theme> = {
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();
+      // Attaches the invisible bot check to the waitlist form's fetch, verified in /api/waitlist.
+      initBotId({ protect: [{ path: '/api/waitlist', method: 'POST' }] });
     }
   },
 };

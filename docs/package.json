@@ -67,6 +67,7 @@
     "@vueuse/components": "^14.4.0",
     "@vueuse/core": "^14.4.0",
     "@vueuse/integrations": "^14.4.0",
+    "botid": "^1.5.13",
     "element-to-path": "^1.2.1",
     "fuse.js": "^7.5.0",
     "jszip": "^3.10.1",
@@ -76,6 +77,7 @@
     "motion-v": "2.11.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "resend": "^6.38.0",
     "sandpack-vue3": "3.1.12",
     "vue": "^3.5.44",
     "vue-sonner": "^2.0.9"

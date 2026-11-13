@@ -3,9 +3,10 @@ import { onMounted, ref } from 'vue';
 import Card from '../base/Card.vue';
 import WaitlistSurvey from './WaitlistSurvey.vue';
 import { waitlistProducts, type WaitlistProduct } from './products';
+import { track } from '../../utils/openpanel';
 import './waitlist.css';
 
-const status = ref<'pending' | 'confirmed' | 'invalid'>('pending');
+const status = ref<'pending' | 'confirmed' | 'invalid' | 'error'>('pending');
 const product = ref<WaitlistProduct>();
 
 // This page is prerendered, so the query string is only available after hydration.
@@ -17,7 +18,15 @@ onMounted(() => {
     productId && Object.hasOwn(waitlistProducts, productId)
       ? waitlistProducts[productId]
       : undefined;
-  status.value = product.value && !params.has('status') ? 'confirmed' : 'invalid';
+  if (params.get('status') === 'error') {
+    status.value = 'error';
+  } else {
+    status.value = product.value && !params.has('status') ? 'confirmed' : 'invalid';
+  }
+
+  if (status.value === 'confirmed' && product.value) {
+    track('waitlist_confirmed', { product: product.value.id });
+  }
 });
 </script>
 
@@ -40,6 +49,19 @@ onMounted(() => {
       v-if="status === 'confirmed' && product"
       :product="product"
     />
+
+    <Card
+      v-if="status === 'error'"
+      class="waitlist-card"
+    >
+      <div class="waitlist-card-header">
+        <h1 class="waitlist-card-title">Something went wrong</h1>
+        <p class="waitlist-card-description">
+          We couldn't confirm your email just now. Click the link in the email again in a few
+          minutes.
+        </p>
+      </div>
+    </Card>
 
     <Card
       v-if="status === 'invalid'"
