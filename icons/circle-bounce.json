@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Selecting a bounce easing for animations",
+    "Representing bounce rate in analytics dashboards",
+    "Indicating physics or ball motion in educational apps"
+  ],
+  "tags": [
+    "ball",
+    "trajectory",
+    "rebound",
+    "motion",
+    "physics",
+    "animation",
+    "easing",
+    "analytics"
+  ],
+  "categories": [
+    "science",
+    "design"
+  ]
+}
