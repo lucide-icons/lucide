@@ -1,0 +1,14 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Direction: pointing or moving upward",
+  "tags": [
+    "direction",
+    "movement",
+    "vertical",
+    "upward",
+    "upwards",
+    "north",
+    "ascend",
+    "page up"
+  ]
+}

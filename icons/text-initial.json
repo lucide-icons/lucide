@@ -7,10 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "drop cap",
-    "text",
     "format",
-    "typography",
     "letter",
     "font size"
   ],
@@ -21,8 +20,7 @@
     {
       "name": "letter-text",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

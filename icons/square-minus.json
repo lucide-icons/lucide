@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "subtract",
-    "remove",
+    "$group:minus",
     "decrease",
-    "reduce",
     "calculator",
     "button",
     "keyboard",
@@ -32,16 +30,13 @@
   "categories": [
     "math",
     "development",
-    "text",
-    "tools",
-    "devices"
+    "text"
   ],
   "aliases": [
     {
       "name": "minus-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

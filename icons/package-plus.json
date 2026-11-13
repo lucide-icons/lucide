@@ -7,11 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "new",
-    "add",
-    "create"
+    "$extends:package",
+    "$group:plus",
+    "install",
+    "installation"
   ],
   "categories": [
-    "development"
+    "$extends:package"
   ]
 }

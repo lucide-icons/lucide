@@ -10,7 +10,11 @@
   "use-cases": [],
   "tags": [
     "spreadsheet",
-    "grid"
+    "grid",
+    "csv",
+    "xls",
+    "xlsx",
+    "excel"
   ],
   "categories": [
     "text",

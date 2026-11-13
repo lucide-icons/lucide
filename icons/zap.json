@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "kapowaz"
   ],
   "use-cases": [],
   "tags": [
@@ -12,12 +13,13 @@
     "electricity",
     "energy",
     "power",
-    "quick"
+    "quick",
+    "thunder",
+    "thunderbolt"
   ],
   "categories": [
-    "connectivity",
-    "devices",
     "photography",
-    "weather"
+    "weather",
+    "devices"
   ]
 }

@@ -6,12 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "cancel",
-    "close",
-    "delete",
-    "remove",
-    "times",
-    "clear",
+    "$group:x",
     "error",
     "incorrect",
     "wrong",
@@ -23,14 +18,13 @@
   ],
   "categories": [
     "math",
-    "development"
+    "notifications"
   ],
   "aliases": [
     {
       "name": "x-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

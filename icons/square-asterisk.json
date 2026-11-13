@@ -13,7 +13,9 @@
     "multiplication",
     "glob pattern",
     "wildcard",
-    "*"
+    "*",
+    "required",
+    "mandatory"
   ],
   "categories": [
     "text",
@@ -25,8 +27,7 @@
     {
       "name": "asterisk-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

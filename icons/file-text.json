@@ -7,13 +7,17 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "data",
     "txt",
     "pdf",
-    "document"
+    "doc",
+    "docx",
+    "word",
+    "docs"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "text"
   ]
 }

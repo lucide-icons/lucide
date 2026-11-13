@@ -1,0 +1,16 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: moving into something or bringing something in",
+  "tags": [
+    "in",
+    "inside",
+    "inwards",
+    "input",
+    "incoming",
+    "import",
+    "insert",
+    "entry",
+    "entrance",
+    "ingress"
+  ]
+}

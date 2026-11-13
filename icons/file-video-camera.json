@@ -7,19 +7,19 @@
   ],
   "use-cases": [],
   "tags": [
-    "movie",
-    "video",
-    "film"
+    "$extends:file",
+    "$extends:video",
+    "video"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "multimedia"
   ],
   "aliases": [
     {
       "name": "file-video-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

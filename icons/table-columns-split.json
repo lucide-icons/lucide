@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "spreadsheet",
-    "grid",
+    "$extends:table",
     "cut",
     "break",
     "divide",
@@ -14,7 +13,6 @@
     "segment"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:table"
   ]
 }

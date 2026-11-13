@@ -8,13 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "fax",
-    "office",
-    "device",
-    "success",
+    "$extends:printer",
+    "$group:check",
     "printed"
   ],
   "categories": [
-    "devices"
+    "$extends:printer"
   ]
 }

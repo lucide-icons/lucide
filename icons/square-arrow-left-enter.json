@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-left",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Contracting a pane or grid cell from its right edge",
+    "Expanding a pane into an adjacent cell in grid layouts"
+  ],
+  "tags": [
+    "$group:direction-left",
+    "$group:enter",
+    "$group:layout-resize",
+    "reverse",
+    "back",
+    "<-",
+    "cell",
+    "expand",
+    "collapse",
+    "split"
+  ],
+  "categories": [
+    "$extends:square-arrow-left"
+  ]
+}
