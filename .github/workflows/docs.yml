@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Test search composable
+        run: pnpm --filter @lucide/docs exec node --test .vitepress/theme/composables/useSearch.test.mts
+
       - name: Build docs
         run: pnpm --filter @lucide/docs build
 
