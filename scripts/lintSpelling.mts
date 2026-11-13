@@ -8,7 +8,7 @@ import process from 'process';
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const PATTERNS = ['icons/*.json', 'categories/*.json'];
+const PATTERNS = ['icons/*.json', 'categories/*.json', 'groups/*.json'];
 
 // cspell only exports its bin for `import`, so resolve it the ESM way.
 const cspellBin = fileURLToPath(import.meta.resolve('cspell/bin.mjs'));

@@ -5,15 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "coding",
-    "version control",
-    "git",
-    "repository",
-    "push",
+    "$extends:book-up",
+    "$group:direction-up",
     "force"
   ],
   "categories": [
-    "development"
+    "$extends:book-up"
   ]
 }

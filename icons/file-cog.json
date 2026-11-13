@@ -8,14 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "executable",
-    "settings",
-    "cog",
-    "edit",
-    "gear"
+    "$extends:file",
+    "$group:cog",
+    "executable"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

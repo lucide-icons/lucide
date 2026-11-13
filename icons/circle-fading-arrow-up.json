@@ -9,7 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "north",
+    "$group:direction-up",
     "up",
     "upgrade",
     "improve",

@@ -9,6 +9,7 @@
     "Levi-Bensley"
   ],
   "tags": [
+    "$extends:phone",
     "telephone",
     "communication",
     "mobile",
@@ -16,11 +17,10 @@
     "contact",
     "history",
     "data",
-    "information",
-    "call"
+    "information"
   ],
   "categories": [
-    "communication"
+    "$extends:phone"
   ],
   "use-cases": [
     "Reviewing recent incoming and outgoing calls",

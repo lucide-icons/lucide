@@ -5,13 +5,13 @@
     "jamiemlaw"
   ],
   "use-cases": [
-    "Indicating engine health or need of repair",
+    "Indicating engine health or need for repair",
     "Representing the engine category in a parts list",
-    "Representing automotive repair",
-    "showing a check engine warning on a dashboard",
-    "marking scheduled vehicle maintenance",
-    "filtering vehicle parts in an online catalog",
-    "labeling automotive diagnostic reports"
+    "Representing automotive repair services",
+    "Showing a check engine warning on a dashboard",
+    "Marking scheduled vehicle maintenance",
+    "Filtering vehicle parts in an online catalog",
+    "Labeling automotive diagnostic reports"
   ],
   "tags": [
     "vehicle",

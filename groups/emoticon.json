@@ -1,0 +1,12 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Subject: a face showing an emotion",
+  "tags": [
+    "emoji",
+    "emotion",
+    "mood",
+    "feeling",
+    "expression",
+    "reaction"
+  ]
+}

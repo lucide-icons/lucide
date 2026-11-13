@@ -5,10 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "find",
     "search",
-    "selection",
-    "dashed"
+    "selection"
   ],
   "categories": [
     "text",

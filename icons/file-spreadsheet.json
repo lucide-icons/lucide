@@ -6,11 +6,16 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "spreadsheet",
     "sheet",
-    "table"
+    "table",
+    "csv",
+    "xls",
+    "xlsx",
+    "excel"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

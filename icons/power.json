@@ -18,9 +18,10 @@
     "restart",
     "button",
     "keyboard",
-    "troubleshoot"
+    "troubleshoot",
+    "quit"
   ],
   "categories": [
-    "connectivity"
+    "devices"
   ]
 }

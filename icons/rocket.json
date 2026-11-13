@@ -10,7 +10,9 @@
     "boost",
     "launch",
     "space",
-    "version"
+    "version",
+    "deploy",
+    "deployment"
   ],
   "categories": [
     "gaming",

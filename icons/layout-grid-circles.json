@@ -15,27 +15,11 @@
     "Representing a dot matrix or dot-matrix display"
   ],
   "tags": [
-    "app",
-    "home",
-    "start",
+    "$extends:layout-grid",
     "dot matrix",
-    "dots",
-    "menu",
-    "dashboard",
-    "collection",
-    "overview",
-    "tiles",
-    "grid",
-    "matrix",
-    "launcher",
-    "apps",
-    "widgets",
-    "ui",
-    "circles",
-    "shortcuts"
+    "dots"
   ],
   "categories": [
-    "design",
-    "layout"
+    "$extends:layout-grid"
   ]
 }

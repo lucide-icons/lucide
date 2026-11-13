@@ -14,21 +14,15 @@
     "Offering an accessibility option for visual impairments"
   ],
   "tags": [
-    "view",
-    "watch",
-    "see",
+    "$extends:eye",
+    "$group:dashed",
     "hide",
     "conceal",
     "mask",
     "hidden",
-    "invisible",
-    "visibility",
-    "vision"
+    "invisible"
   ],
   "categories": [
-    "accessibility",
-    "photography",
-    "design",
-    "security"
+    "$extends:eye"
   ]
 }
