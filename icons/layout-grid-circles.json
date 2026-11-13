@@ -17,20 +17,7 @@
   "tags": [
     "$extends:layout-grid",
     "dot matrix",
-    "dots",
-    "menu",
-    "dashboard",
-    "collection",
-    "overview",
-    "tiles",
-    "grid",
-    "matrix",
-    "launcher",
-    "apps",
-    "widgets",
-    "ui",
-    "circles",
-    "shortcuts"
+    "dots"
   ],
   "categories": [
     "$extends:layout-grid"

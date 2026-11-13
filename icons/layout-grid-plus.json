@@ -3,9 +3,14 @@
   "contributors": [
     "AleksejDix"
   ],
+  "use-cases": [
+    "Adding a new widget or tile to a dashboard",
+    "Inserting a new block or section into a page layout",
+    "Adding an app or shortcut to a home screen grid"
+  ],
   "tags": [
-    "layout",
-    "plus",
+    "$extends:layout-grid",
+    "$group:plus",
     "structure",
     "rows",
     "columns",
@@ -13,11 +18,10 @@
     "interface",
     "design",
     "section",
-    "add",
-    "grid"
+    "widget",
+    "tile"
   ],
   "categories": [
-    "layout",
-    "design"
+    "$extends:layout-grid"
   ]
 }
