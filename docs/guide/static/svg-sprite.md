@@ -1,21 +1,19 @@
 ---
-description: Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
+description: Learn how to use SVG sprites with Lucide icons in your project, including inline usage and a CSS helper class.
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 # Using the SVG sprite
 
-Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
+Learn how to use SVG sprites with Lucide icons in your project, including inline usage and a CSS helper class.
 
 The sprite is used inline: you put it in your page and reference icons with the `<use>` element.
 You may also need an additional SVG loader to handle node_modules imports in your project. Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) for a working example.
 
-To use the sprite, add it inline and reference icons with `<use>`, as shown below.
-
 ## Inline usage
 
-You can also use the sprite inline with the `<use>` element. This allows you to apply CSS styles directly to the SVG elements.
+Use the sprite inline with the `<use>` element. This allows you to apply CSS styles directly to the SVG elements.
 
 ::: sandpack {template=vanilla showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-static"}
 
