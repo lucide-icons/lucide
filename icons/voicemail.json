@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "phone",
     "cassette",
@@ -14,8 +15,7 @@
     "audio"
   ],
   "categories": [
-    "connectivity",
     "devices",
-    "social"
+    "communication"
   ]
 }

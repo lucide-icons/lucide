@@ -4,17 +4,14 @@
     "lscheibel",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "smartphone",
-    "notification",
-    "rumble",
-    "haptic feedback",
-    "notifications",
-    "screen"
+    "$extends:vibrate",
+    "$group:off",
+    "notifications"
   ],
   "categories": [
     "devices",
-    "connectivity",
-    "account"
+    "notifications"
   ]
 }

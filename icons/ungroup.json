@@ -1,7 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Ungrouping or separating combined elements",
+    "Managing collections of items",
+    "Managing notifications"
   ],
   "tags": [
     "cubes",
@@ -13,7 +19,7 @@
     "separate"
   ],
   "categories": [
-    "shapes",
-    "files"
+    "files",
+    "layout"
   ]
 }

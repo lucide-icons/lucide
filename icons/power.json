@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "on",
     "off",
@@ -17,9 +18,10 @@
     "restart",
     "button",
     "keyboard",
-    "troubleshoot"
+    "troubleshoot",
+    "quit"
   ],
   "categories": [
-    "connectivity"
+    "devices"
   ]
 }

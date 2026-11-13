@@ -3,15 +3,15 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:scan",
+    "$group:search",
     "preview",
-    "zoom",
     "expand",
     "fullscreen",
     "gallery",
-    "image",
-    "focus",
-    "lens"
+    "image"
   ],
   "categories": [
     "photography",

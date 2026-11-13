@@ -6,13 +6,19 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "unlimited",
     "forever",
     "loop",
-    "math"
+    "math",
+    "ci/cd",
+    "cicd",
+    "devops",
+    "pipeline"
   ],
   "categories": [
-    "multimedia"
+    "multimedia",
+    "math"
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere",
+    "ameniti-mx"
+  ],
+  "use-cases": [
+    "Adding a payment card during checkout",
+    "Saving a new payment method in billing settings",
+    "Linking a card to a customer account",
+    "Requesting an additional card in banking apps"
+  ],
+  "tags": [
+    "$extends:credit-card",
+    "$group:plus",
+    "debit",
+    "banking",
+    "finance",
+    "transaction",
+    "wallet",
+    "checkout",
+    "billing",
+    "account",
+    "cardholder",
+    "link",
+    "save",
+    "method",
+    "plastic"
+  ],
+  "categories": [
+    "$extends:credit-card",
+    "shopping"
+  ]
+}

@@ -4,6 +4,7 @@
     "hieu-onefold",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "birdhouse",
     "bird",
@@ -15,7 +16,6 @@
   "categories": [
     "nature",
     "animals",
-    "navigation",
     "home"
   ]
 }

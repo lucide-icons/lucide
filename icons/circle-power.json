@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "on",
     "off",
@@ -19,14 +20,13 @@
     "troubleshoot"
   ],
   "categories": [
-    "connectivity"
+    "devices"
   ],
   "aliases": [
     {
       "name": "power-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

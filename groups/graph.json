@@ -1,0 +1,14 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Structure: connected nodes and their relationships",
+  "tags": [
+    "network",
+    "nodes",
+    "edges",
+    "links",
+    "connections",
+    "relationships",
+    "structure",
+    "topology"
+  ]
+}

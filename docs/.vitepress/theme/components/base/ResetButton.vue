@@ -1,25 +1,40 @@
 <script setup lang="ts">
-import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import IconButton from "./IconButton.vue";
+import { ref } from 'vue';
+import { rotateCw } from '../../../data/iconNodes';
+import Icon from '@lucide/vue/src/Icon';
+import Button from './Button.vue';
 
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
+const spinning = ref(false);
 </script>
 
 <template>
-  <IconButton class="reset-button">
-    <RotateIcon :size="20"/>
-  </IconButton>
+  <Button
+    class="reset-button"
+    :class="{ spinning }"
+    aria-label="Reset style"
+    @click="spinning = true"
+    @animationend="spinning = false"
+  >
+    <Icon
+      :size="20"
+      :iconNode="rotateCw"
+      name="rotate-cw"
+    />
+  </Button>
 </template>
 
 <style scoped>
 .reset-button {
+  transition: ease-in-out 0.25s opacity;
+  transition-duration: 0.25s;
   background: none;
   padding: 0;
 }
 
-.reset-button .lucide {
-  transition: ease-in-out 0.1s transform;
+/* The arrow spins once in place when clicked */
+.reset-button.spinning .lucide {
+  animation: rotate 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 0.6s !important;
 }
 
 .reset-button:hover {
@@ -27,17 +42,19 @@ const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
   border-color: transparent;
 }
 
-/* a rotate css animation keyframes */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
+.reset-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
-.reset-button:active .lucide {
-  transform: rotate(45deg);
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

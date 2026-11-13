@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:chart",
     "trading",
     "trader",
     "financial",
@@ -18,11 +20,7 @@
     "currency",
     "stocks",
     "exchange",
-    "hedge fund",
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "hedge fund"
   ],
   "categories": [
     "charts",
@@ -32,8 +30,7 @@
     {
       "name": "candlestick-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

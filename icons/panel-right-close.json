@@ -4,16 +4,15 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "sidebar",
-    "secondary",
-    "drawer",
+    "$extends:panel-right",
+    "$group:direction-right",
     "hide",
     "chevron",
     ">"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "$extends:panel-right"
   ]
 }

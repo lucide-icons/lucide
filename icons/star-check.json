@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "Marking a favorite or bookmark as verified",
+    "Indicating approved, certified, or trusted content",
+    "Highlighting featured or recommended items",
+    "Showing a completed achievement in games or apps",
+    "Confirming a selected rating or review"
+  ],
+  "tags": [
+    "$extends:star",
+    "$group:check"
+  ],
+  "categories": [
+    "$extends:star"
+  ]
+}

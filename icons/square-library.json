@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "books",
     "reading",
@@ -29,18 +30,13 @@
     "package"
   ],
   "categories": [
-    "text",
-    "photography",
-    "multimedia",
-    "navigation",
-    "development"
+    "$extends:library"
   ],
   "aliases": [
     {
       "name": "library-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

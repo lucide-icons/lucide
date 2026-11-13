@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "caret",
     "keyboard",
     "mac",
@@ -19,8 +22,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "math",
-    "gaming"
+    "math"
   ]
 }

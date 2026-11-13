@@ -4,11 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "add",
-    "new",
-    "increase",
-    "increment",
+    "$group:plus",
     "positive",
     "calculate",
     "calculator",
@@ -17,17 +15,14 @@
     "toolbar",
     "maximum",
     "upgrade",
-    "extra",
     "operator",
     "join",
     "concatenate",
     "code",
-    "coding",
-    "+"
+    "coding"
   ],
   "categories": [
     "math",
-    "tools",
     "development",
     "text"
   ],
@@ -35,8 +30,7 @@
     {
       "name": "plus-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nickveles"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:cannabis",
+    "$group:off"
+  ],
+  "categories": [
+    "$extends:cannabis"
+  ]
+}
