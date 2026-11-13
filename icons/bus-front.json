@@ -4,13 +4,11 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "coach",
-    "vehicle",
-    "trip",
-    "road"
+    "$extends:bus"
   ],
   "categories": [
-    "transportation"
+    "$extends:bus"
   ]
 }

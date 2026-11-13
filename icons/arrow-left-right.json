@@ -4,7 +4,10 @@
     "wojtekmaj",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:direction-right",
     "bidirectional",
     "two-way",
     "2-way",
@@ -17,6 +20,6 @@
     "->"
   ],
   "categories": [
-    "arrows"
+    "$extends:arrow-left"
   ]
 }

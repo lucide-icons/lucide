@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "siarie",
+    "jguddas",
+    "swastik7805",
+    "Spleefies",
+    "ramazansancar"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:folder",
+    "folder",
+    "bookmark",
+    "file",
+    "mark",
+    "storage",
+    "archive",
+    "project",
+    "favorite",
+    "favourite",
+    "save",
+    "read later"
+  ],
+  "categories": [
+    "$extends:folder"
+  ]
+}

@@ -5,6 +5,7 @@
     "jguddas",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "agreement",
     "help",
@@ -14,14 +15,14 @@
     "terms"
   ],
   "categories": [
-    "emoji"
+    "emoji",
+    "social"
   ],
   "aliases": [
     {
       "name": "helping-hand",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

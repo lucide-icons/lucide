@@ -5,19 +5,12 @@
     "danielbayley",
     "jonas-hoebenreich"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
-    "paragraph",
-    "mark",
-    "paraph",
-    "blind",
-    "typography",
-    "type",
-    "text",
-    "prose",
-    "symbol"
+    "$extends:pilcrow",
+    "$group:direction-left"
   ],
   "categories": [
-    "text"
+    "$extends:pilcrow"
   ]
 }

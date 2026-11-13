@@ -3,12 +3,14 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "device",
     "music",
     "connect"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "multimedia"
   ]
 }

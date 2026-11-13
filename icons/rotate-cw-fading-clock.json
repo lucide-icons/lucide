@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "NielsLazaroms"
+  ],
+  "use-cases": [
+    "Indicating items queued for processing",
+    "Indicating that a process is in progress"
+  ],
+  "tags": [
+    "$extends:rotate-cw",
+    "$group:clock",
+    "waiting",
+    "hourglass",
+    "loading",
+    "pause"
+  ],
+  "categories": [
+    "time"
+  ]
+}

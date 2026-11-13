@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "skajosborn",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Indicating public parks on maps and navigation apps",
+    "Marking outdoor recreation areas and picnic zones",
+    "Highlighting municipal park facilities and services"
+  ],
+  "tags": [
+    "nature",
+    "green",
+    "trees",
+    "landscape",
+    "rest",
+    "walk",
+    "leisure",
+    "environment",
+    "tree",
+    "bench",
+    "outdoors",
+    "recreation"
+  ],
+  "categories": [
+    "nature",
+    "navigation",
+    "travel"
+  ]
+}

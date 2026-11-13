@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { useMediaQuery } from '@vueuse/core';
 import { useRouter } from 'vitepress';
+import { toast } from 'vue-sonner';
 import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
-import { diamond }  from '../../../data/iconNodes'
+import { diamond } from '../../../data/iconNodes';
 
-const downloadText = 'Download!'
-const copiedText = 'Copied!'
+const downloadText = 'Download!';
+const copiedText = 'Copied!';
 
-export type IconNode = [elementName: string, attrs: Record<string, string>][]
+export type IconNode = [elementName: string, attrs: Record<string, string>][];
 
 const props = defineProps<{
   name: string;
@@ -19,60 +20,123 @@ const props = defineProps<{
   active: boolean;
   externalLibrary?: string;
   customizable?: boolean;
-  overlayMode?: boolean
-  hideIcon?: boolean
-}>()
+  overlayMode?: boolean;
+  hideIcon?: boolean;
+}>();
 
-const emit = defineEmits(['setActiveIcon'])
+const emit = defineEmits(['setActiveIcon']);
 
-const { go } = useRouter()
+const { go } = useRouter();
 const showOverlay = useMediaQuery('(min-width: 860px)');
-const { animate, confetti, confettiText } = useConfetti()
-
+const { animate, confetti, confettiText } = useConfetti();
 
 const icon = computed(() => {
-  if (!props.name || !props.iconNode) return null
-  return createLucideIcon(props.name, props.iconNode)
-})
+  if (!props.name || !props.iconNode) return null;
+  return createLucideIcon(props.name, props.iconNode);
+});
 
-const href = computed(() => props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
+const href = computed(() =>
+  props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
+);
+
+// The toast says what was copied, since the name and the SVG are copied the same way
+async function copyToClipboard(text: string, confettiMessage: string, toastMessage: string) {
+  await navigator.clipboard.writeText(text);
+
+  confettiText.value = confettiMessage;
+  confetti();
+  toast.success(toastMessage);
+}
+
+function copyName() {
+  return copyToClipboard(props.name, `Copied name!`, `Copied the name of ${props.name}`);
+}
+
+function copySVG(iconButton: HTMLElement) {
+  const svgString = getSVGIcon(iconButton.querySelector('svg'), {
+    class: `lucide lucide-${props.name}`,
+  });
+
+  return copyToClipboard(svgString, `Copied SVG!`, `Copied the SVG of ${props.name}`);
+}
 
 async function navigateToIcon(event) {
   if (event.shiftKey) {
-    event.preventDefault()
-    const svgString = getSVGIcon(event.target.firstChild, {
-      class: `lucide lucide-${props.name}`,
-    })
-
-    await navigator.clipboard.writeText(svgString)
-
-    confettiText.value = copiedText
-    confetti()
-    return
+    event.preventDefault();
+    await copySVG(event.currentTarget);
+    return;
   }
 
-  if(props.overlayMode && showOverlay.value) {
-    event.preventDefault()
+  if (event.ctrlKey || event.metaKey) {
+    event.preventDefault();
+    await copyName();
+    return;
+  }
 
-    window.history.pushState({}, '', props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
-    emit('setActiveIcon', props.externalLibrary ? `${props.externalLibrary}:${props.name}`: props.name)
+  if (props.overlayMode && showOverlay.value) {
+    event.preventDefault();
+
+    window.history.pushState(
+      {},
+      '',
+      props.externalLibrary
+        ? `/icons/${props.externalLibrary}/${props.name}`
+        : `/icons/${props.name}`,
+    );
+    emit(
+      'setActiveIcon',
+      props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,
+    );
   } else {
-    event.preventDefault()
-    go(props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
+    event.preventDefault();
+    go(
+      props.externalLibrary
+        ? `/icons/${props.externalLibrary}/${props.name}`
+        : `/icons/${props.name}`,
+    );
   }
 }
 
-const DiamondIcon = createLucideIcon('Diamond', diamond)
+// On a selected (focused) icon: Enter opens it, Ctrl/Cmd + C copies its name, Shift + C its SVG.
+// (Ctrl/Cmd + Shift + C is the browser's inspect shortcut, so it can't be used for the SVG.)
+async function handleKeydown(event: KeyboardEvent) {
+  if (
+    event.key === 'Enter' &&
+    !(event.shiftKey || event.ctrlKey || event.metaKey || event.altKey)
+  ) {
+    await navigateToIcon(event);
+    return;
+  }
+
+  if (event.key.toLowerCase() !== 'c' || event.altKey) return;
+
+  if (event.shiftKey && !(event.ctrlKey || event.metaKey)) {
+    event.preventDefault();
+    await copySVG(event.currentTarget as HTMLElement);
+    return;
+  }
+
+  if (!(event.ctrlKey || event.metaKey) || event.shiftKey) return;
+
+  // Leave a normal copy alone when some text on the page is selected
+  if (window.getSelection()?.toString()) return;
+
+  event.preventDefault();
+  await copyName();
+}
+
+const DiamondIcon = createLucideIcon('Diamond', diamond);
 </script>
 
 <template>
   <Tooltip :title="name">
     <a
       class="icon-button confetti-button vp-raw"
+      tabindex="0"
       @click="navigateToIcon"
+      @keydown="handleKeydown"
       :class="{ active, animate }"
       :aria-label="name"
-
       :data-confetti-text="confettiText"
       ref="ref"
     >
@@ -91,7 +155,10 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
         class="floating-diamond"
         aria-hidden="true"
       >
-        <DiamondIcon fill="currentColor" :size="8"/>
+        <DiamondIcon
+          fill="currentColor"
+          :size="8"
+        />
       </div>
     </a>
   </Tooltip>
@@ -108,7 +175,10 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   font-weight: 600;
   border-radius: 4px;
   white-space: nowrap;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
   display: inline-flex;
@@ -132,10 +202,19 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 
 .confetti-button:before {
   line-height: 80px;
+  /* Center the "Copied ..." text over the icon (it started at the icon's left edge and ran off to the right). */
+  width: 160px;
+  max-width: none;
+  left: calc(50% - 80px);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .icon-button:active {
-  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
+  transition:
+    color 0.1s,
+    border-color 0.1s,
+    background-color 0.1s;
 }
 
 .icon-button.medium {
@@ -159,13 +238,19 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 }
 
 .icon-button:active {
-    border-color: var(--vp-button-alt-active-border);
-    color: var(--vp-button-alt-active-text);
-    background-color: var(--vp-button-alt-active-bg);
+  border-color: var(--vp-button-alt-active-border);
+  color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg);
 }
 
-.icon-button.active {
+.icon-button.active,
+.icon-button.animate,
+.icon-button:focus-visible {
   border-color: var(--vp-c-brand);
+}
+
+.icon-button:focus-visible {
+  outline: none;
 }
 
 .lucide-icon {
@@ -182,7 +267,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   max-height: 3rem;
 }
 
-html.absolute-stroke-width .lucide-icon.customizable {
+html.non-scaling-stroke .lucide-icon.customizable {
   stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
 }
 </style>

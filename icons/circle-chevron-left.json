@@ -3,8 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "back",
+    "$group:direction-left",
+    "$group:navigation-previous",
     "previous",
     "less than",
     "fewer",
@@ -18,8 +20,7 @@
     {
       "name": "chevron-left-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

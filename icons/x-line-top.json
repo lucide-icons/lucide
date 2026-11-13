@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:x",
+    "$group:x",
+    "line",
+    "top",
+    "arrow",
+    "navigation",
+    "up",
+    "pointer",
+    "direction",
+    "vector",
+    "symbol",
+    "mean",
+    "median",
+    "average",
+    "x̄"
+  ],
+  "categories": [
+    "$extends:x"
+  ]
+}

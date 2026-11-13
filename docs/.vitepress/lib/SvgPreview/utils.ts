@@ -1,10 +1,8 @@
 import { INode, parseSync } from 'svgson';
-// @ts-ignore
 import toPath from 'element-to-path';
-// @ts-ignore
 import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
 import { Path, Point } from './types';
-import memoize from 'lodash/memoize';
+import { memoize } from 'lodash-es';
 
 function assertNever(x: never): never {
   throw new Error('Unknown type: ' + x['type']);
@@ -55,10 +53,7 @@ export const getCommands = (src: string) =>
   getNodes(src)
     .map(convertToPathNode)
     .flatMap(({ d, name }, idx) =>
-      new SVGPathData(d)
-        .toAbs()
-        // @ts-ignore
-        .commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
+      new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
     );
 
 const getPaths = (src: string) => {
@@ -244,7 +239,7 @@ const getPaths = (src: string) => {
         break;
       }
       default: {
-        // @ts-ignore
+        // @ts-expect-error every command type is handled above, so `c` is not `never` here
         assertNever(c);
       }
     }

@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ethanhazel",
+    "karsa-mistmere",
+    "ericfennis",
+    "6teloiv",
+    "lukedukeus"
+  ],
+  "use-cases": [
+    "Signing in to an account",
+    "Joining a room or shared session",
+    "Marking inputs on nodes in a node-based editor",
+    "Contracting a pane or grid cell from its left edge"
+  ],
+  "tags": [
+    "$group:direction-right",
+    "$group:enter",
+    "$group:layout-resize",
+    "left",
+    "source",
+    "place",
+    "->",
+    "sign in",
+    "log in",
+    "login",
+    "join",
+    "auth",
+    "data flow",
+    "node editor",
+    "panel",
+    "expand"
+  ],
+  "categories": [
+    "$extends:square-arrow-right",
+    "account",
+    "development"
+  ]
+}

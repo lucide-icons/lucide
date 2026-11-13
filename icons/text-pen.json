@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Indicating saved drafts in mail, notes, and messaging apps",
+    "Toggling draft mode in mail, notes, and AI chat apps",
+    "Representing live collaborative editing with automatic saving",
+    "Representing auto-complete, snippet expansion, or automated text insertion",
+    "Representing instant sketch-to-wireframe generation on feedback canvases"
+  ],
+  "tags": [
+    "$group:pen",
+    "quick",
+    "autosave",
+    "prompt",
+    "scratch",
+    "authoring"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}

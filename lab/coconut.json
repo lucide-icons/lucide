@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "segments",
+    "milk",
+    "smoothie",
+    "cocktail",
+    "piña colada",
+    "tropical",
+    "beach bar",
+    "holiday",
+    "vacation",
+    "sweet",
+    "creamy",
+    "snack",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage",
+    "travel"
+  ]
+}

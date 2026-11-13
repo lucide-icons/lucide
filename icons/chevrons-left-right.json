@@ -3,9 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:direction-right",
     "expand",
-    "horizontal",
     "unfold"
   ],
   "categories": [

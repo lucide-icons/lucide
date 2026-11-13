@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "notebook",
     "notes",
@@ -31,7 +32,6 @@
     "opened"
   ],
   "categories": [
-    "text",
-    "social"
+    "text"
   ]
 }

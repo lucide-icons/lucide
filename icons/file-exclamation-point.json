@@ -4,24 +4,22 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:exclamation-mark",
     "hidden",
-    "warning",
-    "alert",
-    "danger",
-    "protected",
-    "exclamation mark"
+    "protected"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "notifications"
   ],
   "aliases": [
     {
       "name": "file-warning",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

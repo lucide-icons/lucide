@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Set the line cap to butt in a vector graphics editor"
+  ],
+  "tags": [
+    "$group:line",
+    "endpoint",
+    "flat",
+    "flush"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}

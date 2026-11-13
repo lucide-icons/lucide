@@ -5,14 +5,11 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "silent",
-    "reminder",
-    "delete",
-    "remove",
-    "erase"
+    "$extends:bell",
+    "$group:minus",
+    "silent"
   ],
   "categories": [
     "notifications"

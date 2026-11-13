@@ -4,18 +4,16 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "verified",
-    "unverified",
-    "sale",
-    "discount",
-    "offer",
-    "marketing",
-    "sticker",
-    "price tag"
+    "$extends:badge",
+    "$group:percent",
+    "sell",
+    "selling",
+    "promotion",
+    "promo"
   ],
   "categories": [
-    "social",
     "finance",
     "shopping",
     "math"

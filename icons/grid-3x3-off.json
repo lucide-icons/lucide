@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:grid-3x3",
+    "gridalchemy"
+  ],
+  "use-cases": [
+    "Hiding grid lines on a canvas or artboard",
+    "Indicating that snap to grid is turned off",
+    "Hiding the cell grid in spreadsheets"
+  ],
+  "tags": [
+    "$extends:grid-3x3",
+    "$group:off",
+    "guides",
+    "snap",
+    "canvas",
+    "spreadsheet",
+    "cells",
+    "data table",
+    "diagram",
+    "overlay"
+  ],
+  "categories": [
+    "$extends:grid-3x3"
+  ],
+  "aliases": [
+    {
+      "name": "grid-3-x-3-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

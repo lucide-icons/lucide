@@ -6,6 +6,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "eye dropper",
     "color picker",
@@ -13,7 +14,6 @@
     "chemistry"
   ],
   "categories": [
-    "text",
     "design",
     "science"
   ]

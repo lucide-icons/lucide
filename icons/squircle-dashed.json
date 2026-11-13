@@ -4,8 +4,10 @@
     "jguddas",
     "aramsoneson"
   ],
+  "use-cases": [],
   "tags": [
-    "shape",
+    "$extends:squircle",
+    "$group:dashed",
     "pending",
     "progress",
     "issue",
@@ -15,8 +17,8 @@
     "version control"
   ],
   "categories": [
+    "$extends:squircle",
     "development",
-    "shapes",
     "design"
   ]
 }

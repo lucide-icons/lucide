@@ -6,13 +6,14 @@
     "ericfennis",
     "danielbayley",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:navigation-previous",
     "previous",
-    "back",
-    "direction",
-    "west",
     "indicate turn"
   ],
   "categories": [

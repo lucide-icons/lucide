@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "todo",
     "done",
@@ -12,9 +13,10 @@
     "complete",
     "tasks",
     "items",
-    "pending"
+    "pending",
+    "checklist"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

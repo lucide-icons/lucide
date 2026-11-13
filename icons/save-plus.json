@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jwlinqx"
+  ],
+  "use-cases": [
+    "Saving a new copy of a file or document",
+    "Creating a new item by saving the current work"
+  ],
+  "tags": [
+    "$extends:save",
+    "$group:plus",
+    "save",
+    "update"
+  ],
+  "categories": [
+    "$extends:save"
+  ]
+}

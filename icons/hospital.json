@@ -4,6 +4,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "infirmary",
     "sanatorium",
@@ -15,12 +16,13 @@
     "ward",
     "building",
     "medical",
-    "vet"
+    "vet",
+    "sick",
+    "patient"
   ],
   "categories": [
     "medical",
     "buildings",
-    "navigation",
-    "travel"
+    "navigation"
   ]
 }
