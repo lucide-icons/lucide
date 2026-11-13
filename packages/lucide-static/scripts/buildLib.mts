@@ -42,12 +42,13 @@ const aliases = (await Promise.all(
     return aliases.map(alias => ({
       ...svg,
       name: typeof alias === 'string' ? alias : alias.name,
+      aliasOf: svgName,
     }));
   })
 )).flat();
 
 await Promise.all([
-  generateSprite(svgs, PACKAGE_DIR, license),
+  generateSprite(svgs, aliases, PACKAGE_DIR, license),
   generateIconNodes(svgs, PACKAGE_DIR),
   copyIcons([...svgs, ...aliases], PACKAGE_DIR, license),
 ]);
