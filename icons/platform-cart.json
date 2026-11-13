@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando"
+  ],
+  "use-cases": [
+    "Transporting boxes and inventory in warehouses",
+    "Moving luggage or equipment in airports and hotels",
+    "Representing material-handling carts in fulfillment apps",
+    "Indicating manual transport or moving actions"
+  ],
+  "tags": [
+    "flatbed",
+    "trolley",
+    "dolly",
+    "warehouse",
+    "logistics",
+    "transport",
+    "cargo",
+    "luggage",
+    "cart",
+    "utility",
+    "pallet",
+    "freight",
+    "shipping",
+    "fulfillment",
+    "airport",
+    "equipment"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
