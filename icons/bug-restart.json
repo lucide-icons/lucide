@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jamiemlaw",
+    "rrod497"
+  ],
+  "use-cases": [
+    "restarting a paused debugging session, bug-hunting script or monitoring process",
+    "re-running a failed debugging session or a test suite",
+    "re-triggering a scan of your codebase for unresolved bugs and errors",
+    "reverting changes made during a debugging session"
+  ],
+  "tags": [
+    "issue",
+    "testing",
+    "debug",
+    "reproduce",
+    "code",
+    "insect",
+    "revert",
+    "defect",
+    "error"
+  ],
+  "categories": [
+    "development",
+    "animals"
+  ]
+}
