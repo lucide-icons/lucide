@@ -48,12 +48,15 @@ describe('getClassNames', () => {
     expect(attrs).toEqual(['item1', 'item2', 'item3']);
   });
 
-  it('should return string when given a string directly', () => {
-    expect(getClassNames('custom-class')).toBe('custom-class');
+  it('should return an array of strings when given a string directly', () => {
+    expect(getClassNames('custom-class')).toEqual(['custom-class']);
+    expect(getClassNames('custom-class item2')).toEqual(['custom-class', 'item2']);
+    expect(getClassNames('  item1   item2  ')).toEqual(['item1', 'item2']);
   });
 
-  it('should return empty string when no class property exists', () => {
-    expect(getClassNames({})).toBe('');
+  it('should return empty array when no class property exists', () => {
+    expect(getClassNames({})).toEqual([]);
+    expect(getClassNames('')).toEqual([]);
   });
 });
 
@@ -144,5 +147,20 @@ describe('replaceElement', () => {
     });
 
     expect(result).toBeUndefined();
+  });
+
+  it('should not split class name string into individual characters when attrs is a string', () => {
+    const container = document.createElement('div');
+    const element = document.createElement('i');
+    element.setAttribute('data-lucide', 'volume-2');
+    container.appendChild(element);
+
+    const replaced = replaceElement(element, {
+      nameAttr: 'data-lucide',
+      icons: { Volume2: testIconNode },
+      attrs: 'custom-class' as unknown as SVGProps,
+    });
+
+    expect(replaced?.getAttribute('class')).toBe('lucide lucide-volume-2 custom-class');
   });
 });

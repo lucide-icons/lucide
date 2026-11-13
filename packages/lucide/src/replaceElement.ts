@@ -23,16 +23,20 @@ export const getAttrs = (element: Element): Record<string, string> =>
  */
 export const getClassNames = (
   attrs: Record<string, number | string | string[] | undefined> | string,
-): string | string[] => {
-  if (typeof attrs === 'string') return attrs;
-  if (!attrs || !attrs.class) return '';
-  if (attrs.class && typeof attrs.class === 'string') {
-    return attrs.class.split(' ');
+): string[] => {
+  if (typeof attrs === 'string') {
+    return attrs.trim().split(/\s+/).filter(Boolean);
   }
-  if (attrs.class && Array.isArray(attrs.class)) {
-    return attrs.class;
+  if (!attrs || !attrs.class) return [];
+  if (typeof attrs.class === 'string') {
+    return attrs.class.trim().split(/\s+/).filter(Boolean);
   }
-  return '';
+  if (Array.isArray(attrs.class)) {
+    return attrs.class.flatMap((c) =>
+      typeof c === 'string' ? c.trim().split(/\s+/).filter(Boolean) : [],
+    );
+  }
+  return [];
 };
 
 interface ReplaceElementOptions {
