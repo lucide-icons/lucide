@@ -27,4 +27,25 @@ describe('hasA11yProp', () => {
   it('returns true if a11y prop is present among other props', () => {
     expect(hasA11yProp({ className: 'foo', 'aria-label': 'Close' })).toBe(true);
   });
+
+  it('returns false when props is null, undefined, or a non-object', () => {
+    expect(hasA11yProp(null)).toBe(false);
+    expect(hasA11yProp(undefined)).toBe(false);
+    expect(hasA11yProp()).toBe(false);
+    expect(hasA11yProp('not-an-object' as unknown as object)).toBe(false);
+    expect(hasA11yProp(123 as unknown as object)).toBe(false);
+  });
+
+  it('returns false when a11y props are explicitly undefined or null', () => {
+    expect(hasA11yProp({ 'aria-label': undefined })).toBe(false);
+    expect(hasA11yProp({ role: null })).toBe(false);
+    expect(hasA11yProp({ title: undefined, 'aria-hidden': null })).toBe(false);
+  });
+
+  it('ignores inherited properties on the prototype chain', () => {
+    const proto = { 'aria-label': 'Inherited' };
+    const props = Object.create(proto);
+    props.className = 'icon';
+    expect(hasA11yProp(props)).toBe(false);
+  });
 });
