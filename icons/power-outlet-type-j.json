@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "oboleto"
+  ],
+  "use-cases": [
+    "Selecting Type J adapters in travel packing checklists",
+    "Showing Type J socket compatibility on product listings"
+  ],
+  "tags": [
+    "electricity",
+    "socket",
+    "plug",
+    "energy",
+    "electronics",
+    "voltage",
+    "current",
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "liechtenstein",
+    "switzerland"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "home",
+    "travel"
+  ]
+}

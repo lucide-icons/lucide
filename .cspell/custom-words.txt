@@ -23,6 +23,7 @@ choy
 cicd
 ecommerce
 enby
+europlug
 fediverse
 flexbox
 futbol
@@ -37,6 +38,7 @@ middot
 mistwarp
 mlops
 moleskine
+nema
 nonbinary
 pantone
 parfum
@@ -44,6 +46,7 @@ phonendoscope
 quadcopter
 reapproval
 rubygems
+schuko
 showreel
 solera
 timesheets

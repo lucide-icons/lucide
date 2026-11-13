@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "oboleto"
+  ],
+  "use-cases": [
+    "Selecting Type B adapters in travel packing checklists",
+    "Showing Type B socket compatibility on product listings"
+  ],
+  "tags": [
+    "electricity",
+    "socket",
+    "plug",
+    "energy",
+    "electronics",
+    "voltage",
+    "current",
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "nema 5-15",
+    "canada",
+    "japan",
+    "mexico",
+    "united states"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "home",
+    "travel"
+  ]
+}

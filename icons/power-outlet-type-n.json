@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "oboleto"
+  ],
+  "use-cases": [
+    "Selecting Type N adapters in travel packing checklists",
+    "Showing Type N socket compatibility on product listings"
+  ],
+  "tags": [
+    "electricity",
+    "socket",
+    "plug",
+    "energy",
+    "electronics",
+    "voltage",
+    "current",
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "iec 60906-1",
+    "brazil",
+    "south africa"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "home",
+    "travel"
+  ]
+}

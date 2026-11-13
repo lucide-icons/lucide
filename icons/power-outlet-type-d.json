@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "oboleto"
+  ],
+  "use-cases": [
+    "Selecting Type D adapters in travel packing checklists",
+    "Showing Type D socket compatibility on product listings"
+  ],
+  "tags": [
+    "electricity",
+    "socket",
+    "plug",
+    "energy",
+    "electronics",
+    "voltage",
+    "current",
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "bs 546",
+    "india",
+    "nepal"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "home",
+    "travel"
+  ]
+}
