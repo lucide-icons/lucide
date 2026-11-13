@@ -12,16 +12,20 @@ Learn how to use SVG sprites with Lucide icons in your project, including basic 
 The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
 :::
 
-SVG sprites can be loaded as individual image, or used inline with the `<use>` element.
+The sprite is used inline: you put it in your page and reference icons with the `<use>` element.
 You may also need an additional SVG loader to handle node_modules imports in your project. Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) for a working example.
 
-## Basic sprite usage
+## Using icons in `<img>` tags
 
-SVG sprites can be imported directory in img tags, and select the icon with <br>the `#{icon-name}` syntax:
+The sprite holds each icon as a `<symbol>`. A symbol only renders when a `<use>` element points to it. So a URL fragment like `sprite.svg#house` in an `<img>` tag or a CSS `background-image` shows nothing.
+
+To show an icon in an `<img>` tag, use its own SVG file from `lucide-static/icons/`. See [Link as image](./link-as-image.md) for details:
 
 ```html
-<img src="lucide-static/sprite.svg#house" />
+<img src="lucide-static/icons/house.svg" />
 ```
+
+To use the sprite, add it inline and reference icons with `<use>`, as shown below.
 
 ## Inline usage
 
