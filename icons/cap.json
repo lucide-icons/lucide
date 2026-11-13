@@ -1,18 +1,38 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Flaig82"
+    "Flaig82",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing headwear or accessories in an online store",
+    "Linking to merchandise or team apparel",
+    "Indicating sports, baseball or casual outfits"
   ],
   "tags": [
     "hat",
     "baseball",
-    "cap",
+    "baseball cap",
+    "snapback",
+    "trucker hat",
+    "visor",
+    "peak",
+    "brim",
+    "headwear",
+    "headgear",
+    "sports",
+    "merchandise",
+    "apparel",
+    "fashion",
+    "accessory",
+    "casual",
     "shopping",
     "store",
     "clothing",
     "clothes"
   ],
   "categories": [
-    "shopping"
+    "shopping",
+    "sports"
   ]
 }
