@@ -3,38 +3,17 @@
   "contributors": [
     "JMOAWeber"
   ],
+  "use-cases": [
+    "Inserting a new row above the selected row in a table or spreadsheet",
+    "Adding a section above the current block in a page or layout editor",
+    "Prepending an item to the top of a list"
+  ],
   "tags": [
-    "lines",
-    "list",
-    "queue",
-    "preview",
-    "panel",
-    "paragraphs",
-    "parallel",
-    "series",
-    "split",
-    "vertical",
-    "horizontal",
-    "half",
-    "center",
-    "middle",
-    "even",
-    "drawer",
-    "plus",
-    "top",
-    "add"
+    "$extends:rows-2",
+    "$group:plus",
+    "$group:position-top"
   ],
   "categories": [
-    "layout",
-    "design",
-    "text"
-  ],
-  "aliases": [
-    {
-      "name": "rows",
-      "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+    "$extends:rows-2"
   ]
 }

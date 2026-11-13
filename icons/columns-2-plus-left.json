@@ -3,22 +3,24 @@
   "contributors": [
     "JMOAWeber"
   ],
+  "use-cases": [
+    "Inserting a new column to the left of the selected column in a table or spreadsheet",
+    "Adding a column before the current one in a page or grid layout builder",
+    "Adding a new panel on the left side of a split view"
+  ],
   "tags": [
-    "columns",
+    "$extends:columns-2",
+    "$group:plus",
+    "$group:position-left",
     "settings",
     "customize",
     "table",
     "grid",
     "adjust",
     "configuration",
-    "panel",
-    "layout",
-    "add",
-    "plus",
-    "left"
+    "layout"
   ],
   "categories": [
-    "layout",
-    "design"
+    "$extends:columns-2"
   ]
 }
