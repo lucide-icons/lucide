@@ -1,0 +1,15 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: moving out of something or sending something out",
+  "tags": [
+    "out",
+    "outside",
+    "outwards",
+    "output",
+    "outgoing",
+    "export",
+    "leave",
+    "egress",
+    "exit"
+  ]
+}

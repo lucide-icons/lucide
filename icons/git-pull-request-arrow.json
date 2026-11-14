@@ -5,12 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "open"
+    "$extends:git-pull-request"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "$extends:git-pull-request"
   ]
 }

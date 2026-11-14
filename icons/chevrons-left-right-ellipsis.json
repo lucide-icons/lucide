@@ -7,6 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:direction-right",
     "internet",
     "network",
     "connection",
@@ -34,9 +36,7 @@
     "output"
   ],
   "categories": [
-    "communication",
     "devices",
-    "multimedia",
-    "gaming"
+    "connectivity"
   ]
 }

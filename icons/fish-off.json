@@ -7,22 +7,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:fish",
+    "$group:off",
     "food",
-    "dish",
-    "restaurant",
-    "course",
-    "meal",
-    "seafood",
     "animal",
-    "pet",
-    "sea",
-    "marine",
     "allergy",
     "intolerance",
     "diet"
   ],
   "categories": [
-    "food-beverage",
-    "animals"
+    "$extends:fish"
   ]
 }

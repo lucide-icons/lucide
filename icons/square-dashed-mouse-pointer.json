@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "inspector",
     "element",
     "mouse",
@@ -18,10 +19,8 @@
     "node"
   ],
   "categories": [
-    "arrows",
     "cursors",
-    "development",
-    "tools"
+    "development"
   ],
   "aliases": [
     {

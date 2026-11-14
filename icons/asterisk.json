@@ -8,7 +8,6 @@
   "use-cases": [],
   "tags": [
     "symbol",
-    "sterisk",
     "mark",
     "pointer",
     "pencil",
@@ -25,7 +24,9 @@
     "code",
     "glob pattern",
     "wildcard",
-    "*"
+    "*",
+    "required",
+    "mandatory"
   ],
   "categories": [
     "text",

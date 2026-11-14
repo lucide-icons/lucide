@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "cloud",
-    "storage",
-    "computing",
-    "cog",
-    "gear"
+    "$extends:server",
+    "$group:cog",
+    "computing"
   ],
   "categories": [
-    "development",
-    "devices"
+    "$extends:server"
   ]
 }

@@ -6,20 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "cancel",
-    "close",
-    "cross",
-    "delete",
-    "ex",
-    "remove",
-    "times",
-    "clear",
+    "$group:letter",
+    "$group:x",
     "math",
     "multiply",
     "multiplication"
   ],
   "categories": [
     "notifications",
-    "math"
+    "math",
+    "letters-digits"
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating original artistic, literary, musical, or intellectual work that is protected by copyright",
+    "Indicating Celsius temperature units",
+    "Representing carbon in scientific contexts",
+    "Indicating a grade or rating"
+  ],
+  "tags": [
+    "$group:letter",
+    "uppercase",
+    "licence",
+    "license",
+    "celsius",
+    "temperature",
+    "carbon",
+    "chemistry",
+    "grade",
+    "rating"
+  ],
+  "categories": [
+    "letters-digits",
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "copyright"
+    }
+  ]
+}

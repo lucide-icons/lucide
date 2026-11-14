@@ -7,8 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "drawer",
-    "dock",
+    "$extends:panel-bottom",
+    "$group:dashed",
     "show",
     "reveal",
     "padding",
@@ -18,7 +18,7 @@
     "bleed"
   ],
   "categories": [
-    "layout"
+    "$extends:panel-bottom"
   ],
   "aliases": [
     {

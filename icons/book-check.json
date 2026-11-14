@@ -5,20 +5,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:check",
     "read",
-    "booklet",
-    "magazine",
-    "leaflet",
-    "pamphlet",
-    "library",
-    "written",
     "authored",
     "published",
     "informed",
     "knowledgeable",
     "educated",
     "schooled",
-    "homework",
     "examined",
     "tested",
     "marked",
@@ -34,18 +29,9 @@
     "plain language",
     "true",
     "truth",
-    "verified",
-    "corrected",
-    "task",
-    "todo",
-    "done",
-    "completed",
-    "finished",
-    "ticked"
+    "corrected"
   ],
   "categories": [
-    "text",
-    "development",
-    "gaming"
+    "$extends:book"
   ]
 }

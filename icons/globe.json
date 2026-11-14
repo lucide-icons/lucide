@@ -10,9 +10,25 @@
     "world",
     "browser",
     "language",
-    "translate"
+    "translate",
+    "location",
+    "country",
+    "coverage",
+    "publish",
+    "connection",
+    "global",
+    "earth",
+    "globe",
+    "internet",
+    "planet",
+    "network",
+    "www",
+    "http",
+    "https",
+    "website"
   ],
   "categories": [
-    "navigation"
+    "navigation",
+    "connectivity"
   ]
 }

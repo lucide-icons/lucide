@@ -5,21 +5,21 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$extends:sliders-horizontal",
     "cogged",
     "gear",
     "mechanical",
     "machinery",
     "configuration",
-    "controls",
     "preferences",
-    "settings",
     "system",
     "admin",
     "edit",
     "executable"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

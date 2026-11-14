@@ -19,10 +19,14 @@
     "allowance",
     "pocket money",
     "handout",
-    "pennies"
+    "pennies",
+    "loan",
+    "lending",
+    "borrow",
+    "debt",
+    "salary"
   ],
   "categories": [
-    "finance",
-    "account"
+    "finance"
   ]
 }

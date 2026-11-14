@@ -1,0 +1,11 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Typography: an alphabetic character",
+  "tags": [
+    "alphabet",
+    "character",
+    "text",
+    "font",
+    "typography"
+  ]
+}

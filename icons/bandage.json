@@ -21,7 +21,8 @@
     "emergency",
     "aid",
     "safety",
-    "patch"
+    "patch",
+    "patient"
   ],
   "categories": [
     "medical"

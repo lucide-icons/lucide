@@ -5,6 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-previous",
     "caret",
     "keyboard",
     "mac",
@@ -20,7 +22,6 @@
   ],
   "categories": [
     "arrows",
-    "math",
-    "gaming"
+    "math"
   ]
 }
