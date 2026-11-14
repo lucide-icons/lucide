@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:circle-dot",
+    "Bulgymizi"
+  ],
+  "use-cases": [
+    "Labeling floorball sessions in workout logs",
+    "Identifying floorball equipment in sporting goods catalogs"
+  ],
+  "tags": [
+    "floorball",
+    "innebandy",
+    "unihockey",
+    "salibandy",
+    "equipment"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
