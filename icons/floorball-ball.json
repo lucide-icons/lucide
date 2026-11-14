@@ -14,7 +14,14 @@
     "innebandy",
     "unihockey",
     "salibandy",
-    "equipment"
+    "equipment",
+    "perforated",
+    "plastic",
+    "hollow",
+    "indoor",
+    "team",
+    "match",
+    "training"
   ],
   "categories": [
     "sports"
