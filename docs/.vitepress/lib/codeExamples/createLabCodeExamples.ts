@@ -1,4 +1,4 @@
-import { highLightCode } from './createCodeExamples';
+import { highLightCode } from './createCodeExamples.ts';
 
 type CodeExampleType = {
   title: string;

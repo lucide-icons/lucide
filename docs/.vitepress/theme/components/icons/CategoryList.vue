@@ -17,11 +17,11 @@ function onCategoriesClick() {
 }
 
 const categoriesIsActive = computed(() => {
-  return isActive(page.value.relativePath, '/icons/categories');
+  return isActive(page.value.relativePath, '', '/icons/categories');
 });
 
 const overviewIsActive = computed(() => {
-  return isActive(page.value.relativePath, '/icons/');
+  return isActive(page.value.relativePath, '', '/icons/');
 });
 
 const headers = computed(() => {
