@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "michaelsogos"
+  ],
+  "use-cases": [
+    "Restoring deleted items from a trash or recycle bin",
+    "Undeleting deleted records, files and emails"
+  ],
+  "tags": [
+    "$extends:trash",
+    "$group:direction-up",
+    "restore",
+    "undelete",
+    "untrash",
+    "recover",
+    "retrieve"
+  ],
+  "categories": [
+    "$extends:trash"
+  ]
+}
