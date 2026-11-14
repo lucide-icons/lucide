@@ -8,20 +8,10 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
 
-:::warning Not recommended for high traffic production use
-The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
-:::
-
-SVG sprites can be loaded as individual image, or used inline with the `<use>` element.
+The sprite is used inline: you put it in your page and reference icons with the `<use>` element.
 You may also need an additional SVG loader to handle node_modules imports in your project. Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk) for a working example.
 
-## Basic sprite usage
-
-SVG sprites can be imported directory in img tags, and select the icon with <br>the `#{icon-name}` syntax:
-
-```html
-<img src="lucide-static/sprite.svg#house" />
-```
+To use the sprite, add it inline and reference icons with `<use>`, as shown below.
 
 ## Inline usage
 
@@ -104,5 +94,5 @@ import sprite from "lucide-static/sprite.svg";
 
 document.getElementById('sprite').innerHTML = sprite;
 ```
-
 :::
+

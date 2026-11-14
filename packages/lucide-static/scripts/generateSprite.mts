@@ -3,8 +3,14 @@ import { format } from 'prettier';
 import { appendFile } from '@lucide/helpers';
 import { type SVGFile } from './readSvgs.mts';
 
+export type AliasSVGFile = SVGFile & {
+  /** Name of the icon this alias points to. */
+  aliasOf: string;
+};
+
 export default async function generateSprite(
   svgs: SVGFile[],
+  aliases: AliasSVGFile[],
   packageDir: string,
   license: string
 ) {
@@ -19,6 +25,28 @@ export default async function generateSprite(
     children: parsedSvg.children,
   }));
 
+  // Aliases reference the original icon's symbol instead of duplicating its elements.
+  const aliasSymbols = aliases.map<INode>(({ name, aliasOf, parsedSvg }) => ({
+    name: 'symbol',
+    type: 'element',
+    value: '',
+    attributes: {
+      id: name,
+      viewBox: parsedSvg.attributes.viewBox,
+    },
+    children: [
+      {
+        name: 'use',
+        type: 'element',
+        value: '',
+        attributes: {
+          href: `#${aliasOf}`,
+        },
+        children: [],
+      },
+    ],
+  }));
+
   const spriteSvgObject: INode = {
     name: 'svg',
     type: 'element',
@@ -31,7 +59,7 @@ export default async function generateSprite(
       {
         name: 'defs',
         type: 'element',
-        children: symbols,
+        children: [...symbols, ...aliasSymbols],
         value: '',
       } as INode,
     ],
