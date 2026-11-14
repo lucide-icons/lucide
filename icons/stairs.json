@@ -5,7 +5,8 @@
   ],
   "use-cases": [
     "Marking staircases on indoor maps and floor plans",
-    "Representing stair-climber workouts in fitness apps"
+    "Representing stair-climber workouts in fitness apps",
+    "Showing stair access between floors in building directories"
   ],
   "tags": [
     "staircase",
