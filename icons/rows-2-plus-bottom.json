@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "JMOAWeber"
+  ],
+  "use-cases": [
+    "Inserting a new row below the selected row in a table or spreadsheet",
+    "Adding a section below the current block in a page or layout editor",
+    "Appending an item to the bottom of a list"
+  ],
+  "tags": [
+    "$extends:rows-2",
+    "$group:plus",
+    "$group:position-bottom"
+  ],
+  "categories": [
+    "$extends:rows-2"
+  ]
+}

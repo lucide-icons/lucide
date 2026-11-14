@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "JMOAWeber"
+  ],
+  "use-cases": [
+    "Inserting a new column to the right of the selected column in a table or spreadsheet",
+    "Adding a column after the current one in a page or grid layout builder",
+    "Adding a new panel on the right side of a split view"
+  ],
+  "tags": [
+    "$extends:columns-2",
+    "$group:plus",
+    "$group:position-right",
+    "settings",
+    "customize",
+    "table",
+    "grid",
+    "adjust",
+    "configuration",
+    "layout"
+  ],
+  "categories": [
+    "$extends:columns-2"
+  ]
+}
