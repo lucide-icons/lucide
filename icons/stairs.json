@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Bulgymizi"
+  ],
+  "use-cases": [
+    "Marking staircases on indoor maps and floor plans",
+    "Representing stair-climber workouts in fitness apps"
+  ],
+  "tags": [
+    "staircase",
+    "stairway",
+    "steps",
+    "floors",
+    "stair climber"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "sports"
+  ]
+}
