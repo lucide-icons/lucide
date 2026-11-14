@@ -15,7 +15,6 @@ describe('Using Icon Component', () => {
         name: 'AirVent',
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 
@@ -40,7 +39,6 @@ describe('Using Icon Component', () => {
         icon: airVentIcon,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 

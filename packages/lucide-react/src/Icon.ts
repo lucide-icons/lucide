@@ -25,7 +25,6 @@ type IconComponentProps = LucideProps &
  * @param {string} props.color - The color of the icon
  * @param {number} props.size - The size of the icon
  * @param {number} props.strokeWidth - The stroke width of the icon
- * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {boolean} props.nonScalingStroke - Whether to use non scaling strokes
  * @param {string} props.className - The class name of the icon
  * @param {LucideIconNode[]} props.children - The children of the icon
@@ -41,7 +40,6 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       width,
       height,
       strokeWidth,
-      absoluteStrokeWidth,
       nonScalingStroke,
       className = '',
       children,
@@ -58,7 +56,6 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     const {
       size: contextSize = 24,
       strokeWidth: contextStrokeWidth = 2,
-      absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
       nonScalingStroke: contextNonScalingStroke = false,
       color: contextColor = 'currentColor',
       className: contextClass = '',
@@ -71,7 +68,6 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       width: width ?? size ?? contextSize,
       height: height ?? size ?? contextSize,
       strokeWidth: strokeWidth ?? contextStrokeWidth,
-      absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
       nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
       className: mergeClasses(contextClass, className),
       hasA11yProp: hasAccessibleProp,

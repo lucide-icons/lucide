@@ -17,8 +17,14 @@ test('renders Lucide public APIs in a real browser', async () => {
   await expect.element(customIcon).toHaveAttribute('width', '48');
   await expect.element(customIcon).toHaveAttribute('height', '48');
   await expect.element(customIcon).toHaveAttribute('stroke', 'red');
-  await expect.element(customIcon).toHaveAttribute('stroke-width', '2');
+  await expect.element(customIcon).toHaveAttribute('stroke-width', '4');
   await expect.element(customIcon).toHaveClass('consumer-icon');
+
+  const customIconChildren = Array.from(customIcon.element().children);
+  expect(customIconChildren.length).toBeGreaterThan(0);
+  for (const child of customIconChildren) {
+    expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
+  }
 
   const providerIcon = screen.getByTestId('provider-icon');
   await expect.element(providerIcon).toHaveAttribute('width', '32');

@@ -74,12 +74,6 @@ export abstract class LucideIconBase {
     transform: (value: Nullable<string | number>) => value ?? this.iconConfig.strokeWidth,
   });
   /**
-   * Whether to use absolute stroke width.
-   */
-  readonly absoluteStrokeWidth = input(this.iconConfig.absoluteStrokeWidth, {
-    transform: (value: Nullable<boolean>) => value ?? this.iconConfig.absoluteStrokeWidth,
-  });
-  /**
    * If set to true, it adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
    */
   readonly nonScalingStroke = input(this.iconConfig.nonScalingStroke, {
@@ -97,7 +91,6 @@ export abstract class LucideIconBase {
           height: this.height() ?? this.size(),
           color: this.color(),
           strokeWidth: this.strokeWidth(),
-          absoluteStrokeWidth: this.absoluteStrokeWidth(),
           nonScalingStroke: this.nonScalingStroke(),
           className: this.class() ?? undefined,
           hasA11yProp: this.title() != null,

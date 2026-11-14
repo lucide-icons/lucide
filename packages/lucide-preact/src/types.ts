@@ -19,10 +19,6 @@ export interface LucideProps extends Partial<Omit<SVGAttributes, 'ref' | 'size'>
   width?: string | number;
   height?: string | number;
   strokeWidth?: string | number;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
 }
 

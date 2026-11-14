@@ -7,7 +7,7 @@ exports[`Using dynamicImports > should render icons dynamically by using the dyn
      viewbox="0 0 24 24"
      fill="none"
      stroke="red"
-     stroke-width="1"
+     stroke-width="2"
      stroke-linecap="round"
      stroke-linejoin="round"
      class="lucide lucide-face-slightly-smiling lucide-smile"

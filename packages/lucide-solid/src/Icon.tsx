@@ -25,7 +25,6 @@ const Icon = (props: LucideProps & IconProps) => {
     'class',
     'icon',
     'iconNode',
-    'absoluteStrokeWidth',
     'nonScalingStroke',
   ]);
 
@@ -46,7 +45,6 @@ const Icon = (props: LucideProps & IconProps) => {
       width: localProps.width ?? localProps.size ?? globalProps.size,
       height: localProps.height ?? localProps.size ?? globalProps.size,
       strokeWidth: localProps.strokeWidth ?? globalProps.strokeWidth,
-      absoluteStrokeWidth: localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
       nonScalingStroke: localProps.nonScalingStroke ?? globalProps.nonScalingStroke,
       className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
       hasA11yProp: Boolean(localProps.children) || hasA11yProp(rest),

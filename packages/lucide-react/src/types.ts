@@ -19,10 +19,6 @@ type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
 
 export interface LucideProps extends ElementAttributes {
   size?: string | number;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
 }
 

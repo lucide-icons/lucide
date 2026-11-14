@@ -20,10 +20,6 @@ interface LucideIconProps {
   size: Signal<Nullable<number | string>>;
   color: Signal<Nullable<string>>;
   strokeWidth: Signal<Nullable<number | string>>;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth: Signal<Nullable<boolean>>;
   nonScalingStroke: Signal<Nullable<boolean>>;
 }
 

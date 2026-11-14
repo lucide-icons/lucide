@@ -17,7 +17,6 @@ describe('Using Icon Component', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />,
     );
 
@@ -30,7 +29,6 @@ describe('Using Icon Component', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />,
     );
 

@@ -27,7 +27,6 @@ describe('Using dynamicImports', () => {
         name="smile"
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />,
     );
 

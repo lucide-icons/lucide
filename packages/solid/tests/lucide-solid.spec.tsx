@@ -57,28 +57,6 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(() => (
-      <Grid
-        data-testid={testId}
-        size={48}
-        color="red"
-        absoluteStrokeWidth
-      />
-    ));
-
-    const { attributes } = getByTestId(testId) as unknown as {
-      attributes: Record<string, { value: string }>;
-    };
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('1');
-
-    expect(container.innerHTML).toMatchSnapshot();
-  });
-
   it('should add all classes to the element', () => {
     const testClass = 'my-class';
     const { container } = render(() => <Droplet class={testClass} />);
