@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "$extends:square-arrow-down-left-exit",
-    "6teloiv"
+    "6teloiv",
+    "jguddas"
   ],
   "use-cases": [
     "Docking a floating pane back into the main window",
