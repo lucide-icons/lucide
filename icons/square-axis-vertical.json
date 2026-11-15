@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:reflect",
+    "alignment"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ]
+}

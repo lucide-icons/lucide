@@ -8,7 +8,7 @@
   "use-cases": [],
   "tags": [
     "float",
-    "center",
+    "$group:position-center",
     "rectangle"
   ],
   "categories": [

@@ -1,14 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
-    "arrow",
-    "expand",
-    "vertical",
-    "dashed"
+    "$group:expand"
   ],
   "categories": [
     "arrows",
