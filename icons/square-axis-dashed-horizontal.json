@@ -8,7 +8,8 @@
   "tags": [
     "$group:dashed",
     "$group:reflect",
-    "alignment"
+    "alignment",
+    "centerline"
   ],
   "categories": [
     "design",

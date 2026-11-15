@@ -6,7 +6,8 @@
   "use-cases": [],
   "tags": [
     "$group:reflect",
-    "alignment"
+    "alignment",
+    "centerline"
   ],
   "categories": [
     "design",
