@@ -2,20 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "backwards",
-    "reverse",
+    "$extends:arrow-big-down",
+    "$group:direction-down",
     "slow",
-    "direction",
-    "south",
     "download"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming",
+    "$extends:arrow-big-down",
     "files"
   ]
 }

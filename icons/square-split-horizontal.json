@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Patchethium",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "split",
     "divide"
@@ -12,6 +14,10 @@
     "layout"
   ],
   "aliases": [
-    "split-square-horizontal"
+    {
+      "name": "split-square-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

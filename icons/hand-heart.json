@@ -2,11 +2,12 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "kayleyhill"
+    "kayleyhill",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "love",
-    "like",
+    "$group:heart",
     "emotion"
   ],
   "categories": [

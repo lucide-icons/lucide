@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "gubser"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:clock",
+    "$group:plus"
+  ],
+  "categories": [
+    "$extends:clock"
+  ]
+}

@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "connium",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "diamond",
     "crystal",
@@ -17,11 +19,14 @@
     "wedding",
     "proposal",
     "marriage",
-    "rubygems"
+    "rubygems",
+    "premium",
+    "vip",
+    "exclusive",
+    "pro"
   ],
   "categories": [
     "gaming",
-    "development",
     "finance"
   ]
 }

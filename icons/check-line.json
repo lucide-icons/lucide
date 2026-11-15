@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "oosawy"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:check"
+  ],
+  "categories": [
+    "$extends:check"
+  ]
+}

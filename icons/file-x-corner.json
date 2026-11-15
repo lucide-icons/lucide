@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:file-x",
+    "$group:x"
+  ],
+  "categories": [
+    "$extends:file-x"
+  ],
+  "aliases": [
+    {
+      "name": "file-x-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

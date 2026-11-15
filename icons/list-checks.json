@@ -1,19 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "todo",
-    "done",
-    "check",
-    "tick",
-    "complete",
-    "tasks",
+    "$group:check",
     "items",
-    "pending"
+    "pending",
+    "checklist"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

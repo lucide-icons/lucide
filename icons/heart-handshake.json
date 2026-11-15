@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "agreement",
     "charity",
@@ -12,11 +14,11 @@
     "terms",
     "emotion",
     "together",
-    "handshake"
+    "handshake",
+    "insurance"
   ],
   "categories": [
     "emoji",
-    "account",
-    "security"
+    "social"
   ]
 }

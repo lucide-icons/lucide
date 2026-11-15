@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-down",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Expanding a pane or grid cell past its bottom edge",
+    "Resizing neighboring panes in code editors or dashboards"
+  ],
+  "tags": [
+    "$group:direction-down",
+    "$group:exit",
+    "$group:layout-resize",
+    "pour",
+    "empty",
+    "cell",
+    "expand"
+  ],
+  "categories": [
+    "$extends:square-arrow-down"
+  ]
+}

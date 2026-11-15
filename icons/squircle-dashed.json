@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "aramsoneson"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:squircle",
+    "$group:dashed",
+    "pending",
+    "progress",
+    "issue",
+    "draft",
+    "code",
+    "coding",
+    "version control"
+  ],
+  "categories": [
+    "$extends:squircle",
+    "development",
+    "design"
+  ]
+}

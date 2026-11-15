@@ -4,24 +4,24 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling",
+    "$group:letter",
+    "$group:direction-up",
+    "$group:sort",
     "alphabetical",
     "reverse"
   ],
   "categories": [
+    "$extends:arrow-up",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ],
   "aliases": [
-    "arrow-up-za"
+    {
+      "name": "arrow-up-za",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

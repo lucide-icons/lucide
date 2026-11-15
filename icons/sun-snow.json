@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "weather",
     "air conditioning",
@@ -12,6 +13,7 @@
     "seasons"
   ],
   "categories": [
-    "weather"
+    "weather",
+    "seasons"
   ]
 }

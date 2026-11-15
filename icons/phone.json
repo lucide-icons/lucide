@@ -3,13 +3,15 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "call"
   ],
   "categories": [
-    "text",
     "connectivity",
     "devices",
     "communication"

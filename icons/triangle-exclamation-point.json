@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:exclamation-mark",
+    "linter"
+  ],
+  "categories": [
+    "$extends:triangle",
+    "notifications",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "alert-triangle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "triangle-alert"
+    }
+  ]
+}

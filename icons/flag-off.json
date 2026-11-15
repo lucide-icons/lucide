@@ -3,13 +3,17 @@
   "contributors": [
     "karsa-mistmere",
     "cyberalien",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "unflag"
+    "$extends:flag",
+    "$group:off",
+    "unflag",
+    "unmark"
   ],
   "categories": [
-    "account",
-    "social"
+    "$extends:flag"
   ]
 }

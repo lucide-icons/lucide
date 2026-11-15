@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jamiemlaw"
+  ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
+  "tags": [
+    "discount",
+    "offer",
+    "sale",
+    "voucher",
+    "tag",
+    "monetization",
+    "marketing",
+    "finance",
+    "financial",
+    "exchange",
+    "transaction",
+    "payment",
+    "try",
+    "₺"
+  ],
+  "categories": [
+    "shopping",
+    "finance"
+  ]
+}

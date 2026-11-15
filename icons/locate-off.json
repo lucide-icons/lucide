@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "fdev"
+    "fdev",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "map",
-    "gps",
-    "location",
-    "cross"
+    "$extends:locate",
+    "$group:off"
   ],
   "categories": [
-    "navigation"
+    "$extends:locate"
   ]
 }

@@ -5,10 +5,12 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:direction-up",
     "collapse",
-    "fold",
-    "vertical"
+    "fold"
   ],
   "categories": [
     "arrows"

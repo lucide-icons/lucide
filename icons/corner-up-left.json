@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-up",
+    "$group:direction-left",
     "arrow"
   ],
   "categories": [

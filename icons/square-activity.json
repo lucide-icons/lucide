@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "pulse",
     "action",
@@ -20,7 +21,7 @@
     "hospital",
     "defibrillator",
     "earthquake",
-    "siesmic",
+    "seismic",
     "magnitude",
     "richter scale",
     "aftershock",
@@ -39,6 +40,10 @@
     "multimedia"
   ],
   "aliases": [
-    "activity-square"
+    {
+      "name": "activity-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

@@ -2,14 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "csandman"
+    "csandman",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "number",
+    "$group:digit",
     "order",
     "queue"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

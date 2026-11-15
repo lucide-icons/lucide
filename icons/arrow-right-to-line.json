@@ -4,23 +4,21 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "next",
-    "forward",
-    "direction",
-    "east",
+    "$extends:arrow-right",
+    "$group:direction-right",
+    "$group:navigation-last",
     "tab",
     "keyboard",
     "mac",
     "indent",
     "collapse",
     "fold",
-    "horizontal",
     "->|"
   ],
   "categories": [
-    "arrows",
-    "navigation",
+    "$extends:arrow-right",
     "development"
   ]
 }

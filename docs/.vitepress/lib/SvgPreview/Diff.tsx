@@ -7,15 +7,17 @@ const SvgPreview = React.forwardRef<
   {
     oldSrc: string;
     newSrc: string;
+    height: number;
+    width: number;
   } & React.SVGProps<SVGSVGElement>
->(({ oldSrc, newSrc, children, ...props }, ref) => {
+>(({ oldSrc, newSrc, children, height, width, ...props }, ref) => {
   return (
     <svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       fill="none"
       stroke="currentColor"
       strokeWidth={2}
@@ -25,6 +27,8 @@ const SvgPreview = React.forwardRef<
     >
       <style>{darkModeCss}</style>
       <Grid
+        width={width}
+        height={height}
         strokeWidth={0.1}
         stroke="#777"
         strokeOpacity={0.3}
@@ -37,8 +41,8 @@ const SvgPreview = React.forwardRef<
         <rect
           x="0"
           y="0"
-          width="24"
-          height="24"
+          width="100%"
+          height="100%"
           fill="#000"
           stroke="none"
         />

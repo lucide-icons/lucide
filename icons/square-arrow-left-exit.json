@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-left",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Expanding a pane or grid cell past its left edge",
+    "Contracting a pane into its left neighbor in window layouts"
+  ],
+  "tags": [
+    "$group:direction-left",
+    "$group:exit",
+    "$group:layout-resize",
+    "back",
+    "reverse",
+    "<-",
+    "collapse"
+  ],
+  "categories": [
+    "$extends:square-arrow-left"
+  ]
+}

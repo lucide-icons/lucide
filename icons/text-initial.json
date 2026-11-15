@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "GRA0007",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:letter",
+    "drop cap",
+    "format",
+    "letter",
+    "font size"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "letter-text",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

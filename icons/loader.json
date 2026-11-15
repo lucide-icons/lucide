@@ -5,6 +5,7 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "loading",
     "wait",
@@ -15,9 +16,6 @@
     "throbber"
   ],
   "categories": [
-    "cursors",
-    "multimedia",
-    "layout",
-    "design"
+    "cursors"
   ]
 }

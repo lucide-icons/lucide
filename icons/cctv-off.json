@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "rrod497"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:cctv",
+    "$group:off"
+  ],
+  "categories": [
+    "$extends:cctv"
+  ]
+}

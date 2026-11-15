@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:message-circle",
+    "$group:question-mark"
+  ],
+  "categories": [
+    "$extends:message-circle"
+  ],
+  "aliases": [
+    {
+      "name": "message-circle-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

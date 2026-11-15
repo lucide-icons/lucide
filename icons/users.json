@@ -4,13 +4,16 @@
     "colebemis",
     "csandman",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "group",
-    "people"
+    "$group:user",
+    "group"
   ],
   "categories": [
-    "account"
+    "account",
+    "people"
   ]
 }

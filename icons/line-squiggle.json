@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:line",
+    "snakes",
+    "annotate",
+    "doodle",
+    "pen",
+    "tool",
+    "gesture",
+    "draw",
+    "wave",
+    "art",
+    "road"
+  ],
+  "categories": [
+    "shapes",
+    "math",
+    "design"
+  ]
+}

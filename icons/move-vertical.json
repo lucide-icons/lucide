@@ -3,12 +3,12 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "double",
     "arrow"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:move"
   ]
 }

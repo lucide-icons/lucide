@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-up",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Projecting content onto a screen",
+    "Contracting a pane or grid cell from its bottom edge",
+    "Expanding a pane into an adjacent cell in a window grid"
+  ],
+  "tags": [
+    "$group:direction-up",
+    "$group:enter",
+    "$group:layout-resize",
+    "project",
+    "cast",
+    "screen",
+    "projection",
+    "presentation",
+    "expand",
+    "cell"
+  ],
+  "categories": [
+    "$extends:square-arrow-up"
+  ]
+}

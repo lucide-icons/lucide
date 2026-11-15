@@ -2,18 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-square",
+    "$group:dashed",
     "draft"
   ],
   "categories": [
-    "social"
+    "$extends:message-square"
   ]
 }

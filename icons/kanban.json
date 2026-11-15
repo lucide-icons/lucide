@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "projects",
     "manage",
@@ -21,7 +23,6 @@
   ],
   "categories": [
     "charts",
-    "development",
-    "design"
+    "development"
   ]
 }

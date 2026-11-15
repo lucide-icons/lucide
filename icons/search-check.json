@@ -3,18 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "found",
-    "correct",
-    "complete",
-    "tick"
+    "$extends:search",
+    "$group:check",
+    "found"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:search"
   ]
 }

@@ -4,9 +4,11 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:pin",
+    "$group:off",
     "unpin",
-    "map",
     "unlock",
     "unfix",
     "unsave",

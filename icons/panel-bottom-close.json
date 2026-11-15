@@ -4,15 +4,15 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "drawer",
-    "dock",
+    "$extends:panel-bottom",
+    "$group:direction-down",
     "hide",
     "chevron",
     "down"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "$extends:panel-bottom"
   ]
 }

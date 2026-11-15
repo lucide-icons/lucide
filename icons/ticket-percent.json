@@ -3,19 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "discount",
-    "reduced",
-    "offer",
-    "voucher",
-    "entry",
-    "pass",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
+    "$group:percent",
     "book",
-    "purchase",
-    "%"
+    "purchase"
   ],
   "categories": [
     "transportation",
