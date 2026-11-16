@@ -3,13 +3,17 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 /** How long a confirmation link stays valid. */
 const TOKEN_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
-export interface WaitlistTokenPayload {
+export interface WaitlistSignup {
   email: string;
   product: string;
-  use_case: string;
-  /** When the form was submitted, as an ISO string. */
-  signed_up_at: string;
-  /** Expiry, in milliseconds since the epoch. */
+  useCase: string;
+  source: string;
+  /** ISO date of the form submission, stored on the contact as `signed_up_at`. */
+  signedUpAt: string;
+}
+
+interface TokenPayload extends WaitlistSignup {
+  /** Expiry as a Unix timestamp in milliseconds. */
   exp: number;
 }
 
@@ -28,53 +32,69 @@ function sign(data: string) {
 }
 
 /**
- * Signs the signup into the confirmation link itself, so nothing has to be stored
- * until the person confirms.
+ * Packs the signup into a signed token for the confirmation link, so no pending signups
+ * need to be stored. Format: `<base64url JSON payload>.<base64url HMAC-SHA256>`.
  */
-export function createWaitlistToken(payload: Omit<WaitlistTokenPayload, 'exp'>) {
-  const data = Buffer.from(JSON.stringify({ ...payload, exp: Date.now() + TOKEN_TTL_MS })).toString(
-    'base64url',
-  );
+export function createConfirmToken(signup: WaitlistSignup) {
+  const payload: TokenPayload = { ...signup, exp: Date.now() + TOKEN_TTL_MS };
+  const data = Buffer.from(JSON.stringify(payload)).toString('base64url');
 
   return `${data}.${sign(data)}`;
 }
 
+function decodePayload(data: string): Partial<TokenPayload> | undefined {
+  try {
+    const payload = JSON.parse(Buffer.from(data, 'base64url').toString('utf8'));
+    return payload && typeof payload === 'object' ? payload : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+export type VerifyResult =
+  | { valid: true; signup: WaitlistSignup }
+  /** `product` is only set when the token was signed by us, so it is safe to redirect with. */
+  | { valid: false; product?: string };
+
 /**
- * Returns the payload when the signature matches and the token hasn't expired.
+ * Checks the signature and expiry of a confirmation token.
  */
-export function verifyWaitlistToken(token: string): WaitlistTokenPayload | null {
+export function verifyConfirmToken(token: string): VerifyResult {
   const [data, signature, ...rest] = token.split('.');
 
-  if (!data || !signature || rest.length) return null;
+  if (!data || !signature || rest.length) {
+    return { valid: false };
+  }
 
   const expected = Buffer.from(sign(data));
-  const received = Buffer.from(signature);
+  const actual = Buffer.from(signature);
 
-  if (expected.length !== received.length || !timingSafeEqual(expected, received)) {
-    return null;
+  if (expected.length !== actual.length || !timingSafeEqual(expected, actual)) {
+    return { valid: false };
   }
 
-  try {
-    const payload = JSON.parse(Buffer.from(data, 'base64url').toString('utf-8'));
+  const payload = decodePayload(data);
 
-    if (
-      typeof payload?.email !== 'string' ||
-      typeof payload?.product !== 'string' ||
-      typeof payload?.exp !== 'number' ||
-      payload.exp < Date.now()
-    ) {
-      return null;
-    }
+  if (
+    typeof payload?.email !== 'string' ||
+    typeof payload.product !== 'string' ||
+    typeof payload.exp !== 'number'
+  ) {
+    return { valid: false };
+  }
 
-    return {
+  if (payload.exp < Date.now()) {
+    return { valid: false, product: payload.product };
+  }
+
+  return {
+    valid: true,
+    signup: {
       email: payload.email,
       product: payload.product,
-      use_case: typeof payload.use_case === 'string' ? payload.use_case : '',
-      signed_up_at:
-        typeof payload.signed_up_at === 'string' ? payload.signed_up_at : new Date().toISOString(),
-      exp: payload.exp,
-    };
-  } catch {
-    return null;
-  }
+      useCase: payload.useCase ?? '',
+      source: payload.source ?? '',
+      signedUpAt: payload.signedUpAt ?? new Date().toISOString(),
+    },
+  };
 }

@@ -10,6 +10,7 @@ const status = ref<'pending' | 'confirmed' | 'invalid' | 'error'>('pending');
 const product = ref<WaitlistProduct>();
 
 // This page is prerendered, so the query string is only available after hydration.
+// `/api/waitlist/confirm` redirects here with `?product=…`, plus `&status=invalid|error` when it failed.
 onMounted(() => {
   const params = new URLSearchParams(window.location.search);
   const productId = params.get('product');
@@ -18,14 +19,14 @@ onMounted(() => {
     productId && Object.hasOwn(waitlistProducts, productId)
       ? waitlistProducts[productId]
       : undefined;
+
   if (params.get('status') === 'error') {
     status.value = 'error';
-  } else {
-    status.value = product.value && !params.has('status') ? 'confirmed' : 'invalid';
-  }
-
-  if (status.value === 'confirmed' && product.value) {
+  } else if (product.value && !params.has('status')) {
+    status.value = 'confirmed';
     track('waitlist_confirmed', { product: product.value.id });
+  } else {
+    status.value = 'invalid';
   }
 });
 </script>
@@ -57,7 +58,7 @@ onMounted(() => {
       <div class="waitlist-card-header">
         <h1 class="waitlist-card-title">Something went wrong</h1>
         <p class="waitlist-card-description">
-          We couldn't confirm your email just now. Click the link in the email again in a few
+          We couldn't confirm your email just now. Try the link from your email again in a few
           minutes.
         </p>
       </div>

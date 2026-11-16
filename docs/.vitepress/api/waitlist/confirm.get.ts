@@ -1,30 +1,54 @@
 import { defineEventHandler, getQuery, sendRedirect } from 'h3';
 import { waitlistProducts } from '../../theme/components/waitlist/products';
-import { verifyWaitlistToken } from '../../lib/waitlist/token';
-import { getSiteUrl, upsertWaitlistContact } from '../../lib/waitlist/resend';
+import { verifyConfirmToken, type VerifyResult } from '../../lib/waitlist/token.ts';
+import { addToWaitlist } from '../../lib/waitlist/resend.ts';
+
+const CONFIRMED_PAGE = '/waitlist/confirmed';
+
+function confirmedPageUrl(product: string | undefined, status?: 'invalid' | 'error') {
+  const params = new URLSearchParams();
+
+  if (product && Object.hasOwn(waitlistProducts, product)) {
+    params.set('product', product);
+  }
+
+  if (status) {
+    params.set('status', status);
+  }
+
+  const query = params.toString();
+  return query ? `${CONFIRMED_PAGE}?${query}` : CONFIRMED_PAGE;
+}
 
 /**
- * Step 2 of the double opt-in, opened from the confirmation email. Only here does the
- * signup become a Resend contact. Redirects to `/waitlist/confirmed`, which shows the
- * result and the follow-up survey.
+ * GET /api/waitlist/confirm?token=…
+ *
+ * The link from the confirmation email. Verifies the signed token, creates the Resend contact
+ * in the Waitlist segment, then redirects to the confirmed page. The page shows the thank-you
+ * survey when only `product` is set, and the expired state when `status` is set.
  */
 export default defineEventHandler(async (event) => {
   const { token } = getQuery(event);
-  const confirmedPage = `${getSiteUrl()}/waitlist/confirmed`;
-  const signup = typeof token === 'string' ? verifyWaitlistToken(token) : null;
+  const result: VerifyResult =
+    typeof token === 'string' ? verifyConfirmToken(token) : { valid: false };
 
-  if (!signup || !Object.hasOwn(waitlistProducts, signup.product)) {
-    return sendRedirect(event, `${confirmedPage}?status=invalid`, 302);
+  // `in` narrows the union even without `strictNullChecks`, unlike checking `result.valid`.
+  if (!('signup' in result)) {
+    return sendRedirect(event, confirmedPageUrl(result.product, 'invalid'), 302);
   }
 
-  const product = encodeURIComponent(signup.product);
+  const { signup } = result;
+
+  if (!Object.hasOwn(waitlistProducts, signup.product)) {
+    return sendRedirect(event, confirmedPageUrl(undefined, 'invalid'), 302);
+  }
 
   try {
-    await upsertWaitlistContact(signup);
+    await addToWaitlist(signup);
   } catch (error) {
-    console.error('[waitlist]', error);
-    return sendRedirect(event, `${confirmedPage}?product=${product}&status=error`, 302);
+    console.error('[waitlist] Could not add the contact to the waitlist', error);
+    return sendRedirect(event, confirmedPageUrl(signup.product, 'error'), 302);
   }
 
-  return sendRedirect(event, `${confirmedPage}?product=${product}`, 302);
+  return sendRedirect(event, confirmedPageUrl(signup.product), 302);
 });

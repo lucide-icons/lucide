@@ -1,23 +1,34 @@
-import { createError, defineEventHandler, readBody, setResponseStatus } from 'h3';
+import { createError, defineEventHandler, getRequestURL, readBody } from 'h3';
 import { checkBotId } from 'botid/server';
 import { waitlistProducts } from '../../theme/components/waitlist/products';
-import { createWaitlistToken } from '../../lib/waitlist/token';
-import { getSiteUrl, sendConfirmationEmail } from '../../lib/waitlist/resend';
+import { createConfirmToken } from '../../lib/waitlist/token.ts';
+import { sendConfirmationEmail } from '../../lib/waitlist/resend.ts';
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_EMAIL_LENGTH = 254;
 const MAX_USE_CASE_LENGTH = 200;
+const MAX_SOURCE_LENGTH = 100;
+// Deliberately loose: the confirmation email is the real check.
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function asTrimmedString(value: unknown, maxLength: number) {
+  return typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
+}
 
 /**
- * Step 1 of the double opt-in: runs the spam checks and emails a signed confirmation link.
- * Nothing is stored until `/api/waitlist/confirm` is opened from that email.
+ * POST /api/waitlist
+ *
+ * Runs the spam checks and sends a confirmation email with a signed link. Nothing is stored yet:
+ * the contact is only created in Resend once the link is clicked (see `confirm.get.ts`).
  */
 export default defineEventHandler(async (event) => {
-  const body = await readBody<Record<string, unknown> | null>(event).catch(() => null);
+  const body = await readBody<Record<string, unknown> | undefined>(event).catch(() => undefined);
 
-  // Honeypot: people never see this field. Answer as if it worked so bots don't adapt.
-  if (body?.website) {
-    setResponseStatus(event, 202);
+  if (!body || typeof body !== 'object') {
+    throw createError({ statusCode: 400, statusMessage: 'Invalid request body' });
+  }
+
+  // Honeypot: people never see this field. Answer as if it worked, so bots learn nothing.
+  if (typeof body.website === 'string' && body.website !== '') {
     return { ok: true };
   }
 
@@ -26,15 +37,13 @@ export default defineEventHandler(async (event) => {
   });
 
   if (verification.isBot) {
-    throw createError({ statusCode: 403, statusMessage: 'Forbidden' });
+    throw createError({ statusCode: 403, statusMessage: 'Access denied' });
   }
 
-  const email = typeof body?.email === 'string' ? body.email.trim().toLowerCase() : '';
-  const product = typeof body?.product === 'string' ? body.product : '';
-  const useCase =
-    typeof body?.use_case === 'string' ? body.use_case.trim().slice(0, MAX_USE_CASE_LENGTH) : '';
+  const email = asTrimmedString(body.email, MAX_EMAIL_LENGTH + 1).toLowerCase();
+  const product = typeof body.product === 'string' ? body.product : '';
 
-  if (!email || email.length > MAX_EMAIL_LENGTH || !EMAIL_PATTERN.test(email)) {
+  if (email.length > MAX_EMAIL_LENGTH || !EMAIL_PATTERN.test(email)) {
     throw createError({ statusCode: 400, statusMessage: 'Invalid email address' });
   }
 
@@ -42,22 +51,27 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Unknown product' });
   }
 
-  const token = createWaitlistToken({
+  const token = createConfirmToken({
     email,
     product,
-    use_case: useCase,
-    signed_up_at: new Date().toISOString(),
+    useCase: asTrimmedString(body.use_case, MAX_USE_CASE_LENGTH),
+    source: asTrimmedString(body.source, MAX_SOURCE_LENGTH),
+    signedUpAt: new Date().toISOString(),
   });
 
-  const confirmUrl = `${getSiteUrl()}/api/waitlist/confirm?token=${encodeURIComponent(token)}`;
+  const confirmUrl = new URL('/api/waitlist/confirm', getRequestURL(event).origin);
+  confirmUrl.searchParams.set('token', token);
 
   try {
-    await sendConfirmationEmail({ email, product: waitlistProducts[product], confirmUrl });
+    await sendConfirmationEmail({
+      email,
+      productName: waitlistProducts[product].name,
+      confirmUrl: confirmUrl.href,
+    });
   } catch (error) {
-    console.error('[waitlist]', error);
-    throw createError({ statusCode: 502, statusMessage: 'Could not send confirmation email' });
+    console.error('[waitlist] Could not send the confirmation email', error);
+    throw createError({ statusCode: 502, statusMessage: 'Could not send the confirmation email' });
   }
 
-  setResponseStatus(event, 202);
   return { ok: true };
 });
