@@ -4,15 +4,11 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "password",
-    "login",
-    "authentication",
-    "secure",
-    "unlock"
+    "$extends:key"
   ],
   "categories": [
-    "security",
-    "account"
+    "$extends:key"
   ]
 }

@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:egg",
+    "$group:off",
     "egg free",
     "vegan",
     "hatched",

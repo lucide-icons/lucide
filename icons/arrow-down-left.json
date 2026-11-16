@@ -4,13 +4,11 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
-    "south-west",
-    "diagonal"
+    "$group:direction-down-left"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

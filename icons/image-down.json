@@ -6,17 +6,15 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "picture",
-    "photo",
+    "$extends:image",
+    "$group:direction-down",
     "download",
     "save",
     "export"
   ],
   "categories": [
-    "photography",
-    "text",
-    "multimedia",
-    "files"
+    "$extends:image"
   ]
 }

@@ -4,20 +4,21 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-next",
     "back",
     "menu"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ],
   "aliases": [
     {
       "name": "chevron-down-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

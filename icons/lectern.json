@@ -4,13 +4,13 @@
     "gurtt",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "pulpit",
     "podium",
     "stand"
   ],
   "categories": [
-    "communication",
-    "multimedia"
+    "communication"
   ]
 }

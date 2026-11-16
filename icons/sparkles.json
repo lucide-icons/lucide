@@ -7,21 +7,18 @@
     {
       "name": "stars",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ],
+  "use-cases": [],
   "tags": [
-    "stars",
+    "$group:sparkles",
     "effect",
     "filter",
-    "night",
-    "magic"
+    "night"
   ],
   "categories": [
-    "cursors",
     "multimedia",
-    "gaming",
-    "weather"
+    "gaming"
   ]
 }

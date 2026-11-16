@@ -1,0 +1,21 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: arranging items in a defined order",
+  "tags": [
+    "sort",
+    "order",
+    "arrange",
+    "reorder",
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
+    "ordering",
+    "arrangement",
+    "sequence",
+    "ranking",
+    "filter"
+  ]
+}

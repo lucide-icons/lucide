@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "adam-kov",
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Removing a tag from an item",
+    "Deleting a labeled product or entry"
+  ],
+  "tags": [
+    "$extends:tag",
+    "$group:x"
+  ],
+  "categories": [
+    "$extends:tag"
+  ]
+}

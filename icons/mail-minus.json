@@ -4,12 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "remove",
-    "delete"
+    "$extends:mail",
+    "$group:minus"
   ],
   "categories": [
     "mail"

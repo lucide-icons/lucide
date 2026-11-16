@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:package"
+  ],
+  "use-cases": [
+    "Editing recipient addresses or package contents in shipping systems",
+    "Modifying customer orders before shipment",
+    "Updating product listings in inventory or e-commerce platforms",
+    "Editing software package manifests or metadata"
+  ],
+  "tags": [
+    "$extends:package",
+    "$group:pen"
+  ],
+  "categories": [
+    "$extends:package"
+  ]
+}

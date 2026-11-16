@@ -4,26 +4,28 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [
+    "Indicating a downward direction",
+    "Representing a download action",
+    "Represent keyboard down arrow"
+  ],
   "tags": [
+    "$group:direction-down",
+    "$group:navigation-next",
     "backwards",
     "reverse",
-    "direction",
-    "south",
     "sign",
     "keyboard",
     "button"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {
       "name": "arrow-down-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

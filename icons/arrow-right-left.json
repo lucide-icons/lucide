@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-right",
+    "$group:direction-left",
     "bidirectional",
     "two-way",
     "2-way",
@@ -16,7 +19,6 @@
     "->"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "$extends:arrow-right"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "field glasses",
     "lorgnette",
@@ -26,9 +27,6 @@
   "categories": [
     "navigation",
     "nature",
-    "photography",
-    "science",
-    "travel",
-    "development"
+    "travel"
   ]
 }

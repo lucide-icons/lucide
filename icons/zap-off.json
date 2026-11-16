@@ -3,19 +3,16 @@
   "contributors": [
     "colebemis",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "kapowaz"
   ],
+  "use-cases": [],
   "tags": [
-    "flash",
-    "camera",
-    "lightning",
-    "electricity",
-    "energy"
+    "$extends:zap",
+    "$group:off"
   ],
   "categories": [
-    "connectivity",
-    "devices",
     "photography",
-    "weather"
+    "devices"
   ]
 }

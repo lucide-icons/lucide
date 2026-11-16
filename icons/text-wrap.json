@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "words",
     "lines",
@@ -12,15 +13,13 @@
     "paragraph"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "text"
   ],
   "aliases": [
     {
       "name": "wrap-text",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

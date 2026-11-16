@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:package"
+  ],
+  "use-cases": [
+    "Marking an unknown or unrecognized package in a package registry",
+    "Indicating a dependency that is still being resolved in a package manager",
+    "Indicating a lost or missing delivery package",
+    "Showing a shipment with an unknown delivery status"
+  ],
+  "tags": [
+    "$extends:package",
+    "$group:question-mark",
+    "unresolved",
+    "placeholder",
+    "pending",
+    "lost",
+    "dependency"
+  ],
+  "categories": [
+    "$extends:package"
+  ]
+}

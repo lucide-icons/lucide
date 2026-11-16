@@ -5,18 +5,18 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "security"
+    "$extends:lock"
   ],
   "categories": [
-    "security"
+    "$extends:lock"
   ],
   "aliases": [
     {
       "name": "unlock",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

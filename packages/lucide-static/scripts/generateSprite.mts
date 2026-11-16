@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { type INode, stringify } from 'svgson';
 import { format } from 'prettier';
 import { appendFile } from '@lucide/helpers';
@@ -15,6 +14,7 @@ export default async function generateSprite(
     value: '',
     attributes: {
       id: name,
+      viewBox: parsedSvg.attributes.viewBox,
     },
     children: parsedSvg.children,
   }));

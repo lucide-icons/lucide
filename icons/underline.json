@@ -6,8 +6,9 @@
     "csandman",
     "johnletey"
   ],
+  "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
     "format"
   ],
   "categories": [

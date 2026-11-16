@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "it-is-not",
+    "jamiemlaw",
+    "ej52"
+  ],
+  "use-cases": [
+    "Indicating disabled reasoning in an AI chat interface"
+  ],
+  "tags": [
+    "$extends:brain",
+    "$group:off"
+  ],
+  "categories": [
+    "$extends:brain",
+    "development"
+  ]
+}

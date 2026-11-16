@@ -3,6 +3,7 @@
   "contributors": [
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "shape",
     "bullet",
@@ -10,7 +11,6 @@
     "genderless"
   ],
   "categories": [
-    "shapes",
-    "medical"
+    "$extends:circle"
   ]
 }

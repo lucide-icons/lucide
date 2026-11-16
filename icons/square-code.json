@@ -6,13 +6,13 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:code",
     "gist",
     "source",
-    "programming",
     "html",
-    "xml",
-    "coding"
+    "xml"
   ],
   "categories": [
     "text",
@@ -22,8 +22,7 @@
     {
       "name": "code-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

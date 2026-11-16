@@ -6,6 +6,7 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "measurements",
     "centimeters",
@@ -30,6 +31,7 @@
   "categories": [
     "tools",
     "design",
-    "layout"
+    "layout",
+    "math"
   ]
 }

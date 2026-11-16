@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "toiletries",
+    "bathroom",
+    "amenities",
+    "shower gel",
+    "bubble bath",
+    "shampoo",
+    "conditioner",
+    "hand soap",
+    "sanitizer",
+    "sanitiser",
+    "clean",
+    "wash"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}

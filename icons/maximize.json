@@ -6,9 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "fullscreen",
-    "expand",
+    "$group:expand",
     "dashed"
   ],
   "categories": [

@@ -6,10 +6,13 @@
     "csandman",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:graph",
     "tree"
   ],
   "categories": [
-    "development"
+    "development",
+    "connectivity"
   ]
 }
