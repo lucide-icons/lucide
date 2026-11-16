@@ -1,19 +1,27 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jarbasaraujojr"
+    "jarbasaraujojr",
+    "rodrigoscope",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing pet housing or kennels in pet care apps",
+    "Indicating dog boarding or daycare services",
+    "Categorizing pet supplies and outdoor pet furniture in shops",
+    "Marking pet-friendly accommodation or areas on maps"
   ],
   "tags": [
-    "doghouse",
-    "dog",
-    "house",
+    "kennel",
     "pet",
-    "shelter"
+    "shelter",
+    "canine",
+    "puppy",
+    "backyard"
   ],
   "categories": [
-    "home",
-    "nature",
     "animals",
+    "home",
     "buildings"
   ]
 }
