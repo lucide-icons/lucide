@@ -68,7 +68,7 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.10",
+    "@babel/core": "^8.1.2",
     "@babel/preset-env": "^8.0.7",
     "@babel/preset-typescript": "^8.0.7",
     "@lucide/build-icons": "workspace:*",
