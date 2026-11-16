@@ -1,18 +1,31 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Flaig82"
+    "Flaig82",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Categorizing jackets and coats in clothing stores"
   ],
   "tags": [
-    "jacket",
     "coat",
-    "cold",
-    "shopping",
-    "store",
+    "blazer",
+    "tuxedo",
+    "tailor",
+    "uniform",
+    "attire",
     "clothing",
-    "clothes"
+    "clothes",
+    "fashion",
+    "shopping",
+    "cold",
+    "warmth",
+    "winter",
+    "outdoors"
   ],
   "categories": [
-    "shopping"
+    "shopping",
+    "sports"
   ]
 }
