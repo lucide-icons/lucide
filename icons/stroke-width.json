@@ -9,10 +9,10 @@
     "Setting border width of shapes in design tools"
   ],
   "tags": [
-    "stroke",
+    "$group:line",
+    "line",
     "thickness",
     "weight",
-    "border",
     "outline",
     "brush size",
     "pen size",
