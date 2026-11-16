@@ -10,7 +10,11 @@
     "$extends:file",
     "data",
     "txt",
-    "pdf"
+    "pdf",
+    "doc",
+    "docx",
+    "word",
+    "docs"
   ],
   "categories": [
     "$extends:file",

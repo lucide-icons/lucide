@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "DrashtiC07"
+  ],
+  "tags": [
+    "drink",
+    "tea",
+    "boba",
+    "bubble tea",
+    "tapioca",
+    "milk tea",
+    "cafe",
+    "straw",
+    "pearls",
+    "beverage",
+    "cold drink"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

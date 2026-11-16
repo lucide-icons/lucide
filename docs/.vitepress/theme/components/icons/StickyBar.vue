@@ -108,7 +108,7 @@
 @media (min-width: 960px) {
   .search-bar {
     padding-top: 32px;
-    margin-top: calc((var(--vp-layout-top-height, 0px) + 32px) * -1);
+    margin-top: calc((var(--vp-layout-top-height, 0px) + 33px) * -1);
     top: calc(var(--vp-layout-top-height, 0px) + 64px);
   }
 }

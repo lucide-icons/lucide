@@ -19,11 +19,16 @@
     "office",
     "meeting",
     "project",
-    "planning"
+    "planning",
+    "ppt",
+    "pptx",
+    "powerpoint",
+    "slides"
   ],
   "categories": [
     "multimedia",
     "communication",
-    "design"
+    "design",
+    "education"
   ]
 }

@@ -7,7 +7,11 @@
   "use-cases": [],
   "tags": [
     "$extends:badge",
-    "$group:percent"
+    "$group:percent",
+    "sell",
+    "selling",
+    "promotion",
+    "promo"
   ],
   "categories": [
     "finance",

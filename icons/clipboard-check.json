@@ -10,7 +10,9 @@
     "$extends:clipboard",
     "$group:check",
     "copied",
-    "pasted"
+    "pasted",
+    "result",
+    "checklist"
   ],
   "categories": [
     "$extends:clipboard"

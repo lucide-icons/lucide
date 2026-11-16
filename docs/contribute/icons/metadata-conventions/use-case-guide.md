@@ -3,7 +3,7 @@ description: Learn the best practices for writing use cases for Lucide icons.
 ---
 
 <script setup>
-import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareLetterP, triangleAlert, wifiOff } from '~/.vitepress/data/iconNodes';
+import { batteryLow, creditCard, crop, handshake, heading2, microchip, search, squareLetterP, triangleExclamationPoint, wifiOff } from '~/.vitepress/data/iconNodes';
 import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 </script>
 
@@ -120,10 +120,10 @@ The period adds **unnecessary punctuation** and makes entries inconsistent.
 Use plain text only. Formatting belongs in documentation, not metadata values.
 
 :::: example
-::: do <LucideIcon name="triangle-alert" :iconNode="triangleAlert" /> Warning users about a destructive action
+::: do <LucideIcon name="triangle-exclamation-point" :iconNode="triangleExclamationPoint" /> Warning users about a destructive action
 This works in search, generated pages, and other places that use metadata.
 :::
-::: dont <LucideIcon name="triangle-alert" :iconNode="triangleAlert" /> <span>**Warning** users about a destructive action ⚠️</span>
+::: dont <LucideIcon name="triangle-exclamation-point" :iconNode="triangleExclamationPoint" /> <span>**Warning** users about a destructive action ⚠️</span>
 Markdown and emoji can **show up in generated UI** and make metadata **harder to reuse**.
 :::
 ::::

@@ -8,7 +8,9 @@
   "use-cases": [],
   "tags": [
     "$extends:package",
-    "$group:plus"
+    "$group:plus",
+    "install",
+    "installation"
   ],
   "categories": [
     "$extends:package"

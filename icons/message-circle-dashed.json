@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:message-circle",
+    "$group:dashed",
     "draft"
   ],
   "categories": [
