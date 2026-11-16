@@ -24,7 +24,7 @@
     "auth",
     "data flow",
     "node editor",
-    "expand",
+    "$group:expand",
     "panel",
     "cell",
     "outbound"
