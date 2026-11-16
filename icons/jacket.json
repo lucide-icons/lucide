@@ -6,9 +6,18 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Categorizing jackets and coats in clothing stores"
+    "Categorizing jackets and coats in clothing stores",
+    "Displaying long-sleeved outerwear in apparel product listings",
+    "Filtering cold-weather clothing in online stores"
   ],
   "tags": [
+    "outerwear",
+    "fashion",
+    "apparel",
+    "styled",
+    "warm",
+    "outfit",
+    "wear",
     "coat",
     "blazer",
     "tuxedo",
