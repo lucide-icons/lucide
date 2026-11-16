@@ -8,8 +8,7 @@
   "tags": [
     "$group:direction-up",
     "$group:direction-down",
-    "expand",
-    "unfold"
+    "$group:expand"
   ],
   "categories": [
     "arrows"

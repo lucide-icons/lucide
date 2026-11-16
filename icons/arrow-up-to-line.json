@@ -10,8 +10,7 @@
     "$group:direction-up",
     "$group:navigation-first",
     "upload",
-    "collapse",
-    "fold"
+    "$group:collapse"
   ],
   "categories": [
     "$extends:arrow-up",

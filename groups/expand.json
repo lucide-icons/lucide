@@ -1,0 +1,8 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: opening out or increasing extent",
+  "tags": [
+    "expand",
+    "unfold"
+  ]
+}
