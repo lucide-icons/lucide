@@ -1,0 +1,6 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Education",
+  "description": "Icons for schools, learning, studying, teaching, and classroom supplies.",
+  "icon": "graduation-cap"
+}
