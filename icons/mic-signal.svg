@@ -15,5 +15,5 @@
   <path d="M22 11a10 10 0 00-5-8.662" />
   <path d="M6 11a6 6 0 013-5.197" />
   <path d="M9 21h6" />
-  <rect x="10" y="9" width="4" height="8" rx="2" />
+  <rect width="4" height="8" x="10" y="9" rx="2" />
 </svg>

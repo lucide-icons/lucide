@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <path d="M14.5 8H11a2 2 0 100 4h2a2 2 0 110 4H9" />
-  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <rect width="18" height="18" x="3" y="3" rx="2" />
 </svg>

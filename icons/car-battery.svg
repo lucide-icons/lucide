@@ -14,5 +14,5 @@
   <path d="M18 5v2" />
   <path d="M6 13h4" />
   <path d="M6 5v2" />
-  <rect x="2" y="7" width="20" height="12" rx="2" />
+  <rect width="20" height="12" x="2" y="7" rx="2" />
 </svg>
