@@ -25,9 +25,7 @@
     "cardholder",
     "declined",
     "rejected",
-    "failed",
-    "invalid",
-    "error"
+    "invalid"
   ],
   "categories": [
     "$extends:credit-card",
