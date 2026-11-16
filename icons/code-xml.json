@@ -6,14 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "source",
-    "programming",
-    "html",
-    "xml"
+    "$extends:code"
   ],
   "categories": [
-    "text",
-    "development"
+    "$extends:code"
   ],
   "aliases": [
     {

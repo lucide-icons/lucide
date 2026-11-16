@@ -16,6 +16,6 @@
     "mass"
   ],
   "categories": [
-    "math"
+    "$extends:weight"
   ]
 }

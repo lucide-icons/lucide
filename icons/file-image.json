@@ -6,12 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
     "image",
     "graphics",
     "photo",
     "picture"
   ],
   "categories": [
-    "files"
+    "$extends:file",
+    "photography"
   ]
 }

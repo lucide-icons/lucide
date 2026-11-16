@@ -11,7 +11,9 @@
     "drug",
     "prescription",
     "tablet",
-    "pharmacy"
+    "pharmacy",
+    "sick",
+    "illness"
   ],
   "categories": [
     "medical"

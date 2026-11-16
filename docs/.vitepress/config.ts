@@ -69,6 +69,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarSearch.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
@@ -82,6 +88,7 @@ export default defineConfig({
           'index.md',
           'packages.md',
           'showcase.md',
+          'sponsor.md',
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
@@ -117,6 +124,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
+      { icon: 'x', link: 'https://x.com/lucide_icons' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/lucide-icons/' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/lucide-icons.bsky.social' },
     ],
     footer: {
       message: 'Released under the ISC License.',
@@ -124,6 +134,14 @@ export default defineConfig({
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
+    },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'R7KKMCPXOB',
+        apiKey: 'dd3101054267d35fb28f49c42715f1aa',
+        indexName: 'lucide',
+      },
     },
     carbonAds: {
       code: 'CWYIC53U',

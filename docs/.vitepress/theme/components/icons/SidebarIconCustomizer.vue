@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useMounted } from '@vueuse/core';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import RangeSlider from '../base/RangeSlider.vue';
@@ -7,6 +7,9 @@ import InputField from '../base/InputField.vue';
 import ColorPicker from '../base/ColorPicker.vue';
 import ResetButton from '../base/ResetButton.vue';
 import Switch from '../base/Switch.vue';
+import Card from '../base/Card.vue';
+import useTrackStyleChanges from '../../composables/useTrackStyleChanges';
+import { track } from '../../utils/openpanel';
 
 const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
   useIconStyleContext();
@@ -15,10 +18,19 @@ const { color, strokeWidth, size, nonScalingStroke, isCustomized, resetStyle } =
 // otherwise the hydrated DOM keeps the stale `disabled` attribute on the reset button.
 const isMounted = useMounted();
 const showCustomized = computed(() => isMounted.value && isCustomized.value);
+
+onMounted(() => {
+  useTrackStyleChanges('icons_customizer_change', { color, strokeWidth, size, nonScalingStroke });
+});
+
+function onReset() {
+  track('icons_customizer_reset');
+  resetStyle();
+}
 </script>
 
 <template>
-  <div
+  <Card
     class="customizer-card"
     :class="{ customized: showCustomized }"
   >
@@ -26,7 +38,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
       <h2 class="card-title">Customizer</h2>
       <ResetButton
         :disabled="!showCustomized"
-        @click="resetStyle"
+        @click="onReset"
       />
     </div>
     <InputField
@@ -77,6 +89,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
     <InputField
       id="non-scaling-stroke"
       label="Non-scaling stroke"
+      class="non-scaling-stroke-switch"
     >
       <Switch
         id="non-scaling-stroke-switch"
@@ -84,7 +97,7 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
         v-model="nonScalingStroke"
       />
     </InputField>
-  </div>
+  </Card>
 </template>
 
 <style scoped>
@@ -102,15 +115,13 @@ const showCustomized = computed(() => isMounted.value && isCustomized.value);
   font-size: 16px;
 }
 
-.customizer-card {
-  background: var(--vp-c-bg);
+.card.customizer-card {
   padding: 12px 24px 24px;
-  border-radius: 12px;
   margin-bottom: 24px;
   position: relative;
   z-index: 0;
-  border: 1px solid transparent;
   transition: border-color 0.4s ease-in-out;
+  background: var(--vp-c-bg);
 }
 
 .customizer-card.customized {

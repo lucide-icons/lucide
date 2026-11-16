@@ -8,20 +8,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "arrows",
-    "rotate",
-    "reload",
-    "synchronise",
-    "synchronize",
-    "circular",
-    "cycle",
+    "$extends:refresh-ccw",
     "issue",
     "code",
     "coding",
     "version control"
   ],
   "categories": [
-    "arrows",
+    "$extends:refresh-ccw",
     "development"
   ]
 }

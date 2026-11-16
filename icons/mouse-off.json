@@ -7,12 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "device",
-    "scroll",
-    "click",
-    "disabled"
+    "$extends:mouse",
+    "$group:off"
   ],
   "categories": [
-    "devices"
+    "$extends:mouse"
   ]
 }

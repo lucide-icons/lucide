@@ -15,22 +15,15 @@
     "Marking a placeholder where users can add a block"
   ],
   "tags": [
-    "selection",
+    "$extends:square-dashed",
+    "$group:plus",
     "select",
-    "add",
-    "new",
     "placeholder",
-    "marquee",
-    "box",
-    "dashed",
-    "plus",
-    "insert",
     "frame",
     "empty"
   ],
   "categories": [
     "design",
-    "layout",
-    "shapes"
+    "layout"
   ]
 }

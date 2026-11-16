@@ -5,13 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "push api",
+    "push",
+    "api",
     "interface",
     "callback"
   ],
   "categories": [
-    "development",
-    "social",
-    "account"
+    "development"
   ]
 }

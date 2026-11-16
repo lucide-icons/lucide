@@ -111,6 +111,36 @@ const percentage = computed<string>(() => `${((Number(props.modelValue) - props.
     border-radius: 10px;
     box-shadow: var(--vp-shadow-2);
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition-duration: 0.2s;
+}
+
+.slider input::-moz-range-thumb {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition-duration: 0.2s;
+}
+
+/* The thumb grows with a soft brand ring on hover and focus, and a little more while dragged */
+.slider input:hover::-webkit-slider-thumb,
+.slider input:focus-visible::-webkit-slider-thumb {
+    transform: scale(1.1);
+    box-shadow: var(--vp-shadow-2), 0 0 0 5px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
+}
+
+.slider input:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    box-shadow: var(--vp-shadow-2), 0 0 0 7px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
+}
+
+.slider input:hover::-moz-range-thumb,
+.slider input:focus-visible::-moz-range-thumb {
+    transform: scale(1.1);
+    box-shadow: var(--vp-shadow-2), 0 0 0 5px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
+}
+
+.slider input:active::-moz-range-thumb {
+    transform: scale(1.2);
+    box-shadow: var(--vp-shadow-2), 0 0 0 7px color-mix(in srgb, var(--vp-c-brand) 25%, transparent);
 }
 
 .slider input::-moz-range-thumb {

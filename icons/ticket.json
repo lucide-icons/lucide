@@ -14,7 +14,9 @@
     "concert",
     "show",
     "perforated",
-    "dashed"
+    "dashed",
+    "invite",
+    "invitation"
   ],
   "categories": [
     "account",

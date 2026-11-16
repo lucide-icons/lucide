@@ -8,19 +8,19 @@
     "Marking shared documentation with new information"
   ],
   "tags": [
+    "$extends:notebook",
+    "$group:dot",
     "document",
     "file",
-    "journal",
     "page",
     "paper",
     "record",
     "entry",
     "notebook",
-    "notification",
-    "unread",
     "note"
   ],
   "categories": [
-    "communication"
+    "text",
+    "notifications"
   ]
 }

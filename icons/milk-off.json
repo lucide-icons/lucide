@@ -6,16 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:milk",
+    "$group:off",
     "lactose free",
-    "bottle",
-    "beverage",
-    "drink",
-    "water",
     "allergy",
-    "intolerance",
-    "diet"
+    "intolerance"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:milk"
   ]
 }

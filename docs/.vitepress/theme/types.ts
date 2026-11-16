@@ -3,8 +3,8 @@ export type IconNodeWithKeys = [elementName: string, attrs: Record<string, strin
 
 export interface Alias {
   name: string;
-  deprecationReason: string;
-  deprecated: boolean;
+  deprecationReason?: string;
+  deprecated?: boolean;
 }
 
 export interface IconMetaData {
@@ -32,6 +32,7 @@ export interface IconEntity extends IconMetaData {
 export interface Category {
   name: string;
   title: string;
+  description: string;
   icon?: string;
   iconCount: number;
   icons?: IconEntity[];

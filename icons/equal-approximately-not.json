@@ -11,13 +11,10 @@
     "Marking measurements outside acceptable variance"
   ],
   "tags": [
-    "calculate",
-    "math",
-    "operator",
+    "$extends:equal-approximately",
     "not",
     "approximately",
     "unequal",
-    "code",
     "≇",
     "tolerance",
     "threshold",
@@ -27,9 +24,8 @@
     "variance"
   ],
   "categories": [
-    "math",
+    "$extends:equal-approximately",
     "development",
-    "charts",
     "science"
   ]
 }

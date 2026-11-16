@@ -5,14 +5,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove",
+    "$extends:user-round",
+    "$group:x",
     "unfollow",
     "unsubscribe",
     "unavailable"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ],
   "aliases": [
     {

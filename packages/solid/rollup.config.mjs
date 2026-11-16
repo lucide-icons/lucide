@@ -43,8 +43,11 @@ const configs = bundles
           presets: [
             'babel-preset-solid',
             '@babel/preset-typescript',
-            ['@babel/preset-env', { bugfixes: true, targets: 'last 2 years' }],
+            ['@babel/preset-env', { targets: 'last 2 years' }],
           ],
+          // Babel 8's @babel/preset-typescript no longer enables JSX parsing for .tsx files,
+          // and babel-preset-solid's Babel 7 JSX syntax plugin skips it when TypeScript is enabled.
+          overrides: [{ test: /\.[jt]sx$/, parserOpts: { plugins: ['jsx'] } }],
         }),
         ...plugins({
           pkg,

@@ -23,6 +23,7 @@
       - any-glob-to-any-file:
           - 'icons/*.json'
           - categories/*
+          - groups/*
 
 # For changes or added icons
 🎨 icon:
