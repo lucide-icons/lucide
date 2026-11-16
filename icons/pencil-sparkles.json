@@ -9,31 +9,17 @@
     "jennieboops"
   ],
   "use-cases": [
-    "indicating AI-assisted writing or editing features",
-    "representing automated writing or content generation tools"
+    "Indicating AI-assisted writing or editing features",
+    "Representing automated writing or content generation tools"
   ],
   "tags": [
-    "edit",
-    "ai",
+    "$extends:pencil",
+    "$group:sparkles",
     "tools",
-    "smart",
-    "create",
-    "draw",
-    "sketch",
-    "draft",
-    "writer",
-    "writing",
-    "stationery",
-    "artist",
-    "magic",
     "wizard",
     "magician"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
-    "text",
-    "photography"
+    "$extends:pencil"
   ]
 }

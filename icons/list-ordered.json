@@ -7,11 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "number",
+    "$group:digit",
     "order",
     "queue"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

@@ -6,13 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "robot",
-    "ai",
-    "chat",
-    "assistant"
+    "$extends:bot"
   ],
   "categories": [
-    "development",
-    "social"
+    "$extends:bot"
   ]
 }

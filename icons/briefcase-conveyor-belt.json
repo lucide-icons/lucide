@@ -14,7 +14,6 @@
     "carousel"
   ],
   "categories": [
-    "travel",
-    "transportation"
+    "$extends:briefcase"
   ]
 }

@@ -6,18 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "subtract",
-    "remove",
+    "$group:minus",
     "decrease",
-    "reduce",
     "calculate",
     "line",
     "operator",
     "code",
     "coding",
     "minimum",
-    "downgrade",
-    "-"
+    "downgrade"
   ],
   "categories": [
     "math"

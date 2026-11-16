@@ -6,12 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "symlink",
     "symbolic",
     "link"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

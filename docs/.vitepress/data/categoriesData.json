@@ -76,6 +76,10 @@
     "title": "Layout"
   },
   {
+    "name": "letters-digits",
+    "title": "Letters & digits"
+  },
+  {
     "name": "mail",
     "title": "Mail"
   },
@@ -97,11 +101,11 @@
   },
   {
     "name": "navigation",
-    "title": "Navigation & Places"
+    "title": "Navigation & places"
   },
   {
     "name": "notifications",
-    "title": "Notification"
+    "title": "Notifications"
   },
   {
     "name": "people",

@@ -6,10 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "off",
-    "zero",
-    "record",
-    "shape",
+    "$extends:circle",
     "circle-pile",
     "circle",
     "pile",
@@ -25,6 +22,6 @@
     "warehouse"
   ],
   "categories": [
-    "shapes"
+    "$extends:circle"
   ]
 }

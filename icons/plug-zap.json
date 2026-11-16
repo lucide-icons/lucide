@@ -9,9 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "electricity",
-    "energy",
-    "electronics",
+    "$extends:plug",
+    "$extends:zap",
     "charge",
     "charging",
     "battery",

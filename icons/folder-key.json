@@ -5,14 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "key",
-    "private",
-    "security",
-    "protected"
+    "$extends:folder",
+    "$group:key"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "security"
   ]
 }

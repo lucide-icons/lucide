@@ -8,13 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:off",
     "unlike",
     "dislike",
     "hate",
     "emotion"
   ],
   "categories": [
-    "social",
-    "multimedia"
+    "social"
   ]
 }

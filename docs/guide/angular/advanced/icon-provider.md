@@ -31,7 +31,7 @@ You can then reference the registered icons by name:
 
 ```html [app.html]
 <svg lucideIcon="square-check"></svg>
-<svg lucideIcon="circle-alert"></svg>
+<svg lucideIcon="circle-exclamation-point"></svg>
 ```
 
 ## How names are resolved

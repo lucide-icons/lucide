@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:user-round"
+  ],
+  "use-cases": [
+    "$extends:user-exclamation-point"
+  ],
+  "tags": [
+    "$extends:user-round",
+    "$extends:user-exclamation-point"
+  ],
+  "categories": [
+    "$extends:user-round"
+  ]
+}

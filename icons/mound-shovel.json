@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking sand sites or sand mines on logistics route maps",
+    "Labeling navigation items for browsing sand and aggregate types",
+    "Showing material stockpiles in construction or mining software",
+    "Marking sandy beach areas in travel or recreation guides"
+  ],
+  "tags": [
+    "$extends:shovel",
+    "sand",
+    "pile",
+    "grain",
+    "desert",
+    "nature",
+    "dirt pile",
+    "sand pile",
+    "dirt",
+    "soil",
+    "earth",
+    "gravel",
+    "heap",
+    "stockpile",
+    "aggregate",
+    "excavation",
+    "earthworks",
+    "mine",
+    "mining",
+    "quarry",
+    "sand mine",
+    "frac sand",
+    "construction",
+    "construction site",
+    "landscaping",
+    "beach"
+  ],
+  "categories": [
+    "tools",
+    "nature"
+  ]
+}
