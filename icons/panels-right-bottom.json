@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-bottom",
+    "$group:position-right",
     "drawers",
     "sidebar",
     "secondary"

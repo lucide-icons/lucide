@@ -5,6 +5,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "background",
     "texture",
@@ -19,7 +20,7 @@
     "lock screen"
   ],
   "categories": [
-    "account",
-    "devices"
+    "devices",
+    "photography"
   ]
 }

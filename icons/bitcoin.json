@@ -4,14 +4,19 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
-    "currency",
-    "money",
-    "payment"
+    "$group:currency",
+    "cryptocurrency",
+    "digital",
+    "blockchain",
+    "coin",
+    "market",
+    "decentralized",
+    "investment",
+    "crypto"
   ],
   "categories": [
-    "brands",
-    "development",
     "finance"
   ]
 }

@@ -3,21 +3,18 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "medicine",
-    "medication",
-    "prescription",
-    "drug",
+    "$extends:pill",
     "supplement",
     "vitamin",
     "capsule",
     "jar",
     "container",
     "healthcare",
-    "pharmaceutical",
-    "tablet"
+    "pharmaceutical"
   ],
   "categories": [
-    "medical"
+    "$extends:pill"
   ]
 }

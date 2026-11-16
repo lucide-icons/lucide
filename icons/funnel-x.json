@@ -7,21 +7,19 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "filter",
-    "hopper",
-    "remove",
-    "delete"
+    "$extends:funnel",
+    "$group:x"
   ],
   "categories": [
-    "layout"
+    "$extends:funnel"
   ],
   "aliases": [
     {
       "name": "filter-x",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

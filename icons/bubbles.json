@@ -5,6 +5,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "water",
     "cleaning",
@@ -28,6 +29,6 @@
     "drop"
   ],
   "categories": [
-    "weather"
+    "home"
   ]
 }

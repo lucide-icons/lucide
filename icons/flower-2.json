@@ -3,14 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "sustainability",
-    "nature",
-    "plant"
+    "$extends:flower"
   ],
   "categories": [
     "nature",
-    "sustainability",
-    "seasons"
+    "sustainability"
   ]
 }

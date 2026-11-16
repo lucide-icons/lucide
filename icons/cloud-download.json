@@ -6,8 +6,11 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "import"
+    "import",
+    "install",
+    "installation"
   ],
   "categories": [
     "arrows",
@@ -17,8 +20,7 @@
     {
       "name": "download-cloud",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "audio",
@@ -15,13 +16,15 @@
     "phone",
     "telephone",
     "voip",
-    "video"
+    "video",
+    "customer service",
+    "customer support",
+    "helpdesk"
   ],
   "categories": [
     "multimedia",
-    "connectivity",
     "devices",
-    "files",
-    "gaming"
+    "gaming",
+    "communication"
   ]
 }

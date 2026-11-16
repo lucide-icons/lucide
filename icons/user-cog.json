@@ -5,13 +5,12 @@
     "ericfennis",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
-    "settings",
-    "edit",
-    "cog",
-    "gear"
+    "$extends:user",
+    "$group:cog"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }

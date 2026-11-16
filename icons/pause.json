@@ -6,9 +6,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "music",
-    "stop"
+    "$group:pause",
+    "music"
   ],
   "categories": [
     "multimedia"

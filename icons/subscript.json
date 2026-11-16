@@ -5,8 +5,10 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
-    "text"
+    "$group:letter",
+    "$group:digit"
   ],
   "categories": [
     "text"

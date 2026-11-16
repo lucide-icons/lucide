@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Placement: at the center or middle",
+  "tags": [
+    "center",
+    "centre",
+    "middle"
+  ]
+}

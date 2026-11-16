@@ -3,19 +3,13 @@
   "contributors": [
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "advertisement",
-    "announcement",
-    "attention",
-    "alert",
-    "loudspeaker",
-    "megaphone",
-    "notification",
-    "disable",
+    "$extends:megaphone",
+    "$group:off",
     "silent"
   ],
   "categories": [
-    "multimedia",
-    "notifications"
+    "$extends:megaphone"
   ]
 }

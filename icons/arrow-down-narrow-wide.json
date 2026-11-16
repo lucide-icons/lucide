@@ -3,19 +3,14 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "filter",
-    "sort",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$group:direction-down",
+    "$group:sort"
   ],
   "categories": [
+    "$extends:arrow-down",
     "text",
-    "layout",
-    "arrows"
+    "layout"
   ]
 }

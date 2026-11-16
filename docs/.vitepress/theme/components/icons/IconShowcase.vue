@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types';
 import { computed } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon.ts';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon.ts';
 import Calendar from '../../../data/iconDetails/calendar.ts';
 import Clock from '../../../data/iconDetails/clock.ts';
 import Bug from '../../../data/iconDetails/bug.ts';
 import Rocket from '../../../data/iconDetails/rocket.ts';
-import TriangleAlert from '../../../data/iconDetails/triangle-alert.ts';
+import TriangleExclamationPoint from '../../../data/iconDetails/triangle-exclamation-point.ts';
 import PartyPopper from '../../../data/iconDetails/party-popper.ts';
 import Scissors from '../../../data/iconDetails/scissors.ts';
 import Copy from '../../../data/iconDetails/copy.ts';
@@ -29,14 +29,19 @@ const props = defineProps<{
 
 const iconComponent = computed(() => {
   if (!props.name || !props.iconNode) return null;
-  return createLucideIcon(props.name, props.iconNode);
+  try {
+    return createLucideIcon(props.name, props.iconNode);
+  } catch (error) {
+    console.warn(`Icon ${props.name} not found, using fallback`);
+    return null;
+  }
 });
 
 const CalendarIcon = createLucideIcon('calendar', Calendar.iconNode);
 const ClockIcon = createLucideIcon('clock', Clock.iconNode);
 const BugIcon = createLucideIcon('bug', Bug.iconNode);
 const RocketIcon = createLucideIcon('rocket', Rocket.iconNode);
-const AlertTriangleIcon = createLucideIcon('alert-triangle', TriangleAlert.iconNode);
+const TriangleExclamationPointIcon = createLucideIcon('triangle-exclamation-point', TriangleExclamationPoint.iconNode);
 const ScissorsIcon = createLucideIcon('scissors', Scissors.iconNode);
 const CopyIcon = createLucideIcon('copy', Copy.iconNode);
 const SaveIcon = createLucideIcon('save', Save.iconNode);
@@ -61,8 +66,10 @@ const prettyName = props.name
 </script>
 
 <template>
-  <section class="showcase">
-    <h2 class="title">See this icon in action</h2>
+  <section
+    class="showcase"
+    v-if="iconComponent"
+  >
     <div class="showcase-grid">
       <div class="showcase-item column">
         <div class="placeholder"></div>
@@ -121,7 +128,7 @@ const prettyName = props.name
         >
           <div class="placeholder"></div>
           <div class="badge badge-red">
-            <AlertTriangleIcon :size="20" />
+            <TriangleExclamationPointIcon :size="20" />
             Alert
           </div>
         </div>
@@ -228,18 +235,17 @@ const prettyName = props.name
 .showcase-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 48px;
-  margin-inline-start: 24px;
-  margin-block-start: 48px;
+  gap: 32px;
+  background: var(--vp-code-block-bg);
+  padding: 32px;
+  border-radius: 8px;
 }
 
 .showcase-item {
   padding: 24px;
   border-radius: 8px;
   background-color: var(--vp-c-bg);
-  box-shadow:
-    var(--vp-shadow-4),
-    -24px -24px 0 var(--vp-c-bg-soft);
+  box-shadow: var(--vp-shadow-2);
   display: flex;
   align-items: center;
   justify-content: center;

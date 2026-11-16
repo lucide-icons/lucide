@@ -4,12 +4,16 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "achievement",
     "badge",
     "rosette",
     "prize",
-    "winner"
+    "winner",
+    "skill",
+    "skills",
+    "expertise"
   ],
   "categories": [
     "account",

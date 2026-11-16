@@ -6,10 +6,12 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
+    "$group:direction-up",
     "letter",
     "font size",
-    "text",
     "formatting",
     "larger",
     "bigger"

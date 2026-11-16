@@ -6,10 +6,13 @@
     "irvineacosta",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:panel-top",
+    "$group:position-bottom",
+    "$group:dashed",
     "sidebar",
     "primary",
-    "drawer",
     "show",
     "reveal",
     "padding",

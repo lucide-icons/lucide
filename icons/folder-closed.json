@@ -4,11 +4,12 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "directory",
+    "$extends:folder",
     "closed"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

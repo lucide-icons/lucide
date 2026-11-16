@@ -6,15 +6,12 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
-    "profile",
-    "edit",
-    "change"
+    "$extends:user-round",
+    "$group:pen"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ]
 }

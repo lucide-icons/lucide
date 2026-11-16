@@ -6,16 +6,14 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:user",
+    "$group:check",
     "followed",
-    "subscribed",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "subscribed"
   ],
   "categories": [
-    "account"
+    "$extends:user"
   ]
 }
