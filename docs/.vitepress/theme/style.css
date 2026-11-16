@@ -512,8 +512,10 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 
 /* "On this page" outline: each heading is a soft pill on hover and slides in a little,
    the current heading takes the brand colour and the marker glides to it */
+/* No negative right margin: it would overflow the aside container, and VitePress's
+   scrollIntoView on the active link would then scroll the whole outline sideways. */
 .VPDoc .VPDocAsideOutline .outline-link {
-  margin: 0 -8px;
+  margin: 0 0 0 -8px;
   padding: 0 8px;
   border-radius: 6px;
   transition:
