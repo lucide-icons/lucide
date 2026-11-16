@@ -5,11 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "home",
-    "living",
-    "building",
-    "wifi",
+    "$extends:house",
+    "$extends:wifi",
     "connectivity"
   ],
   "categories": [

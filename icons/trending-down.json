@@ -4,8 +4,10 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics"
+    "$group:chart",
+    "$group:direction-down"
   ],
   "categories": [
     "charts",

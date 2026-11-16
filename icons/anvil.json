@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "metal",
     "iron",
@@ -16,7 +17,6 @@
     "acme"
   ],
   "categories": [
-    "buildings",
     "tools",
     "gaming"
   ]

@@ -4,14 +4,15 @@
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "module": "ESNext",
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
     "target": "ESNext",
     "esModuleInterop": true,
     "lib": ["esnext"],
+    "types": ["node"],
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "sourceMap": true,
-  },
+    "sourceMap": true
+  }
 }

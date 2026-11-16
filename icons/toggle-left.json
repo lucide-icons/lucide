@@ -6,7 +6,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-left",
     "on",
     "off",
     "switch",
@@ -14,7 +16,6 @@
   ],
   "categories": [
     "layout",
-    "account",
     "development"
   ]
 }

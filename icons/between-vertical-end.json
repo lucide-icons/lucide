@@ -3,14 +3,15 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-bottom",
     "insert",
     "add",
     "top",
     "slot",
     "squeeze",
     "space",
-    "vertical",
     "grid",
     "table",
     "columns",
@@ -25,7 +26,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "tools"
+    "design"
   ]
 }

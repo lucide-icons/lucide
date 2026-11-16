@@ -4,14 +4,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "add",
-    "create",
-    "new",
-    "compose"
+    "$extends:mail",
+    "$group:plus",
+    "compose",
+    "invite",
+    "invitation"
   ],
   "categories": [
     "mail"

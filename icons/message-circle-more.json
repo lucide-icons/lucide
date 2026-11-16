@@ -5,13 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-circle",
     "typing",
     "writing",
     "responding",
@@ -22,6 +18,6 @@
     "…"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ]
 }

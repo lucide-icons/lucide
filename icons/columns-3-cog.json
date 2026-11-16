@@ -3,16 +3,18 @@
   "contributors": [
     "irvineacosta",
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "kamilasw"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:columns-3",
+    "$group:cog",
     "columns",
-    "settings",
     "customize",
     "table",
     "grid",
     "adjust",
-    "configuration",
     "panel",
     "layout"
   ],
@@ -24,14 +26,12 @@
     {
       "name": "columns-settings",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     },
     {
       "name": "table-config",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

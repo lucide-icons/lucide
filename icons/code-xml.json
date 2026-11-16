@@ -4,22 +4,18 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "use-cases": [],
   "tags": [
-    "source",
-    "programming",
-    "html",
-    "xml"
+    "$extends:code"
   ],
   "categories": [
-    "text",
-    "development"
+    "$extends:code"
   ],
   "aliases": [
     {
       "name": "code-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

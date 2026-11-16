@@ -4,14 +4,14 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "font",
-    "text",
-    "typography",
+    "$extends:file",
+    "$group:letter",
     "type"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "text"
   ]
 }

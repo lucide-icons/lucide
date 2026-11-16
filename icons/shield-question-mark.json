@@ -5,51 +5,33 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:shield",
+    "$group:question-mark",
     "unshielded",
-    "cybersecurity",
     "insecure",
     "unsecured",
-    "safety",
     "unsafe",
-    "protection",
     "unprotected",
-    "guardian",
     "unguarded",
     "unarmored",
     "unarmoured",
     "defenseless",
     "defenceless",
     "undefended",
-    "defender",
-    "threat",
-    "prevention",
     "unprevented",
-    "antivirus",
-    "vigilance",
-    "vigilant",
-    "detection",
     "undetected",
-    "scan",
-    "find",
     "exploit",
     "vulnerability",
     "vulnerable",
     "weakness",
     "infection",
-    "comprimised",
+    "compromised",
     "data leak",
-    "audit",
-    "admin",
-    "verification",
     "unverified",
     "uncertified",
-    "uncertain",
-    "unknown",
-    "inactive",
-    "crest",
-    "question mark",
-    "?"
+    "inactive"
   ],
   "categories": [
     "account",
@@ -61,8 +43,7 @@
     {
       "name": "shield-question",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

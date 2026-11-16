@@ -5,24 +5,19 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "script",
-    "document",
-    "html",
-    "xml",
-    "property list",
-    "plist"
+    "$extends:file-code",
+    "$extends:code"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:file-code"
   ],
   "aliases": [
     {
       "name": "file-code-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "storage",
     "storehouse",
@@ -15,6 +16,7 @@
   ],
   "categories": [
     "buildings",
-    "navigation"
+    "navigation",
+    "logistics"
   ]
 }

@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:graph",
     "indirection",
     "vpn",
     "virtual private network",
     "proxy",
-    "connections",
     "bounce",
     "reroute",
     "path",
@@ -22,9 +24,7 @@
   ],
   "categories": [
     "security",
-    "account",
     "navigation",
-    "development",
-    "social"
+    "development"
   ]
 }

@@ -5,11 +5,13 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "sign out",
     "arrow",
     "exit",
-    "auth"
+    "auth",
+    "quit"
   ],
   "categories": [
     "arrows",

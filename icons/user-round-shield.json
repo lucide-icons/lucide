@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "MArtytraM99",
+    "DrashtiC07"
+  ],
+  "use-cases": [
+    "Representing protected user accounts or secure profiles",
+    "Indicating access permissions for a user account",
+    "Showing account protection settings"
+  ],
+  "tags": [
+    "security",
+    "protection",
+    "admin",
+    "guard",
+    "privacy",
+    "account",
+    "role",
+    "permissions",
+    "profile",
+    "identity",
+    "trusted"
+  ],
+  "categories": [
+    "account",
+    "security"
+  ]
+}

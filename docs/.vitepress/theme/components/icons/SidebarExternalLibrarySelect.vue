@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import Checkbox from '../base/Checkbox.vue'
-import SidebarTitle from './SidebarTitle.vue'
+import Checkbox from '../base/Checkbox.vue';
+import SidebarTitle from './SidebarTitle.vue';
 import { useExternalLibs } from '../../composables/useExternalLibs';
 import { ExternalLibs } from '../../types';
+import { watch } from 'vue';
+import { track } from '../../utils/openpanel';
 
 interface ExternalLibrary {
   name: string;
@@ -12,18 +14,25 @@ interface ExternalLibrary {
 const externalLibraries: ExternalLibrary[] = [
   {
     name: 'Lab',
-    value: 'lab'
+    value: 'lab',
   },
 ];
 
 const { selectedLibs } = useExternalLibs();
+
+watch(selectedLibs, (libs, previousLibs) => {
+  for (const { value } of externalLibraries) {
+    const enabled = libs.includes(value);
+    if (enabled !== previousLibs.includes(value)) {
+      track('icons_external_lib_toggle', { library: value, enabled });
+    }
+  }
+});
 </script>
 
 <template>
   <div class="external-library-select">
-    <SidebarTitle>
-      Include external libs
-    </SidebarTitle>
+    <SidebarTitle> Include external libs </SidebarTitle>
     <ul>
       <li
         v-for="library in externalLibraries"
