@@ -4,6 +4,7 @@ fullscreen
 gamepad
 gantt
 kanban
+lakehouse
 pilcrow
 squircle
 strikethrough
