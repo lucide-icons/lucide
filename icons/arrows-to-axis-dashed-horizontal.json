@@ -1,24 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
+    "danielbayley"
   ],
   "use-cases": [],
   "tags": [
     "$group:dashed",
-    "reflect",
-    "mirror",
-    "alignment"
+    "$group:collapse"
   ],
   "categories": [
-    "design",
-    "photography"
+    "arrows",
+    "layout"
   ],
   "aliases": [
     {
-      "name": "flip-vertical-2",
+      "name": "fold-vertical",
       "deprecated": true,
       "deprecationReason": "alias.name"
     }

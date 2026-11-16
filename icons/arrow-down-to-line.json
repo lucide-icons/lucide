@@ -14,8 +14,7 @@
     "download",
     "git",
     "version control",
-    "collapse",
-    "fold"
+    "$group:collapse"
   ],
   "categories": [
     "$extends:arrow-down",
