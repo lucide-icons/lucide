@@ -7,9 +7,9 @@
   "use-cases": [],
   "tags": [
     "$group:dashed",
-    "reflect",
-    "mirror",
-    "alignment"
+    "$group:reflect",
+    "alignment",
+    "centerline"
   ],
   "categories": [
     "design",
@@ -17,9 +17,14 @@
   ],
   "aliases": [
     {
-      "name": "flip-vertical",
+      "name": "flip-horizontal",
       "deprecationReason": "alias.name",
       "deprecated": true
+    },
+    {
+      "name": "square-centerline-dashed-horizontal",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
     }
   ]
 }

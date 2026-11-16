@@ -8,8 +8,7 @@
   "tags": [
     "$extends:arrow-left",
     "$group:direction-left",
-    "expand",
-    "fold",
+    "$group:expand",
     "<-|"
   ],
   "categories": [

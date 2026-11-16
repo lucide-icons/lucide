@@ -13,7 +13,7 @@
     "$group:direction-down-left",
     "$group:enter",
     "$group:layout-resize",
-    "collapse",
+    "$group:collapse",
     "exit",
     "close",
     "return",

@@ -29,7 +29,7 @@
     "data flow",
     "node editor",
     "panel",
-    "expand"
+    "$group:expand"
   ],
   "categories": [
     "$extends:square-arrow-right",

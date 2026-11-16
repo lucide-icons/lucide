@@ -9,8 +9,7 @@
     "$extends:arrow-right",
     "$group:direction-right",
     "export",
-    "expand",
-    "fold",
+    "$group:expand",
     "|->"
   ],
   "categories": [
