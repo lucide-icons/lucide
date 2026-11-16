@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "surfinzap"
+  ],
+  "use-cases": [
+    "Adjusting stroke width in vector graphics editors",
+    "Choosing brush or pen thickness in drawing apps",
+    "Setting border width of shapes in design tools"
+  ],
+  "tags": [
+    "stroke",
+    "thickness",
+    "weight",
+    "border",
+    "outline",
+    "brush size",
+    "pen size",
+    "drawing",
+    "editor"
+  ],
+  "categories": [
+    "design"
+  ]
+}
