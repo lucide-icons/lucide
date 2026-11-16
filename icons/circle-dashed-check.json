@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating approved items with pending changes",
+    "Showing published schedules with unpublished updates",
+    "Marking requests that require re-approval",
+    "Confirming completion with revisions still pending"
+  ],
+  "tags": [
+    "$extends:circle-dashed",
+    "$extends:circle-check",
+    "changes",
+    "revision",
+    "reapproval",
+    "published",
+    "schedule",
+    "assignment",
+    "request",
+    "review"
+  ],
+  "categories": [
+    "$extends:circle-dashed",
+    "notifications"
+  ]
+}

@@ -5,10 +5,12 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "connection",
     "signal",
-    "wireless"
+    "wireless",
+    "network"
   ],
   "categories": [
     "connectivity",

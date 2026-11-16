@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:square-letter-p",
+    "$group:off",
+    "no parking"
+  ],
+  "categories": [
+    "$extends:square-letter-p"
+  ],
+  "aliases": [
+    {
+      "name": "parking-square-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "square-parking-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing home folders or private directories in local and cloud storage",
+    "Storing private HR, tax, or backup records",
+    "Showing user-owned directories in multi-user systems",
+    "Organizing personal contacts or address book entries"
+  ],
+  "tags": [
+    "$extends:folder",
+    "$group:user",
+    "document",
+    "home folder",
+    "shared",
+    "access",
+    "owner"
+  ],
+  "categories": [
+    "$extends:folder",
+    "account"
+  ]
+}

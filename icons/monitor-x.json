@@ -5,21 +5,17 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "tv",
-    "screen",
-    "display",
-    "desktop",
-    "virtual machine",
-    "vm",
-    "close",
+    "$extends:monitor",
+    "$group:x",
+    "error",
+    "failed",
+    "disconnected",
     "stop",
-    "suspend",
-    "remove",
-    "delete"
+    "suspend"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

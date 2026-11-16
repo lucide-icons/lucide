@@ -6,18 +6,12 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
-    "drop",
-    "add",
-    "create",
-    "new"
+    "$extends:map-pin",
+    "$group:plus"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ]
 }

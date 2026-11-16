@@ -5,18 +5,14 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "code review",
-    "coding"
+    "$extends:message-circle",
+    "$group:code",
+    "code review"
   ],
   "categories": [
-    "development",
-    "social"
+    "$extends:message-circle",
+    "development"
   ]
 }

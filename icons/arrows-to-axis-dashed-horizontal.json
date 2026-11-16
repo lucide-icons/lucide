@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:dashed",
+    "$group:collapse"
+  ],
+  "categories": [
+    "arrows",
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "fold-vertical",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

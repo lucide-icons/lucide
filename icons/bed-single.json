@@ -4,12 +4,11 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "sleep",
-    "hotel",
-    "furniture"
+    "$extends:bed"
   ],
   "categories": [
-    "home"
+    "$extends:bed"
   ]
 }

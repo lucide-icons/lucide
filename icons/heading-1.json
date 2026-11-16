@@ -3,13 +3,13 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "h1",
-    "html",
-    "markup",
-    "markdown"
+    "$extends:letter-h",
+    "$group:digit",
+    "h1"
   ],
   "categories": [
-    "text"
+    "$extends:letter-h"
   ]
 }

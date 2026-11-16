@@ -4,11 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "add",
-    "new",
-    "increase",
-    "increment",
+    "$group:plus",
     "positive",
     "calculate",
     "toolbar",
@@ -19,16 +17,11 @@
     "sight",
     "reticule",
     "maximum",
-    "upgrade",
-    "extra",
-    "+"
+    "upgrade"
   ],
   "categories": [
     "math",
-    "tools",
     "development",
-    "text",
-    "cursors",
-    "gaming"
+    "cursors"
   ]
 }

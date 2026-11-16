@@ -1,11 +1,19 @@
 import { h, toChildArray } from 'preact';
-import defaultAttributes from './defaultAttributes';
-import type { IconNode, LucideProps } from './types';
-import { hasA11yProp } from '@lucide/shared';
+import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
+import type { LucideIconData, LucideIconNode, LucideProps } from './types';
+import { useLucideContext } from './context';
 
-interface IconComponentProps extends LucideProps {
-  iconNode: IconNode;
-}
+type IconComponentProps = LucideProps &
+  (
+    | {
+        icon: LucideIconData;
+        iconNode?: never;
+      }
+    | {
+        iconNode: LucideIconNode[];
+        icon?: never;
+      }
+  );
 
 /**
  * Lucide icon component
@@ -16,37 +24,56 @@ interface IconComponentProps extends LucideProps {
  * @param {number} props.size - The size of the icon
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
+ * @param {boolean} props.nonScalingStroke - Whether to use non scaling strokes
  * @param {string} props.class - The class name of the icon
- * @param {IconNode} props.children - The children of the icon
- * @param {IconNode} props.iconNode - The icon node of the icon
+ * @param {LucideIconNode[]} props.children - The children of the icon
+ * @param {LucideIconNode[]} props.iconNode - The icon node of the icon
  *
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const Icon = ({
-  color = 'currentColor',
-  size = 24,
-  strokeWidth = 2,
+  color,
+  size,
+  width,
+  height,
+  strokeWidth,
   absoluteStrokeWidth,
+  nonScalingStroke,
   children,
-  iconNode,
+  iconNode = [],
+  icon = {
+    node: iconNode,
+    aliases: [],
+    size: 24,
+  },
   class: classes = '',
   ...rest
-}: IconComponentProps) =>
-  h(
-    'svg',
-    {
-      ...defaultAttributes,
-      width: String(size),
-      height: size,
-      stroke: color,
-      ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth
-        ? (Number(strokeWidth) * 24) / Number(size)
-        : strokeWidth,
-      class: ['lucide', classes].join(' '),
-      ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
-      ...rest,
-    },
-    [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
-  );
+}: IconComponentProps) => {
+  const {
+    size: contextSize = 24,
+    strokeWidth: contextStrokeWidth = 2,
+    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    nonScalingStroke: contextNonScalingStroke = false,
+    color: contextColor = 'currentColor',
+    class: contextClass = '',
+  } = useLucideContext() ?? {};
+
+  const [name, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
+    color: color ?? contextColor,
+    width: width ?? size ?? contextSize,
+    height: height ?? size ?? contextSize,
+    strokeWidth: strokeWidth ?? contextStrokeWidth,
+    absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
+    nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
+    className: mergeClasses(contextClass, classes as string),
+    hasA11yProp: Boolean(children) || hasA11yProp(rest),
+    attributes: rest,
+  });
+
+  return h(name, { ...svgAttributes }, [
+    ...builtIconNode.map(([tag, attrs]) => h(tag, attrs)),
+    ...toChildArray(children),
+  ]);
+};
 
 export default Icon;

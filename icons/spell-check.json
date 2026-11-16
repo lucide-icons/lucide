@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
+    "$group:check",
     "spelling",
     "error",
     "mistake",

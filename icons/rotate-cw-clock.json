@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "gkkconan"
+  ],
+  "use-cases": [
+    "Updating content or syncing recent changes",
+    "Refreshing data in dashboards or reports",
+    "Renewing subscriptions or recurring services"
+  ],
+  "tags": [
+    "$extends:rotate-cw",
+    "$group:clock",
+    "modify",
+    "edit",
+    "sync",
+    "renew",
+    "revision",
+    "settings",
+    "adjust",
+    "upgrade",
+    "timeline",
+    "version",
+    "time machine",
+    "backup",
+    "synchronize",
+    "circular",
+    "cycle",
+    "update"
+  ],
+  "categories": [
+    "arrows",
+    "time"
+  ]
+}

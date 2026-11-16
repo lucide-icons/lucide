@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "view",
     "watch",
@@ -17,7 +18,8 @@
     "visibility",
     "vision",
     "preview",
-    "read"
+    "read",
+    "eyes"
   ],
   "categories": [
     "accessibility",

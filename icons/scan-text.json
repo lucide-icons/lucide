@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:scan",
     "recognition",
     "read",
     "translate",

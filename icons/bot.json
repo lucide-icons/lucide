@@ -3,6 +3,7 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "robot",
     "ai",
@@ -11,6 +12,7 @@
   ],
   "categories": [
     "development",
-    "social"
+    "social",
+    "ai"
   ]
 }

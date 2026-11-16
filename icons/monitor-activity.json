@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Monitoring computer performance in system diagnostics tools",
+    "Showing application health in service monitoring dashboards",
+    "Displaying network activity in administration panels",
+    "Representing patient vital signs in clinical monitoring interfaces",
+    "Tracking server uptime and resource usage in infrastructure dashboards",
+    "Displaying hardware sensor readings in device management interfaces"
+  ],
+  "tags": [
+    "$extends:monitor",
+    "$extends:activity",
+    "heartbeat",
+    "health",
+    "performance",
+    "diagnostics",
+    "metrics",
+    "telemetry",
+    "network",
+    "observability",
+    "uptime",
+    "server",
+    "infrastructure",
+    "resource usage",
+    "system status",
+    "real-time",
+    "monitoring",
+    "dashboard"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

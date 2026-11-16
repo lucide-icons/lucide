@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "tallneil",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "money",
-    "finance",
-    "pocket",
+    "$extends:wallet",
+    "wallet",
+    "cards",
+    "banking",
+    "cash",
+    "debit",
+    "transport",
     "credit",
     "purchase",
     "payment",
@@ -16,7 +24,6 @@
     "cc"
   ],
   "categories": [
-    "account",
-    "finance"
+    "$extends:wallet"
   ]
 }

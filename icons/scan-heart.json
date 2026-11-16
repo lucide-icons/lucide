@@ -4,14 +4,15 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "health",
+    "$extends:scan",
+    "$group:heart",
     "heart rate",
     "pulse",
     "monitoring",
     "healthiness",
-    "screening",
-    "dashed"
+    "screening"
   ],
   "categories": [
     "medical"

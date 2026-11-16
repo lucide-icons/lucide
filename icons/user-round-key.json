@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "mittalyashu",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:user-round",
+    "$group:key",
+    "login",
+    "roles",
+    "permissions"
+  ],
+  "categories": [
+    "$extends:user-round",
+    "security"
+  ]
+}

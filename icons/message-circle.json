@@ -7,6 +7,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -16,6 +17,7 @@
     "speech bubble"
   ],
   "categories": [
-    "social"
+    "social",
+    "communication"
   ]
 }

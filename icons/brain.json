@@ -6,6 +6,7 @@
     "it-is-not",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "medical",
     "mind",
@@ -20,10 +21,17 @@
     "thought",
     "insight",
     "intelligent",
-    "smart"
+    "smart",
+    "deep learning",
+    "machine learning",
+    "computing",
+    "skill",
+    "skills",
+    "expertise"
   ],
   "categories": [
     "medical",
-    "science"
+    "science",
+    "ai"
   ]
 }

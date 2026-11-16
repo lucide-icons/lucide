@@ -4,20 +4,18 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "forward",
-    "direction",
-    "north",
+    "$extends:arrow-up",
+    "$group:direction-up",
     "upload",
     "git",
     "version control",
     "push",
-    "expand",
-    "fold",
-    "vertical"
+    "$group:expand"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-up",
     "files",
     "development"
   ]

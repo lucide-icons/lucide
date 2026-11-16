@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:dashed",
     "rectangle",
     "aspect ratio",
     "1:1",
