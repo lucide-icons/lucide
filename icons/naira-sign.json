@@ -3,16 +3,19 @@
   "contributors": [
     "adebimpeomolaso"
   ],
+  "use-cases": [
+    "Showing product prices in NGN",
+    "Selecting NGN in multi-currency interfaces",
+    "Showing NGN exchange rates in currency converters",
+    "Indicating NGN amounts in invoices and payments"
+  ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
+    "$group:currency",
     "nigeria",
     "nigerian",
-    "naira"
+    "ngn"
   ],
   "categories": [
     "finance"
   ]
 }
-
