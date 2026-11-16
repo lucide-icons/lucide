@@ -26,4 +26,12 @@ describe('mergeClasses', () => {
     const classes = mergeClasses('lucide', ' ', 'lucide-circle');
     expect(classes).toBe('lucide lucide-circle');
   });
+  it('deduplicates across multi-class and whitespace-padded strings', async () => {
+    const classes = mergeClasses('lucide lucide-circle', 'lucide', 'lucide-circle custom-class');
+    expect(classes).toBe('lucide lucide-circle custom-class');
+  });
+  it('handles strings with surrounding whitespace and trailing duplicate', async () => {
+    const classes = mergeClasses('lucide ', 'lucide');
+    expect(classes).toBe('lucide');
+  });
 });
