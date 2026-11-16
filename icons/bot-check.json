@@ -12,7 +12,11 @@
   ],
   "tags": [
     "$extends:bot",
-    "$group:check"
+    "$group:check",
+    "agent",
+    "chatbot",
+    "enabled",
+    "connected"
   ],
   "categories": [
     "$extends:bot"

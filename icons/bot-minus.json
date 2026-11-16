@@ -12,7 +12,11 @@
   ],
   "tags": [
     "$extends:bot",
-    "$group:minus"
+    "$group:minus",
+    "agent",
+    "chatbot",
+    "integration",
+    "deactivate"
   ],
   "categories": [
     "$extends:bot"
