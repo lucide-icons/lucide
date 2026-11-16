@@ -13,7 +13,14 @@
     "converging",
     "trail",
     "path",
-    "route"
+    "route",
+    "analytics",
+    "timeline",
+    "waypoint",
+    "milestone",
+    "tracking",
+    "trend",
+    "sequence"
   ],
   "categories": [
     "development",
