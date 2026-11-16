@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "roygommer"
+    "roygommer",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "airplane",
     "plane",
@@ -17,11 +19,6 @@
     "small-airplane"
   ],
   "categories": [
-    "cessna",
-    "general-aviation",
-    "sky",
-    "flying",
-    "adventure",
-    "aircraft"
+    "transportation"
   ]
 }
