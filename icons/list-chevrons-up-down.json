@@ -16,8 +16,8 @@
     "$group:direction-up",
     "$group:direction-down",
     "items",
-    "collapse",
-    "expand",
+    "$group:collapse",
+    "$group:expand",
     "details",
     "disclosure",
     "show",
@@ -25,9 +25,7 @@
     "toggle",
     "accordion",
     "more",
-    "less",
-    "fold",
-    "unfold"
+    "less"
   ],
   "categories": [
     "$extends:list"

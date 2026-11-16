@@ -9,8 +9,7 @@
   "tags": [
     "$group:direction-down",
     "$group:direction-up",
-    "collapse",
-    "fold"
+    "$group:collapse"
   ],
   "categories": [
     "arrows"
