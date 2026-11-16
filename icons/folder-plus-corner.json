@@ -1,15 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "nicolasakf"
+    "$extends:folder",
+    "nicolasakf",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Creating a new folder in file managers and cloud storage apps",
+    "Adding files or items to an existing folder or collection",
+    "Starting a new project or workspace in productivity tools"
   ],
   "tags": [
-    "directory",
-    "add",
-    "create",
-    "new"
+    "$extends:folder",
+    "$group:plus"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }
