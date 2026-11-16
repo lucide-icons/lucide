@@ -40,7 +40,9 @@ function generateIconFiles({
 
   const writeIconFiles = icons.map(async (iconName) => {
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
-    const componentName = toPascalCase(iconName);
+    // Hermes treats Infinity as a non-shadowable global. The generated index still
+    // exports this default value under the public `Infinity` name.
+    const componentName = iconName === 'infinity' ? 'InfinityIcon' : toPascalCase(iconName);
 
     const children: IconNode = iconNodes[iconName].children.map(({ name, attributes }) => [
       name,
