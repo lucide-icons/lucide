@@ -13,8 +13,6 @@
   "tags": [
     "$extends:bot",
     "$group:minus",
-    "agent",
-    "chatbot",
     "integration",
     "deactivate"
   ],

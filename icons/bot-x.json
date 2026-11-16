@@ -13,11 +13,6 @@
   "tags": [
     "$extends:bot",
     "$group:x",
-    "agent",
-    "disabled",
-    "failed",
-    "error",
-    "unavailable",
     "disconnected",
     "offline",
     "integration"
