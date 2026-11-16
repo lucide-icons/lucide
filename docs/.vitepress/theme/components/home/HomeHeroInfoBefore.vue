@@ -22,7 +22,7 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
   justify-content: center;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .info {
     justify-content: flex-start;
   }

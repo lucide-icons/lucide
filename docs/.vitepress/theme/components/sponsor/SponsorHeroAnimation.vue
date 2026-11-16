@@ -240,7 +240,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   overflow: hidden;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .sponsor-hero-animation {
     max-width: 860px;
   }

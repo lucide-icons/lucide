@@ -115,14 +115,14 @@ function isEditingContent(event: KeyboardEvent): boolean {
 
 <style>
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .VPNavBarSearch {
     flex-grow: 1;
     padding-left: 0px;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .VPNavBarSearch {
     padding-left: 0px;
   }
@@ -145,6 +145,9 @@ function isEditingContent(event: KeyboardEvent): boolean {
 [class*='DocSearch'] {
   --docsearch-primary-color: var(--vp-c-brand-1);
   --docsearch-highlight-color: var(--docsearch-primary-color);
+  /* DocSearch 4 fills the selected hit with this; VitePress points it at the (indigo) brand-soft */
+  --docsearch-hit-highlight-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
+  --docsearch-soft-primary-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
   --docsearch-text-color: var(--vp-c-text-1);
   --docsearch-muted-color: var(--vp-c-text-2);
   --docsearch-searchbox-shadow: none;
@@ -170,8 +173,15 @@ function isEditingContent(event: KeyboardEvent): boolean {
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.DocSearch-Form {
+/* DocSearch 4 turned the search field into a full-width header; inset it again like before.
+   Its CSS is loaded lazily after ours, hence the extra .DocSearch-Modal for specificity. */
+.DocSearch-Modal .DocSearch-SearchBar {
+  padding: var(--docsearch-spacing);
+}
+
+.DocSearch-Modal .DocSearch-Form {
   border: 1px solid var(--vp-c-brand-1);
+  border-radius: 4px;
   background-color: var(--vp-c-white);
 }
 

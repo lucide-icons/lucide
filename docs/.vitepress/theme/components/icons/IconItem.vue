@@ -27,7 +27,7 @@ const props = defineProps<{
 const emit = defineEmits(['setActiveIcon']);
 
 const { go } = useRouter();
-const showOverlay = useMediaQuery('(min-width: 860px)');
+const showOverlay = useMediaQuery('(min-width: 53.75rem)');
 const { animate, confetti, confettiText } = useConfetti();
 
 const icon = computed(() => {

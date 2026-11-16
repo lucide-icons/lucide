@@ -246,7 +246,7 @@ const selected = defineModel<{ name: string; value: string; icon?: string; iconD
   width: 1.25rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .select-button,
   .select-options {
     font-size: 0.875rem;

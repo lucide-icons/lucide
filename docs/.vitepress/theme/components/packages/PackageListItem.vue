@@ -57,7 +57,7 @@ const props = defineProps<{
   align-items: flex-start;
   gap: 24px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30rem) {
   .package-header {
     flex-direction: row;
   }

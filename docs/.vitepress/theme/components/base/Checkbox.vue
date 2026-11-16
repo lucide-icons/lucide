@@ -75,6 +75,7 @@ const model = computed({
   appearance: none;
   width: 16px;
   height: 16px;
+  margin: 3px 3px 3px 4px;
   cursor: pointer;
   border: 1px solid var(--vp-input-border-color);
   background-color: var(--vp-input-switch-bg-color);

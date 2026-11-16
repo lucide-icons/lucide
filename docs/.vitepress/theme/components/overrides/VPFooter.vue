@@ -131,7 +131,7 @@ const links = computed(() => [
   justify-content: center;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: 72rem) {
   .VPFooter {
     padding: 32px;
   }

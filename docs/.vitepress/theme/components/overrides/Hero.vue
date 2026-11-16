@@ -351,7 +351,7 @@ const opacity = computed(() => {
   justify-content: center;
 } */
 /*
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
 .VPHomeHero :deep(.actions) {
   justify-content: center;
 }
