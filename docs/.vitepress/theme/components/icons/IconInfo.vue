@@ -75,7 +75,10 @@ function onSeeInAction() {
         Deprecated
       </Badge>
     </div>
-    <IconTags :tags="props.icon.tags" />
+    <IconTags
+      :iconName="icon.name"
+      :tags="icon.tags"
+    />
     <div class="group">
       <Badge
         v-for="category in icon.categories"

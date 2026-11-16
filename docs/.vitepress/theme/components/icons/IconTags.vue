@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { withBase } from 'vitepress';
 import { computed, ref, watch } from 'vue';
+import { useTagSearch } from '../../composables/useTagSearch';
+import { track } from '../../utils/openpanel';
 
 const MAX_VISIBLE_TAGS = 5;
 
 const props = defineProps<{
+  iconName: string;
   tags?: string[];
 }>();
 
@@ -16,6 +20,24 @@ const showAll = computed(() => expanded.value || hiddenCount.value === 0);
 watch(tags, () => {
   expanded.value = false;
 });
+
+const tagSearch = useTagSearch();
+
+function tagHref(tag: string) {
+  return withBase(`/icons/?search=${encodeURIComponent(tag)}`);
+}
+
+function onTagClick(event: MouseEvent, tag: string) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  track('icon_tag_click', { icon: props.iconName, tag });
+
+  if (!tagSearch) return;
+
+  event.preventDefault();
+  // detail is 0 when the link was activated from the keyboard
+  tagSearch(tag, { focusInput: event.detail === 0 });
+}
 </script>
 
 <template>
@@ -30,7 +52,16 @@ watch(tags, () => {
       :key="tag"
       class="tag"
     >
-      {{ tag }}
+      <!-- VitePress's router handles link clicks in the capture phase and skips links that have a target -->
+      <a
+        :href="tagHref(tag)"
+        :target="tagSearch ? '_self' : undefined"
+        class="tag-link"
+        :title="`Search icons for “${tag}”`"
+        @click="onTagClick($event, tag)"
+      >
+        {{ tag }}
+      </a>
     </li>
     <li
       v-if="!showAll"
@@ -53,7 +84,7 @@ watch(tags, () => {
   font-size: 16px;
   color: var(--vp-c-text-2);
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1.5;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -73,6 +104,24 @@ watch(tags, () => {
   white-space: nowrap;
 }
 
+.tag-link {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.25s;
+}
+
+.tag-link:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tag-link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
 .tag:first-child {
   list-style: none;
   margin-left: 0;
@@ -88,6 +137,7 @@ watch(tags, () => {
   font: inherit;
   color: var(--vp-c-text-2);
   font-size: 12px;
+  line-height: 24px;
   padding: 0 8px;
   margin-left: -4px;
   border-radius: 16px;
