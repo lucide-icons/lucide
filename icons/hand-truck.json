@@ -25,9 +25,16 @@
     "inventory",
     "tracking",
     "order",
-    "product"
+    "product",
+    "barrow",
+    "cargo",
+    "freight",
+    "hauling",
+    "loading",
+    "unloading"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "shopping"
   ]
 }
