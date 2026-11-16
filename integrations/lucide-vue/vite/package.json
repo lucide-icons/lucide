@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@lucide/vue": "workspace:*",
-    "vue": "3.5.44"
+    "vue": "3.5.45"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.5",
     "@types/node": "^26.4.1",
-    "@vitejs/plugin-vue": "^6.0.10",
+    "@vitejs/plugin-vue": "^6.0.11",
     "@vitest/browser-playwright": "5.0.5",
     "@vue/tsconfig": "^0.9.1",
     "playwright": "1.64.1",

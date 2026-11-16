@@ -50,11 +50,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
-    "@astrojs/ts-plugin": "^1.10.12",
+    "@astrojs/ts-plugin": "^1.11.0",
     "@lucide/build-icons": "workspace:*",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
-    "astro": "^7.4.2",
+    "astro": "^7.4.11",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.14",
     "prettier": "3.9.6",

@@ -42,6 +42,7 @@
   ],
   "categories": [
     "$extends:cpu",
-    "development"
+    "development",
+    "ai"
   ]
 }

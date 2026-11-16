@@ -15,7 +15,7 @@
     "back",
     "reverse",
     "<-",
-    "collapse"
+    "$group:collapse"
   ],
   "categories": [
     "$extends:square-arrow-left"
