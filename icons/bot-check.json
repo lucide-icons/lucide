@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Marking an agent as enabled in agent management interfaces",
+    "Indicating a task completed by an AI agent",
+    "Marking an AI assistant as active or connected",
+    "Showing a verified bot account in chat apps"
+  ],
+  "tags": [
+    "$extends:bot",
+    "$group:check"
+  ],
+  "categories": [
+    "$extends:bot"
+  ]
+}

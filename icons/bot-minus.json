@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Removing an agent in agent management interfaces",
+    "Removing an AI assistant or chatbot",
+    "Removing a bot from a workspace or chat channel",
+    "Disabling an AI agent integration"
+  ],
+  "tags": [
+    "$extends:bot",
+    "$group:minus"
+  ],
+  "categories": [
+    "$extends:bot"
+  ]
+}
