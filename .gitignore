@@ -16,6 +16,7 @@ coverage
 stats
 *.log
 *.tsbuildinfo
+packages/angular/.angular
 integrations/**/.react-router
 integrations/**/.vitest-attachments
 integrations/**/__screenshots__

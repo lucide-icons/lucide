@@ -117,8 +117,6 @@ function scrollTrack(direction: 1 | -1) {
 .tiers {
   padding-top: 96px;
   padding-bottom: 48px;
-  /* The track bleeds to the right edge of the viewport. */
-  overflow-x: clip;
 }
 
 .tiers-header {
@@ -165,7 +163,6 @@ function scrollTrack(direction: 1 | -1) {
 
 .track-wrapper {
   position: relative;
-  margin-right: min(-24px, calc((1152px - 100vw) / 2));
 }
 
 .track {
@@ -178,10 +175,14 @@ function scrollTrack(direction: 1 | -1) {
   padding-bottom: 12px;
   padding-right: 24px;
   scroll-padding-right: 24px;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scroll-snap-align: center;
   scroll-padding-left: 24px;
   scroll-padding-right: 24px;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
 }
 
 .track:focus-visible {

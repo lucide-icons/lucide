@@ -2,7 +2,6 @@
 title: What is Lucide?
 description: An introduction to Lucide, an open-source icon library that provides 1600+ vector (svg) files for displaying icons and symbols in digital and non-digital projects.
 nextPage:
-  - comparison
   - installation
 ---
 

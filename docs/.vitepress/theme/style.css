@@ -385,6 +385,12 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
+@media (min-width: 960px) {
+  .VPSidebar {
+    padding-right: 24px !important;
+  }
+}
+
 /* Links in the page text: a faint underline shows they are links, and on hover a solid
    underline draws in from the left. Drawn with backgrounds so it also follows links that
    wrap onto a second line. */

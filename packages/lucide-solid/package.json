@@ -68,7 +68,7 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.10",
+    "@babel/core": "^8.1.2",
     "@babel/preset-env": "^8.0.7",
     "@babel/preset-typescript": "^8.0.7",
     "@lucide/build-icons": "workspace:*",
@@ -82,10 +82,10 @@
     "jest-serializer-html": "^7.1.0",
     "rollup": "^4.65.1",
     "rollup-plugin-dts": "^6.5.1",
-    "solid-js": "^1.9.15",
+    "solid-js": "^1.9.18",
     "typescript": "^6.0.3",
     "vite": "^8.3.5",
-    "vite-plugin-solid": "^2.11.15"
+    "vite-plugin-solid": "^2.11.16"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"

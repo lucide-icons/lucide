@@ -13,7 +13,11 @@
     "automation",
     "devops",
     "node",
-    "connection"
+    "connection",
+    "ci/cd",
+    "cicd",
+    "pipeline",
+    "deploy"
   ],
   "categories": [
     "development"

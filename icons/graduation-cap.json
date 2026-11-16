@@ -20,7 +20,10 @@
     "diploma",
     "bachelor's",
     "master's",
-    "doctorate"
+    "doctorate",
+    "skill",
+    "skills",
+    "expertise"
   ],
   "categories": [
     "buildings"

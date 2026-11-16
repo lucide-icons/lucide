@@ -8,7 +8,13 @@
     "wave",
     "move",
     "mouse",
-    "grab"
+    "grab",
+    "welcome",
+    "hello",
+    "hi",
+    "greeting",
+    "goodbye",
+    "bye"
   ],
   "categories": [
     "cursors",

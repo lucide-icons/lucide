@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:square-arrow-up",
+    "6teloiv"
+  ],
+  "use-cases": [
+    "Uploading content from a device",
+    "Sharing content with another app or person",
+    "Expanding a pane or grid cell past its top edge"
+  ],
+  "tags": [
+    "$group:direction-up",
+    "$group:exit",
+    "upload",
+    "share",
+    "external link",
+    "pop out",
+    "open in new window"
+  ],
+  "categories": [
+    "$extends:square-arrow-up",
+    "files",
+    "social"
+  ]
+}

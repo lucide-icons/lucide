@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Applying beveled corners to strokes in vector editors"
+  ],
+  "tags": [
+    "$group:line",
+    "edge",
+    "intersection",
+    "angle",
+    "chamfer",
+    "trim",
+    "flat",
+    "diagonal"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}

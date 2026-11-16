@@ -13,6 +13,7 @@ import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExte
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
 import NavBarSponsorButton from './layouts/NavBarSponsorButton.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
+import Toaster from './components/base/Toaster.vue';
 import { setupTracking } from './utils/openpanel';
 import trackUnderlineDirection from './utils/underlineDirection';
 
@@ -25,6 +26,7 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
+      'layout-bottom': () => h(Toaster),
       'nav-bar-content-after': () => h(NavBarSponsorButton),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),

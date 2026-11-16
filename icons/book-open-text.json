@@ -6,7 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:book-open"
+    "$extends:book-open",
+    "docs",
+    "wiki",
+    "knowledge base"
   ],
   "categories": [
     "text",

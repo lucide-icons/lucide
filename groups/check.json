@@ -16,6 +16,9 @@
     "valid",
     "ticked",
     "task",
-    "todo"
+    "todo",
+    "selected",
+    "okay",
+    "ok"
   ]
 }
