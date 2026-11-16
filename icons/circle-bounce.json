@@ -16,7 +16,12 @@
     "physics",
     "animation",
     "easing",
-    "analytics"
+    "analytics",
+    "collision",
+    "impact",
+    "curve",
+    "arc",
+    "kinematics"
   ],
   "categories": [
     "science",
