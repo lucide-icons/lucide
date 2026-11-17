@@ -4,20 +4,15 @@
  * @param {array} classes
  * @returns {string} A string of classes
  */
-export const mergeClasses = <ClassType = string | undefined | null>(...classes: ClassType[]) => {
-  const seen = new Set<string>();
-  const out: string[] = [];
+export const mergeClasses = (...classes: (string | undefined | null)[]) => {
+  const tokens = new Set<string>();
 
   for (const cls of classes) {
-    if (!cls || typeof cls !== 'string') continue;
-    const tokens = cls.trim().split(/\s+/);
-    for (const token of tokens) {
-      if (token && !seen.has(token)) {
-        seen.add(token);
-        out.push(token);
-      }
+    if (typeof cls !== 'string') continue;
+    for (const token of cls.split(/\s+/)) {
+      if (token) tokens.add(token);
     }
   }
 
-  return out.join(' ');
+  return [...tokens].join(' ');
 };

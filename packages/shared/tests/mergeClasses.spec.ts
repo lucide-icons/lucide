@@ -34,4 +34,13 @@ describe('mergeClasses', () => {
     const classes = mergeClasses('lucide ', 'lucide');
     expect(classes).toBe('lucide');
   });
+  it('deduplicates tokens within a single string in first-seen order', () => {
+    expect(mergeClasses('custom lucide custom', 'lucide other custom')).toBe('custom lucide other');
+  });
+  it('splits tabs and newlines into class tokens', () => {
+    expect(mergeClasses('lucide\tcustom\nlucide', '\r\nother\tcustom')).toBe('lucide custom other');
+  });
+  it('ignores null and whitespace-only values', () => {
+    expect(mergeClasses(null, undefined, '', ' \t\n ')).toBe('');
+  });
 });
