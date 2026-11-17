@@ -13,8 +13,7 @@
     "keyboard",
     "mac",
     "indent",
-    "collapse",
-    "fold",
+    "$group:collapse",
     "->|"
   ],
   "categories": [

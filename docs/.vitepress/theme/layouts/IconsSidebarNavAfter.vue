@@ -1,18 +1,21 @@
 <script setup>
-import { useData } from 'vitepress'
+import { computed } from 'vue';
+import { useData } from 'vitepress';
+import SidebarIconCustomizer from '../components/icons/SidebarIconCustomizer.vue';
+import ExternalLibrarySelect from '../components/icons/SidebarExternalLibrarySelect.vue';
+import CategoryList from '../components/icons/CategoryList.vue';
+import KeyboardShortcuts from '../components/icons/KeyboardShortcuts.vue';
 
-import CategoryList from '../components/icons/CategoryList.vue'
-import SidebarIconCustomizer from '../components/icons/SidebarIconCustomizer.vue'
-import ExternalLibrarySelect from '../components/icons/SidebarExternalLibrarySelect.vue'
+const { page } = useData();
 
-const { page } = useData()
-
+const isIconsPage = computed(() => page.value?.relativePath?.startsWith?.('icons'));
 </script>
 
 <template>
-  <div>
-    <SidebarIconCustomizer v-if="page?.relativePath?.startsWith?.('icons')"/>
-    <ExternalLibrarySelect v-if="page?.relativePath?.startsWith?.('icons')"/>
-    <CategoryList v-if="page?.relativePath?.startsWith?.('icons')"/>
+  <div v-if="isIconsPage">
+    <SidebarIconCustomizer />
+    <ExternalLibrarySelect />
+    <CategoryList />
+    <KeyboardShortcuts />
   </div>
 </template>

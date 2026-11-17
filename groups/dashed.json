@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Style: drawn with a dashed or dotted line",
+  "tags": [
+    "dashed",
+    "dotted",
+    "broken line"
+  ]
+}

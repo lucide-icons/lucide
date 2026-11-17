@@ -48,12 +48,12 @@ describe('getClassNames', () => {
     expect(attrs).toEqual(['item1', 'item2', 'item3']);
   });
 
-  it('should return string when given a string directly', () => {
-    expect(getClassNames('custom-class')).toBe('custom-class');
+  it('should return array of class names when given a string directly', () => {
+    expect(getClassNames('custom-class foo-bar')).toEqual(['custom-class', 'foo-bar']);
   });
 
-  it('should return empty string when no class property exists', () => {
-    expect(getClassNames({})).toBe('');
+  it('should return empty array when no class property exists', () => {
+    expect(getClassNames({})).toEqual([]);
   });
 });
 
@@ -113,6 +113,22 @@ describe('replaceElement', () => {
     expect(svg?.getAttribute('aria-hidden')).toBe('true');
     expect(svg?.classList.contains('lucide-volume-2')).toBe(true);
     expect(svg?.classList.contains('custom-icon')).toBe(true);
+  });
+
+  it('should correctly merge classes when attrs contains custom class strings', () => {
+    const container = document.createElement('div');
+    const element = document.createElement('i');
+    element.setAttribute('data-lucide', 'volume-2');
+    container.appendChild(element);
+
+    replaceElement(element, {
+      nameAttr: 'data-lucide',
+      icons: { Volume2: testIconNode },
+      attrs: { class: 'custom-foo custom-bar' },
+    });
+
+    const svg = container.querySelector('svg');
+    expect(svg?.getAttribute('class')).toBe('lucide lucide-volume-2 custom-foo custom-bar');
   });
 
   it('should not add aria-hidden if element has accessibility attributes', () => {

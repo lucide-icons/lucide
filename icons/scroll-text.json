@@ -6,7 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:scroll"
+    "$extends:scroll",
+    "changelog",
+    "release notes"
   ],
   "categories": [
     "$extends:scroll"

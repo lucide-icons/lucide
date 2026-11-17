@@ -19,6 +19,13 @@
     "cross",
     "times",
     "ex",
-    "×"
+    "×",
+    "deny",
+    "decline",
+    "refuse",
+    "disabled",
+    "failed",
+    "unavailable",
+    "error"
   ]
 }

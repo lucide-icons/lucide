@@ -11,7 +11,11 @@
     "unlimited",
     "forever",
     "loop",
-    "math"
+    "math",
+    "ci/cd",
+    "cicd",
+    "devops",
+    "pipeline"
   ],
   "categories": [
     "multimedia",

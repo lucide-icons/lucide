@@ -9,12 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "selection",
     "square",
     "rectangular",
     "marquee",
     "tool",
-    "dashed",
     "box",
     "region",
     "area",

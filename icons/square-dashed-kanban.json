@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "projects",
     "manage",
     "overview",

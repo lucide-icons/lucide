@@ -89,6 +89,7 @@ function onReset() {
     <InputField
       id="non-scaling-stroke"
       label="Non-scaling stroke"
+      class="non-scaling-stroke-switch"
     >
       <Switch
         id="non-scaling-stroke-switch"

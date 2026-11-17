@@ -18,7 +18,7 @@
     "screen",
     "projection",
     "presentation",
-    "expand",
+    "$group:expand",
     "cell"
   ],
   "categories": [

@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:emoticon",
     "happy",
     "happiness",
     "good",
@@ -14,9 +15,7 @@
     "pleasure",
     "good cheer",
     "humour",
-    "funny",
-    "emoji",
-    "emotion"
+    "funny"
   ],
   "categories": [
     "emoji"

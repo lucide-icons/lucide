@@ -9,7 +9,10 @@
     "supermarket",
     "stand",
     "boutique",
-    "building"
+    "building",
+    "sell",
+    "selling",
+    "merchant"
   ],
   "categories": [
     "buildings",

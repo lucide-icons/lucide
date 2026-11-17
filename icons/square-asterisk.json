@@ -13,7 +13,9 @@
     "multiplication",
     "glob pattern",
     "wildcard",
-    "*"
+    "*",
+    "required",
+    "mandatory"
   ],
   "categories": [
     "text",
