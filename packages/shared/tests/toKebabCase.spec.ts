@@ -27,7 +27,11 @@ describe('toKebabCase', () => {
     expect(toKebabCase('AArrowUp')).toBe('a-arrow-up');
     expect(toKebabCase('ALargeSmall')).toBe('a-large-small');
     expect(toKebabCase('XLineTop')).toBe('x-line-top');
-    expect(toKebabCase('Grid3X3')).toBe('grid3-x3');
+    expect(toKebabCase('Grid3X3')).toBe('grid-3x3');
+    expect(toKebabCase('Grid3x3')).toBe('grid-3x3');
+    expect(toKebabCase('Grid2X2Plus')).toBe('grid-2x2-plus');
+    expect(toKebabCase('ArrowDownAZ')).toBe('arrow-down-a-z');
+    expect(toKebabCase('ArrowDown01')).toBe('arrow-down-01');
   });
 
   it('should handle empty string', () => {
