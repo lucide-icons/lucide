@@ -1,8 +1,9 @@
 import { useFetch } from '@vueuse/core';
+import getBaseUrl from '../utils/getBaseUrl';
 
 const useFetchCategories = () =>
   useFetch<Record<string, string[]>>(
-    `${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/categories`,
+    `${getBaseUrl()}/api/categories`,
     {
       immediate:
         typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('search'),

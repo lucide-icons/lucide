@@ -6,6 +6,7 @@ import Input from '../base/Input.vue';
 import { track } from '../../utils/openpanel';
 import type { WaitlistProduct } from './products';
 import './waitlist.css';
+import getBaseUrl from '../../utils/getBaseUrl.ts';
 
 const props = defineProps<{
   product: WaitlistProduct;
@@ -31,7 +32,7 @@ async function onSubmit() {
   hasEmailError.value = false;
 
   try {
-    const response = await fetch('/api/waitlist', {
+    const response = await fetch(`${getBaseUrl()}/api/waitlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

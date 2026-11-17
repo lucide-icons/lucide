@@ -364,6 +364,9 @@ watch(inView, (isInView) => {
   .connector {
     height: 180px;
   }
+  .diagram {
+    transform: scale(1);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

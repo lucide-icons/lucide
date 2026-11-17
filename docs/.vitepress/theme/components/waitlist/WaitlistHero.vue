@@ -61,6 +61,8 @@ const config = computed(() => waitlistProducts[props.product]);
   padding: 4px 8px;
   line-height: 24px;
   display: none;
+  background-color: var(--vp-c-green-soft);
+  color: var(--vp-c-green-1);
 }
 
 .title {
