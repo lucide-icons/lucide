@@ -8,6 +8,10 @@
     "title": "Accounts & access"
   },
   {
+    "name": "ai",
+    "title": "AI"
+  },
+  {
     "name": "animals",
     "title": "Animals"
   },
@@ -48,6 +52,10 @@
     "title": "Devices"
   },
   {
+    "name": "education",
+    "title": "Education"
+  },
+  {
     "name": "emoji",
     "title": "Emoji"
   },
@@ -78,6 +86,10 @@
   {
     "name": "letters-digits",
     "title": "Letters & digits"
+  },
+  {
+    "name": "logistics",
+    "title": "Logistics"
   },
   {
     "name": "mail",
@@ -118,10 +130,6 @@
   {
     "name": "science",
     "title": "Science"
-  },
-  {
-    "name": "seasons",
-    "title": "Seasons"
   },
   {
     "name": "security",

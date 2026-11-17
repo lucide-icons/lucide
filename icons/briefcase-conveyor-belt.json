@@ -14,6 +14,7 @@
     "carousel"
   ],
   "categories": [
-    "$extends:briefcase"
+    "$extends:briefcase",
+    "logistics"
   ]
 }

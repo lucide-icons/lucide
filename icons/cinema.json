@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tectonicpluto"
+  ],
+  "use-cases": [
+    "Finding movie theaters and show times in ticketing apps",
+    "Indicating cinema mode in streaming apps",
+    "Browsing movies and theatrical releases on streaming platforms",
+    "Filtering cinema-related content in editorial platforms"
+  ],
+  "tags": [
+    "movie",
+    "theater",
+    "theatre",
+    "screen",
+    "projector",
+    "seats",
+    "film",
+    "watching",
+    "streaming",
+    "entertainment",
+    "auditorium",
+    "show times",
+    "tickets",
+    "venue"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
