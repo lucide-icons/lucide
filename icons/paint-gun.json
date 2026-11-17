@@ -8,7 +8,7 @@
   "use-cases": [
     "Indicating spray painting or coating equipment",
     "Selecting paint gun tool in home improvement or auto repair apps",
-    "DIY workshop or finishing tools"
+    "Selecting spray-painting equipment from digital tool palettes"
   ],
   "tags": [
     "spray",
@@ -19,7 +19,16 @@
     "diy",
     "automotive",
     "finishing",
-    "coating"
+    "coating",
+    "color",
+    "colour",
+    "painting",
+    "sprayer",
+    "spraying",
+    "varnish",
+    "lacquer",
+    "enamel",
+    "pneumatic"
   ],
   "categories": [
     "tools",
