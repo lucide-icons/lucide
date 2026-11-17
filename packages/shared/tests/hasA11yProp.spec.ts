@@ -15,6 +15,14 @@ describe('hasA11yProp', () => {
     expect(hasA11yProp({ title: 'Icon' })).toBe(true);
   });
 
+  it('returns true if props contain React Native accessibility attributes', () => {
+    expect(hasA11yProp({ accessibilityLabel: 'Close' })).toBe(true);
+    expect(hasA11yProp({ accessibilityHint: 'Closes dialog' })).toBe(true);
+    expect(hasA11yProp({ accessibilityRole: 'button' })).toBe(true);
+    expect(hasA11yProp({ accessible: true })).toBe(true);
+    expect(hasA11yProp({ accessibilityState: { selected: true } })).toBe(true);
+  });
+
   it('returns false if props do not contain any a11y attributes', () => {
     expect(hasA11yProp({ className: 'foo', id: 'bar' })).toBe(false);
     expect(hasA11yProp({})).toBe(false);

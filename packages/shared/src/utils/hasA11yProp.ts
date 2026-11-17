@@ -12,7 +12,11 @@ export const hasA11yProp = (props?: Record<string, unknown> | null): boolean => 
   for (const prop in props) {
     if (
       Object.prototype.hasOwnProperty.call(props, prop) &&
-      (prop.startsWith('aria-') || prop === 'role' || prop === 'title') &&
+      (prop.startsWith('aria-') ||
+        prop.startsWith('accessibility') ||
+        prop === 'accessible' ||
+        prop === 'role' ||
+        prop === 'title') &&
       props[prop] != null
     ) {
       return true;
