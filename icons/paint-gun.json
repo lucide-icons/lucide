@@ -1,7 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ljzapata",
     "ericfennis",
     "abdul-karim-mia"
   ],
@@ -31,8 +30,6 @@
     "pneumatic"
   ],
   "categories": [
-    "tools",
-    "home",
-    "design"
+    "tools"
   ]
 }
