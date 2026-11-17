@@ -22,11 +22,12 @@ describe('toKebabCase', () => {
     expect(toKebabCase('word')).toBe('word');
   });
 
-  it('should handle consecutive capital letters such as single-letter icon prefixes', () => {
+  it('should handle consecutive capital letters such as single-letter icon prefixes and mixed numbers', () => {
     expect(toKebabCase('AArrowDown')).toBe('a-arrow-down');
     expect(toKebabCase('AArrowUp')).toBe('a-arrow-up');
     expect(toKebabCase('ALargeSmall')).toBe('a-large-small');
     expect(toKebabCase('XLineTop')).toBe('x-line-top');
+    expect(toKebabCase('Grid3X3')).toBe('grid3-x3');
   });
 
   it('should handle empty string', () => {
