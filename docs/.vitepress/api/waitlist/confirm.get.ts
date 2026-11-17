@@ -66,5 +66,9 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, confirmedPageUrl(signup.product, 'error'), 302);
   }
 
-  return sendRedirect(event, confirmedPageUrl(signup.product, undefined, { signup, contactId }), 302);
+  return sendRedirect(
+    event,
+    confirmedPageUrl(signup.product, undefined, { signup, contactId }),
+    302,
+  );
 });

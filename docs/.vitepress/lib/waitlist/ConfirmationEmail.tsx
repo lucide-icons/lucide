@@ -60,8 +60,8 @@ export default function ConfirmationEmail({ productName, confirmUrl }: Confirmat
         <Container style={styles.container}>
           <Heading style={styles.heading}>Confirm your spot on the waitlist</Heading>
           <Text style={styles.text}>
-            Thanks for your interest in {productName}. Click the button below to confirm your
-            email, and we'll send you launch updates for {productName} only.
+            Thanks for your interest in {productName}. Click the button below to confirm your email,
+            and we'll send you launch updates for {productName} only.
           </Text>
           <Button
             href={confirmUrl}
@@ -80,8 +80,8 @@ export default function ConfirmationEmail({ productName, confirmUrl }: Confirmat
           </Text>
           <Hr style={styles.hr} />
           <Text style={styles.footer}>
-            The link expires in 7 days. If you didn't sign up, ignore this email and you won't
-            hear from us again.{' '}
+            The link expires in 7 days. If you didn't sign up, ignore this email and you won't hear
+            from us again.{' '}
             <Link
               href="https://lucide.dev/privacy"
               style={{ color: colors.muted }}

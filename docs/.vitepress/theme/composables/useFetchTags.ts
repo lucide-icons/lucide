@@ -2,12 +2,9 @@ import { useFetch } from '@vueuse/core';
 import getBaseUrl from '../utils/getBaseUrl';
 
 const useFetchTags = () =>
-  useFetch<Record<string, string[]>>(
-    `${getBaseUrl()}/api/tags`,
-    {
-      immediate:
-        typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('search'),
-    },
-  ).json();
+  useFetch<Record<string, string[]>>(`${getBaseUrl()}/api/tags`, {
+    immediate:
+      typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('search'),
+  }).json();
 
 export default useFetchTags;
