@@ -4,5 +4,5 @@
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = (string: string) =>
-  string?.replace(/(?!^)[A-Z]/g, '-$&').toLowerCase();
+export const toKebabCase = (value: string) =>
+  value.match(/\d+[xX]\d+|[A-Z]?[a-z]+|[A-Z]|\d/g).join('-').toLowerCase();
