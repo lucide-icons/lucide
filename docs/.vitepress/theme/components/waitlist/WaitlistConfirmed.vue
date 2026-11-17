@@ -8,12 +8,17 @@ import './waitlist.css';
 
 const status = ref<'pending' | 'confirmed' | 'invalid' | 'error'>('pending');
 const product = ref<WaitlistProduct>();
+const contactId = ref<string>();
+const useCase = ref<string>();
 
 // This page is prerendered, so the query string is only available after hydration.
-// `/api/waitlist/confirm` redirects here with `?product=…`, plus `&status=invalid|error` when it failed.
+// `/api/waitlist/confirm` redirects here with `?product=…`, plus `&status=invalid|error` when it failed,
+// or `&contactId=…&use-case=…` for the survey's hidden fields when it succeeded.
 onMounted(() => {
   const params = new URLSearchParams(window.location.search);
   const productId = params.get('product');
+  contactId.value = params.get('contactId') || undefined;
+  useCase.value = params.get('use-case') || undefined;
 
   product.value =
     productId && Object.hasOwn(waitlistProducts, productId)
@@ -49,6 +54,8 @@ onMounted(() => {
     <WaitlistSurvey
       v-if="status === 'confirmed' && product"
       :product="product"
+      :contact-id="contactId"
+      :use-case="useCase"
     />
 
     <Card

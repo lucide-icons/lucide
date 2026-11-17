@@ -68,8 +68,10 @@ function mergeProducts(existing: string | undefined, product: string) {
  * Creates the Resend contact for a confirmed signup, or updates it when the email is already a
  * contact (a second product, or a confirmation link clicked twice). Either way the contact ends up
  * in the Waitlist segment and opted in to the Product updates topic.
+ *
+ * Returns the contact's Resend ID, which the survey uses to link submissions to the contact.
  */
-export async function addToWaitlist(signup: WaitlistSignup) {
+export async function addToWaitlist(signup: WaitlistSignup): Promise<string> {
   const resend = getResend();
   const segmentId = getEnv('RESEND_WAITLIST_SEGMENT_ID');
   const topicId = getEnv('RESEND_PRODUCT_UPDATES_TOPIC_ID');
@@ -93,8 +95,7 @@ export async function addToWaitlist(signup: WaitlistSignup) {
       topics: [{ id: topicId, subscription: 'opt_in' }],
     });
 
-    unwrap(created, 'create the contact');
-    return;
+    return unwrap(created, 'create the contact').id;
   }
 
   const current = existing.data.properties ?? {};
@@ -127,4 +128,6 @@ export async function addToWaitlist(signup: WaitlistSignup) {
     }),
     'opt the contact in to Product updates',
   );
+
+  return existing.data.id;
 }

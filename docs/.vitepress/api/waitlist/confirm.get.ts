@@ -1,11 +1,19 @@
 import { defineEventHandler, getQuery, sendRedirect } from 'h3';
 import { waitlistProducts } from '../../theme/components/waitlist/products';
-import { verifyConfirmToken, type VerifyResult } from '../../lib/waitlist/token.ts';
+import {
+  verifyConfirmToken,
+  type VerifyResult,
+  type WaitlistSignup,
+} from '../../lib/waitlist/token.ts';
 import { addToWaitlist } from '../../lib/waitlist/resend.ts';
 
 const CONFIRMED_PAGE = '/waitlist/confirmed';
 
-function confirmedPageUrl(product: string | undefined, status?: 'invalid' | 'error') {
+function confirmedPageUrl(
+  product: string | undefined,
+  status?: 'invalid' | 'error',
+  confirmed?: { signup: WaitlistSignup; contactId: string },
+) {
   const params = new URLSearchParams();
 
   if (product && Object.hasOwn(waitlistProducts, product)) {
@@ -14,6 +22,13 @@ function confirmedPageUrl(product: string | undefined, status?: 'invalid' | 'err
 
   if (status) {
     params.set('status', status);
+  }
+
+  // Hidden fields for the survey. The Resend contact ID links a submission to the contact
+  // without putting the email address in the URL.
+  if (confirmed) {
+    params.set('contactId', confirmed.contactId);
+    if (confirmed.signup.useCase) params.set('use-case', confirmed.signup.useCase);
   }
 
   const query = params.toString();
@@ -43,12 +58,13 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, confirmedPageUrl(undefined, 'invalid'), 302);
   }
 
+  let contactId: string;
   try {
-    await addToWaitlist(signup);
+    contactId = await addToWaitlist(signup);
   } catch (error) {
     console.error('[waitlist] Could not add the contact to the waitlist', error);
     return sendRedirect(event, confirmedPageUrl(signup.product, 'error'), 302);
   }
 
-  return sendRedirect(event, confirmedPageUrl(signup.product), 302);
+  return sendRedirect(event, confirmedPageUrl(signup.product, undefined, { signup, contactId }), 302);
 });

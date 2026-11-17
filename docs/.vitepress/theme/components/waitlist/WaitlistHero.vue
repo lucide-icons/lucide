@@ -33,7 +33,6 @@ const config = computed(() => waitlistProducts[props.product]);
 <style scoped>
 .waitlist-hero {
   display: flex;
-  align-items: center;
   padding-bottom: 64px;
 }
 
@@ -94,6 +93,7 @@ const config = computed(() => waitlistProducts[props.product]);
   background: var(--vp-sidebar-bg-color);
   margin: 0 -24px;
   border-bottom: 1px solid var(--vp-c-gutter);
+  padding-block: 48px;
 }
 
 @media (min-width: 640px) {
@@ -118,24 +118,28 @@ const config = computed(() => waitlistProducts[props.product]);
 
   .waitlist-hero {
     min-height: calc(100vh - var(--vp-nav-height) - 113px);
-    padding: 80px 32px 64px;
+    padding: 120px 32px 64px;
     background: var(--vp-sidebar-bg-color);
   }
 
   .inner {
     flex-direction: row;
     gap: 24px;
+    max-height: 1148px;
   }
 
   .intro {
     flex: 0 1 576px;
     margin-inline: 0;
+    margin-block: auto;
   }
 
   .visual {
     flex: 1 1 0;
     align-items: center;
     border-bottom: none;
+    padding-block: 0;
+    padding-top: 180px;
   }
 }
 </style>
