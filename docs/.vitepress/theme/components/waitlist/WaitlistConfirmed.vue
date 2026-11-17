@@ -5,6 +5,8 @@ import WaitlistSurvey from './WaitlistSurvey.vue';
 import { waitlistProducts, type WaitlistProduct } from './products';
 import { track } from '../../utils/openpanel';
 import './waitlist.css';
+import Icon from '@lucide/vue/src/Icon.ts';
+import { circleCheck } from '../../../data/iconNodes';
 
 const status = ref<'pending' | 'confirmed' | 'invalid' | 'error'>('pending');
 const product = ref<WaitlistProduct>();
@@ -44,6 +46,9 @@ onMounted(() => {
       role="status"
     >
       <div class="waitlist-card-header">
+        <div class="waitlist-card-icon">
+          <Icon :icon-node="circleCheck" name="check" />
+        </div>
         <h1 class="waitlist-card-title">You're on the waitlist</h1>
         <p class="waitlist-card-description">
           Thanks for confirming. We'll email you launch updates for {{ product.name }}.
@@ -96,9 +101,22 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 576px;
+  max-width: 960px;
   min-height: calc(100vh - var(--vp-nav-height) - 113px);
   margin: 0 auto;
   padding: 80px 24px 64px;
+}
+
+.waitlist-card-icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: var(--vp-c-green-soft);
+  color: var(--vp-c-green-1);
+  margin-bottom: 16px;
 }
 </style>
