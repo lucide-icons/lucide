@@ -32,8 +32,8 @@ describe('hasA11yProp', () => {
     expect(hasA11yProp(null)).toBe(false);
     expect(hasA11yProp(undefined)).toBe(false);
     expect(hasA11yProp()).toBe(false);
-    expect(hasA11yProp('not-an-object' as unknown as object)).toBe(false);
-    expect(hasA11yProp(123 as unknown as object)).toBe(false);
+    expect(hasA11yProp('not-an-object' as unknown as Record<string, unknown>)).toBe(false);
+    expect(hasA11yProp(123 as unknown as Record<string, unknown>)).toBe(false);
   });
 
   it('returns false when a11y props are explicitly undefined or null', () => {
