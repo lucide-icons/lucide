@@ -22,6 +22,13 @@ describe('toKebabCase', () => {
     expect(toKebabCase('word')).toBe('word');
   });
 
+  it('should handle single-letter prefixes and consecutive capitals', () => {
+    expect(toKebabCase('AArrowDown')).toBe('a-arrow-down');
+    expect(toKebabCase('AArrowUp')).toBe('a-arrow-up');
+    expect(toKebabCase('ALargeSmall')).toBe('a-large-small');
+    expect(toKebabCase('XLineTop')).toBe('x-line-top');
+  });
+
   it('should handle empty string', () => {
     expect(toKebabCase('')).toBe('');
   });
