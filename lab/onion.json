@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "flavor",
+    "flavour",
+    "vegetable",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "nutrition",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

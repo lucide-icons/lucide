@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
+    "$extends:map-pin",
+    "$group:off",
     "remove"
   ],
   "categories": [

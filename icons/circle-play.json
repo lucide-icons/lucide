@@ -6,9 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "music",
-    "start",
-    "run"
+    "$group:play",
+    "music"
   ],
   "categories": [
     "multimedia"

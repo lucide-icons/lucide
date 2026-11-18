@@ -9,17 +9,20 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "selection",
     "square",
     "rectangular",
     "marquee",
     "tool",
-    "dashed",
-    "box"
+    "box",
+    "region",
+    "area",
+    "region of interest"
   ],
   "categories": [
-    "text",
-    "design"
+    "design",
+    "cursors"
   ],
   "aliases": [
     {

@@ -1,0 +1,6 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Logistics",
+  "description": "Icons for shipping, delivery, packages, warehousing, freight, and supply chains.",
+  "icon": "truck"
+}

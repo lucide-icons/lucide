@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing a player's hand in card games",
+    "Showing planning poker estimates in agile tools",
+    "Displaying icebreaker prompts in conversation apps",
+    "Marking spread or revealed collectible cards"
+  ],
+  "tags": [
+    "$extends:playing-cards",
+    "fan",
+    "spread",
+    "dealt",
+    "prompt",
+    "icebreaker",
+    "conversation"
+  ],
+  "categories": [
+    "$extends:playing-cards",
+    "social"
+  ]
+}

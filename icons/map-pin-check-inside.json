@@ -8,19 +8,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
-    "drop",
-    "done",
-    "tick",
-    "complete",
-    "task",
-    "added"
+    "$extends:map-pin-check"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin-check"
   ]
 }

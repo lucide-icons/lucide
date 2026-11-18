@@ -7,15 +7,18 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:id-card",
     "id-card",
     "id-card-lanyard",
-    "identity",
     "employee",
     "gate-pass",
-    "badge"
+    "job",
+    "career",
+    "employment",
+    "hiring",
+    "experience"
   ],
   "categories": [
-    "security",
-    "account"
+    "$extends:id-card"
   ]
 }

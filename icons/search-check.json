@@ -5,23 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "found",
-    "correct",
-    "complete",
-    "tick",
-    "lens",
-    "locate",
-    "explore",
-    "discover",
-    "enlarge",
-    "zoom"
+    "$extends:search",
+    "$group:check",
+    "found"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:search"
   ]
 }

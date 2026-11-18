@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:mail",
+    "$group:exclamation-mark",
+    "delivery error"
+  ],
+  "categories": [
+    "mail",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "mail-warning"
+    },
+    {
+      "name": "mail-alert"
+    }
+  ]
+}

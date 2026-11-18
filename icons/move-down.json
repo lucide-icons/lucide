@@ -5,10 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "arrow",
-    "direction",
-    "downwards",
-    "south"
+    "$extends:move",
+    "$group:direction-down"
   ],
   "categories": [
     "arrows"

@@ -5,16 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:mic",
     "lyrics",
     "voice",
-    "listen",
-    "sound",
     "music",
-    "radio",
-    "podcast",
     "karaoke",
-    "singing",
-    "microphone"
+    "singing"
   ],
   "categories": [
     "devices",

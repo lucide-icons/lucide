@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:chart",
     "trading",
     "trader",
     "financial",
@@ -19,11 +20,7 @@
     "currency",
     "stocks",
     "exchange",
-    "hedge fund",
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "hedge fund"
   ],
   "categories": [
     "charts",

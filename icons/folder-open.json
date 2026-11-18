@@ -6,9 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory"
+    "$extends:folder"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

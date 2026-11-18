@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "projects",
     "manage",
     "overview",
@@ -25,8 +26,7 @@
   ],
   "categories": [
     "charts",
-    "development",
-    "design"
+    "development"
   ],
   "aliases": [
     {

@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:emoticon",
+    "happy",
+    "happiness",
+    "good",
+    "laugh",
+    "broad smile",
+    "pleasure",
+    "good cheer",
+    "humour",
+    "funny"
+  ],
+  "categories": [
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "laugh",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

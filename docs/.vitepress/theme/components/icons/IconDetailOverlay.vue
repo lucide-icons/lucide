@@ -2,7 +2,7 @@
 import type { IconEntity } from '../../types';
 import { computed } from 'vue';
 import createLucideIcon from '@lucide/vue/src/createLucideIcon';
-import IconButton from '../base/IconButton.vue';
+import Button from '../base/Button.vue';
 import IconContributors from './IconContributors.vue';
 import IconPreview from './IconPreview.vue';
 import { x, expand } from '../../../data/iconNodes';
@@ -12,6 +12,7 @@ import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
 import { satisfies } from 'semver';
 import { useExternalLibs } from '../../composables/useExternalLibs';
+import EditInStudioButton from './EditInStudioButton.vue';
 
 const props = defineProps<{
   iconName: string | null;
@@ -70,12 +71,19 @@ const Expand = createLucideIcon('Expand', expand);
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <Badge
-            v-if="icon.createdRelease"
+            v-if="icon.awaitingRelease"
+            class="version awaiting-release"
+            >Unreleased</Badge
+          >
+          <Badge
+            v-else-if="icon.createdRelease"
             class="version"
             :href="releaseTagLink(icon.createdRelease.version)"
-            >v{{ icon.createdRelease.version }}</Badge
           >
-          <IconButton
+              {{ icon.createdRelease.version }}
+          </Badge>
+          <EditInStudioButton :icon="icon"/>
+          <Button
             @click="
               go(
                 icon.externalLibrary
@@ -85,10 +93,10 @@ const Expand = createLucideIcon('Expand', expand);
             "
           >
             <component :is="Expand" />
-          </IconButton>
-          <IconButton @click="onClose">
+          </Button>
+          <Button @click="onClose">
             <component :is="CloseIcon" />
-          </IconButton>
+          </Button>
         </nav>
         <IconPreview
           id="previewer"
@@ -149,6 +157,8 @@ const Expand = createLucideIcon('Expand', expand);
   margin: 0 auto;
   padding: 1rem;
   background-color: var(--vp-c-bg-elv);
+  border-top: 1px solid var(--vp-c-divider);
+  border-right: 1px solid var(--vp-c-divider);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   will-change: transform;
   pointer-events: all;
@@ -200,7 +210,14 @@ const Expand = createLucideIcon('Expand', expand);
   margin-right: 24px;
 }
 
+.version.awaiting-release {
+  color: var(--vp-c-danger-3);
+}
+
 .contributors {
   justify-content: flex-end;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }
 </style>

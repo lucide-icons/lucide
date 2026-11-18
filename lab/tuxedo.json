@@ -1,0 +1,50 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "blazer",
+    "buttons",
+    "shirt",
+    "suit",
+    "gentleman",
+    "mens",
+    "boys",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "accessories",
+    "apparel",
+    "attire",
+    "outfit",
+    "fashion",
+    "formal",
+    "dressy",
+    "dinner",
+    "restaurant",
+    "waiter",
+    "uniform",
+    "smart",
+    "classic",
+    "refined",
+    "elegant",
+    "evening wear",
+    "black tie event",
+    "special occasion",
+    "wedding",
+    "groom",
+    "gathering",
+    "thread",
+    "tailored",
+    "regular",
+    "slim fit",
+    "service",
+    "serve"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}
