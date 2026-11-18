@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "SlDo"
+    "SlDo",
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing high-speed rail travel",
+    "Showing train connections in journey planners",
+    "Marking railway stations on maps"
   ],
   "tags": [
-    "station",
-    "transportation",
-    "vehicle",
-    "commute",
-    "travel",
-    "rail",
-    "liner",
-    "passenger",
-    "train",
-    "railway"
+    "$extends:train-front"
   ],
   "categories": [
-    "transportation"
+    "$extends:train-front",
+    "travel"
   ]
 }
