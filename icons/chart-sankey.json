@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "nito"
+    "nito",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Showing the flow of data"
