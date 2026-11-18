@@ -48,4 +48,8 @@ describe('hasA11yProp', () => {
     props.className = 'icon';
     expect(hasA11yProp(props)).toBe(false);
   });
+
+  it('returns true if props contain accessibilityLabel (React Native)', () => {
+    expect(hasA11yProp({ accessibilityLabel: 'Close' })).toBe(true);
+  });
 });
