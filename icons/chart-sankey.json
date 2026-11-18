@@ -6,7 +6,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Showing the flow of data"
+    "Showing the flow of data",
+    "Visualizing weighted flows between categories in analytics dashboards",
+    "Showing energy or resource allocation in engineering dashboards",
+    "Representing inputs, outputs, and losses across processes",
+    "Comparing contributions and conversions in budget or cost reports"
   ],
   "tags": [
     "sankey",
