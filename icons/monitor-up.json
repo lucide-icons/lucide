@@ -7,20 +7,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "computer",
-    "screen",
-    "display",
-    "desktop",
-    "external display",
+    "$extends:monitor",
+    "$group:direction-up",
     "upload",
     "connect",
     "remote",
-    "screen sharing",
     "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

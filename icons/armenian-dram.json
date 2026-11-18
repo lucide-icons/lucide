@@ -7,13 +7,8 @@
     "Representing money or prices in Armenian dram"
   ],
   "tags": [
-    "finance",
-    "symbol",
-    "banking",
-    "economy",
-    "currency",
-    "money",
-    "payment"
+    "$group:currency",
+    "symbol"
   ],
   "categories": [
     "finance"

@@ -6,13 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "fullscreen",
-    "arrows",
-    "expand"
+    "$extends:maximize",
+    "arrows"
   ],
   "categories": [
-    "arrows",
-    "layout",
-    "design"
+    "$extends:maximize",
+    "arrows"
   ]
 }

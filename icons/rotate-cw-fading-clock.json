@@ -4,19 +4,16 @@
     "NielsLazaroms"
   ],
   "use-cases": [
-    "To indicate when you need to process items.",
-    "To indicate that a process is happening"
+    "Indicating items queued for processing",
+    "Indicating that a process is in progress"
   ],
   "tags": [
-    "clock",
+    "$extends:rotate-cw",
+    "$group:clock",
     "waiting",
-    "schedule",
     "hourglass",
     "loading",
-    "pause",
-    "pending",
-    "time",
-    "watch"
+    "pause"
   ],
   "categories": [
     "time"

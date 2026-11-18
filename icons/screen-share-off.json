@@ -7,13 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "desktop",
-    "disconnect",
-    "monitor"
+    "$extends:screen-share",
+    "$group:off",
+    "disconnect"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "communication"
+    "$extends:screen-share"
   ]
 }

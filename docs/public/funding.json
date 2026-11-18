@@ -1,0 +1,85 @@
+{
+  "$schema": "https://fundingjson.org/schema/v1.0.0.json",
+  "version": "v1.0.0",
+  "entity": {
+    "type": "organisation",
+    "role": "steward",
+    "name": "Lucide Icons",
+    "email": "info@lucide.dev",
+    "description": "Lucide Icons is the team that maintains Lucide, a community-driven, open-source icon library. The project is led by Eric Fennis together with co-maintainer Karsa Mistmere.",
+    "webpageUrl": {
+      "url": "https://lucide.dev"
+    }
+  },
+  "projects": [
+    {
+      "guid": "lucide",
+      "name": "Lucide",
+      "description": "Beautiful and consistent icon toolkit made by the community. Lucide provides a large set of open-source SVG icons plus official packages for React, Vue, Svelte, Solid, Preact, Angular, React Native and vanilla JavaScript, along with a Figma plugin. It is free for personal and commercial use under the ISC license.",
+      "webpageUrl": {
+        "url": "https://lucide.dev"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/lucide-icons/lucide",
+        "wellKnown": "https://github.com/lucide-icons/lucide/blob/main/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:ISC"],
+      "tags": ["icons", "svg", "design", "user-interface", "react", "vue", "svelte", "figma"]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "opencollective",
+        "type": "payment-provider",
+        "address": "https://opencollective.com/lucide-icons",
+        "description": "Recurring or one-time contributions via Open Collective."
+      },
+      {
+        "guid": "github-sponsors-lucide",
+        "type": "payment-provider",
+        "address": "https://github.com/sponsors/lucide-icons",
+        "description": "Sponsor the Lucide project via GitHub Sponsors."
+      },
+      {
+        "guid": "github-sponsors-ericfennis",
+        "type": "payment-provider",
+        "address": "https://github.com/sponsors/ericfennis",
+        "description": "Sponsor the lead maintainer via GitHub Sponsors."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "maintainer-time",
+        "status": "active",
+        "name": "Maintainer time",
+        "description": "Funds 44 hours of maintenance per week: 32 hours for Eric Fennis and 12 hours for Karsa Mistmere at EUR 40 per hour. Covers reviewing icon contributions, maintaining the framework packages, releases, documentation and community support.",
+        "amount": 91520,
+        "currency": "EUR",
+        "frequency": "yearly",
+        "channels": ["opencollective", "github-sponsors-lucide", "github-sponsors-ericfennis"]
+      },
+      {
+        "guid": "infrastructure-tooling",
+        "status": "active",
+        "name": "Infrastructure and tooling",
+        "description": "Covers hosting on DigitalOcean (EUR 1,200/year), the domain (EUR 10/year), design and project tools Figma, Notion and Linear (EUR 900/year) and AI coding assistance (EUR 240/year).",
+        "amount": 2350,
+        "currency": "EUR",
+        "frequency": "yearly",
+        "channels": ["opencollective", "github-sponsors-lucide"]
+      },
+      {
+        "guid": "custom-contribution",
+        "status": "active",
+        "name": "Custom contribution",
+        "description": "Contribute any amount to support Lucide.",
+        "amount": 0,
+        "currency": "EUR",
+        "frequency": "one-time",
+        "channels": ["opencollective", "github-sponsors-lucide", "github-sponsors-ericfennis"]
+      }
+    ],
+    "history": []
+  }
+}

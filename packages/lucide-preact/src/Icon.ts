@@ -15,6 +15,9 @@ type IconComponentProps = LucideProps &
       }
   );
 
+const resolveClassName = (value: LucideProps['class']) =>
+  typeof value === 'object' ? value?.value : value;
+
 /**
  * Lucide icon component
  *
@@ -47,6 +50,7 @@ const Icon = ({
     size: 24,
   },
   class: classes = '',
+  className = '',
   ...rest
 }: IconComponentProps) => {
   const {
@@ -65,7 +69,7 @@ const Icon = ({
     strokeWidth: strokeWidth ?? contextStrokeWidth,
     absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
     nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
-    className: mergeClasses(contextClass, classes as string),
+    className: mergeClasses(contextClass, resolveClassName(classes), resolveClassName(className)),
     hasA11yProp: Boolean(children) || hasA11yProp(rest),
     attributes: rest,
   });

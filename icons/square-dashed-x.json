@@ -10,25 +10,21 @@
     "ethanhazel"
   ],
   "use-cases": [
-    "Deselecting a selection in an image editor",
+    "Removing an area from an existing selection in design editors",
     "Clearing a selected range in a spreadsheet",
-    "Removing selected files from a file manager selection",
-    "Toggling off marquee/selection mode in a design application"
+    "Removing a placeholder block from a layout"
   ],
   "tags": [
+    "$extends:square-dashed",
+    "$group:x",
     "deselect",
     "unselect",
-    "delete",
     "select",
-    "selection",
     "border",
     "width",
     "layout",
     "style",
     "design",
-    "rectangular",
-    "marquee",
-    "box",
     "rectangle",
     "aspect ratio",
     "1:1"

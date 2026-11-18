@@ -228,5 +228,24 @@
     ],
     "source": "https://github.com/GyeongHoKim/lucide-lit",
     "documentation": "https://github.com/GyeongHoKim/lucide-lit/blob/main/README.md"
+  },
+  {
+    "name": "lucide-jte",
+    "description": "Implementation of Lucide icons for jte (Java Template Engine).",
+    "icon": "/framework-logos/java.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/github/v/release/sgruendel/lucide-jte",
+        "href": "https://github.com/sgruendel/lucide-jte/releases"
+      },
+      {
+        "alt": "Maven Central",
+        "src": "https://img.shields.io/maven-central/v/io.github.sgruendel/lucide-jte.svg",
+        "href": "https://central.sonatype.com/artifact/io.github.sgruendel/lucide-jte"
+      }
+    ],
+    "source": "https://github.com/sgruendel/lucide-jte",
+    "documentation": "https://github.com/sgruendel/lucide-jte/blob/main/README.md"
   }
 ]

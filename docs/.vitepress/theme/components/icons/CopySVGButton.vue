@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import ButtonMenu from '../base/ButtonMenu.vue';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import useConfetti from '../../composables/useConfetti';
+import { track } from '../../utils/openpanel';
 import getSVGIcon from '../../utils/getSVGIcon';
 import downloadData from '../../utils/downloadData';
 
@@ -12,13 +13,19 @@ const confettiText = ref(copiedText);
 const props = defineProps<{
   name: string;
   popoverPosition?: 'top' | 'bottom';
+  trackingSource?: 'drawer' | 'page';
 }>();
+
+function trackCopy(action: string) {
+  track('icon_copy', { icon: props.name, action, source: props.trackingSource });
+}
 
 const { size } = useIconStyleContext();
 
 const { animate, confetti } = useConfetti();
 
 function copySVG() {
+  trackCopy('copy_svg');
   confettiText.value = copiedText;
   const svgString = getSVGIcon();
 
@@ -28,6 +35,7 @@ function copySVG() {
 }
 
 function copyDataUrl() {
+  trackCopy('copy_data_url');
   confettiText.value = copiedText;
   const svgString = getSVGIcon();
 
@@ -39,6 +47,7 @@ function copyDataUrl() {
 }
 
 function downloadSVG() {
+  trackCopy('download_svg');
   confettiText.value = downloadText;
   const svgString = getSVGIcon();
 
@@ -47,6 +56,7 @@ function downloadSVG() {
 }
 
 function downloadPNG() {
+  trackCopy('download_png');
   confettiText.value = downloadText;
   const svgString = getSVGIcon();
 

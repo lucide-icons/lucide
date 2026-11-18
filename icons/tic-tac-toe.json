@@ -12,6 +12,7 @@
     "Denoting a tie or draw outcome in game results"
   ],
   "tags": [
+    "$group:letter",
     "game",
     "board",
     "grid",

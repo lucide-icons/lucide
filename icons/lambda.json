@@ -11,6 +11,7 @@
     "Representing lambda notation in math and science"
   ],
   "tags": [
+    "$group:letter",
     "greek",
     "symbol",
     "math",
@@ -25,6 +26,7 @@
     "linear algebra"
   ],
   "categories": [
+    "letters-digits",
     "development",
     "math",
     "science",

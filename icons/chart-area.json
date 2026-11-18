@@ -5,11 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
-    "area"
+    "$group:chart"
   ],
   "categories": [
     "charts"

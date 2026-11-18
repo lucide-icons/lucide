@@ -8,9 +8,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "add",
-    "create",
-    "picture"
+    "$extends:image",
+    "$group:plus"
   ],
   "categories": [
     "photography",

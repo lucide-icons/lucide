@@ -5,7 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
     "format",
     "color"
   ],

@@ -7,14 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "bookmark",
-    "favorite",
-    "like",
-    "review",
-    "rating"
+    "$extends:star"
   ],
   "categories": [
-    "social",
-    "multimedia"
+    "social"
   ]
 }

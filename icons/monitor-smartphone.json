@@ -12,22 +12,13 @@
     "Indicating casting or screen sharing to a display"
   ],
   "tags": [
-    "phone",
-    "cellphone",
-    "device",
-    "mobile",
-    "desktop",
-    "screen",
-    "display",
-    "external display",
-    "screen sharing",
-    "responsive",
+    "$extends:monitor",
+    "$extends:smartphone",
     "screens",
     "sync",
     "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

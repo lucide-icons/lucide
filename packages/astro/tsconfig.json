@@ -4,6 +4,8 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

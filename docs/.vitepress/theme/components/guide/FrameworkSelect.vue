@@ -1,10 +1,9 @@
 <script setup lang="tsx">
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
-import sidebar, { guideSidebarTop } from '../../../sidebar';
+import sidebar from '../../../sidebar';
 import { useData, useRouter } from 'vitepress';
 import Select from '../base/Select.vue';
-import { computed, ref, watch, watchEffect } from 'vue';
-import { link, route } from '~/.vitepress/data/iconNodes';
+import { computed } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
 
 const { page } = useData();
@@ -75,14 +74,7 @@ function onSelectFramework(item: Framework) {
 </script>
 
 <template>
-  <VPSidebarGroup
-    :items="guideSidebarTop"
-    v-if="page?.relativePath?.startsWith?.('guide')"
-  />
-  <div
-    class="framework-select"
-    v-if="page?.relativePath?.startsWith?.('guide')"
-  >
+  <div class="framework-select">
     <label for="framework-select">Framework</label>
     <Select
       id="framework-select"
@@ -93,10 +85,7 @@ function onSelectFramework(item: Framework) {
   </div>
   <VPSidebarGroup
     :key="selected.value"
-    v-if="
-      page?.relativePath?.startsWith?.('guide') &&
-      !page?.relativePath?.startsWith?.(selected.value.substring(1))
-    "
+    v-if="!page?.relativePath?.startsWith?.(selected.value.substring(1))"
     :items="sidebar[selected.value]"
   />
 </template>

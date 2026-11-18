@@ -13,16 +13,8 @@
     "Editing email addresses on settings pages"
   ],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "pen",
-    "edit",
-    "compose",
-    "draft",
-    "write",
-    "writing",
-    "create",
+    "$extends:mail",
+    "$group:pen",
     "reply"
   ],
   "categories": [

@@ -5,12 +5,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Hiking routes",
-    "Hiking activities",
-    "marking trailheads on maps",
-    "denoting hiking gear in packing lists",
-    "labeling guided walking or trekking tours",
-    "indicating recommended equipment for a route"
+    "Representing hiking activities in fitness or outdoor apps",
+    "Marking hiking routes or trailheads on maps",
+    "Denoting hiking gear in packing lists",
+    "Labeling guided walking or trekking tours",
+    "Indicating recommended equipment for a route"
   ],
   "tags": [
     "hiking",
