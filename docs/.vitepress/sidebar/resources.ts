@@ -14,10 +14,6 @@ export const resourcesSidebar = [
         text: 'Code of conduct',
         link: '/code-of-conduct',
       },
-      {
-        text: 'Brand logo statement',
-        link: '/brand-logo-statement',
-      },
     ],
   },
   {
@@ -54,6 +50,17 @@ export const resourcesSidebar = [
       {
         text: 'Getting started',
         link: '/contribute/icons/',
+      },
+      {
+        text: 'Icon eligibility',
+        link: '/contribute/icons/eligibility',
+        desc: 'Check which icon concepts are suitable for Lucide before you start designing.',
+        items: [
+          {
+            text: 'Brand logo statement',
+            link: '/brand-logo-statement',
+          },
+        ],
       },
       {
         text: 'Design language',

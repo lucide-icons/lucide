@@ -14,6 +14,8 @@ Every icon should feel like it belongs with the rest of Lucide.
 
 This guide explains how to design and prepare icons for Lucide.
 
+For new icons or substantial redesigns, start with [icon eligibility](./eligibility) to check the content restrictions and contribution requirements.
+
 ## What this guide covers
 
 <OverviewLinkGrid>
