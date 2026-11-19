@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "oboleto"
+  ],
+  "use-cases": [
+    "Selecting Type K adapters in travel packing checklists",
+    "Showing Type K socket compatibility on product listings"
+  ],
+  "tags": [
+    "electricity",
+    "socket",
+    "plug",
+    "energy",
+    "electronics",
+    "voltage",
+    "current",
+    "charger",
+    "receptacle",
+    "adapter",
+    "mains",
+    "grounded",
+    "denmark"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "home",
+    "travel"
+  ]
+}
