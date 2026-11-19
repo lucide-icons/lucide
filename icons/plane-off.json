@@ -14,9 +14,7 @@
     "Showing that air travel is not included or not allowed"
   ],
   "tags": [
-    "plane",
-    "trip",
-    "airplane"
+    "$extends:plane"
   ],
   "categories": [
     "transportation",
