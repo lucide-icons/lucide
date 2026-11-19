@@ -1,4 +1,4 @@
-import { createMemo, For, splitProps, useContext } from 'solid-js';
+import { children, createMemo, For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
 import { LucideIconData, LucideIconNode, LucideProps } from './types';
@@ -30,6 +30,7 @@ const Icon = (props: LucideProps & IconProps) => {
   ]);
 
   const globalProps = useContext(LucideContext);
+  const resolvedChildren = children(() => localProps.children);
 
   const icon = createMemo<LucideIconData>(
     () =>
@@ -49,7 +50,7 @@ const Icon = (props: LucideProps & IconProps) => {
       absoluteStrokeWidth: localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
       nonScalingStroke: localProps.nonScalingStroke ?? globalProps.nonScalingStroke,
       className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
-      hasA11yProp: Boolean(localProps.children) || hasA11yProp(rest),
+      hasA11yProp: resolvedChildren.toArray().some(Boolean) || hasA11yProp(rest),
       attributes: rest,
     }),
   );
@@ -66,6 +67,7 @@ const Icon = (props: LucideProps & IconProps) => {
           );
         }}
       </For>
+      {resolvedChildren()}
     </svg>
   );
 };
