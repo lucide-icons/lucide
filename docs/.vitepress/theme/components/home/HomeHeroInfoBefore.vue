@@ -7,7 +7,10 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
 </script>
 
 <template>
-  <div class="info">
+  <div
+    v-if="data.version"
+    class="info"
+  >
     <Badge :href="`https://github.com/lucide-icons/lucide/releases/tag/${data.version}`">
       v{{ data.version }}
     </Badge>
