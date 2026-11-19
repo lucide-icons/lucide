@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "alexrefshauge"
+    "alexrefshauge",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "sport",
     "ball",
