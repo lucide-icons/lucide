@@ -42,6 +42,12 @@ const theme: Partial<Theme> = {
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();
+
+      // Attaches the invisible BotID challenge to waitlist submissions, checked by `checkBotId()`
+      // in the API route.
+      import('botid/client/core').then(({ initBotId }) =>
+        initBotId({ protect: [{ path: '/api/waitlist', method: 'POST' }] }),
+      );
     }
   },
 };
