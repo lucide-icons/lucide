@@ -4,6 +4,7 @@ fullscreen
 gamepad
 gantt
 kanban
+lakehouse
 pilcrow
 squircle
 strikethrough
@@ -31,6 +32,7 @@ glassmorphism
 gltf
 halloumi
 helpdesk
+hitbox
 interpoint
 interpunct
 middot

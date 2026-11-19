@@ -280,6 +280,41 @@ html::-webkit-scrollbar-thumb:active {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Small label next to a nav item, set through the item's `text` in the site config. */
+.nav-badge {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 0 5px;
+  border-radius: 4px;
+  background-color: var(--vp-c-green-soft);
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--vp-c-green-1);
+  vertical-align: 1px;
+}
+
+/* No room for the label next to the logo at these widths. */
+@media (min-width: 768px) and (max-width: 879.98px) {
+  .VPNavBarMenu .nav-badge {
+    display: none;
+  }
+}
+
+/* The menu only just fits next to the logo at these widths. */
+@media (min-width: 768px) and (max-width: 829.98px) {
+  .VPNav .VPNavBarMenu .VPNavBarMenuLink,
+  .VPNav .VPNavBarMenuGroup .button {
+    padding: 0 9px;
+  }
+
+  .VPNav .VPNavBarMenuLink::before,
+  .VPNav .VPNavBarMenuGroup .button::before {
+    right: 9px;
+    left: 9px;
+  }
+}
+
 .VPNav .VPNavBarMenuLink:hover::before,
 .VPNav .VPNavBarMenuLink:focus-visible::before,
 .VPNav .VPNavBarMenuLink.active::before,
