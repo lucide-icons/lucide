@@ -360,7 +360,7 @@ watch(inView, (isInView) => {
   white-space: pre;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 59.9375rem) {
   .connector {
     height: 180px;
   }

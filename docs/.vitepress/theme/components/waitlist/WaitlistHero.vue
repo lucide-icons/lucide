@@ -96,7 +96,7 @@ const config = computed(() => waitlistProducts[props.product]);
   padding-block: 48px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .title {
     max-width: 576px;
     line-height: 56px;
@@ -104,13 +104,13 @@ const config = computed(() => waitlistProducts[props.product]);
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .tag {
     display: inline-block;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .title {
     line-height: 64px;
     font-size: 56px;

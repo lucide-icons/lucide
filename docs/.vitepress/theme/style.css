@@ -295,14 +295,14 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 /* No room for the label next to the logo at these widths. */
-@media (min-width: 768px) and (max-width: 879.98px) {
+@media (min-width: 48rem) and (max-width: 54.9988rem) {
   .VPNavBarMenu .nav-badge {
     display: none;
   }
 }
 
 /* The menu only just fits next to the logo at these widths. */
-@media (min-width: 768px) and (max-width: 829.98px) {
+@media (min-width: 48rem) and (max-width: 51.8738rem) {
   .VPNav .VPNavBarMenu .VPNavBarMenuLink,
   .VPNav .VPNavBarMenuGroup .button {
     padding: 0 9px;
