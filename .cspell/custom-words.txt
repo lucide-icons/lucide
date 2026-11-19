@@ -13,6 +13,7 @@ ungroup
 toc
 sunlounger
 monstera
+floorball
 
 # Search tags and terms used in icon and category metadata
 checkmark
