@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "mark",
     "print",
@@ -12,7 +13,6 @@
   ],
   "categories": [
     "design",
-    "cursors",
     "tools"
   ]
 }

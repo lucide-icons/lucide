@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "screen",
     "whiteboard",
@@ -18,13 +19,16 @@
     "office",
     "meeting",
     "project",
-    "planning"
+    "planning",
+    "ppt",
+    "pptx",
+    "powerpoint",
+    "slides"
   ],
   "categories": [
     "multimedia",
-    "photography",
-    "devices",
     "communication",
-    "design"
+    "design",
+    "education"
   ]
 }

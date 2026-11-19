@@ -5,6 +5,7 @@
     "lscheibel",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "cold",
     "weather",
@@ -13,7 +14,6 @@
     "winter"
   ],
   "categories": [
-    "weather",
-    "seasons"
+    "weather"
   ]
 }

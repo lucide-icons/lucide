@@ -5,7 +5,9 @@
     "johnletey",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "sum",
     "calculate",
     "formula",
@@ -14,6 +16,7 @@
     "enumerate"
   ],
   "categories": [
+    "letters-digits",
     "text",
     "math",
     "science"

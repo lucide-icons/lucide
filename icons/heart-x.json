@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas",
+    "Ayberkyvs",
+    "UsamaKhan",
+    "swastik7805"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:x",
+    "unlike",
+    "unfavorite"
+  ],
+  "categories": [
+    "social",
+    "gaming"
+  ]
+}

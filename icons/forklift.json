@@ -4,6 +4,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "machinery",
     "industrial",
@@ -18,6 +19,7 @@
     "logistics"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "logistics"
   ]
 }

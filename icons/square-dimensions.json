@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "Setting or displaying the width and height of an object",
+    "Opening size controls in design or layout editors",
+    "Indicating fixed-size mode for an element",
+    "Representing artboard or canvas size settings",
+    "Labeling size presets or templates in design systems"
+  ],
+  "tags": [
+    "ratio",
+    "size",
+    "width",
+    "height",
+    "resize",
+    "scale",
+    "frame",
+    "proportions",
+    "aspect",
+    "bounds",
+    "measurements",
+    "canvas"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

@@ -6,27 +6,19 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "loading",
-    "wait",
-    "busy",
-    "progress",
-    "spinner",
-    "spinning",
-    "throbber",
+    "$extends:loader",
     "circle"
   ],
   "categories": [
-    "cursors",
-    "multimedia",
-    "layout"
+    "cursors"
   ],
   "aliases": [
     {
       "name": "loader-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -13,11 +13,11 @@ const getIconCodes = (): CodeExampleType => {
       title: 'Vanilla',
       code: `\
 <script>
-import { createIcons, $CamelCase } from 'lucide';
+import { createIcons, $PascalCase } from 'lucide';
 
 createIcons({
   icons: {
-    $CamelCase
+    $PascalCase
   }
 });
 </script>
@@ -43,7 +43,7 @@ export default App;
       language: 'vue',
       title: 'Vue',
       code: `<script setup>
-import { $PascalCase } from 'lucide-vue-next';
+import { $PascalCase } from '@lucide/vue';
 </script>
 
 <template>
@@ -119,8 +119,7 @@ const highlighter = await createHighlighter({
 });
 
 export type ThemeOptions =
-  | ThemeRegistration
-  | { light: ThemeRegistration; dark: ThemeRegistration };
+  ThemeRegistration | { light: ThemeRegistration; dark: ThemeRegistration };
 
 export const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlightedCode = highlighter

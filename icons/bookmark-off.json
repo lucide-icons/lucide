@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "siarie",
+    "ericfennis",
+    "jguddas",
+    "ZeenatLawal",
+    "swastik7805",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:bookmark",
+    "$group:off",
+    "unsaved",
+    "unfavorite",
+    "unmarked",
+    "unlabel",
+    "removed",
+    "unpin",
+    "unread",
+    "unclip",
+    "untag"
+  ],
+  "categories": [
+    "$extends:bookmark"
+  ]
+}

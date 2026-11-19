@@ -11,7 +11,7 @@ export default eventHandler(async (event) => {
   const name = params.data.split('/').at(-3);
   const iconSizeString = params.data.split('/').at(-2);
   const svgData = params.data.split('/').at(-1);
-  const iconSize = parseInt(iconSizeString, 10);
+  const iconSize = Math.min(parseInt(iconSizeString, 10) || imageSize, 256);
   const data = svgData.slice(0, -4);
 
   const prevSvg = iconNodes[name]

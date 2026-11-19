@@ -7,16 +7,12 @@
     "jguddas",
     "lt25106"
   ],
+  "use-cases": [],
   "tags": [
-    "fax",
-    "office",
-    "device",
-    "cross",
-    "cancel",
-    "remove",
-    "error"
+    "$extends:printer",
+    "$group:x"
   ],
   "categories": [
-    "devices"
+    "$extends:printer"
   ]
 }

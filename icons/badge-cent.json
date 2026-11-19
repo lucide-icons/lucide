@@ -3,6 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
   "tags": [
     "discount",
     "offer",

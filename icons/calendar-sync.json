@@ -6,16 +6,12 @@
     "karsa-mistmere",
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
-    "repeat",
-    "refresh",
-    "reconnect",
+    "$extends:calendar",
+    "$group:sync",
     "transfer",
     "backup",
-    "date",
-    "month",
-    "year",
-    "event",
     "subscribe",
     "recurring",
     "schedule",
@@ -24,7 +20,7 @@
     "auto"
   ],
   "categories": [
-    "arrows",
-    "time"
+    "$extends:calendar",
+    "arrows"
   ]
 }

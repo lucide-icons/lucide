@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cleaning products",
+    "toiletries",
+    "bathroom",
+    "amenities",
+    "service",
+    "sanitizer",
+    "sanitiser"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}

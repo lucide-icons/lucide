@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
 import { copy } from '../../../data/iconNodes';
+import Icon from '@lucide/vue/src/Icon';
 import useConfetti from '../../composables/useConfetti';
-import Icon from 'lucide-vue-next/src/Icon';
 const { animate, confetti } = useConfetti();
 const slots = useSlots();
 
-const copiedText = computed(() => slots.default?.()[0].children);
+const copiedText = computed(() => {
+  const children = slots.default?.()[0].children;
+
+  return typeof children === 'string' ? children : '';
+});
 
 function copyText() {
   navigator.clipboard.writeText(copiedText.value);
@@ -25,6 +29,7 @@ function copyText() {
     <slot />
     <Icon
       :iconNode="copy"
+      name="copy"
       :size="20"
       class="copy-icon"
     />

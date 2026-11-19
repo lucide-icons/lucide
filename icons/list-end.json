@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "queue",
     "bottom",
@@ -10,7 +11,7 @@
     "playlist"
   ],
   "categories": [
-    "multimedia",
-    "text"
+    "$extends:list",
+    "multimedia"
   ]
 }

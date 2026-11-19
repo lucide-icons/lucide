@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "cellphone",
     "smartphone",
@@ -29,7 +30,6 @@
   "categories": [
     "connectivity",
     "communication",
-    "multimedia",
     "devices"
   ]
 }

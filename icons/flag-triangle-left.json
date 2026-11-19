@@ -5,7 +5,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-left",
     "report",
     "timeline",
     "marker",

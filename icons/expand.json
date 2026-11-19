@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:expand",
     "scale",
     "fullscreen",
     "maximize",
@@ -13,7 +15,7 @@
     "contract"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "arrows",
+    "layout"
   ]
 }

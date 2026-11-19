@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:direction-up-left",
+    "$group:exit",
+    "keyboard",
+    "button",
+    "escape"
+  ],
+  "categories": [
+    "arrows"
+  ],
+  "aliases": [
+    {
+      "name": "arrow-up-left-from-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "circle-arrow-out-up-left",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}
