@@ -56,4 +56,34 @@ describe('Icon Component Accessibility', () => {
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
+
+  it('should not have aria-hidden prop when there are children in the default slot', async () => {
+    const { container } = await render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        stroke: 'red',
+        absoluteStrokeWidth: true,
+      },
+      slots: {
+        default: createAstroHTMLString('<title>Air conditioning</title>'),
+      },
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+    expect(container.querySelector('title')).toHaveTextContent('Air conditioning');
+  });
+
+  it('should keep aria-hidden prop when the default slot is empty whitespace', async () => {
+    const { container } = await render(Icon, {
+      props: {
+        iconNode: airVent,
+      },
+      slots: {
+        default: createAstroHTMLString('   '),
+      },
+    });
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
 });
