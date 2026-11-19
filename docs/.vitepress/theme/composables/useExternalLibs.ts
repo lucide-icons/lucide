@@ -1,5 +1,5 @@
-import { ref, inject, Ref, watch, onMounted, nextTick } from 'vue';
-import { useLocalStorage, useUrlSearchParams } from '@vueuse/core';
+import { ref, inject, Ref, watch, onMounted } from 'vue';
+import { useLocalStorage } from '@vueuse/core';
 import { ExternalLibs, IconEntity } from '../types';
 
 export const EXTERNAL_LIBS_CONTEXT = Symbol('externalLibs');
@@ -21,28 +21,13 @@ const externalLibIconNodesAPI = {
 };
 
 // URL query parameter for preselecting external libraries, e.g. /icons/?library=lab
-// Repeat it for several libraries: ?library=lab&library=other (a comma list is also accepted).
+// Repeat it for several libraries: ?library=lab&library=other
 const URL_PARAM = 'library';
-const STORAGE_KEY = 'external-libs';
+
+const storedLibs = useLocalStorage<ExternalLibs[]>('external-libs', [], { initOnMounted: false });
 
 const isExternalLib = (value: string): value is ExternalLibs =>
   Object.keys(externalLibIconNodesAPI).includes(value);
-
-const parseLibs = (values: unknown): ExternalLibs[] => {
-  const list = Array.isArray(values) ? values : values == null ? [] : [values];
-  const libs = list
-    .flatMap((value) => String(value).split(','))
-    .map((value) => value.trim())
-    .filter(isExternalLib);
-
-  return [...new Set(libs)];
-};
-
-const getLibsFromLocation = () =>
-  parseLibs(new URLSearchParams(window.location.search).getAll(URL_PARAM));
-
-const isSameSelection = (a: ExternalLibs[], b: ExternalLibs[]) =>
-  a.length === b.length && a.every((lib, index) => lib === b[index]);
 
 /**
  * Writes the current library selection into `url` as `?library=` params, replacing any
@@ -58,60 +43,70 @@ export const setLibraryParams = (url: URL, libs = externalLibContext.selectedLib
   return url;
 };
 
-// useUrlSearchParams only re-reads the URL on popstate, but other code changes it with
-// pushState/replaceState (e.g. ?search=). So when writing, start from the live URL and only
-// swap in the library values; otherwise its out-of-date copy would overwrite other params.
-const params = useUrlSearchParams<{ [URL_PARAM]?: string | string[] }>('history', {
-  stringify: (state) => {
-    const live = new URLSearchParams(window.location.search);
-    live.delete(URL_PARAM);
-    state.getAll(URL_PARAM).forEach((lib) => live.append(URL_PARAM, lib));
+// Keep the URL shareable and remember the selection for the next visit.
+const persistSelection = (libs: ExternalLibs[]) => {
+  storedLibs.value = libs;
 
-    return live.toString();
-  },
-});
-
-const storedLibs = useLocalStorage<ExternalLibs[]>(STORAGE_KEY, [], { initOnMounted: false });
-
-const writeLibsToUrl = (libs: ExternalLibs[]) => {
-  params[URL_PARAM] = [...libs];
+  const url = setLibraryParams(new URL(window.location.href), libs);
+  window.history.replaceState(window.history.state, '', url);
 };
 
-// Persist every selection change to the URL (shareable link) and localStorage (next visit).
-watch(externalLibContext.selectedLibs, (libs) => {
-  storedLibs.value = libs;
-  writeLibsToUrl(libs);
-});
-
-/**
- * Reconciles the selection with the URL: valid `?library=` params win (so shared links and
- * Back/Forward restore them); without them, the current selection is written back so the
- * address bar stays shareable, and with no selection yet the stored one is used.
- */
-const syncSelection = (libsFromUrl: ExternalLibs[]) => {
+// `?library=` wins (shared links, Back/Forward); otherwise use the last selection.
+const syncSelection = () => {
   const { selectedLibs } = externalLibContext;
+  const libsFromUrl = new URLSearchParams(window.location.search)
+    .getAll(URL_PARAM)
+    .filter(isExternalLib);
+  const libs = libsFromUrl.length
+    ? [...new Set(libsFromUrl)]
+    : storedLibs.value.filter(isExternalLib);
 
-  if (libsFromUrl.length) {
-    if (!isSameSelection(libsFromUrl, selectedLibs.value)) {
-      selectedLibs.value = libsFromUrl;
-    }
-  } else if (selectedLibs.value.length) {
-    writeLibsToUrl(selectedLibs.value);
-  } else {
-    const libsFromStorage = parseLibs(storedLibs.value);
+  if (String(libs) !== String(selectedLibs.value)) {
+    selectedLibs.value = libs;
+  }
 
-    if (libsFromStorage.length) {
-      selectedLibs.value = libsFromStorage;
+  // Also when nothing changed, to restore the param on URLs that dropped it.
+  persistSelection(libs);
+};
+
+const fetchExternalIconNodes = async (selectedLibs: ExternalLibs[]) => {
+  const { externalIconNodes } = externalLibContext;
+  const savedIconNodes = { ...externalIconNodes.value };
+  const newExternalIconNodes: ExternalIconNodes = {};
+
+  try {
+    for (const lib of selectedLibs) {
+      if (savedIconNodes[lib]) {
+        newExternalIconNodes[lib] = savedIconNodes[lib];
+      } else {
+        const response = await fetch(externalLibIconNodesAPI[lib]);
+        const iconDetails = await response.json();
+
+        if (iconDetails) {
+          newExternalIconNodes[lib] = Object.values(iconDetails).map((iconEntity: IconEntity) => {
+            return {
+              ...iconEntity,
+              externalLibrary: lib,
+            };
+          });
+        }
+      }
     }
+
+    externalIconNodes.value = newExternalIconNodes;
+  } catch (error) {
+    console.error(error);
   }
 };
 
-// useUrlSearchParams updates `params` on popstate (Back/Forward). It ignores its own writes
-// until the next tick, so defer the reconcile in case it has to write the param back.
-watch(
-  () => parseLibs(params[URL_PARAM]),
-  (libs) => nextTick(() => syncSelection(libs)),
-);
+// Registered once at module level so they outlive any single component. The selection only
+// changes in the browser, so the watchers never run during SSR.
+watch(externalLibContext.selectedLibs, persistSelection);
+watch(externalLibContext.selectedLibs, fetchExternalIconNodes);
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('popstate', syncSelection);
+}
 
 export function useExternalLibs(): ExternalLibContext {
   const context = inject<ExternalLibContext>(EXTERNAL_LIBS_CONTEXT);
@@ -120,41 +115,9 @@ export function useExternalLibs(): ExternalLibContext {
     throw new Error('useExternalLibs must be used with externalLibs context');
   }
 
-  watch(context.selectedLibs, async (selectedLibs) => {
-    const savedIconNodes = { ...context.externalIconNodes.value };
-    const newExternalIconNodes: ExternalIconNodes = {};
-
-    try {
-      for (const lib of selectedLibs) {
-        if (savedIconNodes[lib]) {
-          newExternalIconNodes[lib] = savedIconNodes[lib];
-        } else {
-          const response = await fetch(externalLibIconNodesAPI[lib]);
-          const iconDetails = await response.json();
-
-          if (iconDetails) {
-            newExternalIconNodes[lib] = Object.values(iconDetails).map((iconEntity: IconEntity) => {
-              return {
-                ...iconEntity,
-                externalLibrary: lib,
-              };
-            });
-          }
-        }
-      }
-
-      context.externalIconNodes.value = newExternalIconNodes;
-    } catch (error) {
-      console.error(error);
-    }
-  });
-
-  // Apply the URL/stored selection after mount, not during setup: the watcher above is lazy,
-  // so the selection has to change after it exists for the icons to be fetched, and changing
-  // it after hydration avoids an SSR mismatch on the checkbox.
-  // Runs on every mount so client-side navigation (pushState, which `params` doesn't see) to a
-  // URL carrying the param reapplies it; it reads the live URL for that reason.
-  onMounted(() => syncSelection(getLibsFromLocation()));
+  // Apply the URL/stored selection after hydration to avoid an SSR mismatch on the checkbox.
+  // Runs on every mount so client-side navigation to a URL carrying the param reapplies it.
+  onMounted(syncSelection);
 
   return context;
 }
