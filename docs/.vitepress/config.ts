@@ -57,12 +57,6 @@ export default defineConfig({
     resolve: {
       alias: [
         {
-          find: /^.*\/VPIconAlignLeft\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/overrides/VPIconAlignLeft.vue', import.meta.url),
-          ),
-        },
-        {
           find: /^.*\/VPFooter\.vue$/,
           replacement: fileURLToPath(
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
