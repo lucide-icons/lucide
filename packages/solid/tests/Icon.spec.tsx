@@ -123,7 +123,7 @@ describe('Icon Component Accessibility', () => {
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
 
-  it('should not have aria-hidden prop when there are children that could be a <title> element', async () => {
+  it('should not have aria-hidden prop and should render child elements when children are present', async () => {
     const { container } = render(() => (
       <Icon
         iconNode={airVent}
@@ -136,6 +136,36 @@ describe('Icon Component Accessibility', () => {
     ));
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+    expect(container.querySelector('title')).toHaveTextContent('Some title');
+  });
+
+  it('should keep aria-hidden prop when children resolve to falsy values', async () => {
+    const { container } = render(() => (
+      <Icon
+        iconNode={airVent}
+        size={48}
+      >
+        {false}
+      </Icon>
+    ));
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should update reactive children and aria-hidden state', async () => {
+    const [showTitle, setShowTitle] = createSignal(false);
+    const { container } = render(() => (
+      <Icon iconNode={airVent}>{showTitle() && <title>Dynamic title</title>}</Icon>
+    ));
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+    expect(container.querySelector('title')).toBeNull();
+
+    setShowTitle(true);
+    flush();
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+    expect(container.querySelector('title')).toHaveTextContent('Dynamic title');
   });
 
   it('should never override aria-hidden prop', async () => {
