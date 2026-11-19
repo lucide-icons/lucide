@@ -7,14 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "music",
-    "sound",
-    "mute",
-    "speaker"
+    "$extends:volume"
   ],
   "categories": [
-    "connectivity",
-    "communication",
-    "multimedia"
+    "$extends:volume"
   ]
 }

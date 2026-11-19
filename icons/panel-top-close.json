@@ -6,14 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:panel-top",
+    "$group:direction-up",
     "menu bar",
-    "drawer",
     "hide",
     "chevron",
     "up"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "layout"
   ]
 }

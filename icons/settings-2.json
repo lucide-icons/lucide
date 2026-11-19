@@ -7,13 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences",
+    "$extends:settings",
     "slider"
   ],
   "categories": [
-    "account"
+    "$extends:settings"
   ]
 }

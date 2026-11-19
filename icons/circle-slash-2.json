@@ -25,9 +25,8 @@
     "normal"
   ],
   "categories": [
-    "shapes",
-    "math",
-    "development"
+    "$extends:circle-slash",
+    "shapes"
   ],
   "aliases": [
     {

@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax,  no-await-in-loop */
 import fs from 'fs';
 import path from 'path';
 import { loadEnvFile } from 'node:process';
@@ -10,7 +9,9 @@ const dataDirectory = path.resolve(currentDir, '.vitepress/data');
 try {
   // Load environment variables from .env file, if it exists.
   loadEnvFile(`${currentDir}/.env`);
-} catch (error) {}
+} catch {
+  // No .env file, so rely on the environment as-is.
+}
 
 interface IconCollection {
   /** Human readable name, used for logging. */

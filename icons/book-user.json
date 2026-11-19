@@ -5,12 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "people",
+    "$extends:book",
+    "$group:user",
     "family",
     "friends",
     "acquaintances",
-    "contacts",
     "details",
     "addresses",
     "phone numbers",
@@ -20,7 +19,6 @@
   ],
   "categories": [
     "account",
-    "connectivity",
     "communication",
     "social"
   ]

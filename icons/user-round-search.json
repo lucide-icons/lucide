@@ -6,17 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
-    "lens"
+    "$extends:user-round",
+    "$group:search"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "social"
   ]
 }

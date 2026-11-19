@@ -6,10 +6,8 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:plane",
     "arrival",
-    "plane",
-    "trip",
-    "airplane",
     "landing"
   ],
   "categories": [

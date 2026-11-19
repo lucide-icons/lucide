@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/// <reference types="node" />
 import { basename } from 'path';
 import { readSvg } from '@lucide/helpers';
 import { type INode, parseSync } from 'svgson';

@@ -9,19 +9,14 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "removing a tag from an item",
-    "deleting a labeled product or entry"
+    "Removing a tag from an item",
+    "Deleting a labeled product or entry"
   ],
   "tags": [
-    "label",
-    "badge",
-    "ticket",
-    "mark",
-    "x",
-    "delete",
-    "remove"
+    "$extends:tag",
+    "$group:x"
   ],
   "categories": [
-    "account"
+    "$extends:tag"
   ]
 }

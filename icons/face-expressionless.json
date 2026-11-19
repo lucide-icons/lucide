@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:emoticon",
+    "nuisance",
+    "annoyed",
+    "annoyance",
+    "frustration"
+  ],
+  "categories": [
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "annoyed",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

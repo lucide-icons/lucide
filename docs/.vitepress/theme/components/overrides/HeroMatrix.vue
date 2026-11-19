@@ -10,7 +10,7 @@ import {
   sun,
   moon,
   camera,
-  music,
+  sixteenthNotes,
   video,
   globe,
   layers,
@@ -41,10 +41,10 @@ import {
   sparkles,
 } from '../../../data/iconNodes';
 import createElement from 'lucide/src/createElement';
-import { IconNode } from 'lucide';
+import { IconNode } from 'lucide/src/types';
 
 const icons: Component[] = [
-  heart, star, zap, code, feather, cloud, sun, moon, camera, music,
+  heart, star, zap, code, feather, cloud, sun, moon, camera, sixteenthNotes,
   video, globe, layers, packageIcon, compass, command, terminal, database,
   server, cpu, lock, key, shield, wifi, download, upload, search,
   settings, users, mail, bell, calendar, clock, gitBranch, funnel,

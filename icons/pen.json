@@ -9,12 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "pencil",
-    "change",
-    "create",
-    "draw",
-    "writer",
-    "writing",
+    "$group:pen",
     "biro",
     "ink",
     "marker",

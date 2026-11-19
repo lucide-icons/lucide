@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "simoncoudeville",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing MIDI connections and ports in music production software",
+    "Indicating MIDI input and output on synthesizers, keyboards, and controllers",
+    "Showing MIDI device connectivity in audio and hardware configuration interfaces",
+    "Representing MIDI routing, patching, and signal flow",
+    "Identifying 5-pin DIN MIDI connectors in technical diagrams and device documentation"
+  ],
+  "tags": [
+    "musical instrument digital interface",
+    "port",
+    "connector",
+    "socket",
+    "jack",
+    "din",
+    "5-pin",
+    "audio",
+    "music",
+    "synthesizer",
+    "keyboard",
+    "controller",
+    "interface",
+    "input",
+    "output",
+    "io"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "devices"
+  ]
+}

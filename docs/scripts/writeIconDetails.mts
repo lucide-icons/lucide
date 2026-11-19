@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
+import { getIconMetaData } from '@lucide/build-icons';
+import { toCamelCase } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = await readSvgDirectory(ICONS_DIR, '.json');
+const iconMetaData = await getIconMetaData(ICONS_DIR);
 
 const iconDetailsDirectory = path.resolve(currentDir, '.vitepress/data', 'iconDetails');
 
@@ -18,21 +19,31 @@ if (!fs.existsSync(iconDetailsDirectory)) {
 
 const indexFile = path.resolve(iconDetailsDirectory, `index.ts`);
 
-const writeIconFiles = icons.map(async (iconFileName) => {
-  const iconName = path.basename(iconFileName, '.json');
+const writeIconFiles = Object.entries(iconMetaData).map(async ([iconName, metaData]) => {
   const location = path.resolve(iconDetailsDirectory, `${iconName}.ts`);
+  const {
+    tags,
+    categories,
+    contributors,
+    aliases,
+    deprecated,
+    deprecationReason,
+    toBeRemovedInVersion,
+  } = metaData;
 
   const contents = `\
 import iconNode from '../iconNodes/${iconName}.node.json' with { type: 'json' };
-import metaData from '../../../../icons/${iconName}.json' with { type: 'json' };
 import releaseData from '../releaseMetadata/${iconName}.json' with { type: 'json' };
 import popularity from '../iconPopularity/${iconName}.json' with { type: 'json' };
+import { IconMetaData, IconNode } from '~/.vitepress/theme/types';
+
+const metaData: IconMetaData = ${JSON.stringify({ tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion })};
 
 const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData;
 
 const iconDetails = {
   name: '${iconName}',
-  iconNode,
+  iconNode: iconNode as IconNode,
   contributors,
   tags,
   categories,

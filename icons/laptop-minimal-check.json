@@ -6,18 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "computer",
-    "screen",
-    "remote",
-    "success",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:laptop-minimal",
+    "$group:check"
   ],
   "categories": [
-    "devices",
+    "$extends:laptop-minimal",
     "notifications"
   ]
 }
