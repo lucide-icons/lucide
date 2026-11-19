@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Previewing object placement in augmented reality",
+    "Defining 3D bounding boxes or spatial boundaries",
+    "Representing placeholder volumes or unrendered geometry",
+    "Indicating wireframe views in 3D editors",
+    "Representing 3D scanning or spatial mapping",
+    "Marking collision volumes in games or simulations",
+    "Representing a minimal software installation"
+  ],
+  "tags": [
+    "$extends:box",
+    "$group:dashed",
+    "augmented reality",
+    "ar",
+    "bounding box",
+    "bounds",
+    "spatial boundary",
+    "selection volume",
+    "placeholder",
+    "volume",
+    "wireframe",
+    "mesh",
+    "unrendered",
+    "3d scanning",
+    "spatial mapping",
+    "collision",
+    "hitbox"
+  ],
+  "categories": [
+    "$extends:box",
+    "design"
+  ]
+}
