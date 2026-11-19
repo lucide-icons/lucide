@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Indicating spray painting or coating equipment",
+    "Selecting paint gun tool in home improvement or auto repair apps",
+    "Selecting spray-painting equipment from digital tool palettes"
+  ],
+  "tags": [
+    "spray",
+    "airbrush",
+    "aerosol",
+    "painter",
+    "tool",
+    "diy",
+    "automotive",
+    "finishing",
+    "coating",
+    "color",
+    "colour",
+    "painting",
+    "sprayer",
+    "spraying",
+    "varnish",
+    "lacquer",
+    "enamel",
+    "pneumatic"
+  ],
+  "categories": [
+    "tools"
+  ]
+}

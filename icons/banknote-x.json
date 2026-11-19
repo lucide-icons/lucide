@@ -10,8 +10,6 @@
   "tags": [
     "$extends:banknote",
     "$group:x",
-    "error",
-    "failed",
     "rejected",
     "declined",
     "lost"
