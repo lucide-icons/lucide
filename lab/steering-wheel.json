@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "driving",
+    "driver",
+    "racing",
+    "racer",
+    "motor sport",
+    "formula one",
+    "formula 1",
+    "f1",
+    "car",
+    "vehicle",
+    "direction"
+  ],
+  "categories": [
+    "sports",
+    "transportation",
+    "gaming"
+  ]
+}

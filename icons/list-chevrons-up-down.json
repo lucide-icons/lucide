@@ -10,11 +10,14 @@
     "juliankellydesign",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "options",
+    "$extends:list",
+    "$group:direction-up",
+    "$group:direction-down",
     "items",
-    "collapse",
-    "expand",
+    "$group:collapse",
+    "$group:expand",
     "details",
     "disclosure",
     "show",
@@ -22,13 +25,9 @@
     "toggle",
     "accordion",
     "more",
-    "less",
-    "fold",
-    "unfold",
-    "vertical"
+    "less"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "$extends:list"
   ]
 }

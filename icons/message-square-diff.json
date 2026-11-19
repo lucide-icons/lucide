@@ -4,13 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
+    "$extends:message-square",
     "add",
     "patch",
     "difference",
@@ -24,8 +20,8 @@
     "git"
   ],
   "categories": [
+    "$extends:message-square",
     "development",
-    "files",
-    "social"
+    "files"
   ]
 }

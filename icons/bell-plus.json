@@ -5,13 +5,11 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "notification",
-    "silent",
-    "reminder",
-    "add",
-    "create",
-    "new"
+    "$extends:bell",
+    "$group:plus",
+    "silent"
   ],
   "categories": [
     "notifications"

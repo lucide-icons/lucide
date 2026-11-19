@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "iskepr"
+  ],
+  "use-cases": [
+    "Representing a mosque as a building type or place of worship",
+    "Categorizing religious and spiritual points of interest on a map"
+  ],
+  "tags": [
+    "mosque",
+    "masjid",
+    "islam",
+    "muslim",
+    "ramadan",
+    "eid",
+    "prayer",
+    "worship",
+    "building",
+    "minaret",
+    "dome",
+    "architecture",
+    "faith",
+    "religion",
+    "holy",
+    "sacred",
+    "landmark",
+    "community",
+    "spiritual",
+    "tourism",
+    "map",
+    "heritage"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "travel"
+  ]
+}

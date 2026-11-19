@@ -5,23 +5,22 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "primary",
-    "drawer",
+    "$extends:panel-left",
+    "$group:direction-left",
     "hide",
     "chevron",
     "<"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "$extends:panel-left"
   ],
   "aliases": [
     {
       "name": "sidebar-close",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

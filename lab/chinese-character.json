@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "congemcd",
+    "rrod497"
+  ],
+  "tags": [
+    "text",
+    "language",
+    "chinese"
+  ],
+  "categories": [
+    "text"
+  ]
+}

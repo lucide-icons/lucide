@@ -85,8 +85,26 @@
       }
     ]
   },
-  "lucide-react-native": {
+  "@lucide/solid": {
     "order": 5,
+    "icon": "solid",
+    "docsAlias": "solid",
+    "packageDirname": "solid",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/solid",
+        "href": "https://www.npmjs.com/package/@lucide/solid"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/solid",
+        "href": "https://www.npmjs.com/package/@lucide/solid"
+      }
+    ]
+  },
+  "lucide-react-native": {
+    "order": 6,
     "icon": "react-native",
     "docsAlias": "react-native",
     "shields": [
@@ -103,7 +121,7 @@
     ]
   },
   "@lucide/angular": {
-    "order": 6,
+    "order": 7,
     "icon": "angular",
     "docsAlias": "angular",
     "packageDirname": "angular",

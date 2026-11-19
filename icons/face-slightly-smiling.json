@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:emoticon",
+    "smile",
+    "happy",
+    "happiness",
+    "good",
+    "positive",
+    "friendly",
+    "patronizing",
+    "passive aggressive",
+    "ironic"
+  ],
+  "categories": [
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "smile",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

@@ -6,6 +6,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "justice",
     "law",
@@ -20,7 +21,6 @@
     "mallet"
   ],
   "categories": [
-    "navigation",
     "tools"
   ]
 }

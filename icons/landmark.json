@@ -6,6 +6,7 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "bank",
     "building",
@@ -32,7 +33,9 @@
     "library",
     "temple",
     "ancient",
-    "structure"
+    "structure",
+    "loan",
+    "lending"
   ],
   "categories": [
     "finance",

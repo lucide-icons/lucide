@@ -3,17 +3,12 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "rectangle",
-    "aspect ratio",
-    "1:1",
-    "shape",
-    "snippet",
-    "code",
-    "coding"
+    "$extends:square-dashed-bottom",
+    "$group:code"
   ],
   "categories": [
-    "development",
-    "files"
+    "$extends:square-dashed-bottom"
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:folder"
+  ],
+  "use-cases": [
+    "Representing FTP or SFTP directories",
+    "Identifying shared folders and network drives",
+    "Browsing files on remote servers",
+    "Representing network-attached storage"
+  ],
+  "tags": [
+    "$extends:folder",
+    "network",
+    "ftp",
+    "sftp",
+    "file transfer",
+    "file transfer protocol",
+    "shared folder",
+    "file sharing",
+    "network drive",
+    "network storage",
+    "remote",
+    "server",
+    "nas",
+    "smb",
+    "nfs"
+  ],
+  "categories": [
+    "$extends:folder",
+    "connectivity",
+    "development"
+  ]
+}

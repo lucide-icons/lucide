@@ -3,7 +3,10 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:position-top",
+    "$group:position-bottom",
     "center",
     "items",
     "flex",

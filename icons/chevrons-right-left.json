@@ -3,10 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "collapse",
-    "fold",
-    "horizontal"
+    "$group:direction-right",
+    "$group:direction-left",
+    "$group:collapse"
   ],
   "categories": [
     "arrows"

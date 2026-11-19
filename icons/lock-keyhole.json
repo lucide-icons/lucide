@@ -8,13 +8,11 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "security",
-    "password",
-    "secure",
-    "admin"
+    "$extends:lock"
   ],
   "categories": [
-    "security"
+    "$extends:lock"
   ]
 }

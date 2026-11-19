@@ -22,7 +22,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
       height="42"
     />
     <VPButton
-      href="https://opencollective.com/lucide-icons"
+      href="/sponsor"
       class="sponsor-button"
       text="Become a sponsor"
     />

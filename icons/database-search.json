@@ -5,17 +5,12 @@
     "jguddas",
     "Spleefies"
   ],
+  "use-cases": [],
   "tags": [
-    "storage",
-    "memory",
-    "container",
-    "tin",
-    "pot",
-    "bytes",
-    "servers"
+    "$extends:database",
+    "$group:search"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

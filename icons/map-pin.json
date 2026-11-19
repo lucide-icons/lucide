@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "location",
     "waypoint",
@@ -14,7 +15,6 @@
   ],
   "categories": [
     "navigation",
-    "travel",
-    "account"
+    "travel"
   ]
 }

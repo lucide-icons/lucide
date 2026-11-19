@@ -4,22 +4,18 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "code",
-    "json",
-    "curly braces",
-    "curly brackets"
+    "$extends:file-braces"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:file-braces"
   ],
   "aliases": [
     {
       "name": "file-json-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

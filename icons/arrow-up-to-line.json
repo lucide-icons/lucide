@@ -4,17 +4,16 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "forward",
-    "direction",
-    "north",
+    "$extends:arrow-up",
+    "$group:direction-up",
+    "$group:navigation-first",
     "upload",
-    "collapse",
-    "fold",
-    "vertical"
+    "$group:collapse"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-up",
     "files"
   ]
 }

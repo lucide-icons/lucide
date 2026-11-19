@@ -5,11 +5,14 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "bank",
     "purchase",
     "payment",
-    "cc"
+    "cc",
+    "cashier",
+    "merchant"
   ],
   "categories": [
     "account",
