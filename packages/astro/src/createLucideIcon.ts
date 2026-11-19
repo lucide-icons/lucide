@@ -41,6 +41,11 @@ function createLucideIcon(
   const Component = createComponent(
     ($$result, $$props: Record<string, unknown>, $$slots) => {
       const { class: className, ...restProps } = $$props;
+      const defaultSlot = $$slots?.['default'];
+      const slots = defaultSlot
+        ? { default: () => render`${renderSlot($$result, defaultSlot)}` }
+        : undefined;
+
       return render`${renderComponent(
         $$result,
         'Icon',
@@ -50,7 +55,7 @@ function createLucideIcon(
           icon,
           ...restProps,
         },
-        { default: () => render`${renderSlot($$result, $$slots['default'])}` },
+        slots,
       )}`;
     },
     undefined,
