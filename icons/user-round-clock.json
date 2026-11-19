@@ -17,29 +17,20 @@
     "displaying an audit or compliance timestamp for a user"
   ],
   "tags": [
-    "person",
-    "account",
-    "contact",
-    "history",
+    "$extends:user-round",
+    "$group:clock",
     "log",
-    "clock",
-    "time",
     "recent",
     "activity",
     "session",
-    "timestamp",
     "avatar",
-    "profile",
     "badge",
     "reminder",
-    "schedule",
     "audit"
   ],
   "categories": [
-    "account",
-    "social",
+    "$extends:user-round",
     "time",
-    "people",
-    "notifications"
+    "people"
   ]
 }
