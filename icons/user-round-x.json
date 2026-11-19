@@ -8,8 +8,7 @@
     "$extends:user-round",
     "$group:x",
     "unfollow",
-    "unsubscribe",
-    "unavailable"
+    "unsubscribe"
   ],
   "categories": [
     "$extends:user-round"

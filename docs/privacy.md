@@ -7,7 +7,7 @@ editLink: false
 
 # Privacy Statement
 
-_Last updated: 27 October 2026_
+_Last updated: 10 November 2026_
 
 Lucide is an open-source project. We built lucide.dev to collect as little about you as possible: We aim to collect as little personal data as possible. We don't sell your personal data, and we don't require an account to browse our website. This page explains what does happen when you visit, and why.
 
@@ -25,9 +25,15 @@ The site runs on [Vercel](https://vercel.com/legal/privacy-policy). Like any web
 
 ### Analytics
 
-We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run **OpenPanel** on our own subdomain (insights.lucide.dev), and the data it collects is stored in the EU. It counts page views and how the site is used: which icons are copied or opened in Lucide Studio, when an icon search starts, changes to the icon customiser and sorting, clicks on the home page buttons and packages, and how far down a page you scroll.
+We use privacy-friendly analytics to see which pages and icons are popular, so we know what to improve. We run **OpenPanel** on our own subdomain (insights.lucide.dev), and the data it collects is stored in the EU. It counts page views and how the site is used: which icons are copied or opened in Lucide Studio, when an icon search starts, changes to the icon customiser and sorting, clicks on the home page buttons and packages, clicks on early access menu items, waitlist sign-ups, and how far down a page you scroll.
 
 OpenPanel doesn't set cookies or store anything in your browser. Along with these events it records general information such as the referring site, browser type, device type and country. Visits are counted with a temporary, anonymised identifier that cannot be used to recognise you on other sites or on later days. We don't track clicks on outgoing links, and we never combine this data with other sources.
+
+### Waitlists
+
+When you join a waitlist, we store your email address, the product you signed up for, the date, and any answers you give on the form or in the optional follow-up questions. We use this to send you launch updates for that product and to decide what to build. You are only added after you click the link in the confirmation email.
+
+Emails and contacts are handled by [Resend](https://resend.com/legal/privacy-policy), our email provider, which acts as our processor. The optional follow-up questions are handled by [Tally](https://tally.so/help/gdpr), a Belgian form provider that stores responses in the EU and also acts as our processor. You can unsubscribe from any email. We keep your details until the waitlist closes or you ask us to delete them, whichever comes first.
 
 ### Search
 
@@ -61,9 +67,11 @@ These items are needed for features you use, or they store choices you made your
 
 We process this data on the basis of our legitimate interest (Article 6(1)(f) GDPR) in running a fast, secure and sustainable website: hosting and protecting the site, understanding how it is used, and funding the project through non-tracking ads. We keep data minimal and avoid identifying individual visitors.
 
+Waitlist data is processed on the basis of your consent (Article 6(1)(a) GDPR), which you give by submitting the form and confirming your email address. You can withdraw it at any time by unsubscribing or contacting us.
+
 ## International transfers
 
-Vercel, Algolia, Carbon Ads, GitHub and Shields.io may process data outside the European Economic Area, including in the United States. Where this happens, these providers rely on safeguards such as the EU–US Data Privacy Framework or the European Commission's Standard Contractual Clauses.
+Vercel, Algolia, Carbon Ads, GitHub, Shields.io and Resend may process data outside the European Economic Area, including in the United States. Where this happens, these providers rely on safeguards such as the EU–US Data Privacy Framework or the European Commission's Standard Contractual Clauses.
 
 ## Your rights
 
