@@ -20,8 +20,6 @@
     "$group:x",
     "mute",
     "silence",
-    "disabled",
-    "unavailable",
     "equalizer",
     "equaliser",
     "waveform"

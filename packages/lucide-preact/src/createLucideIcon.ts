@@ -1,5 +1,5 @@
-import { h, type SignalLike } from 'preact';
-import { mergeClasses, toLucideIconData, toPascalCase } from '@lucide/shared';
+import { h } from 'preact';
+import { toLucideIconData, toPascalCase } from '@lucide/shared';
 import Icon from './Icon';
 import type { LucideIcon, LucideIconData, LucideIconNode, LucideProps } from './types';
 
@@ -35,13 +35,12 @@ function createLucideIcon(
       ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode[], aliases)
       : iconDataOrName;
 
-  const Component = ({ class: classes = '', className = '', children, ...props }: LucideProps) =>
+  const Component = ({ children, ...props }: LucideProps) =>
     h(
       Icon,
       {
         ...props,
         icon: iconData,
-        class: mergeClasses<string | SignalLike<string | undefined>>(classes, className),
       },
       children,
     );
