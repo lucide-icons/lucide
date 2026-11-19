@@ -6,6 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:dashed",
     "pending",
     "dot",
     "progress",
@@ -16,7 +17,7 @@
     "version control"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "$extends:circle",
+    "development"
   ]
 }

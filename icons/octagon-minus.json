@@ -6,13 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
     "stop",
     "forbidden",
-    "subtract",
-    "remove",
     "decrease",
-    "reduce",
-    "-",
     "traffic",
     "halt",
     "restricted"

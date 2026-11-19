@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "synthetic-blood",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "labeling resistors in circuit diagrams",
+    "decorating electronics tutorials and articles",
+    "representing passive components in schematic editors",
+    "identifying resistor entries in bills of materials",
+    "indicating resistance or ohm-related settings in a UI"
+  ],
+  "tags": [
+    "circuit",
+    "component",
+    "resistor",
+    "electronics",
+    "electrical",
+    "ohm",
+    "schematic",
+    "symbol",
+    "passive",
+    "engineering",
+    "iec"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

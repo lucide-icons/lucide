@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "elenakovelskikh"
+  ],
+  "use-cases": [
+    "Indicating new or unread messages in messaging systems",
+    "Drawing attention to recent activity in inboxes and notification areas"
+  ],
+  "tags": [
+    "$extends:mail",
+    "$group:dot",
+    "mail",
+    "envelope",
+    "communication",
+    "post",
+    "send",
+    "address"
+  ],
+  "categories": [
+    "$extends:mail",
+    "notifications"
+  ]
+}

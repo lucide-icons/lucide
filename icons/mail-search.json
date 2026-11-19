@@ -5,11 +5,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "search",
-    "lens"
+    "$extends:mail",
+    "$group:search"
   ],
   "categories": [
     "mail"

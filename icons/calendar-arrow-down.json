@@ -7,20 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
-    "sort",
-    "order",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$extends:calendar",
+    "$group:direction-down",
+    "$group:sort"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Time & calendar",
+  "description": "Icons for clocks, calendars, schedules, history, timers, and time tracking.",
   "icon": "calendar"
 }

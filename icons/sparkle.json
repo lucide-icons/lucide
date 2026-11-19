@@ -6,17 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "star",
+    "$group:sparkles",
     "effect",
     "filter",
     "night",
-    "magic",
-    "shiny",
-    "glitter",
-    "twinkle",
     "celebration"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "ai"
   ]
 }

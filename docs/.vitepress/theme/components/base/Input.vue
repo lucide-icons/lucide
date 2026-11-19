@@ -14,7 +14,8 @@ export interface InputProps {
 import { ref, onMounted, nextTick, watch } from 'vue';
 import Icon from '@lucide/vue/src/Icon';
 import { x } from '../../../data/iconNodes';
-import IconButton from './IconButton.vue';
+import Button from './Button.vue';
+import Kbd from './Kbd.vue';
 
 const props = withDefaults(defineProps<InputProps>(), {
   type: 'text',
@@ -29,7 +30,7 @@ const emit = defineEmits(['change', 'input', 'update:modelValue']);
 const updateShortcutSpacing = () => {
   nextTick(() => {
     if (shortcutEl.value && wrapperEl.value) {
-      const shortcutWidth = shortcutEl.value.offsetWidth;
+      const shortcutWidth = shortcutEl.value.$el.offsetWidth;
       wrapperEl.value.style.setProperty('--shortcut-width', `${shortcutWidth}px`);
     }
   });
@@ -68,9 +69,9 @@ defineExpose({
       ref="input"
       :value="modelValue"
       v-bind="$attrs"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
-    <IconButton
+    <Button
       @click="onClear"
       v-if="type === 'search' && modelValue"
       class="clear-button"
@@ -79,14 +80,15 @@ defineExpose({
     >
       <Icon
         :iconNode="x"
+        name="x"
         :size="20"
       />
-    </IconButton>
-    <kbd
+    </Button>
+    <Kbd
       v-if="shortcut"
       class="shortcut"
       ref="shortcutEl"
-      >{{ shortcut }}</kbd
+      >{{ shortcut }}</Kbd
     >
   </div>
 </template>
@@ -98,7 +100,7 @@ defineExpose({
 
 .input {
   justify-content: flex-start;
-  border: 1px solid transparent;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 0 10px 0 12px;
   width: 100%;
@@ -108,16 +110,21 @@ defineExpose({
   transition:
     color 0.25s,
     border-color 0.25s,
-    background-color 0.25s;
+    background-color 0.25s,
+    box-shadow 0.25s;
+  transition-duration: 0.25s;
 }
 
 .input.has-shortcut {
   padding-right: calc(var(--shortcut-width, 40px) + 22px);
 }
 
+/* Same as FakeInput: a quiet border at rest, a brand border with a soft ring on hover and focus */
 .input:hover,
 .input:focus {
+  outline: none;
   border-color: var(--vp-c-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand) 15%, transparent);
 }
 .input:focus {
   background-color: var(--vp-c-bg);
@@ -140,33 +147,24 @@ defineExpose({
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 2px 6px;
-  font-size: 12px;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--vp-c-text-3);
-  background: var(--vp-c-default-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
   pointer-events: none;
 }
 
-.input[type="search"]::-webkit-search-cancel-button {
+.input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-.input[type="search"]::-ms-clear {
+.input[type='search']::-ms-clear {
   display: none;
 }
 
-.input[type="search"]::-o-clear {
+.input[type='search']::-o-clear {
   display: none;
 }
 
-.input[type="search"]::-moz-clear {
+.input[type='search']::-moz-clear {
   display: none;
 }
 
@@ -189,8 +187,15 @@ defineExpose({
   z-index: 1;
   color: var(--vp-c-text-2);
   pointer-events: none;
+  transition:
+    color 0.25s,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-duration: 0.25s, 0.3s;
 }
+
+/* Like the FakeInput search icon, it tilts as if it starts looking */
+.input-wrapper > svg:has(+ .input.has-icon:hover),
 .input-wrapper > svg:has(+ .input.has-icon:focus) {
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-brand-1);
 }
 </style>

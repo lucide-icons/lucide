@@ -7,16 +7,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:house",
+    "$group:heart",
     "home sweet home",
     "abode",
-    "building",
-    "residence",
     "healthy living",
     "lifestyle"
   ],
   "categories": [
     "home",
-    "buildings",
-    "medical"
+    "buildings"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: closing inward or reducing extent",
+  "tags": [
+    "collapse",
+    "fold"
+  ]
+}

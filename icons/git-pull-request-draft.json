@@ -6,13 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
-    "open",
+    "$extends:git-pull-request",
     "draft",
     "dashed"
   ],
   "categories": [
-    "development"
+    "$extends:git-pull-request"
   ]
 }
