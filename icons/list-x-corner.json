@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AbeyHurtis"
+  ],
+  "tags": [
+    "list",
+    "x",
+    "corner",
+    "delete",
+    "close",
+    "cancel",
+    "cross",
+    "mark",
+    "sharp",
+    "options",
+    "remove",
+    "bottom",
+    "to-do",
+    "checklist"
+  ],
+  "categories": [
+    "text",
+    "multimedia"
+  ]
+}
