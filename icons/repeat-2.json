@@ -4,17 +4,16 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "arrows",
+    "$extends:repeat",
     "retweet",
     "repost",
     "share",
-    "repeat",
-    "loop"
+    "repeat"
   ],
   "categories": [
-    "arrows",
-    "social",
-    "multimedia"
+    "$extends:repeat",
+    "social"
   ]
 }

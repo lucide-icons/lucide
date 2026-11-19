@@ -4,28 +4,18 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "brush",
-    "paintbrush",
-    "design",
-    "color",
-    "colour",
-    "decoration",
-    "diy"
+    "$extends:paintbrush"
   ],
   "categories": [
-    "text",
-    "design",
-    "photography",
-    "home",
-    "tools"
+    "$extends:paintbrush"
   ],
   "aliases": [
     {
       "name": "paintbrush-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

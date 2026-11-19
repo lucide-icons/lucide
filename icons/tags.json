@@ -5,6 +5,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "labels",
     "badges",
@@ -14,6 +15,7 @@
     "multiple"
   ],
   "categories": [
-    "account"
+    "account",
+    "shopping"
   ]
 }

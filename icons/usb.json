@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "universal",
     "serial",
@@ -14,7 +15,6 @@
   ],
   "categories": [
     "devices",
-    "multimedia",
-    "home"
+    "connectivity"
   ]
 }

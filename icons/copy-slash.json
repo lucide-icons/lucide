@@ -4,26 +4,19 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
-    "cancel",
-    "ban",
+    "$extends:copy",
+    "$group:off",
     "no",
     "stop",
-    "forbidden",
-    "prohibited",
     "error",
-    "multiple",
     "divide",
     "division",
     "split",
-    "or",
-    "/"
+    "or"
   ],
   "categories": [
-    "text",
-    "development",
-    "math"
+    "$extends:copy"
   ]
 }

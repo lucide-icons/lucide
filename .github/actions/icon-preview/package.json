@@ -1,0 +1,14 @@
+{
+  "name": "@lucide/icon-preview-action",
+  "private": true,
+  "type": "module",
+  "description": "GitHub action that generates the icon preview comment markup for changed icons in a pull request",
+  "scripts": {
+    "start": "node ./generateChangedIconsCommentMarkup.mts",
+    "debug": "node --env-file .env ./generateChangedIconsCommentMarkup.mts"
+  },
+  "dependencies": {
+    "@lucide/helpers": "workspace:*",
+    "svgson": "^5.3.1"
+  }
+}

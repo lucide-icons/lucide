@@ -8,16 +8,16 @@
     "title": "Accounts & access"
   },
   {
+    "name": "ai",
+    "title": "AI"
+  },
+  {
     "name": "animals",
     "title": "Animals"
   },
   {
     "name": "arrows",
     "title": "Arrows"
-  },
-  {
-    "name": "brands",
-    "title": "Brands"
   },
   {
     "name": "buildings",
@@ -52,6 +52,10 @@
     "title": "Devices"
   },
   {
+    "name": "education",
+    "title": "Education"
+  },
+  {
     "name": "emoji",
     "title": "Emoji"
   },
@@ -80,6 +84,14 @@
     "title": "Layout"
   },
   {
+    "name": "letters-digits",
+    "title": "Letters & digits"
+  },
+  {
+    "name": "logistics",
+    "title": "Logistics"
+  },
+  {
     "name": "mail",
     "title": "Mail"
   },
@@ -101,11 +113,11 @@
   },
   {
     "name": "navigation",
-    "title": "Navigation"
+    "title": "Navigation & places"
   },
   {
     "name": "notifications",
-    "title": "Notification"
+    "title": "Notifications"
   },
   {
     "name": "people",
@@ -118,10 +130,6 @@
   {
     "name": "science",
     "title": "Science"
-  },
-  {
-    "name": "seasons",
-    "title": "Seasons"
   },
   {
     "name": "security",

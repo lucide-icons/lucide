@@ -5,18 +5,18 @@
     "ericfennis",
     "peteruithoven"
   ],
+  "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
+    "$extends:calendar",
+    "$group:digit",
     "single",
     "singular",
     "once",
     "1",
-    "first"
+    "first",
+    "today"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

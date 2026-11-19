@@ -1,0 +1,6 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "AI",
+  "description": "Icons for artificial intelligence, assistants, chatbots, machine learning, and generated content.",
+  "icon": "sparkles"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kongsgard"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:radio",
+    "$group:off"
+  ],
+  "categories": [
+    "$extends:radio"
+  ]
+}

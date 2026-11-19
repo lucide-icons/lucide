@@ -8,6 +8,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "signal",
     "broadcast",
@@ -18,6 +19,6 @@
   "categories": [
     "devices",
     "multimedia",
-    "social"
+    "connectivity"
   ]
 }

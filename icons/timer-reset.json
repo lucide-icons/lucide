@@ -4,12 +4,11 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "time",
-    "timer",
-    "stopwatch"
+    "$extends:timer"
   ],
   "categories": [
-    "time"
+    "$extends:timer"
   ]
 }

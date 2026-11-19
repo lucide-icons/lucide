@@ -10,6 +10,7 @@
     "danielbayley",
     "jordan808"
   ],
+  "use-cases": [],
   "tags": [
     "delivery",
     "van",
@@ -18,6 +19,7 @@
     "lorry"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "logistics"
   ]
 }

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:sync",
+    "transfer",
+    "backup",
+    "storage",
+    "upload",
+    "download",
+    "connection",
+    "network",
+    "data"
+  ],
+  "categories": [
+    "arrows",
+    "files"
+  ]
+}

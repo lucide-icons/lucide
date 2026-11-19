@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "archer",
+    "arrow",
+    "exploration",
+    "fire",
+    "philosophy",
+    "astrology",
+    "star sign",
+    "horoscope",
+    "constellation",
+    "celestial"
+  ],
+  "categories": [
+    "social",
+    "emoji"
+  ]
+}

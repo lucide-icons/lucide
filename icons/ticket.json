@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "entry",
     "pass",
@@ -13,7 +14,9 @@
     "concert",
     "show",
     "perforated",
-    "dashed"
+    "dashed",
+    "invite",
+    "invitation"
   ],
   "categories": [
     "account",

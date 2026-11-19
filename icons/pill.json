@@ -4,13 +4,16 @@
     "karsa-mistmere",
     "it-is-not"
   ],
+  "use-cases": [],
   "tags": [
     "medicine",
     "medication",
     "drug",
     "prescription",
     "tablet",
-    "pharmacy"
+    "pharmacy",
+    "sick",
+    "illness"
   ],
   "categories": [
     "medical"

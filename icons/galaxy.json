@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing galaxies, stars, or deep space in astronomy content",
+    "Visualizing the universe or cosmos in science education",
+    "Marking space exploration, stargazing, or observatory features",
+    "Identifying star chart or constellation map features",
+    "Signifying interstellar or sci-fi travel sections in apps",
+    "Branding planetarium events or astronomy clubs",
+    "Decorating space-themed user interfaces or games",
+    "Marking cosmic discoveries or research in science publications"
+  ],
+  "tags": [
+    "astronomy",
+    "space",
+    "stars",
+    "cosmos",
+    "universe",
+    "spiral",
+    "milky way",
+    "nebula",
+    "cosmology",
+    "interstellar",
+    "celestial",
+    "constellation",
+    "stargazing",
+    "spaceflight"
+  ],
+  "categories": [
+    "science"
+  ]
+}

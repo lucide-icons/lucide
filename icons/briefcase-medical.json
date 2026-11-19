@@ -6,13 +6,13 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "doctor",
     "medicine",
     "first aid"
   ],
   "categories": [
-    "medical",
-    "transportation"
+    "medical"
   ]
 }

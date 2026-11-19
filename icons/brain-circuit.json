@@ -6,17 +6,13 @@
     "it-is-not",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "mind",
-    "intellect",
-    "artificial intelligence",
-    "ai",
-    "deep learning",
-    "machine learning",
-    "computing"
+    "$extends:brain"
   ],
   "categories": [
     "science",
-    "development"
+    "development",
+    "ai"
   ]
 }
