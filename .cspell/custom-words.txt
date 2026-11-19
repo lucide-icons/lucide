@@ -32,6 +32,7 @@ glassmorphism
 gltf
 halloumi
 helpdesk
+hitbox
 interpoint
 interpunct
 middot
