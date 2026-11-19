@@ -29,7 +29,10 @@
     "3d scanning",
     "spatial mapping",
     "collision",
-    "hitbox"
+    "hitbox",
+    "bounding volume",
+    "collision detection",
+    "selection boundary"
   ],
   "categories": [
     "$extends:box",
