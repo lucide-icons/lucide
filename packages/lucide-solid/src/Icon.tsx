@@ -41,6 +41,8 @@ const Icon = (props: LucideProps & IconProps) => {
       },
   );
 
+  const hasChildren = () => resolvedChildren.toArray().some(Boolean);
+
   const builtIcon = createMemo(() =>
     buildLucideIconNode(icon(), {
       color: localProps.color ?? globalProps.color,
@@ -50,24 +52,34 @@ const Icon = (props: LucideProps & IconProps) => {
       absoluteStrokeWidth: localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
       nonScalingStroke: localProps.nonScalingStroke ?? globalProps.nonScalingStroke,
       className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
-      hasA11yProp: resolvedChildren.toArray().some(Boolean) || hasA11yProp(rest),
+      hasA11yProp: hasChildren() || hasA11yProp(rest),
       attributes: rest,
     }),
   );
 
+  const paths = (
+    <For each={builtIcon()[2] ?? []}>
+      {([elementName, attrs]) => {
+        return (
+          <Dynamic
+            component={elementName}
+            {...attrs}
+          />
+        );
+      }}
+    </For>
+  );
+
   return (
     <svg {...builtIcon()[1]}>
-      <For each={builtIcon()[2] ?? []}>
-        {([elementName, attrs]) => {
-          return (
-            <Dynamic
-              component={elementName}
-              {...attrs}
-            />
-          );
-        }}
-      </For>
-      {resolvedChildren()}
+      {hasChildren() ? (
+        <>
+          {paths}
+          {resolvedChildren()}
+        </>
+      ) : (
+        paths
+      )}
     </svg>
   );
 };
