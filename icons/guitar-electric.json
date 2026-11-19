@@ -13,24 +13,9 @@
     "Tagging guitar lessons and tutorials in music education content"
   ],
   "tags": [
-    "acoustic",
-    "instrument",
-    "strings",
-    "riff",
-    "rock",
-    "band",
-    "country",
-    "concert",
-    "performance",
-    "play",
-    "lead",
-    "loud",
-    "music",
-    "audio",
-    "sound",
-    "noise"
+    "$extends:guitar"
   ],
   "categories": [
-    "multimedia"
+    "$extends:guitar"
   ]
 }

@@ -7,12 +7,10 @@
     "Adjusting spacing between lines in text editors and design tools"
   ],
   "tags": [
+    "$group:letter",
     "leading",
-    "text",
     "letters",
     "characters",
-    "font",
-    "typography",
     "spacing",
     "paragraph",
     "formatting",
@@ -21,7 +19,6 @@
     "typesetting"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

@@ -8,26 +8,15 @@
     "Confirming a payment method was added successfully"
   ],
   "tags": [
+    "$extends:banknote",
+    "$group:check",
     "banknote",
-    "bill",
-    "currency",
-    "payment",
-    "money",
-    "finance",
     "document",
     "verification",
-    "tick",
-    "verified",
-    "accepted",
-    "done",
-    "complete",
     "found",
-    "paid",
-    "task",
-    "check",
-    "success"
+    "paid"
   ],
   "categories": [
-    "finance"
+    "$extends:banknote"
   ]
 }

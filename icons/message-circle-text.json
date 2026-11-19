@@ -18,11 +18,7 @@
     "Indicating written feedback, reviews, or remarks"
   ],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
+    "$extends:message-circle",
     "speech",
     "bubble",
     "sms",
@@ -39,6 +35,6 @@
     "chatbot"
   ],
   "categories": [
-    "social"
+    "$extends:message-circle"
   ]
 }

@@ -1,5 +1,5 @@
 import { type PageData } from 'vitepress';
-import getStructuredData from './getStructuredData';
+import getStructuredData, { getFaqStructuredData } from './getStructuredData';
 import { createGeneralOGImage, createIconOGImage } from './createOGImage';
 
 export async function transformPageData(pageData: PageData) {
@@ -50,6 +50,15 @@ export async function transformPageData(pageData: PageData) {
       'script',
       { type: 'application/ld+json' },
       JSON.stringify(structuredData),
+    ]);
+  }
+
+  // Pages can list their FAQ in the `faq` frontmatter, rendered by the `Faq` component.
+  if (Array.isArray(pageData.frontmatter.faq)) {
+    pageData.frontmatter.head.push([
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify(getFaqStructuredData(pageData.frontmatter.faq)),
     ]);
   }
 

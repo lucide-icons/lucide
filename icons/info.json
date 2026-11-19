@@ -7,6 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "about",
     "advice",
     "clue",
@@ -22,7 +23,6 @@
     "tooltip"
   ],
   "categories": [
-    "letters-digits",
     "accessibility",
     "notifications"
   ]

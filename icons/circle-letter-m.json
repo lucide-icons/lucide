@@ -10,8 +10,7 @@
     "Indicating medium size"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "million",
     "mega",
@@ -19,10 +18,7 @@
     "measurement",
     "male",
     "medium",
-    "size",
-    "text",
-    "font",
-    "typography"
+    "size"
   ],
   "categories": [
     "letters-digits"

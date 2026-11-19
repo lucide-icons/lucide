@@ -12,30 +12,23 @@
     "Canceling a card payment before submission"
   ],
   "tags": [
+    "$extends:credit-card",
+    "$group:x",
     "debit",
-    "payment",
     "banking",
     "finance",
     "transaction",
     "wallet",
-    "purchase",
     "checkout",
     "billing",
     "account",
     "cardholder",
     "declined",
     "rejected",
-    "failed",
-    "invalid",
-    "canceled",
-    "error",
-    "cancel",
-    "bank",
-    "cc"
+    "invalid"
   ],
   "categories": [
-    "account",
-    "finance",
+    "$extends:credit-card",
     "shopping"
   ]
 }

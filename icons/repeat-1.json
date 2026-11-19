@@ -5,10 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:digit",
     "replay"
   ],
   "categories": [
-    "letters-digits",
-    "multimedia"
+    "multimedia",
+    "arrows"
   ]
 }

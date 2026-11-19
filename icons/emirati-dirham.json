@@ -10,21 +10,13 @@
     "Formatting monetary amounts in UAE dirhams"
   ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
-    "finance",
-    "price",
+    "$group:currency",
     "aed",
     "arab emirates dirham",
     "uae",
     "United Arab Emirates",
-    "cash",
-    "currency symbol",
     "middle east",
     "gulf",
-    "banking",
-    "invoice",
     "exchange rate"
   ],
   "categories": [

@@ -8,15 +8,9 @@
     "Representing the Azerbaijani Manat in currency conversion tools or financial reports"
   ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
+    "$group:currency",
     "azerbaijan",
-    "azn",
-    "exchange",
-    "banking",
-    "pricing",
-    "currency symbol"
+    "azn"
   ],
   "categories": [
     "finance"

@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:dashed",
+    "triangle",
+    "$group:expand",
+    "$group:reflect",
+    "alignment"
+  ],
+  "categories": [
+    "arrows",
+    "design",
+    "photography"
+  ]
+}

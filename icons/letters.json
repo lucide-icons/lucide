@@ -10,13 +10,11 @@
     "Representing text input fields or textual data"
   ],
   "tags": [
+    "$group:letter",
     "abc",
-    "alphabet",
     "alphabetical",
-    "text",
     "characters",
     "language",
-    "typography",
     "literacy",
     "spelling"
   ],

@@ -12,14 +12,13 @@
     "Selecting left-to-right flow in design editors"
   ],
   "tags": [
+    "$group:direction-right",
     "layout",
-    "direction",
     "flex",
     "flexbox",
     "flex-direction",
     "row",
     "auto layout",
-    "horizontal",
     "arrange",
     "order",
     "flow",

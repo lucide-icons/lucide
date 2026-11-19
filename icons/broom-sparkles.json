@@ -11,34 +11,11 @@
     "Representing enchanted brooms or Halloween themes"
   ],
   "tags": [
-    "broomstick",
-    "brush",
-    "sweep",
-    "sweeping",
-    "floor",
-    "cleaning",
-    "ai",
-    "magic",
-    "sparkle",
-    "smart",
-    "automation",
-    "housekeeping",
-    "chores",
-    "tidy",
-    "spotless",
-    "pristine",
-    "dust",
-    "debris",
-    "bristles",
-    "handle",
-    "janitor",
-    "maintenance",
-    "witch",
-    "halloween"
+    "$extends:broom",
+    "$group:sparkles",
+    "pristine"
   ],
   "categories": [
-    "tools",
-    "home",
-    "gaming"
+    "$extends:broom"
   ]
 }

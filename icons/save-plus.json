@@ -11,15 +11,12 @@
     "Creating a new item by saving the current work"
   ],
   "tags": [
-    "floppy disk",
+    "$extends:save",
+    "$group:plus",
     "save",
-    "plus",
-    "add",
-    "update",
-    "create"
+    "update"
   ],
   "categories": [
-    "text",
-    "files"
+    "$extends:save"
   ]
 }

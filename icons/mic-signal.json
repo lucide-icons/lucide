@@ -12,14 +12,12 @@
     "Identifying features that send spoken audio across a network or airwaves"
   ],
   "tags": [
-    "podcast",
+    "$extends:mic",
     "audio",
     "broadcast",
     "signal",
     "wireless",
-    "radio",
     "airwaves",
-    "microphone",
     "talk",
     "voice",
     "speech",
@@ -30,10 +28,8 @@
     "transmission"
   ],
   "categories": [
-    "devices",
-    "communication",
-    "connectivity",
-    "multimedia"
+    "$extends:mic",
+    "connectivity"
   ],
   "aliases": [
     {

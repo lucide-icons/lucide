@@ -13,8 +13,7 @@
     "Representing font selection or typography controls"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "grade",
     "rating",
@@ -23,10 +22,7 @@
     "audio",
     "ampere",
     "electricity",
-    "appearance",
-    "text",
-    "font",
-    "typography"
+    "appearance"
   ],
   "categories": [
     "letters-digits"

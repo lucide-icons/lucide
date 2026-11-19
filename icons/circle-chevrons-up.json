@@ -14,19 +14,17 @@
     "Expanding collapsed panels or drawers upward"
   ],
   "tags": [
+    "$group:direction-up",
+    "$group:navigation-first",
     "top",
-    "ascend",
     "page",
-    "page up",
     "back to top",
     "scroll",
     "jump",
-    "north",
     "caret",
     "button",
     "skip",
     "pagination",
-    "first page",
     "fast",
     "fast scroll",
     "rewind",
@@ -36,7 +34,6 @@
     "timeline"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

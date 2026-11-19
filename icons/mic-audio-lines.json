@@ -12,11 +12,10 @@
     "Identifying controls for speech capture and sound processing workflows"
   ],
   "tags": [
-    "podcast",
+    "$extends:mic",
     "audio",
     "waveform",
     "sound waves",
-    "microphone",
     "talk",
     "voice",
     "speech",

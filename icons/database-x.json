@@ -12,22 +12,14 @@
     "Representing rejected queries or destructive operations"
   ],
   "tags": [
-    "storage",
-    "memory",
-    "bytes",
-    "server",
-    "x",
-    "error",
-    "failed",
+    "$extends:database",
+    "$group:x",
     "invalid",
     "rejected",
     "denied",
-    "clear",
-    "remove",
     "disconnect"
   ],
   "categories": [
-    "devices",
-    "development"
+    "$extends:database"
   ]
 }

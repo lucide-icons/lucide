@@ -9,10 +9,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "group",
-    "people"
+    "$group:user",
+    "group"
   ],
   "categories": [
-    "account"
+    "account",
+    "people"
   ]
 }

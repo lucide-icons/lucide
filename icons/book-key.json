@@ -7,19 +7,15 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:key",
     "code",
     "coding",
     "version control",
     "git",
     "repository",
-    "private",
-    "public",
-    "secret",
-    "unlocked",
     "hidden",
-    "revealed",
-    "knowledge",
-    "learning"
+    "revealed"
   ],
   "categories": [
     "development",

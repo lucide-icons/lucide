@@ -12,22 +12,17 @@
     "Drawing attention to recent activity in inboxes and notification areas"
   ],
   "tags": [
+    "$extends:mail",
+    "$group:dot",
     "mail",
     "envelope",
     "communication",
     "post",
     "send",
-    "address",
-    "notification",
-    "email",
-    "message",
-    "letter",
-    "unread",
-    "dot"
+    "address"
   ],
   "categories": [
-    "text",
-    "account",
-    "mail"
+    "$extends:mail",
+    "notifications"
   ]
 }

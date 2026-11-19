@@ -14,13 +14,12 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "$group:letter",
     "letter",
     "font size",
-    "text",
     "formatting"
   ],
   "categories": [
-    "letters-digits",
     "text",
     "design"
   ]

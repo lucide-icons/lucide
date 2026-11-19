@@ -8,10 +8,17 @@
     "robot",
     "ai",
     "chat",
-    "assistant"
+    "assistant",
+    "chatbot",
+    "automation",
+    "machine-learning",
+    "ai-assistant",
+    "intelligent-assistant",
+    "agent"
   ],
   "categories": [
     "development",
-    "social"
+    "social",
+    "ai"
   ]
 }

@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:star",
     "badge",
     "medal",
     "honour",

@@ -6,15 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "temperature",
-    "celsius",
-    "fahrenheit",
-    "weather",
+    "$extends:thermometer",
     "cold",
     "freeze",
     "freezing"
   ],
   "categories": [
-    "weather"
+    "$extends:thermometer"
   ]
 }

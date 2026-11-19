@@ -6,7 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "barcode",
+    "$extends:scan",
     "scan",
     "qr code",
     "url",

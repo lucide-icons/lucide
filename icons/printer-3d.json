@@ -33,7 +33,14 @@
     "machine"
   ],
   "categories": [
-    "devices",
+    "$extends:printer",
     "tools"
+  ],
+  "aliases": [
+    {
+      "name": "printer-3-d",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

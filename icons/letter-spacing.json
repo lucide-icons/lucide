@@ -7,19 +7,16 @@
     "Adjusting spacing between characters in text editors and design tools"
   ],
   "tags": [
+    "$group:letter",
     "tracking",
     "kerning",
     "design",
     "lettering",
-    "text",
     "letters",
     "characters",
-    "font",
-    "typography",
     "formatting"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

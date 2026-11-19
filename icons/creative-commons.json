@@ -5,11 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "licence",
     "license"
   ],
   "categories": [
-    "letters-digits",
     "text"
   ]
 }

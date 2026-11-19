@@ -16,8 +16,7 @@
   "tags": [
     "parking lot",
     "car park",
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "parking",
     "phosphorus",
@@ -29,10 +28,7 @@
     "music",
     "page",
     "probability",
-    "math",
-    "text",
-    "font",
-    "typography"
+    "math"
   ],
   "categories": [
     "letters-digits",

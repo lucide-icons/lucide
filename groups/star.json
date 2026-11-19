@@ -1,0 +1,24 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Status: featured or marked as favorite",
+  "tags": [
+    "starred",
+    "featured",
+    "favorite",
+    "favourite",
+    "save",
+    "wishlist",
+    "bookmark",
+    "highlight",
+    "important",
+    "priority",
+    "rating",
+    "review",
+    "score",
+    "quality",
+    "award",
+    "achievement",
+    "excellence",
+    "like"
+  ]
+}

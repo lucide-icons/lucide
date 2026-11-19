@@ -4,6 +4,8 @@
     "ocavue"
   ],
   "tags": [
+    "$group:position-bottom",
+    "$group:position-right",
     "mouse",
     "grab",
     "handle",
@@ -16,6 +18,7 @@
     "Indicating the bottom-right resize handle of a resizable object"
   ],
   "categories": [
-    "design"
+    "design",
+    "layout"
   ]
 }

@@ -79,3 +79,23 @@ export default async function getStructuredData(iconName: string, pageData: Page
     },
   };
 }
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+}
+
+export function getFaqStructuredData(faq: FaqEntry[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+      },
+    })),
+  };
+}

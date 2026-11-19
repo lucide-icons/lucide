@@ -10,22 +10,16 @@
     "Showing BYN exchange rates in currency converters"
   ],
   "tags": [
-    "currency",
-    "money",
-    "payment",
+    "$group:currency",
     "byn",
     "iso4217",
     "fiat",
-    "prices",
     "localization",
-    "banking",
     "checkout",
     "wallet",
     "exchange-rate"
   ],
   "categories": [
-    "finance",
-    "shopping",
-    "account"
+    "finance"
   ]
 }

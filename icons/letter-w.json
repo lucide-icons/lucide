@@ -11,8 +11,7 @@
     "Indicating wins or winning states"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "watt",
     "power",
@@ -21,10 +20,7 @@
     "measurement",
     "tungsten",
     "chemistry",
-    "win",
-    "text",
-    "font",
-    "typography"
+    "win"
   ],
   "categories": [
     "letters-digits"

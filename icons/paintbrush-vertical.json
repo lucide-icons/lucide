@@ -6,20 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "brush",
-    "paintbrush",
-    "design",
-    "color",
-    "colour",
-    "decoration",
-    "diy"
+    "$extends:paintbrush"
   ],
   "categories": [
-    "text",
-    "design",
-    "photography",
-    "home",
-    "tools"
+    "$extends:paintbrush"
   ],
   "aliases": [
     {

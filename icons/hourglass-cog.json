@@ -9,21 +9,13 @@
     "Setting expiration for scheduled tasks"
   ],
   "tags": [
-    "timer",
-    "time",
-    "sandglass",
-    "duration",
-    "settings",
-    "gear",
-    "cog",
-    "edit",
-    "configuration",
+    "$extends:hourglass",
+    "$group:cog",
     "countdown",
     "timeout",
     "expiration"
   ],
   "categories": [
-    "time",
-    "tools"
+    "time"
   ]
 }

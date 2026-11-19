@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "directory",
-    "lock",
-    "private",
-    "security",
-    "protected"
+    "$extends:folder",
+    "$group:lock"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "security"
   ]
 }

@@ -12,17 +12,11 @@
     "Representing molecules and chemical structures in scientific applications"
   ],
   "tags": [
+    "$group:graph",
     "mind map",
-    "network",
     "hub",
-    "nodes",
-    "links",
-    "connections",
-    "relationships",
     "dependencies",
     "bonds",
-    "structure",
-    "topology",
     "cluster",
     "thoughts",
     "ideas",

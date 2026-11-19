@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:globe",
+    "Turboman3000"
+  ],
+  "use-cases": [
+    "Adding an internet service provider in network settings",
+    "Adding a translation or language in localization settings",
+    "Adding a new website or domain",
+    "Registering a new country or region in service coverage",
+    "Adding a supported language to an app",
+    "Enabling global access for a user or service"
+  ],
+  "tags": [
+    "$extends:globe",
+    "$group:plus"
+  ],
+  "categories": [
+    "$extends:globe"
+  ]
+}

@@ -16,40 +16,16 @@
     "Showing that sound notifications or alerts are silenced"
   ],
   "tags": [
+    "$extends:audio-lines",
+    "$group:off",
     "audio",
-    "sound",
-    "noise",
     "mute",
     "silence",
-    "off",
-    "disabled",
-    "inactive",
-    "listen",
-    "hearing",
     "equalizer",
     "equaliser",
-    "hertz",
-    "frequency",
-    "wavelength",
-    "vibrate",
-    "sine",
-    "waveform",
-    "synthesizer",
-    "synthesiser",
-    "levels",
-    "track",
-    "music",
-    "playback",
-    "radio",
-    "broadcast",
-    "airwaves",
-    "voice",
-    "vocals",
-    "singer",
-    "song"
+    "waveform"
   ],
   "categories": [
-    "multimedia",
-    "communication"
+    "$extends:audio-lines"
   ]
 }

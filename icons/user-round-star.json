@@ -12,25 +12,16 @@
     "Highlighting the best user in a category"
   ],
   "tags": [
-    "person",
-    "account",
-    "favorite",
-    "contact",
-    "like",
-    "review",
-    "rating",
+    "$extends:user-round",
+    "$group:star",
     "admin",
     "avatar",
-    "profile",
-    "featured",
     "moderator",
     "verified",
     "badge",
-    "award",
-    "champion",
-    "starred"
+    "champion"
   ],
   "categories": [
-    "account"
+    "$extends:user-round"
   ]
 }

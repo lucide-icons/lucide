@@ -5,6 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "greek",
     "symbol",
     "mathematics",
@@ -22,7 +23,6 @@
   "categories": [
     "letters-digits",
     "math",
-    "development",
     "text",
     "science"
   ]

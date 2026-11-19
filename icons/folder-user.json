@@ -16,24 +16,16 @@
     "Organizing personal contacts or address book entries"
   ],
   "tags": [
-    "directory",
-    "profile",
-    "person",
-    "personal",
-    "contact",
+    "$extends:folder",
+    "$group:user",
     "document",
-    "account",
-    "individual",
     "home folder",
     "shared",
     "access",
     "owner"
   ],
   "categories": [
-    "files",
-    "account",
-    "social",
-    "people",
-    "security"
+    "$extends:folder",
+    "account"
   ]
 }

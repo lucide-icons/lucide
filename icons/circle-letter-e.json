@@ -11,8 +11,7 @@
     "Indicating a grade or rating"
   ],
   "tags": [
-    "alphabet",
-    "character",
+    "$group:letter",
     "uppercase",
     "explicit",
     "content rating",
@@ -20,10 +19,7 @@
     "empty",
     "energy",
     "grade",
-    "rating",
-    "text",
-    "font",
-    "typography"
+    "rating"
   ],
   "categories": [
     "letters-digits"

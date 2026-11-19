@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:letter",
     "mention",
     "at",
     "email",
@@ -15,8 +16,8 @@
     "@"
   ],
   "categories": [
-    "letters-digits",
     "text",
-    "account"
+    "account",
+    "mail"
   ]
 }

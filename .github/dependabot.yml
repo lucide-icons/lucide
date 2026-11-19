@@ -5,6 +5,10 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # TypeScript 7 has no JS compiler API yet, which typescript-eslint, rollup-plugin-dts, svelte, astro, angular and vue-tsc rely on
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major']
     groups:
       react-deps:
         patterns:

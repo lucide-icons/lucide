@@ -14,13 +14,12 @@
     "paragraph",
     "alignment",
     "justified",
-    "center",
-    "middle",
+    "$group:position-center",
     "typography",
     "editor",
     "document"
   ],
   "categories": [
-    "text"
+    "$extends:text-align-justify"
   ]
 }

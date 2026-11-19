@@ -11,6 +11,8 @@
     "Moving an item in front of all others in layer order"
   ],
   "tags": [
+    "$extends:layers",
+    "$group:direction-up",
     "bring to front",
     "bring forward",
     "front",
@@ -22,7 +24,6 @@
     "promote",
     "reorder",
     "arrange",
-    "stack",
     "stacking",
     "z-index",
     "depth",
@@ -30,8 +31,6 @@
     "design"
   ],
   "categories": [
-    "design",
-    "layout",
-    "arrows"
+    "$extends:layers"
   ]
 }

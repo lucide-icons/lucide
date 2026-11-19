@@ -8,15 +8,12 @@
     "Indicating that a process is in progress"
   ],
   "tags": [
-    "clock",
+    "$extends:rotate-cw",
+    "$group:clock",
     "waiting",
-    "schedule",
     "hourglass",
     "loading",
-    "pause",
-    "pending",
-    "time",
-    "watch"
+    "pause"
   ],
   "categories": [
     "time"

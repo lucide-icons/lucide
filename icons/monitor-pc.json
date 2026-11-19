@@ -14,16 +14,8 @@
     "Managing computer hardware in IT dashboards"
   ],
   "tags": [
-    "personal computer",
-    "desktop",
-    "screen",
-    "display",
-    "workstation",
-    "tower",
-    "chassis",
-    "hardware",
-    "setup",
-    "gaming"
+    "$extends:monitor",
+    "$extends:pc-case"
   ],
   "categories": [
     "devices",

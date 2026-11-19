@@ -20,6 +20,6 @@
     "waste"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:can"
   ]
 }

@@ -17,8 +17,7 @@
     "Placing furniture or decor in a room using AR"
   ],
   "tags": [
-    "ar",
-    "augmented reality",
+    "$extends:scan",
     "3d",
     "object detection",
     "object recognition",
@@ -27,10 +26,7 @@
     "capture",
     "cube",
     "bounding box",
-    "camera",
-    "frame",
     "shape",
-    "boundary",
     "lidar",
     "depth",
     "scanning",
@@ -40,7 +36,6 @@
   "categories": [
     "design",
     "devices",
-    "shopping",
-    "gaming"
+    "shopping"
   ]
 }

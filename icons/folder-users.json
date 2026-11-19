@@ -16,12 +16,10 @@
     "Organizing group contacts or address book entries"
   ],
   "tags": [
-    "directory",
-    "profile",
+    "$extends:folder",
+    "$group:user",
     "shared",
-    "people",
     "document",
-    "accounts",
     "group",
     "team",
     "permission",
@@ -30,10 +28,8 @@
     "organization"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "account",
-    "social",
-    "people",
-    "security"
+    "people"
   ]
 }
