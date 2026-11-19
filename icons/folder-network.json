@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "$extends:folder"
   ],
   "use-cases": [
     "Representing FTP or SFTP directories",
