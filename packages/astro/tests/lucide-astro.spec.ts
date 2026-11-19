@@ -65,25 +65,6 @@ describe('Using lucide icon components', () => {
     expect(PenIconContainer.innerHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should scale the strokeWidth when absoluteStrokeWidth is set', async () => {
-    const { container } = await render(Grid, {
-      props: {
-        size: 48,
-        color: 'red',
-        absoluteStrokeWidth: true,
-      },
-    });
-
-    const SVGElement = container.firstElementChild;
-
-    expect(SVGElement).toHaveAttribute('stroke', 'red');
-    expect(SVGElement).toHaveAttribute('width', '48');
-    expect(SVGElement).toHaveAttribute('height', '48');
-    expect(SVGElement).toHaveAttribute('stroke-width', '1');
-
-    expect(container.innerHTML).toMatchSnapshot();
-  });
-
   it('should apply vector-effect when nonScalingStroke is set', async () => {
     const { container } = await render(Grid, {
       props: {

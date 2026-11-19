@@ -63,25 +63,6 @@ describe('Using lucide icon components', () => {
     expect(penIcon).toStrictEqual(edit2Icon);
   });
 
-  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const { container } = render(
-      <Grid
-        size={48}
-        stroke="red"
-        absoluteStrokeWidth
-      />,
-    );
-
-    const SVGElement = container.firstElementChild;
-
-    expect(SVGElement).toHaveAttribute('stroke', 'red');
-    expect(SVGElement).toHaveAttribute('width', '48');
-    expect(SVGElement).toHaveAttribute('height', '48');
-    expect(SVGElement).toHaveAttribute('stroke-width', '1');
-
-    expect(container.innerHTML).toMatchSnapshot();
-  });
-
   it('should apply vector-effect when nonScalingStroke is set', () => {
     const { container } = render(
       <Grid

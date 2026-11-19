@@ -22,10 +22,6 @@ export type LucideProps = Attrs & {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
   children?: Snippet;
   title?: string;

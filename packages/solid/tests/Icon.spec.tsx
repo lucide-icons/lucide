@@ -14,7 +14,6 @@ describe('Using Icon Component', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />
     ));
 
@@ -27,7 +26,6 @@ describe('Using Icon Component', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />
     ));
 
@@ -87,7 +85,6 @@ describe('Icon Component Accessibility', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />
     ));
 
@@ -100,7 +97,6 @@ describe('Icon Component Accessibility', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
         aria-label="Air conditioning"
       />
     ));
@@ -114,7 +110,6 @@ describe('Icon Component Accessibility', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
         // @ts-expect-error
         title="Air conditioning"
       />
@@ -129,7 +124,6 @@ describe('Icon Component Accessibility', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       >
         <title>Some title</title>
       </Icon>
@@ -144,7 +138,6 @@ describe('Icon Component Accessibility', () => {
         iconNode={airVent}
         size={48}
         stroke="red"
-        absoluteStrokeWidth
         aria-hidden="false"
       />
     ));

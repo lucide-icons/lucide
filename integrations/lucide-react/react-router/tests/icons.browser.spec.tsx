@@ -37,6 +37,12 @@ test('renders Lucide public APIs and survives router navigation', async () => {
   expect(aliasIcon.element().innerHTML).toBe(canonicalIcon.element().innerHTML);
   await expect.element(customIcon).toHaveClass('consumer-icon');
 
+  const customIconChildren = Array.from(customIcon.element().children);
+  expect(customIconChildren.length).toBeGreaterThan(0);
+  for (const child of customIconChildren) {
+    expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
+  }
+
   const providerIcon = screen.getByTestId('provider-icon');
   await expect.element(providerIcon).toHaveAttribute('width', '32');
   await expect.element(providerIcon).toHaveAttribute('stroke', 'purple');

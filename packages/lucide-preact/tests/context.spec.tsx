@@ -35,22 +35,6 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render the icon with LucideProvider and custom absoluteStrokeWidth', () => {
-    const { container } = render(
-      <LucideProvider
-        size={48}
-        color="red"
-        absoluteStrokeWidth
-      >
-        <House />
-      </LucideProvider>,
-    );
-
-    const IconComponent = container.firstElementChild;
-
-    expect(IconComponent).toHaveAttribute('stroke-width', '1');
-  });
-
   it('should render the icon with LucideProvider and custom nonScalingStroke', () => {
     const { container } = render(
       <LucideProvider

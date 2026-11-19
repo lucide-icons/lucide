@@ -64,22 +64,6 @@ describe('Using LucideProvider', () => {
     expect(container.firstElementChild).toHaveAttribute('height', '48');
   });
 
-  it('should render the icon with LucideProvider and custom absoluteStrokeWidth', () => {
-    const { container } = render(() => (
-      <LucideProvider
-        size={48}
-        color="red"
-        absoluteStrokeWidth
-      >
-        <House />
-      </LucideProvider>
-    ));
-
-    const IconComponent = container.firstElementChild;
-
-    expect(IconComponent).toHaveAttribute('stroke-width', '1');
-  });
-
   it("should override the provider's global props when passing props to the icon", () => {
     const { container } = render(() => (
       <LucideProvider

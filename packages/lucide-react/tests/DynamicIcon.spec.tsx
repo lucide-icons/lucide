@@ -70,7 +70,6 @@ describe('Using DynamicIcon Component', () => {
         name="circle"
         size={48}
         stroke="red"
-        absoluteStrokeWidth
       />,
     );
 

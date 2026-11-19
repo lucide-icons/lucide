@@ -23,16 +23,6 @@ describe('Using lucide icon context', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render the icon with LucideProvider and custom absoluteStrokeWidth', () => {
-    const { container } = render(ContextWrapper);
-
-    const IconComponent = container.firstElementChild;
-    expect(IconComponent).toHaveAttribute('width', '48');
-    expect(IconComponent).toHaveAttribute('height', '48');
-    expect(IconComponent).toHaveAttribute('stroke', 'red');
-    expect(IconComponent).toHaveAttribute('stroke-width', '4');
-  });
-
   it('should update when reactive lucide context props change', async () => {
     const wrapper = defineComponent({
       components: { House },

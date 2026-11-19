@@ -13,7 +13,7 @@ export default function IconShowcase() {
         color="red"
         size={48}
         strokeWidth={4}
-        absoluteStrokeWidth
+        nonScalingStroke
       />
       <LucideProvider
         color="purple"

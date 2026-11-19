@@ -13,7 +13,6 @@
     width = size,
     height = size,
     strokeWidth = globalProps.strokeWidth ?? 2,
-    absoluteStrokeWidth = globalProps.absoluteStrokeWidth ?? false,
     nonScalingStroke = globalProps.nonScalingStroke ?? false,
     iconNode = [],
     icon = {
@@ -38,7 +37,6 @@
         width,
         height,
         strokeWidth,
-        absoluteStrokeWidth,
         nonScalingStroke,
         // @TODO: maybe drop the extra `lucide-icon` class altogether.
         className: mergeClasses('lucide-icon', globalProps.class),

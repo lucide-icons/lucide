@@ -5,7 +5,7 @@ import { Icon, Rocket } from '../src/lucide-astro';
 
 describe('Using Icon Component', async () => {
   const { container } = await render(Icon, {
-    props: { iconNode: airVent, size: 48, stroke: 'red', absoluteStrokeWidth: true },
+    props: { iconNode: airVent, size: 48, stroke: 'red' },
   });
 
   it('should render icon and match snapshot', async () => {
@@ -24,7 +24,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         stroke: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 
@@ -36,7 +35,6 @@ describe('Icon Component Accessibility', () => {
       props: {
         size: 48,
         stroke: 'red',
-        absoluteStrokeWidth: true,
         'aria-label': 'Release icon',
       },
     });
@@ -49,7 +47,6 @@ describe('Icon Component Accessibility', () => {
       props: {
         size: 48,
         stroke: 'red',
-        absoluteStrokeWidth: true,
         title: 'Release icon',
       },
     });

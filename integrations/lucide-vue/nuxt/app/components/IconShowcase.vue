@@ -12,7 +12,7 @@ import LucideProvider from './LucideProvider.vue';
       color="red"
       :size="48"
       :stroke-width="4"
-      absolute-stroke-width
+      non-scaling-stroke
     />
     <LucideProvider>
       <House data-testid="provider-icon" />

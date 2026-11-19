@@ -42,7 +42,6 @@ async function getIconData(name: IconName) {
  * @param {string} props.color - The color of the icon
  * @param {number} props.size - The size of the icon
  * @param {number} props.strokeWidth - The stroke width of the icon
- * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {boolean} props.nonScalingStroke - Whether to use non scaling strokes
  * @param {string} props.className - The class name of the icon
  * @param {LucideIconNode[]} props.children - The children of the icon

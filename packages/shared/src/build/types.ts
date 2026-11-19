@@ -39,11 +39,6 @@ export type LucideBuildParams<TProps extends Record<string, unknown> = SVGProps>
    */
   strokeWidth?: string | number;
   /**
-   * Whether to use absolute stroke width.
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
-  /**
    * Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
    */
   nonScalingStroke?: boolean;

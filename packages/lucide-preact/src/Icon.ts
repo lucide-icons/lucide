@@ -26,7 +26,6 @@ const resolveClassName = (value: LucideProps['class']) =>
  * @param {string} props.color - The color of the icon
  * @param {number} props.size - The size of the icon
  * @param {number} props.strokeWidth - The stroke width of the icon
- * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {boolean} props.nonScalingStroke - Whether to use non scaling strokes
  * @param {string} props.class - The class name of the icon
  * @param {LucideIconNode[]} props.children - The children of the icon
@@ -40,7 +39,6 @@ const Icon = ({
   width,
   height,
   strokeWidth,
-  absoluteStrokeWidth,
   nonScalingStroke,
   children,
   iconNode = [],
@@ -56,7 +54,6 @@ const Icon = ({
   const {
     size: contextSize = 24,
     strokeWidth: contextStrokeWidth = 2,
-    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
     nonScalingStroke: contextNonScalingStroke = false,
     color: contextColor = 'currentColor',
     class: contextClass = '',
@@ -67,7 +64,6 @@ const Icon = ({
     width: width ?? size ?? contextSize,
     height: height ?? size ?? contextSize,
     strokeWidth: strokeWidth ?? contextStrokeWidth,
-    absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
     nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
     className: mergeClasses(contextClass, resolveClassName(classes), resolveClassName(className)),
     hasA11yProp: Boolean(children) || hasA11yProp(rest),

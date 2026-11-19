@@ -19,10 +19,6 @@ interface LucideProps extends SVGAttributes<SVGSVGElement> {
   size?: number | string;
   'stroke-width'?: number | string;
   nonScalingStroke?: boolean;
-  /**
-   * @deprecated
-   */
-  absoluteStrokeWidth?: boolean;
   [key: string]: any; // Any other SVG attributes
 }
 ```

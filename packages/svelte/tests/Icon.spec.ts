@@ -12,7 +12,6 @@ describe('Using Icon Component', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 
@@ -25,7 +24,6 @@ describe('Using Icon Component', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 
@@ -40,7 +38,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
       },
     });
 
@@ -53,7 +50,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
         'aria-label': 'Air conditioning',
       },
     });
@@ -67,7 +63,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
         title: 'Air conditioning',
       },
     });
@@ -81,7 +76,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
         'aria-label': 'Air conditioning',
       },
     });
@@ -95,7 +89,6 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: true,
         'aria-hidden': 'false',
       },
     });

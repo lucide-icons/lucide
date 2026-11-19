@@ -11,7 +11,7 @@
     color="red"
     size={48}
     strokeWidth={4}
-    absoluteStrokeWidth
+    nonScalingStroke
   />
   <LucideProvider>
     <House data-testid="provider-icon" />

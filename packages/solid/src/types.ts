@@ -23,10 +23,6 @@ export interface LucideProps extends SVGAttributes {
   height?: string | number;
   color?: string;
   strokeWidth?: string | number;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
   nonScalingStroke?: boolean;
 }
 

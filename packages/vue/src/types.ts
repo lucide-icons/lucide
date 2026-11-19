@@ -7,14 +7,6 @@ import type {
 export interface LucideProps extends Partial<SVGAttributes> {
   size?: 24 | number;
   strokeWidth?: number | string;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  absoluteStrokeWidth?: boolean;
-  /**
-   * @deprecated Use `nonScalingStroke` instead.
-   */
-  'absolute-stroke-width'?: boolean;
   nonScalingStroke?: boolean;
   'non-scaling-stroke'?: boolean;
 }

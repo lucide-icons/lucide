@@ -9,7 +9,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
   stroke="red"
   stroke-linecap="round"
   stroke-linejoin="round"
-  stroke-width="1"
+  stroke-width="2"
   viewBox="0 0 24 24"
   width="48"
   xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
     stroke="red"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="1"
+    stroke-width="2"
   />
   <path
     d="M6 8h12"
@@ -28,7 +28,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
     stroke="red"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="1"
+    stroke-width="2"
   />
   <path
     d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12"
@@ -36,7 +36,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
     stroke="red"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="1"
+    stroke-width="2"
   />
   <path
     d="M6.6 15.6A2 2 0 1 0 10 17v-5"
@@ -44,7 +44,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
     stroke="red"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="1"
+    stroke-width="2"
   />
 </svg>
 `;
