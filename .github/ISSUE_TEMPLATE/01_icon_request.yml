@@ -5,12 +5,21 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before submitting an icon request check if it has already been requested. If there is an open request, please add a 👍.
+        Before submitting, search [existing icons (including Lab)](https://lucide.dev/icons/?library=lab) and open and closed [icon requests](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+label%3A%22%F0%9F%99%8C+icon+request%22) and [icon PRs](https://github.com/lucide-icons/lucide/pulls?q=is%3Apr+label%3A%22%F0%9F%8E%A8+icon%22). If there is an open request, please add a 👍 instead.
 
         > [!CAUTION]
-        > New brand logos are **not** allowed, see our official statement: https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md.
+        > Please review our [icon eligibility guidelines](https://lucide.dev/contribute/icons/eligibility). Lucide does not accept:
         >
-        > Existing brand icons are being phased out. Consider using https://simpleicons.org, which offers purpose-built SVGs that are also on a 24×24px grid.
+        > - Brand icons or logos.
+        > - Hate symbols or discriminatory or dehumanizing imagery.
+        > - Religious imagery.
+        > - War- or violence-related imagery.
+        > - Political imagery.
+        > - Sexually explicit or graphic imagery.
+        > - Designs copied or traced from sources with unclear provenance or without permission compatible with [Lucide's license](https://lucide.dev/license). Giving credit alone does not grant permission to use a design.
+        > - Duplicates without a meaningful distinction, including near-identical concepts and purely decorative variations.
+
+        For more information on brand icons, see our [brand logo statement](https://lucide.dev/brand-logo-statement). Consider [Simple Icons](https://simpleicons.org) for brand logos on a 24×24px grid.
   - type: input
     id: name
     attributes:
@@ -22,7 +31,7 @@ body:
     id: use-cases
     attributes:
       label: Use cases
-      description: Why do you need this icon? Include at least two real-life use cases per requested icon, avoiding generic descriptions like "it's a car icon".
+      description: Why do you need this icon? Include at least two real-life use cases per requested icon, avoiding generic descriptions like "it's a car icon". See our [use case guide](https://lucide.dev/contribute/icons/metadata-conventions/use-case-guide).
       placeholder: e.g. I need a star icon to use in my rating system.
     validations:
       required: true
@@ -39,13 +48,13 @@ body:
       label: Checklist
       description: Please review the following checklist before submitting your request.
       options:
-        - label: I have searched if someone has submitted a similar issue before and there weren't any. (Please make sure to also search closed issues, as this issue might already have been resolved.)
+        - label: I have searched open and closed [issues](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue) and [PRs](https://github.com/lucide-icons/lucide/pulls?q=is%3Apr) and found no existing request for this icon.
           required: true
-        - label: I have searched existing icons to make sure it does not already exist and I didn't find any.
+        - label: I have searched [existing icons (including Lab)](https://lucide.dev/icons/?library=lab) and confirmed that this icon does not already exist.
           required: true
-        - label: I am not requesting a brand logo and the art is not protected by copyright, see more at https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md
+        - label: I'm not requesting brand icons, logos, or copyrighted, trademarked or otherwise licensed designs.
           required: true
-        - label: I am not requesting an icon that includes religious, war/violence related, political imagery or hate symbols.
+        - label: I'm not requesting hateful or discriminatory symbols, religious or political imagery, violence, or sexually explicit or graphic content.
           required: true
         - label: I have provided appropriate use cases for the icon(s) requested.
           required: true
