@@ -9,30 +9,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "disabled",
-    "inactive",
+    "$extends:pen",
+    "$group:off",
     "non-editable",
     "locked",
     "read-only",
     "unmodifiable",
-    "frozen",
-    "restricted",
-    "pencil",
-    "change",
-    "create",
-    "draw",
-    "writer",
-    "writing",
-    "biro",
-    "ink",
-    "marker",
-    "felt tip",
-    "stationery",
-    "artist"
+    "frozen"
   ],
   "categories": [
-    "text",
-    "design",
-    "tools"
+    "$extends:pen"
   ]
 }

@@ -8,19 +8,16 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:minus",
     "empty",
     "deletion",
     "cleanup",
     "junk",
-    "clear",
     "garbage",
-    "delete",
-    "remove",
     "bin",
     "waste",
     "recycle",
     "discard",
-    "binoculars",
     "rubbish"
   ],
   "categories": [

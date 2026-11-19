@@ -17,6 +17,8 @@ import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
 import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { track, trackDebounced } from '../../utils/openpanel';
+import { setLibraryParams } from '../../composables/useExternalLibs';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -33,8 +35,7 @@ const SORTING = [
     name: 'Name',
     value: 'name',
   },
-]
-
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -50,7 +51,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -72,6 +73,8 @@ const sortedIcons = computed(() => {
       return [...props.icons].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
     case 'release-date':
       return [...props.icons].sort((a, b) => {
+        if (a.awaitingRelease !== b.awaitingRelease) return a.awaitingRelease ? -1 : 1;
+
         const aDate = a.createdRelease?.date ? new Date(a.createdRelease.date).getTime() : 0;
         const bDate = b.createdRelease?.date ? new Date(b.createdRelease.date).getTime() : 0;
         return bDate - aDate;
@@ -169,17 +172,81 @@ watch(searchQueryDebounced, () => {
   scrollTo(0);
 });
 
+let hasStartedSearching = false;
+
+watch(searchQueryDebounced, (query) => {
+  if (query === '') return;
+
+  if (!hasStartedSearching) {
+    hasStartedSearching = true;
+    track('icons_search_start');
+  }
+
+  trackDebounced('icons_search', 'icons_search', { query, results: searchResults.value.length });
+});
+
+// Debounced so only the query the visitor settles on is tracked, not every keystroke.
+watch(searchPlaceholder, ({ isNoResults, isBrand }) => {
+  const query = searchQueryDebounced.value;
+  if (!isNoResults || isSearchMetadataLoading.value || !query) return;
+
+  trackDebounced('icons_search_no_results', 'icons_search_no_results', { query, isBrand });
+});
+
+watch(selectedSort, (sort) => {
+  track('icons_sort_change', { sort: sort.value });
+});
+
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  const url = new URL(window.location);
+  const url = new URL(window.location.href);
   url.pathname = '/icons/';
 
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
 
+  setLibraryParams(url);
+
   window.history.pushState({}, '', url);
+}
+
+const ARROW_STEPS = {
+  ArrowLeft: () => -1,
+  ArrowRight: () => 1,
+  ArrowUp: () => -columnSize.value,
+  ArrowDown: () => columnSize.value,
+};
+
+// Arrow keys move through the search results: from the search field down into the grid, then
+// between the icons. The grid shows `columnSize` icons per row, so up and down skip a whole row.
+function handleArrowKeys(event: KeyboardEvent) {
+  const step = ARROW_STEPS[event.key]?.();
+  if (step === undefined || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+    return;
+
+  const iconButtons = Array.from(
+    overviewEl.value?.querySelectorAll<HTMLElement>('.icons .icon-button') ?? [],
+  );
+  const target = event.target as HTMLElement;
+  const fromSearch = target.tagName === 'INPUT' && target.closest('.input-wrapper') !== null;
+
+  let next: HTMLElement | undefined;
+  if (fromSearch) {
+    if (event.key !== 'ArrowDown') return;
+    next = iconButtons[0];
+  } else {
+    const index = iconButtons.indexOf(target);
+    if (index === -1) return;
+    next = iconButtons[index + step];
+  }
+
+  if (next) {
+    event.preventDefault();
+    next.focus();
+    next.scrollIntoView({ block: 'nearest' });
+  }
 }
 </script>
 
@@ -188,6 +255,7 @@ function handleCloseDrawer() {
     ref="overviewEl"
     class="overview-container"
     :class="{ 'icon-drawer-open': activeIconName }"
+    @keydown="handleArrowKeys"
   >
     <StickyBar>
       <InputSearch
@@ -207,6 +275,7 @@ function handleCloseDrawer() {
         <template #start-icon>
           <Icon
             :iconNode="listSortDescending"
+            name="list-sort-descending"
             class="chevron-icon"
             aria-hidden="true"
           />

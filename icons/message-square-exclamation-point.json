@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:message-square",
+    "$group:exclamation-mark",
+    "report",
+    "abuse",
+    "offense",
+    "protected"
+  ],
+  "categories": [
+    "$extends:message-square",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "message-square-warning"
+    },
+    {
+      "name": "message-square-alert"
+    }
+  ]
+}

@@ -5,10 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "travel"
+    "$extends:navigation"
   ],
   "categories": [
-    "navigation"
+    "$extends:navigation"
   ]
 }

@@ -6,14 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "model",
+    "$extends:file",
+    "$extends:axis-3d",
     "3d",
-    "axis",
-    "coordinates"
+    "axis"
   ],
   "categories": [
-    "design",
-    "files"
+    "$extends:file",
+    "design"
   ],
   "aliases": [
     {

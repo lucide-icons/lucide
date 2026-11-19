@@ -36,10 +36,12 @@ export type IconDeprecationReason = 'icon.design' | 'icon.use-case' | '';
 
 export type IconMetadataBase = {
   categories: string[];
+  contributors?: string[];
   aliases?: AliasDeprecation[];
   tags: string[];
   deprecationReason?: IconDeprecationReason;
   deprecated?: boolean;
+  toBeRemovedInVersion?: string;
 };
 
 export type IconMetadataWithDeprecation = IconMetadataBase & {

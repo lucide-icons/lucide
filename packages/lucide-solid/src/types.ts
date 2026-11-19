@@ -6,9 +6,9 @@ import type {
 
 export type SVGAttributes = Partial<JSX.SvgSVGAttributes<SVGSVGElement>>;
 
-export type LucideIconNode = SharedLucideIconNode<keyof JSX.IntrinsicElements, SVGAttributes>;
+export type LucideIconNode = SharedLucideIconNode<keyof JSX.IntrinsicElements>;
 
-export type LucideIconData = SharedLucideIconData<keyof JSX.IntrinsicElements, SVGAttributes>;
+export type LucideIconData = SharedLucideIconData<keyof JSX.IntrinsicElements>;
 
 /**
  * @deprecated Use LucideIconNode instead.

@@ -7,10 +7,12 @@
   "use-cases": [],
   "tags": [
     "count",
-    "calculating machine"
+    "calculating machine",
+    "budget"
   ],
   "categories": [
     "math",
-    "devices"
+    "devices",
+    "education"
   ]
 }

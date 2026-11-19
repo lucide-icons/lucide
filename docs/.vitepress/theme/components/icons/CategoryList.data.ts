@@ -1,14 +1,17 @@
 import { getAllCategoryFiles, mapCategoryIconCount } from '../../../lib/categories';
 import iconsMetaData from '../../../data/iconMetaData';
 
-export default {
+const loader = {
   async load() {
-    let categories = getAllCategoryFiles();
-
-    categories = mapCategoryIconCount(categories, Object.values(iconsMetaData));
+    const categories = mapCategoryIconCount(getAllCategoryFiles(), Object.values(iconsMetaData));
 
     return {
       categories,
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

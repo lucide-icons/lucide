@@ -7,11 +7,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "paste",
+    "$extends:clipboard",
+    "$group:pen",
     "signature"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ],
   "aliases": [
     {

@@ -6,12 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:play",
     "movie",
     "video",
     "film"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {

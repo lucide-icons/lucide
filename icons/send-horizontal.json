@@ -6,17 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "mail",
-    "paper airplane",
-    "paper aeroplane",
-    "submit"
+    "$extends:send"
   ],
   "categories": [
-    "mail",
-    "communication",
-    "connectivity"
+    "$extends:send"
   ],
   "aliases": [
     {

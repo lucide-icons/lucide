@@ -1,4 +1,6 @@
-import { Camera, Droplet, Edit2, House, LucideProvider, Pen } from 'lucide-react';
+import { Camera, House, LucideProvider, Pen } from 'lucide-react';
+import Droplet from 'lucide-react/icons/droplet';
+import Edit2 from 'lucide-react/dist/esm/icons/edit-2.mjs';
 import { DynamicIcon } from 'lucide-react/dynamic';
 
 export default function IconShowcase() {

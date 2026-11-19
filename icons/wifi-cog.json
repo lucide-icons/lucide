@@ -9,20 +9,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "connection",
-    "signal",
-    "wireless",
+    "$extends:wifi",
+    "$group:cog",
     "directory",
-    "settings",
-    "control",
-    "preferences",
-    "cog",
-    "edit",
-    "gear"
+    "control"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "files"
+    "$extends:wifi"
   ]
 }

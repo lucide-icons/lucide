@@ -9,8 +9,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "clock",
-    "time"
+    "$group:clock"
   ],
   "categories": [
     "time"

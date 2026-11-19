@@ -11,35 +11,16 @@
     "Marking spread or revealed collectible cards"
   ],
   "tags": [
-    "deck",
+    "$extends:playing-cards",
     "fan",
     "spread",
-    "hand",
-    "deal",
     "dealt",
-    "draw",
-    "shuffle",
-    "tabletop",
-    "planning poker",
-    "scrum",
-    "agile",
-    "estimation",
-    "estimate",
     "prompt",
     "icebreaker",
-    "conversation",
-    "collectible",
-    "collection",
-    "trading",
-    "poker",
-    "casino",
-    "game",
-    "gambling",
-    "suit"
+    "conversation"
   ],
   "categories": [
-    "gaming",
-    "development",
+    "$extends:playing-cards",
     "social"
   ]
 }

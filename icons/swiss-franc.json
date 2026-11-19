@@ -8,9 +8,7 @@
   "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
-    "currency",
-    "money",
-    "payment"
+    "$group:currency"
   ],
   "categories": [
     "finance"

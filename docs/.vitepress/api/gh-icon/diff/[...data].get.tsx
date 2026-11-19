@@ -41,7 +41,6 @@ export default eventHandler((event) => {
     <Diff
       oldSrc={oldSrc}
       newSrc={newSrc}
-      showGrid
       height={height}
       width={width}
     >

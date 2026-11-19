@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing camera settings or photography modes",
+    "Categorizing eyeglasses or contact lenses in optical shops",
+    "Indicating visual effects like glassmorphism or lens reflections",
+    "Representing shaders or post-processing effects in graphics tools",
+    "Illustrating optics in educational or scientific content",
+    "Indicating a zoom or magnification tool in camera apps",
+    "Indicating aperture or depth-of-field controls in camera settings",
+    "Toggling bokeh or portrait mode effects in photo editors",
+    "Representing macro or close-up shooting modes",
+    "Selecting camera lenses or AR filters in camera apps"
+  ],
+  "tags": [
+    "optics",
+    "reflection",
+    "camera",
+    "photography",
+    "focus",
+    "effect",
+    "shader",
+    "post-process",
+    "visual",
+    "contact lens",
+    "glass",
+    "magnify",
+    "translucent",
+    "transparent",
+    "orb",
+    "bubble",
+    "zoom"
+  ],
+  "categories": [
+    "photography",
+    "science",
+    "tools"
+  ]
+}

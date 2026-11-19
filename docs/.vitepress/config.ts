@@ -15,6 +15,10 @@ const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
   'utf-8',
 );
+const iconStyleHeadScript = await readFile(
+  fileURLToPath(new URL('./theme/iconStyleHead.js', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -44,6 +48,12 @@ export default defineConfig({
     },
   },
   vite: {
+    server: {
+      // The waitlist forms POST same-origin, and the API dev server has CORS turned off.
+      proxy: {
+        '/api/waitlist': 'http://localhost:3000',
+      },
+    },
     resolve: {
       alias: [
         {
@@ -65,6 +75,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarSearch\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarSearch.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
@@ -78,13 +94,19 @@ export default defineConfig({
           'index.md',
           'packages.md',
           'showcase.md',
+          'sponsor.md',
+          'mcp.md',
+          'waitlist/confirmed.md',
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
       }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
-  head: getHeadConfig({ title, description, socialTitle }),
+  head: [
+    ...getHeadConfig({ title, description, socialTitle }),
+    ['script', {}, iconStyleHeadScript],
+  ],
   transformPageData,
   themeConfig: {
     logo: {
@@ -97,19 +119,23 @@ export default defineConfig({
       {
         text: 'Resources',
         items: [
-          ...resourcesSidebar[0].items,
+          ...resourcesSidebar[0].items.map(({ text, link }) => ({ text, link })),
           { text: 'How to use icons', link: '/how-to/' },
           { text: 'Contributing icons', link: '/contribute/icons/' },
         ],
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'MCP <span class="nav-badge">SOON</span>', link: '/mcp' },
       { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
+      { icon: 'x', link: 'https://x.com/lucide_icons' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/lucide-icons/' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/lucide-icons.bsky.social' },
     ],
     footer: {
       message: 'Released under the ISC License.',
@@ -118,6 +144,14 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
     },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'R7KKMCPXOB',
+        apiKey: 'dd3101054267d35fb28f49c42715f1aa',
+        indexName: 'lucide',
+      },
+    },
     carbonAds: {
       code: 'CWYIC53U',
       placement: 'lucidedev',
@@ -125,5 +159,6 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://lucide.dev/',
+    transformItems: (items) => items.filter(({ url }) => !url.startsWith('waitlist/')),
   },
 });
