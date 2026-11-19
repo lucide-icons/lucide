@@ -48,7 +48,7 @@ body:
       label: Checklist
       description: Please review the following checklist before submitting your request.
       options:
-        - label: I have searched open and closed [issues](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue) and [PRs](https://github.com/lucide-icons/lucide/pulls?q=is%3Apr) and found no existing request for this icon.
+        - label: I have searched open and closed open and closed [icon requests](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+label%3A%22%F0%9F%99%8C+icon+request%22) and [icon PRs](https://github.com/lucide-icons/lucide/pulls?q=is%3Apr+label%3A%22%F0%9F%8E%A8+icon%22) and found no existing request for this icon.
           required: true
         - label: I have searched [existing icons (including Lab)](https://lucide.dev/icons/?library=lab) and confirmed that this icon does not already exist.
           required: true
