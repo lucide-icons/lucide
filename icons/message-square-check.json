@@ -8,20 +8,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
-    "speech bubble",
-    "moderate",
-    "check",
-    "done",
-    "todo",
-    "complete"
+    "$extends:message-square",
+    "$group:check",
+    "moderate"
   ],
   "categories": [
-    "social",
-    "account"
+    "$extends:message-square"
   ]
 }

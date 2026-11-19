@@ -6,21 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
-    "confirm",
+    "$extends:calendar",
+    "$group:check",
     "subscribe",
     "schedule",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "today"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

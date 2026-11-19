@@ -16,7 +16,7 @@ Most of the time, icons are used purely for decoration or visual reinforcement. 
 
 For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
 
-<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+<OverviewLink href="/how-to/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
 
 Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Solid.
 

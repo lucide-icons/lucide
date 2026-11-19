@@ -7,25 +7,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "tv",
-    "screen",
-    "display",
-    "virtual machine",
-    "vm",
+    "$extends:monitor",
+    "$group:cog",
     "executable",
-    "settings",
-    "cog",
-    "edit",
-    "gear",
-    "configuration",
-    "preferences",
     "system",
-    "control panel",
     "network",
     "computing"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

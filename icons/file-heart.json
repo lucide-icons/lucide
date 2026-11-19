@@ -6,12 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "heart",
-    "favourite",
+    "$extends:file",
+    "$group:heart",
     "bookmark",
     "quick link"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

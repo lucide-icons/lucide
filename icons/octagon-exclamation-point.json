@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:exclamation-mark"
+  ],
+  "categories": [
+    "$extends:octagon",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "alert-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "octagon-alert"
+    }
+  ]
+}

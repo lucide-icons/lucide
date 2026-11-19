@@ -6,24 +6,20 @@
   ],
   "use-cases": [],
   "tags": [
-    "direction",
-    "south-east",
-    "diagonal",
+    "$group:direction-down-right",
     "sign",
-    "turn",
     "keyboard",
-    "button"
+    "button",
+    "turn"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {
       "name": "arrow-down-right-square",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

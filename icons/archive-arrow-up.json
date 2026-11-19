@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "Restoring archived email messages to an inbox",
+    "Restoring archived files and records to active storage"
+  ],
+  "tags": [
+    "$extends:archive",
+    "unarchive"
+  ],
+  "aliases": [
+    {
+      "name": "archive-restore",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ],
+  "categories": [
+    "$extends:archive"
+  ]
+}

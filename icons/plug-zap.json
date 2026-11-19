@@ -9,9 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "electricity",
-    "energy",
-    "electronics",
+    "$extends:plug",
+    "$extends:zap",
     "charge",
     "charging",
     "battery",
@@ -24,8 +23,7 @@
     {
       "name": "plug-zap-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

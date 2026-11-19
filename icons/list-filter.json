@@ -6,9 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "options"
+    "$extends:list"
   ],
   "categories": [
-    "text"
+    "$extends:list",
+    "layout"
   ]
 }

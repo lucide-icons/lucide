@@ -6,17 +6,18 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:pen",
     "signature"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ],
   "aliases": [
     {
       "name": "file-edit",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

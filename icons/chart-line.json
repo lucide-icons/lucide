@@ -5,10 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "$group:chart"
   ],
   "categories": [
     "charts"
@@ -17,8 +14,7 @@
     {
       "name": "line-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

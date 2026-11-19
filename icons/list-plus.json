@@ -6,14 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:plus",
     "playlist",
-    "add",
     "song",
-    "track",
-    "new"
+    "track"
   ],
   "categories": [
-    "multimedia",
-    "text"
+    "$extends:list",
+    "multimedia"
   ]
 }

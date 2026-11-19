@@ -6,17 +6,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "paste"
+    "$extends:clipboard-pen"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard-pen"
   ],
   "aliases": [
     {
       "name": "clipboard-signature",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }
