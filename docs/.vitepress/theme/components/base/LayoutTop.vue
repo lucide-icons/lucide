@@ -29,7 +29,7 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
 </template>
 
 <style>
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   :root {
     --vp-layout-top-height: 32px;
   }

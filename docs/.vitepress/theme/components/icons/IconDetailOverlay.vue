@@ -135,13 +135,13 @@ const Expand = createLucideIcon('Expand', expand);
   width: auto;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .overlay-container {
     --left: var(--vp-sidebar-width);
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   .overlay-container {
     --left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
     --right: calc(((100% - (var(--vp-layout-max-width) - var(--vp-sidebar-width))) - 272px) / 2);

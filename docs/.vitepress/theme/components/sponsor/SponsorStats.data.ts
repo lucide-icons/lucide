@@ -1,5 +1,5 @@
-import iconNodes from '../../../data/iconNodes';
-import fetchPackages from '../../../lib/fetchPackages';
+import iconNodes from '../../../data/iconNodes/index.ts';
+import fetchPackages from '../../../lib/fetchPackages.ts';
 
 const NPM_DOWNLOADS_API = 'https://api.npmjs.org/downloads/point/last-week';
 

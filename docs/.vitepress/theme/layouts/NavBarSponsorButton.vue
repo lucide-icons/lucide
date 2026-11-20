@@ -68,14 +68,14 @@ const isActive = computed(() => page.value.relativePath === 'sponsor.md');
   transform: scale(1.1);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .sponsor-button {
     margin-left: 16px;
   }
 }
 
 /* The nav menu leaves no room for the label between tablet and desktop widths. */
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 48rem) and (max-width: 59.9375rem) {
   .sponsor-button {
     justify-content: center;
     width: 32px;

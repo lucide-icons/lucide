@@ -177,6 +177,8 @@ onBeforeUnmount(() => {
 }
 
 .shortcuts-dialog {
+  /* VitePress 2's reset zeroes the margin that centres a modal dialog */
+  margin: auto;
   width: min(480px, calc(100vw - 32px));
   padding: 20px 24px 24px;
   color: var(--vp-c-text-1);

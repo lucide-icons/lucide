@@ -62,7 +62,7 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   background: var(--vp-c-bg);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .icon-grid {
     top: 0;
     right: -48px;

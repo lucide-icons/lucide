@@ -51,7 +51,7 @@
   display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .search-bar :deep(.select-button) {
     padding: 11px 16px 11px 16px;
   }
@@ -94,7 +94,7 @@
   display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .search-bar :deep(.select-button) {
     padding: 11px 16px 11px 16px;
   }
@@ -105,7 +105,7 @@
 }
 
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .search-bar {
     padding-top: 32px;
     margin-top: calc((var(--vp-layout-top-height, 0px) + 33px) * -1);
