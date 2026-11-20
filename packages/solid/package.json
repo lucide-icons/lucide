@@ -32,21 +32,30 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/lucide-solid.d.ts",
+      "types": {
+        "import": "./dist/types/lucide-solid.d.mts",
+        "default": "./dist/types/lucide-solid.d.ts"
+      },
       "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.mjs",
       "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons": {
-      "types": "./dist/types/lucide-solid.d.ts",
+      "types": {
+        "import": "./dist/types/lucide-solid.d.mts",
+        "default": "./dist/types/lucide-solid.d.ts"
+      },
       "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.mjs",
       "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons/*": {
-      "types": "./dist/types/icons/*.d.ts",
+      "types": {
+        "import": "./dist/types/icons/*.d.mts",
+        "default": "./dist/types/icons/*.d.ts"
+      },
       "solid": "./dist/source/icons/*.jsx",
       "import": "./dist/esm/icons/*.mjs",
       "browser": "./dist/esm/icons/*.mjs",
