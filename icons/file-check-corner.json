@@ -7,22 +7,16 @@
   ],
   "use-cases": [],
   "tags": [
-    "done",
-    "document",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:file-check"
   ],
   "categories": [
-    "files"
+    "$extends:file-check"
   ],
   "aliases": [
     {
       "name": "file-check-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Indicating the end of a time range",
+    "Removing timing information from an item"
+  ],
+  "tags": [
+    "$extends:clock",
+    "$group:direction-right",
+    "range",
+    "unassign"
+  ],
+  "categories": [
+    "$extends:clock"
+  ]
+}

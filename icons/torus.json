@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a torus shape in 3D or design tools",
+    "Representing a donut in a food or dessert context"
+  ],
   "tags": [
     "donut",
     "doughnut",
@@ -22,7 +25,7 @@
   "categories": [
     "shapes",
     "design",
-    "tools",
+    "math",
     "food-beverage"
   ]
 }

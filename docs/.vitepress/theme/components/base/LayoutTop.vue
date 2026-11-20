@@ -9,7 +9,8 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
     <p>
       <Icon
         :iconNode="RocketDuotoneIcon"
-        size="18"
+        name="rocket-duotone"
+        :size="18"
         class="rocket-icon"
       />
       <VPLink

@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/lucide-logo-repo.svg#gh-light-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/lucide-logo-repo-dark.svg#gh-dark-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+  <a href="https://github.com/lucide-icons/lucide">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/lucide-logo-repo-dark.svg">
+      <img src="https://lucide.dev/lucide-logo-repo.svg" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+    </picture>
   </a>
 </p>
 <p align="center">
@@ -35,7 +35,7 @@ Lucide is an open-source icon library that provides 1600+ vector (svg) files for
 | <img src="https://lucide.dev/framework-logos/js.svg" alt="JS logo" width="48"> | **`lucide`** | [![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide) | [Docs](https://lucide.dev/guide/lucide) · [Source](./packages/lucide) |
 | <img src="https://lucide.dev/framework-logos/react.svg" alt="React logo" width="48"> | **`lucide-react`** | [![npm](https://img.shields.io/npm/v/lucide-react)](https://www.npmjs.com/package/lucide-react) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react) | [Docs](https://lucide.dev/guide/react) · [Source](./packages/lucide-react) |
 | <img src="https://lucide.dev/framework-logos/vue.svg" alt="Vue logo" width="48"> | **`@lucide/vue`** | [![npm](https://img.shields.io/npm/v/@lucide/vue)](https://www.npmjs.com/package/@lucide/vue) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/vue) | [Docs](https://lucide.dev/guide/vue) · [Source](./packages/vue) |
-| <img src="https://lucide.dev/framework-logos/svelte.svg" alt="Svelte logo" width="48"> | **`@lucide/svelte`** | [![npm](https://img.shields.io/npm/v/@lucide/svelte)](https://www.npmjs.com/package/@lucide/svelte) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/svelte) | [Docs](https://lucide.dev/guide/svelte) · [Source](./packages/@lucide/svelte) |
+| <img src="https://lucide.dev/framework-logos/svelte.svg" alt="Svelte logo" width="48"> | **`@lucide/svelte`** | [![npm](https://img.shields.io/npm/v/@lucide/svelte)](https://www.npmjs.com/package/@lucide/svelte) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/svelte) | [Docs](https://lucide.dev/guide/svelte) · [Source](./packages/svelte) |
 | <img src="https://lucide.dev/framework-logos/solid.svg" alt="Solid logo" width="48"> | **`lucide-solid`** | [![npm](https://img.shields.io/npm/v/lucide-solid)](https://www.npmjs.com/package/lucide-solid) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-solid) | [Docs](https://lucide.dev/guide/solid) · [Source](./packages/lucide-solid) |
 | <img src="https://lucide.dev/framework-logos/preact.svg" alt="Preact logo" width="48"> | **`lucide-preact`** | [![npm](https://img.shields.io/npm/v/lucide-preact)](https://www.npmjs.com/package/lucide-preact) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact) | [Docs](https://lucide.dev/guide/preact) · [Source](./packages/lucide-preact) |
 | <img src="https://lucide.dev/framework-logos/react-native.svg" alt="React Native logo" width="48"> | **`lucide-react-native`** | [![npm](https://img.shields.io/npm/v/lucide-react-native)](https://www.npmjs.com/package/lucide-react-native) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native) | [Docs](https://lucide.dev/guide/react-native) · [Source](./packages/lucide-react-native) |
@@ -88,20 +88,31 @@ Thank you to all the people who contributed to Lucide!
   <img src="docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+[//]: <> (Sponsor tiers start)
 
-### Hero backers 🦸
+### Bronze 🥉
 
-<a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://about.sourcegraph.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/sourcegraph.svg" /><img src="docs/public/sponsors/sourcegraph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></picture></a>
+&nbsp;&nbsp;
+<a href="https://opencollective.com/zephyr-cloud"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/zephyr-cloud.svg" /><img src="docs/public/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" /></picture></a>
 
-### Awesome backers 🍺
+[//]: <> (Main README only start)
 
-<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
-<a href="https://www.paxhistoria.co/"><img src="docs/public/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+### Backers 🍺
 
-### Backers ☕
+<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="32" alt="Pax Historia" /></a>
+&nbsp;&nbsp;
+<a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="32" alt="pdfme – Free and Open source PDF generation library!" /></a>
 
-<a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+### Supporters ☕️
+
+<a href="https://www.fina.money"><img src="https://images.opencollective.com/fina-money/7c1f196/logo.png" height="32" alt="Fina Money – Build the most flexible finance tracker" /></a>
+&nbsp;&nbsp;
+<a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="32" alt="Ruud" /></a>
+
+[//]: <> (Main README only end)
+
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 

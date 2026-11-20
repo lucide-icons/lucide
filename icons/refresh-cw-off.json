@@ -7,15 +7,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "rotate",
-    "reload",
-    "rerun",
-    "synchronise",
-    "synchronize",
-    "arrows",
-    "circular",
-    "cycle",
-    "cancel",
+    "$extends:refresh-cw",
+    "$group:off",
     "no",
     "stop",
     "error",
@@ -23,6 +16,6 @@
     "ignore"
   ],
   "categories": [
-    "arrows"
+    "$extends:refresh-cw"
   ]
 }

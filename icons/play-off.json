@@ -5,16 +5,13 @@
     "karsa-mistmere",
     "Ahmed-Dghaies"
   ],
+  "use-cases": [
+    "Indicating playback is disabled for video, audio, or live streams",
+    "Showing that a media file cannot be played"
+  ],
   "tags": [
-    "audio",
-    "video",
-    "music",
-    "start",
-    "run",
-    "off",
-    "disabled",
-    "blocked",
-    "forbidden"
+    "$extends:play",
+    "$group:off"
   ],
   "categories": [
     "multimedia"

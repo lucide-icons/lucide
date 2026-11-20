@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "Veatec22"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:search",
+    "$group:exclamation-mark",
+    "stop",
+    "anomaly"
+  ],
+  "categories": [
+    "$extends:search"
+  ],
+  "aliases": [
+    {
+      "name": "search-alert"
+    }
+  ]
+}

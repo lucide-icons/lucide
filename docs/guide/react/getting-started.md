@@ -50,16 +50,27 @@ const App = () => {
 export default App;
 ```
 
+### Importing a single icon
+
+You can also import one icon at a time. This skips the icon barrel, which matters when modules are resolved at runtime (server-side rendering, for example), and only loads a small type declaration instead of the full one.
+
+```tsx
+import Camera from 'lucide-react/icons/camera';
+import type { LucideProps } from 'lucide-react/types';
+```
+
+These per-icon entry points are ES modules only. `require()` of one works on Node.js 20.19 and 22.12 or newer; on older versions, import the icon from the package root instead.
+
 ## Props
 
 To customize the appearance of an icon, you can use the following props:
 
-| name                  | type      | default      |
-| --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| name               | type      | default      |
+|--------------------| --------- | ------------ |
+| `size`             | *number*  | 24           |
+| `color`            | *string*  | currentColor |
+| `strokeWidth`      | *number*  | 2            |
+| `nonScalingStroke` | *boolean* | false        |
 
 Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 

@@ -7,6 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:position-left",
     "primary",
     "drawer"
   ],
@@ -17,8 +18,7 @@
     {
       "name": "sidebar",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -14,7 +14,11 @@
     "overflow",
     "dots",
     "…",
-    "..."
+    "...",
+    "kebab",
+    "kebab menu",
+    "three dots",
+    "3 dots"
   ],
   "categories": [
     "layout"
@@ -23,8 +27,7 @@
     {
       "name": "more-vertical",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cut",
+    "slice",
+    "shaving",
+    "shave",
+    "trim",
+    "style",
+    "edge",
+    "beard",
+    "stubble",
+    "mens",
+    "grooming",
+    "toiletries",
+    "bathroom",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "tools"
+  ]
+}

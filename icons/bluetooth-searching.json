@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:bluetooth",
     "pairing"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:bluetooth"
   ]
 }

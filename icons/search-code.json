@@ -6,18 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass",
+    "$extends:search",
+    "$group:code",
     "grep",
     "chevrons",
-    "<>",
-    "lens"
+    "<>"
   ],
   "categories": [
-    "text",
-    "social",
+    "$extends:search",
     "development"
   ]
 }

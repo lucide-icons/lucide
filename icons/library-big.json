@@ -5,35 +5,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "books",
-    "reading",
-    "written",
-    "authors",
-    "stories",
-    "fiction",
-    "novels",
-    "information",
-    "knowledge",
-    "education",
-    "high school",
-    "university",
-    "college",
-    "academy",
-    "learning",
-    "study",
-    "research",
-    "collection",
-    "vinyl",
-    "records",
-    "albums",
-    "music",
-    "package"
+    "$extends:library"
   ],
   "categories": [
-    "text",
-    "photography",
-    "multimedia",
-    "navigation",
-    "development"
+    "$extends:library"
   ]
 }

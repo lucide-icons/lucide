@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing inclusive design across accessibility needs",
+    "Indicating accessibility settings or support in applications",
+    "Marking barrier-free facilities on public signs and maps"
+  ],
+  "tags": [
+    "universal access",
+    "accessibility",
+    "disability",
+    "disabled",
+    "dda",
+    "inclusive",
+    "universal",
+    "human",
+    "people"
+  ],
+  "categories": [
+    "accessibility",
+    "people"
+  ]
+}

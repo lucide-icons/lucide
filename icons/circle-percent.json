@@ -5,14 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:percent",
     "verified",
     "unverified",
-    "sale",
-    "discount",
-    "offer",
-    "marketing",
-    "sticker",
-    "price tag"
+    "sticker"
   ],
   "categories": [
     "social",
@@ -24,8 +20,7 @@
     {
       "name": "percent-circle",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

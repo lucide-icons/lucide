@@ -5,8 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "notepad",
-    "notes",
+    "$extends:notebook",
     "people",
     "family",
     "friends",
@@ -19,12 +18,7 @@
     "listing",
     "networking",
     "alphabetical",
-    "a-z",
-    "organizer",
-    "organiser",
-    "planner",
-    "diary",
-    "stationery"
+    "a-z"
   ],
   "categories": [
     "account",

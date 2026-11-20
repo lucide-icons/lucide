@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'url';
 import getArgumentOptions from 'minimist';
 
 import { readSvgDirectory } from '@lucide/helpers';
@@ -9,7 +10,6 @@ import generateIconFiles from './building/generateIconFiles.ts';
 import generateExportsFile from './building/generateExportsFile.ts';
 
 import generateAliasesFiles from './building/aliases/generateAliasesFiles.ts';
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.ts';
 import generateDynamicImports from './building/generateDynamicImports.ts';
 
@@ -34,11 +34,12 @@ interface CliArguments {
   useDefaultExports?: boolean;
   pretty?: boolean;
   output: string | undefined;
+  input: string | undefined;
 }
 
 const cliArguments = getArgumentOptions(process.argv.slice(2)) as unknown as CliArguments;
 
-const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
+const ICONS_DIR = path.resolve(process.cwd(), cliArguments.input || '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -76,7 +77,9 @@ async function buildIcons() {
 
   const icons = await renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
-  const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
+  const { default: iconFileTemplate } = await import(
+    pathToFileURL(path.resolve(process.cwd(), templateSrc)).href
+  );
 
   const iconMetaData = await getIconMetaData(ICONS_DIR);
 
@@ -135,4 +138,5 @@ try {
   await buildIcons();
 } catch (error) {
   console.error(error);
+  process.exitCode = 1;
 }
