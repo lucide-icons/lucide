@@ -126,8 +126,19 @@ describe('Using lucide icon components', () => {
     const textElement = getByText('Hello World');
 
     expect(textElement).toBeInTheDocument();
+    expect(container.firstElementChild).not.toHaveAttribute('aria-hidden');
 
     expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should keep aria-hidden when the default slot only contains whitespace', async () => {
+    const { container } = await render(Smile, {
+      slots: {
+        default: createAstroHTMLString('   '),
+      },
+    });
+
+    expect(container.firstElementChild).toHaveAttribute('aria-hidden', 'true');
   });
 
   it('should apply all classes to the element', async () => {

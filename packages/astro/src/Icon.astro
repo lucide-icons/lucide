@@ -21,6 +21,9 @@ const {
   ...rest
 } = Astro.props;
 
+const defaultSlot = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+const hasDefaultSlot = defaultSlot.trim().length > 0;
+
 const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   color,
   width: width ?? size,
@@ -29,7 +32,7 @@ const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   absoluteStrokeWidth,
   nonScalingStroke,
   ...(className !== undefined && { className }),
-  hasA11yProp: hasA11yProp(rest),
+  hasA11yProp: hasDefaultSlot || hasA11yProp(rest),
 });
 
 const iconAttributes = {
@@ -40,5 +43,5 @@ const iconAttributes = {
 
 <svg {...iconAttributes}>
   {builtIconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
-  <slot />
+  {hasDefaultSlot && <Fragment set:html={defaultSlot} />}
 </svg>
