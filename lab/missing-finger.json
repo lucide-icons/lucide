@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["github-username"],
+  "use-cases": [
+    "Representing disabled people who have lost a finger due to accidents, poor working conditions, or inadequate workplace safety practices"
+  ],
+  "tags": [
+    "disability",
+    "disabled",
+    "finger",
+    "injury",
+    "occupational-injury",
+    "workplace-safety",
+    "medical",
+    "accessibility"
+  ],
+  "categories": [
+    "people",
+    "medical"
+  ]
+}

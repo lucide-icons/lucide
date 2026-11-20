@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["github-username"],
+  "use-cases": [
+    "Representing Substack content publishing, newsletters, and Substack-related content"
+  ],
+  "tags": [
+    "substack",
+    "article",
+    "publishing",
+    "newsletter",
+    "content"
+  ],
+  "categories": [
+    "social"
+  ]
+}

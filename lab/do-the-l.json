@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["github-username"],
+  "use-cases": [
+    "Representing social and sustainability campaigning, activism, advocacy, personal freedoms, and related initiatives"
+  ],
+  "tags": [
+    "activism",
+    "advocacy",
+    "campaign",
+    "anti-fascism",
+    "freedom",
+    "human-rights",
+    "social",
+    "sustainability"
+  ],
+  "categories": [
+    "sustainability",
+    "people"
+  ]
+}
