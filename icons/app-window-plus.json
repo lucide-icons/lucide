@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "vaporvee"
+  ],
+  "tags": [
+    "application",
+    "new",
+    "open",
+    "add",
+    "create",
+    "addition"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development",
+    "files"
+  ]
+}
