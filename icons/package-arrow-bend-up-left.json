@@ -15,6 +15,7 @@
   "tags": [
     "$extends:package",
     "$group:direction-left",
+    "$group:direction-up-left",
     "shipment",
     "move",
     "framed",
@@ -26,7 +27,13 @@
     "reverse",
     "revert",
     "undo",
-    "return"
+    "return",
+    "parcel",
+    "return shipping",
+    "reverse logistics",
+    "restocking",
+    "return merchandise authorization",
+    "rma"
   ],
   "categories": [
     "$extends:package"
