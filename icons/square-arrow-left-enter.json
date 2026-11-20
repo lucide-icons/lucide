@@ -16,8 +16,8 @@
     "back",
     "<-",
     "cell",
-    "expand",
-    "collapse",
+    "$group:expand",
+    "$group:collapse",
     "split"
   ],
   "categories": [

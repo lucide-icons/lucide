@@ -11,8 +11,7 @@
     "$extends:user",
     "$group:x",
     "unfollow",
-    "unsubscribe",
-    "unavailable"
+    "unsubscribe"
   ],
   "categories": [
     "$extends:user"

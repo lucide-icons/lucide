@@ -5,7 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "center",
+    "$group:position-center",
     "items",
     "flex",
     "justify",

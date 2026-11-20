@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Marking an agent as disabled in agent management interfaces",
+    "Indicating a failed or errored AI agent task",
+    "Showing an unavailable or disconnected AI assistant",
+    "Removing or dismissing a bot from a chat"
+  ],
+  "tags": [
+    "$extends:bot",
+    "$group:x",
+    "disconnected",
+    "offline",
+    "integration"
+  ],
+  "categories": [
+    "$extends:bot"
+  ]
+}

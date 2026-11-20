@@ -12,7 +12,8 @@
     "$group:direction-up-right",
     "$group:enter",
     "$group:layout-resize",
-    "expand",
+    "$group:expand",
+    "$group:collapse",
     "contract"
   ],
   "categories": [
