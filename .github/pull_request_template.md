@@ -20,13 +20,14 @@ Common scopes: icons, docs, studio, site, dev
 **Alternative designs:**
 <!-- Include any alternative designs, if available. -->
 
-**Authorship:**
-<!-- Keep and complete the statements that apply; delete the others. -->
+**Created by:**
+<!-- Myself | created by @USERNAME in #ISSUE_NUMBER -->
 
-- The icons are solely my own creation.
-- The icons were originally created in #ISSUE_NUMBER by @USERNAME.
-- I've based them on the following Lucide icons: <!-- List the icons and credit their authors. -->
-- I've based them on the following external design: <!-- Provide the source URL, original author, and license permitting use. -->
+**Based on:**
+<!-- List lucide icons -->
+
+**Inspired by:**
+<!-- List external designs -->
 
 ## Before submitting
 
