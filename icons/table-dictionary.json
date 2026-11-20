@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "michaelsogos"
+  ],
+  "use-cases": [
+    "Dictionary and vocabulary pages listing code/label or key/value rows",
+    "Reference data, lookup table and taxonomy management"
+  ],
+  "tags": [
+    "$extends:table-properties",
+    "dictionary",
+    "lookup",
+    "key-value",
+    "vocabulary",
+    "lexicon",
+    "taxonomy"
+  ],
+  "categories": [
+    "$extends:table",
+    "layout"
+  ]
+}
