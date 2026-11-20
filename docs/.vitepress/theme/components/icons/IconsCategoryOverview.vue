@@ -4,6 +4,7 @@ import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
+import { provideTagSearch } from '../../composables/useTagSearch';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import IconsCategory, { CategoryRow } from './IconsCategory.vue';
@@ -128,6 +129,14 @@ const isSearchMetadataLoading = computed(
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
   itemHeight: ICON_SIZE + ICON_GRID_GAP,
   overscan: 10,
+});
+
+provideTagSearch({
+  gridPath: '/icons/categories',
+  searchInput,
+  searchQuery,
+  activeIconName,
+  scrollTo,
 });
 
 useScrollToCategory({

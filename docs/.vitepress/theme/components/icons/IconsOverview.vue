@@ -8,6 +8,7 @@ import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
+import { provideTagSearch } from '../../composables/useTagSearch';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
@@ -132,6 +133,14 @@ const chunkedIcons = computed(() => {
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedIcons, {
   itemHeight: ICON_SIZE + ICON_GRID_GAP,
   overscan: 10,
+});
+
+provideTagSearch({
+  gridPath: '/icons/',
+  searchInput,
+  searchQuery,
+  activeIconName,
+  scrollTo,
 });
 
 onMounted(() => {
