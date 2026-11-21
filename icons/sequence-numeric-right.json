@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "michaelsogos"
+  ],
+  "use-cases": [
+    "Numeric sequencer entities — counters and numbering generators emitting ordered values",
+    "Ordered progressions and enumerated series advancing through N items"
+  ],
+  "tags": [
+    "$group:digit",
+    "$group:direction-right",
+    "sequence",
+    "increment",
+    "right",
+    "numbers"
+  ],
+  "categories": [
+    "letters-digits",
+    "layout"
+  ]
+}
