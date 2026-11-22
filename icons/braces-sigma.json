@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "LinXruan",
+    "danielbayley",
+    "karsa-mistmere",
+    "mittalyashu",
+    "johnletey",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing structured mathematical expressions and LaTeX scopes",
+    "Indicating formula blocks or math parsing tools in editors"
+  ],
+  "tags": [
+    "$group:letter",
+    "latex",
+    "math",
+    "formula",
+    "sum",
+    "expression",
+    "structure",
+    "curly braces",
+    "parse tree",
+    "syntax tree"
+  ],
+  "categories": [
+    "math",
+    "development",
+    "text",
+    "science"
+  ]
+}
