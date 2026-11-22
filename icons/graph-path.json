@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jwlinqx"
+    "jwlinqx",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Analyzing financial data in charts",
+    "Indicating analysis tools or features",
+    "Displaying a travel route on a map or trip planner"
   ],
   "tags": [
+    "$group:graph",
     "line",
     "dot",
     "analysis",
@@ -12,7 +19,6 @@
     "merging",
     "converging",
     "trail",
-    "path",
     "route",
     "analytics",
     "timeline",
@@ -23,12 +29,8 @@
     "sequence"
   ],
   "categories": [
-    "development",
-    "navigation",
-    "connectivity",
-    "finance",
-    "travel",
     "charts",
-    "time"
+    "finance",
+    "travel"
   ]
 }
