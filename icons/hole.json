@@ -5,29 +5,28 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "indicating a hole tool in 3D CAD or modeling software",
-    "warning about a hole or hazard on a path or street map",
-    "creating a hole in 3D terrain or landscape editing software",
-    "representing an opening or cavity in construction diagrams",
-    "representing a bore or drill operation in machining software",
-    "denoting a cutout or aperture in product design specifications"
+    "Creating holes in 3D models",
+    "Marking potholes on road maps",
+    "Representing openings in construction plans",
+    "Indicating drilling operations in machining interfaces",
+    "Showing cutouts in product design specifications"
   ],
   "tags": [
-    "ellipse",
     "opening",
     "cavity",
     "pit",
     "void",
     "tunnel",
     "portal",
+    "bore",
+    "aperture",
+    "cutout",
+    "pothole",
+    "drilling",
     "3d",
     "cad",
     "terrain",
-    "hazard",
-    "aperture",
-    "cutout",
-    "bore",
-    "well"
+    "hazard"
   ],
   "categories": [
     "shapes",
