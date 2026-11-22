@@ -16,7 +16,6 @@
     "prevented",
     "active",
     "activated",
-    "enabled",
     "scanned",
     "found",
     "audited",
@@ -29,7 +28,10 @@
     "cleaned",
     "disinfected",
     "uninfected",
-    "checked"
+    "checked",
+    "insurance",
+    "guarantee",
+    "warranty"
   ],
   "categories": [
     "account",

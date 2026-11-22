@@ -6,12 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "line",
+    "$group:line",
     "snakes",
     "annotate",
-    "curve",
     "doodle",
-    "stroke",
     "pen",
     "tool",
     "gesture",

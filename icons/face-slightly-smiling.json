@@ -8,6 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:emoticon",
     "smile",
     "happy",
     "happiness",
@@ -16,9 +17,7 @@
     "friendly",
     "patronizing",
     "passive aggressive",
-    "ironic",
-    "emoji",
-    "emotion"
+    "ironic"
   ],
   "categories": [
     "emoji"

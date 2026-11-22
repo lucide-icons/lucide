@@ -16,7 +16,11 @@
     "ruler",
     "winner",
     "favorite",
-    "favourite"
+    "favourite",
+    "premium",
+    "vip",
+    "exclusive",
+    "pro"
   ],
   "categories": [
     "gaming"

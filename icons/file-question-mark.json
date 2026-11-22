@@ -9,7 +9,10 @@
   "tags": [
     "$extends:file",
     "$group:question-mark",
-    "readme"
+    "readme",
+    "404",
+    "not found",
+    "page not found"
   ],
   "categories": [
     "$extends:file"

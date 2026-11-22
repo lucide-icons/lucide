@@ -9,8 +9,7 @@
     "$extends:arrow-left",
     "$group:direction-left",
     "$group:navigation-first",
-    "collapse",
-    "fold",
+    "$group:collapse",
     "|<-"
   ],
   "categories": [
