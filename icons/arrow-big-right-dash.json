@@ -6,16 +6,14 @@
     "jamiemlaw",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "next",
-    "forward",
-    "direction",
-    "east",
+    "$extends:arrow-big-right",
+    "$group:direction-right",
     "turn",
     "corner"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "$extends:arrow-big-right"
   ]
 }

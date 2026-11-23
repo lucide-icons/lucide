@@ -3,12 +3,16 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "shop",
     "supermarket",
     "stand",
     "boutique",
-    "building"
+    "building",
+    "sell",
+    "selling",
+    "merchant"
   ],
   "categories": [
     "buildings",

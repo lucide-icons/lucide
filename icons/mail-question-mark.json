@@ -3,10 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
+    "$extends:mail",
+    "$group:question-mark",
     "delivery",
     "undelivered"
   ],
@@ -17,8 +17,7 @@
     {
       "name": "mail-question",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -4,11 +4,13 @@
     "lscheibel",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "healthcare",
     "first aid"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "medical"
   ]
 }

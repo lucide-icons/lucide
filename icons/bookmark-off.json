@@ -10,20 +10,21 @@
     "swastik7805",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:bookmark",
+    "$group:off",
     "unsaved",
     "unfavorite",
     "unmarked",
     "unlabel",
-    "disabled",
     "removed",
     "unpin",
     "unread",
     "unclip",
-    "marker",
     "untag"
   ],
   "categories": [
-    "account"
+    "$extends:bookmark"
   ]
 }

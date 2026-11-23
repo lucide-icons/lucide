@@ -7,18 +7,14 @@
     "csandman",
     "TonySullivan"
   ],
+  "use-cases": [],
   "tags": [
-    "location",
+    "$extends:map-pin",
+    "$group:search",
     "navigation",
-    "travel",
-    "waypoint",
-    "marker",
-    "drop"
+    "travel"
   ],
   "categories": [
-    "text",
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ]
 }

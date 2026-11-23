@@ -7,15 +7,15 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "code",
-    "version control",
+    "$extends:git-merge",
     "commits",
     "diff",
     "error",
     "conflict"
   ],
   "categories": [
-    "development"
+    "$extends:git-merge"
   ]
 }

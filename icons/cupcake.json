@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev",
+    "briz123",
+    "ajokt123",
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing cupcakes in bakery product catalogs",
+    "Filtering dessert options in food ordering apps",
+    "Marking treats for parties or celebrations"
+  ],
+  "tags": [
+    "cake",
+    "dessert",
+    "food",
+    "celebration",
+    "sweet",
+    "baking",
+    "cooking"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Commerce: discounts and sales",
+  "tags": [
+    "discount",
+    "sale",
+    "offer",
+    "deal",
+    "markdown",
+    "savings",
+    "reduction",
+    "rate",
+    "interest",
+    "tax",
+    "ratio",
+    "fraction",
+    "proportion",
+    "percentage",
+    "%",
+    "marketing",
+    "reduced",
+    "price tag"
+  ]
+}

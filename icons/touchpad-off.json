@@ -5,11 +5,12 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "trackpad",
-    "cursor"
+    "$extends:touchpad",
+    "$group:off"
   ],
   "categories": [
-    "devices"
+    "$extends:touchpad"
   ]
 }

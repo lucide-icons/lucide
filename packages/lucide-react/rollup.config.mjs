@@ -4,6 +4,11 @@ import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import getAliasesEntryNames from './scripts/getAliasesEntryNames.mts';
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideReact';
@@ -105,6 +110,16 @@ const configs = bundles
 
 export default [
   {
+    input: 'src/types.ts',
+    output: { file: 'dist/lucide-types.d.ts', format: 'es' },
+    plugins: [dts(dtsOptions)],
+  },
+  {
+    input: 'src/lucide-icon.d.ts',
+    output: { file: 'dist/lucide-icon.d.mts', format: 'es' },
+    plugins: [dts(dtsOptions)],
+  },
+  {
     input: 'src/dynamicIconImports.ts',
     output: [
       {
@@ -117,7 +132,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: 'src/dynamic.ts',
@@ -132,7 +147,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: inputs[0],
@@ -142,7 +157,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.suffixed.ts`,
@@ -152,7 +167,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -162,7 +177,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   ...configs,
 ];

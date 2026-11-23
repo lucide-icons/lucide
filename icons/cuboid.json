@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "brick",
     "block",
@@ -28,7 +29,6 @@
   ],
   "categories": [
     "shapes",
-    "math",
-    "food-beverage"
+    "math"
   ]
 }

@@ -7,24 +7,19 @@
     "karsa-mistmere",
     "sachinkr7368"
   ],
+  "use-cases": [],
   "tags": [
-    "location",
-    "waypoint",
-    "marker",
-    "drop",
-    "edit"
+    "$extends:map-pin",
+    "$group:pen"
   ],
   "categories": [
-    "navigation",
-    "travel",
-    "account"
+    "$extends:map-pin"
   ],
   "aliases": [
     {
       "name": "location-edit",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

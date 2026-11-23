@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "scan",
     "checkout",
@@ -17,6 +18,7 @@
     "consumer"
   ],
   "categories": [
-    "shopping"
+    "shopping",
+    "logistics"
   ]
 }

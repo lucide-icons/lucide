@@ -3,9 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "left",
-    "counter-clockwise",
+    "$extends:rotate-ccw",
     "rotate",
     "image",
     "90",
@@ -14,10 +14,6 @@
     "°"
   ],
   "categories": [
-    "layout",
-    "design",
-    "photography",
-    "tools",
-    "arrows"
+    "$extends:rotate-ccw"
   ]
 }

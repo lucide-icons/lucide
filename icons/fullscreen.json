@@ -3,8 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "expand",
+    "$group:expand",
     "zoom",
     "preview",
     "focus",
@@ -15,7 +16,6 @@
   "categories": [
     "layout",
     "multimedia",
-    "design",
     "photography"
   ]
 }

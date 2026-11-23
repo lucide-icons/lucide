@@ -5,6 +5,7 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "amenities",
     "services",
@@ -12,6 +13,7 @@
     "shower"
   ],
   "categories": [
-    "travel"
+    "travel",
+    "home"
   ]
 }

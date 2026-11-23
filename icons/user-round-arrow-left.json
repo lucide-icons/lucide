@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Assigning a task to the current user",
+    "Marking a message as directed to the current user",
+    "Navigating to the user's profile",
+    "Setting the current user as recipient",
+    "Indicating an inbound user request"
+  ],
+  "tags": [
+    "$extends:user-round",
+    "$group:direction-left",
+    "assign",
+    "move",
+    "give",
+    "setup",
+    "self",
+    "me",
+    "myself",
+    "avatar",
+    "incoming",
+    "recipient",
+    "assignee",
+    "inbound"
+  ],
+  "categories": [
+    "$extends:user-round",
+    "people"
+  ]
+}

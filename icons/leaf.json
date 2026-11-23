@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "sustainability",
     "nature",
@@ -13,7 +14,6 @@
   ],
   "categories": [
     "nature",
-    "sustainability",
-    "seasons"
+    "sustainability"
   ]
 }

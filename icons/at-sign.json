@@ -6,7 +6,9 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:letter",
     "mention",
     "at",
     "email",
@@ -15,6 +17,7 @@
   ],
   "categories": [
     "text",
-    "account"
+    "account",
+    "mail"
   ]
 }

@@ -5,6 +5,7 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "reflection",
     "optics",
@@ -23,7 +24,6 @@
   ],
   "categories": [
     "science",
-    "home",
-    "tools"
+    "home"
   ]
 }

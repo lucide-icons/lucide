@@ -3,19 +3,17 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:off",
     "diameter",
     "zero",
     "Ø",
     "nothing",
     "null",
     "void",
-    "cancel",
-    "ban",
     "no",
     "stop",
-    "forbidden",
-    "prohibited",
     "error",
     "incorrect",
     "mistake",
@@ -23,6 +21,6 @@
     "failure"
   ],
   "categories": [
-    "shapes"
+    "$extends:circle"
   ]
 }

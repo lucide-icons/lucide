@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$group:direction-down",
     "code",
     "coding",
     "version control",
