@@ -1,18 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AJAyanbisi"
+    "AJAyanbisi",
+    "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking elevator locations on building maps and floor plans",
+    "Indicating step-free access between floors in wayfinding signage",
+    "Representing an elevator amenity in property or hotel listings",
+    "Calling or controlling elevators in smart building apps"
+  ],
   "tags": [
+    "$group:direction-up",
+    "$group:direction-down",
     "building",
     "doors",
     "floor",
     "lift",
     "lobby",
     "shaft",
-    "transportation",
-    "vertical"
+    "transportation"
   ],
   "categories": [
     "accessibility",
