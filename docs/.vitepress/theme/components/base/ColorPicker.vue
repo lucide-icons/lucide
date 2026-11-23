@@ -143,7 +143,7 @@ function onPanelKeydown(event: KeyboardEvent) {
       class="color-swatch"
       aria-label="Open color picker"
       aria-haspopup="dialog"
-      :aria-expanded="String(isOpen)"
+      :aria-expanded="isOpen"
       :aria-controls="isOpen ? panelId : undefined"
       :style="{ '--swatch-color': swatchColor }"
       @click="isOpen = !isOpen"
@@ -256,7 +256,6 @@ function onPanelKeydown(event: KeyboardEvent) {
   z-index: 100;
   box-sizing: border-box;
   width: 256px;
-  min-height: 248px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
   background-color: var(--vp-c-bg-elv);

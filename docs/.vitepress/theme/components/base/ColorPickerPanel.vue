@@ -15,7 +15,7 @@ const emit = defineEmits<{
 }>();
 
 // Icons default to `currentColor`, which is the body text colour. Start from that colour when no
-// custom colour is set, without its alpha so the alpha slider starts at 100%.
+// custom colour is set. The picker has no opacity option, so it drops the colour's alpha.
 const defaultColor =
   typeof document === 'undefined' ? '#000000' : getComputedStyle(document.body).color;
 
@@ -23,10 +23,6 @@ function parseColor(value: string | null) {
   const color = tinycolor(value ?? '');
 
   return color.isValid() ? color : tinycolor(defaultColor).setAlpha(1);
-}
-
-function toHex(color: tinycolor.Instance) {
-  return color.getAlpha() < 1 ? color.toHex8String() : color.toHexString();
 }
 
 /*
@@ -49,7 +45,7 @@ const tinyColor = computed({
   get: () => color.value,
   set: (newColor: tinycolor.Instance) => {
     color.value = newColor;
-    lastEmittedValue = toHex(newColor);
+    lastEmittedValue = newColor.toHexString();
     emit('update:modelValue', lastEmittedValue);
   },
 });
@@ -70,7 +66,6 @@ watch(
 
 const knobColors = computed(() => ({
   '--picker-color': color.value.clone().setAlpha(1).toRgbString(),
-  '--picker-color-alpha': color.value.toRgbString(),
   '--picker-hue': `hsl(${hue.value} 100% 50%)`,
 }));
 
@@ -97,6 +92,7 @@ async function pickColorFromScreen() {
   >
     <ChromePicker
       v-model:tinyColor="tinyColor"
+      disable-alpha
       disable-fields
     />
     <button
@@ -156,7 +152,7 @@ async function pickColorFromScreen() {
   box-shadow: inset 0 0 0 1px var(--vp-c-divider);
 }
 
-/* Eye dropper on the left, hue and alpha sliders on the right */
+/* Eye dropper on the left, hue slider on the right */
 .color-picker-panel :deep(.controls) {
   gap: 12px;
   align-items: center;
@@ -179,18 +175,14 @@ async function pickColorFromScreen() {
   visibility: hidden;
 }
 
-.color-picker-panel :deep(.hue-wrap),
-.color-picker-panel :deep(.alpha-wrap) {
+/* Overrides vue-color's margins for its layout without the alpha slider */
+.color-picker-panel :deep(.vc-chrome-picker .hue-wrap) {
   height: var(--bar-height);
-}
-
-.color-picker-panel :deep(.hue-wrap) {
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .color-picker-panel :deep(.vc-base-slider .background),
-.color-picker-panel :deep(.vc-base-slider .gradient),
-.color-picker-panel :deep(.vc-base-slider .vc-checkerboard) {
+.color-picker-panel :deep(.vc-base-slider .gradient) {
   border-radius: calc(var(--bar-height) / 2);
 }
 
@@ -227,10 +219,6 @@ async function pickColorFromScreen() {
 
 .color-picker-panel :deep(.hue-wrap .picker) {
   background: var(--picker-hue);
-}
-
-.color-picker-panel :deep(.alpha-wrap .picker) {
-  background: var(--picker-color-alpha);
 }
 
 .color-picker-panel :deep(.saturation .picker-wrap:hover .picker),
