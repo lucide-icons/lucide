@@ -12,7 +12,11 @@
     "map",
     "continent",
     "world",
-    "geography"
+    "geography",
+    "region",
+    "landmass",
+    "cartography",
+    "atlas"
   ],
   "categories": [
     "navigation",
