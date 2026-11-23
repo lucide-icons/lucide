@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alberto6677"
+  ],
+  "use-cases": [
+    "Adding a new item to an existing board, canvas or collection",
+    "Creating a new block or widget from a toolbar"
+  ],
+  "tags": [
+    "$extends:square-plus"
+  ],
+  "categories": [
+    "$extends:square-plus"
+  ]
+}
