@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB"
+  ],
+  "use-cases": [
+    "Representing ramen dishes on restaurant menus",
+    "Categorizing noodle dishes in recipe apps",
+    "Marking noodle restaurants in food delivery apps"
+  ],
+  "tags": [
+    "ramen",
+    "noodles",
+    "soup",
+    "food",
+    "dish",
+    "meal",
+    "restaurant",
+    "cuisine",
+    "japanese"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
