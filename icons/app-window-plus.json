@@ -7,17 +7,16 @@
     "Opening a new window or instance of a desktop application",
     "Adding a new app or integration to a workspace or launcher",
     "Creating a new browser window or tab from a toolbar",
-    "Installing software from an app store or package manager"
+    "Installing software from an app store or package manager",
+    "Starting a new application project in visual development tools"
   ],
   "tags": [
     "$extends:app-window",
     "$group:plus",
     "open",
-    "instance",
-    "integration",
     "install",
-    "software",
-    "tab"
+    "tab",
+    "expand"
   ],
   "categories": [
     "layout",
