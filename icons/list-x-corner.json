@@ -3,21 +3,25 @@
   "contributors": [
     "AbeyHurtis"
   ],
+  "use-cases": [
+    "Removing an item or row from a list, table or queue",
+    "Deleting a task from a to-do list or checklist",
+    "Clearing tracks from a playlist or play queue",
+    "Removing a selected entry from a filter or options list"
+  ],
   "tags": [
-    "list",
-    "x",
-    "corner",
-    "delete",
-    "close",
-    "cancel",
-    "cross",
+    "$extends:list-x",
+    "$group:x",
     "mark",
     "sharp",
     "options",
-    "remove",
     "bottom",
     "to-do",
-    "checklist"
+    "checklist",
+    "item",
+    "task",
+    "entry",
+    "queue"
   ],
   "categories": [
     "text",
