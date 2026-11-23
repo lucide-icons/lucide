@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB"
+  ],
+  "use-cases": [
+    "Marking DisplayPort connections in device diagrams",
+    "Selecting DisplayPort inputs in monitor settings",
+    "Identifying DisplayPort cables in display setup guides"
+  ],
+  "tags": [
+    "socket",
+    "plug",
+    "connector",
+    "cable",
+    "monitor",
+    "screen",
+    "signal",
+    "audio",
+    "video",
+    "input",
+    "output"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "connectivity"
+  ]
+}
