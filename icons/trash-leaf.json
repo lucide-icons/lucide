@@ -18,7 +18,11 @@
     "eco",
     "green",
     "environment",
-    "sustainability"
+    "sustainability",
+    "composting",
+    "food waste",
+    "garden waste",
+    "yard waste"
   ],
   "categories": [
     "$extends:trash",
