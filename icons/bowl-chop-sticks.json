@@ -17,7 +17,14 @@
     "meal",
     "restaurant",
     "cuisine",
-    "japanese"
+    "japanese",
+    "chopsticks",
+    "asian food",
+    "broth",
+    "udon",
+    "soba",
+    "pho",
+    "miso"
   ],
   "categories": [
     "food-beverage"
