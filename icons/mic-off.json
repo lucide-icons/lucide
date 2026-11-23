@@ -7,16 +7,13 @@
     "karsa-mistmere",
     "LieOnLion"
   ],
+  "use-cases": [],
   "tags": [
-    "record",
-    "sound",
-    "mute",
-    "microphone"
+    "$extends:mic",
+    "$group:off",
+    "mute"
   ],
   "categories": [
-    "devices",
-    "communication",
-    "connectivity",
-    "multimedia"
+    "$extends:mic"
   ]
 }

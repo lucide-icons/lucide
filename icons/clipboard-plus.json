@@ -6,19 +6,17 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "copy",
-    "paste",
-    "add",
-    "create",
-    "new",
+    "$extends:clipboard",
+    "$group:plus",
     "document",
     "medical",
     "report",
     "doctor"
   ],
   "categories": [
-    "text",
+    "$extends:clipboard",
     "medical"
   ]
 }

@@ -4,18 +4,13 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "clone",
-    "duplicate",
-    "remove",
-    "delete",
-    "collapse",
-    "subtract",
-    "multiple",
-    "-"
+    "$extends:copy",
+    "$group:minus",
+    "collapse"
   ],
   "categories": [
-    "text",
-    "math"
+    "$extends:copy"
   ]
 }

@@ -4,6 +4,7 @@
     "wojtekmaj",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "qr-code",
     "barcode",
@@ -28,7 +29,6 @@
     "devices",
     "shopping",
     "security",
-    "social",
-    "gaming"
+    "photography"
   ]
 }

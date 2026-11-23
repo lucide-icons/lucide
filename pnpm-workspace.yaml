@@ -2,3 +2,36 @@ packages:
   - 'packages/*'
   - 'tools/*'
   - 'docs'
+  - 'integrations/*/*'
+  - '.github/actions/*'
+
+overrides:
+  cross-spawn: 7.0.5
+  fast-json-patch: ^3.1.1
+  form-data: ^4.0.4
+  semver: ^7.7.3
+  vite-prerender-plugin: 0.5.12
+  webpack-dev-middleware: ^5.3.4
+  vitest: '5.0.5'
+  vite: '^8.3.3'
+  zod@<4.6.6: ^4.6.6
+  brace-expansion@<1.1.21: ^1.1.21
+  decode-uri-component@<=0.5.0: ^0.5.1
+  deepmerge@>=4.2.0 <=4.3.1: ^4.3.1
+  file-type@>=13.0.0 <21.3.1: ^21.3.1
+  '@jimp/core>file-type': ^16.5.4
+  glob@>=9.0.0 <=14.0.1: ^14.0.2
+  hono@>=4.12.4 <4.13.11: ^4.13.11
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  esbuild: false
+  lmdb: false
+  msgpackr-extract: false
+  nice-napi: false
+  sharp: false
+  svelte-preprocess: false
+  ttf2woff2: false
+  unrs-resolver: false
+  vue-demi: false

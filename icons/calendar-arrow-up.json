@@ -5,21 +5,13 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
-    "sort",
-    "order",
-    "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "$extends:calendar",
+    "$group:direction-up",
+    "$group:sort"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

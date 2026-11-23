@@ -1,4 +1,6 @@
-# Our Official Stance on Including Brand Logos in Lucide
+# Brand Logos Statement
+
+Our official stance on including brand logos in Lucide
 
 ## TL;DR
 
@@ -37,7 +39,7 @@ This means adding them could:
 Lucide is all about **visual consistency**.
 
 Adding brand logos would:
-- Break [our own design rules](https://lucide.dev/guide/design/icon-design-guide#icon-design-principles) for shapes, proportions, and stroke.
+- Break [our own design rules](https://lucide.dev/contribute/icon-design-guide#icon-design-principles) for shapes, proportions, and stroke.
 - Mix two fundamentally different categories of graphics (pictograms vs. corporate logos).
 - Create a library where a subset of icons will always look "out of place".
 

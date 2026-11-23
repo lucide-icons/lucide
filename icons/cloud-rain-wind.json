@@ -4,11 +4,11 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "weather",
-    "rainfall"
+    "$extends:cloud-rain"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud-rain"
   ]
 }

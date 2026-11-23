@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "lt25106"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:printer",
+    "$group:x"
+  ],
+  "categories": [
+    "$extends:printer"
+  ]
+}

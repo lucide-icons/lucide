@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -18,6 +19,7 @@
     "debate"
   ],
   "categories": [
-    "social"
+    "social",
+    "communication"
   ]
 }

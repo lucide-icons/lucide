@@ -3,16 +3,14 @@
   "contributors": [
     "danielbayley",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "directory",
-    "root",
-    "project",
-    "git",
-    "repo"
+    "$extends:folder-git"
   ],
   "categories": [
-    "files"
+    "$extends:folder-git"
   ]
 }

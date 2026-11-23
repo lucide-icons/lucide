@@ -4,13 +4,13 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "h5",
-    "html",
-    "markup",
-    "markdown"
+    "$extends:letter-h",
+    "$group:digit",
+    "h5"
   ],
   "categories": [
-    "text"
+    "$extends:letter-h"
   ]
 }

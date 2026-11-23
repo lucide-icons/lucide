@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "reading",
     "paperback",
@@ -39,6 +40,7 @@
   "categories": [
     "text",
     "development",
-    "gaming"
+    "gaming",
+    "education"
   ]
 }

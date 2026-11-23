@@ -3,19 +3,14 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "entry",
-    "pass",
-    "voucher",
-    "event",
-    "concert",
-    "show",
+    "$extends:ticket",
+    "$group:check",
     "booked",
     "purchased",
     "receipt",
     "redeemed",
-    "validated",
-    "verified",
     "certified",
     "checked",
     "used"

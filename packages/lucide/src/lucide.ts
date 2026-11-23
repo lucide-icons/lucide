@@ -20,7 +20,7 @@ const createIcons = ({
   attrs = {},
   root = document,
   inTemplates,
-}: CreateIconsOptions) => {
+}: CreateIconsOptions = {}) => {
   if (!Object.values(icons).length) {
     throw new Error(
       "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",

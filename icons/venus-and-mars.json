@@ -3,6 +3,7 @@
   "contributors": [
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "gender",
     "sex",
@@ -11,6 +12,6 @@
     "hermaphrodite"
   ],
   "categories": [
-    "medical"
+    "$extends:venus"
   ]
 }

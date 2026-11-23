@@ -4,11 +4,11 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
+    "$group:direction-up",
     "orientation",
     "this way up",
-    "vertical",
     "package",
     "box",
     "fragile",
@@ -17,7 +17,6 @@
   ],
   "categories": [
     "arrows",
-    "transportation",
-    "mail"
+    "transportation"
   ]
 }

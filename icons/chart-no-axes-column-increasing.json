@@ -5,22 +5,19 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-no-axes-column",
     "trending up"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-no-axes-column"
   ],
   "aliases": [
     {
       "name": "bar-chart",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

@@ -3,20 +3,18 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "computer",
-    "screen",
-    "remote"
+    "$extends:laptop"
   ],
   "categories": [
-    "devices"
+    "$extends:laptop"
   ],
   "aliases": [
     {
       "name": "laptop-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

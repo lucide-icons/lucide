@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "stream",
     "cast",
@@ -16,8 +17,6 @@
   ],
   "categories": [
     "multimedia",
-    "connectivity",
-    "devices",
-    "brands"
+    "connectivity"
   ]
 }

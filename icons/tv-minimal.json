@@ -3,24 +3,11 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "flatscreen",
-    "television",
-    "stream",
-    "display",
-    "widescreen",
-    "high-definition",
-    "hd",
-    "1080p",
-    "4k",
-    "8k",
-    "smart",
-    "digital",
-    "video",
+    "$extends:tv",
+    "flat screen",
     "home cinema",
-    "entertainment",
-    "showtime",
-    "channels",
     "catchup"
   ],
   "categories": [
@@ -31,8 +18,7 @@
     {
       "name": "tv-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

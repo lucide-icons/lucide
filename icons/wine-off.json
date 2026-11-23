@@ -4,11 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "alcohol",
-    "beverage",
-    "drink",
-    "glass",
+    "$extends:wine",
+    "$group:off",
     "alcohol free",
     "abstinence",
     "abstaining",
@@ -17,6 +16,6 @@
     "intolerance"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:wine"
   ]
 }

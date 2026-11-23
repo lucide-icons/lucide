@@ -4,13 +4,15 @@
     "Andreto",
     "ericfennis",
     "karsa-mistmere",
-    "csandman"
+    "csandman",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "torch"
+    "$extends:flashlight",
+    "$group:off"
   ],
   "categories": [
-    "photography",
-    "devices"
+    "$extends:flashlight"
   ]
 }
