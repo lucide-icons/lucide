@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "josh-f",
+    "ericfennis",
+    "karsa-mistmere",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Representing repair and maintenance processes or services",
+    "Indicating DIY and home improvement tools or instructions",
+    "Selecting manual fastening tools in hardware and workshop applications"
+  ],
+  "tags": [
+    "tool",
+    "hardware",
+    "repair",
+    "screw",
+    "flathead",
+    "phillips",
+    "diy",
+    "fix",
+    "maintenance",
+    "construction"
+  ],
+  "categories": [
+    "tools"
+  ]
+}
