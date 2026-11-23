@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "HACENE-IHAB"
+    "HACENE-IHAB",
+    "kemie"
   ],
   "use-cases": [
     "Representing ramen dishes on restaurant menus",
@@ -9,13 +10,10 @@
     "Marking noodle restaurants in food delivery apps"
   ],
   "tags": [
+    "$extends:soup",
     "ramen",
     "noodles",
     "soup",
-    "food",
-    "dish",
-    "meal",
-    "restaurant",
     "cuisine",
     "japanese",
     "chopsticks",
