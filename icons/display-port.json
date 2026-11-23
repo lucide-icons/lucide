@@ -19,7 +19,13 @@
     "audio",
     "video",
     "input",
-    "output"
+    "output",
+    "digital display",
+    "video interface",
+    "display interface",
+    "computer display",
+    "graphics",
+    "high resolution"
   ],
   "categories": [
     "devices",
