@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking compost or organic waste bins",
+    "Sorting biodegradable waste in recycling guides",
+    "Indicating eco-friendly disposal options in sustainability apps",
+    "Showing green waste collection days in municipal apps"
+  ],
+  "tags": [
+    "$extends:trash",
+    "compost",
+    "organic",
+    "biodegradable",
+    "eco",
+    "green",
+    "environment",
+    "sustainability"
+  ],
+  "categories": [
+    "$extends:trash",
+    "sustainability"
+  ]
+}
