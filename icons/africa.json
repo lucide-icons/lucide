@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB"
+  ],
+  "use-cases": [],
+  "tags": [
+    "map",
+    "continent",
+    "world",
+    "geography"
+  ],
+  "categories": [
+    "navigation",
+    "travel"
+  ]
+}
