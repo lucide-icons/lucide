@@ -4,14 +4,25 @@ import { includeIgnoreFile } from '@eslint/compat';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import importX, { createNodeResolver } from 'eslint-plugin-import-x';
-import htmlEslint from '@html-eslint/eslint-plugin';
-import htmlParser from '@html-eslint/parser';
 import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
 import tseslint from 'typescript-eslint';
 import jsonSchema from './scripts/eslint/jsonSchemaPlugin.mjs';
+import svg from './scripts/eslint/svgPlugin/index.mjs';
 import * as jsoncParser from 'jsonc-eslint-parser';
 
 const gitignorePath = path.join(import.meta.dirname, '.gitignore');
+
+// The elements an icon may be drawn with, and the attributes each of them may have. Keep this in
+// sync with the `removeAttrs` list in prettier-plugin-lucide-svg.mjs, which strips everything else.
+const shapeAttrs = {
+  path: ['d'],
+  line: ['x1', 'y1', 'x2', 'y2'],
+  polygon: ['points'],
+  polyline: ['points'],
+  circle: ['cx', 'cy', 'r', 'fill'],
+  ellipse: ['cx', 'cy', 'rx', 'ry'],
+  rect: ['x', 'y', 'width', 'height', 'rx', 'ry'],
+};
 
 export default defineConfig([
   tseslint.configs.recommended,
@@ -99,59 +110,37 @@ export default defineConfig([
   {
     files: ['./icons/*.svg'],
     languageOptions: {
-      parser: htmlParser,
+      parser: svg.parser,
     },
     plugins: {
-      '@html-eslint': htmlEslint,
+      svg,
     },
     rules: {
-      '@html-eslint/require-doctype': 'off',
-      '@html-eslint/no-duplicate-attrs': 'error',
-      '@html-eslint/no-inline-styles': 'error',
-      '@html-eslint/require-attrs': [
-        'error',
-        ...Object.entries(defaultAttrs).map(([attr, value]) => ({
-          tag: 'svg',
-          attr,
-          value: String(value),
-        })),
-      ],
-      '@html-eslint/indent': ['error', 2],
-      '@html-eslint/no-multiple-empty-lines': ['error', { max: 0 }],
-      '@html-eslint/no-extra-spacing-attrs': [
+      // What an icon may contain, see docs/contribute/icons/code-conventions.md.
+      'svg/no-text': 'error',
+      'svg/allowed-elements': ['error', { root: 'svg', children: Object.keys(shapeAttrs) }],
+      'svg/allowed-attrs': ['error', { svg: Object.keys(defaultAttrs), ...shapeAttrs }],
+      'svg/require-attrs': ['error', { svg: defaultAttrs }],
+      'svg/allowed-attr-values': [
         'error',
         {
-          enforceBeforeSelfClose: true,
-        },
-      ],
-      '@html-eslint/attrs-newline': [
-        'error',
-        {
-          inline: ['path', 'line', 'polyline', 'polygon', 'rect', 'circle', 'ellipse'],
-        },
-      ],
-      '@html-eslint/require-closing-tags': [
-        'error',
-        {
-          selfClosing: 'always',
-          // Inside <svg> every tag counts as "foreign", where the rule only checks that a tag
-          // already written `/>` stays that way. Listing the shapes here is what actually forces
-          // `<path ...></path>` to become `<path ... />`.
-          selfClosingCustomPatterns: ['^(path|line|polyline|polygon|rect|circle|ellipse)$'],
-        },
-      ],
-      '@html-eslint/no-restricted-attr-values': [
-        'error',
-        {
-          attrPatterns: ['^(fill|stroke)$'],
-          attrValuePatterns: ['^(?!(none|currentColor)$).*$'],
+          attrs: ['fill', 'stroke'],
+          values: ['none', 'currentColor'],
           message:
             'Icons must inherit their colors: `fill` and `stroke` may only be `none` or `currentColor`.',
         },
       ],
-      '@html-eslint/element-newline': 'error',
-      '@html-eslint/no-trailing-spaces': 'error',
-      '@html-eslint/quotes': 'error',
+      'svg/no-duplicate-attrs': 'error',
+
+      // How it is formatted.
+      'svg/indent': ['error', 2],
+      'svg/attrs-newline': ['error', { multiline: ['svg'] }],
+      'svg/attrs-spacing': 'error',
+      'svg/element-newline': 'error',
+      'svg/self-closing': 'error',
+      'svg/quotes': 'error',
+      'svg/no-empty-lines': 'error',
+      'svg/no-trailing-spaces': 'error',
     },
   },
   {

@@ -83,7 +83,6 @@ updates:
       linting-deps:
         patterns:
           - '@eslint/*'
-          - '@html-eslint/*'
           - '@typescript-eslint/*'
           - 'angular-eslint'
           - 'cspell'
