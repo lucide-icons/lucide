@@ -3,32 +3,14 @@
   "contributors": [
     "Alberto6677"
   ],
+  "use-cases": [
+    "Adding a new item to an existing board, canvas or collection",
+    "Creating a new block or widget from a toolbar"
+  ],
   "tags": [
-    "add",
-    "square",
-    "increase",
-    "increasement",
-    "+",
-    "new",
-    "positive",
-    "calculate",
-    "calculator",
-    "button",
-    "keyboard",
-    "toolbar",
-    "maximum",
-    "upgrade",
-    "extra",
-    "operator",
-    "join",
-    "concatenate",
-    "code",
-    "coding"
+    "$extends:square-plus"
   ],
   "categories": [
-    "math",
-    "tools",
-    "development",
-    "text"
+    "$extends:square-plus"
   ]
 }
