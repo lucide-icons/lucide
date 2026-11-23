@@ -6,18 +6,16 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:direction-left",
+    "$group:navigation-previous",
     "previous",
-    "back",
-    "direction",
-    "west",
     "sign",
     "turn",
     "button",
     "<-"
   ],
   "categories": [
-    "arrows",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
     {

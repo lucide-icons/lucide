@@ -7,8 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:code",
     "script",
-    "document",
     "gist",
     "html",
     "xml",
@@ -16,7 +17,7 @@
     "plist"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "development"
   ]
 }

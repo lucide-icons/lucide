@@ -10,18 +10,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "water",
-    "weather",
-    "liquid",
-    "fluid",
-    "wet",
-    "moisture",
-    "damp",
-    "bead",
-    "globule"
+    "$extends:droplet",
+    "$group:off"
   ],
   "categories": [
-    "weather",
-    "gaming"
+    "$extends:droplet"
   ]
 }

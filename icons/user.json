@@ -8,9 +8,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact"
+    "$group:user"
   ],
   "categories": [
     "account"

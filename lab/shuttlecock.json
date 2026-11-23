@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "use-cases": [],
+  "tags": [
+    "sport",
+    "badminton",
+    "racket",
+    "shuttlecock",
+    "game",
+    "sports",
+    "equipment"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

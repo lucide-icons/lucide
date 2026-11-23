@@ -6,11 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "home",
-    "living",
-    "building",
-    "residence",
-    "architecture",
+    "$extends:house",
     "autarky",
     "energy"
   ],

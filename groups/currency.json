@@ -1,0 +1,33 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Commerce: money in a specific currency",
+  "tags": [
+    "currency",
+    "money",
+    "cash",
+    "banknote",
+    "funds",
+    "finance",
+    "payment",
+    "balance",
+    "transaction",
+    "bill",
+    "invoice",
+    "receipt",
+    "fee",
+    "subscription",
+    "price",
+    "cost",
+    "amount",
+    "revenue",
+    "income",
+    "expense",
+    "banking",
+    "exchange",
+    "financial",
+    "economy",
+    "pricing",
+    "prices",
+    "monetization"
+  ]
+}

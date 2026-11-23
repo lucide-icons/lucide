@@ -6,20 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "globe",
-    "internet",
+    "$extends:globe",
+    "$group:x",
     "offline",
     "disconnected",
-    "network",
-    "connection",
-    "world",
     "no connection",
     "network failure",
     "signal off"
   ],
   "categories": [
-    "connectivity",
-    "devices",
-    "navigation"
+    "$extends:globe"
   ]
 }

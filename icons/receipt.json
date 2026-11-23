@@ -15,10 +15,11 @@
     "currency",
     "dollar",
     "usd",
-    "$"
+    "$",
+    "cashier"
   ],
   "categories": [
     "finance",
-    "travel"
+    "shopping"
   ]
 }

@@ -8,10 +8,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "weather",
-    "bolt"
+    "$extends:cloud",
+    "bolt",
+    "thunder",
+    "thunderstorm",
+    "thunderbolt"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud"
   ]
 }

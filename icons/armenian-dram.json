@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Elawphant"
+  ],
+  "use-cases": [
+    "Representing money or prices in Armenian dram"
+  ],
+  "tags": [
+    "$group:currency",
+    "symbol"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

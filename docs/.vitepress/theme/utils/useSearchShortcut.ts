@@ -14,6 +14,8 @@ export default function useSearchShortcut(callback: () => void) {
     // Check for Cmd+K (Mac), Ctrl+K (Windows/Linux), or forward slash
     if (((event.metaKey || event.ctrlKey) && event.key === 'k') || event.key === '/') {
       event.preventDefault();
+      // Algolia listens for the same keys on window, so claim them before it sees them
+      event.stopImmediatePropagation();
       callback();
     }
   }
@@ -24,11 +26,11 @@ export default function useSearchShortcut(callback: () => void) {
     shortcutText.value = isMac ? '⌘K' : 'Ctrl+K';
 
     // Add keyboard shortcut listener
-    window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('keydown', handleKeydown, { capture: true });
   });
 
   onBeforeUnmount(() => {
-    window.removeEventListener('keydown', handleKeydown);
+    window.removeEventListener('keydown', handleKeydown, { capture: true });
   });
 
   return { shortcutText };

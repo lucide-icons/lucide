@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:message-circle",
+    "$group:exclamation-mark",
+    "report",
+    "abuse",
+    "offense",
+    "protected"
+  ],
+  "categories": [
+    "$extends:message-circle",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "message-circle-warning"
+    },
+    {
+      "name": "message-circle-alert"
+    }
+  ]
+}

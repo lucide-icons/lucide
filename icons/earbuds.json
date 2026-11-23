@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Indicating audio products or earbud accessories in e-commerce store catalogs",
+    "Switching the audio output to connected wireless earphones in music apps",
+    "Representing the bluetooth pairing process in user manuals",
+    "Representing connected earbud device status indicators or device settings",
+    "Routing hands-free audio calls to wireless listening devices"
+  ],
+  "tags": [
+    "earphones",
+    "audio",
+    "sound",
+    "bluetooth",
+    "wireless",
+    "music",
+    "noise cancelling",
+    "acoustics",
+    "stereo",
+    "media",
+    "listen",
+    "pairing",
+    "hands-free",
+    "speaker",
+    "volume"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

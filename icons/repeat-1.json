@@ -5,9 +5,11 @@
   ],
   "use-cases": [],
   "tags": [
+    "$group:digit",
     "replay"
   ],
   "categories": [
-    "multimedia"
+    "multimedia",
+    "arrows"
   ]
 }

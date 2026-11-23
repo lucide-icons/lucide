@@ -46,6 +46,7 @@ const value = computed({
     <template #icon>
       <Icon
         :iconNode="search"
+        name="search"
         class="search-icon"
       />
     </template>

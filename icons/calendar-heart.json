@@ -5,16 +5,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event",
-    "heart",
-    "favourite",
+    "$extends:calendar",
+    "$group:heart",
     "subscribe",
     "valentines day"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar';
+import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js';
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 import { computed } from 'vue';
 import SurveyAskOverlay from '../SurveyAskOverlay.vue';
@@ -20,6 +20,10 @@ const links = computed(() => [
   {
     text: 'Contribute',
     href: '/contribute/',
+  },
+  {
+    text: 'Sponsor',
+    href: '/sponsor',
   },
   {
     text: 'Changelog',
@@ -51,16 +55,6 @@ const links = computed(() => [
           <img
             src="/vercel.svg"
             alt="Powered by Vercel"
-            width="200"
-          />
-        </a>
-        <a
-          href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
-          rel="noreferrer noopener"
-        >
-          <img
-            src="/digitalocean.svg"
-            alt="Digital Ocean"
             width="200"
           />
         </a>
