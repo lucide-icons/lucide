@@ -14,8 +14,6 @@
   "tags": [
     "$extends:database",
     "$group:x",
-    "error",
-    "failed",
     "invalid",
     "rejected",
     "denied",

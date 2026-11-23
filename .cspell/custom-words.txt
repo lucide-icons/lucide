@@ -4,6 +4,7 @@ fullscreen
 gamepad
 gantt
 kanban
+lakehouse
 pilcrow
 squircle
 strikethrough
@@ -12,6 +13,7 @@ ungroup
 toc
 sunlounger
 monstera
+floorball
 
 # Search tags and terms used in icon and category metadata
 checkmark
@@ -31,6 +33,7 @@ glassmorphism
 gltf
 halloumi
 helpdesk
+hitbox
 interpoint
 interpunct
 middot

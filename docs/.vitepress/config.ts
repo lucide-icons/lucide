@@ -48,6 +48,12 @@ export default defineConfig({
     },
   },
   vite: {
+    server: {
+      // The waitlist forms POST same-origin, and the API dev server has CORS turned off.
+      proxy: {
+        '/api/waitlist': 'http://localhost:3000',
+      },
+    },
     resolve: {
       alias: [
         {
@@ -89,6 +95,8 @@ export default defineConfig({
           'packages.md',
           'showcase.md',
           'sponsor.md',
+          'mcp.md',
+          'waitlist/confirmed.md',
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
@@ -118,6 +126,7 @@ export default defineConfig({
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'MCP <span class="nav-badge">SOON</span>', link: '/mcp' },
       { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
@@ -150,5 +159,6 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://lucide.dev/',
+    transformItems: (items) => items.filter(({ url }) => !url.startsWith('waitlist/')),
   },
 });

@@ -53,6 +53,7 @@ declare global {
     };
     Tally: {
       // From https://tally.so/help/developer-resources#2f676e40530a460ea6a634b8441f6001
+      loadEmbeds: () => void;
       openPopup: (
         formId: string,
         options?: {

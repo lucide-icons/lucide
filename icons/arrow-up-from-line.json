@@ -12,8 +12,7 @@
     "git",
     "version control",
     "push",
-    "expand",
-    "fold"
+    "$group:expand"
   ],
   "categories": [
     "$extends:arrow-up",

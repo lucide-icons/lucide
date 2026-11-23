@@ -7,7 +7,6 @@
   "use-cases": [],
   "tags": [
     "$group:x",
-    "error",
     "incorrect",
     "wrong",
     "mistake",
