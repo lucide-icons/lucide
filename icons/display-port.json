@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "HACENE-IHAB"
+    "HACENE-IHAB",
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "use-cases": [
     "Marking DisplayPort connections in device diagrams",
@@ -9,17 +11,10 @@
     "Identifying DisplayPort cables in display setup guides"
   ],
   "tags": [
-    "socket",
-    "plug",
-    "connector",
+    "$extends:hdmi-port",
     "cable",
     "monitor",
     "screen",
-    "signal",
-    "audio",
-    "video",
-    "input",
-    "output",
     "digital display",
     "video interface",
     "display interface",
