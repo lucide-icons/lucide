@@ -63,6 +63,7 @@
     "@lucide/vue": "workspace:*",
     "@openpanel/web": "^1.4.2",
     "@react-email/components": "1.0.12",
+    "@sentry/vue": "^11.16.0",
     "@vueuse/components": "^14.4.0",
     "@vueuse/core": "^14.4.0",
     "@vueuse/integrations": "^14.4.0",
