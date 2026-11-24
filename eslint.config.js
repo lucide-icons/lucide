@@ -116,7 +116,8 @@ export default defineConfig([
       svg,
     },
     rules: {
-      // What an icon may contain, see docs/contribute/icons/code-conventions.md.
+      // What an icon may contain, see docs/contribute/icons/code-conventions.md. How it is
+      // formatted is checked by Prettier, see prettier-plugin-lucide-svg.mjs.
       'svg/no-text': 'error',
       'svg/allowed-elements': ['error', { root: 'svg', children: Object.keys(shapeAttrs) }],
       'svg/allowed-attrs': ['error', { svg: Object.keys(defaultAttrs), ...shapeAttrs }],
@@ -130,17 +131,6 @@ export default defineConfig([
             'Icons must inherit their colors: `fill` and `stroke` may only be `none` or `currentColor`.',
         },
       ],
-      'svg/no-duplicate-attrs': 'error',
-
-      // How it is formatted.
-      'svg/indent': ['error', 2],
-      'svg/attrs-newline': ['error', { multiline: ['svg'] }],
-      'svg/attrs-spacing': 'error',
-      'svg/element-newline': 'error',
-      'svg/self-closing': 'error',
-      'svg/quotes': 'error',
-      'svg/no-empty-lines': 'error',
-      'svg/no-trailing-spaces': 'error',
     },
   },
   {

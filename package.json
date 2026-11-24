@@ -82,6 +82,7 @@
     "p-memoize": "^8.0.0",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "^0.14.1",
+    "saxes": "^6.0.0",
     "semver": "^7.8.6",
     "simple-git": "^4.0.2",
     "svgo": "^4.1.0",

@@ -98,6 +98,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
+      saxes:
+        specifier: ^6.0.0
+        version: 6.0.0
       semver:
         specifier: ^7.7.3
         version: 7.8.6
