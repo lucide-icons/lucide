@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:globe",
+    "$group:clock",
+    "world clock",
+    "timezone"
+  ],
+  "categories": [
+    "$extends:globe",
+    "time"
+  ]
+}
