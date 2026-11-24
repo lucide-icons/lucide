@@ -1,21 +1,22 @@
-import * as parser from './parser.mjs';
-import allowedAttrValues from './rules/allowed-attr-values.mjs';
-import allowedAttrs from './rules/allowed-attrs.mjs';
-import allowedElements from './rules/allowed-elements.mjs';
-import noText from './rules/no-text.mjs';
-import requireAttrs from './rules/require-attrs.mjs';
+import type { ESLint, Linter } from 'eslint';
+import * as parser from './parser.ts';
+import allowedAttrValues from './rules/allowed-attr-values.ts';
+import allowedAttrs from './rules/allowed-attrs.ts';
+import allowedElements from './rules/allowed-elements.ts';
+import noText from './rules/no-text.ts';
+import requireAttrs from './rules/require-attrs.ts';
 
 /**
  * ESLint plugin that checks what an SVG file contains.
  *
- * Its parser (see `parser.mjs`) is strict, so malformed markup is a parsing error instead of being
+ * Its parser (see `parser.ts`) is strict, so malformed markup is a parsing error instead of being
  * silently repaired, and its rules can restrict a file to exactly the elements and attributes an
  * icon may have. Use it by setting `languageOptions.parser` to `svg.parser`.
  *
  * How a file is formatted is not checked here. That is up to Prettier, see
  * `prettier-plugin-lucide-svg.mjs`.
  */
-export default {
+const plugin = {
   meta: { name: 'svg' },
   parser,
   rules: {
@@ -25,4 +26,6 @@ export default {
     'no-text': noText,
     'require-attrs': requireAttrs,
   },
-};
+} satisfies ESLint.Plugin & { parser: Linter.Parser };
+
+export default plugin;

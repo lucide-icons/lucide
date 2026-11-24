@@ -56,9 +56,6 @@ importers:
       '@vitest/ui':
         specifier: 5.0.5
         version: 5.0.5(vitest@5.0.5)
-      ajv:
-        specifier: ^8.20.0
-        version: 8.20.0
       cpy-cli:
         specifier: ^7.0.0
         version: 7.0.0
@@ -98,9 +95,6 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
-      saxes:
-        specifier: ^6.0.0
-        version: 6.0.0
       semver:
         specifier: ^7.7.3
         version: 7.8.6
@@ -1489,6 +1483,25 @@ importers:
       '@types/minimist':
         specifier: ^1.2.5
         version: 1.2.5
+      '@types/node':
+        specifier: ^26.4.1
+        version: 26.4.1
+
+  tools/eslint-plugin:
+    dependencies:
+      ajv:
+        specifier: ^8.20.0
+        version: 8.20.0
+      jsonc-eslint-parser:
+        specifier: ^3.3.0
+        version: 3.3.0
+      saxes:
+        specifier: ^6.0.0
+        version: 6.0.0
+    devDependencies:
+      '@eslint/core':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@types/node':
         specifier: ^26.4.1
         version: 26.4.1

@@ -1,7 +1,6 @@
-import { describe, it } from 'node:test';
 import { RuleTester } from 'eslint';
-
-import svg from './index.mjs';
+import { describe, it } from 'vitest';
+import svg from './index.ts';
 
 RuleTester.describe = describe;
 RuleTester.it = it;
@@ -10,7 +9,7 @@ RuleTester.itOnly = it.only;
 const ruleTester = new RuleTester({ languageOptions: { parser: svg.parser } });
 
 /** An icon in the canonical format, with the given lines inside its `<svg>`. */
-const icon = (/** @type {string[]} */ ...lines) =>
+const icon = (...lines: string[]) =>
   [
     '<svg',
     '  xmlns="http://www.w3.org/2000/svg"',

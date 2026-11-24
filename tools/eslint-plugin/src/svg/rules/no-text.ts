@@ -1,12 +1,13 @@
+import type { SvgRule } from '../types.ts';
+
 /** Make invisible and non-ASCII characters readable in a message. */
-const visible = (/** @type {string} */ text) =>
+const visible = (text: string) =>
   text.replace(
     /[^\x20-\x7E]/g,
     (char) => `\\u${char.charCodeAt(0).toString(16).padStart(4, '0').toUpperCase()}`,
   );
 
-/** @type {import('eslint').Rule.RuleModule} */
-export default {
+const rule: SvgRule = {
   meta: {
     type: 'problem',
     docs: { description: 'Disallow text and CDATA sections' },
@@ -20,7 +21,6 @@ export default {
     const { sourceCode } = context;
 
     return {
-      /** @param {any} node */
       Text(node) {
         // XML whitespace only: a no-break or zero-width space is text, even if it can't be seen.
         const content = node.value.replace(/^[ \t\r\n]+|[ \t\r\n]+$/g, '');
@@ -38,10 +38,11 @@ export default {
           data: { text: `${visible(preview.slice(0, 40))}${preview.length > 40 ? '...' : ''}` },
         });
       },
-      /** @param {any} node */
       CData(node) {
         context.report({ node, messageId: 'cdata' });
       },
     };
   },
 };
+
+export default rule;

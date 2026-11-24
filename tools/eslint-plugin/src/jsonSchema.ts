@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import type { RuleDefinition } from '@eslint/core';
+import type { ValidateFunction } from 'ajv';
 import { Ajv2020 } from 'ajv/dist/2020.js';
-import { getStaticJSONValue } from 'jsonc-eslint-parser';
+import type { ESLint, Linter, SourceCode } from 'eslint';
+import { type AST, type RuleListener, getStaticJSONValue } from 'jsonc-eslint-parser';
 
 /**
  * ESLint plugin that validates JSON files against a configured JSON Schema (draft 2020-12),
@@ -12,12 +15,21 @@ import { getStaticJSONValue } from 'jsonc-eslint-parser';
  * which silently skips 2020-12 keywords such as `dependentRequired`.
  */
 
-const ajv = new Ajv2020({ allErrors: true });
-/** @type {Map<string, import('ajv').ValidateFunction>} */
-const validators = new Map();
+/** A rule for the tree `jsonc-eslint-parser` produces, with `Options` as its `context.options`. */
+type JsonRule<Options extends unknown[]> = RuleDefinition<{
+  LangOptions: Linter.LanguageOptions;
+  Code: SourceCode;
+  RuleOptions: Options;
+  Visitor: RuleListener;
+  Node: AST.JSONNode;
+  MessageIds: string;
+  ExtRuleDocs: Record<string, unknown>;
+}>;
 
-/** @param {string} schemaPath */
-const getValidator = (schemaPath) => {
+const ajv = new Ajv2020({ allErrors: true });
+const validators = new Map<string, ValidateFunction>();
+
+const getValidator = (schemaPath: string) => {
   let validate = validators.get(schemaPath);
   if (!validate) {
     validate = ajv.compile(JSON.parse(fs.readFileSync(schemaPath, 'utf-8')));
@@ -29,26 +41,23 @@ const getValidator = (schemaPath) => {
 /**
  * Find the AST node for a JSON pointer (e.g. `/aliases/0/name`). Returns the property node for
  * object members so the report points at the key, falling back to the closest existing parent.
- *
- * @param {any} node
- * @param {string} pointer
  */
-const findNode = (node, pointer) => {
+const findNode = (node: AST.JSONExpression, pointer: string) => {
   const segments = pointer
     .split('/')
     .slice(1)
     .map((segment) => segment.replaceAll('~1', '/').replaceAll('~0', '~'));
   let current = node;
-  let reportNode = node;
+  let reportNode: AST.JSONExpression | AST.JSONProperty = node;
   for (const segment of segments) {
-    if (current?.type === 'JSONObjectExpression') {
+    if (current.type === 'JSONObjectExpression') {
       const property = current.properties.find(
-        (/** @type {any} */ prop) => (prop.key.value ?? prop.key.name) === segment,
+        ({ key }) => ('name' in key ? key.name : key.value) === segment,
       );
       if (!property) break;
       reportNode = property;
       current = property.value;
-    } else if (current?.type === 'JSONArrayExpression') {
+    } else if (current.type === 'JSONArrayExpression') {
       const element = current.elements[Number(segment)];
       if (!element) break;
       reportNode = element;
@@ -60,8 +69,14 @@ const findNode = (node, pointer) => {
   return { node: current, reportNode };
 };
 
-/** @type {import('eslint').Rule.RuleModule} */
-const noInvalid = {
+type Options = [
+  {
+    /** Path to the schema, relative to the ESLint working directory (the repo root). */
+    schema: string;
+  },
+];
+
+const noInvalid: JsonRule<Options> = {
   meta: {
     type: 'problem',
     docs: {
@@ -71,7 +86,6 @@ const noInvalid = {
       {
         type: 'object',
         properties: {
-          // Path to the schema, relative to the ESLint working directory (the repo root).
           schema: { type: 'string' },
         },
         required: ['schema'],
@@ -81,7 +95,6 @@ const noInvalid = {
   },
   create(context) {
     return {
-      /** @param {any} program */
       Program(program) {
         const root = program.body[0]?.expression;
         if (root?.type !== 'JSONObjectExpression') {
@@ -90,7 +103,7 @@ const noInvalid = {
         }
 
         const data = getStaticJSONValue(root);
-        if (typeof data?.$schema !== 'string') {
+        if (typeof data.$schema !== 'string') {
           context.report({ node: root, message: 'Missing `$schema` field.' });
           return;
         }
@@ -116,14 +129,15 @@ const noInvalid = {
           const { node, reportNode } = findNode(root, error.instancePath);
           const location = error.instancePath || '(root)';
 
-          if (error.keyword === 'additionalProperties' && node?.type === 'JSONObjectExpression') {
+          if (error.keyword === 'additionalProperties' && node.type === 'JSONObjectExpression') {
+            const additionalProperty: string = error.params.additionalProperty;
             const property = findNode(
               node,
-              `/${error.params.additionalProperty.replaceAll('~', '~0').replaceAll('/', '~1')}`,
+              `/${additionalProperty.replaceAll('~', '~0').replaceAll('/', '~1')}`,
             ).reportNode;
             context.report({
               node: property,
-              message: `${location} has unexpected property "${error.params.additionalProperty}".`,
+              message: `${location} has unexpected property "${additionalProperty}".`,
             });
             continue;
           }
@@ -141,7 +155,9 @@ const noInvalid = {
   },
 };
 
-export default {
+const plugin = {
   meta: { name: 'json-schema' },
   rules: { 'no-invalid': noInvalid },
-};
+} satisfies ESLint.Plugin;
+
+export default plugin;

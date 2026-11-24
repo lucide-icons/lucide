@@ -1,7 +1,9 @@
-import { asTag, list } from '../utils.mjs';
+import type { SvgRule } from '../types.ts';
+import { asTag, list } from '../utils.ts';
 
-/** @type {import('eslint').Rule.RuleModule} */
-export default {
+type Options = [{ root: string; children: string[] }];
+
+const rule: SvgRule<Options> = {
   meta: {
     type: 'problem',
     docs: {
@@ -30,7 +32,6 @@ export default {
     const { root, children } = context.options[0];
 
     return {
-      /** @param {any} node */
       Element(node) {
         const { name, parent } = node;
 
@@ -55,3 +56,5 @@ export default {
     };
   },
 };
+
+export default rule;

@@ -6,8 +6,7 @@ import prettier from 'eslint-config-prettier';
 import importX, { createNodeResolver } from 'eslint-plugin-import-x';
 import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
 import tseslint from 'typescript-eslint';
-import jsonSchema from './scripts/eslint/jsonSchemaPlugin.mjs';
-import svg from './scripts/eslint/svgPlugin/index.mjs';
+import { jsonSchema, svg } from './tools/eslint-plugin/src/index.ts';
 import * as jsoncParser from 'jsonc-eslint-parser';
 
 const gitignorePath = path.join(import.meta.dirname, '.gitignore');

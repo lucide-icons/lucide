@@ -1,4 +1,5 @@
 import path from 'node:path';
+import type { ESLint } from 'eslint';
 
 /**
  * ESLint formatter for GitHub Actions. Prints each problem as a readable line plus a workflow
@@ -7,18 +8,17 @@ import path from 'node:path';
  * Unlike setup-node's `eslint-stylish` problem matcher, this also annotates parsing errors, which
  * have no rule id.
  *
- * Usage: eslint --format ./scripts/eslint/githubFormatter.mjs
+ * Usage: eslint --format ./tools/eslint-plugin/src/githubFormatter.ts
  */
 
 /** Escape data for a workflow command, see https://github.com/actions/toolkit/blob/main/packages/core/src/command.ts */
-const escapeData = (/** @type {string} */ value) =>
+const escapeData = (value: string) =>
   value.replaceAll('%', '%25').replaceAll('\r', '%0D').replaceAll('\n', '%0A');
-const escapeProperty = (/** @type {string} */ value) =>
+const escapeProperty = (value: string) =>
   escapeData(value).replaceAll(':', '%3A').replaceAll(',', '%2C');
 
-/** @type {import('eslint').ESLint.FormatterFunction} */
-const formatter = (results) => {
-  const lines = [];
+const formatter: ESLint.FormatterFunction = (results) => {
+  const lines: string[] = [];
   let errors = 0;
   let warnings = 0;
 
@@ -48,8 +48,7 @@ const formatter = (results) => {
   }
 
   if (errors + warnings > 0) {
-    const plural = (/** @type {number} */ count, /** @type {string} */ word) =>
-      `${count} ${word}${count === 1 ? '' : 's'}`;
+    const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? '' : 's'}`;
     lines.push(
       '',
       `✖ ${plural(errors + warnings, 'problem')} (${plural(errors, 'error')}, ${plural(warnings, 'warning')})`,

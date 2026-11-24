@@ -1,12 +1,15 @@
-/** @type {import('eslint').Rule.RuleModule} */
-export default {
+import type { SvgRule } from '../types.ts';
+
+/** Element name → attribute name → the required value, or `true` when any value will do. */
+type Options = [Record<string, Record<string, string | number | true>>];
+
+const rule: SvgRule<Options> = {
   meta: {
     type: 'problem',
     fixable: 'code',
     docs: { description: 'Require attributes on an element, optionally with an exact value' },
     schema: [
       {
-        // Element name → attribute name → the required value, or `true` when any value will do.
         type: 'object',
         additionalProperties: {
           type: 'object',
@@ -20,18 +23,16 @@ export default {
     },
   },
   create(context) {
-    /** @type {Record<string, Record<string, string | number | true>>} */
-    const requiredByElement = context.options[0];
+    const [requiredByElement] = context.options;
 
     return {
-      /** @param {any} node */
       Element(node) {
         if (!Object.hasOwn(requiredByElement, node.name)) return;
 
         for (const [name, required] of Object.entries(requiredByElement[node.name])) {
           const value = required === true ? null : String(required);
           const expected = value === null ? `"${name}"` : `${name}="${value}"`;
-          const attribute = node.attributes.find((/** @type {any} */ attr) => attr.name === name);
+          const attribute = node.attributes.find((attr) => attr.name === name);
 
           if (!attribute) {
             context.report({
@@ -56,3 +57,5 @@ export default {
     };
   },
 };
+
+export default rule;

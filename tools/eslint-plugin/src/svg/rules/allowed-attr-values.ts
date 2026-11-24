@@ -1,7 +1,14 @@
-import { list, quoted } from '../utils.mjs';
+import type { SvgRule } from '../types.ts';
+import { list, quoted } from '../utils.ts';
 
-/** @type {import('eslint').Rule.RuleModule} */
-export default {
+export interface Restriction {
+  attrs: string[];
+  values: string[];
+  /** Replaces the default message, to explain why. */
+  message?: string;
+}
+
+const rule: SvgRule<Restriction[]> = {
   meta: {
     type: 'problem',
     docs: { description: 'Only allow the listed values for an attribute, on any element' },
@@ -12,7 +19,6 @@ export default {
         properties: {
           attrs: { type: 'array', items: { type: 'string' }, minItems: 1, uniqueItems: true },
           values: { type: 'array', items: { type: 'string' }, uniqueItems: true },
-          // Replaces the default message, to explain why.
           message: { type: 'string' },
         },
         required: ['attrs', 'values'],
@@ -25,11 +31,9 @@ export default {
     },
   },
   create(context) {
-    /** @type {{ attrs: string[], values: string[], message?: string }[]} */
     const restrictions = context.options;
 
     return {
-      /** @param {any} node */
       Attribute(node) {
         for (const { attrs, values, message } of restrictions) {
           if (!attrs.includes(node.name) || values.includes(node.value)) continue;
@@ -47,3 +51,5 @@ export default {
     };
   },
 };
+
+export default rule;

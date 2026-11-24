@@ -1,0 +1,24 @@
+{
+  "name": "@lucide/eslint-plugin",
+  "description": "A internal used package with the ESLint plugins and formatter used to lint the Lucide repository.",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "jsonc-eslint-parser": "^3.3.0",
+    "saxes": "^6.0.0"
+  },
+  "devDependencies": {
+    "@eslint/core": "^1.2.1",
+    "@types/node": "^26.4.1"
+  }
+}

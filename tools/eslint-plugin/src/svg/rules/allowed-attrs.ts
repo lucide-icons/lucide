@@ -1,13 +1,15 @@
-import { list, quoted } from '../utils.mjs';
+import type { SvgRule } from '../types.ts';
+import { list, quoted } from '../utils.ts';
 
-/** @type {import('eslint').Rule.RuleModule} */
-export default {
+/** Element name → the attributes it may have. Elements that are not listed are not checked. */
+type Options = [Record<string, string[]>];
+
+const rule: SvgRule<Options> = {
   meta: {
     type: 'problem',
     docs: { description: 'Only allow the listed attributes on an element' },
     schema: [
       {
-        // Element name → the attributes it may have. Elements that are not listed are not checked.
         type: 'object',
         additionalProperties: { type: 'array', items: { type: 'string' }, uniqueItems: true },
       },
@@ -19,11 +21,9 @@ export default {
     },
   },
   create(context) {
-    /** @type {Record<string, string[]>} */
-    const allowedByElement = context.options[0];
+    const [allowedByElement] = context.options;
 
     return {
-      /** @param {any} node */
       Element(node) {
         if (!Object.hasOwn(allowedByElement, node.name)) return;
         const allowed = allowedByElement[node.name];
@@ -40,3 +40,5 @@ export default {
     };
   },
 };
+
+export default rule;

@@ -23,7 +23,7 @@ jobs:
 
       # The formatter prints workflow commands, which GitHub shows as inline annotations.
       - name: Run ESLint
-        run: pnpm lint:es --format ./scripts/eslint/githubFormatter.mjs
+        run: pnpm lint:es --format ./tools/eslint-plugin/src/githubFormatter.ts
 
   prettier:
     name: Prettier
@@ -57,7 +57,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate icon and category JSON
-        run: pnpm lint:json --format ./scripts/eslint/githubFormatter.mjs
+        run: pnpm lint:json --format ./tools/eslint-plugin/src/githubFormatter.ts
 
   spelling:
     name: Spelling

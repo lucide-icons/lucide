@@ -7,30 +7,56 @@ import { SaxesParser } from 'saxes';
  * not recover from mistakes: a tag that is never closed, a mismatched closing tag or a duplicate or
  * unquoted attribute is a parsing error. All that is left to do here is to turn its events into a
  * tree ESLint can traverse, and to work out where everything is so that rules can point at it.
- *
- * @typedef {{ line: number, column: number }} Position
- * @typedef {{ range: [number, number], loc: { start: Position, end: Position } }} Located
- *
- * @typedef {Located & {
- *   type: 'Attribute',
- *   name: string,
- *   value: string,     // Text between the quotes, with references such as `&amp;` left as is.
- *   quote: '"' | "'",
- *   literal: Located,  // The value including its quotes.
- * }} Attribute
- *
- * @typedef {Located & {
- *   type: 'Element',
- *   name: string,
- *   attributes: Attribute[],
- *   children: ChildNode[],
- *   openStart: Located, // `<name`
- * }} Element
- *
- * @typedef {Located & { type: 'Text', value: string }} Text
- * @typedef {Located & { type: 'CData' | 'Comment' | 'Doctype' | 'ProcessingInstruction' }} Other
- * @typedef {Element | Text | Other} ChildNode
  */
+
+export interface Position {
+  line: number;
+  column: number;
+}
+
+export interface Located {
+  range: [number, number];
+  loc: { start: Position; end: Position };
+}
+
+export interface Attribute extends Located {
+  type: 'Attribute';
+  name: string;
+  /** Text between the quotes, with references such as `&amp;` left as is. */
+  value: string;
+  quote: '"' | "'";
+  /** The value including its quotes. */
+  literal: Located;
+}
+
+export interface Element extends Located {
+  type: 'Element';
+  name: string;
+  attributes: Attribute[];
+  children: ChildNode[];
+  /** `<name` */
+  openStart: Located;
+}
+
+export interface Text extends Located {
+  type: 'Text';
+  value: string;
+}
+
+/** Markup that is neither an element nor text. */
+export interface Other extends Located {
+  type: 'CData' | 'Comment' | 'Doctype' | 'ProcessingInstruction';
+}
+
+export type ChildNode = Element | Text | Other;
+
+export interface Program extends Located {
+  type: 'Program';
+  body: ChildNode[];
+  sourceType: 'module';
+  tokens: never[];
+  comments: never[];
+}
 
 export const meta = { name: 'lucide-svg-parser', version: '2.0.0' };
 
@@ -48,18 +74,13 @@ export const visitorKeys = {
 // The same line breaks ESLint splits `sourceCode.lines` on, so positions agree.
 const LINE_BREAK = /\r\n|[\r\n\u2028\u2029]/gu;
 
-/**
- * @param {string} text
- * @returns {{ ast: any, visitorKeys: typeof visitorKeys }}
- */
-export function parseForESLint(text) {
+export function parseForESLint(text: string): { ast: Program; visitorKeys: typeof visitorKeys } {
   const lineStarts = [0];
   for (const lineBreak of text.matchAll(LINE_BREAK)) {
     lineStarts.push(lineBreak.index + lineBreak[0].length);
   }
 
-  /** @returns {Position} */
-  const positionAt = (/** @type {number} */ index) => {
+  const positionAt = (index: number): Position => {
     let low = 0;
     let high = lineStarts.length - 1;
     while (low < high) {
@@ -70,8 +91,7 @@ export function parseForESLint(text) {
     return { line: low + 1, column: index - lineStarts[low] };
   };
 
-  /** @returns {Located} */
-  const span = (/** @type {number} */ start, /** @type {number} */ end) => ({
+  const span = (start: number, end: number): Located => ({
     range: [start, end],
     loc: { start: positionAt(start), end: positionAt(end) },
   });
@@ -80,17 +100,13 @@ export function parseForESLint(text) {
   // during an event is the end of what the event is about, and the rest follows from that.
   const parser = new SaxesParser();
 
-  /** @type {ChildNode[]} */
-  const body = [];
-  /** @type {Element[]} */
-  const openElements = [];
-  /** @type {Attribute[]} */
-  let attributes = [];
+  const body: ChildNode[] = [];
+  const openElements: Element[] = [];
+  let attributes: Attribute[] = [];
   // Where the last piece of markup ended.
   let end = 0;
 
-  const append = (/** @type {ChildNode} */ node) =>
-    (openElements.at(-1)?.children ?? body).push(node);
+  const append = (node: ChildNode) => (openElements.at(-1)?.children ?? body).push(node);
 
   /**
    * Locate the piece of markup that ends at `stop`. Text can't contain a `<`, so the markup starts
@@ -116,7 +132,7 @@ export function parseForESLint(text) {
 
   parser.on('attribute', ({ name }) => {
     const stop = parser.position;
-    const quote = /** @type {'"' | "'"} */ (text[stop - 1]);
+    const quote = text[stop - 1] as Attribute['quote'];
     const quoteAt = text.lastIndexOf(quote, stop - 2);
     // Walk back over `name = ` to where the attribute starts.
     let start = quoteAt;
@@ -136,8 +152,7 @@ export function parseForESLint(text) {
   parser.on('opentag', ({ name }) => {
     const located = markup();
     const [start] = located.range;
-    /** @type {Element} */
-    const element = {
+    const element: Element = {
       type: 'Element',
       name,
       attributes,
@@ -151,10 +166,10 @@ export function parseForESLint(text) {
   });
 
   parser.on('closetag', ({ isSelfClosing }) => {
-    const element = /** @type {Element} */ (openElements.at(-1));
+    const element = openElements.at(-1);
     // `<path />` was already covered by its opening tag. Otherwise the element runs up to the end
     // of the closing tag, and any text in front of that tag still belongs to it.
-    if (!isSelfClosing) {
+    if (element && !isSelfClosing) {
       markup();
       element.range[1] = end;
       element.loc.end = positionAt(end);
@@ -164,7 +179,7 @@ export function parseForESLint(text) {
 
   // Everything else only has to be told apart from text.
   const other =
-    (/** @type {Other['type']} */ type, extra = 0) =>
+    (type: Other['type'], extra = 0) =>
     () => {
       append({ type, ...markup(parser.position + extra) });
     };

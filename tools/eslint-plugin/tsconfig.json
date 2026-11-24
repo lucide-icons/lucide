@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "outDir": "./dist"
+  },
+  "include": ["src"]
+}
