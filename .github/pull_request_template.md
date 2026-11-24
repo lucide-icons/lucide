@@ -14,7 +14,12 @@ Common scopes: icons, docs, studio, site, dev
 ## Description
 <!-- What does this PR change, and why? -->
 
-### Icon details
+## Icon use cases 
+<!-- Only for new icons; otherwise remove this section. -->
+<!-- What is the purpose of this icon? For each icon added, please insert at least two real-life use cases (the more the better). Text like "it's a car icon" is not accepted. -->
+<!-- Read use-cases convention here: https://lucide.dev/contribute/icons/metadata-conventions/#use-cases -->
+
+## Icon details
 <!-- Only for new icons or substantial redesigns; otherwise remove this section. -->
 
 **Alternative designs:**
