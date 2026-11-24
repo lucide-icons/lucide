@@ -2,6 +2,7 @@
 import buildLucideIconNode from './utils/buildLucideIconNode';
 import type { IconProps as Props } from './types';
 import { hasA11yProp } from './utils/hasA11yProp';
+import { hasTitleChild } from './hasTitleChild';
 
 const {
   color = 'currentColor',
@@ -23,6 +24,7 @@ const {
 
 const defaultSlot = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
 const hasDefaultSlot = defaultSlot.trim().length > 0;
+const hasSlotTitle = hasDefaultSlot && hasTitleChild(defaultSlot);
 
 const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   color,
@@ -32,7 +34,7 @@ const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   absoluteStrokeWidth,
   nonScalingStroke,
   ...(className !== undefined && { className }),
-  hasA11yProp: hasDefaultSlot || hasA11yProp(rest),
+  hasA11yProp: hasSlotTitle || hasA11yProp(rest),
 });
 
 const iconAttributes = {

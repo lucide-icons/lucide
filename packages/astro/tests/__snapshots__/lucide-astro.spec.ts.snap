@@ -128,6 +128,7 @@ exports[`Using lucide icon components > should pass children to the icon slot 1`
      stroke-linecap="round"
      stroke-linejoin="round"
      class="lucide lucide-face-slightly-smiling lucide-smile"
+     aria-hidden="true"
 >
   <path d="M15 10V9">
   </path>
