@@ -1,3 +1,35 @@
+/* VitePress 2 replaced its base styles with Tailwind's preflight. Our custom components were built
+   on VitePress 1's base (fixed 24px line-height, 16px/400 headings), so restore those parts.
+   This layer sits right after VitePress's base layer, so every component and page style still wins. */
+@layer __vitepress_base, vp1-base;
+
+@layer vp1-base {
+  body {
+    line-height: 24px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
 :root {
   --vp-c-brand: #f56565;
   --vp-c-brand-light: #f67373;
@@ -123,8 +155,10 @@ html::-webkit-scrollbar-thumb:active {
   }
 }
 
+/* VitePress 2 clips horizontal overflow itself (overflow-x: clip), but unlike the old overflow-x: hidden
+   that doesn't contain the last section's bottom margin, so keep a formatting context for the spacing. */
 .VPHome {
-  overflow-x: hidden;
+  display: flow-root;
 }
 
 .VPNavBarTitle .logo {
@@ -189,7 +223,7 @@ html::-webkit-scrollbar-thumb:active {
   display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .VPHomeHero .container .image {
     order: 1;
     margin-bottom: auto;
@@ -261,14 +295,14 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 /* No room for the label next to the logo at these widths. */
-@media (min-width: 768px) and (max-width: 879.98px) {
+@media (min-width: 48rem) and (max-width: 54.9988rem) {
   .VPNavBarMenu .nav-badge {
     display: none;
   }
 }
 
 /* The menu only just fits next to the logo at these widths. */
-@media (min-width: 768px) and (max-width: 829.98px) {
+@media (min-width: 48rem) and (max-width: 51.8738rem) {
   .VPNav .VPNavBarMenu .VPNavBarMenuLink,
   .VPNav .VPNavBarMenuGroup .button {
     padding: 0 9px;
@@ -308,13 +342,23 @@ html::-webkit-scrollbar-thumb:active {
   transform: rotate(-90deg);
 }
 
+/* VitePress 2 only transitions opacity and visibility here (and closes faster than it opens),
+   so add transform to both, or the slide would jump */
 .VPNav .VPNavBarMenuGroup .button[aria-expanded='false'] + .menu {
   transform: translateY(-8px);
+  transition:
+    opacity 0.1s,
+    visibility 0.1s,
+    transform 0.1s;
 }
 
 .VPNav .VPNavBarMenuGroup:hover .button + .menu,
 .VPNav .VPNavBarMenuGroup .button[aria-expanded='true'] + .menu {
   transform: translateY(0);
+  transition:
+    opacity 0.25s,
+    visibility 0.25s,
+    transform 0.25s;
 }
 
 /* Appearance switch: the thumb sits 2px inside the track and slides over with a small bounce,
@@ -420,7 +464,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .VPSidebar {
     padding-right: 24px !important;
   }
@@ -547,8 +591,10 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
 
 /* "On this page" outline: each heading is a soft pill on hover and slides in a little,
    the current heading takes the brand colour and the marker glides to it */
+/* No negative right margin: it would overflow the aside container, and VitePress's
+   scrollIntoView on the active link would then scroll the whole outline sideways. */
 .VPDoc .VPDocAsideOutline .outline-link {
-  margin: 0 -8px;
+  margin: 0 0 0 -8px;
   padding: 0 8px;
   border-radius: 6px;
   transition:
@@ -651,6 +697,11 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   overflow: hidden;
 }
 
+/* VitePress 2 gives `.vp-doc img` a 1rem block margin */
+.vp-doc .example-guidance__image {
+  margin: 0;
+}
+
 .example-guidance__image--raw svg {
   display: block;
   width: 100%;
@@ -714,7 +765,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   --example-guidance-label-bg: var(--vp-c-warning-1);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .example-block {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -730,7 +781,7 @@ html.dark .VPNav .VPSwitchAppearance .icon .moon {
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .example-block {
     grid-template-columns: minmax(0, 0.9fr) repeat(2, minmax(0, 1fr));
   }
