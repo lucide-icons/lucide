@@ -59,10 +59,8 @@ const bundles = [
   },
 ];
 
-// With `preserveModules`, every output module would get its own license banner, which
-// repeats it ~2,000 times in consumer bundles (#3744). Every icon, and any direct use of
-// the `Icon` component, imports `Icon`, so keeping the banner only there includes it
-// exactly once in any bundle that renders an icon.
+// Only add the license banner to Icon.mjs in ESM builds, so it appears once in a bundle (#3744).
+// Every icon imports Icon. The CJS build is one file and keeps its banner.
 const licenseModuleMatcher = /[/\\]src[/\\]Icon\.ts$/;
 const isNotLicenseChunk = (chunk) => !licenseModuleMatcher.test(chunk.facadeModuleId ?? '');
 
@@ -86,7 +84,7 @@ const configs = bundles
           ...plugins({
             pkg,
             minify,
-            licenseBannerExclude: preserveModules ? isNotLicenseChunk : undefined,
+            licenseBannerExclude: format === 'esm' ? isNotLicenseChunk : undefined,
           }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
