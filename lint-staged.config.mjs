@@ -4,6 +4,8 @@ const config = {
     'node ./scripts/optimizeStagedSvgs.mts',
     'node ./scripts/generateNextJSAliases.mts',
     `prettier --write ${filenames.join(' ')}`,
+    // After formatting, so only what Prettier can't fix is left to report.
+    `eslint ${filenames.join(' ')}`,
   ],
   'icons/*.json': (filenames) => [
     `eslint ${filenames.join(' ')}`,

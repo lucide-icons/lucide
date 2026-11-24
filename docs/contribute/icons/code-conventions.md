@@ -70,6 +70,12 @@ You can automatically format SVG files with Prettier:
 pnpm run lint:icons-fix
 ```
 
+To check that the SVG files only contain allowed elements and attributes, run:
+
+```sh
+pnpm run lint:svg:icons
+```
+
 To check icon names, categories, metadata, and SVG structure together, run:
 
 ```sh
@@ -88,4 +94,5 @@ Before opening a pull request, confirm that:
 - The SVG does not use transforms, filters, fills, explicit strokes, or `<use>`.
 - The icon has a matching JSON metadata file.
 - `pnpm run lint:icons` passes.
+- `pnpm run lint:svg:icons` passes.
 - `pnpm run lint:json:icons` passes.
