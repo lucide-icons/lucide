@@ -766,10 +766,10 @@ importers:
         version: link:../../../packages/vue
       vike:
         specifier: 0.4.266
-        version: 0.4.266(h3@1.15.11)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+        version: 0.4.266(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       vike-vue:
         specifier: 0.9.13
-        version: 0.9.13(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(vike@0.4.266(h3@1.15.11)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)))(vue@3.5.45(typescript@6.0.3))
+        version: 0.9.13(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(vike@0.4.266(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)))(vue@3.5.45(typescript@6.0.3))
       vue:
         specifier: 3.5.45
         version: 3.5.45(typescript@6.0.3)
@@ -941,6 +941,39 @@ importers:
       vitest:
         specifier: 5.0.5
         version: 5.0.5(@types/node@26.4.1)(@vitest/browser-playwright@5.0.5)(@vitest/coverage-v8@5.0.5)(@vitest/ui@5.0.5)(jsdom@30.1.3)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+
+  packages/hono:
+    devDependencies:
+      '@lucide/build-icons':
+        specifier: workspace:*
+        version: link:../../tools/build-icons
+      '@lucide/rollup-plugins':
+        specifier: workspace:*
+        version: link:../../tools/rollup-plugins
+      '@lucide/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@testing-library/jest-dom':
+        specifier: ^7.0.1
+        version: 7.0.1(@testing-library/dom@10.4.2)(vitest@5.0.5)
+      hono:
+        specifier: ^4.13.11
+        version: 4.13.19
+      jest-serializer-html:
+        specifier: ^7.1.0
+        version: 7.1.0
+      rollup:
+        specifier: ^4.65.1
+        version: 4.68.6
+      rollup-plugin-dts:
+        specifier: ^6.5.1
+        version: 6.5.1(rollup@4.68.6)(typescript@6.0.3)
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.3.3
+        version: 8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)
 
   packages/icons:
     devDependencies:
@@ -9579,6 +9612,10 @@ packages:
   hey-listen@1.0.8:
     resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
 
+  hono@4.13.19:
+    resolution: {integrity: sha512-KmXvQAXwcAHV+muzbIwoJ23niEB5nMoDVr9WcRkU8mvjUECm/1+7v4Jgp7P7a+H6MLFrh+vXrGonGrGS+RQfkA==}
+    engines: {node: '>=16.9.0'}
+
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
@@ -14149,18 +14186,22 @@ packages:
   yuku-ast@0.19.0:
     resolution: {integrity: sha512-PyCsiScaelhxBGzL8dyeJkLqvRZycoh78R31Vrt/WqYrm0hMFoKwIw/X7Dx5mBKLWAMlV9I9HEyBOHnj2gZVyw==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
   yuku-codegen@0.19.0:
     resolution: {integrity: sha512-uymAKHjDuaP4BEpkXC/BSLz4DUEF5oArZ5AuD3888nb2miChjWSgpPdojEJxm3pjpXkgUaCRJQyNAbnMN33wHg==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
   yuku-core@0.19.0:
     resolution: {integrity: sha512-kYK9e1XdfirNhkipzW0wmMcSWcVF/CWnuugodfVYRCUwvoBefweL9HzB96OiKEhsx78V5WbUxbJqlizMX869Qg==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
   yuku-parser@0.19.0:
     resolution: {integrity: sha512-XrBh9ZiQK5mJVRxZBAvD6LwRyAYrK3MFtH3+onyuxFL5hFD44EC3QOmIC1FjTj6H2MMwq46/NAI+NZxLZPZgxg==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
   zimmerframe@1.1.5:
     resolution: {integrity: sha512-msJxIvYDYcoNL+PJsu+7qmpDWsYmAxTY+2TNYXXF0hzBzBk0BMecOqDOG/EckUoKCuKwObfbugIl8QpqHDXeFA==}
@@ -20191,12 +20232,12 @@ snapshots:
     optionalDependencies:
       srvx: 0.12.8
 
-  '@universal-deploy/vite@0.1.14(h3@1.15.11)(srvx@0.12.8)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
+  '@universal-deploy/vite@0.1.14(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
       '@universal-deploy/netlify': 0.2.3(srvx@0.12.8)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       '@universal-deploy/node': 0.1.12(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       '@universal-deploy/store': 0.2.2(srvx@0.12.8)
-      '@universal-middleware/express': 0.4.31(h3@1.15.11)(srvx@0.12.8)
+      '@universal-middleware/express': 0.4.31(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
       magic-string: 0.30.21
       rou3: 0.8.1
     optionalDependencies:
@@ -20212,18 +20253,19 @@ snapshots:
       - hono
       - srvx
 
-  '@universal-middleware/core@0.4.18(h3@1.15.11)(srvx@0.12.8)':
+  '@universal-middleware/core@0.4.18(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)':
     dependencies:
       regexparam: 3.0.0
       tough-cookie: 6.1.0
     optionalDependencies:
       h3: 1.15.11
+      hono: 4.13.19
       srvx: 0.12.8
 
-  '@universal-middleware/express@0.4.31(h3@1.15.11)(srvx@0.12.8)':
+  '@universal-middleware/express@0.4.31(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)':
     dependencies:
-      '@universal-middleware/core': 0.4.18(h3@1.15.11)(srvx@0.12.8)
-      '@universal-middleware/node': 0.2.3(h3@1.15.11)(srvx@0.12.8)
+      '@universal-middleware/core': 0.4.18(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
+      '@universal-middleware/node': 0.2.3(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -20235,9 +20277,9 @@ snapshots:
       - hono
       - srvx
 
-  '@universal-middleware/node@0.2.3(h3@1.15.11)(srvx@0.12.8)':
+  '@universal-middleware/node@0.2.3(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)':
     dependencies:
-      '@universal-middleware/core': 0.4.18(h3@1.15.11)(srvx@0.12.8)
+      '@universal-middleware/core': 0.4.18(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -23225,6 +23267,8 @@ snapshots:
   hermes-compiler@260318099.0.5: {}
 
   hey-listen@1.0.8: {}
+
+  hono@4.13.19: {}
 
   hookable@5.5.3: {}
 
@@ -26656,6 +26700,17 @@ snapshots:
     optionalDependencies:
       '@babel/code-frame': 8.0.6
 
+  rollup-plugin-dts@6.5.1(rollup@4.68.6)(typescript@6.0.3):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@jridgewell/sourcemap-codec': 1.6.0
+      convert-source-map: 2.0.0
+      magic-string: 0.30.21
+      rollup: 4.68.6
+      typescript: 6.0.3
+    optionalDependencies:
+      '@babel/code-frame': 8.0.6
+
   rollup-plugin-esbuild@6.2.1(esbuild@0.28.2)(rollup@4.65.1)(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
@@ -28501,18 +28556,18 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vike-vue@0.9.13(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(vike@0.4.266(h3@1.15.11)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)))(vue@3.5.45(typescript@6.0.3)):
+  vike-vue@0.9.13(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(vike@0.4.266(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)))(vue@3.5.45(typescript@6.0.3)):
     dependencies:
       magic-string: 0.30.21
       oxc-parser: 0.104.0(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
       oxc-walker: 0.6.0(oxc-parser@0.104.0(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3))
-      vike: 0.4.266(h3@1.15.11)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+      vike: 0.4.266(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
       vue: 3.5.45(typescript@6.0.3)
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  vike@0.4.266(h3@1.15.11)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)):
+  vike@0.4.266(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(supports-color@10.2.2)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1)):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/types': 7.29.14
@@ -28521,9 +28576,9 @@ snapshots:
       '@brillout/picocolors': 1.0.31
       '@brillout/vite-plugin-server-entry': 0.7.22
       '@universal-deploy/store': 0.2.2(srvx@0.12.8)
-      '@universal-deploy/vite': 0.1.14(h3@1.15.11)(srvx@0.12.8)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
-      '@universal-middleware/core': 0.4.18(h3@1.15.11)(srvx@0.12.8)
-      '@universal-middleware/node': 0.2.3(h3@1.15.11)(srvx@0.12.8)
+      '@universal-deploy/vite': 0.1.14(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)(vite@8.3.5(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(sass-embedded@1.107.0)(sass@1.107.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.1))
+      '@universal-middleware/core': 0.4.18(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
+      '@universal-middleware/node': 0.2.3(h3@1.15.11)(hono@4.13.19)(srvx@0.12.8)
       cac: 6.7.14
       convert-route: 1.1.1
       es-module-lexer: 1.7.0

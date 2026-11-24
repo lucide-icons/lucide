@@ -248,6 +248,36 @@ deno add @lucide/astro
 
 For more details, see the [documentation](./astro/index.md).
 
+## Hono
+
+Implementation of the Lucide icon library for Hono applications using Hono JSX.
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @lucide/hono
+```
+
+```sh [yarn]
+yarn add @lucide/hono
+```
+
+```sh [npm]
+npm install @lucide/hono
+```
+
+```sh [bun]
+bun add @lucide/hono
+```
+
+```sh [deno]
+deno add @lucide/hono
+```
+
+:::
+
+For more details, see the [documentation](./hono/index.md).
+
 ## Static usage
 
 Implementation of the Lucide icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).

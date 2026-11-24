@@ -1,0 +1,136 @@
+import { describe, it, expect } from 'vitest';
+import { render, cleanup } from './utils/render';
+import { Pen, Edit2, Grid, Droplet, LucideIconData, createLucideIcon } from '../src/lucide-hono';
+import defaultAttributes from '../src/defaultAttributes';
+
+type AttributesAssertion = { attributes: Record<string, { value: string }> };
+
+describe('Using lucide icon components', () => {
+  it('should render an component', () => {
+    const { container } = render(<Grid />);
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should render the icon with the default attributes', () => {
+    const { container } = render(<Grid />);
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
+    expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
+    expect(SVGElement).toHaveAttribute('height', String(defaultAttributes.height));
+    expect(SVGElement).toHaveAttribute('viewBox', defaultAttributes.viewBox);
+    expect(SVGElement).toHaveAttribute('fill', defaultAttributes.fill);
+    expect(SVGElement).toHaveAttribute('stroke', defaultAttributes.stroke);
+    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes['stroke-width']));
+    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes['stroke-linecap']);
+    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes['stroke-linejoin']);
+  });
+
+  it('should adjust the size, stroke color and stroke width', () => {
+    const { container } = render(
+      <Grid
+        size={48}
+        stroke="red"
+        strokeWidth={4}
+      />,
+    );
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '4');
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should render the alias icon', () => {
+    const { container } = render(
+      <Pen
+        size={48}
+        stroke="red"
+        strokeWidth={4}
+      />,
+    );
+
+    const PenIconRenderedHTML = container.innerHTML;
+
+    cleanup();
+
+    const { container: Edit2Container } = render(
+      <Edit2
+        size={48}
+        stroke="red"
+        strokeWidth={4}
+      />,
+    );
+
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
+  });
+
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
+    const { container } = render(
+      <Grid
+        size={48}
+        stroke="red"
+        absoluteStrokeWidth
+      />,
+    );
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '1');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should apply vector-effect when nonScalingStroke is set', () => {
+    const { container } = render(
+      <Grid
+        size={48}
+        stroke="red"
+        nonScalingStroke
+      />,
+    );
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '2');
+    expect(SVGElement?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should apply all classes to the element', () => {
+    const iconData: LucideIconData = {
+      name: 'droplet',
+      size: 24,
+      node: [
+        [
+          'path',
+          {
+            d: 'M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z',
+            key: 'abc123',
+          },
+        ],
+      ],
+      aliases: ['drop'],
+    };
+    const testClass = 'my-class';
+    const Icon = createLucideIcon(iconData);
+    const { container } = render(<Icon class={testClass} />);
+
+    expect(container.firstChild).toHaveClass(testClass);
+    expect(container.firstChild).toHaveClass('lucide');
+    expect(container.firstChild).toHaveClass('lucide-droplet');
+    expect(container.firstChild).toHaveClass('lucide-drop');
+  });
+});
