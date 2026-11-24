@@ -5,7 +5,7 @@ import type {
 } from '@lucide/shared/types';
 
 export interface LucideProps extends Partial<SVGAttributes> {
-  size?: 24 | number;
+  size?: 24 | number | string;
   strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.

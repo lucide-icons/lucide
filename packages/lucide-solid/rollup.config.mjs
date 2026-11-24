@@ -127,13 +127,13 @@ const configs = bundles
 
 const typesConfig = {
   input: inputs[0],
-  output: {
+  output: ['d.ts', 'd.mts'].map((extension) => ({
     dir: `${outputDir}/types`,
     format: 'es',
     preserveModules: true,
     preserveModulesRoot: 'src',
-    entryFileNames: '[name].d.ts',
-  },
+    entryFileNames: `[name].${extension}`,
+  })),
   plugins: [dts(dtsOptions)],
 };
 
