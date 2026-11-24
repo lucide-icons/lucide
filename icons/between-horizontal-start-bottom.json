@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "AeonSake"
+  ],
+  "use-cases": [
+    "Inserting a row below the selected row in a table"
+  ],
+  "tags": [
+    "insert",
+    "add",
+    "bottom",
+    "below",
+    "after",
+    "append",
+    "slot",
+    "squeeze",
+    "space",
+    "grid",
+    "table",
+    "row",
+    "rows",
+    "cells",
+    "excel",
+    "spreadsheet",
+    "accountancy",
+    "data",
+    "enter",
+    "entry",
+    "entries",
+    "blocks",
+    "rectangles",
+    "chevron"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "tools"
+  ]
+}

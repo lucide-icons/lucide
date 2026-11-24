@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "AeonSake"
+  ],
+  "use-cases": [
+    "Inserting a column to the left of the selected column in a table"
+  ],
+  "tags": [
+    "insert",
+    "add",
+    "left",
+    "before",
+    "prepend",
+    "slot",
+    "squeeze",
+    "space",
+    "grid",
+    "table",
+    "column",
+    "columns",
+    "cells",
+    "data",
+    "enter",
+    "entry",
+    "entries",
+    "blocks",
+    "rectangles",
+    "chevron"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "tools"
+  ]
+}
