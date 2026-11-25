@@ -72,22 +72,18 @@ const configs = bundles.map(({ inputs, outputDir, format, preserveModules, exten
 export default [
   {
     input: inputs[0],
-    output: [
-      {
-        file: `dist/types/${outputFileName}.d.ts`,
-        format: 'es',
-      },
-    ],
+    output: ['d.ts', 'd.mts'].map((extension) => ({
+      file: `dist/types/${outputFileName}.${extension}`,
+      format: 'es',
+    })),
     plugins: [dts(dtsOptions)],
   },
   {
     input: 'src/icons/index.ts',
-    output: [
-      {
-        file: `dist/types/icons.d.ts`,
-        format: 'es',
-      },
-    ],
+    output: ['d.ts', 'd.mts'].map((extension) => ({
+      file: `dist/types/icons.${extension}`,
+      format: 'es',
+    })),
     plugins: [dts(dtsOptions)],
   },
   {
@@ -96,13 +92,15 @@ export default [
     // hashed chunk; `output.paths` then rewrites the import to the main entry.
     external: [typesModuleMatcher],
     output: [
-      {
-        format: 'es',
-        dir: 'dist/types/icons',
-        entryFileNames: '[name].d.ts',
-        paths: (id) => (typesModuleMatcher.test(id) ? `../${outputFileName}.js` : id),
-      },
-    ],
+      { extension: 'd.ts', runtimeExtension: 'js' },
+      { extension: 'd.mts', runtimeExtension: 'mjs' },
+    ].map(({ extension, runtimeExtension }) => ({
+      format: 'es',
+      dir: 'dist/types/icons',
+      entryFileNames: `[name].${extension}`,
+      paths: (id) =>
+        typesModuleMatcher.test(id) ? `../${outputFileName}.${runtimeExtension}` : id,
+    })),
     plugins: [dts()],
   },
   {

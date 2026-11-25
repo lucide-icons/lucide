@@ -29,21 +29,30 @@
   "react-native": "dist/esm/lucide-react-native.mjs",
   "exports": {
     ".": {
-      "types": "./dist/types/lucide-react-native.d.ts",
+      "types": {
+        "import": "./dist/types/lucide-react-native.d.mts",
+        "default": "./dist/types/lucide-react-native.d.ts"
+      },
       "react-native": "./dist/esm/lucide-react-native.mjs",
       "import": "./dist/esm/lucide-react-native.mjs",
       "browser": "./dist/esm/lucide-react-native.mjs",
       "require": "./dist/cjs/lucide-react-native.js"
     },
     "./icons": {
-      "types": "./dist/types/icons.d.ts",
+      "types": {
+        "import": "./dist/types/icons.d.mts",
+        "default": "./dist/types/icons.d.ts"
+      },
       "react-native": "./dist/esm/icons/index.mjs",
       "import": "./dist/esm/icons/index.mjs",
       "browser": "./dist/esm/icons/index.mjs",
       "require": "./dist/cjs/icons/index.js"
     },
     "./icons/*": {
-      "types": "./dist/types/icons/*.d.ts",
+      "types": {
+        "import": "./dist/types/icons/*.d.mts",
+        "default": "./dist/types/icons/*.d.ts"
+      },
       "react-native": "./dist/esm/icons/*.mjs",
       "import": "./dist/esm/icons/*.mjs",
       "browser": "./dist/esm/icons/*.mjs",
