@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import type { DefaultTheme } from 'vitepress/theme'
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch, onMounted, defineAsyncComponent } from 'vue'
 import { useMediaQuery } from '@vueuse/core'
 import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
-import MerchAd from '../merch/MerchAd.vue'
+import type MerchAdComponent from '../merch/MerchAd.vue'
+
+const MerchAd = defineAsyncComponent(() => import('../merch/MerchAd.vue'))
 
 const { page } = useData()
 const props = defineProps<{
@@ -15,7 +17,7 @@ const carbonOptions = props.carbonAds
 
 const isAsideEnabled = useMediaQuery('(min-width: 80rem)')
 const container = ref<HTMLElement>()
-const merchAd = ref<InstanceType<typeof MerchAd>>()
+const merchAd = ref<InstanceType<typeof MerchAdComponent>>()
 
 /**
  * `blocked` when an adblocker stopped Carbon: the script request failed, it never set
