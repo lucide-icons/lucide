@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB",
+    "karsa-mistmere",
+    "kemie"
+  ],
+  "use-cases": [
+    "Representing ramen dishes on restaurant menus",
+    "Categorizing noodle dishes in recipe apps",
+    "Marking noodle restaurants in food delivery apps"
+  ],
+  "tags": [
+    "$extends:soup",
+    "ramen",
+    "noodles",
+    "soup",
+    "cuisine",
+    "japanese",
+    "asian food",
+    "broth",
+    "udon",
+    "soba",
+    "pho",
+    "miso",
+    "noodle soup",
+    "noodle bowl",
+    "dining"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
