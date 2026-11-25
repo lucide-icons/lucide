@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["esnext", "dom"],
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "sourceMap": true,
+    "outDir": "./dist"
+  },
+  "include": ["src", "scripts"]
+}

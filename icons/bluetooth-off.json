@@ -4,11 +4,13 @@
     "ericfennis",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:bluetooth",
+    "$group:off",
     "lost"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:bluetooth"
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Representing package delivery and parcel handling",
+    "Indicating moving or relocation services",
+    "Showing warehouse logistics and inventory handling"
+  ],
+  "tags": [
+    "dolly",
+    "trolley",
+    "cart",
+    "delivery",
+    "moving",
+    "warehouse",
+    "logistics",
+    "shipping",
+    "package",
+    "transport",
+    "box",
+    "storage",
+    "packed",
+    "inventory",
+    "tracking",
+    "order",
+    "product",
+    "barrow",
+    "cargo",
+    "freight",
+    "hauling",
+    "loading",
+    "unloading"
+  ],
+  "categories": [
+    "transportation",
+    "shopping"
+  ]
+}

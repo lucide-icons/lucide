@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "cubes",
     "packages",
@@ -16,6 +17,7 @@
   "categories": [
     "shapes",
     "gaming",
-    "development"
+    "development",
+    "logistics"
   ]
 }

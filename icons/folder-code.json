@@ -7,14 +7,15 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "directory",
-    "coding",
+    "$extends:folder",
+    "$group:code",
     "develop",
     "software"
   ],
   "categories": [
-    "files",
+    "$extends:folder",
     "development"
   ]
 }

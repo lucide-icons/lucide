@@ -7,12 +7,22 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "rectangle",
     "aspect ratio",
     "16:9",
     "horizontal",
-    "shape"
+    "shape",
+    "widget",
+    "card",
+    "panel",
+    "banner",
+    "block",
+    "frame",
+    "artboard",
+    "slide",
+    "landscape"
   ],
   "categories": [
     "shapes",

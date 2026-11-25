@@ -5,15 +5,15 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "tv",
-    "screen",
-    "display",
-    "desktop",
-    "download"
+    "$extends:monitor",
+    "$group:direction-down",
+    "download",
+    "remote",
+    "cast"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:monitor"
   ]
 }

@@ -1,0 +1,33 @@
+name: Suggest icon metadata
+description: Asks an OpenAI model for tags, categories and use-cases for changed icons in a pull request and posts them as review suggestions.
+
+inputs:
+  openai-api-key:
+    description: OpenAI API key used to generate the suggestions.
+    required: true
+  github-token:
+    description: 'GitHub token with `pull-requests: write` permission to post the review.'
+    required: true
+  pull-request-number:
+    description: Number of the pull request to review.
+    required: true
+  commit-sha:
+    description: Head commit SHA of the pull request the review comments are anchored to.
+    required: true
+  model:
+    description: OpenAI model used to generate the suggestions.
+    required: false
+    default: gpt-6-luna
+
+runs:
+  using: composite
+  steps:
+    - name: Generate metadata suggestions
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/suggestMetaData.mts"
+      env:
+        OPENAI_API_KEY: ${{ inputs.openai-api-key }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
+        COMMIT_SHA: ${{ inputs.commit-sha }}
+        OPENAI_API_MODEL: ${{ inputs.model }}

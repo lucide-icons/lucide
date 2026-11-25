@@ -4,6 +4,7 @@
     "Ahmed-Dghaies",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "minivan",
     "cart",
@@ -23,6 +24,7 @@
     "travel"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "logistics"
   ]
 }

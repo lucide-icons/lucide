@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:file-text",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Summarizing documents with AI in file managers",
+    "Generating text documents with AI writing assistants",
+    "Indicating AI-generated or AI-enhanced documents"
+  ],
+  "tags": [
+    "$extends:file-text",
+    "$group:sparkles",
+    "summarize",
+    "writing",
+    "enhance"
+  ],
+  "categories": [
+    "$extends:file-text",
+    "ai"
+  ]
+}

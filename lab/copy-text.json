@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "clone",
+    "duplicate",
+    "multiple",
+    "texts",
+    "lines",
+    "drafts",
+    "script",
+    "plagiarism"
+  ],
+  "categories": [
+    "text"
+  ]
+}

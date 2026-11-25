@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "logo",
     "bullseye",
@@ -10,10 +11,13 @@
     "projects",
     "overview",
     "work",
-    "productivity"
+    "productivity",
+    "result",
+    "outcome",
+    "objective",
+    "okr"
   ],
   "categories": [
-    "brands",
     "gaming"
   ]
 }

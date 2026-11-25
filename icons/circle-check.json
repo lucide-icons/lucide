@@ -4,12 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$group:check"
   ],
   "categories": [
     "notifications"
@@ -18,8 +15,7 @@
     {
       "name": "check-circle-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "ruler",
     "crown",
@@ -11,7 +12,6 @@
     "stalemate"
   ],
   "categories": [
-    "gaming",
-    "emoji"
+    "gaming"
   ]
 }

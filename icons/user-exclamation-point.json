@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:user"
+  ],
+  "use-cases": [
+    "Flagging an account as suspicious in moderation tools",
+    "Indicating a problem with a user's account or profile",
+    "Showing that a user has received a warning",
+    "Issuing a warning to a member in community management"
+  ],
+  "tags": [
+    "$extends:user",
+    "$group:exclamation-mark",
+    "flagged",
+    "suspicious",
+    "reported",
+    "violation",
+    "moderation",
+    "account issue",
+    "review"
+  ],
+  "categories": [
+    "$extends:user"
+  ]
+}

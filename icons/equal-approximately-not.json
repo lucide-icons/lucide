@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ksk3110",
+    "ryck"
+  ],
+  "use-cases": [
+    "Representing the ≇ operator in formula editors",
+    "Flagging values outside tolerance in diff tools",
+    "Indicating failed approximate-equality assertions in test runners",
+    "Marking measurements outside acceptable variance"
+  ],
+  "tags": [
+    "$extends:equal-approximately",
+    "not",
+    "approximately",
+    "unequal",
+    "≇",
+    "tolerance",
+    "threshold",
+    "mismatch",
+    "comparison",
+    "assertion",
+    "variance"
+  ],
+  "categories": [
+    "$extends:equal-approximately",
+    "development",
+    "science"
+  ]
+}

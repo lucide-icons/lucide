@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:app-window",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Closing a window or instance of a desktop application",
+    "Removing an app or integration from a workspace or launcher",
+    "Uninstalling software from an app store or package manager",
+    "Minimizing an application window to the taskbar"
+  ],
+  "tags": [
+    "$extends:app-window",
+    "$group:minus",
+    "close",
+    "uninstall",
+    "collapse"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development",
+    "files"
+  ]
+}

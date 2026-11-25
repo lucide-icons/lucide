@@ -9,7 +9,7 @@ export function hasMissingCodePoints(
     .map(([iconName, aliases]) => [iconName, ...aliases])
     .flat()
     .some((name) => {
-      if (!codePoints?.[name]) {
+      if (!codePoints[name]) {
         console.log(`Missing code point for icon/alias: ${name}`);
         return true;
       }

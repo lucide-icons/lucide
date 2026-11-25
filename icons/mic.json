@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "record",
     "sound",
@@ -17,7 +18,6 @@
   "categories": [
     "devices",
     "communication",
-    "connectivity",
     "multimedia"
   ]
 }
