@@ -1,6 +1,6 @@
-import packageDataList from '../../../data/packageData.json';
-import thirdPartyPackages from '../../../data/packageData.thirdParty.json';
-import fetchPackages from '../../../lib/fetchPackages';
+import packageDataList from '../../../data/packageData.json' with { type: 'json' };
+import thirdPartyPackages from '../../../data/packageData.thirdParty.json' with { type: 'json' };
+import fetchPackages from '../../../lib/fetchPackages.ts';
 
 const loader = {
   async load() {

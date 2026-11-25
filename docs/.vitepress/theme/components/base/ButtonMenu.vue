@@ -161,7 +161,10 @@ ul.menu-items {
 .arrow-up-button::before {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='18 15 12 9 6 15' /%3E%3C/svg%3E%0A");
   width: 20px;
-  height: 28px;
+  height: 20px;
+  /* line-height 0 keeps the chevron image at the top of this box, so the button's flex centering
+     centers it; it used to rely on VitePress 1's 38px button line-height instead */
+  line-height: 0;
   margin: auto;
   display: block;
 }

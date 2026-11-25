@@ -1,18 +1,32 @@
+const LATEST_RELEASE_API = 'https://api.github.com/repos/lucide-icons/lucide/releases/latest';
+
+/**
+ * Tag of the latest GitHub release, or `null` when GitHub can't be reached, so a dropped
+ * connection hides the version badge instead of failing the whole docs build.
+ */
+async function fetchLatestVersion(attempts = 2): Promise<string | null> {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const response = await fetch(LATEST_RELEASE_API);
+      if (!response.ok) return null;
+
+      const { tag_name } = (await response.json()) as { tag_name: string };
+
+      return tag_name ?? null;
+    } catch (error) {
+      if (attempt === attempts) {
+        console.warn(`Could not fetch the latest Lucide release. ${error}`);
+      }
+    }
+  }
+
+  return null;
+}
+
 const loader = {
   async load() {
-    const version = await fetch('https://api.github.com/repos/lucide-icons/lucide/releases/latest')
-      .then((res) => {
-        if (res.ok) {
-          const releaseData = res.json() as Promise<{ tag_name: string }>;
-
-          return releaseData;
-        }
-        return null;
-      })
-      .then((res) => res?.tag_name);
-
     return {
-      version,
+      version: await fetchLatestVersion(),
     };
   },
 };

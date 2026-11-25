@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Creating holes in 3D models",
+    "Marking potholes on road maps",
+    "Representing openings in construction plans",
+    "Indicating drilling operations in machining interfaces",
+    "Showing cutouts in product design specifications"
+  ],
+  "tags": [
+    "opening",
+    "cavity",
+    "pit",
+    "void",
+    "tunnel",
+    "portal",
+    "bore",
+    "aperture",
+    "cutout",
+    "pothole",
+    "drilling",
+    "3d",
+    "cad",
+    "terrain",
+    "hazard"
+  ],
+  "categories": [
+    "shapes",
+    "tools"
+  ]
+}

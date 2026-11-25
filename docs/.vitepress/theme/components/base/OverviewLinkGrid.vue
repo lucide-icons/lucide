@@ -16,13 +16,13 @@
   padding: 8px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .overview-link-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .overview-link-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }

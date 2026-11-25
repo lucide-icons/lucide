@@ -88,13 +88,13 @@ onMounted(() => {
     transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .floating-ad {
     display: block;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   .floating-ad {
     right: calc(((100% - (var(--vp-layout-max-width) - var(--vp-sidebar-width))) - 272px) / 2);
   }

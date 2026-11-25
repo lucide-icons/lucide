@@ -443,7 +443,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   margin-left: calc(((396px - 100vw) / 2) * -1);
 }
 
-@media (min-width: 396px) {
+@media (min-width: 24.75rem) {
   .home-hero-animation {
     margin-left: auto;
   }
@@ -461,7 +461,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   pointer-events: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .hero-background {
     width: 680px;
     height: 680px;
@@ -476,7 +476,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .hero-background {
     width: 760px;
     height: 760px;
@@ -495,7 +495,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .hero-background {
     top: -20vw;
     right: 20vw;
@@ -513,7 +513,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   }
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 72.5rem) {
   .home-hero-animation-container {
     margin-right: -64px;
     margin-bottom: -180px;
@@ -530,7 +530,7 @@ const initial = <T,>(value: T) => (reducedMotion.value ? false : value);
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .home-hero-animation-container {
     margin-right: -420px;
     margin-top: -64px;
