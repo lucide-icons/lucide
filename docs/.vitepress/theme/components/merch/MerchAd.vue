@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { computed, inject, onBeforeUnmount, onMounted, ref } from 'vue';
 import { usePreferredReducedMotion } from '@vueuse/core';
-import { merchLayoutKey, merchProducts, merchStoreUrl, shuffle, type MerchProduct } from './merch';
+import { merchLayoutKey, shuffle, type MerchProduct } from './merch';
+import { data } from './merch.data';
+
+const { products: merchProducts, storeUrl: merchStoreUrl } = data;
 
 const MAX_SLIDES = 5;
 const SLIDE_INTERVAL = 10_000;

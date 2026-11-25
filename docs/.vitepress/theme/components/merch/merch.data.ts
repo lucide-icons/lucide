@@ -1,39 +1,25 @@
-import fs from 'fs';
-import path from 'path';
 import { loadEnvFile } from 'node:process';
+import type { MerchProduct } from './merch.ts';
 
 /**
- * Fetches the products of the Lucide merch store (merch.lucide.dev, a Fourthwall shop) at build
+ * Loads the products of the Lucide merch store (merch.lucide.dev, a Fourthwall shop) at build
  * time, so the fallback card for blocked ads never needs the storefront token in the browser.
  *
- * Needs `FOURTHWALL_STOREFRONT_TOKEN`. Without it an empty list is written and the card links to
- * the store without a product.
+ * Needs `FOURTHWALL_STOREFRONT_TOKEN`. Without it the list is empty and the card links to the
+ * store without a product.
  */
 
-const currentDir = process.cwd();
-const dataDirectory = path.resolve(currentDir, '.vitepress/data');
-const outputPath = path.resolve(dataDirectory, 'merchData.json');
+try {
+  // Load environment variables from docs/.env, if it exists.
+  loadEnvFile('.env');
+} catch {
+  // No .env file, so rely on the environment as-is.
+}
 
 const STORE_URL = 'https://merch.lucide.dev';
 const API_URL = 'https://storefront-api.fourthwall.com/v1/collections/all/products';
 const CURRENCY = 'USD';
 const UTM = 'utm_source=lucide.dev&utm_medium=merch-fallback';
-
-try {
-  // Load environment variables from .env file, if it exists.
-  loadEnvFile(`${currentDir}/.env`);
-} catch {
-  // No .env file, so rely on the environment as-is.
-}
-
-export interface MerchProduct {
-  name: string;
-  slug: string;
-  url: string;
-  image: string;
-  /** Lowest variant price, already formatted, e.g. "$24.00". */
-  price: string;
-}
 
 interface FourthwallMoney {
   value: number;
@@ -108,24 +94,32 @@ function toMerchProduct(product: FourthwallProduct): MerchProduct | null {
   };
 }
 
-let products: MerchProduct[] = [];
-const token = process.env.FOURTHWALL_STOREFRONT_TOKEN;
-
-if (!token) {
-  console.warn('FOURTHWALL_STOREFRONT_TOKEN is not set, writing an empty merch list.');
-} else {
-  try {
-    const results = await fetchAllProducts(token);
-    products = results.map(toMerchProduct).filter((product) => product != null);
-  } catch (error) {
-    console.warn(`Could not fetch merch, writing an empty list. ${error}`);
-  }
+export interface MerchData {
+  storeUrl: string;
+  products: MerchProduct[];
 }
 
-fs.mkdirSync(dataDirectory, { recursive: true });
-fs.writeFileSync(
-  outputPath,
-  JSON.stringify({ storeUrl: `${STORE_URL}/?${UTM}`, products }, null, 2),
-  'utf-8',
-);
-console.log(`Wrote ${products.length} merch products to ${outputPath}`);
+declare const data: MerchData;
+export { data };
+
+export default {
+  async load(): Promise<MerchData> {
+    const token = process.env.FOURTHWALL_STOREFRONT_TOKEN;
+    let products: MerchProduct[] = [];
+
+    if (!token) {
+      console.warn(
+        'FOURTHWALL_STOREFRONT_TOKEN is not set, the merch card links to the store only.',
+      );
+    } else {
+      try {
+        const results = await fetchAllProducts(token);
+        products = results.map(toMerchProduct).filter((product) => product != null);
+      } catch (error) {
+        console.warn(`Could not fetch merch, the merch card links to the store only. ${error}`);
+      }
+    }
+
+    return { storeUrl: `${STORE_URL}/?${UTM}`, products };
+  },
+};

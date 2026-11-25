@@ -1,17 +1,13 @@
 import type { InjectionKey } from 'vue';
-import merchData from '../../../data/merchData.json';
 
 export interface MerchProduct {
   name: string;
   slug: string;
   url: string;
   image: string;
+  /** Lowest variant price, already formatted, e.g. "From $24.00". */
   price: string;
 }
-
-/** Written at build time by `scripts/writeMerchData.mts`, empty when the store couldn't be read. */
-export const merchProducts = merchData.products as MerchProduct[];
-export const merchStoreUrl: string = merchData.storeUrl;
 
 /**
  * How the merch fallback lays itself out in an ad slot.
