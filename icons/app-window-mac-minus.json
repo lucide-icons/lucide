@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:app-window-mac",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Closing a window of a native macOS application",
+    "Removing a macOS app from a dock or launcher",
+    "Uninstalling desktop software in macOS app managers"
+  ],
+  "tags": [
+    "$extends:app-window-mac",
+    "$group:minus",
+    "close",
+    "uninstall",
+    "collapse"
+  ],
+  "categories": [
+    "$extends:app-window-mac"
+  ]
+}

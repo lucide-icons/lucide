@@ -16,5 +16,12 @@
   "categories": [
     "arrows",
     "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "rectangle-landscape-play",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
