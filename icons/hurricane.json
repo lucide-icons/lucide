@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "shaunadigital",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Storm tracking and hurricane alerts",
+    "Weather forecasts and radar legends",
+    "Emergency preparedness and severe weather warnings"
+  ],
+  "tags": [
+    "weather",
+    "storm",
+    "cyclone",
+    "typhoon",
+    "wind",
+    "disaster",
+    "eye"
+  ],
+  "categories": [
+    "weather"
+  ]
+}
