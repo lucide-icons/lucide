@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onBeforeUnmount } from 'vue'
 import { useData } from 'vitepress'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import { isActive } from 'vitepress/dist/client/shared.js'
@@ -42,11 +42,16 @@ const marker = ref()
 
 const { setActiveLinkDebounced } = useActiveAnchor(container, marker)
 
+let activeLinkTimeout: ReturnType<typeof setTimeout> | undefined
+
 watch(headers, () => {
-  setTimeout(() => {
+  clearTimeout(activeLinkTimeout)
+  activeLinkTimeout = setTimeout(() => {
     setActiveLinkDebounced()
   }, 200)
 })
+
+onBeforeUnmount(() => clearTimeout(activeLinkTimeout))
 </script>
 
 <template>
