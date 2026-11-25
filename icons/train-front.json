@@ -13,7 +13,15 @@
     "bullet",
     "fast",
     "track",
-    "line"
+    "line",
+    "station",
+    "transportation",
+    "vehicle",
+    "commute",
+    "travel",
+    "rail",
+    "liner",
+    "passenger"
   ],
   "categories": [
     "transportation"

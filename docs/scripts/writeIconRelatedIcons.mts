@@ -28,7 +28,7 @@ const nameParts = (icon) =>
 
 const getRelatedIcons = (currentIcon, icons) => {
   const iconSimilarity = (item) =>
-    nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon)) +
+    nameWeight * arrayMatches(iconNameParts.get(item), iconNameParts.get(currentIcon)) +
     categoryWeight * arrayMatches(item.categories ?? [], currentIcon.categories ?? []) +
     tagWeight * arrayMatches(item.tags ?? [], currentIcon.tags ?? []);
 
@@ -54,6 +54,7 @@ const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
 });
 
 const iconsMetaData = await Promise.all(iconsMetaDataPromises);
+const iconNameParts = new Map(iconsMetaData.map((icon) => [icon, nameParts(icon)]));
 
 const relatedIcons = iconsMetaData.map((icon) => {
   const iconRelatedIcons = getRelatedIcons(icon, iconsMetaData);

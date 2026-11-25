@@ -39,13 +39,13 @@ const { theme } = useData()
   margin-bottom: 48px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .team-members :deep(.card-grid > *) {
     flex-basis: 50%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .team-members :deep(.card-grid > *) {
     flex-basis: 33.33%;
   }
@@ -61,7 +61,7 @@ const { theme } = useData()
   display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .ad-card {
     display: block;
   }

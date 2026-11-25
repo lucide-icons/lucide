@@ -2,6 +2,7 @@
 title: Combining icons - Preact
 description: Learn how to combine multiple icons into a single icon nested SVG elements in your Preact application.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
@@ -14,18 +15,21 @@ This is useful if you want to create custom icons by combining existing ones.
 ::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { Scan, User } from "lucide-preact";
-import { h } from "preact";
+import { Scan, User } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   return (
     <div className="app">
-      <Scan size={48}>
+      <Scan
+        size={48}
+        nonScalingStroke
+      >
         <User
           size={12}
           x={6}
           y={6}
-          absoluteStrokeWidth
+          nonScalingStroke
         />
       </Scan>
     </div>
@@ -33,8 +37,8 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::
 
 This is valid, since [SVGs can be nested](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg#nested_svg_element), and all SVG properties are supported on the icons.
@@ -55,8 +59,8 @@ For example, you can add a notification badge to an icon by using the `circle` S
 ::: sandpack {showTabs=false editorHeight=580 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { Mail } from "lucide-preact";
-import { h } from "preact";
+import { Mail } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   const hasUnreadMessages = true;
@@ -79,8 +83,8 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::
 
 ### Example with text element
@@ -90,8 +94,8 @@ You can also use the `text` SVG element to add text to your icon.
 ::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```jsx App.js [active]
-import { File } from "lucide-preact";
-import { h } from "preact";
+import { File } from 'lucide-preact';
+import { h } from 'preact';
 
 function App() {
   return (
@@ -112,6 +116,6 @@ function App() {
 }
 
 export default App;
-
 ```
+
 :::

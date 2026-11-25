@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DefaultTheme } from 'vitepress/theme'
 import { ref, watch, onMounted } from 'vue'
-import { useAside } from 'vitepress/dist/client/theme-default/composables/aside.js'
+import { useMediaQuery } from '@vueuse/core'
 import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
 
 const { page } = useData()
@@ -12,7 +12,7 @@ const props = defineProps<{
 
 const carbonOptions = props.carbonAds
 
-const { isAsideEnabled } = useAside()
+const isAsideEnabled = useMediaQuery('(min-width: 80rem)')
 const container = ref()
 
 let isInitialized = false
@@ -64,13 +64,14 @@ if (carbonOptions) {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 16px 20px 20px;
   border-radius: 12px;
   min-height: 256px;
   text-align: center;
   line-height: 18px;
   font-size: 12px;
   font-weight: 500;
+  border: 1px solid var(--vp-c-divider);
   background-color: var(--vp-carbon-ads-bg-color);
 }
 

@@ -30,10 +30,15 @@ const props = defineProps<{
 .contributors {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   /* justify-content: flex-end; */
-  gap: 16px;
+  gap: 2px;
 }
+
+.contributors .label {
+  margin-top: 12px;
+}
+
 .avatar-group {
   display: flex;
 }
@@ -72,6 +77,7 @@ const props = defineProps<{
   transform: translateX(-50%) scale(1);
 }
 .avatar-image {
+  margin: 0;
   width: 48px;
   height: 48px;
   border-radius: 50%;

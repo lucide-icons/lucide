@@ -6,15 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "percentage",
+    "$group:percent",
     "modulo",
     "modulus",
-    "remainder",
-    "%",
-    "sale",
-    "discount",
-    "offer",
-    "marketing"
+    "remainder"
   ],
   "categories": [
     "math",

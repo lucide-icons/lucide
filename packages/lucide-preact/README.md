@@ -67,20 +67,15 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
   <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+[//]: <> (Sponsor tiers start)
 
-### Hero backers 🦸
+### Bronze 🥉
 
-<a href="https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://about.sourcegraph.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/sponsors/dark/sourcegraph.svg" /><img src="https://lucide.dev/sponsors/sourcegraph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></picture></a>
+&nbsp;&nbsp;
+<a href="https://opencollective.com/zephyr-cloud"><picture><source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/sponsors/dark/zephyr-cloud.svg" /><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" /></picture></a>
 
-### Awesome backers 🍺
-
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
-<a href="https://www.paxhistoria.co/"><img src="https://lucide.dev/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
-
-### Backers ☕
-
-<a href="https://www.fina.money/"><img src="https://lucide.dev/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 

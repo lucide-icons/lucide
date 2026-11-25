@@ -6,14 +6,13 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "version control",
+    "$extends:git-pull-request",
     "rejected",
     "closed",
     "cancelled",
     "x"
   ],
   "categories": [
-    "development"
+    "$extends:git-pull-request"
   ]
 }

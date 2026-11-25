@@ -9,8 +9,8 @@
   ],
   "use-cases": [],
   "tags": [
-    "rain",
-    "weather",
+    "$extends:umbrella",
+    "$group:off",
     "uncovered",
     "uninsured",
     "antivirus",
@@ -18,6 +18,6 @@
     "risky"
   ],
   "categories": [
-    "weather"
+    "$extends:umbrella"
   ]
 }

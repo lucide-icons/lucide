@@ -5,9 +5,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
-    "font",
-    "typography",
+    "$group:letter",
     "alternates",
     "alternatives"
   ],

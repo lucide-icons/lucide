@@ -6,17 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
-    "hearing",
+    "$extends:ear",
+    "$group:off",
     "hard of hearing",
     "hearing loss",
     "deafness",
-    "noise",
-    "silence",
-    "audio",
-    "accessibility"
+    "silence"
   ],
   "categories": [
-    "medical",
-    "accessibility"
+    "$extends:ear"
   ]
 }

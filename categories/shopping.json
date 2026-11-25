@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Shopping",
+  "description": "Icons for retail, carts, bags, checkout, barcodes, and purchasing.",
   "icon": "shopping-bag"
 }

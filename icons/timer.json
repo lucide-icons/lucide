@@ -6,8 +6,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "time",
-    "timer",
+    "$group:clock",
     "stopwatch"
   ],
   "categories": [

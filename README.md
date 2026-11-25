@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/lucide-logo-repo.svg#gh-light-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/lucide-logo-repo-dark.svg#gh-dark-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+  <a href="https://github.com/lucide-icons/lucide">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/lucide-logo-repo-dark.svg">
+      <img src="https://lucide.dev/lucide-logo-repo.svg" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+    </picture>
   </a>
 </p>
 <p align="center">
@@ -88,20 +88,31 @@ Thank you to all the people who contributed to Lucide!
   <img src="docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+[//]: <> (Sponsor tiers start)
 
-### Hero backers 🦸
+### Bronze 🥉
 
-<a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://about.sourcegraph.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/sourcegraph.svg" /><img src="docs/public/sponsors/sourcegraph.svg" height="48" alt="Sourcegraph – Understand, fix, and automate across your codebase with Sourcegraph's code intelligence platform" /></picture></a>
+&nbsp;&nbsp;
+<a href="https://opencollective.com/zephyr-cloud"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/public/sponsors/dark/zephyr-cloud.svg" /><img src="docs/public/sponsors/zephyr-cloud.svg" height="48" alt="Zephyr Cloud" /></picture></a>
 
-### Awesome backers 🍺
+[//]: <> (Main README only start)
 
-<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
-<a href="https://www.paxhistoria.co/"><img src="docs/public/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+### Backers 🍺
 
-### Backers ☕
+<a href="https://www.paxhistoria.co"><img src="https://images.opencollective.com/pax-historia/9b4e54b/logo.png" height="32" alt="Pax Historia" /></a>
+&nbsp;&nbsp;
+<a href="https://pdfme.com"><img src="https://images.opencollective.com/pdfmeorg/9e0174d/logo.png" height="32" alt="pdfme – Free and Open source PDF generation library!" /></a>
 
-<a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+### Supporters ☕️
+
+<a href="https://www.fina.money"><img src="https://images.opencollective.com/fina-money/7c1f196/logo.png" height="32" alt="Fina Money – Build the most flexible finance tracker" /></a>
+&nbsp;&nbsp;
+<a href="https://opencollective.com/rjvdw"><img src="https://images.opencollective.com/rjvdw/28bc9cd/avatar.png" height="32" alt="Ruud" /></a>
+
+[//]: <> (Main README only end)
+
+[//]: <> (Sponsor tiers end)
 
 ### Other contributors 💸
 

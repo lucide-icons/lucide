@@ -7,11 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "click",
-    "select"
+    "$extends:mouse-pointer"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:mouse-pointer"
   ]
 }

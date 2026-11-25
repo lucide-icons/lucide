@@ -5,23 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "fork",
-    "knife",
-    "cutlery",
-    "flatware",
-    "tableware",
-    "silverware",
-    "food",
-    "restaurant",
-    "meal",
-    "breakfast",
-    "dinner",
-    "supper"
+    "$extends:utensils"
   ],
   "categories": [
-    "food-beverage",
-    "travel",
-    "navigation"
+    "$extends:utensils"
   ],
   "aliases": [
     {

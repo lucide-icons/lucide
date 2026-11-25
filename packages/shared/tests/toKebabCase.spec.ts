@@ -11,7 +11,7 @@ describe('toKebabCase', () => {
   });
 
   it('should handle strings with numbers', () => {
-    expect(toKebabCase('test123String')).toBe('test123-string');
+    expect(toKebabCase('test123String')).toBe('test-123-string');
   });
 
   it('should handle already kebab-case strings', () => {
@@ -20,6 +20,19 @@ describe('toKebabCase', () => {
 
   it('should handle single lowercase word', () => {
     expect(toKebabCase('word')).toBe('word');
+  });
+
+  it('should handle consecutive capital letters such as single-letter icon prefixes and mixed numbers', () => {
+    expect(toKebabCase('AArrowDown')).toBe('a-arrow-down');
+    expect(toKebabCase('AArrowUp')).toBe('a-arrow-up');
+    expect(toKebabCase('ALargeSmall')).toBe('a-large-small');
+    expect(toKebabCase('XLineTop')).toBe('x-line-top');
+    expect(toKebabCase('Grid3X3')).toBe('grid-3x3');
+    expect(toKebabCase('Grid3x3')).toBe('grid-3x3');
+    expect(toKebabCase('Grid2X2Plus')).toBe('grid-2x2-plus');
+    expect(toKebabCase('ArrowDownAZ')).toBe('arrow-down-a-z');
+    expect(toKebabCase('ArrowDown01')).toBe('arrow-down-01');
+    expect(toKebabCase('Clock12')).toBe('clock-12');
   });
 
   it('should handle empty string', () => {
