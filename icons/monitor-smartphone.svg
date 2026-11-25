@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M10 14.04V18" />
+  <path d="M10 14v4" />
   <path d="M18 5a2 2 0 00-2-2H4a2 2 0 00-2 2v7a2 2 0 002 2h7" />
   <path d="M7 18h4" />
   <rect x="15" y="9" width="7" height="12" rx="2" />
