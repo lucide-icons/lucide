@@ -16,7 +16,6 @@ import SnackPlayer from './components/editors/SnackPlayer.vue';
 import Toaster from './components/base/Toaster.vue';
 import { setupTracking } from './utils/openpanel';
 import { setupSentry } from './utils/sentry';
-import { setupDeployRecovery } from './utils/deployRecovery';
 import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
@@ -42,7 +41,6 @@ const theme: Partial<Theme> = {
 
     setupTracking(router);
     setupSentry(app);
-    setupDeployRecovery(router);
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();
