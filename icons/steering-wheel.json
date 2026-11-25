@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Denoting a driver across vehicle types in fleet management or mobility apps",
+    "Representing vehicle steering controls, autopilot, or cockpit settings",
+    "Indicating racing, motor sport, or driving simulator controls in gaming interfaces"
+  ],
+  "tags": [
+    "driving",
+    "driver",
+    "steering",
+    "wheel",
+    "helm",
+    "racing",
+    "racer",
+    "motor sport",
+    "formula one",
+    "formula 1",
+    "f1",
+    "car",
+    "vehicle",
+    "direction",
+    "cockpit",
+    "automotive"
+  ],
+  "categories": [
+    "transportation",
+    "sports",
+    "gaming"
+  ]
+}
