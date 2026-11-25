@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "AJAyanbisi",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Marking elevator locations on building maps and floor plans",
