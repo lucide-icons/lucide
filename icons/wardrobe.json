@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AJAyanbisi"
+    "AJAyanbisi",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
@@ -11,13 +13,15 @@
     "closet",
     "clothes",
     "clothing",
+    "apparel",
     "cupboard",
     "dresser",
+    "drawer",
+    "shelves",
     "furniture",
     "storage"
   ],
   "categories": [
-    "buildings",
     "home"
   ]
 }
