@@ -4,10 +4,14 @@ import { createContext, createElement, type ReactNode, useContext, useMemo } fro
 import { LucideProps } from './types';
 
 type LucideConfig = {
-  size: number;
+  size: number | string;
   color: string;
-  strokeWidth: number;
+  strokeWidth: number | string;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth: boolean;
+  nonScalingStroke: boolean;
   className: string;
 };
 
@@ -23,6 +27,7 @@ export function LucideProvider({
   color,
   strokeWidth,
   absoluteStrokeWidth,
+  nonScalingStroke,
   className,
 }: LucideProviderProps) {
   const value = useMemo(
@@ -31,9 +36,10 @@ export function LucideProvider({
       color,
       strokeWidth,
       absoluteStrokeWidth,
+      nonScalingStroke,
       className,
     }),
-    [size, color, strokeWidth, absoluteStrokeWidth, className],
+    [size, color, strokeWidth, absoluteStrokeWidth, nonScalingStroke, className],
   );
 
   return createElement(LucideContext.Provider, { value }, children);

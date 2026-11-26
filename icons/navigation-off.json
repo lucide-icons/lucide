@@ -6,10 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "location",
-    "travel"
+    "$extends:navigation",
+    "$group:off"
   ],
   "categories": [
-    "navigation"
+    "$extends:navigation"
   ]
 }

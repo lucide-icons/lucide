@@ -6,14 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "font",
-    "text",
-    "typography",
-    "type"
+    "$extends:file-type"
   ],
   "categories": [
-    "files",
-    "text"
+    "$extends:file-type"
   ],
   "aliases": [
     {

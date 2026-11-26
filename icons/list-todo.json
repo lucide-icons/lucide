@@ -13,9 +13,10 @@
     "complete",
     "tasks",
     "items",
-    "pending"
+    "pending",
+    "checklist"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

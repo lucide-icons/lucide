@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * Merge two arrays and remove duplicates
  *

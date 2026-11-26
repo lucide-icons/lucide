@@ -9,10 +9,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "alarm",
-    "notification",
-    "silent",
-    "reminder"
+    "$extends:bell",
+    "$group:off",
+    "silent"
   ],
   "categories": [
     "notifications"

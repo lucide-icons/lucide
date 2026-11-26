@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "scottgriffinm"
+  ],
+  "use-cases": [
+    "Indicating embedded video content in documentation, help centers, or knowledge bases.",
+    "Video file type indicator in file managers, email attachments, or chat apps."
+  ],
+  "tags": [
+    "music",
+    "video",
+    "start",
+    "movie"
+  ],
+  "categories": [
+    "arrows",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "rectangle-landscape-play",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

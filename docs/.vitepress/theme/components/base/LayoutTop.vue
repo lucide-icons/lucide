@@ -9,7 +9,8 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
     <p>
       <Icon
         :iconNode="RocketDuotoneIcon"
-        size="18"
+        name="rocket-duotone"
+        :size="18"
         class="rocket-icon"
       />
       <VPLink
@@ -28,7 +29,7 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
 </template>
 
 <style>
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   :root {
     --vp-layout-top-height: 32px;
   }

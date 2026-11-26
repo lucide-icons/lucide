@@ -6,14 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph",
+    "$extends:chart-column",
     "trending up"
   ],
   "categories": [
-    "charts"
+    "$extends:chart-column"
   ],
   "aliases": [
     {

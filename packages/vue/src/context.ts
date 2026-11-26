@@ -3,10 +3,14 @@ import { provide, inject } from 'vue';
 export const LUCIDE_CONTEXT = Symbol('lucide-icons');
 
 interface LucideIconsContext {
-  size?: number;
+  size?: number | string;
   color?: string;
-  strokeWidth?: number;
+  strokeWidth?: number | string;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
   class?: string;
 }
 

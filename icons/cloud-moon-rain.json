@@ -7,12 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "weather",
+    "$extends:cloud-moon",
     "partly",
-    "night",
     "rainfall"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud-moon"
   ]
 }

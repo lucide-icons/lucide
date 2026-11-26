@@ -7,10 +7,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "document"
+    "$extends:file-minus"
   ],
   "categories": [
-    "files"
+    "$extends:file-minus"
   ],
   "aliases": [
     {
