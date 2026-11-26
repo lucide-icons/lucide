@@ -4,13 +4,31 @@
     "rrod497",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Indicating remote connections in code editors and programming tools",
+    "Representing SSH sessions",
+    "Switching between local and remote development environments"
+  ],
   "tags": [
+    "$group:direction-right",
+    "$group:direction-left",
+    "bidirectional",
+    "two-way",
+    "2-way",
+    "swap",
+    "switch",
+    "offset",
     "remote",
+    "connection",
     "session",
     "ssh",
-    "horizontal"
+    "terminal",
+    "code editor",
+    "programming"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "development",
+    "connectivity"
   ]
 }
