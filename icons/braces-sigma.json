@@ -2,7 +2,6 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "LinXruan",
-    "karsa-mistmere",
     "$extends:braces"
   ],
   "use-cases": [
