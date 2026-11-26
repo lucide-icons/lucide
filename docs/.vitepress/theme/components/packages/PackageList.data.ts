@@ -1,8 +1,8 @@
-import packageDataList from '../../../data/packageData.json';
-import thirdPartyPackages from '../../../data/packageData.thirdParty.json';
-import fetchPackages from '../../../lib/fetchPackages';
+import packageDataList from '../../../data/packageData.json' with { type: 'json' };
+import thirdPartyPackages from '../../../data/packageData.thirdParty.json' with { type: 'json' };
+import fetchPackages from '../../../lib/fetchPackages.ts';
 
-export default {
+const loader = {
   async load() {
     const packageJsonList = await fetchPackages();
 
@@ -29,3 +29,8 @@ export default {
     };
   },
 };
+
+declare const data: Awaited<ReturnType<typeof loader.load>>;
+
+export { data };
+export default loader;

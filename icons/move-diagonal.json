@@ -9,7 +9,6 @@
     "arrow"
   ],
   "categories": [
-    "arrows",
-    "cursors"
+    "$extends:move"
   ]
 }

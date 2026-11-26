@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:clock",
+    "$group:exclamation-mark",
+    "wrong"
+  ],
+  "categories": [
+    "$extends:clock"
+  ],
+  "aliases": [
+    {
+      "name": "clock-alert"
+    }
+  ]
+}

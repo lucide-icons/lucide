@@ -6,21 +6,15 @@
   ],
   "use-cases": [],
   "tags": [
-    "comment",
-    "chat",
-    "conversation",
-    "dialog",
-    "feedback",
+    "$extends:message-square",
+    "$group:heart",
     "positive",
-    "like",
-    "love",
     "interest",
     "valentine",
     "dating",
-    "date",
-    "speech bubble"
+    "date"
   ],
   "categories": [
-    "social"
+    "$extends:message-square"
   ]
 }

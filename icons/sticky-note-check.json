@@ -8,30 +8,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "post-it",
-    "comment",
-    "annotation",
-    "reaction",
-    "memo",
-    "reminder",
-    "todo",
-    "task",
-    "idea",
-    "brainstorm",
-    "document",
-    "page",
-    "paper",
-    "sheet",
-    "stationary",
-    "office",
-    "done",
-    "complete",
-    "success",
-    "check",
-    "verified"
+    "$extends:sticky-note",
+    "$group:check"
   ],
   "categories": [
-    "text",
-    "social"
+    "$extends:sticky-note"
   ]
 }

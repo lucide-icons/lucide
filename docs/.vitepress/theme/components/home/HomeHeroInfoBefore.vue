@@ -7,20 +7,12 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
 </script>
 
 <template>
-  <div class="info">
+  <div
+    v-if="data.version"
+    class="info"
+  >
     <Badge :href="`https://github.com/lucide-icons/lucide/releases/tag/${data.version}`">
       v{{ data.version }}
-    </Badge>
-    <Badge
-      class="badge-special confetti-button animate"
-      href="/guide/version-1"
-    >
-      <Icon :iconNode="RocketDuotoneIcon" />
-      Version 1
-      <Icon
-        :iconNode="moveRight"
-        class=""
-      />
     </Badge>
   </div>
 </template>
@@ -33,7 +25,7 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
   justify-content: center;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .info {
     justify-content: flex-start;
   }
@@ -43,22 +35,6 @@ import RocketDuotoneIcon from './RocketDuotoneIcon.ts';
   display: inline-flex;
   gap: 8px;
   padding: 4px 8px;
-}
-
-.badge-special {
-  font-weight: 500;
-  color: var(--vp-c-brand-1);
-  text-underline-offset: 2px;
-  align-items: center;
-}
-
-.badge-special::before,
-.badge-special::after {
-  animation-delay: 0.5s !important;
-  animation-duration: 5s !important;
-  animation-iteration-count: infinite !important;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
-  transform: translateX(32px);
 }
 </style>
 

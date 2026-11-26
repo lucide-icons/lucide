@@ -5,15 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "signal",
-    "broadcast",
-    "connectivity",
-    "live",
-    "frequency"
+    "$extends:radio",
+    "$group:off"
   ],
   "categories": [
-    "devices",
-    "multimedia",
-    "social"
+    "$extends:radio"
   ]
 }

@@ -7,16 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "script",
-    "document",
-    "html",
-    "xml",
-    "property list",
-    "plist"
+    "$extends:file-code",
+    "$extends:code"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:file-code"
   ],
   "aliases": [
     {

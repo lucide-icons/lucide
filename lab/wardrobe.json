@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "closet",
+    "cupboard",
+    "shelves",
+    "drawer",
+    "storage",
+    "clothes",
+    "clothing",
+    "apparel"
+  ],
+  "categories": [
+    "furniture"
+  ]
+}

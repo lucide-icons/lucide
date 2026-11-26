@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "LinXruan",
+    "$extends:braces"
+  ],
+  "use-cases": [
+    "Representing structured mathematical expressions and LaTeX scopes",
+    "Indicating formula blocks or math parsing tools in editors",
+    "Toggling math-region editing or formula transformations in toolbars"
+  ],
+  "tags": [
+    "$group:letter",
+    "latex",
+    "math",
+    "formula",
+    "sum",
+    "expression",
+    "structure",
+    "curly braces",
+    "parse tree",
+    "syntax tree",
+    "summation notation",
+    "equation editor"
+  ],
+  "categories": [
+    "math",
+    "development",
+    "text",
+    "science"
+  ]
+}

@@ -6,18 +6,18 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming an alarm has been set in clock apps",
+    "Marking a scheduled reminder as completed"
+  ],
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "$extends:alarm-clock",
+    "$group:check",
+    "reminder",
+    "wake-up"
   ],
   "categories": [
-    "devices",
-    "notifications",
-    "time"
+    "$extends:alarm-clock"
   ],
   "aliases": [
     {

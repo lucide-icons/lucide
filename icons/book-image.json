@@ -6,13 +6,14 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:book",
+    "$extends:image",
     "images",
     "pictures",
     "photos",
     "album",
     "collection",
     "event",
-    "magazine",
     "catalog",
     "catalogue",
     "brochure",
@@ -22,10 +23,6 @@
   "categories": [
     "photography",
     "text",
-    "multimedia",
-    "files",
-    "social",
-    "shopping",
-    "travel"
+    "multimedia"
   ]
 }

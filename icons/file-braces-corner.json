@@ -6,14 +6,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "code",
-    "json",
-    "curly braces",
-    "curly brackets"
+    "$extends:file-braces"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:file-braces"
   ],
   "aliases": [
     {

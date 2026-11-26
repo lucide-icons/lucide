@@ -6,11 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:folder",
     "archive",
     "zip",
     "package"
   ],
   "categories": [
-    "files"
+    "$extends:folder"
   ]
 }

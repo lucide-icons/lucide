@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating fast or instant actions in app interfaces",
+    "Representing a moving object in motion graphics",
+    "Showing animation or transition settings in design tools",
+    "Marking express shipping options in checkout flows"
+  ],
+  "tags": [
+    "fast",
+    "quick",
+    "motion",
+    "movement",
+    "moving",
+    "velocity",
+    "animation",
+    "express",
+    "acceleration",
+    "rapid",
+    "swift",
+    "racing",
+    "momentum",
+    "motion blur"
+  ],
+  "categories": [
+    "design"
+  ]
+}

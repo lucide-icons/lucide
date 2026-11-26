@@ -3,7 +3,7 @@ import defaultAttributes from './defaultAttributes';
 import { Icons, SVGProps } from './types';
 import { hasA11yProp, mergeClasses, toPascalCase } from '@lucide/shared';
 
-export type CustomAttrs = { [attr: string]: any };
+export type CustomAttrs = { [attr: string]: unknown };
 
 /**
  * Get the attributes of an HTML element.
@@ -22,17 +22,17 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @returns {Array}
  */
 export const getClassNames = (
-  attrs: Record<string, number | string | string[]> | string,
-): string | string[] => {
-  if (typeof attrs === 'string') return attrs;
-  if (!attrs || !attrs.class) return '';
+  attrs: Record<string, number | string | string[] | undefined> | string,
+): string[] => {
+  if (typeof attrs === 'string') return attrs.split(' ').filter(Boolean);
+  if (!attrs || !attrs.class) return [];
   if (attrs.class && typeof attrs.class === 'string') {
-    return attrs.class.split(' ');
+    return attrs.class.split(' ').filter(Boolean);
   }
   if (attrs.class && Array.isArray(attrs.class)) {
-    return attrs.class;
+    return attrs.class.filter(Boolean);
   }
-  return '';
+  return [];
 };
 
 interface ReplaceElementOptions {

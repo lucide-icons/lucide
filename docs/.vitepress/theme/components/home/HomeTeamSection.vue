@@ -6,9 +6,13 @@ import TeamMemberCard, { TeamMember } from './TeamMemberCard.vue'
 import teamData from '../../../data/teamData.json'
 import HomeSponsorCard from './HomeSponsorCard.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
-
+import { provide } from 'vue'
+import { merchLayoutKey } from '../merch/merch'
 
 const { theme } = useData()
+
+// The wide ad card here shows two merch items side by side when Carbon is blocked.
+provide(merchLayoutKey, 'pair')
 </script>
 
 <template>
@@ -39,13 +43,13 @@ const { theme } = useData()
   margin-bottom: 48px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .team-members :deep(.card-grid > *) {
     flex-basis: 50%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .team-members :deep(.card-grid > *) {
     flex-basis: 33.33%;
   }
@@ -61,7 +65,7 @@ const { theme } = useData()
   display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .ad-card {
     display: block;
   }

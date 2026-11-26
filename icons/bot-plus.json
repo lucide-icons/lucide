@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Adding a new agent in agent management interfaces",
+    "Creating a new AI assistant or chatbot",
+    "Adding a bot to a workspace or chat channel",
+    "Starting a new conversation with an AI agent"
+  ],
+  "tags": [
+    "$extends:bot",
+    "$group:plus"
+  ],
+  "categories": [
+    "$extends:bot"
+  ]
+}

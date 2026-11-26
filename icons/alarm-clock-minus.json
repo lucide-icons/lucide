@@ -6,14 +6,18 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a scheduled wake-up alert from a clock app",
+    "Deleting an existing alarm from a reminder or scheduling interface"
+  ],
   "tags": [
-    "remove"
+    "$extends:alarm-clock",
+    "$group:minus",
+    "reminder",
+    "unschedule"
   ],
   "categories": [
-    "devices",
-    "notifications",
-    "time"
+    "$extends:alarm-clock"
   ],
   "aliases": [
     {
