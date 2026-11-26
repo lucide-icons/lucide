@@ -174,7 +174,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "cache-control: public, max-age=31536000, immutable"
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },
