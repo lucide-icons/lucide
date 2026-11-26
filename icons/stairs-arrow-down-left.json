@@ -2,12 +2,14 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "darrel1925"
+    "darrel1925",
+    "ericfennis",
+    "karsamistmere"
   ],
   "use-cases": [
-    "marking rooms and destinations on lower floors in wayfinding interfaces",
-    "indicating descending stairs on floor plans and directional signage",
-    "identifying stair routes to ground floors, exits, and basement areas"
+    "Marking rooms and destinations on lower floors in wayfinding interfaces",
+    "Indicating descending stairs on floor plans and directional signage",
+    "Identifying stair routes to ground floors, exits, and basement areas"
   ],
   "tags": [
     "steps",

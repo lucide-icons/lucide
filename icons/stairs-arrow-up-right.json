@@ -2,12 +2,14 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "darrel1925"
+    "darrel1925",
+    "ericfennis",
+    "karsamistmere"
   ],
   "use-cases": [
-    "marking rooms and destinations on higher floors in wayfinding interfaces",
-    "indicating ascending stairs on floor plans and directional signage",
-    "identifying stair routes to upper floors and rooftop areas"
+    "Marking rooms and destinations on higher floors in wayfinding interfaces",
+    "Indicating ascending stairs on floor plans and directional signage",
+    "Identifying stair routes to upper floors and rooftop areas"
   ],
   "tags": [
     "steps",
