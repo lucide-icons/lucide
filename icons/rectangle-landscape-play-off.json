@@ -4,19 +4,21 @@
     "scottgriffinm"
   ],
   "use-cases": [
-    "Indicates that landscape video playback is disabled or blocked.",
-    "Indicates that autoplay or embedded video previews are turned off."
+    "Indicating that video playback is disabled or unavailable in a media player",
+    "Showing that autoplay for embedded videos or previews is turned off in settings",
+    "Marking a video that is blocked by region, age, or content restrictions",
+    "Indicating that a livestream or recorded presentation can no longer be played"
   ],
   "tags": [
+    "$extends:rectangle-horizontal-play",
+    "$group:play",
+    "$group:off",
     "audio",
-    "video",
-    "music",
-    "start",
-    "run",
-    "off",
-    "disabled",
-    "blocked",
-    "forbidden"
+    "playback",
+    "autoplay",
+    "media",
+    "embed",
+    "stream"
   ],
   "categories": [
     "multimedia"
