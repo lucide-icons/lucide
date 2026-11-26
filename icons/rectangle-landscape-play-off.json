@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "scottgriffinm"
+  ],
+  "use-cases": [
+    "Indicating that video playback is disabled or unavailable in a media player",
+    "Showing that autoplay for embedded videos or previews is turned off in settings",
+    "Marking a video that is blocked by region, age, or content restrictions",
+    "Indicating that a livestream or recorded presentation can no longer be played"
+  ],
+  "tags": [
+    "$extends:rectangle-horizontal-play",
+    "$group:play",
+    "$group:off",
+    "audio",
+    "playback",
+    "autoplay",
+    "media",
+    "embed",
+    "stream"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
