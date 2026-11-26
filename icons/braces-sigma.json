@@ -2,11 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "LinXruan",
-    "danielbayley",
     "karsa-mistmere",
-    "mittalyashu",
-    "johnletey",
-    "ericfennis"
+    "$extends:braces"
   ],
   "use-cases": [
     "Representing structured mathematical expressions and LaTeX scopes",
