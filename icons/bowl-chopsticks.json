@@ -2,6 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "HACENE-IHAB",
+    "danielbayley",
     "karsa-mistmere",
     "kemie"
   ],
@@ -25,7 +26,16 @@
     "miso",
     "noodle soup",
     "noodle bowl",
-    "dining"
+    "dining",
+    "poke",
+    "culinary",
+    "asian",
+    "chinese",
+    "oriental",
+    "eastern",
+    "brunch",
+    "lunch",
+    "dinner"
   ],
   "categories": [
     "food-beverage"
