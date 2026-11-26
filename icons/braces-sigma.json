@@ -10,7 +10,8 @@
   ],
   "use-cases": [
     "Representing structured mathematical expressions and LaTeX scopes",
-    "Indicating formula blocks or math parsing tools in editors"
+    "Indicating formula blocks or math parsing tools in editors",
+    "Toggling math-region editing or formula transformations in toolbars"
   ],
   "tags": [
     "$group:letter",
