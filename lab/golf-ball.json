@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "alexrefshauge",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "sport",
+    "ball",
+    "play",
+    "score",
+    "golf",
+    "club",
+    "course",
+    "tee",
+    "fairway",
+    "green",
+    "putting",
+    "putt",
+    "golfer",
+    "hole",
+    "tournament",
+    "recreation",
+    "leisure",
+    "outdoor",
+    "game",
+    "bounce"
+  ],
+  "categories": [
+    "sports"
+  ]
+}

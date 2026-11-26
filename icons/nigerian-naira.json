@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:letter-n",
+    "adebimpeomolaso"
+  ],
+  "use-cases": [
+    "Showing product prices in NGN",
+    "Selecting NGN in multi-currency interfaces",
+    "Showing NGN exchange rates in currency converters",
+    "Indicating NGN amounts in invoices and payments"
+  ],
+  "tags": [
+    "$group:currency",
+    "nigeria",
+    "nigerian",
+    "ngn"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

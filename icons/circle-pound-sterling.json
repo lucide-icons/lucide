@@ -6,15 +6,14 @@
     "danielbayley",
     "LieOnLion"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
-    "monetization",
+    "$group:currency",
     "coin",
     "penny",
     "marketing",
-    "currency",
-    "money",
-    "payment",
     "british",
     "gbp",
     "£"

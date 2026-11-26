@@ -6,13 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "grab",
-    "dots",
-    "handle",
-    "move",
-    "drag"
+    "$extends:grip"
   ],
   "categories": [
-    "layout"
+    "$extends:grip"
   ]
 }

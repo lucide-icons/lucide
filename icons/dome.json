@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805",
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking domed monuments on historical maps",
+    "Identifying museums, observatories, or heritage sites",
+    "Representing domed Christian churches in architecture apps",
+    "Showing Byzantine or Orthodox landmarks on maps"
+  ],
+  "tags": [
+    "roof",
+    "cupola",
+    "rotunda",
+    "shelter",
+    "building",
+    "architecture",
+    "structure",
+    "church",
+    "christian",
+    "orthodox",
+    "byzantine",
+    "cathedral",
+    "basilica",
+    "chapel",
+    "monument",
+    "landmark",
+    "museum",
+    "observatory",
+    "heritage"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "travel"
+  ]
+}

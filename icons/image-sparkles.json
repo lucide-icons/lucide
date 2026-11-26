@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:image",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Generating images with AI in creative tools",
+    "Indicating AI-enhanced or auto-edited photos in galleries",
+    "Representing AI image editing features in photo editors"
+  ],
+  "tags": [
+    "$extends:image",
+    "$group:sparkles",
+    "enhance"
+  ],
+  "categories": [
+    "photography",
+    "multimedia",
+    "ai"
+  ]
+}

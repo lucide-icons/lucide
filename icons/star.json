@@ -6,18 +6,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "bookmark",
-    "favorite",
-    "like",
-    "review",
-    "rating"
+    "$group:star"
   ],
   "categories": [
-    "account",
     "social",
     "shapes",
-    "multimedia",
-    "weather",
     "emoji",
     "gaming"
   ]

@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MArtytraM99"
+  ],
+  "use-cases": [
+    "Representing privileged user roles such as admins",
+    "Indicating protected or sensitive user information",
+    "Indicating a protected user account"
+  ],
+  "tags": [
+    "$extends:user",
+    "$group:shield",
+    "permissions",
+    "role"
+  ],
+  "categories": [
+    "$extends:user",
+    "security",
+    "people"
+  ]
+}

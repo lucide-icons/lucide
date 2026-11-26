@@ -6,20 +6,18 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:arrow-down",
+    "$extends:download",
+    "$group:direction-down",
+    "$group:navigation-last",
     "behind",
-    "direction",
-    "south",
     "download",
-    "save",
     "git",
     "version control",
-    "pull",
-    "collapse",
-    "fold",
-    "vertical"
+    "$group:collapse"
   ],
   "categories": [
-    "arrows",
+    "$extends:arrow-down",
     "files",
     "development"
   ]

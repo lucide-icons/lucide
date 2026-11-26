@@ -5,12 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
     "selection",
     "letters",
-    "characters",
-    "font",
-    "typography"
+    "characters"
   ],
   "categories": [
     "text"

@@ -7,11 +7,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:letter",
     "letters",
-    "characters",
-    "font",
-    "typography"
+    "characters"
   ],
   "categories": [
     "text"

@@ -10,7 +10,8 @@
     "living",
     "building",
     "residence",
-    "architecture"
+    "architecture",
+    "homepage"
   ],
   "categories": [
     "buildings",
@@ -21,8 +22,7 @@
     {
       "name": "home",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

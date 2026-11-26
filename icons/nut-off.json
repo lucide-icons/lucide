@@ -6,14 +6,12 @@
   ],
   "use-cases": [],
   "tags": [
-    "hazelnut",
-    "acorn",
-    "food",
+    "$extends:nut",
+    "$group:off",
     "allergy",
-    "intolerance",
-    "diet"
+    "intolerance"
   ],
   "categories": [
-    "food-beverage"
+    "$extends:nut"
   ]
 }

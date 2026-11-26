@@ -18,11 +18,12 @@ export default eventHandler((event) => {
     return sendError(event, error);
   }
 
-  const width = getQuery(event).width || undefined;
-  const height = getQuery(event).height || undefined;
-  const color = getQuery(event).color || undefined;
-  const strokeWidth = getQuery(event).strokeWidth || undefined;
-  const background = getQuery(event).background || undefined;
+  const query = getQuery<Record<string, string | undefined>>(event);
+  const width = query.width || undefined;
+  const height = query.height || undefined;
+  const color = query.color || undefined;
+  const strokeWidth = query.strokeWidth || undefined;
+  const background = query.background || undefined;
 
   const LucideIcon = createLucideIcon(params.iconName, iconNode);
 
