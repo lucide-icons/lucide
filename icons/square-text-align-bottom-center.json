@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Aligning text to the bottom center of a text box or table cell"
+  ],
+  "tags": [
+    "$group:position-bottom",
+    "$group:position-center",
+    "text",
+    "alignment",
+    "text box",
+    "table cell"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Aligning text to the top left of a text box or table cell"
+  ],
+  "tags": [
+    "$group:position-top",
+    "$group:position-left",
+    "text",
+    "alignment",
+    "text box",
+    "table cell"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}
