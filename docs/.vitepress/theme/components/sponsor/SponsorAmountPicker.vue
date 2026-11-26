@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import Icon from '@lucide/vue/src/Icon';
 import { check } from '../../../data/iconNodes';
@@ -26,11 +26,19 @@ const amount = ref(20);
 const customAmount = ref<number | ''>('');
 
 const isMonthly = computed(() => frequency.value === 'monthly');
+const MAX_AMOUNT = 1_000_000;
 
 const total = computed(() => {
   const value = customAmount.value === '' ? amount.value : Number(customAmount.value);
 
-  return value > 0 ? Math.round(value) : 0;
+  if (!Number.isFinite(value) || value <= 0) return 0;
+  return Math.min(Math.round(value), MAX_AMOUNT);
+});
+
+watch(customAmount, (val) => {
+  if (val !== '' && Number(val) > MAX_AMOUNT) {
+    customAmount.value = MAX_AMOUNT;
+  }
 });
 
 const tier = computed(() => (isMonthly.value ? getTierForAmount(total.value) : null));
@@ -155,6 +163,7 @@ function pickAmount(value: number) {
               v-model="customAmount"
               type="number"
               min="1"
+              max="1000000"
               inputmode="numeric"
               placeholder="Other"
               class="amount-value custom-input"
@@ -366,6 +375,7 @@ function pickAmount(value: number) {
   line-height: 24px;
   font-weight: 600;
   color: var(--vp-c-text-1);
+  overflow-wrap: anywhere;
 }
 
 .summary-perks {
