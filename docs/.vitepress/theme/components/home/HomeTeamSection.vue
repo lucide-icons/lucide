@@ -6,9 +6,13 @@ import TeamMemberCard, { TeamMember } from './TeamMemberCard.vue'
 import teamData from '../../../data/teamData.json'
 import HomeSponsorCard from './HomeSponsorCard.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
-
+import { provide } from 'vue'
+import { merchLayoutKey } from '../merch/merch'
 
 const { theme } = useData()
+
+// The wide ad card here shows two merch items side by side when Carbon is blocked.
+provide(merchLayoutKey, 'pair')
 </script>
 
 <template>
