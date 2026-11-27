@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ammar08429"
+  ],
+  "use-cases": [
+    "Adding a new widget, card, or panel to a dashboard",
+    "Inserting a banner, section, or content block in page builders",
+    "Creating a new button or input field in form and UI builders",
+    "Adding a landscape frame, artboard, or slide in design and presentation tools",
+    "Adding a screen or display in monitor arrangement settings"
+  ],
+  "tags": [
+    "$extends:rectangle-horizontal",
+    "$group:plus",
+    "positive",
+    "button"
+  ],
+  "categories": [
+    "math",
+    "tools",
+    "development",
+    "text"
+  ]
+}

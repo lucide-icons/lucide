@@ -3,10 +3,13 @@
   "contributors": [
     "colebemis",
     "ericfennis",
-    "csandman"
+    "csandman",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "call"
+    "$extends:phone"
   ],
   "categories": [
     "connectivity",

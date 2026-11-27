@@ -4,24 +4,26 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "subtract",
-    "remove",
+    "$group:minus",
     "decrease",
-    "reduce",
     "calculate",
     "line",
     "operator",
     "code",
     "coding",
     "minimum",
-    "downgrade",
-    "-"
+    "downgrade"
   ],
   "categories": [
     "math"
   ],
   "aliases": [
-    "minus-circle"
+    {
+      "name": "minus-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

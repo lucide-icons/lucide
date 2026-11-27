@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HectorZaGa",
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Aligning justified text with the final line at the start",
+    "Formatting paragraphs with left-justified layout in document editors"
+  ],
+  "tags": [
+    "$group:text",
+    "$group:position-left",
+    "alignment",
+    "justified",
+    "start",
+    "editor",
+    "document"
+  ],
+  "categories": [
+    "$extends:text-align-justify"
+  ]
+}

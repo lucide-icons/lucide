@@ -4,15 +4,20 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:pause",
     "music",
-    "audio",
-    "stop"
+    "audio"
   ],
   "categories": [
     "multimedia"
   ],
   "aliases": [
-    "pause-circle"
+    {
+      "name": "pause-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

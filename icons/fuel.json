@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "filling-station",
     "gas",

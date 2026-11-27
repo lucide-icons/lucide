@@ -5,9 +5,12 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "code",
-    "version control"
+    "version control",
+    "ci/cd",
+    "cicd"
   ],
   "categories": [
     "development"

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:dashed",
+    "$group:collapse",
+    "$group:reflect",
+    "alignment"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ],
+  "aliases": [
+    {
+      "name": "flip-vertical-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    },
+    {
+      "name": "triangles-centerline-dashed-vertical",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

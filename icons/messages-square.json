@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -11,9 +13,13 @@
     "feedback",
     "speech bubbles",
     "copy",
-    "multiple"
+    "multiple",
+    "discussion",
+    "interview",
+    "debate"
   ],
   "categories": [
-    "social"
+    "social",
+    "communication"
   ]
 }

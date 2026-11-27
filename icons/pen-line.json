@@ -5,33 +5,21 @@
     "csandman",
     "mittalyashu",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "pencil",
-    "change",
-    "create",
-    "draw",
-    "writer",
-    "writing",
-    "biro",
-    "ink",
-    "marker",
-    "felt tip",
-    "stationery",
-    "artist"
+    "$extends:pen"
   ],
   "categories": [
-    "text",
-    "design",
-    "tools"
+    "$extends:pen"
   ],
   "aliases": [
     {
       "name": "edit-3",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

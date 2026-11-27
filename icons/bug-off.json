@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "debug",
-    "code",
-    "insect",
+    "$extends:bug",
+    "$group:off",
+    "fixed",
+    "resolved",
     "kill",
     "exterminate",
     "pest control"
   ],
   "categories": [
-    "development",
-    "animals"
+    "$extends:bug"
   ]
 }

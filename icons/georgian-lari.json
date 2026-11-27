@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kivicode"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:currency"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

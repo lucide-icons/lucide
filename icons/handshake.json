@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "agreement",
     "partnership",
@@ -16,10 +17,7 @@
     "terms"
   ],
   "categories": [
-    "account",
     "social",
-    "communication",
-    "finance",
-    "security"
+    "finance"
   ]
 }

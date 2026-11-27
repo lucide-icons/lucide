@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "guanboo-yang"
+    "guanboo-yang",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "done",
-    "check",
-    "tick",
-    "complete",
+    "$group:text",
+    "$group:check",
     "list",
-    "to-do",
-    "bom"
+    "bom",
+    "checklist"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

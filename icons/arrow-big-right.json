@@ -4,18 +4,20 @@
     "Andreto",
     "mittalyashu",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
-    "forward",
-    "direction",
-    "east",
     "indicate turn"
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }

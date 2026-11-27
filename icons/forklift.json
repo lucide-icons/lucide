@@ -1,14 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "machinery",
+    "industrial",
+    "warehouse",
+    "lifting",
+    "storage",
+    "equipment",
+    "heavy-duty",
+    "moving",
     "vehicle",
     "transport",
     "logistics"
   ],
   "categories": [
-    "transportation"
+    "transportation",
+    "logistics"
   ]
 }

@@ -4,17 +4,13 @@
     "jmsv",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "person",
-    "account",
-    "contact",
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass"
+    "$extends:user-round",
+    "$group:search"
   ],
   "categories": [
-    "account",
+    "$extends:user-round",
     "social"
   ]
 }

@@ -3,11 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "search"
+    "$extends:mail",
+    "$group:search"
   ],
   "categories": [
     "mail"

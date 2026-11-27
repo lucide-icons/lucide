@@ -1,0 +1,17 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 4h2a2 2 0 012 2v2.512" />
+  <path d="M17 15.5v1.7l1 .625" />
+  <path d="M8 4H6a2 2 0 00-2 2v14a2 2 0 002 2h3.516" />
+  <circle cx="17" cy="17" r="5" />
+  <rect x="8" y="2" width="8" height="4" rx="1" />
+</svg>

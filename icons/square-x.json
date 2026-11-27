@@ -4,13 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "cancel",
-    "close",
-    "delete",
-    "remove",
-    "times",
-    "clear",
+    "$group:x",
     "math",
     "multiply",
     "multiplication"
@@ -20,6 +16,10 @@
     "notifications"
   ],
   "aliases": [
-    "x-square"
+    {
+      "name": "x-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

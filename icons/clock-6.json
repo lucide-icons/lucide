@@ -3,14 +3,14 @@
   "contributors": [
     "wojtekmaj",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "time",
-    "watch",
-    "alarm"
+    "$extends:clock"
   ],
   "categories": [
-    "time"
+    "$extends:clock"
   ]
 }

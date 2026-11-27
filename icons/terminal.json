@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:code",
     "code",
     "command line",
     "prompt",

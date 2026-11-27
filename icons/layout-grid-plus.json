@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AleksejDix"
+  ],
+  "use-cases": [
+    "Adding a new widget or tile to a dashboard",
+    "Inserting a new block or section into a page layout",
+    "Adding an app or shortcut to a home screen grid"
+  ],
+  "tags": [
+    "$extends:layout-grid",
+    "$group:plus",
+    "structure",
+    "rows",
+    "columns",
+    "expand",
+    "interface",
+    "design",
+    "section",
+    "widget",
+    "tile"
+  ],
+  "categories": [
+    "$extends:layout-grid"
+  ]
+}

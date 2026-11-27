@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "luisdlopera"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:wifi",
+    "$group:sync",
+    "reset",
+    "restart"
+  ],
+  "categories": [
+    "$extends:wifi"
+  ]
+}

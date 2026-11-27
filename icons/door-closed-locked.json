@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "lukedukeus"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:door-closed",
+    "$group:lock"
+  ],
+  "categories": [
+    "$extends:door-closed"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "darrel1925",
+    "ericfennis",
+    "karsamistmere"
+  ],
+  "use-cases": [
+    "Marking rooms and destinations on lower floors in wayfinding interfaces",
+    "Indicating descending stairs on floor plans and directional signage",
+    "Identifying stair routes to ground floors, exits, and basement areas"
+  ],
+  "tags": [
+    "steps",
+    "stairwell",
+    "staircase",
+    "descending",
+    "downstairs",
+    "floor",
+    "level",
+    "wayfinding",
+    "signage",
+    "direction",
+    "diagonal",
+    "descent",
+    "egress",
+    "emergency exit",
+    "route"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "arrows"
+  ]
+}

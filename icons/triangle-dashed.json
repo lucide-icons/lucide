@@ -7,15 +7,12 @@
     "karsa-mistmere",
     "Yohh"
   ],
+  "use-cases": [],
   "tags": [
-    "equilateral",
-    "delta",
-    "shape",
-    "pyramid",
-    "hierarchy",
-    "dashed"
+    "$extends:triangle",
+    "$group:dashed"
   ],
   "categories": [
-    "shapes"
+    "$extends:triangle"
   ]
 }

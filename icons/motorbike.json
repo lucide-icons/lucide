@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "moto",
+    "motorcycle",
+    "transport",
+    "vehicle",
+    "drive",
+    "ride",
+    "trip",
+    "race",
+    "racing",
+    "journey",
+    "delivery"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "news",
     "feed",
     "home",

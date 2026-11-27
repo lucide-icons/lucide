@@ -2,14 +2,14 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "xnousnow",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "copy",
-    "paste"
+    "$extends:clipboard"
   ],
   "categories": [
-    "text",
-    "arrows"
+    "$extends:clipboard"
   ]
 }

@@ -3,7 +3,9 @@
   "contributors": [
     "DefaultLP"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "closed captions",
     "subtitles",
     "subhead",
@@ -13,9 +15,14 @@
     "accessibility"
   ],
   "categories": [
-    "multimedia"
+    "multimedia",
+    "accessibility"
   ],
   "aliases": [
-    "subtitles"
+    {
+      "name": "subtitles",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "photo",
     "selfie",
@@ -13,6 +14,7 @@
   ],
   "categories": [
     "communication",
-    "devices"
+    "devices",
+    "photography"
   ]
 }

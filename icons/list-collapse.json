@@ -1,12 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ocavue"
+    "ocavue",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "items",
-    "collapse",
-    "expand",
+    "$group:collapse",
+    "$group:expand",
     "details",
     "disclosure",
     "show",
@@ -14,11 +18,9 @@
     "toggle",
     "accordion",
     "more",
-    "less",
-    "fold",
-    "unfold"
+    "less"
   ],
   "categories": [
-    "text"
+    "$extends:list"
   ]
 }

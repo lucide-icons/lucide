@@ -1,9 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AnnaSasDev"
+    "AnnaSasDev",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "options",
     "list",
     "menu",
@@ -13,6 +16,7 @@
     "logs"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

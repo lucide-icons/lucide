@@ -4,7 +4,9 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "todo",
     "tasks",
     "items",
@@ -15,7 +17,6 @@
   "categories": [
     "design",
     "layout",
-    "photography",
     "text"
   ]
 }

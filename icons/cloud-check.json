@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas",
+    "lscheibel"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:check",
+    "sync",
+    "network",
+    "saved",
+    "persisted"
+  ],
+  "categories": [
+    "development"
+  ]
+}

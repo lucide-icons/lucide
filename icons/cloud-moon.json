@@ -5,11 +5,12 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "weather",
+    "$extends:cloud",
     "night"
   ],
   "categories": [
-    "weather"
+    "$extends:cloud"
   ]
 }

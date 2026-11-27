@@ -1,9 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "eden881"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:dashed",
     "cut",
     "snippet",
     "chop",
@@ -18,6 +21,10 @@
     "development"
   ],
   "aliases": [
-    "scissors-square-dashed-bottom"
+    {
+      "name": "scissors-square-dashed-bottom",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

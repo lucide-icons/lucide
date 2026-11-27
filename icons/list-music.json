@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "playlist",
     "queue",
     "music",

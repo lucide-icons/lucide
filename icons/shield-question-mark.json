@@ -1,0 +1,49 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:shield",
+    "$group:question-mark",
+    "unshielded",
+    "insecure",
+    "unsecured",
+    "unsafe",
+    "unprotected",
+    "unguarded",
+    "unarmored",
+    "unarmoured",
+    "defenseless",
+    "defenceless",
+    "undefended",
+    "unprevented",
+    "undetected",
+    "exploit",
+    "vulnerability",
+    "vulnerable",
+    "weakness",
+    "infection",
+    "compromised",
+    "data leak",
+    "unverified",
+    "uncertified",
+    "inactive"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "shield-question",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

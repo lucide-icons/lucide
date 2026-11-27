@@ -5,12 +5,14 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
-    "copy",
-    "paste",
-    "tasks"
+    "$extends:clipboard",
+    "$group:text",
+    "tasks",
+    "checklist"
   ],
   "categories": [
-    "text"
+    "$extends:clipboard"
   ]
 }

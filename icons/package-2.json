@@ -2,21 +2,14 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "box",
-    "container",
-    "storage",
-    "sealed",
-    "packed",
-    "unopened",
-    "undelivered",
-    "archive",
-    "zip"
+    "$extends:package"
   ],
   "categories": [
-    "files",
-    "development"
+    "$extends:package"
   ]
 }

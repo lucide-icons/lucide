@@ -3,17 +3,14 @@
   "contributors": [
     "ericfennis",
     "johnletey",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "power",
-    "electricity",
-    "energy",
-    "accumulator",
-    "charge"
+    "$extends:battery"
   ],
   "categories": [
-    "connectivity",
-    "devices"
+    "$extends:battery"
   ]
 }

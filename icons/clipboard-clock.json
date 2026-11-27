@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "beanduong",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:clipboard",
+    "$group:clock",
+    "log",
+    "alarm",
+    "reminder",
+    "scheduled",
+    "time tracking",
+    "timesheets",
+    "appointment",
+    "logbook"
+  ],
+  "categories": [
+    "$extends:clipboard",
+    "time"
+  ]
+}

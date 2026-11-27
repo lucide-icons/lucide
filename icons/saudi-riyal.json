@@ -4,10 +4,9 @@
     "null78",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "currency",
-    "money",
-    "payment"
+    "$group:currency"
   ],
   "categories": [
     "finance"

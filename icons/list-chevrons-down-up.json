@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "ocavue",
+    "jguddas",
+    "PeterlitsZo",
+    "mittalyashu",
+    "juliankellydesign",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:list",
+    "$group:direction-down",
+    "$group:direction-up",
+    "items",
+    "$group:collapse",
+    "$group:expand",
+    "details",
+    "disclosure",
+    "show",
+    "hide",
+    "toggle",
+    "accordion",
+    "more",
+    "less"
+  ],
+  "categories": [
+    "$extends:list"
+  ]
+}

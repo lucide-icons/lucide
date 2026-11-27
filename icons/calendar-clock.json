@@ -2,18 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "date",
-    "day",
-    "month",
-    "year",
-    "event",
-    "clock",
-    "hour"
+    "$extends:calendar",
+    "$group:clock"
   ],
   "categories": [
-    "time"
+    "$extends:calendar"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:book",
+    "$group:search"
+  ],
+  "categories": [
+    "$extends:book"
+  ]
+}

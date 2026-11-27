@@ -6,13 +6,14 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:search",
     "lost",
-    "document",
-    "find",
     "browser"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

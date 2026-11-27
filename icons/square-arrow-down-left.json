@@ -1,23 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "direction",
-    "south-west",
-    "diagonal",
+    "$group:direction-down-left",
     "sign",
-    "turn",
     "keyboard",
-    "button"
+    "button",
+    "turn"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "gaming"
+    "arrows"
   ],
   "aliases": [
-    "arrow-down-left-square"
+    {
+      "name": "arrow-down-left-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

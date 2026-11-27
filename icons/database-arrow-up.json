@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "Importing or uploading data into a database",
+    "Restoring from a backup",
+    "Pushing local data to a remote database"
+  ],
+  "tags": [
+    "$extends:database",
+    "$group:direction-up",
+    "upload",
+    "push",
+    "upscale"
+  ],
+  "categories": [
+    "$extends:database"
+  ]
+}

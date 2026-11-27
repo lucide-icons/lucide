@@ -1,0 +1,9 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Action: mirroring something across an axis",
+  "tags": [
+    "reflect",
+    "flip",
+    "mirror"
+  ]
+}

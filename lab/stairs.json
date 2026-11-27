@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "darrel1925"
+  ],
+  "use-cases": [
+    "Marking stairs on building floor plans and wayfinding maps",
+    "Identifying emergency stair routes on evacuation plans",
+    "Indicating movement between floors in property, architecture, and navigation interfaces",
+    "Recording stair-climb activity in fitness interfaces"
+  ],
+  "tags": [
+    "steps",
+    "staircase",
+    "stairway",
+    "floor",
+    "level",
+    "building",
+    "architecture",
+    "wayfinding",
+    "egress"
+  ],
+  "categories": [
+    "buildings"
+  ]
+}

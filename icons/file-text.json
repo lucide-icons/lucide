@@ -5,14 +5,20 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:file",
+    "$group:text",
     "data",
     "txt",
     "pdf",
-    "document"
+    "doc",
+    "docx",
+    "word",
+    "docs"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "text"
   ]
 }

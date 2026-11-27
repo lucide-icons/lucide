@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:code",
     "code",
     "command line",
     "prompt",
@@ -14,6 +16,10 @@
     "development"
   ],
   "aliases": [
-    "terminal-square"
+    {
+      "name": "terminal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

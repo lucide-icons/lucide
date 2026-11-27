@@ -1,0 +1,195 @@
+<script lang="ts">
+import { ref } from 'vue'
+
+// This component can be rendered more than once on a page (e.g. a hidden
+// copy inside `.content-body`). DocSearch mounts into `#vp-docsearch`, so only
+// a single instance may ever render the search box.
+const loaded = ref(false)
+// Shared so that any instance (e.g. the visible input) can open the modal
+// rendered by the owning instance.
+const openRequest = ref<{ target: 'search'; nonce: number } | null>(null)
+let openNonce = 0
+// Every instance registers the hotkeys; only handle each event once.
+let lastHandledEvent: KeyboardEvent | null = null
+</script>
+
+<script lang="ts" setup>
+import { computed, defineAsyncComponent, onMounted } from 'vue'
+import { onKeyStroke } from '@vueuse/core'
+import type { DefaultTheme } from 'vitepress/theme'
+
+import { useData } from 'vitepress'
+import FakeInput from '../base/FakeInput.vue'
+
+const VPAlgoliaSearchBox = defineAsyncComponent(
+  () => import('vitepress/dist/client/theme-default/components/VPAlgoliaSearchBox.vue'),
+)
+
+const { theme } = useData<DefaultTheme.Config>()
+
+const algoliaOptions = computed(
+  () => (theme.value.search?.options ?? {}) as DefaultTheme.AlgoliaSearchOptions,
+)
+
+// whether this instance is the one rendering the (hidden) search box
+const isOwner = ref(false)
+const shortcutText = ref('')
+
+// to avoid loading the docsearch js upfront (which is more than 1/3 of the
+// payload), we delay initializing it until the user has actually clicked or
+// hit the hotkey to invoke it.
+onMounted(() => {
+  shortcutText.value = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘K' : 'Ctrl+K'
+
+  const id = 'VPAlgoliaPreconnect'
+  if (document.getElementById(id) || !algoliaOptions.value.appId) return
+
+  const rIC = window.requestIdleCallback || setTimeout
+  rIC(() => {
+    const preconnect = document.createElement('link')
+    preconnect.id = id
+    preconnect.rel = 'preconnect'
+    preconnect.href = `https://${algoliaOptions.value.appId}-dsn.algolia.net`
+    preconnect.crossOrigin = ''
+    document.head.appendChild(preconnect)
+  })
+})
+
+onKeyStroke('k', (event) => {
+  if (event === lastHandledEvent) return
+  if (event.ctrlKey || event.metaKey) {
+    lastHandledEvent = event
+    event.preventDefault()
+    open()
+  }
+})
+
+onKeyStroke('/', (event) => {
+  if (event === lastHandledEvent) return
+  if (!isEditingContent(event)) {
+    lastHandledEvent = event
+    event.preventDefault()
+    open()
+  }
+})
+
+function open() {
+  if (!loaded.value) {
+    loaded.value = true
+    isOwner.value = true
+  }
+  // The search box queues the request until DocSearch is ready.
+  openRequest.value = { target: 'search', nonce: ++openNonce }
+}
+
+function isEditingContent(event: KeyboardEvent): boolean {
+  const element = event.target as HTMLElement
+  const tagName = element.tagName
+
+  return (
+    element.isContentEditable ||
+    tagName === 'INPUT' ||
+    tagName === 'SELECT' ||
+    tagName === 'TEXTAREA'
+  )
+}
+</script>
+
+<template>
+  <div class="VPNavBarSearch">
+    <FakeInput
+      class="nav-search-input"
+      :shortcut="shortcutText"
+      aria-label="Search"
+      @click="open"
+    >
+      Search
+    </FakeInput>
+
+    <!-- docsearch renders its own button here; we only need its modal -->
+    <div v-if="isOwner" class="docsearch-host">
+      <VPAlgoliaSearchBox :algolia-options="algoliaOptions" :open-request="openRequest" />
+    </div>
+  </div>
+</template>
+
+<style>
+
+@media (min-width: 48rem) {
+  .VPNavBarSearch {
+    flex-grow: 1;
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: 60rem) {
+  .VPNavBarSearch {
+    padding-left: 0px;
+  }
+}
+
+.VPNavBarSearch {
+  padding-top: 24px;
+}
+
+.VPNavBarSearch .nav-search-input {
+  padding: 8px 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.VPNavBarSearch .docsearch-host {
+  display: none;
+}
+
+[class*='DocSearch'] {
+  --docsearch-primary-color: var(--vp-c-brand-1);
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  /* DocSearch 4 fills the selected hit with this; VitePress points it at the (indigo) brand-soft */
+  --docsearch-hit-highlight-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
+  --docsearch-soft-primary-color: color-mix(in srgb, var(--vp-c-brand) 10%, transparent);
+  --docsearch-text-color: var(--vp-c-text-1);
+  --docsearch-muted-color: var(--vp-c-text-2);
+  --docsearch-searchbox-shadow: none;
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
+  --docsearch-modal-background: var(--vp-c-bg-soft);
+  --docsearch-footer-background: var(--vp-c-bg);
+}
+
+.dark [class*='DocSearch'] {
+  --docsearch-modal-shadow: none;
+  --docsearch-footer-shadow: none;
+  --docsearch-logo-color: var(--vp-c-text-2);
+  --docsearch-hit-background: var(--vp-c-gray-3);;
+  --docsearch-container-background: rgba(0, 0, 0, 0.4);
+  --docsearch-hit-color: var(--vp-c-text-2);
+  --docsearch-hit-shadow: none;
+}
+
+.dark .DocSearch-Footer {
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+/* DocSearch 4 turned the search field into a full-width header; inset it again like before.
+   Its CSS is loaded lazily after ours, hence the extra .DocSearch-Modal for specificity. */
+.DocSearch-Modal .DocSearch-SearchBar {
+  padding: var(--docsearch-spacing);
+}
+
+.DocSearch-Modal .DocSearch-Form {
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 4px;
+  background-color: var(--vp-c-white);
+}
+
+.dark .DocSearch-Form {
+  background-color: var(--vp-c-default-soft);
+}
+
+.DocSearch-Screen-Icon > svg {
+  margin: auto;
+}
+</style>

@@ -3,8 +3,10 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
-    "forward",
+    "$group:direction-right",
+    "$group:navigation-next",
     "next",
     "more than",
     "greater",
@@ -19,7 +21,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "math",
     "development"
   ]

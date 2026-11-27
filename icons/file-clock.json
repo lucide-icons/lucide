@@ -2,15 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "history",
-    "log",
-    "clock"
+    "$extends:file",
+    "$group:clock",
+    "log"
   ],
   "categories": [
-    "files",
+    "$extends:file",
     "time"
   ]
 }

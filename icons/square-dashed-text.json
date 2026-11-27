@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$group:dashed",
+    "$group:text",
+    "find",
+    "search",
+    "selection"
+  ],
+  "categories": [
+    "text",
+    "cursors"
+  ],
+  "aliases": [
+    {
+      "name": "text-selection",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "text-select",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

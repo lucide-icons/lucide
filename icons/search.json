@@ -2,16 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
-    "find",
-    "scan",
-    "magnifier",
-    "magnifying glass"
+    "$group:search",
+    "enlarge"
   ],
   "categories": [
-    "text",
-    "social"
+    "text"
   ]
 }

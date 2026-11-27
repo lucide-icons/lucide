@@ -3,12 +3,14 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$extends:scan",
+    "$group:text",
     "recognition",
     "read",
     "translate",
-    "copy",
-    "lines"
+    "copy"
   ],
   "categories": [
     "text",

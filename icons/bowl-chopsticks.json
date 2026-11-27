@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB",
+    "danielbayley",
+    "karsa-mistmere",
+    "kemie"
+  ],
+  "use-cases": [
+    "Representing ramen dishes on restaurant menus",
+    "Categorizing noodle dishes in recipe apps",
+    "Marking noodle restaurants in food delivery apps"
+  ],
+  "tags": [
+    "$extends:soup",
+    "ramen",
+    "noodles",
+    "soup",
+    "cuisine",
+    "japanese",
+    "asian food",
+    "broth",
+    "udon",
+    "soba",
+    "pho",
+    "miso",
+    "noodle soup",
+    "noodle bowl",
+    "dining",
+    "poke",
+    "culinary",
+    "asian",
+    "chinese",
+    "oriental",
+    "eastern",
+    "brunch",
+    "lunch",
+    "dinner"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

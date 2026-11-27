@@ -1,18 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "advertisement",
-    "attention",
-    "alert",
-    "notification",
-    "disable",
+    "$extends:megaphone",
+    "$group:off",
     "silent"
   ],
   "categories": [
-    "multimedia",
-    "notifications"
+    "$extends:megaphone"
   ]
 }

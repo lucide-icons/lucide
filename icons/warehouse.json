@@ -3,13 +3,20 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "storage",
+    "storehouse",
+    "depot",
+    "depository",
+    "repository",
+    "stockroom",
     "logistics",
     "building"
   ],
   "categories": [
     "buildings",
-    "navigation"
+    "navigation",
+    "logistics"
   ]
 }

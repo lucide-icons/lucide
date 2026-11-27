@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "$extends:badge",
+    "$group:question-mark"
+  ],
+  "categories": [
+    "accessibility",
+    "social"
+  ],
+  "aliases": [
+    {
+      "name": "badge-help",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

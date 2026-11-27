@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
+    "$group:text",
     "notebook",
     "notes",
     "pages",
@@ -15,7 +17,6 @@
     "planner",
     "diary",
     "journal",
-    "writing",
     "write",
     "written",
     "reading",
@@ -27,11 +28,10 @@
     "study",
     "homework",
     "research",
-    "lines",
     "opened"
   ],
   "categories": [
     "text",
-    "social"
+    "education"
   ]
 }
