@@ -22,7 +22,11 @@
     "wayfinding",
     "signage",
     "direction",
-    "diagonal"
+    "diagonal",
+    "descent",
+    "egress",
+    "emergency exit",
+    "route"
   ],
   "categories": [
     "buildings",
