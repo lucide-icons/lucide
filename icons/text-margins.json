@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "showing text or content constrained within left and right margins",
+    "toggling measure or layout guides in an editor"
+  ],
+  "tags": [
+    "text",
+    "margins",
+    "margin",
+    "column",
+    "width",
+    "bounds",
+    "gutter",
+    "indent",
+    "paragraph",
+    "measure",
+    "readable",
+    "typography",
+    "guides",
+    "layout"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}
