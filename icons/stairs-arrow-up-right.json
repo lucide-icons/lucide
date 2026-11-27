@@ -22,7 +22,11 @@
     "wayfinding",
     "signage",
     "direction",
-    "diagonal"
+    "diagonal",
+    "access",
+    "transition",
+    "route",
+    "vertical"
   ],
   "categories": [
     "buildings",
