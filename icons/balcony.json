@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AJAyanbisi",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Highlighting balconies in real estate listings and property descriptions",
+    "Representing balconies in home design and architectural plans",
+    "Identifying rooms with balconies on hotel and accommodation booking platforms",
+    "Representing balconies in building management dashboards"
+  ],
+  "tags": [
+    "accommodation",
+    "architecture",
+    "balustrade",
+    "booking",
+    "building",
+    "building management",
+    "home",
+    "home design",
+    "hotel",
+    "outdoor",
+    "patio",
+    "property",
+    "railing",
+    "real estate",
+    "terrace",
+    "veranda"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "travel"
+  ]
+}
