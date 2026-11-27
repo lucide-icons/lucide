@@ -11,11 +11,10 @@
     "Formatting paragraphs with center-justified layout in document editors"
   ],
   "tags": [
-    "paragraph",
+    "$group:text",
     "alignment",
     "justified",
     "$group:position-center",
-    "typography",
     "editor",
     "document"
   ],

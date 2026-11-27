@@ -6,10 +6,10 @@
   "use-cases": [],
   "tags": [
     "$extends:notebook",
+    "$group:text",
     "pages",
     "paper",
     "write",
-    "lines",
     "opened",
     "docs",
     "wiki",

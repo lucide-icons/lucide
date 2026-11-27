@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:mail"
+  ],
+  "use-cases": [
+    "Resending invitation emails in an invite system",
+    "Sending an email from a mail client",
+    "Retrying delivery of a failed email"
+  ],
+  "tags": [
+    "$extends:mail",
+    "send",
+    "resend",
+    "retry",
+    "invite",
+    "invitation",
+    "outgoing",
+    "outbox",
+    "submit",
+    "delivery",
+    "dispatch"
+  ],
+  "categories": [
+    "mail",
+    "communication"
+  ]
+}
