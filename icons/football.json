@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing American football games and leagues",
+    "Categorizing American football equipment in sports stores",
+    "Selecting American football gameplay modes in games"
+  ],
+  "tags": [
+    "american",
+    "gridiron",
+    "pigskin",
+    "quarterback",
+    "touchdown",
+    "kick",
+    "team",
+    "goal",
+    "score",
+    "super bowl",
+    "nfl"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing table tennis matches and tournaments",
+    "Categorizing paddles and equipment in sports stores",
+    "Marking table tennis facilities on recreation maps"
+  ],
+  "tags": [
+    "ping-pong",
+    "bat",
+    "paddle",
+    "racquet",
+    "racket",
+    "net",
+    "bounce",
+    "score"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

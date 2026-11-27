@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing basketball games and leagues in sports apps",
+    "Marking basketball courts on recreation maps",
+    "Selecting basketball gameplay modes in games"
+  ],
+  "tags": [
+    "bounce",
+    "hoop",
+    "netball",
+    "court",
+    "dribble",
+    "slam dunk",
+    "alley-oop",
+    "team",
+    "score",
+    "nba"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
