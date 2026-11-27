@@ -36,16 +36,16 @@
   "license": "ISC",
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
-    "@types/minimist": "^1.2.5",
+    "@types/minimist": "catalog:",
     "@types/node": "^26.4.1"
   },
   "dependencies": {
-    "minimist": "^1.2.8",
-    "prettier": "3.9.6",
-    "svgo": "^4.1.0",
-    "svgson": "^5.3.1"
+    "minimist": "catalog:",
+    "prettier": "catalog:",
+    "svgo": "catalog:",
+    "svgson": "catalog:"
   },
   "peerDependencies": {
-    "@lucide/helpers": "*"
+    "@lucide/helpers": "catalog:"
   }
 }

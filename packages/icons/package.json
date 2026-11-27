@@ -63,14 +63,14 @@
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.3",
-    "@testing-library/jest-dom": "^7.0.1",
-    "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
-    "rollup-plugin-preserve-directives": "^0.4.0",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vitest": "5.0.5"
+    "@rollup/plugin-replace": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "jest-serializer-html": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "rollup-plugin-preserve-directives": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
   }
 }

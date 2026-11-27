@@ -77,25 +77,25 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@babel/core": "^8.1.2",
-    "@babel/preset-env": "^8.0.7",
-    "@babel/preset-typescript": "^8.0.7",
+    "@babel/core": "catalog:",
+    "@babel/preset-env": "catalog:",
+    "@babel/preset-typescript": "catalog:",
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-babel": "catalog:",
     "@solidjs/testing-library": "next",
     "@solidjs/vite-plugin": "next",
-    "@solidjs/web": "next",
-    "@testing-library/jest-dom": "^7.0.1",
+    "@solidjs/web": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "babel-preset-solid": "next",
-    "esbuild": "^0.28.2",
-    "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
+    "esbuild": "catalog:",
+    "jest-serializer-html": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
     "solid-js": "next",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5"
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "solid-js": "^2.0.0-rc.0"

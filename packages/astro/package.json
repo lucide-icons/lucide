@@ -49,18 +49,18 @@
     "typecheck": "pnpm copy:utils && pnpm build:icons && astro check"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.12",
-    "@astrojs/ts-plugin": "^1.11.0",
+    "@astrojs/check": "catalog:",
+    "@astrojs/ts-plugin": "catalog:",
     "@lucide/build-icons": "workspace:*",
-    "@testing-library/dom": "^10.4.2",
-    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "astro": "^7.4.11",
-    "jest-serializer-html": "^7.1.0",
-    "linkedom": "^0.18.14",
-    "prettier": "3.9.6",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vitest": "5.0.5"
+    "jest-serializer-html": "catalog:",
+    "linkedom": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "astro": "^4 || ^5 || ^6 || ^7"

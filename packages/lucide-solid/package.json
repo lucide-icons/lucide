@@ -77,24 +77,24 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@babel/core": "^8.1.2",
-    "@babel/preset-env": "^8.0.7",
-    "@babel/preset-typescript": "^8.0.7",
+    "@babel/core": "catalog:",
+    "@babel/preset-env": "catalog:",
+    "@babel/preset-typescript": "catalog:",
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-babel": "catalog:",
     "@solidjs/testing-library": "^0.8.10",
-    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/jest-dom": "catalog:",
     "babel-preset-solid": "^1.9.15",
-    "esbuild": "^0.28.2",
-    "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
+    "esbuild": "catalog:",
+    "jest-serializer-html": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
     "solid-js": "^1.9.18",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vite-plugin-solid": "^2.11.17"
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-solid": "catalog:"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"

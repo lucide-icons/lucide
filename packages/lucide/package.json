@@ -46,13 +46,13 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.3",
-    "@testing-library/jest-dom": "^7.0.1",
+    "@rollup/plugin-replace": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "@types/node": "^25.9.5",
-    "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5"
+    "jest-serializer-html": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }

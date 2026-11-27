@@ -51,15 +51,15 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@preact/preset-vite": "^2.10.6",
-    "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/preact": "^3.2.6",
-    "jest-serializer-html": "^7.1.0",
+    "@preact/preset-vite": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/preact": "catalog:",
+    "jest-serializer-html": "catalog:",
     "preact": "^11.1.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5"
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "preact": "^10.27.2 || ^11.0.0-0"
