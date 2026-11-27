@@ -10,7 +10,7 @@
   stroke-linejoin="round"
 >
   <path d="M12 3v6" />
-  <path d="M16 17a4 4 0 00-8 0" />
+  <path d="M16 17a4 4 0 0 0-8 0" />
   <path d="m19.07 9.93-1.41 1.41" />
   <path d="M2 17h2" />
   <path d="M20 17h2" />
