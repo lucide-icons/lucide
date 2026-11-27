@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "lucide-solid": "workspace:*",
-    "solid-js": "1.9.18"
+    "solid-js": "catalog:solid1"
   },
   "devDependencies": {
-    "@vitest/browser-playwright": "5.0.5",
+    "@vitest/browser-playwright": "catalog:",
     "playwright": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",

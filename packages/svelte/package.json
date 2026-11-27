@@ -72,7 +72,7 @@
     "@tsconfig/svelte": "catalog:",
     "jest-serializer-html": "catalog:",
     "jsdom": "catalog:",
-    "svelte": "^5.58.0",
+    "svelte": "catalog:",
     "svelte-check": "catalog:",
     "svelte-preprocess": "catalog:",
     "typescript": "catalog:",

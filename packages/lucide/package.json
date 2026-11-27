@@ -48,7 +48,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "catalog:",
     "@testing-library/jest-dom": "catalog:",
-    "@types/node": "^25.9.5",
+    "@types/node": "catalog:",
     "jest-serializer-html": "catalog:",
     "rollup": "catalog:",
     "rollup-plugin-dts": "catalog:",

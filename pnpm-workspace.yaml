@@ -12,8 +12,8 @@ overrides:
   semver: ^7.7.3
   vite-prerender-plugin: 0.5.12
   webpack-dev-middleware: ^5.3.4
-  vitest: '5.0.5'
-  vite: '^8.3.3'
+  vitest: 'catalog:'
+  vite: 'catalog:'
   zod@<4.6.6: ^4.6.6
   brace-expansion@<1.1.21: ^1.1.21
   decode-uri-component@<=0.5.0: ^0.5.1
@@ -43,8 +43,10 @@ catalog:
   '@angular-eslint/schematics': ~22.6.0
   '@angular/build': ^22.2.5
   '@angular/cli': ^22.2.5
+  '@angular/common': ^22.2.4
   '@angular/compiler': ^22.2.4
   '@angular/compiler-cli': ^22.2.4
+  '@angular/core': ^22.2.4
   '@angular/forms': ^22.2.4
   '@angular/platform-browser': ^22.2.4
   '@angular/platform-server': ^22.2.4
@@ -73,11 +75,11 @@ catalog:
   '@rollup/plugin-replace': ^6.0.3
   '@sentry/vue': ^11.16.0
   '@solidjs/start': 2.0.5
-  '@solidjs/web': next
   '@sveltejs/adapter-auto': ^9.0.0
   '@sveltejs/kit': ^3.4.0
   '@sveltejs/package': ^3.0.3
   '@sveltejs/vite-plugin-svelte': ^7.3.1
+  '@tanstack/react-router': 1.170.41
   '@tanstack/react-start': 1.168.60
   '@tanstack/router-plugin': 1.168.35
   '@testing-library/dom': ^10.4.2
@@ -90,7 +92,10 @@ catalog:
   '@tsconfig/svelte': ^5.0.9
   '@types/fs-extra': ^11.0.4
   '@types/minimist': ^1.2.5
+  '@types/node': ^26.4.1
   '@types/prop-types': ^15.7.15
+  '@types/react': 19.3.0
+  '@types/react-dom': 19.3.0
   '@types/semver': ^7.8.0
   '@types/yargs': ^17.0.35
   '@typescript-eslint/eslint-plugin': ^8.72.2
@@ -98,6 +103,7 @@ catalog:
   '@vercel/blob': ^2.8.0
   '@vitejs/plugin-react': ^6.3.0
   '@vitejs/plugin-vue': ^6.0.11
+  '@vitest/browser-playwright': 5.0.5
   '@vitest/coverage-v8': 5.0.5
   '@vitest/ui': 5.0.5
   '@vue/test-utils': 2.6.0
@@ -107,6 +113,7 @@ catalog:
   '@vueuse/integrations': ^14.4.0
   ajv: ^8.20.0
   angular-eslint: 22.6.0
+  astro: ^7.4.11
   botid: ^1.5.11
   cpy-cli: ^7.0.0
   cspell: ^10.5.1
@@ -142,9 +149,13 @@ catalog:
   oslllo-svg-fixer: ^6.0.1
   p-memoize: ^8.0.0
   playwright: 1.64.1
+  preact: ^11.1.0
   prettier: 3.9.6
   prettier-plugin-astro: ^0.14.1
+  react: 19.3.1
   react-dom: 19.3.1
+  react-native: ^0.88.1
+  react-native-svg: ^15.16.1
   react-router: 8.3.1
   resend: ^6.34.1
   rollup: ^4.65.1
@@ -157,10 +168,12 @@ catalog:
   rollup-plugin-visualizer: ^7.1.1
   rxjs: ~7.8.2
   sandpack-vue3: 3.1.12
+  semver: ^7.8.6
   sharp: ^0.35.5
   shiki: ^4.5.0
   simple-git: ^4.0.2
   sitemap: ^9.0.1
+  svelte: 5.58.0
   svelte-check: ^4.7.8
   svelte-preprocess: ^6.0.5
   svg-path-commander: ^2.3.3
@@ -183,9 +196,26 @@ catalog:
   vitest-browser-solid: 1.0.1
   vitest-browser-svelte: 3.1.0
   vitest-browser-vue: 3.1.0
+  vue: 3.5.45
   vue-color: ^3.3.3
   vue-router: 5.3.1
   vue-sonner: ^2.0.9
   vue-tsc: ^3.3.11
   yargs: ^18.2.0
   zod: ^4.6.7
+
+catalogs:
+  solid1:
+    '@solidjs/meta': 0.29.4
+    '@solidjs/router': 1.0.0
+    '@solidjs/testing-library': ^0.8.10
+    babel-preset-solid: ^1.9.15
+    solid-js: 1.9.18
+  solid2:
+    '@solidjs/meta': 1.0.0-next.2
+    '@solidjs/router': 2.0.0-next.34
+    '@solidjs/testing-library': 1.0.0-rc.2
+    '@solidjs/vite-plugin': 3.0.0-next.47
+    '@solidjs/web': next
+    babel-preset-solid: next
+    solid-js: next

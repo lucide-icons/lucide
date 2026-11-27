@@ -41,7 +41,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@types/node": "^26.4.1",
+    "@types/node": "catalog:",
     "prettier": "catalog:",
     "rollup": "catalog:",
     "rollup-plugin-dts": "catalog:",

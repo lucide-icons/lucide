@@ -52,7 +52,7 @@
     "rollup-plugin-dts": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
-    "vue": "^3.5.45"
+    "vue": "catalog:"
   },
   "peerDependencies": {
     "vue": ">=3.0.1"

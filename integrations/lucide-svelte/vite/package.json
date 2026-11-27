@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@lucide/svelte": "workspace:*",
-    "svelte": "5.58.0"
+    "svelte": "catalog:"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "catalog:",
     "@tsconfig/svelte": "catalog:",
-    "@types/node": "^26.4.1",
-    "@vitest/browser-playwright": "5.0.5",
+    "@types/node": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
     "playwright": "catalog:",
     "svelte-check": "catalog:",
     "typescript": "catalog:",

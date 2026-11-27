@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@lucide/vue": "workspace:*",
-    "vue": "3.5.45"
+    "vue": "catalog:"
   },
   "devDependencies": {
     "@tsconfig/node24": "catalog:",
-    "@types/node": "^26.4.1",
+    "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
-    "@vitest/browser-playwright": "5.0.5",
+    "@vitest/browser-playwright": "catalog:",
     "@vue/tsconfig": "catalog:",
     "playwright": "catalog:",
     "typescript": "catalog:",

@@ -83,7 +83,7 @@
     "p-memoize": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "semver": "^7.8.6",
+    "semver": "catalog:",
     "simple-git": "catalog:",
     "svgo": "catalog:",
     "svgson": "catalog:",

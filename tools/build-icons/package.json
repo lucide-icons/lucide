@@ -37,7 +37,7 @@
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
     "@types/minimist": "catalog:",
-    "@types/node": "^26.4.1"
+    "@types/node": "catalog:"
   },
   "dependencies": {
     "minimist": "catalog:",

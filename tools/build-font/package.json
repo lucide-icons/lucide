@@ -24,6 +24,6 @@
     "@lucide/helpers": "workspace:*",
     "@types/fs-extra": "catalog:",
     "@types/minimist": "catalog:",
-    "@types/node": "^26.4.1"
+    "@types/node": "catalog:"
   }
 }

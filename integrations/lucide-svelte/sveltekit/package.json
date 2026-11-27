@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@lucide/svelte": "workspace:*",
-    "svelte": "5.58.0"
+    "svelte": "catalog:"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "catalog:",
     "@sveltejs/kit": "catalog:",
     "@sveltejs/vite-plugin-svelte": "catalog:",
-    "@vitest/browser-playwright": "5.0.5",
+    "@vitest/browser-playwright": "catalog:",
     "playwright": "catalog:",
     "svelte-check": "catalog:",
     "typescript": "catalog:",

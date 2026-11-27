@@ -55,7 +55,7 @@
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/preact": "catalog:",
     "jest-serializer-html": "catalog:",
-    "preact": "^11.1.0",
+    "preact": "catalog:",
     "rollup": "catalog:",
     "rollup-plugin-dts": "catalog:",
     "typescript": "catalog:",
