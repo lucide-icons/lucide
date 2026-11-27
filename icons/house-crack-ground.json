@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing earthquake alerts and seismic activity warnings",
+    "Marking earthquake hazards on emergency maps and legends",
+    "Indicating structural damage to a building in inspection reports",
+    "Representing property damage claims in insurance apps",
+    "Showing earthquake preparedness checklists and safety guides"
+  ],
+  "tags": [
+    "$extends:house",
+    "earthquake",
+    "quake",
+    "seismic",
+    "tremor",
+    "disaster",
+    "hazard",
+    "damage",
+    "fracture",
+    "insurance"
+  ],
+  "categories": [
+    "buildings",
+    "nature"
+  ]
+}
