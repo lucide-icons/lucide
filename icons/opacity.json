@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ilyavred",
+    "jamiemlaw"
+  ],
+  "use-cases": [
+    "Setting the opacity of layers or objects in graphic editors",
+    "Adjusting the opacity of fills, strokes, or other object attributes",
+    "Adjusting the alpha channel in color pickers",
+    "Indicating that a layer or element is semi-transparent"
+  ],
+  "tags": [
+    "opacity",
+    "opaque",
+    "transparency",
+    "visibility",
+    "fade",
+    "lens",
+    "glass",
+    "blur",
+    "filter",
+    "clear",
+    "mask",
+    "cover",
+    "gradient"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ]
+}

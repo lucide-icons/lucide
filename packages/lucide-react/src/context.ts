@@ -4,9 +4,9 @@ import { createContext, createElement, type ReactNode, useContext, useMemo } fro
 import { LucideProps } from './types';
 
 type LucideConfig = {
-  size: number;
+  size: number | string;
   color: string;
-  strokeWidth: number;
+  strokeWidth: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */

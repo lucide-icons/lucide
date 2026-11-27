@@ -5,7 +5,10 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:book"
+    "$extends:book",
+    "docs",
+    "wiki",
+    "knowledge base"
   ],
   "categories": [
     "text",

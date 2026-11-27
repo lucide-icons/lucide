@@ -8,12 +8,8 @@
   "tags": [
     "$extends:globe",
     "$group:x",
-    "globe",
-    "internet",
     "offline",
     "disconnected",
-    "network",
-    "connection",
     "no connection",
     "network failure",
     "signal off"

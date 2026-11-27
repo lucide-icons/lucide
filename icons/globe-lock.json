@@ -11,9 +11,7 @@
     "$extends:globe",
     "$group:lock",
     "vpn",
-    "network",
-    "encryption",
-    "connection"
+    "encryption"
   ],
   "categories": [
     "security",

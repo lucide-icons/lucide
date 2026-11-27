@@ -6,7 +6,9 @@
   ],
   "use-cases": [],
   "tags": [
-    "$extends:calendar"
+    "$extends:calendar",
+    "week",
+    "weekly"
   ],
   "categories": [
     "$extends:calendar"

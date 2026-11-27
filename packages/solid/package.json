@@ -32,21 +32,30 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/lucide-solid.d.ts",
+      "types": {
+        "import": "./dist/types/lucide-solid.d.mts",
+        "default": "./dist/types/lucide-solid.d.ts"
+      },
       "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.mjs",
       "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons": {
-      "types": "./dist/types/lucide-solid.d.ts",
+      "types": {
+        "import": "./dist/types/lucide-solid.d.mts",
+        "default": "./dist/types/lucide-solid.d.ts"
+      },
       "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.mjs",
       "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons/*": {
-      "types": "./dist/types/icons/*.d.ts",
+      "types": {
+        "import": "./dist/types/icons/*.d.mts",
+        "default": "./dist/types/icons/*.d.ts"
+      },
       "solid": "./dist/source/icons/*.jsx",
       "import": "./dist/esm/icons/*.mjs",
       "browser": "./dist/esm/icons/*.mjs",
@@ -68,13 +77,13 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/preset-env": "^7.29.7",
-    "@babel/preset-typescript": "^7.29.7",
+    "@babel/core": "^8.1.2",
+    "@babel/preset-env": "^8.0.7",
+    "@babel/preset-typescript": "^8.0.7",
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-babel": "^7.1.0",
     "@solidjs/testing-library": "next",
     "@solidjs/vite-plugin": "next",
     "@solidjs/web": "next",
@@ -82,11 +91,11 @@
     "babel-preset-solid": "next",
     "esbuild": "^0.28.2",
     "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.65.1",
     "rollup-plugin-dts": "^6.5.1",
-    "rollup": "^4.65.0",
     "solid-js": "next",
     "typescript": "^6.0.3",
-    "vite": "^8.3.3"
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
     "solid-js": "^2.0.0-rc.0"

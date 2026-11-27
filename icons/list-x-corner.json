@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AbeyHurtis"
+  ],
+  "use-cases": [
+    "Removing an item or row from a list, table or queue",
+    "Deleting a task from a to-do list or checklist",
+    "Clearing tracks from a playlist or play queue",
+    "Removing a selected entry from a filter or options list"
+  ],
+  "tags": [
+    "$extends:list-x",
+    "$group:x",
+    "mark",
+    "sharp",
+    "options",
+    "bottom",
+    "to-do",
+    "checklist",
+    "item",
+    "task",
+    "entry",
+    "queue"
+  ],
+  "categories": [
+    "text",
+    "multimedia"
+  ]
+}

@@ -9,8 +9,7 @@
     "$extends:arrow-down",
     "$group:direction-down",
     "download",
-    "expand",
-    "fold"
+    "$group:expand"
   ],
   "categories": [
     "$extends:arrow-down",

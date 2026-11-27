@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Displaying world clocks and converting timezones in calendar apps",
+    "Coordinating international meeting times across regions",
+    "Comparing local and home time in travel itineraries"
+  ],
+  "tags": [
+    "$extends:globe",
+    "$group:clock",
+    "world clock",
+    "timezone",
+    "international time",
+    "time conversion",
+    "time difference",
+    "local time"
+  ],
+  "categories": [
+    "$extends:globe",
+    "time"
+  ]
+}

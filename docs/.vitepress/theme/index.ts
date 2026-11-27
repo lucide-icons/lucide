@@ -11,8 +11,11 @@ import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView';
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import SideBarNavBefore from './layouts/SideBarNavBefore.vue';
+import NavBarSponsorButton from './layouts/NavBarSponsorButton.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
+import Toaster from './components/base/Toaster.vue';
 import { setupTracking } from './utils/openpanel';
+import { setupSentry } from './utils/sentry';
 import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
@@ -24,6 +27,8 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
+      'layout-bottom': () => h(Toaster),
+      'nav-bar-content-after': () => h(NavBarSponsorButton),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),
     });
@@ -35,9 +40,16 @@ const theme: Partial<Theme> = {
     app.component('SnackPlayer', SnackPlayer);
 
     setupTracking(router);
+    setupSentry(app);
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();
+
+      // Attaches the invisible BotID challenge to waitlist submissions, checked by `checkBotId()`
+      // in the API route.
+      import('botid/client/core').then(({ initBotId }) =>
+        initBotId({ protect: [{ path: '/api/waitlist', method: 'POST' }] }),
+      );
     }
   },
 };

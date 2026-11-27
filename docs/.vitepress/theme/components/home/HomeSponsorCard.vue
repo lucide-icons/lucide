@@ -22,7 +22,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
       height="42"
     />
     <VPButton
-      href="https://opencollective.com/lucide-icons"
+      href="/sponsor"
       class="sponsor-button"
       text="Become a sponsor"
     />
@@ -50,7 +50,7 @@ html:not(.dark) .logo.light {
   display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .sponsor-card {
     flex-direction: row;
     justify-content: space-between;

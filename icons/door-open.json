@@ -12,7 +12,8 @@
     "egress",
     "gate",
     "gateway",
-    "emergency exit"
+    "emergency exit",
+    "quit"
   ],
   "categories": [
     "home",

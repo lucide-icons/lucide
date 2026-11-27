@@ -7,8 +7,7 @@
   "tags": [
     "$group:direction-left",
     "$group:direction-right",
-    "expand",
-    "unfold"
+    "$group:expand"
   ],
   "categories": [
     "arrows"

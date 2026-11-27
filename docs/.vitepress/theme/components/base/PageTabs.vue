@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <TabGroup>
+  <TabGroup as="div">
     <TabList class="tab-list">
       <template v-for="(tab, index) in props.tabs" :key="index">
         <Tab :id="`tab-${index}`" class="tab">{{ tab }}</Tab>
@@ -52,7 +52,7 @@
   border-bottom: 2px solid var(--vp-c-brand);
 }
 
-@media (min-width: 860px) {
+@media (min-width: 53.75rem) {
   .tab-list {
     justify-content: flex-start;
   }
@@ -62,12 +62,12 @@
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .tab {
   }
 }
 
-@media (min-width: 1152px) {
+@media (min-width: 72rem) {
   .tab {
   }
 }

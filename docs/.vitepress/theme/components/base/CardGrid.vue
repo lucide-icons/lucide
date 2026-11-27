@@ -21,13 +21,13 @@
   padding: 8px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .card-grid-flex > * {
     flex-basis: 50%;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .card-grid-flex > * {
     flex-basis: 33.33%;
   }

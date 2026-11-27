@@ -7,9 +7,18 @@
   "use-cases": [],
   "tags": [
     "application",
+    "app",
+    "window",
+    "gui",
+    "interface",
+    "modal",
+    "popup",
     "menu bar",
     "pane",
-    "executable"
+    "executable",
+    "instance",
+    "integration",
+    "software"
   ],
   "categories": [
     "layout",

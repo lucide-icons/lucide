@@ -10,7 +10,9 @@
     "import",
     "export",
     "save",
-    "pull"
+    "pull",
+    "install",
+    "installation"
   ],
   "categories": [
     "arrows",

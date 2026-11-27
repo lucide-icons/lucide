@@ -10,7 +10,6 @@
   "tags": [
     "$extends:globe",
     "$group:check",
-    "internet",
     "web",
     "available",
     "online",

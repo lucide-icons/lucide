@@ -155,14 +155,14 @@ const iconStyle = computed(() => ({
   background: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .card {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .card {
     grid-template-columns: 1fr 2fr;
   }
