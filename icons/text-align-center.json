@@ -7,7 +7,7 @@
   ],
   "use-cases": [],
   "tags": [
-    "text",
+    "$group:text",
     "alignment",
     "$group:position-center"
   ],

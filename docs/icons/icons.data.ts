@@ -1,4 +1,4 @@
-import * as iconDetails from '../.vitepress/data/iconDetails';
+import * as iconDetails from '../.vitepress/data/iconDetails/index.ts';
 
 export default {
   async load() {

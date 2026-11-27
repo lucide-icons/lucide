@@ -205,7 +205,7 @@ function releaseTagLink(version) {
     align-items: flex-start;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 40rem) {
     .layout {
       align-items: flex-start;
       display: grid;
@@ -247,7 +247,7 @@ function releaseTagLink(version) {
     margin: 24px -24px 24px;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 40rem) {
     .tab-list {
       margin: 24px 0 24px;
     }

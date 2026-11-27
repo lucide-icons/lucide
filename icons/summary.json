@@ -22,10 +22,11 @@
     "condensation",
     "summary",
     "ai",
-    "text",
+    "$group:text",
     "overview"
   ],
   "categories": [
-    "text"
+    "text",
+    "ai"
   ]
 }

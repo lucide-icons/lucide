@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "ahtohbi4",
+    "csandman",
+    "ericfennis",
+    "dango0812"
+  ],
+  "use-cases": [
+    "Indicating that airplane mode is turned off",
+    "Marking cancelled or unavailable flights",
+    "Showing that air travel is not included or not allowed"
+  ],
+  "tags": [
+    "$extends:plane"
+  ],
+  "categories": [
+    "transportation",
+    "travel",
+    "navigation"
+  ]
+}

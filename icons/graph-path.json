@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Analyzing financial data in charts",
+    "Indicating analysis tools or features",
+    "Displaying a travel route on a map or trip planner"
+  ],
+  "tags": [
+    "$group:graph",
+    "line",
+    "dot",
+    "analysis",
+    "branch",
+    "branching",
+    "merging",
+    "converging",
+    "trail",
+    "route",
+    "analytics",
+    "timeline",
+    "waypoint",
+    "milestone",
+    "tracking",
+    "trend",
+    "sequence"
+  ],
+  "categories": [
+    "charts",
+    "finance",
+    "travel"
+  ]
+}

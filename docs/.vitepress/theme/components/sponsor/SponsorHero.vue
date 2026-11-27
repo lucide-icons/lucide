@@ -167,13 +167,13 @@ const stats = [
   margin: 0 -24px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .stats {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .hero {
   padding-top: 96px;
 }
@@ -188,7 +188,7 @@ const stats = [
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .hero-content {
     flex-direction: row;
   }

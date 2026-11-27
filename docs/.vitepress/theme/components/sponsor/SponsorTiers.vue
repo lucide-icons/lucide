@@ -216,7 +216,7 @@ function scrollTrack(direction: 1 | -1) {
   background: linear-gradient(to right, transparent, var(--vp-c-bg) 85%);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .fade-left {
     width: 96px;
   }

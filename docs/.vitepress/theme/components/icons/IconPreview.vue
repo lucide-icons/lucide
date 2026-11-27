@@ -156,6 +156,7 @@ const gridLines = computed(() => Array.from({ length: size.value - 1 }));
 .size-button {
   color: var(--vp-code-tab-text-color);
   padding: 2px 8px;
+  font-size: 13px;
 }
 
 .size-button.active {

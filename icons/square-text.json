@@ -12,8 +12,7 @@
     "Denoting a text-only module or widget in a dashboard"
   ],
   "tags": [
-    "text",
-    "paragraph",
+    "$group:text",
     "content",
     "note",
     "document",

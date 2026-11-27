@@ -1,0 +1,97 @@
+/* The element and base-class selectors outrank the scoped styles of Card and Input. */
+div.waitlist-card.card {
+  gap: 20px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: var(--vp-c-shadow);
+}
+
+.waitlist-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.waitlist-card-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--vp-c-text-1);
+}
+
+.waitlist-card-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--vp-c-text-2);
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.waitlist-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.waitlist-label {
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+}
+
+.waitlist-label-hint {
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+input.waitlist-input.input {
+  height: 44px;
+  border-color: var(--vp-c-border);
+  background-color: var(--vp-c-bg);
+  font-size: 16px;
+}
+
+.waitlist-actions {
+  margin-top: 20px;
+}
+
+.waitlist-button {
+  --vp-button-brand-bg: var(--vp-c-brand-5);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-4);
+  --vp-button-brand-active-bg: var(--vp-c-brand-5);
+}
+
+.waitlist-button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.waitlist-error {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--vp-c-danger-1);
+}
+
+.waitlist-link {
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  text-decoration: underline;
+}
+
+.waitlist-link:hover {
+  color: var(--vp-c-brand-1);
+}

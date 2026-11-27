@@ -1,0 +1,13 @@
+{
+  "$schema": "../group.schema.json",
+  "description": "Content: text, typography and typesetting",
+  "tags": [
+    "text",
+    "typography",
+    "typesetting",
+    "formatting",
+    "writing",
+    "lines",
+    "paragraph"
+  ]
+}

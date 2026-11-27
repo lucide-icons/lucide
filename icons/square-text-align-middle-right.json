@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Aligning text to the middle right of a text box or table cell"
+  ],
+  "tags": [
+    "$group:text",
+    "$group:position-center",
+    "$group:position-right",
+    "alignment",
+    "text box",
+    "table cell"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}

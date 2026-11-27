@@ -20,6 +20,7 @@
     "magician"
   ],
   "categories": [
-    "$extends:pencil"
+    "$extends:pencil",
+    "ai"
   ]
 }

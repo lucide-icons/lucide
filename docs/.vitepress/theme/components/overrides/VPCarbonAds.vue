@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import type { DefaultTheme } from 'vitepress/theme'
-import { ref, watch, onMounted } from 'vue'
-import { useAside } from 'vitepress/dist/client/theme-default/composables/aside.js'
+import { ref, watch, onMounted, defineAsyncComponent } from 'vue'
+import { useMediaQuery } from '@vueuse/core'
 import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
+import type MerchAdComponent from '../merch/MerchAd.vue'
+
+const MerchAd = defineAsyncComponent(() => import('../merch/MerchAd.vue'))
 
 const { page } = useData()
 const props = defineProps<{
@@ -12,8 +15,26 @@ const props = defineProps<{
 
 const carbonOptions = props.carbonAds
 
-const { isAsideEnabled } = useAside()
-const container = ref()
+const isAsideEnabled = useMediaQuery('(min-width: 80rem)')
+const container = ref<HTMLElement>()
+const merchAd = ref<InstanceType<typeof MerchAdComponent>>()
+
+/**
+ * `blocked` when an adblocker stopped Carbon: the script request failed, it never set
+ * `window._carbonads`, or a cosmetic filter hid the ad. The merch card then takes the slot.
+ */
+const carbonStatus = ref<'loading' | 'loaded' | 'blocked'>('loading')
+const BLOCKED_TIMEOUT = 3000
+
+function carbonAdVisible() {
+  const ad = container.value?.querySelector<HTMLElement>('#carbonads')
+  return (window as any)._carbonads != null && ad != null && ad.offsetHeight > 0
+}
+
+function checkCarbon(final: boolean) {
+  if (carbonAdVisible()) carbonStatus.value = 'loaded'
+  else if (final) carbonStatus.value = 'blocked'
+}
 
 let isInitialized = false
 
@@ -29,13 +50,19 @@ function init() {
     s.id = '_carbonads_js'
     s.src = `//cdn.carbonads.com/carbon.js?${params.toString()}`
     s.async = true
-    container.value.appendChild(s)
+    // A network blocker fails the request right away, so show the merch card without waiting.
+    s.onerror = () => (carbonStatus.value = 'blocked')
+    // Carbon renders shortly after its script runs; a late ad still replaces the merch card.
+    s.onload = () => setTimeout(() => checkCarbon(false), 500)
+    container.value!.appendChild(s)
+    setTimeout(() => checkCarbon(true), BLOCKED_TIMEOUT)
   }
 }
 
 watch(() => page.value.relativePath, () => {
   if (isInitialized && isAsideEnabled.value) {
-    ;(window as any)._carbonads?.refresh()
+    if (carbonStatus.value === 'blocked') merchAd.value?.next()
+    else (window as any)._carbonads?.refresh()
   }
 })
 
@@ -56,7 +83,8 @@ if (carbonOptions) {
 </script>
 
 <template>
-  <div class="VPCarbonAds" ref="container" />
+  <div v-show="carbonStatus !== 'blocked'" class="VPCarbonAds" ref="container" />
+  <MerchAd v-if="carbonStatus === 'blocked'" ref="merchAd" />
 </template>
 
 <style scoped>

@@ -167,8 +167,9 @@ const links = computed(() => getTierLinks(props.tier));
   gap: 8px;
 }
 
+/* flex (not block) keeps VitePress 2's VPButton centring its label vertically */
 .primary-action {
-  display: block;
+  display: flex;
 }
 
 .secondary-action {
