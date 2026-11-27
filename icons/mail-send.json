@@ -16,7 +16,10 @@
     "invite",
     "invitation",
     "outgoing",
-    "outbox"
+    "outbox",
+    "submit",
+    "delivery",
+    "dispatch"
   ],
   "categories": [
     "mail",
