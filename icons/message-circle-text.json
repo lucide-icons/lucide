@@ -19,6 +19,7 @@
   ],
   "tags": [
     "$extends:message-circle",
+    "$group:text",
     "speech",
     "bubble",
     "sms",
@@ -29,8 +30,6 @@
     "thread",
     "transcript",
     "written",
-    "writing",
-    "lines",
     "support",
     "chatbot"
   ],
