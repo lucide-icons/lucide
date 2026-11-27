@@ -4,8 +4,8 @@ const LucideContext = Symbol('lucide-context');
 
 export interface LucideGlobalContext {
   color?: string;
-  size?: number;
-  strokeWidth?: number;
+  size?: number | string;
+  strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */

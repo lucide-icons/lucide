@@ -5,14 +5,14 @@ import Button from '../base/Button.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
-import { computed, onMounted, ref } from 'vue';
+import { computed } from 'vue';
 
 const { theme } = useData();
 const showAd = useSessionStorage('show-carbon-ads', true, {
   initOnMounted: true,
 });
-const carbonLoaded = ref(true);
-const shouldHideAd = computed(() => !showAd.value || !carbonLoaded.value);
+// When an adblocker stops Carbon, the ad slot shows the merch card instead, so the overlay stays.
+const shouldHideAd = computed(() => !showAd.value);
 
 function hideAd() {
   showAd.value = false;
@@ -21,14 +21,6 @@ function hideAd() {
 defineProps<{
   drawerOpen: boolean;
 }>();
-
-onMounted(() => {
-  setTimeout(() => {
-    if (window?._carbonads == null) {
-      carbonLoaded.value = false;
-    }
-  }, 5000);
-});
 </script>
 
 <template>
@@ -88,13 +80,13 @@ onMounted(() => {
     transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .floating-ad {
     display: block;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   .floating-ad {
     right: calc(((100% - (var(--vp-layout-max-width) - var(--vp-sidebar-width))) - 272px) / 2);
   }

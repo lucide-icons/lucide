@@ -8,6 +8,7 @@
   "use-cases": [],
   "tags": [
     "$extends:receipt",
+    "$group:text",
     "details",
     "small print",
     "terms",

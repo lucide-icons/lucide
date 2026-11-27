@@ -1,6 +1,6 @@
 import { type PageData } from 'vitepress';
-import getStructuredData, { getFaqStructuredData } from './getStructuredData';
-import { createGeneralOGImage, createIconOGImage } from './createOGImage';
+import getStructuredData, { getFaqStructuredData } from './getStructuredData.ts';
+import { createGeneralOGImage, createIconOGImage } from './createOGImage.ts';
 
 export async function transformPageData(pageData: PageData) {
   pageData.frontmatter.head ??= [];

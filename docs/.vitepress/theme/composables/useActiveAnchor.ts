@@ -20,6 +20,8 @@ export function useActiveAnchor(container, marker) {
     window.removeEventListener('scroll', setActiveLinkDebounced);
   });
   function setActiveLink() {
+    // Can run from a debounced scroll handler or a timeout after the component unmounted.
+    if (!container.value) return;
     const links = [].slice.call(container.value.querySelectorAll('.outline-link'));
     const anchors = [].slice
       .call(document.querySelectorAll('.content .header-anchor'))
@@ -48,6 +50,7 @@ export function useActiveAnchor(container, marker) {
     }
   }
   function activateLink(hash) {
+    if (!container.value || !marker.value) return;
     if (prevActiveLink) {
       prevActiveLink.classList.remove('active');
     }

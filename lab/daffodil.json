@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ryck"
+  ],
+  "use-cases": [
+    "Cancer awareness campaigns, fundraising and Daffodil Day donation pages",
+    "Welsh content and St David's Day events, as the national flower of Wales",
+    "Seasonal spring and Easter content in calendars, shops and newsletters",
+    "Gardening, bulb planting and plant identification apps",
+    "March birth flower in gift, jewelry and greeting card apps"
+  ],
+  "tags": [
+    "flower",
+    "narcissus",
+    "jonquil",
+    "spring",
+    "nature",
+    "plant",
+    "bloom",
+    "wales",
+    "easter",
+    "trumpet",
+    "corona",
+    "bulb",
+    "charity",
+    "fundraising",
+    "cancer",
+    "awareness",
+    "st david's day",
+    "national flower",
+    "birth flower",
+    "march"
+  ],
+  "categories": [
+    "nature",
+    "sustainability",
+    "seasons"
+  ]
+}

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js';
+import { useLayout } from 'vitepress/theme';
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 import { computed } from 'vue';
 import SurveyAskOverlay from '../SurveyAskOverlay.vue';
 
 const { theme } = useData();
-const { hasSidebar } = useSidebar();
+const { hasSidebar } = useLayout();
 
 const githubLink = computed(
   () => theme.value.socialLinks.find(({ icon }) => icon === 'github').link,
@@ -131,7 +131,7 @@ const links = computed(() => [
   justify-content: center;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: 72rem) {
   .VPFooter {
     padding: 32px;
   }

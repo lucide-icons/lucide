@@ -7,12 +7,14 @@
   "use-cases": [],
   "tags": [
     "$extends:book-open",
+    "$group:text",
     "docs",
     "wiki",
     "knowledge base"
   ],
   "categories": [
     "text",
-    "development"
+    "development",
+    "education"
   ]
 }

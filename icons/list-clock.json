@@ -13,6 +13,7 @@
     "Marking last-updated or timestamped list rows"
   ],
   "tags": [
+    "$group:text",
     "$group:clock",
     "log",
     "recent",

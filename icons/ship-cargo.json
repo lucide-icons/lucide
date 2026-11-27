@@ -29,6 +29,7 @@
     "export"
   ],
   "categories": [
-    "$extends:ship"
+    "$extends:ship",
+    "logistics"
   ]
 }

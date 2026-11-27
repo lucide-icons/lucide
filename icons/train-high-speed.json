@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "SlDo",
+    "rrod497",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing high-speed rail travel",
+    "Showing train connections in journey planners",
+    "Marking railway stations on maps"
+  ],
+  "tags": [
+    "$extends:train-front"
+  ],
+  "categories": [
+    "$extends:train-front",
+    "travel"
+  ]
+}

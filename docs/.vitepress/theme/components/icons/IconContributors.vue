@@ -77,6 +77,7 @@ const props = defineProps<{
   transform: translateX(-50%) scale(1);
 }
 .avatar-image {
+  margin: 0;
   width: 48px;
   height: 48px;
   border-radius: 50%;

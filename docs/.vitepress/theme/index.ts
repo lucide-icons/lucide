@@ -15,6 +15,7 @@ import NavBarSponsorButton from './layouts/NavBarSponsorButton.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
 import Toaster from './components/base/Toaster.vue';
 import { setupTracking } from './utils/openpanel';
+import { setupSentry } from './utils/sentry';
 import trackUnderlineDirection from './utils/underlineDirection';
 
 const theme: Partial<Theme> = {
@@ -39,9 +40,16 @@ const theme: Partial<Theme> = {
     app.component('SnackPlayer', SnackPlayer);
 
     setupTracking(router);
+    setupSentry(app);
 
     if (!import.meta.env.SSR) {
       trackUnderlineDirection();
+
+      // Attaches the invisible BotID challenge to waitlist submissions, checked by `checkBotId()`
+      // in the API route.
+      import('botid/client/core').then(({ initBotId }) =>
+        initBotId({ protect: [{ path: '/api/waitlist', method: 'POST' }] }),
+      );
     }
   },
 };

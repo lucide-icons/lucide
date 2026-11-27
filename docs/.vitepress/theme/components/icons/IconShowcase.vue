@@ -263,6 +263,7 @@ const prettyName = props.name
   display: flex;
   flex-direction: row;
   gap: 12px;
+  font-size: 13px;
   font-weight: 500;
   transition:
     color 0.25s,
@@ -334,6 +335,7 @@ const prettyName = props.name
   input {
     padding: 12px 20px;
     padding-inline-start: 48px;
+    font-size: 13px;
     border-radius: 8px;
     background-color: var(--vp-c-bg-soft);
     color: var(--vp-c-text-1);

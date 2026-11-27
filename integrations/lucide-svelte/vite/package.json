@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@lucide/svelte": "workspace:*",
-    "svelte": "5.57.3"
+    "svelte": "5.58.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

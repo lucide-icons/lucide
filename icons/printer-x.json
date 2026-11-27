@@ -10,8 +10,7 @@
   "use-cases": [],
   "tags": [
     "$extends:printer",
-    "$group:x",
-    "error"
+    "$group:x"
   ],
   "categories": [
     "$extends:printer"
