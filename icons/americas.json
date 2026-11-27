@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB"
+  ],
+  "use-cases": [
+    "Selecting destinations in the Americas in travel apps",
+    "Filtering content by North and South American regions",
+    "Representing the Americas in geography learning interfaces"
+  ],
+  "tags": [
+    "map",
+    "continent",
+    "world",
+    "geography",
+    "north america",
+    "south america",
+    "central america",
+    "western hemisphere"
+  ],
+  "categories": [
+    "navigation",
+    "travel"
+  ]
+}

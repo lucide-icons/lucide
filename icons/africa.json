@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB"
+  ],
+  "use-cases": [
+    "Selecting African destinations in travel apps",
+    "Filtering content by the African region",
+    "Representing Africa in geography learning interfaces"
+  ],
+  "tags": [
+    "map",
+    "continent",
+    "world",
+    "geography",
+    "region",
+    "landmass",
+    "cartography",
+    "atlas"
+  ],
+  "categories": [
+    "navigation",
+    "travel"
+  ]
+}
