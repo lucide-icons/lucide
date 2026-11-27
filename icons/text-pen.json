@@ -15,6 +15,7 @@
   ],
   "tags": [
     "$group:pen",
+    "$group:text",
     "quick",
     "autosave",
     "prompt",

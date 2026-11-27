@@ -7,8 +7,8 @@
     "Centering text horizontally and vertically in a text box or table cell"
   ],
   "tags": [
+    "$group:text",
     "$group:position-center",
-    "text",
     "alignment",
     "text box",
     "table cell"

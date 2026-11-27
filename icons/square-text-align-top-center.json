@@ -7,9 +7,9 @@
     "Aligning text to the top center of a text box or table cell"
   ],
   "tags": [
+    "$group:text",
     "$group:position-top",
     "$group:position-center",
-    "text",
     "alignment",
     "text box",
     "table cell"

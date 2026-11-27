@@ -7,9 +7,9 @@
     "Aligning text to the middle left of a text box or table cell"
   ],
   "tags": [
+    "$group:text",
     "$group:position-center",
     "$group:position-left",
-    "text",
     "alignment",
     "text box",
     "table cell"

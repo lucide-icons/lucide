@@ -7,9 +7,9 @@
     "Aligning text to the bottom right of a text box or table cell"
   ],
   "tags": [
+    "$group:text",
     "$group:position-bottom",
     "$group:position-right",
-    "text",
     "alignment",
     "text box",
     "table cell"

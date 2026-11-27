@@ -8,6 +8,7 @@
     "Reordering a list from lowest to highest or A to Z"
   ],
   "tags": [
+    "$group:text",
     "$group:sort",
     "list",
     "organization",

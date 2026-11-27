@@ -11,12 +11,11 @@
     "Formatting paragraphs with left-justified layout in document editors"
   ],
   "tags": [
+    "$group:text",
     "$group:position-left",
-    "paragraph",
     "alignment",
     "justified",
     "start",
-    "typography",
     "editor",
     "document"
   ],
