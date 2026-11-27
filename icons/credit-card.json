@@ -13,6 +13,12 @@
     "cc",
     "cashier",
     "merchant",
+    "banking",
+    "wallet",
+    "checkout",
+    "billing",
+    "account",
+    "cardholder",
     "debit",
     "atm",
     "cash machine",
@@ -30,7 +36,11 @@
     "consumer",
     "loyalty",
     "points",
-    "cashback"
+    "cashback",
+    "contactless",
+    "chip",
+    "swipe",
+    "tap"
   ],
   "categories": [
     "account",
