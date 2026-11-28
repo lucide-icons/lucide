@@ -87,4 +87,15 @@ describe('Using lucide icon components', () => {
     expect(container.firstChild).toHaveClass('lucide');
     expect(container.firstChild).toHaveClass('lucide-droplet');
   });
+
+  it('should render child elements inside icon components', () => {
+    const { container } = render(() => (
+      <Droplet>
+        <title>Water droplet</title>
+      </Droplet>
+    ));
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+    expect(container.querySelector('title')).toHaveTextContent('Water droplet');
+  });
 });
