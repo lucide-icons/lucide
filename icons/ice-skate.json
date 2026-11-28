@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing ice skating sessions in recreation booking apps",
+    "Marking ice rinks on maps",
+    "Categorizing skating footwear in sports stores"
+  ],
+  "tags": [
+    "skates",
+    "ice rink",
+    "figure skating",
+    "speed skating",
+    "boots",
+    "shoes",
+    "footwear",
+    "winter"
+  ],
+  "categories": [
+    "sports"
+  ]
+}

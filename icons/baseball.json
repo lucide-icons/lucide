@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing baseball games and tournaments in sports apps",
+    "Categorizing baseball equipment in sports stores",
+    "Marking baseball gameplay modes in games"
+  ],
+  "tags": [
+    "home run",
+    "pitcher",
+    "bat",
+    "innings",
+    "rounders",
+    "softball",
+    "diamond",
+    "catcher"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

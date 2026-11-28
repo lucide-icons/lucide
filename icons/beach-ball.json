@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing seaside games and recreational activities",
+    "Categorizing inflatable pool toys in stores",
+    "Highlighting summer holiday activities in travel apps"
+  ],
+  "tags": [
+    "inflatable",
+    "summer",
+    "holiday",
+    "vacation",
+    "seaside",
+    "toys",
+    "kids",
+    "children",
+    "play",
+    "pool"
+  ],
+  "categories": [
+    "travel",
+    "sports",
+    "gaming"
+  ]
+}

@@ -2,27 +2,36 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "dev-mralph",
+    "danielbayley",
     "karsa-mistmere"
   ],
   "use-cases": [
     "Representing rugby matches and tournaments",
-    "Categorizing rugby-related content in sports apps"
+    "Categorizing rugby-related content in sports apps",
+    "Representing American football games and leagues",
+    "Categorizing American football equipment in sports stores",
+    "Selecting American football gameplay modes in games"
   ],
   "tags": [
     "rugby",
-    "football",
-    "ball",
+    "american football",
     "goal",
     "sport",
-    "american football",
+    "american",
+    "gridiron",
+    "pigskin",
+    "quarterback",
     "touchdown",
     "kick",
-    "pitch",
     "team",
     "score",
+    "super bowl",
+    "nfl",
+    "pitch",
     "bounce"
   ],
   "categories": [
-    "sports"
+    "sports",
+    "gaming"
   ]
 }

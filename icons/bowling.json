@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking bowling alleys on maps",
+    "Representing lane reservations in recreation booking apps",
+    "Categorizing bowling leagues and tournament results"
+  ],
+  "tags": [
+    "ten-pin",
+    "10 pin",
+    "pins",
+    "ball",
+    "lane",
+    "alley",
+    "strike",
+    "spare",
+    "score",
+    "indoor"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

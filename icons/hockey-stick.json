@@ -29,5 +29,12 @@
   ],
   "categories": [
     "sports"
+  ],
+  "aliases": [
+    {
+      "name": "ice-hockey",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }

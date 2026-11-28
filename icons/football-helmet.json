@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Categorizing American football protective equipment in sports stores",
+    "Representing player gear in football team management apps",
+    "Indicating required head protection for American football"
+  ],
+  "tags": [
+    "american",
+    "gridiron",
+    "team",
+    "protective equipment",
+    "protection",
+    "padding",
+    "headgear",
+    "safety",
+    "concussion",
+    "nfl"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

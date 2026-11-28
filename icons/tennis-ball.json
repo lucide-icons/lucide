@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing tennis matches and tournaments in sports apps",
+    "Marking tennis courts on recreation maps",
+    "Categorizing tennis equipment in sports stores"
+  ],
+  "tags": [
+    "court",
+    "racquet",
+    "racket",
+    "net",
+    "deuce",
+    "love",
+    "bounce"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

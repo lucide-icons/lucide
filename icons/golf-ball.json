@@ -4,13 +4,13 @@
     "alexrefshauge",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing golf rounds and tournaments in sports apps",
+    "Categorizing golf balls and equipment in sports stores",
+    "Indicating golf course bookings in recreation apps"
+  ],
   "tags": [
-    "sport",
-    "ball",
-    "play",
     "score",
-    "golf",
     "club",
     "course",
     "tee",
@@ -23,9 +23,7 @@
     "tournament",
     "recreation",
     "leisure",
-    "outdoor",
-    "game",
-    "bounce"
+    "outdoor"
   ],
   "categories": [
     "sports"
