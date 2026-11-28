@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere",
+    "johnletey"
+  ],
+  "use-cases": [
+    "Copying webpage or record links in sharing menus",
+    "Indicating URL and web address input fields in forms"
+  ],
+  "tags": [
+    "$extends:link"
+  ],
+  "categories": [
+    "$extends:link"
+  ],
+  "aliases": [
+    {
+      "name": "link-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

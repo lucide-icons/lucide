@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:link"
+  ],
+  "use-cases": [
+    "Disabling public link sharing for files and documents",
+    "Indicating that hyperlink creation is unavailable in editors"
+  ],
+  "tags": [
+    "$extends:link",
+    "$group:off",
+    "unlink",
+    "unchain"
+  ],
+  "categories": [
+    "$extends:link"
+  ]
+}

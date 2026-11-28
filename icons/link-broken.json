@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Flagging broken URLs in website management tools",
+    "Removing hyperlinks from selected text in editors",
+    "Disconnecting linked records in data management interfaces"
+  ],
+  "tags": [
+    "$extends:link",
+    "unlink",
+    "unchain"
+  ],
+  "categories": [
+    "$extends:link"
+  ],
+  "aliases": [
+    {
+      "name": "unlink",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}
