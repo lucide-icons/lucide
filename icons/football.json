@@ -5,22 +5,18 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Representing American football games and leagues",
-    "Categorizing American football equipment in sports stores",
-    "Selecting American football gameplay modes in games"
+    "Representing soccer matches and leagues in sports apps",
+    "Marking soccer pitches on recreation maps",
+    "Selecting soccer gameplay modes in games"
   ],
   "tags": [
-    "american",
-    "gridiron",
-    "pigskin",
-    "quarterback",
-    "touchdown",
+    "soccer",
+    "futbol",
     "kick",
-    "team",
+    "pitch",
     "goal",
     "score",
-    "super bowl",
-    "nfl"
+    "bounce"
   ],
   "categories": [
     "sports",
