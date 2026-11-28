@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "$extends:search",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking an AI-powered search button in a toolbar",
+    "Switching to natural-language search in a knowledge base"
+  ],
+  "tags": [
+    "$extends:search",
+    "$group:sparkles",
+    "semantic"
+  ],
+  "categories": [
+    "$extends:search",
+    "ai"
+  ]
+}
