@@ -32,7 +32,12 @@
     "empty",
     "dead",
     "obsolete",
-    "outdated"
+    "outdated",
+    "arcade",
+    "classic",
+    "retro",
+    "costume",
+    "sheet"
   ],
   "categories": [
     "gaming"

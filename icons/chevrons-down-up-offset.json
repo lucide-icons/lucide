@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "PeterlitsZo",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating streaming data",
+    "Representing input and output operations",
+    "Indicating balance between opposing values",
+    "Representing ups and downs"
+  ],
+  "tags": [
+    "$group:direction-down",
+    "$group:direction-up",
+    "bidirectional",
+    "two-way",
+    "2-way",
+    "swap",
+    "switch",
+    "offset",
+    "stream",
+    "streaming",
+    "remote",
+    "io",
+    "input",
+    "output",
+    "transfer",
+    "balance",
+    "ups and downs",
+    "fluctuations"
+  ],
+  "categories": [
+    "arrows",
+    "development"
+  ]
+}

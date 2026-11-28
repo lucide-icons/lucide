@@ -22,7 +22,7 @@
     "condensation",
     "summary",
     "ai",
-    "text",
+    "$group:text",
     "overview"
   ],
   "categories": [

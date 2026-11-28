@@ -14,15 +14,6 @@
   "tags": [
     "$extends:credit-card",
     "$group:x",
-    "debit",
-    "banking",
-    "finance",
-    "transaction",
-    "wallet",
-    "checkout",
-    "billing",
-    "account",
-    "cardholder",
     "declined",
     "rejected",
     "invalid"

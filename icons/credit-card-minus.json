@@ -15,18 +15,10 @@
   "tags": [
     "$extends:credit-card",
     "$group:minus",
-    "debit",
     "unlink",
     "revoke",
     "decline",
-    "canceled",
-    "banking",
-    "finance",
-    "wallet",
-    "transaction",
-    "billing",
-    "account",
-    "checkout"
+    "canceled"
   ],
   "categories": [
     "$extends:credit-card",

@@ -13,7 +13,6 @@
     "$extends:file-text",
     "$group:sparkles",
     "summarize",
-    "writing",
     "enhance"
   ],
   "categories": [

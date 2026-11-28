@@ -241,6 +241,7 @@
         "$group:star",
         "$group:stop",
         "$group:sync",
+        "$group:text",
         "$group:user",
         "$group:x"
       ]
