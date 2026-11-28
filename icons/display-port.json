@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "HACENE-IHAB",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "Marking DisplayPort connections in device diagrams",
+    "Selecting DisplayPort inputs in monitor settings",
+    "Identifying DisplayPort cables in display setup guides"
+  ],
+  "tags": [
+    "$extends:hdmi-port",
+    "cable",
+    "monitor",
+    "screen",
+    "digital display",
+    "video interface",
+    "display interface",
+    "computer display",
+    "graphics",
+    "high resolution"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "connectivity"
+  ]
+}
