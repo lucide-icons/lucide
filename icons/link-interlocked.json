@@ -2,12 +2,12 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis",
     "csandman",
-    "karsa-mistmere",
-    "johnletey"
+    "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "$extends:link"
+  ],
   "tags": [
     "$extends:link"
   ],

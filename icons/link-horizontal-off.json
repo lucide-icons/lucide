@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "$extends:link-off"
+  ],
+  "tags": [
+    "$extends:link-off"
+  ],
+  "categories": [
+    "$extends:link-off"
+  ],
+  "aliases": [
+    {
+      "name": "link-2-off",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

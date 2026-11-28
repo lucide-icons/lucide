@@ -1,18 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "hzhang2048",
+    "halcyon-past",
+    "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Copying webpage or record links in sharing menus",
+    "Indicating URL and web address input fields in forms"
+  ],
   "tags": [
     "chain",
     "url",
     "www",
     "http",
     "https",
-    "website"
+    "website",
+    "hyperlink",
+    "web address"
   ],
   "categories": [
     "text"

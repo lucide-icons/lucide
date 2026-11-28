@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
+  "use-cases": [
+    "$extends:link-broken"
+  ],
+  "tags": [
+    "$extends:link-broken"
+  ],
+  "categories": [
+    "$extends:link-broken"
+  ],
+  "aliases": [
+    {
+      "name": "unlink-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}
