@@ -173,12 +173,6 @@ const Expand = createLucideIcon('Expand', expand);
   flex-basis: 100%;
 }
 
-.icon-tags {
-  font-size: 16px;
-  color: var(--vp-c-text-2);
-  font-weight: 500;
-}
-
 .overlay-menu {
   position: absolute;
   top: 24px;

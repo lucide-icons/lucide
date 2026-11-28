@@ -16,7 +16,8 @@ const useSearchInput = () => {
       newUrl.hash = '';
     }
 
-    window.history.replaceState({}, '', newUrl);
+    // VitePress keeps the entry's scroll position in its state
+    window.history.replaceState(window.history.state, '', newUrl);
   });
 
   onMounted(() => {
