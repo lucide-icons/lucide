@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Representing tsunami warnings and coastal emergency alerts",
+    "Marking tsunami evacuation zones on emergency maps",
+    "Indicating high surf or dangerous sea conditions in marine apps",
+    "Representing surfing spots or surf forecasts"
+  ],
+  "tags": [
+    "tsunami",
+    "water",
+    "sea",
+    "ocean",
+    "surf",
+    "swell",
+    "tide",
+    "coast",
+    "flood",
+    "disaster",
+    "hazard"
+  ],
+  "categories": [
+    "weather",
+    "nature"
+  ]
+}

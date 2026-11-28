@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing volcanic activity alerts and eruption warnings",
+    "Marking volcanoes or volcanic hazard zones on maps",
+    "Indicating volcanic smog or ash advisories in weather apps",
+    "Representing geology content or national park destinations"
+  ],
+  "tags": [
+    "eruption",
+    "lava",
+    "magma",
+    "ash",
+    "crater",
+    "mountain",
+    "geology",
+    "disaster",
+    "hazard",
+    "nature"
+  ],
+  "categories": [
+    "nature",
+    "weather",
+    "travel"
+  ]
+}
