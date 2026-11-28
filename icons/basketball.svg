@@ -9,8 +9,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="12" cy="12" r="10" />
-  <path d="M2.05 13A11 11 0 0013 2.05" />
-  <path d="M21.95 11A11 11 0 0011 21.95" />
+  <path d="M19 4.9 5 19.1" />
+  <path d="M2 12A10 10 0 0012 2" />
+  <path d="M22 12a10 10 0 00-10 10" />
   <path d="m5 4.9 14 14.2" />
+  <circle cx="12" cy="12" r="10" />
 </svg>
