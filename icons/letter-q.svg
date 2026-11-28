@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="8" />
-  <path d="M20 20L15 15" />
+  <path d="m20 20-5-5" />
 </svg>
