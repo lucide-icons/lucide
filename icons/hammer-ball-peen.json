@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "abdul-karim-mia"
+  ],
+  "use-cases": [
+    "Identify the trade of auto body technician within organizational directories",
+    "Identify vehicle maintenance and metalwork tasks related to bodywork"
+  ],
+  "tags": [
+    "hammer",
+    "mallet",
+    "bumping",
+    "bodywork",
+    "auto",
+    "repair",
+    "machinist",
+    "metalwork"
+  ],
+  "categories": [
+    "tools"
+  ]
+}
