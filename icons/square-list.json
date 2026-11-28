@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Switching from grid to list views in file managers",
+    "Representing action list buttons in user interface builders",
+    "Opening itemized navigation menus in dashboards"
+  ],
+  "tags": [
+    "$extends:list",
+    "bullets",
+    "unordered",
+    "items",
+    "menu",
+    "navigation",
+    "view",
+    "toolbar",
+    "button"
+  ],
+  "categories": [
+    "$extends:list",
+    "layout"
+  ]
+}

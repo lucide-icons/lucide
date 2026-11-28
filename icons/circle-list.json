@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Showing itemized details in compact interfaces",
+    "Switching to list views in content browsers"
+  ],
+  "tags": [
+    "$extends:list",
+    "bullets",
+    "unordered",
+    "items",
+    "menu",
+    "navigation",
+    "view",
+    "button"
+  ],
+  "categories": [
+    "$extends:list",
+    "layout"
+  ]
+}
