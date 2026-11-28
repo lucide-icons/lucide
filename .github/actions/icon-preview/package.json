@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "@lucide/helpers": "workspace:*",
-    "svgson": "^5.3.1"
+    "svgson": "catalog:"
   }
 }

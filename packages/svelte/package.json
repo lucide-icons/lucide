@@ -65,18 +65,18 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
-    "@sveltejs/package": "^3.0.3",
-    "@sveltejs/vite-plugin-svelte": "^7.3.1",
-    "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/svelte": "^5.4.2",
-    "@tsconfig/svelte": "^5.0.9",
-    "jest-serializer-html": "^7.1.0",
-    "jsdom": "^30.1.3",
-    "svelte": "^5.58.0",
-    "svelte-check": "^4.7.8",
-    "svelte-preprocess": "^6.0.5",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5"
+    "@sveltejs/package": "catalog:",
+    "@sveltejs/vite-plugin-svelte": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/svelte": "catalog:",
+    "@tsconfig/svelte": "catalog:",
+    "jest-serializer-html": "catalog:",
+    "jsdom": "catalog:",
+    "svelte": "catalog:",
+    "svelte-check": "catalog:",
+    "svelte-preprocess": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "svelte": "^5"

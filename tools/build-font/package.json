@@ -14,16 +14,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/blob": "^2.8.0",
-    "fs-extra": "^11.4.0",
-    "minimist": "^1.2.8",
-    "oslllo-svg-fixer": "^6.0.1",
-    "svgtofont": "^6.5.3"
+    "@vercel/blob": "catalog:",
+    "fs-extra": "catalog:",
+    "minimist": "catalog:",
+    "oslllo-svg-fixer": "catalog:",
+    "svgtofont": "catalog:"
   },
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
-    "@types/fs-extra": "^11.0.4",
-    "@types/minimist": "^1.2.5",
-    "@types/node": "^26.4.1"
+    "@types/fs-extra": "catalog:",
+    "@types/minimist": "catalog:",
+    "@types/node": "catalog:"
   }
 }

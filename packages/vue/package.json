@@ -44,15 +44,15 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/vue": "^8.1.0",
-    "@vitejs/plugin-vue": "^6.0.11",
-    "@vue/test-utils": "2.6.0",
-    "rollup": "^4.65.1",
-    "rollup-plugin-dts": "^6.5.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vue": "^3.5.45"
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/vue": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/test-utils": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue": "catalog:"
   },
   "peerDependencies": {
     "vue": ">=3.0.1"

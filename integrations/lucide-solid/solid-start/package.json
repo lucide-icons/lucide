@@ -10,20 +10,20 @@
     "check": "pnpm build && pnpm typecheck && pnpm test:browser"
   },
   "dependencies": {
-    "@solidjs/meta": "0.29.4",
-    "@solidjs/router": "1.0.0",
-    "@solidjs/start": "2.0.5",
+    "@solidjs/meta": "catalog:solid1",
+    "@solidjs/router": "catalog:solid1",
+    "@solidjs/start": "catalog:",
     "lucide-solid": "workspace:*",
-    "nitro": "3.0.260903-beta",
-    "solid-js": "1.9.18"
+    "nitro": "catalog:",
+    "solid-js": "catalog:solid1"
   },
   "devDependencies": {
-    "@vitest/browser-playwright": "5.0.5",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vite-plugin-solid": "^2.11.17",
-    "vitest": "5.0.5",
-    "vitest-browser-solid": "1.0.1"
+    "@vitest/browser-playwright": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-solid": "catalog:",
+    "vitest": "catalog:",
+    "vitest-browser-solid": "catalog:"
   },
   "engines": {
     "node": ">=24"

@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "@lucide/solid": "workspace:*",
-    "@solidjs/meta": "1.0.0-next.2",
-    "@solidjs/router": "2.0.0-next.34",
-    "@solidjs/web": "next",
-    "solid-js": "next"
+    "@solidjs/meta": "catalog:solid2",
+    "@solidjs/router": "catalog:solid2",
+    "@solidjs/web": "catalog:solid2",
+    "solid-js": "catalog:solid2"
   },
   "devDependencies": {
-    "@solidjs/testing-library": "1.0.0-rc.2",
-    "@solidjs/vite-plugin": "3.0.0-next.47",
-    "@vitest/browser-playwright": "5.0.5",
-    "filesystem-routing": "0.4.0",
-    "playwright": "1.64.1",
-    "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vitest": "5.0.5"
+    "@solidjs/testing-library": "catalog:solid2",
+    "@solidjs/vite-plugin": "catalog:solid2",
+    "@vitest/browser-playwright": "catalog:",
+    "filesystem-routing": "catalog:",
+    "playwright": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
   }
 }
